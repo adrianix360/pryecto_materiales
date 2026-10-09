@@ -3,7 +3,8 @@
 // Modo «Repaso de hoy» (por defecto): cola de SRS.colaRepaso (falladas, vencidas y nuevas
 // del día). Modo «Por tema»: filtros; orden sin responder, luego mal, parcial y bien.
 // En la sesión, una pregunta respondida mal vuelve 4 lugares después.
-// Las opciones no se barajan: las explicaciones citan las letras («Correcta la B»).
+// Las opciones de selección se muestran en otro orden cada vez (js/opciones.js) y las
+// explicaciones se reletran para citar la letra que se ve.
 (function () {
   "use strict";
 
@@ -36,6 +37,7 @@
     s.texto = "";
     s.fase = "pregunta";
     s.resultado = null;
+    s.orden = null;
     s.inicio = Date.now();
   }
 
@@ -96,15 +98,21 @@
     return "mal";
   }
 
+  // Letras que se ven (según el orden mostrado), en orden alfabético: «A, C y D».
   function letras(ids) {
-    return ids.map(function (x) { return x.toUpperCase(); }).join(", ").replace(/, ([^,]*)$/, " y $1");
+    return ids.map(function (x) { return Opciones.letra(s.orden, x); }).sort()
+      .join(", ").replace(/, ([^,]*)$/, " y $1");
   }
 
   function htmlOpciones(p) {
     var ok = correctas(p);
     var multiple = p.tipo === "seleccion_multiple";
     var resuelta = s.fase === "respondida";
-    return '<ul class="opciones" role="list">' + p.opciones.map(function (o) {
+    var porId = {};
+    p.opciones.forEach(function (o) { porId[o.id] = o; });
+    return '<ul class="opciones" role="list">' + s.orden.map(function (id, i) {
+      var o = porId[id];
+      var letra = Opciones.LETRAS[i];
       var marcada = s.marcadas.indexOf(o.id) >= 0;
       var esOk = ok.indexOf(o.id) >= 0;
       var clase = "opcion";
@@ -117,8 +125,8 @@
         ' role="checkbox" aria-checked="' + marcada + '"' : "";
       return '<li><button type="button" class="' + clase + '" data-opcion="' + UI.esc(o.id) + '"' + attrs +
         (resuelta ? " disabled" : "") + ">" +
-        '<span class="opcion__letra" aria-hidden="true">' + UI.esc(o.id.toUpperCase()) + "</span>" +
-        '<span class="opcion__texto"><span class="solo-lector">Opción ' + UI.esc(o.id.toUpperCase()) + ": </span>" +
+        '<span class="opcion__letra" aria-hidden="true">' + letra + "</span>" +
+        '<span class="opcion__texto"><span class="solo-lector">Opción ' + letra + ": </span>" +
         UI.esc(o.texto) + "</span>" +
         (estado ? '<span class="opcion__estado">' + UI.esc(estado) + "</span>" : "") +
         "</button></li>";
@@ -127,9 +135,10 @@
 
   function htmlDetalles(p) {
     var html = "";
-    if (p.explicacion) html += '<div class="bloque"><p class="bloque__titulo">Explicación</p><p>' + UI.esc(p.explicacion) + "</p></div>";
+    var m = Opciones.mapa(s.orden || []);
+    if (p.explicacion) html += '<div class="bloque"><p class="bloque__titulo">Explicación</p><p>' + UI.esc(Opciones.reletrar(p.explicacion, m)) + "</p></div>";
     if (p.justificacion_oficial) html += '<div class="bloque"><p class="bloque__titulo">Justificación de la clave</p><p>' + UI.esc(p.justificacion_oficial) + "</p></div>";
-    html += UI.verificar(p.verificar);
+    html += UI.verificar(Opciones.reletrar(p.verificar, m));
     html += UI.fuentes(p);
     return html;
   }
@@ -218,6 +227,7 @@
     if (s.pos >= s.cola.length) { pantallaFin(vista); return; }
 
     var p = s.porId[s.cola[s.pos]];
+    if (!s.orden) s.orden = Opciones.ordenPara(p);
     var prev = leer(p.id);
     html += '<p class="contador">Pregunta ' + (s.pos + 1) + " de " + s.cola.length + "</p>";
     html += '<div class="chips">' +

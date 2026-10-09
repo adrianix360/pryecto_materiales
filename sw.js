@@ -16,6 +16,7 @@ var ESTATICOS = [
   "js/store.js",
   "js/datos.js",
   "js/ui.js",
+  "js/opciones.js",
   "js/estudiar.js",
   "js/practicar.js",
   "js/examen.js",
