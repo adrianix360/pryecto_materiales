@@ -12,7 +12,8 @@ Herramienta de estudio para la teoría del I examen de **IC-0604 Materiales de C
 - **Practicar:** preguntas de selección única, selección múltiple, falso o verdadero y respuesta corta, con la explicación y la fuente de cada una.
 - Funciona sin conexión (PWA) y guarda el progreso en el navegador.
 - **Simulacro:** examen cronometrado con la estructura del I examen del curso.
-- Progreso y Buscar: próximamente.
+- **Progreso:** cuenta regresiva, lo pendiente, racha, tiempo por día, dominio por tema y subtema, y tus datos (exportar, importar y borrar).
+- Buscar: próximamente.
 
 ## Repetición espaciada: cuándo vuelve a salir un ítem
 
@@ -80,6 +81,23 @@ La fecha del examen (17 de octubre de 2026) se lee de `data/indice.json`.
 
 **Temporizador.** Se guarda la hora de fin y lo que queda se calcula como `fin − ahora`. Por eso sigue corriendo aunque el teléfono bloquee la pantalla o se recargue la página: el examen en curso y las respuestas quedan en el navegador. Si al volver ya se acabó el tiempo, el examen se cierra solo con lo que alcanzaste a responder. Si el navegador no permite guardar datos, aguanta el bloqueo de pantalla pero no una recarga.
 
+## Progreso
+
+- **Cuenta regresiva** al I examen (sábado 17 de octubre, 8:00 a. m.) y **pendientes de hoy** (lo que trae el «Repaso de hoy» de tarjetas y preguntas), más lo que todavía no has visto.
+- **Racha:** días seguidos con al menos un ítem calificado. Si hoy todavía no estudiaste, cuenta hasta ayer.
+- **Tiempo de estudio:** barras de los últimos 7 días con la línea de la meta.
+- **Dominio** por tema y subtema: porcentaje de ítems cuya última calificación fue «la sabía» o «bien». Lo que nunca viste cuenta como no sabido. En las preguntas también se muestra el **porcentaje de aciertos** (respuestas «bien» entre todos los intentos).
+- **Para reforzar:** los 3 subtemas con menor dominio. Cada uno trae un botón que abre Practicar con ese subtema ya filtrado.
+- **Gráficos accesibles:** son SVG y CSS propios, sin librerías. Cada valor también está escrito en texto, y el tiempo por día tiene una lista para lectores de pantalla.
+
+**Tus datos.** El progreso vive solo en el navegador donde estudiás.
+
+- **Exportar** descarga `progreso-materiales-AAAA-MM-DD.json`.
+- **Importar** valida el archivo, muestra qué trae y te deja elegir entre dos opciones:
+  - **Combinar** (recomendado): de cada ítem queda el registro más reciente; de cada día, el mayor tiempo. Los ajustes de este teléfono se conservan.
+  - **Reemplazar:** borra lo de este teléfono y deja solo lo del archivo.
+- **Borrar mi progreso** pide confirmación y borra tarjetas, preguntas, tiempo, racha y simulacros. La meta y los filtros se conservan.
+
 ## Meta diaria
 
 Arriba de Estudiar y Practicar hay un contador: «Hoy: 23 / 40 min · 31 ítems». Al tocarlo se cambia la meta.
@@ -97,6 +115,8 @@ js/version.js         versión de la app y del caché (cambiar en cada publicaci
 js/srs.js             repetición espaciada (Leitner) y compresión antes del examen
 js/examen.js          simulacro: armar, deduplicar, puntuar y temporizador
 js/simulacro.js       pantallas del simulacro
+js/progreso.js        progreso: dominio, débiles, racha, tiempo y exportar/importar
+js/pantalla-progreso.js  pantalla de progreso
 js/                   store, datos, ui, estudiar, practicar, app
 sw.js                 service worker (precarga para uso sin conexión)
 data/                 contenido en JSON (esquema en docs/ESQUEMA.md)
@@ -119,12 +139,12 @@ Requiere Python 3 y Playwright (`pip install playwright` y `python -m playwright
 
 ```bash
 python tools/validar_json.py .
-node --test tests/srs.test.js tests/examen.test.js
+node --test tests/srs.test.js tests/examen.test.js tests/progreso.test.js
 python tests/test_app.py
 python tests/capturas.py
 ```
 
-`srs.test.js` prueba el repaso con fechas simuladas y `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado). Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba`.
+`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) y `progreso.test.js` prueba el dominio, la racha y el exportar/importar. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba`.
 
 `capturas.py` guarda capturas a 390×844 en modo claro y oscuro en `tests/capturas/` (esa carpeta no se sube).
 
