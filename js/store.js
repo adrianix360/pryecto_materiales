@@ -7,14 +7,17 @@
 //   tarjetas[id]  = {r, n, t, caja, vence, visto}            (r: sabia | dudosa | no)
 //   preguntas[id] = {r, n, t, caja, vence, visto, bien, resp} (r: bien | parcial | mal)
 //   diario[AAAA-MM-DD] = {seg, items}   tiempo e ítems calificados ese día
-//   prefs = filtros, modo de cada sección y meta diaria
+//   prefs = filtros, modo de cada sección, meta diaria y configuración del simulacro
+//   simulacro = examen en curso o último terminado (ver js/examen.js)
+//   historial = últimos 10 simulacros terminados {fecha, duracion, temas, puntos, maximo, nota, usado}
 // Los registros viejos (sin caja) se convierten al cargar con SRS.normalizar.
 (function () {
   "use strict";
 
   var CLAVE = "pryecto_materiales:progreso:v1";
   var META_DEFECTO = { unidad: "minutos", valor: 90 };
-  var estado = { tarjetas: {}, preguntas: {}, diario: {}, prefs: {} };
+  var HISTORIAL_MAX = 10;
+  var estado = { tarjetas: {}, preguntas: {}, diario: {}, prefs: {}, simulacro: null, historial: [] };
   var disponible = true;
   var oyentes = [];
 
@@ -43,6 +46,8 @@
         estado.preguntas = convertir(leido.preguntas);
         estado.diario = leido.diario || {};
         estado.prefs = leido.prefs || {};
+        estado.simulacro = leido.simulacro || null;
+        estado.historial = Array.isArray(leido.historial) ? leido.historial : [];
       }
     }
     ls.setItem(CLAVE + ":prueba", "1");
@@ -93,6 +98,19 @@
       var m = estado.prefs.meta;
       return m && m.valor > 0 && (m.unidad === "minutos" || m.unidad === "items") ? m : META_DEFECTO;
     },
-    pref: pref
+    pref: pref,
+    // Examen en curso: sin argumento lo devuelve; con un objeto lo guarda; con null lo borra.
+    simulacro: function (e) {
+      if (arguments.length === 0) return estado.simulacro;
+      estado.simulacro = e;
+      guardar();
+      return e;
+    },
+    historial: function () { return estado.historial.slice(); },
+    agregarHistorial: function (h) {
+      estado.historial.unshift(h);
+      estado.historial = estado.historial.slice(0, HISTORIAL_MAX);
+      guardar();
+    }
   };
 })();
