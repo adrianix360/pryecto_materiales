@@ -453,8 +453,6 @@ img { max-width: 100%; height: auto; }
   background: var(--superficie);
   margin-bottom: 14px;
 }
-.proximamente { text-align: center; padding: 40px 8px; }
-.proximamente__icono { font-size: 2.4rem; }
 
 /* ---------- Meta diaria, modo y repaso ---------- */
 .meta {
@@ -631,6 +629,70 @@ img { max-width: 100%; height: auto; }
 .zona-peligro { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--borde); }
 .error { margin: 10px 0 0; padding: 10px 12px; border-radius: 12px; background: var(--mal-fondo); color: var(--mal); font-weight: 600; }
 .bloque-progreso .confirmar { margin-top: 12px; }
+
+/* ---------- Buscar ---------- */
+.modo--4 { grid-template-columns: repeat(4, 1fr); }
+.modo--4 .modo__opcion { padding: 0 2px; }
+.campo--buscar { margin-bottom: 6px; }
+.campo--buscar input {
+  min-height: 52px;
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid var(--borde);
+  border-radius: 12px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+}
+mark { background: var(--verificar-fondo); color: var(--texto); border-radius: 3px; padding: 0 1px; box-shadow: 0 0 0 1px var(--verificar-borde); }
+.grupo-res { margin-bottom: 16px; }
+.grupo-res h3, .verif__grupo { margin: 14px 0 6px; font-size: 1.15rem; }
+.grupo-res__n { color: var(--texto-suave); font-weight: 600; }
+.grupo-res__tema { margin: 10px 0 6px; font-size: 1rem; color: var(--texto-suave); }
+.resultado { margin-bottom: 8px; border: 1px solid var(--borde); border-radius: 12px; background: var(--superficie); }
+.resultado > summary { display: block; min-height: 48px; padding: 10px 12px; cursor: pointer; list-style: none; }
+.resultado > summary::-webkit-details-marker { display: none; }
+.resultado__meta { display: block; margin: 0; font-size: 0.95rem; color: var(--texto-suave); }
+.resultado__titulo { display: block; font-weight: 600; }
+.resultado__frag { display: block; margin-top: 4px; color: var(--texto-suave); }
+.resultado__cuerpo { padding: 0 12px 12px; }
+.resultado__cuerpo > p { margin: 0 0 8px; }
+.texto-verificar { color: var(--verificar-texto); font-weight: 700; }
+.puntos li.correcta { font-weight: 600; }
+.letras { display: grid; grid-template-columns: repeat(auto-fill, minmax(48px, 1fr)); gap: 6px; margin: 8px 0 12px; }
+.letras__btn { min-height: 48px; border: 2px solid var(--borde); border-radius: 10px; background: var(--superficie); color: var(--texto); font: inherit; font-weight: 700; cursor: pointer; }
+.glosario__letra { margin: 16px 0 6px; font-size: 1.4rem; color: var(--primario); }
+.glosario dl { margin: 0; }
+.glosario__termino { padding: 10px 12px; margin-bottom: 8px; border: 1px solid var(--borde); border-radius: 12px; background: var(--superficie); }
+.glosario dt { font-weight: 700; }
+.glosario dd { margin: 4px 0 0; }
+.glosario dd > p { margin: 0; }
+.galeria { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.figura-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border: 2px solid var(--borde);
+  border-radius: 12px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.figura-btn img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; background: #fff; }
+.figura-btn__titulo { font-weight: 700; }
+.figura-btn__alt, .figura-btn__fuente { color: var(--texto-suave); font-size: 0.95rem; line-height: 1.3; }
+.figura-btn__alt { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.figura-btn__fuente { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.figura-btn__usos { margin-top: auto; padding-top: 4px; color: var(--primario); font-weight: 700; }
+.verif-item { padding: 10px 12px; margin-bottom: 10px; border: 1px solid var(--borde); border-left: 6px solid var(--verificar-borde); border-radius: 12px; background: var(--superficie); }
+.verif-item__titulo { margin: 2px 0 0; font-weight: 600; }
+.verif-item .verificar { margin-top: 8px; }
+.verif-item .btn { margin-top: 8px; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }

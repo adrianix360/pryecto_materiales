@@ -6,10 +6,6 @@
   var titulo = document.getElementById("titulo");
   var NOMBRE_APP = "Materiales IC-0604";
 
-  var Proximamente = function (nombre, texto) {
-    return { titulo: nombre, mostrar: function (v) { v.innerHTML = UI.proximamente(nombre, texto); } };
-  };
-
   var Acerca = {
     titulo: "Acerca de",
     mostrar: function (v) {
@@ -41,7 +37,7 @@
     practicar: window.Practicar,
     simulacro: window.Simulacro,
     progreso: window.PantallaProgreso,
-    buscar: Proximamente("Buscar", "Búsqueda en tarjetas, preguntas y glosario."),
+    buscar: window.PantallaBuscar,
     acerca: Acerca
   };
 

@@ -22,6 +22,8 @@ var ESTATICOS = [
   "js/simulacro.js",
   "js/progreso.js",
   "js/pantalla-progreso.js",
+  "js/buscar.js",
+  "js/pantalla-buscar.js",
   "js/app.js",
   "manifest.webmanifest",
   "icons/icon-192.png",
