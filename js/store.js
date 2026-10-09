@@ -107,6 +107,25 @@
       return e;
     },
     historial: function () { return estado.historial.slice(); },
+    // Copia completa del estado (para exportar).
+    todo: function () { return JSON.parse(JSON.stringify(estado)); },
+    // Reemplaza todo el estado (importar). Devuelve true si quedó guardado.
+    reemplazarTodo: function (nuevo) {
+      estado = {
+        tarjetas: convertir(nuevo.tarjetas),
+        preguntas: convertir(nuevo.preguntas),
+        diario: nuevo.diario || {},
+        prefs: nuevo.prefs || {},
+        simulacro: nuevo.simulacro || null,
+        historial: Array.isArray(nuevo.historial) ? nuevo.historial : []
+      };
+      return guardar();
+    },
+    // Borra el progreso y conserva los ajustes (meta, filtros, modos).
+    borrarProgreso: function () {
+      estado = { tarjetas: {}, preguntas: {}, diario: {}, prefs: estado.prefs, simulacro: null, historial: [] };
+      return guardar();
+    },
     agregarHistorial: function (h) {
       estado.historial.unshift(h);
       estado.historial = estado.historial.slice(0, HISTORIAL_MAX);
