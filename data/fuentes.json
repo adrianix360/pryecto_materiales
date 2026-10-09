@@ -1,0 +1,229 @@
+{
+ "version": 1,
+ "fuentes": {
+  "01": {
+   "archivo": "fuentes/1.  (Agua en el concreto) Fuente PCA.pdf",
+   "titulo": "PCA, Diseño y Control de Mezclas de Concreto, cap. 4: Agua de mezcla (págs. impresas 95–100)",
+   "autor": "Kosmatka et al. (PCA, 2004)",
+   "del_profe": false,
+   "codigo": "01",
+   "paginas": 6
+  },
+  "03": {
+   "archivo": "fuentes/220301  Introducción al concreto.pdf",
+   "titulo": "Introducción al concreto hidráulico (presentación)",
+   "autor": "Ing. Einer Rodríguez Rojas",
+   "del_profe": true,
+   "codigo": "03",
+   "paginas": 9
+  },
+  "04": {
+   "archivo": "fuentes/220301 Tipos de materiales.pdf",
+   "titulo": "Tipos de materiales estructurales (presentación)",
+   "autor": "Ing. Einer Rodríguez Rojas",
+   "del_profe": true,
+   "codigo": "04",
+   "paginas": 5
+  },
+  "05": {
+   "archivo": "fuentes/230317  Agua para el concreto Calidad y Cantidad Parte 1.pdf",
+   "titulo": "Agua para el concreto: calidad y cantidad, parte 1 (presentación)",
+   "autor": "Ing. Einer Rodríguez Rojas",
+   "del_profe": true,
+   "codigo": "05",
+   "paginas": 12
+  },
+  "06": {
+   "archivo": "fuentes/230324  Agua para el concreto Calidad y Cantidad Parte 2.pdf",
+   "titulo": "Agua para el concreto: cantidad, parte 2 (presentación)",
+   "autor": "Ing. Einer Rodríguez Rojas",
+   "del_profe": true,
+   "codigo": "06",
+   "paginas": 11
+  },
+  "20": {
+   "archivo": "fuentes/Exudación y contracción del concreto (Navas, A).pdf",
+   "titulo": "Exudación, contracción y aire incluido (apuntes, cap. 4)",
+   "autor": "Ing. Alejandro Navas",
+   "del_profe": false,
+   "codigo": "20",
+   "paginas": 3
+  },
+  "25": {
+   "archivo": "fuentes/Tolerancias Impurezas.pdf",
+   "titulo": "Tabla de tolerancias de impurezas en el agua",
+   "autor": "Material del curso",
+   "del_profe": true,
+   "codigo": "25",
+   "paginas": 2
+  },
+  "02": {
+   "archivo": "fuentes/2. Grupo B (Agregados, características).pdf",
+   "titulo": "PCA, Diseño y Control de Mezclas de Concreto, cap. 5 (págs. impresas 113–117)",
+   "autor": "Kosmatka et al. (PCA, 2004)",
+   "del_profe": false,
+   "codigo": "02",
+   "paginas": 5
+  },
+  "09": {
+   "archivo": "fuentes/3. Grupo C (Agregados, resistencia).pdf",
+   "titulo": "PCA, cap. 5 (págs. impresas 117–119)",
+   "autor": "Kosmatka et al. (PCA, 2004)",
+   "del_profe": false,
+   "codigo": "09",
+   "paginas": 3
+  },
+  "10": {
+   "archivo": "fuentes/4. Grupo D (Materiales perjudiciales).pdf",
+   "titulo": "PCA, cap. 5 (págs. impresas 119–122 y 126–128)",
+   "autor": "Kosmatka et al. (PCA, 2004)",
+   "del_profe": false,
+   "codigo": "10",
+   "paginas": 7
+  },
+  "11": {
+   "archivo": "fuentes/5. Grupo F (Agregados) Fuente PCA.pdf",
+   "titulo": "PCA, cap. 5 (págs. impresas 106–113)",
+   "autor": "Kosmatka et al. (PCA, 2004)",
+   "del_profe": false,
+   "codigo": "11",
+   "paginas": 8
+  },
+  "12": {
+   "archivo": "fuentes/ACI 116R-00 Cement and Concrete Terminology.pdf",
+   "titulo": "ACI 116R-00, Cement and Concrete Terminology",
+   "autor": "ACI",
+   "del_profe": false,
+   "codigo": "12",
+   "paginas": 73
+  },
+  "13": {
+   "archivo": "fuentes/Agregados Vol y Masas.pdf",
+   "titulo": "Agregados: Volúmenes y masas (presentación)",
+   "autor": "Ing. Einer Rodríguez Rojas",
+   "del_profe": true,
+   "codigo": "13",
+   "paginas": 11
+  },
+  "14": {
+   "archivo": "fuentes/Agregados clasificación.pdf",
+   "titulo": "Agregados: Clasificación (presentación)",
+   "autor": "Ing. Einer Rodríguez Rojas",
+   "del_profe": true,
+   "codigo": "14",
+   "paginas": 16
+  },
+  "15": {
+   "archivo": "fuentes/Agregados importancia.pdf",
+   "titulo": "Agregados: Importancia (presentación)",
+   "autor": "Ing. Einer Rodríguez Rojas",
+   "del_profe": true,
+   "codigo": "15",
+   "paginas": 23
+  },
+  "16": {
+   "archivo": "fuentes/AnÃ¡lisis granulomÃ©trico, Navas.pdf",
+   "titulo": "Análisis granulométrico (apuntes, cap. 2)",
+   "autor": "Ing. Alejandro Navas",
+   "del_profe": false,
+   "codigo": "16",
+   "paginas": 6
+  },
+  "19": {
+   "archivo": "fuentes/Curso_ II - S - 2026 - RRF - Laboratorio Materiales Construcción - 051 052 053 054 055 056 _ Mediación Virtual.pdf",
+   "titulo": "Manual de Laboratorio, módulo de agregados",
+   "autor": "Ing. Flor Muñoz Umaña e Ing. Einer Rodríguez Rojas",
+   "del_profe": true,
+   "codigo": "19",
+   "paginas": 120
+  },
+  "22": {
+   "archivo": "fuentes/MÃ³dulo de finura.pdf",
+   "titulo": "Tabla de clasificación por módulo de finura",
+   "autor": "Material del curso",
+   "del_profe": true,
+   "codigo": "22",
+   "paginas": 1
+  },
+  "24": {
+   "archivo": "fuentes/Propiedadees de agregados, Navas.pdf",
+   "titulo": "Propiedades de los agregados (apuntes, cap. 2)",
+   "autor": "Ing. Alejandro Navas",
+   "del_profe": false,
+   "codigo": "24",
+   "paginas": 12
+  },
+  "26": {
+   "archivo": "fuentes/UCR-Conf-Ingenieria-26Ag26.pdf",
+   "titulo": "Rocas como agregados pétreos para mezclas de concreto (conferencia)",
+   "autor": "Geól. Fernando Alvarado Villalón",
+   "del_profe": false,
+   "codigo": "26",
+   "paginas": 87
+  },
+  "08": {
+   "archivo": "fuentes/260517 Primer Parcial - SOLUC TEORIA.docx - Documentos de Google.pdf",
+   "titulo": "I examen parcial, I-2026 (teoría, con clave)",
+   "autor": "Curso IC-0604",
+   "del_profe": true,
+   "codigo": "08",
+   "paginas": 5
+  },
+  "X01": {
+   "archivo": "fuentes/examenes/Teoría examen _250523_233656 1_261009_135719.pdf",
+   "titulo": "Recopilación: cuestionario de Mediación Virtual y claves",
+   "autor": "Curso IC-0604",
+   "del_profe": true,
+   "codigo": "X01",
+   "paginas": 8
+  },
+  "X02": {
+   "archivo": "fuentes/examenes/Solución Parte Teorica .pdf",
+   "titulo": "I examen parcial, I-2025 (teoría, con clave)",
+   "autor": "Curso IC-0604",
+   "del_profe": true,
+   "codigo": "X02",
+   "paginas": 3
+  },
+  "X04": {
+   "archivo": "fuentes/examenes/Examen semestre 2-Teoría-Desarrollo corto con respuestas IIS.2022.pdf",
+   "titulo": "I examen parcial, II-2022 (teoría y desarrollo corto)",
+   "autor": "Curso IC-0604",
+   "del_profe": false,
+   "codigo": "X04",
+   "paginas": 8
+  },
+  "X06": {
+   "archivo": "fuentes/examenes/Examen Parcial # 1 _ Teoria (Valor total 40 _).pdf",
+   "titulo": "I examen parcial, I-2020 (cuestionario de teoría)",
+   "autor": "Curso IC-0604",
+   "del_profe": false,
+   "codigo": "X06",
+   "paginas": 4
+  },
+  "X14": {
+   "archivo": "fuentes/examenes/I Parcial. I-2009.pdf",
+   "titulo": "I examen parcial, I-2009 (teoría, respuesta de un estudiante sin clave)",
+   "autor": "Curso IC-0604 (Ing. Flor Muñoz)",
+   "del_profe": false,
+   "codigo": "X14",
+   "paginas": 10
+  },
+  "X15": {
+   "archivo": "fuentes/examenes/I Parcial. II-2009.pdf",
+   "titulo": "I examen parcial, II-2009 (respuesta de un estudiante sin clave)",
+   "autor": "Curso IC-0604 (Ing. Flor Muñoz)",
+   "del_profe": false,
+   "codigo": "X15",
+   "paginas": 7
+  },
+  "X07": {
+   "archivo": "fuentes/examenes/Primer examen IC 2020 (capturas)/",
+   "titulo": "I examen, I-2020 (capturas del cuestionario)",
+   "autor": "Curso IC-0604",
+   "del_profe": false,
+   "codigo": "X07",
+   "paginas": 14
+  }
+ }
+}

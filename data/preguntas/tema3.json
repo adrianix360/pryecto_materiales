@@ -1,0 +1,4024 @@
+{
+ "tema": 3,
+ "titulo": "Agregados",
+ "preguntas": [
+  {
+   "id": "p3-3C-x01",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "verdadero_falso",
+   "enunciado": "Se realiza la prueba de laboratorio ASTM C566 (Humedad de los agregados). El agregado grueso tiene una humedad de 5,5%. Su absorción es de 3,5%. Tiene agua libre e hinchamiento",
+   "origen": "examen",
+   "examen": {
+    "doc": "08",
+    "pag": 1,
+    "pregunta": "1.1, caso 1",
+    "periodo": "I-2026"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. Como la humedad (5,5 %) supera la absorción (3,5 %), el agregado sí tiene agua libre (2 %). Pero el hinchamiento es un fenómeno exclusivo de la arena: en el agregado grueso las partículas son muy grandes comparadas con la capa de agua y no se forma el menisco que las separa.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    },
+    {
+     "doc": "13",
+     "pag": 2
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "El agregado grueso no tiene hinchamiento."
+  },
+  {
+   "id": "p3-3B-x01",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Al utilizar rocas dolomíticas se podría producir reacción álcali – sílice",
+   "origen": "examen",
+   "examen": {
+    "doc": "08",
+    "pag": 1,
+    "pregunta": "1.1, caso 3",
+    "periodo": "I-2026"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. Las rocas dolomíticas se asocian con la reacción álcali-carbonato (RAC), no con la álcali-sílice. La RAS se da con minerales silíceos reactivos.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 18
+    },
+    {
+     "doc": "10",
+     "pag": 5,
+     "impresa": "126"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Reacción álcali carbonato"
+  },
+  {
+   "id": "p3-3C-x02",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "verdadero_falso",
+   "enunciado": "El volumen masivo de cemento se obtiene de la densidad aparente del cemento",
+   "origen": "examen",
+   "examen": {
+    "doc": "08",
+    "pag": 1,
+    "pregunta": "1.1, caso 5",
+    "periodo": "I-2026"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. Según la clave, con la densidad aparente se obtiene el volumen seco (sólido) del cemento: δs = Ps/Vs. El volumen masivo incluye además los espacios entre partículas.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 5
+    },
+    {
+     "doc": "13",
+     "pag": 9
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Corresponde al volumen seco"
+  },
+  {
+   "id": "p3-3C-x03",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Si va a determinar la cantidad de vacíos en una masa de agregados, cual norma recomienda",
+   "origen": "examen",
+   "examen": {
+    "doc": "08",
+    "pag": 2,
+    "pregunta": "1.2, pregunta 5",
+    "periodo": "I-2026"
+   },
+   "clave": "oficial",
+   "explicacion": "La ASTM C29 determina el peso unitario (densidad masiva) y, a partir de él y de la GBS, el contenido de vacíos entre partículas.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 99
+    },
+    {
+     "doc": "19",
+     "pag": 107
+    }
+   ],
+   "respuesta_modelo": "ASTM C29",
+   "puntos_clave": [
+    "ASTM C29",
+    "peso unitario y vacíos"
+   ]
+  },
+  {
+   "id": "p3-3E-x01",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Respuesta corta. Normativa. A continuación se mencionan algunas normas vistas en clase y laboratorio: ASTM D75, ASTM C702, ASTM C117, ASTM C136, ASTM C33, ASTM C131, ASTM C127, ASTM C128, ASTM C566, ASTM C29, ASTM C40, ASTM C586, ASTM C227, ASTM C1260, ASTM D4791, ASTM C114, ASTM C1602. Indique la NUMERACIÓN de norma ASTM que corresponde a la imagen de referencia (Ej: ASTM D75).",
+   "origen": "examen",
+   "examen": {
+    "doc": "08",
+    "pag": 3,
+    "pregunta": "1.3, imagen a",
+    "periodo": "I-2026"
+   },
+   "clave": "oficial",
+   "explicacion": "La foto muestra un separador mecánico de canales con sus bandejas: es el método A de reducción de muestras.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 25
+    },
+    {
+     "doc": "19",
+     "pag": 28
+    }
+   ],
+   "respuesta_modelo": "ASTM C702",
+   "puntos_clave": [
+    "ASTM C702"
+   ],
+   "figura": {
+    "src": "img/examenes/2026-1_3-a.jpg",
+    "alt": "Imagen de referencia del examen",
+    "fuente": [
+     {
+      "doc": "08",
+      "pag": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "p3-3E-x02",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Respuesta corta. Normativa. A continuación se mencionan algunas normas vistas en clase y laboratorio: ASTM D75, ASTM C702, ASTM C117, ASTM C136, ASTM C33, ASTM C131, ASTM C127, ASTM C128, ASTM C566, ASTM C29, ASTM C40, ASTM C586, ASTM C227, ASTM C1260, ASTM D4791, ASTM C114, ASTM C1602. Indique la NUMERACIÓN de norma ASTM que corresponde a la imagen de referencia (Ej: ASTM D75).",
+   "origen": "examen",
+   "examen": {
+    "doc": "08",
+    "pag": 3,
+    "pregunta": "1.3, imagen b",
+    "periodo": "I-2026"
+   },
+   "clave": "oficial",
+   "explicacion": "Se vierte el agua de lavado sobre las mallas anidadas (No. 16 sobre No. 200): es el lavado para determinar el material más fino que 75 µm.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 40
+    }
+   ],
+   "respuesta_modelo": "ASTM C117",
+   "puntos_clave": [
+    "ASTM C117"
+   ],
+   "figura": {
+    "src": "img/examenes/2026-1_3-b.jpg",
+    "alt": "Imagen de referencia del examen",
+    "fuente": [
+     {
+      "doc": "08",
+      "pag": 3
+     }
+    ]
+   },
+   "verificar": "La clave dice «ASTM C117 / ASTM C131 al lavar». La ASTM C131 es la abrasión de Los Ángeles; aquí se acepta solo la C117."
+  },
+  {
+   "id": "p3-3E-x03",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Respuesta corta. Normativa. A continuación se mencionan algunas normas vistas en clase y laboratorio: ASTM D75, ASTM C702, ASTM C117, ASTM C136, ASTM C33, ASTM C131, ASTM C127, ASTM C128, ASTM C566, ASTM C29, ASTM C40, ASTM C586, ASTM C227, ASTM C1260, ASTM D4791, ASTM C114, ASTM C1602. Indique la NUMERACIÓN de norma ASTM que corresponde a la imagen de referencia (Ej: ASTM D75).",
+   "origen": "examen",
+   "examen": {
+    "doc": "08",
+    "pag": 3,
+    "pregunta": "1.3, imagen c",
+    "periodo": "I-2026"
+   },
+   "clave": "oficial",
+   "explicacion": "Se coloca la muestra en el juego de mallas apiladas: es el análisis granulométrico.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 51
+    },
+    {
+     "doc": "19",
+     "pag": 52
+    }
+   ],
+   "respuesta_modelo": "ASTM C136",
+   "puntos_clave": [
+    "ASTM C136"
+   ],
+   "figura": {
+    "src": "img/examenes/2026-1_3-c.jpg",
+    "alt": "Imagen de referencia del examen",
+    "fuente": [
+     {
+      "doc": "08",
+      "pag": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "p3-3E-x04",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Respuesta corta. Normativa. A continuación se mencionan algunas normas vistas en clase y laboratorio: ASTM D75, ASTM C702, ASTM C117, ASTM C136, ASTM C33, ASTM C131, ASTM C127, ASTM C128, ASTM C566, ASTM C29, ASTM C40, ASTM C586, ASTM C227, ASTM C1260, ASTM D4791, ASTM C114, ASTM C1602. Indique la NUMERACIÓN de norma ASTM que corresponde a la imagen de referencia (Ej: ASTM D75).",
+   "origen": "examen",
+   "examen": {
+    "doc": "08",
+    "pag": 3,
+    "pregunta": "1.3, imagen d",
+    "periodo": "I-2026"
+   },
+   "clave": "oficial",
+   "explicacion": "La canasta de alambre suspendida en el tanque sirve para pesar sumergido el agregado grueso: gravedad específica y absorción del grueso.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 68
+    },
+    {
+     "doc": "19",
+     "pag": 70
+    }
+   ],
+   "respuesta_modelo": "ASTM C127",
+   "puntos_clave": [
+    "ASTM C127"
+   ],
+   "figura": {
+    "src": "img/examenes/2026-1_3-d.jpg",
+    "alt": "Imagen de referencia del examen",
+    "fuente": [
+     {
+      "doc": "08",
+      "pag": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "p3-3E-x05",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Respuesta corta. Normativa. A continuación se mencionan algunas normas vistas en clase y laboratorio: ASTM D75, ASTM C702, ASTM C117, ASTM C136, ASTM C33, ASTM C131, ASTM C127, ASTM C128, ASTM C566, ASTM C29, ASTM C40, ASTM C586, ASTM C227, ASTM C1260, ASTM D4791, ASTM C114, ASTM C1602. Indique la NUMERACIÓN de norma ASTM que corresponde a la imagen de referencia (Ej: ASTM D75).",
+   "origen": "examen",
+   "examen": {
+    "doc": "08",
+    "pag": 4,
+    "pregunta": "1.3, imagen e",
+    "periodo": "I-2026"
+   },
+   "clave": "oficial",
+   "explicacion": "Picnómetro con arena y termómetro (control a 23 ± 2 °C): gravedad específica y absorción del agregado fino.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 85
+    },
+    {
+     "doc": "19",
+     "pag": 90
+    }
+   ],
+   "respuesta_modelo": "ASTM C128",
+   "puntos_clave": [
+    "ASTM C128"
+   ],
+   "figura": {
+    "src": "img/examenes/2026-1_3-e.jpg",
+    "alt": "Imagen de referencia del examen",
+    "fuente": [
+     {
+      "doc": "08",
+      "pag": 4
+     }
+    ]
+   }
+  },
+  {
+   "id": "p3-3C-x04",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Usted realiza la prueba ASTM C29 y determina la cantidad de vacíos en los agregados. Concluye:",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 2,
+    "pregunta": "1, pregunta 6",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la A: la cantidad de vacíos entre partículas afecta la demanda de pasta (la PCA da 30–45 % en el grueso y 40–50 % en el fino). La B es falsa porque la pasta debe llenar esos vacíos, así que no son despreciables. La C contradice la A. La D está al revés: el fino suele tener más vacíos que el grueso.",
+   "fuente": [
+    {
+     "doc": "02",
+     "pag": 2,
+     "impresa": "114"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "La cantidad de vacíos entre las partículas afecta la demanda de pasta en el diseño de la mezcla"
+    },
+    {
+     "id": "b",
+     "texto": "No es importante pues al mezclar todos los componentes es despreciable"
+    },
+    {
+     "id": "c",
+     "texto": "La cantidad de vacíos entre las partículas NO afecta la demanda de pasta en el diseño de la mezcla"
+    },
+    {
+     "id": "d",
+     "texto": "Un agregado grueso tiene generalmente más % de vacíos que un agregado fino"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3D-x01",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué factor aumenta de forma aleatoria el contenido de aire en la mezcla? (1 puntos)",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 1,
+    "pregunta": "1, pregunta 5",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la B. Según Navas, el aire siempre entra en la mezcla en cantidad aleatoria y aumenta con más agregado fino (sobre todo entre las mallas No. 30 y No. 50), con un tamaño máximo menor y con un mezclado más fuerte o más largo. La A está al revés: el vibrado prolongado reduce el aire. La C y la D no aparecen en las fuentes como causas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 3,
+     "impresa": "4/8"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Uso de vibrador externo"
+    },
+    {
+     "id": "b",
+     "texto": "Mayor proporción de agregado fino"
+    },
+    {
+     "id": "c",
+     "texto": "Aumento de a/c"
+    },
+    {
+     "id": "d",
+     "texto": "Usar mezcladoras más eficientes"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3B-x02",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Los álcalis del cemento que puede afectar a las mezclas se pueden clasificar como concentraciones de hierro y potasio",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 2,
+    "pregunta": "2, caso 1",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. Los álcalis del cemento son los óxidos de sodio (Na₂O) y de potasio (K₂O); el hierro no es un álcali.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 15
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Sodio y potasio"
+  },
+  {
+   "id": "p3-3C-x05",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "verdadero_falso",
+   "enunciado": "Masa del agregado seco al aire por unidad de volumen de las partículas de agregado, incluyendo el volumen de los poros permeables e impermeables dentro de las partículas del agregado, pero sin incluir los vacíos entre las partículas. La definición corresponde con “Densidad bruta seca”",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 2,
+    "pregunta": "2, caso 4",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso, por una sola palabra: la densidad bruta seca se define con el agregado seco AL HORNO, no seco al aire. El resto de la definición es correcto.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 6
+    },
+    {
+     "doc": "19",
+     "pag": 64
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "El agregado debe ser seco al horno"
+  },
+  {
+   "id": "p3-3A-x01",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Para obtener el Ensayo de Partículas planas y Elongadas se utiliza la norma ASTM D 5260 y establece una relación máxima de 15% en el volumen",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 2,
+    "pregunta": "2, caso 5",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso: el límite es 15 % en MASA, no en volumen, y la norma de partículas planas y elongadas es la ASTM D4791.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 19
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Norma ASTM D4790. 15% en masa",
+   "verificar": "La clave dice «ASTM D4790», pero las diapositivas del curso (15, pág. 19; 14, pág. 14) dicen ASTM D4791."
+  },
+  {
+   "id": "p3-3E-x06",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Al realizar su informe de laboratorio para la norma ASTM C131, el resultado se debe comparar con una tolerancia máxima a cumplir en base a la norma ASTM C33, indique el valor.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 2",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "La clave da 40 %. El manual solo dice que las especificaciones fijan una pérdida máxima por abrasión.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 112
+    },
+    {
+     "doc": "09",
+     "pag": 2,
+     "impresa": "118"
+    }
+   ],
+   "respuesta_modelo": "40%",
+   "puntos_clave": [
+    "40 %",
+    "pérdida máxima por abrasión"
+   ],
+   "verificar": "El 40 % no aparece en ninguna fuente de teoría del curso; solo en esta clave."
+  },
+  {
+   "id": "p3-3C-x06",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Al realizar su ensayo de laboratorio ASTM C128 de forma correcta, la gravedad específica de un agregado dio un valor de 2,3, ¿Que concluye de este valor?",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 4",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "Un agregado normal tiene GBS entre 2,4 y 2,8. Un valor de 2,3 queda por debajo, así que la clave lo clasifica como agregado ligero.",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 9
+    }
+   ],
+   "respuesta_modelo": "Agregado ligero",
+   "puntos_clave": [
+    "menor que 2,4",
+    "agregado ligero (liviano)"
+   ]
+  },
+  {
+   "id": "p3-3A-x02",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique un tipo de roca considerada liviana",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 6",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "Entre los agregados livianos del curso están la pómez, la escoria volcánica y la ceniza volante.",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 11
+    }
+   ],
+   "respuesta_modelo": "Pómez (también se aceptan ceniza volante o escoria volcánica)",
+   "puntos_clave": [
+    "pómez",
+    "escoria volcánica",
+    "ceniza volante"
+   ]
+  },
+  {
+   "id": "p3-3A-x03",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique el nombre de uno de los tipos de trituradores que se utilizan en la producción de agregado",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 7",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "La clave acepta el triturador rotatorio o el de mandíbula. La conferencia (26, pág. 18) explica que los equipos de trituración generan fuerzas de compresión e impacto.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 18
+    }
+   ],
+   "respuesta_modelo": "Rotatorio o de mandíbula",
+   "puntos_clave": [
+    "rotatorio",
+    "mandíbula"
+   ],
+   "verificar": "Los tipos de triturador solo aparecen en la clave de examen, no en las fuentes de teoría."
+  },
+  {
+   "id": "p3-3C-x07",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Según el diagrama de pesos y volúmenes, indique los elementos que involucra el Volumen Bruto de agregado",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 8",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "El volumen bruto es el volumen sólido más el de los poros permeables (VB = Vs + Vpp); no incluye los vacíos entre partículas.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 4
+    },
+    {
+     "doc": "24",
+     "pag": 6,
+     "impresa": "2/8"
+    }
+   ],
+   "respuesta_modelo": "Vs + Vpp",
+   "puntos_clave": [
+    "volumen sólido",
+    "poros permeables"
+   ]
+  },
+  {
+   "id": "p3-3D-x02",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "respuesta_corta",
+   "enunciado": "Defina el tamaño máximo nominal de un agregado",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 9",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "Es la definición del manual de laboratorio. No se confunde con el tamaño máximo, que es la malla más pequeña por la que pasa el 100 %.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 9
+    },
+    {
+     "doc": "19",
+     "pag": 50
+    }
+   ],
+   "respuesta_modelo": "Es el mayor tamaño de malla donde queda retenido material respetando un retenido máximo permisible",
+   "puntos_clave": [
+    "mayor tamaño de malla",
+    "queda retenido material",
+    "retenido máximo permisible"
+   ]
+  },
+  {
+   "id": "p3-3B-x03",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique la norma para determinar expansiones de álcali sílice a 14 días",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 11",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "La ASTM C1260 (barra de mortero) rechaza si la expansión supera 0,10 % a los 14 días.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 17
+    }
+   ],
+   "respuesta_modelo": "ASTM C1260",
+   "puntos_clave": [
+    "ASTM C1260"
+   ]
+  },
+  {
+   "id": "p3-3B-x04",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique la norma para determinar expansiones de álcali sílice a 3 meses y seis meses",
+   "origen": "examen",
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 12",
+    "periodo": "I-2025"
+   },
+   "clave": "oficial",
+   "explicacion": "La ASTM C227 (barra de mortero) rechaza si la expansión supera 0,05 % a los 3 meses o 0,10 % a los 6 meses.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 17
+    }
+   ],
+   "respuesta_modelo": "ASTM C227",
+   "puntos_clave": [
+    "ASTM C227"
+   ]
+  },
+  {
+   "id": "p3-3C-x08",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique una variable para disminuir el contenido de vacíos en una mezcla de concreto (sólo puede indicar una variable, si indica más de una la respuesta es inválida). Valor 1 punto",
+   "origen": "examen",
+   "examen": {
+    "doc": "X04",
+    "pag": 2,
+    "pregunta": "Parte 1a, respuesta corta 1",
+    "periodo": "II-2022"
+   },
+   "clave": "oficial",
+   "explicacion": "Los vacíos aumentan con la angularidad y disminuyen con una mejor granulometría y con tamaños mayores bien graduados.",
+   "fuente": [
+    {
+     "doc": "02",
+     "pag": 2,
+     "impresa": "114"
+    },
+    {
+     "doc": "11",
+     "pag": 2,
+     "impresa": "107"
+    }
+   ],
+   "respuesta_modelo": "Disminución de partículas angulosas, o mejorar la granulometría",
+   "puntos_clave": [
+    "menos partículas angulosas",
+    "mejor granulometría"
+   ]
+  },
+  {
+   "id": "p3-3A-x04",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique el valor superior del peso unitario (kg/m3) de un agregado para considerarlo como un material pesado (sólo puede indicar un valor, si indica más de uno la respuesta es inválida) Valor 1 punto.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X04",
+    "pag": 2,
+    "pregunta": "Parte 1a, respuesta corta 2",
+    "periodo": "II-2022"
+   },
+   "clave": "oficial",
+   "explicacion": "Un agregado es pesado si su peso unitario masivo seco supera 1900 kg/m³.",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 9
+    }
+   ],
+   "respuesta_modelo": "Superior a 1900 kg/m3",
+   "puntos_clave": [
+    "δb > 1900 kg/m³"
+   ]
+  },
+  {
+   "id": "p3-3B-x05",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique una norma de ensayo para determinar la reacción álcali sílice (sólo puede indicar una, si indica más de una, la respuesta es inválida) Valor 1 punto",
+   "origen": "examen",
+   "examen": {
+    "doc": "X04",
+    "pag": 2,
+    "pregunta": "Parte 1a, respuesta corta 4",
+    "periodo": "II-2022"
+   },
+   "clave": "oficial",
+   "explicacion": "Las tres normas de reacción álcali-sílice del curso son la C227, la C1260 y la C289.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 17
+    }
+   ],
+   "respuesta_modelo": "ASTM C227 (también ASTM C1260 o ASTM C289)",
+   "puntos_clave": [
+    "C227",
+    "C1260",
+    "C289"
+   ]
+  },
+  {
+   "id": "p3-3C-x09",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "verdadero_falso",
+   "enunciado": "La densidad de un agregado usa directamente en algunos cálculos de proporcionamiento y del control de la mezcla, tales como el volumen ocupado por el agregado en el método del volumen absoluto de diseño de mezcla",
+   "origen": "examen",
+   "examen": {
+    "doc": "X04",
+    "pag": 2,
+    "pregunta": "Parte 1a, F/V 3",
+    "periodo": "II-2022"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso según la clave: lo que se usa en esos cálculos es la gravedad específica (densidad relativa), tal como lo dice la PCA.",
+   "fuente": [
+    {
+     "doc": "02",
+     "pag": 2,
+     "impresa": "114"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Corresponde a gravedad especifica o densidad relativa"
+  },
+  {
+   "id": "p3-3C-x10",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Los agregados de peso normal tienen densidades (gravedades) especificas del orden de :",
+   "origen": "examen",
+   "examen": {
+    "doc": "X06",
+    "pag": 1,
+    "pregunta": "Pregunta 1",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la B: un agregado normal tiene GBS entre 2,4 y 2,8. La A es demasiado amplia, la C y la D corresponden a agregados pesados, y la E es falsa porque la gravedad específica es una propiedad del agregado, no del concreto.",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 9
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Entre 2 y 3"
+    },
+    {
+     "id": "b",
+     "texto": "de 2.4 a 2.8"
+    },
+    {
+     "id": "c",
+     "texto": "Mas de 5.0"
+    },
+    {
+     "id": "d",
+     "texto": "3.0 o más"
+    },
+    {
+     "id": "e",
+     "texto": "Dependen del concreto a usar"
+    }
+   ],
+   "correcta": "b",
+   "verificar": "Otras fuentes dan rangos distintos (ver la tarjeta de gravedad específica normal)."
+  },
+  {
+   "id": "p3-3A-x05",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Los agregados livianos no son comunes en nuestro país debido a que eran antiguamente fáciles de encontrar en las capas superficiales de las canteras que ya perdieron su vida útil.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X06",
+    "pag": 1,
+    "pregunta": "Pregunta 2",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "Según la clave del cuestionario, es «Verdadero». Las fuentes de teoría del curso no tratan este tema.",
+   "fuente": [],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "verificar": "La clave dice «Verdadero», pero la documentación de teoría no respalda ni desmiente la afirmación y la redacción es confusa."
+  },
+  {
+   "id": "p3-3C-x11",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "El hinchamiento en arenas se da principalmente por :",
+   "origen": "examen",
+   "examen": {
+    "doc": "X06",
+    "pag": 2,
+    "pregunta": "Pregunta 5",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "El comentario del profesor resalta la presencia de agua libre. El mecanismo es la tensión superficial: el agua libre forma meniscos que separan las partículas.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    },
+    {
+     "doc": "02",
+     "pag": 3,
+     "impresa": "115"
+    }
+   ],
+   "respuesta_modelo": "Presencia de agua libre, que por tensión superficial forma meniscos y separa las partículas",
+   "puntos_clave": [
+    "agua libre",
+    "tensión superficial (menisco)",
+    "solo en arenas"
+   ]
+  },
+  {
+   "id": "p3-3A-x06",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "verdadero_falso",
+   "enunciado": "No se debe admitir más de un 15 % en volumen de partículas alargadas y aplanadas, obtenido con base en una muestra de agregado representativa",
+   "origen": "examen",
+   "examen": {
+    "doc": "X06",
+    "pag": 2,
+    "pregunta": "Pregunta 6",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso: el límite es 15 % en masa.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 19
+    },
+    {
+     "doc": "24",
+     "pag": 2,
+     "impresa": "2/4"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Es 15 % en masa, no en volumen"
+  },
+  {
+   "id": "p3-3C-x12",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Si la humedad de compra es 3 % y la humedad de dosificación es 2 %, considero que el agregado no siempre va a aportar agua al agua de diseño en una mezcla de concreto ?",
+   "origen": "examen",
+   "examen": {
+    "doc": "X06",
+    "pag": 3,
+    "pregunta": "Pregunta 8",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la A: que el agregado aporte o quite agua depende de si su humedad supera o no la absorción (w > D aporta; w < D absorbe). Sin la absorción no se puede concluir. La B y la E responden sin esa información. La C falla porque estar por encima del peso seco no basta. La D supone una absorción que el enunciado no da.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    },
+    {
+     "doc": "13",
+     "pag": 2
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "No, debo revisar absorción"
+    },
+    {
+     "id": "b",
+     "texto": "No"
+    },
+    {
+     "id": "c",
+     "texto": "Si, ya que ambas son mayores que la condición de peso seco"
+    },
+    {
+     "id": "d",
+     "texto": "Si, ya que la humedad es mayor a la absorción"
+    },
+    {
+     "id": "e",
+     "texto": "Si"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3B-x06",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Aunque los agregados sean reactivos, las reacciones álcali-agregado solo ocurren si hay presencia de agua",
+   "origen": "examen",
+   "examen": {
+    "doc": "X06",
+    "pag": 3,
+    "pregunta": "Pregunta 9",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso: no basta el agua. Tienen que darse tres condiciones a la vez: agregado reactivo, exceso de álcalis y humedad.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 13
+    },
+    {
+     "doc": "10",
+     "pag": 4,
+     "impresa": "122"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Además de ser reactivos, debe haber dos condiciones más : agua para que se generen las reacciones de expansión pero también, se debe superar el máximo permitido de álcalis"
+  },
+  {
+   "id": "p3-3A-x07",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la misma mezcla de concreto se puede reducir la cantidad de pasta entre un ___% y ___% si se pasa de usar agregados laminados y planos a agregados de formas cúbicas y de mejor textura superficial",
+   "origen": "examen",
+   "examen": {
+    "doc": "X06",
+    "pag": 3,
+    "pregunta": "Pregunta 10",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "La clave da la A (4 % a 5 %). Las fuentes del curso confirman la idea (las partículas planas piden más pasta), pero no el porcentaje.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 20
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "4 % a 5 %"
+    },
+    {
+     "id": "b",
+     "texto": "Ninguno de los anteriores"
+    },
+    {
+     "id": "c",
+     "texto": "1 % a 2 %"
+    },
+    {
+     "id": "d",
+     "texto": "10 % a 12 %"
+    },
+    {
+     "id": "e",
+     "texto": "18 % a 20 %"
+    }
+   ],
+   "correcta": "a",
+   "verificar": "El rango de 4 % a 5 % solo aparece en la clave del cuestionario."
+  },
+  {
+   "id": "p3-3C-x13",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Debido a la imposibilidad práctica de medirlos, consideramos que los poros impermeables están incluidos en :",
+   "origen": "examen",
+   "examen": {
+    "doc": "X06",
+    "pag": 4,
+    "pregunta": "Pregunta 11",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "Los poros impermeables no intercambian humedad, así que se cuentan dentro del volumen sólido.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 6,
+     "impresa": "2/8"
+    }
+   ],
+   "respuesta_modelo": "El volumen del sólido",
+   "puntos_clave": [
+    "volumen sólido (Vs)"
+   ]
+  },
+  {
+   "id": "p3-3B-x07",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Generalmente los agregados de río en nuestro país son de origen (una sola palabra):",
+   "origen": "examen",
+   "examen": {
+    "doc": "X06",
+    "pag": 4,
+    "pregunta": "Pregunta 12",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "En Costa Rica los mejores agregados provienen de rocas ígneas.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 11
+    }
+   ],
+   "respuesta_modelo": "Ígneo",
+   "puntos_clave": [
+    "ígneo"
+   ]
+  },
+  {
+   "id": "p3-3A-x08",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Para producir un concreto de 20 MPa de resistencia a compresión simple a 28 días de curado, no es necesario utilizar un agregado grueso de muy alta calidad mecánica.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X07",
+    "pag": 1,
+    "pregunta": "captura 1, pregunta 1",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "Verdadero. En concreto convencional, la resistencia del agregado influye menos que la de la pasta y la adherencia; los agregados resisten mucho más que 20 MPa (la PCA da 65 a 270 MPa en compresión). Según la clave de X01 (pág. 6), es a partir de unos 34 MPa que la calidad mecánica del agregado se vuelve esencial.",
+   "fuente": [
+    {
+     "doc": "09",
+     "pag": 2,
+     "impresa": "118"
+    },
+    {
+     "doc": "X01",
+     "pag": 6,
+     "pregunta": "F/V 3"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "justificacion_oficial": "Usualmente los agregados tienen mucho más resistencia que 20 MPa"
+  },
+  {
+   "id": "p3-3A-x09",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Cite las cuatro funciones clave de los agregados en las mezclas de concreto",
+   "origen": "examen",
+   "examen": {
+    "doc": "X07",
+    "pag": 4,
+    "pregunta": "captura 4, pregunta 2",
+    "periodo": "I-2020"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la A: son los cuatro aspectos de importancia que da la presentación del curso. La B incluye «reacción con el cemento», algo que justamente no se desea (agregado inerte). La C mezcla acabado y textura, que son características, no funciones. La D habla de proveer humedad, lo cual no es una función del agregado.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 3
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Economia, durabilidad, resistencia y trabajabilidad"
+    },
+    {
+     "id": "b",
+     "texto": "Resistencia, volumen, reacción con el cemento y dureza"
+    },
+    {
+     "id": "c",
+     "texto": "Acabado, textura, economia y durabilidad"
+    },
+    {
+     "id": "d",
+     "texto": "Proveer volumen, brindar espacios, proveer humedad y durabilidad"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3D-x03",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "verdadero_falso",
+   "enunciado": "Analice la siguiente afirmación e indique si es falsa o verdadera.\nUn agregado de 38 mm (37,5 mm) por su tamaño máximo es adecuado para construir una losa de piso sin refuerzo",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 1,
+    "pregunta": "pregunta 1",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Verdadero. Un tamaño máximo nominal mayor necesita menos pasta (menos superficie que cubrir), lo que ahorra y reduce las contracciones. En una losa sin refuerzo no limita la separación de barras.",
+   "fuente": [
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
+    },
+    {
+     "doc": "15",
+     "pag": 4
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "justificacion_oficial": "Un tamaño máximo nominal de 38 mm (37,5 mm) es adecuado para la construcción de la losa. Este tipo de tamaño máximo nominal brinda ahorro al requerir menos pasta y por lo tanto menores contracciones."
+  },
+  {
+   "id": "p3-3B-x08",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque aquellas rocas que considere que son aptas para fabricar concreto hidráulico en Costa Rica\nPuede marcar varias alternativas",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 1,
+    "pregunta": "pregunta 2",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Son correctas la caliza, el granito y la andesita (escrita «Andecita» en el original). Las lavas andesíticas recientes son la fuente típica del país y las calizas son muy usadas. La dolomita se asocia con la reacción álcali-carbonato y la pirita es un sulfuro de hierro que vuelve reactivo al agregado.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 54
+    },
+    {
+     "doc": "26",
+     "pag": 63
+    },
+    {
+     "doc": "15",
+     "pag": 14
+    },
+    {
+     "doc": "15",
+     "pag": 18
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Caliza"
+    },
+    {
+     "id": "b",
+     "texto": "Granito"
+    },
+    {
+     "id": "c",
+     "texto": "Andecita"
+    },
+    {
+     "id": "d",
+     "texto": "Dolomita"
+    },
+    {
+     "id": "e",
+     "texto": "Pirita"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "id": "p3-3B-x09",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "seleccion_unica",
+   "enunciado": "Elija la opción que corresponda con rocas sedimentarias",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 1,
+    "pregunta": "pregunta 3",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la B: la arenisca y el conglomerado son sedimentarias clásticas (fragmentos cementados). La A son ígneas y la C son metamórficas.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 59
+    },
+    {
+     "doc": "26",
+     "pag": 9
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Basalto, granito"
+    },
+    {
+     "id": "b",
+     "texto": "Arenizca, conglomerado"
+    },
+    {
+     "id": "c",
+     "texto": "Marmol, cuarcita"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3B-x10",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Los materiales más finos que 75 µm (tamiz No. 200) no afectan la resistencia o durabilidad del concreto dado su pequeño tamaño",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 1,
+    "pregunta": "pregunta 4",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. El limo y la arcilla forman una capa sobre las partículas que debilita la adherencia pasta-agregado y aumenta la demanda de agua.",
+   "fuente": [
+    {
+     "doc": "10",
+     "pag": 2,
+     "impresa": "120"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Los materiales más finos que 75 µm (tamiz No. 200), especialmente el limo y la arcilla, pueden estar presentes como polvo suelto y pueden formar un revestimiento en las partículas de agregados. [...] debilitan la adherencia entre la pasta de cemento y el agregado. Si ciertos tipos de limo o arcilla están presentes en cantidades excesivas, la demanda de agua puede aumentar significantemente. Lectura Agregados para Concreto. Pag 119"
+  },
+  {
+   "id": "p3-3E-x07",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "seleccion_unica",
+   "enunciado": "Para el proyecto APM Terminals se solicita que los agregados cumplan estrictamente especificaciones. Uno de los ensayos es la abrasión de agregado ASTM C131, pues indica:",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 1,
+    "pregunta": "pregunta 5",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la A según la clave: la C131 mide la degradación por abrasión, impacto y trituración en la Máquina de Los Ángeles. La B y la D no son correctas porque la C131 no es un ensayo de compresión. La C tampoco: la abrasión de superficies de concreto se mide con la C418 o la C994.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 112
+    },
+    {
+     "doc": "15",
+     "pag": 11
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "La resistencia al impacto del agregado"
+    },
+    {
+     "id": "b",
+     "texto": "La resistencia a la compresión"
+    },
+    {
+     "id": "c",
+     "texto": "La abrasión de la superficie de concreto"
+    },
+    {
+     "id": "d",
+     "texto": "La resistencia a la compresión de forma indirecta"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3B-x11",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "seleccion_unica",
+   "enunciado": "En una visita de campo se evidencia un ataque a la pasta de cemento que degradó una masa de concreto.\nInvestigando corresponde con el fenómeno llamado:",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 2,
+    "pregunta": "pregunta 1",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la A: en la álcali-carbonato el producto forma grietas en la pasta (el agregado ataca la pasta). La álcali-sílice, en cambio, actúa por presiones internas del agregado. El sangrado es un fenómeno del concreto fresco, y el hidróxido alcalino es un reactivo, no un fenómeno.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 18
+    },
+    {
+     "doc": "15",
+     "pag": 16
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Álcali carbonato"
+    },
+    {
+     "id": "b",
+     "texto": "Sangrado"
+    },
+    {
+     "id": "c",
+     "texto": "Álcali sílice"
+    },
+    {
+     "id": "d",
+     "texto": "Hidróxido alcalino"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3B-x12",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "seleccion_unica",
+   "enunciado": "En una visita de campo se evidencia presiones internas que degradaron una masa de concreto.\nInvestigando corresponde con el fenómeno llamado:",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 2,
+    "pregunta": "pregunta 2",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la A: en la álcali-sílice el gel expansivo genera presiones internas que desintegran la masa de concreto. La álcali-carbonato se reconoce por el ataque a la pasta. El sangrado y el hidróxido alcalino no son el fenómeno.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 16
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Álcali sílice"
+    },
+    {
+     "id": "b",
+     "texto": "Hidróxido alcalino"
+    },
+    {
+     "id": "c",
+     "texto": "Sangrado"
+    },
+    {
+     "id": "d",
+     "texto": "Álcali carbonato"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3B-x13",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "seleccion_unica",
+   "enunciado": "Las álcalis del cemento se pueden determinan como:",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 2,
+    "pregunta": "pregunta 3",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la C: óxidos de sodio (Na₂O) y de potasio (K₂O). La A confunde los álcalis con las reacciones que provocan, y el hierro y el magnesio de la B no son álcalis.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 15
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Concentraciones de álcali sílice y álcali carbonato"
+    },
+    {
+     "id": "b",
+     "texto": "Concentraciones de óxidos de hierro y magnesio"
+    },
+    {
+     "id": "c",
+     "texto": "Concentraciones de óxidos de sodio y potasio"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p3-3D-x04",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "verdadero_falso",
+   "enunciado": "Indique si la siguiente afirmación es correcta. Un agregado de 25 mm al ser de más grande introduce más aire a la mezcla de concreto que uno de 19 mm.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 2,
+    "pregunta": "pregunta 4",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso: el agregado más pequeño es el que introduce más aire, por su mayor área superficial.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 4
+    },
+    {
+     "doc": "20",
+     "pag": 3,
+     "impresa": "4/8"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Un agregado pequeño introduce mas aire por su área superficial"
+  },
+  {
+   "id": "p3-3C-x14",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Se realiza la prueba de laboratorio ASTM C566 (Humedad de los agregados). El agregado grueso tiene una humedad de 5,5%. Su absorción es de 3,5%.\nPara este caso.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 3,
+    "pregunta": "pregunta 1",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la A: la humedad supera la absorción, así que hay 2 % de agua libre que se suma a la mezcla y hay que ajustar el agua de dosificación. La B ignora ese aporte. La C y la D hablan de hinchamiento, que no ocurre en el agregado grueso.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    },
+    {
+     "doc": "19",
+     "pag": 66
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Es necesario ajustar el agua dosificación de la mezcla de concreto"
+    },
+    {
+     "id": "b",
+     "texto": "No es importante el aporte de agua de los agregados gruesos"
+    },
+    {
+     "id": "c",
+     "texto": "No es necesario ajustar el agua de dosificación, pues no afecta su hinchamiento"
+    },
+    {
+     "id": "d",
+     "texto": "Como tiene agua libre se debe determinar su hinchamiento"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3C-x15",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "El volumen bruto de los agregados incluye:",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 3,
+    "pregunta": "pregunta 3",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la C: VB = Vs + Vpp. La A es solo el volumen sólido. La B no tiene sentido, porque el aire no forma parte de la partícula. La D, con los vacíos entre partículas, es el volumen masivo.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 4
+    },
+    {
+     "doc": "24",
+     "pag": 6,
+     "impresa": "2/8"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Volumen sólido"
+    },
+    {
+     "id": "b",
+     "texto": "Volumen sólido + Volumen de aire"
+    },
+    {
+     "id": "c",
+     "texto": "Volumen sólido + Volumen de poros permeables"
+    },
+    {
+     "id": "d",
+     "texto": "Volumen sólido + volumen de vacíos"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p3-3D-x05",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "seleccion_unica",
+   "enunciado": "La granulometría corresponde con:",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 5,
+    "pregunta": "pregunta 3",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la A: la granulometría expresa la distribución de tamaños (la graduación) del material. La B describe la masa mínima de muestra, que es otra cosa.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 47
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Forma en que se expresa la graduación de los materiales"
+    },
+    {
+     "id": "b",
+     "texto": "Cantidad de muestra para realizar ensayos"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3D-x06",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "seleccion_unica",
+   "enunciado": "La importancia de una granulometría suave y continua corresponde con:",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 5,
+    "pregunta": "pregunta 4",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la B: una curva suave y continua reduce vacíos y pasta, lo que favorece la economía, la trabajabilidad, la resistencia y la durabilidad.",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 1,
+     "impresa": "2/17"
+    },
+    {
+     "doc": "11",
+     "pag": 2,
+     "impresa": "107"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "No es importante para un concreto de calidad"
+    },
+    {
+     "id": "b",
+     "texto": "Contribuye a la economía, trabajabilidad, resistencia y durabilidad del concreto"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3C-x16",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "verdadero_falso",
+   "enunciado": "El volumen masivo de cemento es mayor que el volumen sólido de cemento porque en el primer caso se toman en cuenta los poros permeables",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 1",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. El volumen masivo sí es mayor que el sólido, pero porque incluye los espacios entre partículas, no los poros permeables.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 4
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "En el volumen masivo lo que se toma en cuenta son los espacios entre partículas, no posee poros permeables"
+  },
+  {
+   "id": "p3-3D-x07",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "verdadero_falso",
+   "enunciado": "Se dispone de dos arenas con los módulos de finura siguientes (MFA= 2,4 y MFB= 3,0); para mejorar trabajabilidad se usará la arena B.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 2",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. La arena B (MF 3,0) es más gruesa; una arena más fina tiene más partículas que ayudan a la trabajabilidad.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 48
+    },
+    {
+     "doc": "16",
+     "pag": 6,
+     "impresa": "2/22"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "A mayor valor, más gruesa es la arena, por ende menos trabajable"
+  },
+  {
+   "id": "p3-3A-x10",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Para producir un concreto de 20 MPa de resistencia a compresión simple a 28 días de curado, no es necesario utilizar un agregado grueso de muy alta calidad mecánica.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 3",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Verdadero. En concreto convencional importan más la pasta y la adherencia que la resistencia del agregado.",
+   "fuente": [
+    {
+     "doc": "09",
+     "pag": 2,
+     "impresa": "118"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "justificacion_oficial": "Es a partir de 34 MPa donde resulta esencial la calidad mecánica del agregado. O bien: lo que interesa en la adherencia y no la resistencia mecánica del agregado."
+  },
+  {
+   "id": "p3-3C-x17",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "verdadero_falso",
+   "enunciado": "El agua de diseño es mayor al agua de dosificación cuando los agregados se dosifican con agua libre.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 4",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. Si los agregados traen agua libre, aportan parte del agua de diseño; por eso el agua que se dosifica es menor, no mayor.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Es menor porque los agregados aportan el resto para llegar al agua de diseño"
+  },
+  {
+   "id": "p3-3A-x11",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "verdadero_falso",
+   "enunciado": "La tenacidad es una medida de qué tan resistente es el agregado grueso ante el desgaste por abrasión",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 5",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. La tenacidad se refiere al impacto; el desgaste es la abrasión.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 112
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Es una medida de qué tanto soporta cargas de impacto"
+  },
+  {
+   "id": "p3-3D-x08",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "verdadero_falso",
+   "enunciado": "El módulo de finura de una arena es un indicador de la calidad cuando se ubica dentro especificaciones",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 7",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. El MF solo describe qué tan gruesa o fina es la arena; granulometrías distintas pueden dar el mismo MF.",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 6,
+     "impresa": "2/22"
+    },
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Sólo indica qué tan gruesa o qué tan fina es. Es indicador de la trabajabilidad que podría aportar"
+  },
+  {
+   "id": "p3-3B-x14",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "verdadero_falso",
+   "enunciado": "La caliza y el basalto si bien pertenecen a grupos mineralógicos distintos, ambos son aptos para la fabricación de concreto estructural",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 9",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Verdadero. La caliza es sedimentaria y el basalto es ígneo; ambos sirven como agregado.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 9
+    },
+    {
+     "doc": "26",
+     "pag": 63
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "justificacion_oficial": "Caliza: sedimentaria. Basalto: ignea"
+  },
+  {
+   "id": "p3-3A-x12",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "verdadero_falso",
+   "enunciado": "No se debe admitir más de un 15 % en volumen de partículas alargadas y aplanadas, obtenido con base en una muestra de agregado representativa",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 10",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso: el límite es 15 % en masa.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 19
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "15 % en masa"
+  },
+  {
+   "id": "p3-3C-x18",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "verdadero_falso",
+   "enunciado": "El volumen efectivo del cemento de uso general contenido en un saco es aproximadamente 0,035 m3",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 12",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. Unos 0,035 m³ es el volumen masivo del saco; el volumen efectivo (sólido) es menor (con Gs = 3,10, unos 0,016 m³).",
+   "fuente": [
+    {
+     "doc": "X01",
+     "pag": 7,
+     "pregunta": "b, pregunta 2"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Es el volumen masivo el que es aproximadamente 0,035 m3"
+  },
+  {
+   "id": "p3-3A-x13",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Los agregados contribuyen a reducir los fenómenos de contracción y elevación de la temperatura del concreto durante el fraguado",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 13",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Verdadero. Los agregados reemplazan pasta; menos cemento significa menos calor y menos contracción.",
+   "fuente": [],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "justificacion_oficial": "A mayor contenido de cemento en una mezcla con respecto a la cantidad de agregados, más calor se libera, así como mayor contracción debido a la alta finura del cemento",
+   "verificar": "Las fuentes de teoría no desarrollan esta afirmación; la respuesta se apoya en la clave del examen."
+  },
+  {
+   "id": "p3-3B-x15",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Aunque los agregados sean reactivos, las reacciones álcali-agregado solo ocurren si hay presencia de agua",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 14",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. Hacen falta las tres condiciones: agregado reactivo, humedad y exceso de álcalis.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 13
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Además de ser reactivos, debe haber agua para que se generen las reacciones de expansión pero también, se debe superar el máximo permitido de álcalis"
+  },
+  {
+   "id": "p3-3C-x19",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "verdadero_falso",
+   "enunciado": "La densidad relativa bruta seca de un agregado da una idea relativa sobre la facilidad de adherencia con la pasta de cemento",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 15",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Verdadero según la clave: una GBS menor indica un agregado más poroso, y eso mejora la adherencia.",
+   "fuente": [],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "justificacion_oficial": "A menor valor de densidad relativa bruta seca, más poroso es el agregado, por tanto, la adherencia pasta agregado será mejor",
+   "verificar": "Las fuentes de teoría no desarrollan esta afirmación; la respuesta se apoya en la clave del examen."
+  },
+  {
+   "id": "p3-3D-x09",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "verdadero_falso",
+   "enunciado": "El tamaño máximo efectivo es aquel tamaño en que se admite un sobre-tamaño que puede variar entre 5 % a 15 % dependiendo de qué tamaño se trate",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 16",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. Lo descrito corresponde al tamaño máximo nominal (la PCA admite retener del 5 al 15 % en ese tamiz).",
+   "fuente": [
+    {
+     "doc": "11",
+     "pag": 6,
+     "impresa": "111"
+    },
+    {
+     "doc": "19",
+     "pag": 50
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Es el tamaño máximo nominal"
+  },
+  {
+   "id": "p3-3D-x10",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "verdadero_falso",
+   "enunciado": "El uso de menores tamaños máximos nominales en losas de concreto hidráulico contribuyen a reducir el agrietamiento",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 8",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. Un tamaño máximo menor pide más finos y más pasta, lo que aumenta las grietas. Según la clave, cuanto más pequeño el tamaño máximo, mayor la propensión a la contracción por asentamiento plástico.",
+   "fuente": [
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Tanto más pequeño sea el tamaño máximo del agregado, mayor propensión a la contracción por asentamiento plástico (anotación a mano: + finos + pasta + grietas)"
+  },
+  {
+   "id": "p3-3A-x14",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Seleccione la respuesta correcta:\nNo se debe admitir más de un 15% en masa de partículas alargadas y aplanadas, obtenido con base en una muestra de agregado representativa",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 7,
+    "pregunta": "b, pregunta 1",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la D: el límite es 15 % por masa. La A no es un porcentaje, la B no dice la base, y la C usa el volumen, que no corresponde.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 19
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Kilogramo"
+    },
+    {
+     "id": "b",
+     "texto": "15 %"
+    },
+    {
+     "id": "c",
+     "texto": "15 % por volumen"
+    },
+    {
+     "id": "d",
+     "texto": "15 % por masa"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p3-3C-x20",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Seleccione la respuesta correcta:\nSi el Gs del cemento es de 3.10, el volumen efectivo del cemento contenido en un saco de cemento de 50 kg es aproximadamente ___ m3",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 7,
+    "pregunta": "b, pregunta 2",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la B: Vs = Ps / (Gs·δw) = 50 kg / (3,10 × 1000 kg/m³) ≈ 0,0161 m³ = 16,1 L. La A (0,035 m³) es el volumen masivo, no el efectivo. La C (0,017 m³) no sale del cálculo con Gs = 3,10.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "0.035 m3"
+    },
+    {
+     "id": "b",
+     "texto": "16,1 litros"
+    },
+    {
+     "id": "c",
+     "texto": "0.017 m3"
+    },
+    {
+     "id": "d",
+     "texto": "Ninguna de las anteriores"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3B-x16",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique las tres condiciones que debe tener un agregado para provocar reacciones expansivas",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 7,
+    "pregunta": "b, pregunta 5",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Son las tres condiciones de la reacción álcali-agregado.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 13
+    },
+    {
+     "doc": "10",
+     "pag": 4,
+     "impresa": "122"
+    }
+   ],
+   "respuesta_modelo": "Agregado reactivo, exceso de álcalis y humedad",
+   "puntos_clave": [
+    "agregado reactivo",
+    "exceso de álcalis (máx. 0,6 %)",
+    "humedad"
+   ]
+  },
+  {
+   "id": "p3-3B-x17",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Las partículas más finas que 75 µm, por su tamaño, no tiene importancia directa en la mezcla de concreto",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 7,
+    "pregunta": "a, caso 5",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. Los finos y las impurezas afectan el fraguado, la resistencia y la demanda de agua.",
+   "fuente": [
+    {
+     "doc": "10",
+     "pag": 2,
+     "impresa": "120"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Los finos y las impurezas orgánicas pueden retrasar el fraguado y el endurecimiento del concreto, reducir el desarrollo de la resistencia y, en algunos casos poco usuales, causar el deterioro"
+  },
+  {
+   "id": "p3-3C-x21",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "verdadero_falso",
+   "enunciado": "La gravedad especifica aparente corresponde con la masa por unidad de volumen de la porción impermeable de las partículas del agregado",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "F/V 1",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso según la corrección: la masa por unidad de volumen de la porción impermeable es la densidad aparente (δs). La gravedad específica aparente es adimensional: es esa densidad dividida entre la del agua.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 63
+    },
+    {
+     "doc": "13",
+     "pag": 5
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Incluye los poros no accesibles al agua, pero excluye los vacíos (corrección a mano)",
+   "verificar": "La corrección en rojo es breve; el argumento de «densidad contra gravedad específica» sale del manual (19, pág. 63)."
+  },
+  {
+   "id": "p3-3A-x15",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Un peso unitario masivo seco de 1300 kg/m3 se cataloga como un agregado liviano",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "F/V 4",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso: los livianos tienen δb < 1120 kg/m³; 1300 kg/m³ cae en el rango normal (1120 a 1900).",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 9
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Los agregados livianos son los que tienen δb < 1120 kg/m3 (corrección a mano)"
+  },
+  {
+   "id": "p3-3B-x18",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique una roca sedimentaria clasificada como química",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "respuesta corta 6",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Las sedimentarias químicas se forman por precipitación: la caliza (carbonato de calcio), la sal o el yeso.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 62
+    }
+   ],
+   "respuesta_modelo": "Caliza",
+   "puntos_clave": [
+    "caliza (o sal, yeso)"
+   ]
+  },
+  {
+   "id": "p3-3C-x22",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique a que corresponde la siguiente definición: masa del agregado seco al horno por unidad de volumen de las partículas de agregado, incluyendo el volumen de los poros permeables e impermeables, dentro de las partículas del agregado, pero sin incluir los vacíos entre las partículas.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "respuesta corta 7",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "La definición es, palabra por palabra, la de la densidad bruta seca en la diapositiva del curso y en el manual.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 6
+    },
+    {
+     "doc": "19",
+     "pag": 64
+    }
+   ],
+   "respuesta_modelo": "Densidad bruta seca (δBS)",
+   "puntos_clave": [
+    "densidad bruta seca",
+    "seco al horno",
+    "incluye poros permeables e impermeables"
+   ],
+   "verificar": "La corrección en rojo de este examen escribe «gravedad específica aparente» (contradicción C16 de ALCANCE.md). Se muestra la respuesta de las diapositivas y de la clave de 2025."
+  },
+  {
+   "id": "p3-3C-x23",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "La gravedad especifica de un agregado normal está en el rango de 2,4 y de ___",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "respuesta corta 9",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Un agregado normal tiene 2,4 < GBS < 2,8.",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 9
+    }
+   ],
+   "respuesta_modelo": "2,8",
+   "puntos_clave": [
+    "2,8"
+   ]
+  },
+  {
+   "id": "p3-3A-x16",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Una función del agregado catalogado como pesado es:",
+   "origen": "examen",
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "respuesta corta 10",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "clave": "oficial",
+   "explicacion": "Los agregados pesados (magnetita, barita, etc.) se usan en concreto de blindaje contra la radiación (ASTM C637).",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 10
+    }
+   ],
+   "respuesta_modelo": "Agregados de alta densidad como magnetita, titanio, etc., proporcionan blindaje contra radiación",
+   "puntos_clave": [
+    "alta densidad",
+    "blindaje contra radiación (ASTM C637)"
+   ]
+  },
+  {
+   "id": "p3-3C-x24",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Explique en términos de economía, resistencia y trabajabilidad, porqué es importante tomar en cuenta el hinchamiento de la arena en el cálculo de cantidades a dosificar y a comprar.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X15",
+    "pag": 1,
+    "pregunta": "Teoría (20 %)",
+    "periodo": "II-2009"
+   },
+   "clave": "documental",
+   "explicacion": "No hay clave oficial; la respuesta modelo se armó solo con las fuentes. La arena húmeda ocupa más volumen masivo que seca (V'm = Vm(1 + H)). Si se compra o se dosifica por volumen sin corregir: (1) economía: se compra menos arena de la que se cree; (2) resistencia: entra menos arena y más agua libre, cambian las proporciones y la relación a/c, y con ella la resistencia; (3) trabajabilidad: cambia la proporción arena/piedra. Por eso la PCA recomienda dosificar en masa y ajustar por humedad.",
+   "fuente": [
+    {
+     "doc": "02",
+     "pag": 3,
+     "impresa": "115"
+    },
+    {
+     "doc": "13",
+     "pag": 10
+    },
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    }
+   ],
+   "respuesta_modelo": "La arena húmeda con agua libre aumenta su volumen masivo (V'm = Vm(1+H)). Si no se considera: se compra menos arena real de la pagada (economía); al dosificar por volumen entra menos arena y más agua, lo que altera las proporciones y la relación a/c (resistencia) y la proporción de finos (trabajabilidad). Por eso se dosifica en masa y se ajusta la humedad.",
+   "puntos_clave": [
+    "el agua libre aumenta el volumen masivo (V'm = Vm(1+H))",
+    "economía: se compra menos arena real",
+    "resistencia: cambian las proporciones y la relación a/c",
+    "trabajabilidad: cambia la proporción de arena",
+    "dosificar en masa y corregir humedad"
+   ]
+  },
+  {
+   "id": "p3-3C-x25",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Defina los términos siguientes e indique en qué caso se utiliza uno u otro y porqué: Volumen sólido de cemento; Volumen masivo de cemento.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X14",
+    "pag": 1,
+    "pregunta": "1",
+    "periodo": "I-2009"
+   },
+   "clave": "documental",
+   "explicacion": "No hay clave oficial; la respuesta se armó solo con las fuentes. Volumen sólido: volumen de las partículas sin los espacios entre ellas (Vs = Ps / (Gs·δw)); es el que entra en el volumen de concreto. Volumen masivo: incluye los espacios entre partículas; se usa cuando se dosifica o se compra por volumen (por ejemplo, unos 0,035 m³ por saco).",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 9
+    },
+    {
+     "doc": "13",
+     "pag": 10
+    },
+    {
+     "doc": "X01",
+     "pag": 6,
+     "pregunta": "F/V 1 y 12"
+    }
+   ],
+   "respuesta_modelo": "El volumen sólido es el de las partículas sin espacios entre ellas (Vs = Ps/(Gs·δw)) y se usa para calcular el volumen de concreto (Vc = Vs cem + ...). El volumen masivo incluye los espacios entre partículas y se usa para dosificar o comprar por volumen (saco de unos 0,035 m³).",
+   "puntos_clave": [
+    "sólido: sin espacios entre partículas",
+    "masivo: incluye los espacios entre partículas",
+    "sólido → cálculo del volumen de concreto",
+    "masivo → dosificación o compra por volumen"
+   ]
+  },
+  {
+   "id": "p3-3D-x11",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "respuesta_corta",
+   "enunciado": "Partiendo de los supuestos siguientes para la elaboración de un concreto hidráulico a ser usado en las columnas de un edificio de apartamentos de cuatro pisos: Piedra: se debe escoger entre un tamaño máximo de 13 mm u otro de 19 mm, y en ambos casos la granulometría está dentro de especificaciones ASTM, están limpios y no son reactivos. Arena: con granulometría dentro de especificaciones ASTM y un módulo de finura de 2,2, limpia y no reactiva. Justifique claramente su elección de tamaño máximo de agregado.",
+   "origen": "examen",
+   "examen": {
+    "doc": "X14",
+    "pag": 1,
+    "pregunta": "2",
+    "periodo": "I-2009"
+   },
+   "clave": "documental",
+   "explicacion": "No hay clave oficial; la respuesta se armó solo con las fuentes. A mayor tamaño máximo, menos superficie que cubrir, menos agua y menos cemento para una relación a/c dada. El tamaño máximo está limitado por la dimensión del elemento y por la separación del refuerzo. Una arena muy fina (MF 2,2, menor que 2,3) aporta trabajabilidad y permite más agregado grueso.",
+   "fuente": [
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
+    },
+    {
+     "doc": "11",
+     "pag": 7,
+     "impresa": "112"
+    },
+    {
+     "doc": "16",
+     "pag": 5,
+     "impresa": "2/21"
+    },
+    {
+     "doc": "16",
+     "pag": 6,
+     "impresa": "2/22"
+    },
+    {
+     "doc": "22",
+     "pag": 1
+    }
+   ],
+   "respuesta_modelo": "Se escoge el mayor tamaño que permitan el elemento y el refuerzo (no más de 1/5 de la dimensión menor ni más de 3/4 de la separación libre entre barras), porque reduce la superficie por cubrir y la demanda de agua y cemento. Con una arena fina (MF 2,2) la mezcla gana trabajabilidad y se puede aumentar el agregado grueso.",
+   "puntos_clave": [
+    "mayor tamaño → menos pasta, agua y cemento",
+    "límite: 1/5 de la dimensión menor y 3/4 de la separación libre del refuerzo",
+    "la arena fina (MF < 2,3) aporta trabajabilidad"
+   ],
+   "verificar": "Es una pregunta abierta: la elección final (13 o 19 mm) depende de la separación real del refuerzo, que el enunciado no da."
+  },
+  {
+   "id": "p3-3A-t01",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Un agregado con peso unitario masivo seco de 2 240 kg/m³ se clasifica como:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: supera los 1900 kg/m³. La A sería menor que 1120 kg/m³; la B estaría entre 1120 y 1900 kg/m³. La D no existe en la clasificación por peso unitario del curso.",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 9
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Liviano"
+    },
+    {
+     "id": "b",
+     "texto": "Normal"
+    },
+    {
+     "id": "c",
+     "texto": "Pesado"
+    },
+    {
+     "id": "d",
+     "texto": "Ultraliviano"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p3-3A-t02",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué fracción de piedra comercial corresponde a la «quintilla», según el Decreto 10854-MEIC?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la D. La A es la piedra cuarta, la B la quinta y la C la cuartilla.",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 13
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "25,0 mm a 4,75 mm"
+    },
+    {
+     "id": "b",
+     "texto": "12,7 mm a 4,75 mm"
+    },
+    {
+     "id": "c",
+     "texto": "19,0 mm a 4,75 mm"
+    },
+    {
+     "id": "d",
+     "texto": "9,5 mm a 2,36 mm"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p3-3A-t03",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los efectos de las partículas planas y elongadas en el concreto endurecido:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correctas la A, la B y la D: la diapositiva del curso indica más permeabilidad, menos resistencia y menos durabilidad. La C es falsa: estas partículas piden más agua, no menos.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 20
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Aumentan la permeabilidad"
+    },
+    {
+     "id": "b",
+     "texto": "Reducen la resistencia"
+    },
+    {
+     "id": "c",
+     "texto": "Reducen la demanda de agua"
+    },
+    {
+     "id": "d",
+     "texto": "Reducen la durabilidad"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "d"
+   ]
+  },
+  {
+   "id": "p3-3A-t04",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué norma se aplica a los agregados para concreto de blindaje contra la radiación?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: la ASTM C637 es la especificación de agregados para concreto de blindaje contra la radiación (agregados pesados). La A y la C son para agregados livianos (aislante y estructural) y la D es de partículas planas y elongadas.",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 10
+    },
+    {
+     "doc": "14",
+     "pag": 11
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "ASTM C332"
+    },
+    {
+     "id": "b",
+     "texto": "ASTM C637"
+    },
+    {
+     "id": "c",
+     "texto": "ASTM C330"
+    },
+    {
+     "id": "d",
+     "texto": "ASTM D4791"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3A-t05",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Desde el punto de vista de la RESISTENCIA del concreto, ¿qué partícula de agregado se prefiere?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: las partículas angulares, cúbicas y rugosas dan más área de unión y mejor adherencia. La A favorece la trabajabilidad, no la resistencia. La B y la D son quebradizas y bajan la resistencia.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 3,
+     "impresa": "2/5"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Redondeada y lisa"
+    },
+    {
+     "id": "b",
+     "texto": "Plana"
+    },
+    {
+     "id": "c",
+     "texto": "Angular, cúbica y rugosa"
+    },
+    {
+     "id": "d",
+     "texto": "Elongada"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p3-3B-t01",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "seleccion_unica",
+   "enunciado": "Una roca ígnea cuyo magma se enfrió en forma lenta, en el interior de la corteza, tendrá:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A: con un enfriamiento lento los cristales crecen y se ven a simple vista (rocas intrusivas). La B corresponde al enfriamiento instantáneo (vidrio) y la C al rápido (volcánicas). La D no tiene relación con la velocidad de enfriamiento.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 21
+    },
+    {
+     "doc": "26",
+     "pag": 22
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Cristales grandes visibles (roca intrusiva)"
+    },
+    {
+     "id": "b",
+     "texto": "Textura vítrea sin minerales"
+    },
+    {
+     "id": "c",
+     "texto": "Cristales pequeños no visibles (roca volcánica)"
+    },
+    {
+     "id": "d",
+     "texto": "Fragmentos cementados por calcita"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3B-t02",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según la conferencia de geología, ¿por qué se debe vigilar el contenido de cloruros y sulfatos en agregados de rocas volcánicas antiguas (Grupo Aguacate)?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: la conferencia lo asocia con la corrosión del acero (cloruros) y la expansión del concreto (sulfatos). Las otras opciones no son las razones que da la fuente.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 28
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Porque aumentan la trabajabilidad"
+    },
+    {
+     "id": "b",
+     "texto": "Por la corrosión del acero y la expansión del concreto"
+    },
+    {
+     "id": "c",
+     "texto": "Porque reducen la absorción"
+    },
+    {
+     "id": "d",
+     "texto": "Porque aceleran el curado"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3B-t03",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "seleccion_unica",
+   "enunciado": "En el ensayo ASTM C1260 (barra de mortero), ¿cuándo se rechaza el agregado?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: expansión mayor que 0,10 % a los 14 días. La A y la B son los criterios de la ASTM C227 (3 y 6 meses). La D (1 año) corresponde a los cilindros de la ASTM C586 para la reacción álcali-carbonato.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 17
+    },
+    {
+     "doc": "15",
+     "pag": 18
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Expansión > 0,05 % a los 3 meses"
+    },
+    {
+     "id": "b",
+     "texto": "Expansión > 0,10 % a los 6 meses"
+    },
+    {
+     "id": "c",
+     "texto": "Expansión > 0,10 % a los 14 días"
+    },
+    {
+     "id": "d",
+     "texto": "Expansión medida en cilindros a 1 año"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p3-3B-t04",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál de los siguientes es un sulfuro de hierro que puede volver reactivo un agregado?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la D: pirita, marcasita y pirrotita son sulfuros de hierro. La calcita es carbonato de calcio, la dolomita carbonato de calcio y magnesio, y el cuarzo es sílice.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 14
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Calcita"
+    },
+    {
+     "id": "b",
+     "texto": "Dolomita"
+    },
+    {
+     "id": "c",
+     "texto": "Cuarzo"
+    },
+    {
+     "id": "d",
+     "texto": "Marcasita"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p3-3B-t05",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según la PCA (Tabla 5-7), ¿qué efecto tienen los terrones de arcilla y las partículas desmenuzables en el concreto?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A. La B describe las impurezas orgánicas, la C los agregados reactivos con los álcalis y la D el carbón o lignito.",
+   "fuente": [
+    {
+     "doc": "10",
+     "pag": 2,
+     "impresa": "120"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Afectan la trabajabilidad y la durabilidad; pueden causar erupciones"
+    },
+    {
+     "id": "b",
+     "texto": "Afectan el tiempo de fraguado y el endurecimiento"
+    },
+    {
+     "id": "c",
+     "texto": "Causan expansión anormal y fisuración en forma de mapa"
+    },
+    {
+     "id": "d",
+     "texto": "Causan manchas en la superficie por ser material ligero"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3C-t01",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Un agregado está en condición saturada superficie seca (SSS) cuando:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: w = D, los poros permeables están llenos y no hay agua en la superficie. La A es seco al horno, la C seco al aire y la D con agua libre.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 2
+    },
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    },
+    {
+     "doc": "19",
+     "pag": 65
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "w = 0"
+    },
+    {
+     "id": "b",
+     "texto": "Su humedad es igual a su absorción (w = D)"
+    },
+    {
+     "id": "c",
+     "texto": "w < D"
+    },
+    {
+     "id": "d",
+     "texto": "w > D"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3C-t02",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Una arena tiene un volumen masivo seco de 10 m³ y un hinchamiento de 25 %. ¿Cuál es su volumen masivo hinchado?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: V'm = Vm (1 + H) = 10 × 1,25 = 12,5 m³. La A ignora el hinchamiento; la B divide en lugar de multiplicar; la D suma 25 m³ en lugar de 25 %.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 10
+    },
+    {
+     "doc": "24",
+     "pag": 5,
+     "impresa": "2/7"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "10,0 m³"
+    },
+    {
+     "id": "b",
+     "texto": "8,0 m³"
+    },
+    {
+     "id": "c",
+     "texto": "12,5 m³"
+    },
+    {
+     "id": "d",
+     "texto": "35,0 m³"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p3-3C-t03",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué expresión corresponde a la absorción (D) de un agregado?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A: D = PWD / Ps × 100, el agua de absorción entre el peso SECO. La B usa el peso total, la C el agua libre (que no es absorción) y la D invierte la razón.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "D = PWD / Ps × 100"
+    },
+    {
+     "id": "b",
+     "texto": "D = PWD / PT × 100"
+    },
+    {
+     "id": "c",
+     "texto": "D = PWL / Ps × 100"
+    },
+    {
+     "id": "d",
+     "texto": "D = Ps / PWD × 100"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3C-t04",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Si GBS = 2,60 y D = 2 %, ¿cuánto vale la GBSS?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: GBSS = GBS (1 + D) = 2,60 × 1,02 = 2,652 ≈ 2,65. La A ignora la absorción, la C resta en lugar de sumar y la D suma 2 en lugar de 2 %.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "2,60"
+    },
+    {
+     "id": "b",
+     "texto": "2,65"
+    },
+    {
+     "id": "c",
+     "texto": "2,55"
+    },
+    {
+     "id": "d",
+     "texto": "4,60"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3C-t05",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál de los siguientes volúmenes incluye los vacíos ENTRE partículas?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la D: el volumen masivo (Vm) incluye los vacíos entre partículas. El volumen sólido (A) solo considera el sólido; el volumen bruto (B) suma los poros permeables; y el volumen de poros permeables (C) está dentro de las partículas.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 4
+    },
+    {
+     "doc": "24",
+     "pag": 10,
+     "impresa": "2/12"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Volumen sólido (Vs)"
+    },
+    {
+     "id": "b",
+     "texto": "Volumen bruto (VB)"
+    },
+    {
+     "id": "c",
+     "texto": "Volumen de poros permeables (Vpp)"
+    },
+    {
+     "id": "d",
+     "texto": "Volumen masivo (Vm)"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p3-3C-t06",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "seleccion_unica",
+   "enunciado": "La porosidad (n) y la razón de vacíos (e) se relacionan por:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A, según el formulario del curso (ec. 17). Las demás no corresponden a ninguna ecuación del formulario.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "n = e / (1 + e)"
+    },
+    {
+     "id": "b",
+     "texto": "n = e (1 + e)"
+    },
+    {
+     "id": "c",
+     "texto": "n = 1 / (1 + e)"
+    },
+    {
+     "id": "d",
+     "texto": "n = (1 + e) / e"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3D-t01",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "seleccion_unica",
+   "enunciado": "Una arena tiene MF = 2,75. Según la tabla del curso, se clasifica como:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: 2,6 a 2,9 es arena media. La A es 2,0–2,3, la B 2,3–2,6 y la D 2,9–3,2.",
+   "fuente": [
+    {
+     "doc": "22",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Fina"
+    },
+    {
+     "id": "b",
+     "texto": "Medio fina"
+    },
+    {
+     "id": "c",
+     "texto": "Media"
+    },
+    {
+     "id": "d",
+     "texto": "Medio gruesa"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p3-3D-t02",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué mallas se usan para calcular el módulo de finura de una arena?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: los porcentajes retenidos acumulados de las mallas No. 4, 8, 16, 30, 50 y 100 se suman y se dividen entre 100. La No. 200 y la charola no entran (A, C), y la D omite mallas de la serie.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 48
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "No. 4 a No. 200"
+    },
+    {
+     "id": "b",
+     "texto": "No. 4, 8, 16, 30, 50 y 100"
+    },
+    {
+     "id": "c",
+     "texto": "No. 8 a la charola"
+    },
+    {
+     "id": "d",
+     "texto": "Solo No. 30, 50 y 100"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3D-t03",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "seleccion_unica",
+   "enunciado": "Una curva granulométrica con un tramo horizontal indica una graduación:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la D: el tramo horizontal muestra que faltan tamaños (fraccionada o discontinua). La A es la curva suave y continua, la B es casi vertical y la C tiene la parte central vertical con extremos extendidos.",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 2,
+     "impresa": "2/18"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Bien gradada"
+    },
+    {
+     "id": "b",
+     "texto": "Uniforme"
+    },
+    {
+     "id": "c",
+     "texto": "Abierta"
+    },
+    {
+     "id": "d",
+     "texto": "Fraccionada (discontinua)"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p3-3D-t04",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "seleccion_unica",
+   "enunciado": "En una losa de 12 cm de espesor, sin otra restricción, el tamaño máximo del agregado no debería exceder:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: un tercio del espesor de la losa da 120/3 = 40 mm. La A sale de usar un quinto, que aplica a la dimensión menor de un elemento. La C sale de 3/4, que aplica a la separación del refuerzo. La D es el espesor completo.",
+   "fuente": [
+    {
+     "doc": "11",
+     "pag": 7,
+     "impresa": "112"
+    },
+    {
+     "doc": "16",
+     "pag": 5,
+     "impresa": "2/21"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "24 mm"
+    },
+    {
+     "id": "b",
+     "texto": "40 mm"
+    },
+    {
+     "id": "c",
+     "texto": "90 mm"
+    },
+    {
+     "id": "d",
+     "texto": "120 mm"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3E-t01",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "seleccion_unica",
+   "enunciado": "Para reducir una muestra de AGREGADO GRUESO, ¿qué método NO está permitido por la ASTM C702?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: el apilamiento miniatura solo se permite para arena húmeda. Para grueso se usa el separador mecánico (A, preferido) o el cuarteo (B). La D no es un método de la norma.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 27
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Método A, separador mecánico"
+    },
+    {
+     "id": "b",
+     "texto": "Método B, cuarteo"
+    },
+    {
+     "id": "c",
+     "texto": "Método C, apilamiento miniatura"
+    },
+    {
+     "id": "d",
+     "texto": "Ninguno: todos están permitidos"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p3-3E-t02",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la ASTM C136, ¿cuándo NO deben usarse los resultados para aceptación?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A: si la masa total después de tamizar difiere en más de 0,3 % de la inicial. El 1 % (B) es el criterio de suficiencia de tamizado de cada malla. Los 10 minutos (C) son el tiempo máximo de agitación, y agitar más degrada el material, pero no es este criterio. La D es la reducción por cuarteo.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 53
+    },
+    {
+     "doc": "19",
+     "pag": 52
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Si la masa final difiere más de 0,3 % de la inicial"
+    },
+    {
+     "id": "b",
+     "texto": "Si en la suficiencia pasa menos del 1 %"
+    },
+    {
+     "id": "c",
+     "texto": "Si se agitó durante 10 minutos"
+    },
+    {
+     "id": "d",
+     "texto": "Si la muestra se redujo por cuarteo"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3E-t03",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la prueba del cono (ASTM C128), al levantar el molde la arena conserva perfectamente su forma. Esto indica que:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: si el cono conserva su forma, todavía hay humedad libre y hay que seguir secando. La A correspondería a un leve desplome, y la C a un desmoronamiento abrupto. La D no es lo que mide la prueba.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 84
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "La arena está en condición SSS"
+    },
+    {
+     "id": "b",
+     "texto": "La arena todavía tiene humedad libre"
+    },
+    {
+     "id": "c",
+     "texto": "La arena está más seca que SSS"
+    },
+    {
+     "id": "d",
+     "texto": "La arena tiene impurezas orgánicas"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3E-t04",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "seleccion_unica",
+   "enunciado": "En el ensayo ASTM C40, la arena se considera posiblemente perjudicial si el color del líquido es más oscuro que:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: el vidrio estándar No. 3, que equivale a Gardner No. 11. Los demás vidrios no son la referencia de la norma.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 95
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "El vidrio No. 1"
+    },
+    {
+     "id": "b",
+     "texto": "El vidrio No. 2"
+    },
+    {
+     "id": "c",
+     "texto": "El vidrio No. 3 (Gardner No. 11)"
+    },
+    {
+     "id": "d",
+     "texto": "El vidrio No. 5"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p3-3E-t05",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la ASTM C29, procedimiento varillado, ¿cómo se llena y compacta el molde?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A. La B describe el procedimiento suelto. La C confunde con los 25 golpes del mazo en el cono de la C128. La D usa un número de capas y de golpes que no da el manual.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 105
+    },
+    {
+     "doc": "19",
+     "pag": 106
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "En 3 capas, con 25 golpes de varilla por capa, sin tocar fuerte el fondo en la primera"
+    },
+    {
+     "id": "b",
+     "texto": "Con cucharón desde no más de 50 mm sobre el borde, sin compactar"
+    },
+    {
+     "id": "c",
+     "texto": "Con 25 caídas del mazo desde unos 5 mm"
+    },
+    {
+     "id": "d",
+     "texto": "En 2 capas, con 50 golpes por capa"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p3-3E-t06",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la ASTM C131 (Los Ángeles), ¿cuántas esferas lleva la carga abrasiva de la graduación A?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la D: A → 12, B → 11, C → 8 y D → 6 esferas.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 116
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "6"
+    },
+    {
+     "id": "b",
+     "texto": "8"
+    },
+    {
+     "id": "c",
+     "texto": "11"
+    },
+    {
+     "id": "d",
+     "texto": "12"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p3-3E-t07",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la ASTM C127, ¿por qué no se recomienda el procedimiento para agregados livianos?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: los poros de los agregados livianos no se llenan necesariamente en 24 h de inmersión. La A, la C y la D no son la razón que da el manual.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "19",
+     "pag": 67
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Porque flotan en el tanque"
+    },
+    {
+     "id": "b",
+     "texto": "Porque sus poros no se llenan de agua en 24 h de inmersión"
+    },
+    {
+     "id": "c",
+     "texto": "Porque se degradan en el horno"
+    },
+    {
+     "id": "d",
+     "texto": "Porque no pasan la malla No. 4"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p3-3E-t08",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque el equipo que se usa en la ASTM C117 (material más fino que 75 µm por lavado):",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correctas la A, la B y la C: mallas No. 16 y No. 200, horno a 110 ± 5 °C y un contenedor para agitar con agua. La D (picnómetro) es de la ASTM C128 y la E (vidrios de color) es de la ASTM C40.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 38
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Mallas No. 16 y No. 200"
+    },
+    {
+     "id": "b",
+     "texto": "Horno de 110 ± 5 °C"
+    },
+    {
+     "id": "c",
+     "texto": "Contenedor para agitar la muestra con agua"
+    },
+    {
+     "id": "d",
+     "texto": "Picnómetro"
+    },
+    {
+     "id": "e",
+     "texto": "Vidrio de color estándar"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "id": "p3-3C-t07",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Explique por qué la condición saturada superficie seca (SSS) es la referencia para dosificar los agregados.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Es la única condición en la que el agregado no absorbe ni cede agua; con cualquier otra humedad cambia el agua efectiva de la mezcla.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    },
+    {
+     "doc": "02",
+     "pag": 3,
+     "impresa": "115"
+    }
+   ],
+   "respuesta_modelo": "Porque en SSS (w = D) el agregado no absorbe ni cede agua a la mezcla. Si está más seco absorbe agua de la pasta y baja la relación a/c real; si tiene agua libre la aporta y la sube.",
+   "puntos_clave": [
+    "w = D",
+    "no absorbe ni cede agua",
+    "seco: absorbe y baja la a/c real",
+    "húmedo: aporta y sube la a/c"
+   ]
+  },
+  {
+   "id": "p3-3B-t06",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Describa el mecanismo de la reacción álcali-sílice y mencione dos normas para evaluarla.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Se resume del PCA y de las diapositivas del curso.",
+   "fuente": [
+    {
+     "doc": "10",
+     "pag": 4,
+     "impresa": "122"
+    },
+    {
+     "doc": "15",
+     "pag": 16
+    },
+    {
+     "doc": "15",
+     "pag": 17
+    }
+   ],
+   "respuesta_modelo": "El hidróxido alcalino de la solución de poros ataca la sílice reactiva del agregado y forma un gel que, al absorber agua, se expande y genera presiones internas que agrietan el concreto. Se evalúa con la ASTM C227 o la ASTM C1260 (barras de mortero) y con la ASTM C289.",
+   "puntos_clave": [
+    "hidróxido alcalino + sílice reactiva → gel",
+    "el gel absorbe agua y se expande",
+    "presiones internas y grietas",
+    "ASTM C227, C1260 o C289"
+   ]
+  },
+  {
+   "id": "p3-3D-t05",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "respuesta_corta",
+   "enunciado": "¿Por qué el módulo de finura no basta para comparar dos arenas?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Lo dicen Navas y la PCA.",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 6,
+     "impresa": "2/22"
+    },
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
+    }
+   ],
+   "respuesta_modelo": "Porque granulometrías muy diferentes pueden dar el mismo MF; solo indica qué tan gruesa o fina es la arena, no su distribución completa ni su calidad.",
+   "puntos_clave": [
+    "el mismo MF con granulometrías distintas",
+    "solo indica finura",
+    "no indica calidad"
+   ]
+  },
+  {
+   "id": "p3-3E-t09",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Diferencie la densidad que se obtiene con la ASTM C127 de la que se obtiene con la ASTM C29.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El manual de laboratorio pide hacer esta distinción.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "19",
+     "pag": 99
+    }
+   ],
+   "respuesta_modelo": "La C127 da la densidad de las partículas del agregado (aparente, bruta seca o SSS), sin los vacíos entre partículas. La C29 da la densidad masiva o peso unitario, que sí incluye los vacíos entre partículas (suelto o varillado).",
+   "puntos_clave": [
+    "C127: densidad de las partículas",
+    "sin vacíos entre partículas",
+    "C29: densidad masiva (peso unitario)",
+    "incluye los vacíos"
+   ]
+  },
+  {
+   "id": "p3-3E-t10",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Mencione los tres métodos de reducción de muestras de la ASTM C702 y cuándo se usa cada uno en el agregado fino.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Se resume de la sección 1.2.8.1 del manual.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 27
+    }
+   ],
+   "respuesta_modelo": "A: separador mecánico, para arena más seca que SSS. B: cuarteo, y C: apilamiento miniatura, para arena con humedad libre en la superficie. Si se quiere usar B o C con arena seca, primero se humedece.",
+   "puntos_clave": [
+    "A: separador, arena seca",
+    "B: cuarteo",
+    "C: apilamiento miniatura",
+    "B o C: arena con humedad libre"
+   ]
+  },
+  {
+   "id": "p3-3A-t06",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Mencione cuatro características deseables de un agregado para concreto.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Las da la diapositiva de características deseables del curso.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 10
+    }
+   ],
+   "respuesta_modelo": "Resistente a compresión y a abrasión, durable, limpio, no reactivo, y con buena forma, textura y graduación.",
+   "puntos_clave": [
+    "resistente",
+    "durable",
+    "limpio",
+    "no reactivo",
+    "forma, textura y graduación"
+   ]
+  }
+ ]
+}

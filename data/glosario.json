@@ -1,0 +1,891 @@
+{
+ "terminos": [
+  {
+   "id": "g-absorcion-d",
+   "termino": "Absorción (D)",
+   "definicion": "Porcentaje de agua que llena los poros permeables respecto del peso seco: D = PWD/Ps × 100.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    }
+   ]
+  },
+  {
+   "id": "g-aci-211",
+   "termino": "ACI 211",
+   "definicion": "Práctica estándar para seleccionar el proporcionamiento de concreto de peso normal, pesado y masivo.",
+   "tema": 1,
+   "subtema": "1A",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 8
+    }
+   ]
+  },
+  {
+   "id": "g-aci-318",
+   "termino": "ACI 318",
+   "definicion": "Código de construcción para concreto estructural.",
+   "tema": 1,
+   "subtema": "1A",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 8
+    }
+   ]
+  },
+  {
+   "id": "g-agregado",
+   "termino": "Agregado",
+   "definicion": "Material granular, como arena, grava o roca triturada, que se usa con un medio cementante para hacer concreto o mortero.",
+   "tema": 3,
+   "subtema": "3A",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 6
+    }
+   ]
+  },
+  {
+   "id": "g-agregado-fino",
+   "termino": "Agregado fino",
+   "definicion": "Agregado que pasa la malla No. 4 (4,75 mm) y queda retenido en la No. 200 (75 µm); se le conoce como arena.",
+   "tema": 3,
+   "subtema": "3D",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 2,
+     "impresa": "2/18"
+    },
+    {
+     "doc": "19",
+     "pag": 6
+    }
+   ]
+  },
+  {
+   "id": "g-agregado-grueso",
+   "termino": "Agregado grueso",
+   "definicion": "Agregado que queda retenido en la malla No. 4 (4,75 mm); se le conoce como piedra.",
+   "tema": 3,
+   "subtema": "3D",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 2,
+     "impresa": "2/18"
+    },
+    {
+     "doc": "19",
+     "pag": 6
+    }
+   ]
+  },
+  {
+   "id": "g-agregado-liviano",
+   "termino": "Agregado liviano",
+   "definicion": "Agregado con peso unitario masivo seco menor que 1120 kg/m³, como la pómez, la escoria o las cenizas volcánicas.",
+   "tema": 3,
+   "subtema": "3A",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 9
+    },
+    {
+     "doc": "19",
+     "pag": 67
+    }
+   ]
+  },
+  {
+   "id": "g-agregado-pesado",
+   "termino": "Agregado pesado",
+   "definicion": "Agregado con peso unitario masivo seco mayor que 1900 kg/m³, como la barita o la magnetita; se usa en concreto de blindaje contra la radiación.",
+   "tema": 3,
+   "subtema": "3A",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 9
+    },
+    {
+     "doc": "14",
+     "pag": 10
+    }
+   ]
+  },
+  {
+   "id": "g-agua-de-mezcla",
+   "termino": "Agua de mezcla",
+   "definicion": "Agua que se añade al cemento y los agregados para preparar el concreto; prácticamente cualquier agua potable sirve.",
+   "tema": 2,
+   "subtema": "2A",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 1,
+     "impresa": "95"
+    }
+   ]
+  },
+  {
+   "id": "g-agua-dudosa",
+   "termino": "Agua dudosa",
+   "definicion": "Agua no potable o de calidad desconocida. Se acepta si cumple los requisitos de resistencia (C109) y tiempo de fraguado (C191) frente a un control.",
+   "tema": 2,
+   "subtema": "2A",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 1,
+     "impresa": "95"
+    },
+    {
+     "doc": "05",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-agua-libre",
+   "termino": "Agua libre",
+   "definicion": "Agua en la superficie de las partículas, por encima de la absorción (w > D). Es la que causa el hinchamiento de la arena.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 2
+    },
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    }
+   ]
+  },
+  {
+   "id": "g-asentamiento",
+   "termino": "Asentamiento",
+   "definicion": "Medida de la consistencia del concreto fresco con el cono (ASTM C143); en autocompactante se mide el flujo (ASTM C1611).",
+   "tema": 2,
+   "subtema": "2B",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-concreto",
+   "termino": "Concreto (hormigón)",
+   "definicion": "Material compuesto de un medio ligante con partículas de agregado embebidas; en el concreto de cemento portland, el ligante es cemento y agua.",
+   "tema": 1,
+   "subtema": "1A",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 3
+    },
+    {
+     "doc": "12",
+     "pag": 15
+    }
+   ]
+  },
+  {
+   "id": "g-contraccion-autogena",
+   "termino": "Contracción autógena",
+   "definicion": "Reducción de volumen causada por el consumo interno de agua durante la hidratación del cemento.",
+   "tema": 2,
+   "subtema": "2B",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ]
+  },
+  {
+   "id": "g-contraccion-plastica",
+   "termino": "Contracción plástica",
+   "definicion": "Cambio de volumen del concreto en estado plástico por pérdida de agua debida a influencias externas.",
+   "tema": 2,
+   "subtema": "2B",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ]
+  },
+  {
+   "id": "g-cuarteo",
+   "termino": "Cuarteo",
+   "definicion": "Método B de la ASTM C702: se apila en cono, se aplana, se divide en cuatro y se retiran dos cuartos opuestos.",
+   "tema": 3,
+   "subtema": "3E",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 29
+    }
+   ]
+  },
+  {
+   "id": "g-densidad-aparente-δs",
+   "termino": "Densidad aparente (δs)",
+   "definicion": "Masa por unidad de volumen de la porción impermeable (sólida) de las partículas: δs = Ps/Vs.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 63
+    }
+   ]
+  },
+  {
+   "id": "g-densidad-bruta-seca-δbs",
+   "termino": "Densidad bruta seca (δBS)",
+   "definicion": "Masa del agregado seco al horno entre el volumen de las partículas, con poros permeables e impermeables y sin los vacíos entre partículas.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 64
+    },
+    {
+     "doc": "13",
+     "pag": 6
+    }
+   ]
+  },
+  {
+   "id": "g-dolomita",
+   "termino": "Dolomita",
+   "definicion": "Carbonato de calcio y magnesio; las rocas dolomíticas pueden producir reacción álcali-carbonato.",
+   "tema": 3,
+   "subtema": "3B",
+   "fuente": [
+    {
+     "doc": "10",
+     "pag": 5,
+     "impresa": "126"
+    },
+    {
+     "doc": "15",
+     "pag": 18
+    }
+   ]
+  },
+  {
+   "id": "g-dureza-del-agua",
+   "termino": "Dureza del agua",
+   "definicion": "Indicador del contenido de sales, sobre todo de calcio y magnesio, expresado como CaCO₃.",
+   "tema": 2,
+   "subtema": "2A",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "g-eflorescencia",
+   "termino": "Eflorescencia",
+   "definicion": "Depósito de sales en la superficie del concreto, asociado a sales como las de calcio y magnesio.",
+   "tema": 2,
+   "subtema": "2A",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 5
+    },
+    {
+     "doc": "01",
+     "pag": 2,
+     "impresa": "96"
+    }
+   ]
+  },
+  {
+   "id": "g-escoria-de-alto-horno",
+   "termino": "Escoria de alto horno",
+   "definicion": "Agregado artificial, subproducto de la producción de acero; sus componentes principales son sílice, alúmina y cal.",
+   "tema": 3,
+   "subtema": "3A",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 8
+    }
+   ]
+  },
+  {
+   "id": "g-exudacion--sangrado",
+   "termino": "Exudación (sangrado)",
+   "definicion": "Aparición de agua en la superficie del concreto después de consolidado y antes de la fragua, porque los sólidos se asientan y no retienen el agua.",
+   "tema": 2,
+   "subtema": "2B",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    }
+   ]
+  },
+  {
+   "id": "g-granulometria",
+   "termino": "Granulometría",
+   "definicion": "Distribución porcentual en masa de los tamaños de partícula de un agregado, determinada por tamizado.",
+   "tema": 3,
+   "subtema": "3D",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 47
+    }
+   ]
+  },
+  {
+   "id": "g-gravedad-especifica-densidad-relativa",
+   "termino": "Gravedad específica (densidad relativa)",
+   "definicion": "Razón adimensional entre la densidad del agregado y la del agua a una temperatura declarada. Se usa para calcular el volumen que ocupa el agregado en el diseño por volumen absoluto.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 62
+    },
+    {
+     "doc": "02",
+     "pag": 2,
+     "impresa": "114"
+    }
+   ]
+  },
+  {
+   "id": "g-hinchamiento-abundamiento",
+   "termino": "Hinchamiento (abundamiento)",
+   "definicion": "Aumento del volumen masivo de la arena húmeda respecto de su volumen seco, causado por el agua libre y la tensión superficial: H = ΔV/Vm.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    },
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ]
+  },
+  {
+   "id": "g-ignimbrita",
+   "termino": "Ignimbrita",
+   "definicion": "Roca piroclástica muy soldada, depositada a muy alta temperatura; por su soldamiento puede servir para construcción.",
+   "tema": 3,
+   "subtema": "3B",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 45
+    }
+   ]
+  },
+  {
+   "id": "g-masa-constante",
+   "termino": "Masa constante",
+   "definicion": "Condición en la que secados posteriores causan una pérdida de masa menor que 0,1 %.",
+   "tema": 3,
+   "subtema": "3E",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 37
+    }
+   ]
+  },
+  {
+   "id": "g-meteorizacion",
+   "termino": "Meteorización",
+   "definicion": "Debilitamiento de los minerales por la humedad, los cambios de temperatura y los agentes químicos (hidrólisis, oxidación, hidratación y disolución).",
+   "tema": 3,
+   "subtema": "3B",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 17
+    },
+    {
+     "doc": "26",
+     "pag": 34
+    }
+   ]
+  },
+  {
+   "id": "g-mortero",
+   "termino": "Mortero",
+   "definicion": "Mezcla de pasta cementicia y agregado fino.",
+   "tema": 1,
+   "subtema": "1A",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 4
+    },
+    {
+     "doc": "12",
+     "pag": 43
+    }
+   ]
+  },
+  {
+   "id": "g-maquina-de-los-angeles",
+   "termino": "Máquina de Los Ángeles",
+   "definicion": "Cilindro de acero rotatorio con esferas de acero que mide la degradación del agregado grueso por abrasión e impacto (ASTM C131).",
+   "tema": 3,
+   "subtema": "3E",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 114
+    }
+   ]
+  },
+  {
+   "id": "g-modulo-de-finura-mf",
+   "termino": "Módulo de finura (MF)",
+   "definicion": "Suma de los porcentajes retenidos acumulados en las mallas No. 4, 8, 16, 30, 50 y 100, dividida entre 100. Es un índice de finura: a mayor MF, más grueso.",
+   "tema": 3,
+   "subtema": "3D",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 48
+    }
+   ]
+  },
+  {
+   "id": "g-particula-elongada",
+   "termino": "Partícula elongada",
+   "definicion": "Partícula cuya relación largo/ancho es mayor que 1,5 (ASTM D4791).",
+   "tema": 3,
+   "subtema": "3A",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 19
+    }
+   ]
+  },
+  {
+   "id": "g-particula-plana",
+   "termino": "Partícula plana",
+   "definicion": "Partícula cuya relación espesor/ancho es menor que 0,5 (ASTM D4791).",
+   "tema": 3,
+   "subtema": "3A",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 19
+    }
+   ]
+  },
+  {
+   "id": "g-pasta-cementicia-pura",
+   "termino": "Pasta cementicia pura",
+   "definicion": "Mezcla plástica de cemento hidráulico y agua, antes y después de su fraguado y endurecimiento.",
+   "tema": 1,
+   "subtema": "1A",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 5
+    },
+    {
+     "doc": "12",
+     "pag": 13
+    }
+   ]
+  },
+  {
+   "id": "g-peso-unitario-densidad-masiva-δb",
+   "termino": "Peso unitario (densidad masiva, δb)",
+   "definicion": "Masa de una unidad de volumen de agregado, contando las partículas y los vacíos entre ellas. Se determina suelto o varillado con la ASTM C29.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 99
+    }
+   ]
+  },
+  {
+   "id": "g-petrografia",
+   "termino": "Petrografía",
+   "definicion": "Estudio que describe los minerales de una roca: tipo, tamaño, forma, entrelazamiento, poros, fracturas y vetillas.",
+   "tema": 3,
+   "subtema": "3B",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 7
+    }
+   ]
+  },
+  {
+   "id": "g-picnometro",
+   "termino": "Picnómetro",
+   "definicion": "Matraz de volumen reproducible que se usa en la ASTM C128 para determinar el volumen de la arena por el método gravimétrico.",
+   "tema": 3,
+   "subtema": "3E",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 81
+    }
+   ]
+  },
+  {
+   "id": "g-porcentaje-pasando",
+   "termino": "Porcentaje pasando",
+   "definicion": "100 % menos el porcentaje retenido acumulado en esa malla.",
+   "tema": 3,
+   "subtema": "3D",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 47
+    }
+   ]
+  },
+  {
+   "id": "g-porcentaje-retenido-acumulado",
+   "termino": "Porcentaje retenido acumulado",
+   "definicion": "Suma del porcentaje retenido en una malla y en todas las mallas de mayor abertura.",
+   "tema": 3,
+   "subtema": "3D",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 47
+    }
+   ]
+  },
+  {
+   "id": "g-porosidad-n",
+   "termino": "Porosidad (n)",
+   "definicion": "Razón entre el volumen de vacíos y el volumen masivo: n = Vv/Vm.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ]
+  },
+  {
+   "id": "g-ppm",
+   "termino": "ppm",
+   "definicion": "Partes por millón: unidad de concentración de impurezas en el agua.",
+   "tema": 2,
+   "subtema": "2A",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ]
+  },
+  {
+   "id": "g-razon-de-vacios-e",
+   "termino": "Razón de vacíos (e)",
+   "definicion": "Razón entre el volumen de vacíos y el volumen sólido: e = Vv/Vs.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ]
+  },
+  {
+   "id": "g-reaccion-alcali-carbonato-rac",
+   "termino": "Reacción álcali-carbonato (RAC)",
+   "definicion": "Reacción de ciertas rocas dolomíticas con los álcalis; el producto agrieta la pasta. Se evalúa con la ASTM C586.",
+   "tema": 3,
+   "subtema": "3B",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 18
+    },
+    {
+     "doc": "10",
+     "pag": 5,
+     "impresa": "126"
+    }
+   ]
+  },
+  {
+   "id": "g-reaccion-alcali-silice-ras",
+   "termino": "Reacción álcali-sílice (RAS)",
+   "definicion": "Reacción entre el hidróxido alcalino del concreto y la sílice reactiva del agregado; forma un gel expansivo que genera presiones internas.",
+   "tema": 3,
+   "subtema": "3B",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 16
+    },
+    {
+     "doc": "10",
+     "pag": 4,
+     "impresa": "122"
+    }
+   ]
+  },
+  {
+   "id": "g-relacion-agua-cemento--a-c",
+   "termino": "Relación agua/cemento (a/c)",
+   "definicion": "Relación por masa entre el agua de diseño y el cemento.",
+   "tema": 2,
+   "subtema": "2B",
+   "fuente": [
+    {
+     "doc": "X01",
+     "pag": 4,
+     "pregunta": "relacione a/c"
+    },
+    {
+     "doc": "13",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-roca-metamorfica",
+   "termino": "Roca metamórfica",
+   "definicion": "Roca que resulta de someter otras rocas a muy altas presiones y temperaturas, de modo que recristalizan; por ejemplo, el mármol.",
+   "tema": 3,
+   "subtema": "3B",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-roca-sedimentaria",
+   "termino": "Roca sedimentaria",
+   "definicion": "Roca que se forma en la superficie por meteorización, erosión y cementación (clásticas) o por precipitación química (químicas).",
+   "tema": 3,
+   "subtema": "3B",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 9
+    },
+    {
+     "doc": "26",
+     "pag": 59
+    }
+   ]
+  },
+  {
+   "id": "g-roca-ignea",
+   "termino": "Roca ígnea",
+   "definicion": "Roca que se forma por el enfriamiento de un magma; su textura depende de la velocidad de enfriamiento.",
+   "tema": 3,
+   "subtema": "3B",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-saturado-superficie-seca-sss",
+   "termino": "Saturado superficie seca (SSS)",
+   "definicion": "Condición en la que los poros permeables están llenos de agua pero no hay agua libre en la superficie (w = D). El agregado no absorbe ni cede agua.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 65
+    },
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    }
+   ]
+  },
+  {
+   "id": "g-separador-mecanico",
+   "termino": "Separador mecánico",
+   "definicion": "Equipo de canales de igual ancho que divide la muestra en dos mitades (método A de la ASTM C702).",
+   "tema": 3,
+   "subtema": "3E",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 25
+    }
+   ]
+  },
+  {
+   "id": "g-suficiencia-de-tamizado",
+   "termino": "Suficiencia de tamizado",
+   "definicion": "Tamizado manual adicional, malla por malla, hasta que pase menos del 1 % de lo retenido.",
+   "tema": 3,
+   "subtema": "3E",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 53
+    }
+   ]
+  },
+  {
+   "id": "g-tamano-maximo",
+   "termino": "Tamaño máximo",
+   "definicion": "La malla más pequeña por la que pasa el 100 % del material.",
+   "tema": 3,
+   "subtema": "3D",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-tamano-maximo-nominal",
+   "termino": "Tamaño máximo nominal",
+   "definicion": "El mayor tamaño de malla donde queda retenido material, respetando un retenido máximo permisible.",
+   "tema": 3,
+   "subtema": "3D",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-tasa-de-evaporacion",
+   "termino": "Tasa de evaporación",
+   "definicion": "Cantidad de agua que se evapora de la superficie del concreto; se estima con el ábaco del ACI 305.",
+   "tema": 2,
+   "subtema": "2B",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 8
+    }
+   ]
+  },
+  {
+   "id": "g-vacios",
+   "termino": "Vacíos",
+   "definicion": "Espacio entre las partículas de una masa de agregado que no ocupa el material. Son de 30 % a 45 % en el grueso y de 40 % a 50 % en el fino.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 99
+    },
+    {
+     "doc": "02",
+     "pag": 2,
+     "impresa": "114"
+    }
+   ]
+  },
+  {
+   "id": "g-vibracion",
+   "termino": "Vibración",
+   "definicion": "Consolidación del concreto fresco, interna (vibrador de inmersión) o externa (sobre la formaleta).",
+   "tema": 2,
+   "subtema": "2B",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 5
+    }
+   ]
+  },
+  {
+   "id": "g-volumen-bruto-vb",
+   "termino": "Volumen bruto (VB)",
+   "definicion": "Volumen de las partículas incluidos sus poros permeables e impermeables: VB = Vs + Vpp. No incluye los vacíos entre partículas.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 4
+    },
+    {
+     "doc": "24",
+     "pag": 6,
+     "impresa": "2/8"
+    }
+   ]
+  },
+  {
+   "id": "g-volumen-masivo-vm",
+   "termino": "Volumen masivo (Vm)",
+   "definicion": "Volumen que ocupa una masa de agregado, incluidos los vacíos entre partículas.",
+   "tema": 3,
+   "subtema": "3C",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 10,
+     "impresa": "2/12"
+    }
+   ]
+  },
+  {
+   "id": "g-alcalis-del-cemento",
+   "termino": "Álcalis del cemento",
+   "definicion": "Óxidos de sodio (Na₂O) y de potasio (K₂O) del cemento.",
+   "tema": 3,
+   "subtema": "3B",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 15
+    }
+   ]
+  }
+ ]
+}

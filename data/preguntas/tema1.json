@@ -1,0 +1,294 @@
+{
+ "tema": 1,
+ "titulo": "Introducción y definiciones básicas",
+ "preguntas": [
+  {
+   "id": "p1-1A-t01",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según el ACI 116R, el mortero es:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B. La A es la pasta, la C es el concreto y la D no corresponde a ninguna definición del curso.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 4
+    },
+    {
+     "doc": "12",
+     "pag": 43
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Una mezcla de cemento hidráulico y agua"
+    },
+    {
+     "id": "b",
+     "texto": "Una mezcla de pasta cementicia y agregado fino"
+    },
+    {
+     "id": "c",
+     "texto": "Una mezcla de pasta, agregado fino y agregado grueso"
+    },
+    {
+     "id": "d",
+     "texto": "Una mezcla de cal y agregado grueso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p1-1A-t02",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "seleccion_unica",
+   "enunciado": "La «pasta cementicia pura» es:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A, según el ACI 116R. La B es el mortero y la C el concreto. La D es falsa porque la definición dice expresamente «antes y después de su fraguado».",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 5
+    },
+    {
+     "doc": "12",
+     "pag": 13
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Mezcla plástica de cemento hidráulico y agua, antes y después de su fraguado y endurecimiento"
+    },
+    {
+     "id": "b",
+     "texto": "Mezcla de cemento, agua y arena"
+    },
+    {
+     "id": "c",
+     "texto": "Mezcla de cemento, agua, arena y piedra"
+    },
+    {
+     "id": "d",
+     "texto": "Solo el cemento y el agua antes del fraguado"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p1-1A-t03",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "seleccion_unica",
+   "enunciado": "En el concreto de cemento portland, el medio ligante es:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C. El agregado (A, B) es lo que queda embebido en el ligante, no el ligante. El aditivo (D) es opcional.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 3
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "El agregado grueso"
+    },
+    {
+     "id": "b",
+     "texto": "El agregado fino"
+    },
+    {
+     "id": "c",
+     "texto": "Una mezcla de cemento portland y agua"
+    },
+    {
+     "id": "d",
+     "texto": "El aditivo"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p1-1A-t04",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué documento del ACI es el código de construcción para concreto estructural?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B. El ACI 211 (A) trata el proporcionamiento de mezclas, el ACI 522 (C) los pavimentos permeables y el ACI 116R (D) la terminología.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 8
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "ACI 211"
+    },
+    {
+     "id": "b",
+     "texto": "ACI 318"
+    },
+    {
+     "id": "c",
+     "texto": "ACI 522"
+    },
+    {
+     "id": "d",
+     "texto": "ACI 116R"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p1-1A-t05",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué documento del ACI trata la selección del proporcionamiento de concreto de peso normal, pesado y masivo?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A. El ACI 318 (B) es el código estructural, el ACI 522 (C) los pavimentos permeables y el ACI 305 (D) el concreto en clima caluroso.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 8
+    },
+    {
+     "doc": "06",
+     "pag": 8
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "ACI 211"
+    },
+    {
+     "id": "b",
+     "texto": "ACI 318"
+    },
+    {
+     "id": "c",
+     "texto": "ACI 522"
+    },
+    {
+     "id": "d",
+     "texto": "ACI 305"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p1-1A-t06",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los grupos en que se clasifican los materiales estructurales según la presentación del curso:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correctas la A, la B, la C y la E. La madera (D) no aparece como grupo en esa clasificación.",
+   "fuente": [
+    {
+     "doc": "04",
+     "pag": 5
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Metales"
+    },
+    {
+     "id": "b",
+     "texto": "Polímeros"
+    },
+    {
+     "id": "c",
+     "texto": "Cerámicos"
+    },
+    {
+     "id": "d",
+     "texto": "Maderas"
+    },
+    {
+     "id": "e",
+     "texto": "Compuestos"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c",
+    "e"
+   ]
+  },
+  {
+   "id": "p1-1A-t07",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Explique la diferencia entre pasta, mortero y concreto.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Se basa en las definiciones del ACI 116R de la presentación.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 3
+    },
+    {
+     "doc": "03",
+     "pag": 4
+    },
+    {
+     "doc": "03",
+     "pag": 5
+    }
+   ],
+   "respuesta_modelo": "La pasta es cemento hidráulico con agua. El mortero es pasta con agregado fino. El concreto es un material compuesto de un ligante (pasta de cemento y agua) con agregado fino y grueso embebidos.",
+   "puntos_clave": [
+    "pasta = cemento + agua",
+    "mortero = pasta + agregado fino",
+    "concreto = pasta + agregado fino + agregado grueso"
+   ]
+  },
+  {
+   "id": "p1-1A-t08",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Defina concreto según el ACI 116R.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Definición textual de la presentación.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 3
+    },
+    {
+     "doc": "12",
+     "pag": 15
+    }
+   ],
+   "respuesta_modelo": "Material compuesto formado por un medio ligante con partículas o fragmentos de agregado embebidos, generalmente fino y grueso; en el concreto de cemento portland el ligante es cemento portland y agua.",
+   "puntos_clave": [
+    "material compuesto",
+    "medio ligante",
+    "agregado fino y grueso embebido",
+    "ligante: cemento portland + agua"
+   ]
+  }
+ ]
+}

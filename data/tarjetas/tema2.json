@@ -1,0 +1,544 @@
+{
+ "tema": 2,
+ "titulo": "Agua para concreto",
+ "tarjetas": [
+  {
+   "id": "t2-2A-01",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "¿Qué agua sirve, en principio, para hacer concreto?",
+   "reverso": "Prácticamente cualquier agua natural potable y sin sabor u olor fuerte. Algunas aguas no potables también sirven, pero hay que verificar su desempeño.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 1,
+     "impresa": "95"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-02",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "¿Qué parámetros del agua deben cumplir límites?",
+   "reverso": "El pH, los aceites, las sales, y los limos y la materia orgánica.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 2
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-03",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "Sulfatos en el agua de mezcla",
+   "reverso": "Son sales del ácido sulfúrico y una base (SO₄). Pueden provocar reacciones expansivas en el concreto.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 3
+    },
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-04",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "Carbonatos y bicarbonatos de sodio y potasio",
+   "reverso": "El carbonato de sodio puede causar fraguado rápido. Los bicarbonatos pueden acelerar o retardar el fraguado. Si la suma de sales disueltas supera 1000 ppm, hay que ensayar su efecto en la resistencia y el fraguado.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 3
+    },
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-05",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "Cloruros en el agua de mezcla",
+   "reverso": "Atacan la capa de óxido que protege al acero, que se forma por la alta alcalinidad del concreto (pH mayor que 12,5), y provocan corrosión del refuerzo. Son la sal que más preocupa en el concreto reforzado.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 3
+    },
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-06",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "Dureza del agua",
+   "reverso": "Es un indicador del contenido de sales; se caracteriza principalmente por el contenido de calcio y magnesio, y se expresa como CaCO₃.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 3
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-07",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "Problemas asociados a las sales de calcio y magnesio",
+   "reverso": "Con el agua producen eflorescencias y expansiones.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 5
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-08",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "norma",
+   "frente": "Normas ASTM sobre el agua de mezcla",
+   "reverso": "ASTM C1602: especificación del agua de mezcla para concreto (requisitos).\nASTM C1603: medición de sólidos en el agua.\nASTM C114: métodos de análisis químico (se usa para cloruros y sulfatos).",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 7
+    },
+    {
+     "doc": "05",
+     "pag": 8
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-09",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "dato",
+   "frente": "Límites químicos del agua de mezcla (ASTM C1602), según la presentación",
+   "reverso": "Sulfato como SO₄: 3 000 ppm (método ASTM C114).\nÁlcalis: 600 ppm.\nSólidos totales: 5 000 ppm (ASTM C1603).\nCloruro: ver la tabla de tolerancias (ASTM C114).",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 8
+    }
+   ],
+   "origen": "teoria",
+   "verificar": "La PCA (Tabla 4-4, pág. 96) da 50 000 ppm de sólidos totales; la presentación dice 5 000. Se usa el valor del profe."
+  },
+  {
+   "id": "t2-2A-10",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "criterio",
+   "frente": "Criterios para aceptar un agua dudosa (no potable)",
+   "reverso": "Resistencia a compresión de cubos de mortero (ASTM C109): al menos 90 % de la del control a los 7 días.\nTiempo de fraguado (ASTM C191): desde 1:00 h antes hasta 1:30 h después que el control.\nEl control se hace con agua potable o destilada.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 9
+    },
+    {
+     "doc": "01",
+     "pag": 1,
+     "impresa": "95"
+    },
+    {
+     "doc": "01",
+     "pag": 2,
+     "impresa": "96"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-11",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "dato",
+   "frente": "Tolerancias de impurezas: cloruros y sulfatos",
+   "reverso": "Cloruro de sodio: 20 000 ppm.\nCloruro como Cl⁻: 500 ppm en concreto preesforzado y 1000 ppm en concreto húmedo o con aluminio o metales galvanizados.\nSulfato de sodio: 10 000 ppm.\nSulfato como SO₄: 3 000 ppm.\nSulfato de magnesio: 25 000 ppm.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-12",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "dato",
+   "frente": "Tolerancias de impurezas: carbonatos y otras sales",
+   "reverso": "Carbonato de sodio y potasio: 1000 ppm.\nCarbonato de calcio y magnesio (como bicarbonato): 400 ppm.\nCloruro de magnesio: 40 000 ppm.\nSales de hierro: 40 000 ppm.\nYodato, fosfato y borato de sodio: 100 ppm.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-13",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "dato",
+   "frente": "Tolerancias de impurezas: pH, hidróxidos, azúcar, aceite, algas y materia orgánica",
+   "reverso": "pH: 6,5 a 8,5.\nHidróxido de sodio: 0,50 % del peso del cemento.\nHidróxido de potasio: 1,20 % del peso del cemento.\nAzúcar: 500 ppm.\nAceite mineral: 2 % del peso del cemento.\nAgua con algas: 0.\nMateria orgánica: 20 ppm.\nSólidos en suspensión en agua natural: 2 000 ppm.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "origen": "teoria",
+   "verificar": "La PCA da otros valores para algas (1000 ppm, pág. 100), habla de hidróxido de calcio en vez de potasio (pág. 99) y fija el aceite mineral en 2,5 % (pág. 100). Se usa la tabla del curso."
+  },
+  {
+   "id": "t2-2A-14",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "Agua de mar",
+   "reverso": "Hasta 35 000 ppm de sales es adecuada para concreto SIN acero. No se recomienda para concreto reforzado ni preesforzado, por el riesgo de corrosión. También causa eflorescencias y manchas, y puede agravar la reacción álcali-agregado.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    },
+    {
+     "doc": "01",
+     "pag": 4,
+     "impresa": "98"
+    },
+    {
+     "doc": "05",
+     "pag": 10
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-15",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "Aguas ácidas",
+   "reverso": "La PCA dice que las aguas con pH menor que 3,0 pueden crear problemas de manejo y se deben evitar si es posible. El pH neutro es 7; por debajo hay acidez y por encima alcalinidad.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 4,
+     "impresa": "98"
+    }
+   ],
+   "origen": "teoria",
+   "verificar": "El cuestionario del curso (X01, pág. 3) dice «menor a 3,5» y la tabla de tolerancias da un rango aceptable de 6,5 a 8,5 (contradicción C15)."
+  },
+  {
+   "id": "t2-2A-16",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "Consecuencias del exceso de impurezas en el agua de mezcla",
+   "reverso": "Pueden afectar el tiempo de fraguado y la resistencia, y causar eflorescencias, manchado, corrosión del refuerzo, inestabilidad de volumen y menor durabilidad.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 2,
+     "impresa": "96"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2A-17",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "concepto",
+   "frente": "Algas en el agua",
+   "reverso": "Las aguas con algas no son adecuadas: reducen mucho la resistencia, por su efecto en la hidratación o porque incluyen mucho aire, y en los agregados reducen la adherencia. La tabla del curso tolera 0.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 6,
+     "impresa": "100"
+    },
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-01",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "concepto",
+   "frente": "Efecto de la relación a/c en la mezcla",
+   "reverso": "La presentación compara mezclas con a/c de 0,4, 0,6 y 0,8: a mayor a/c, mezcla más fluida y con más asentamiento. La relación a/c es una relación POR MASA.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 11
+    },
+    {
+     "doc": "06",
+     "pag": 2
+    },
+    {
+     "doc": "06",
+     "pag": 10
+    },
+    {
+     "doc": "X01",
+     "pag": 4,
+     "pregunta": "relacione a/c"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-02",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "dato",
+   "frente": "Rangos de relación a/c según el cuestionario del curso",
+   "reverso": "Concreto convencional: 0,40 a 0,80.\nConcreto convencional con buena trabajabilidad: 0,55 a 0,60.\nRelación a/c necesaria para hidratar las partículas de cemento: 0,22.",
+   "fuente": [
+    {
+     "doc": "X01",
+     "pag": 4,
+     "pregunta": "preguntas 3 y 4"
+    }
+   ],
+   "origen": "teoria",
+   "verificar": "Estos valores solo aparecen en la clave del cuestionario (fuente del profe); las fuentes de teoría no los desarrollan."
+  },
+  {
+   "id": "t2-2B-03",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "concepto",
+   "frente": "Exudación o sangrado",
+   "reverso": "Es la aparición de agua en la superficie del concreto después de consolidado y antes de la fragua. Las partículas sólidas (cemento y agregados) se asientan, no logran retener toda el agua y esta sube. Siempre ocurre, aunque a veces no se nota. Se mide con la ASTM C232.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    },
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    },
+    {
+     "doc": "06",
+     "pag": 4
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-04",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "concepto",
+   "frente": "Efectos del sangrado excesivo",
+   "reverso": "Sube la relación a/c en la superficie (capa débil, porosa, propensa al desgaste y poco durable), aumenta la porosidad (canales), produce agrietamiento y reduce la adherencia, porque quedan bolsas de agua bajo el agregado y las varillas. En poca cantidad puede ayudar a controlar las fisuras por contracción plástica.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-05",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "concepto",
+   "frente": "¿Cómo se reduce la exudación?",
+   "reverso": "Sobre todo reduciendo la relación a/c. También ayudan los cementos más finos, una buena graduación de los agregados, los agregados muy finos (pasando la No. 100), las puzolanas y los aditivos inclusores de aire.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-06",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "concepto",
+   "frente": "Contracción del concreto en estado fresco: los dos tipos",
+   "reverso": "La contracción plástica y la contracción autógena.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 6
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-07",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "concepto",
+   "frente": "Contracción autógena",
+   "reverso": "Es la reducción de volumen causada por el consumo INTERNO de agua durante la hidratación del cemento. Es muy pequeña en concretos normales y significativa con a/c muy bajas (menores que 0,30). Para reducirla lo más importante es empezar el curado lo antes posible y mantenerlo al menos 7 días.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-08",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "concepto",
+   "frente": "Contracción plástica",
+   "reverso": "Es el cambio de volumen mientras el concreto está plástico, por pérdida de agua debida a influencias EXTERNAS (exudación, formaletas, evaporación). Produce fisuras en la superficie antes o durante el acabado. Las superficies horizontales (losas y pavimentos) son las más propensas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-09",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "concepto",
+   "frente": "Medidas para reducir la contracción plástica",
+   "reverso": "Humedecer las formaletas y los agregados, empezar el curado rápido (a las 8 h), usar cobertores contra la evaporación, usar un sello de concreto pobre y saturar las superficies de contacto. La contracción plástica aumenta con el contenido de pasta y con la a/c.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 3,
+     "impresa": "4/8"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-10",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "norma",
+   "frente": "Tasa de evaporación y contracción plástica",
+   "reverso": "La tasa de evaporación se obtiene con el ábaco del ACI 305 (Guía para concretar en clima caluroso) a partir de la temperatura del aire, la humedad relativa, la temperatura del concreto y la velocidad del viento.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 8
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-11",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "concepto",
+   "frente": "Grietas por asentamiento plástico",
+   "reverso": "Aparecen sobre las barras de refuerzo y cerca de los elementos que restringen el movimiento: la restricción al asentamiento genera esfuerzos de tensión y fisuras.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 7
+    },
+    {
+     "doc": "X01",
+     "pag": 6,
+     "pregunta": "F/V 6"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-12",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "concepto",
+   "frente": "Vibración del concreto",
+   "reverso": "Puede ser interna (vibrador de inmersión, eléctrico o con motor de gasolina) o externa (sobre las formaletas).",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 5
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t2-2B-13",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "norma",
+   "frente": "Normas de asentamiento",
+   "reverso": "ASTM C143: asentamiento del concreto convencional (cono).\nASTM C1611: flujo de asentamiento del concreto autocompactante.\nASTM C192: elaboración y curado de especímenes en el laboratorio.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 9
+    },
+    {
+     "doc": "06",
+     "pag": 10
+    }
+   ],
+   "origen": "teoria"
+  }
+ ]
+}

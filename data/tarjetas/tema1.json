@@ -1,0 +1,189 @@
+{
+ "tema": 1,
+ "titulo": "Introducción y definiciones básicas",
+ "tarjetas": [
+  {
+   "id": "t1-1A-01",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "concepto",
+   "frente": "¿Concreto y hormigón son lo mismo?",
+   "reverso": "Sí: son sinónimos (en inglés, concrete).",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 2
+    },
+    {
+     "doc": "03",
+     "pag": 3
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t1-1A-02",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "concepto",
+   "frente": "Definición de concreto (hormigón) según el ACI 116R",
+   "reverso": "Material compuesto que consiste esencialmente en un medio ligante dentro del cual hay partículas o fragmentos de agregado, generalmente una combinación de agregado fino y grueso. En el concreto de cemento portland, el ligante es una mezcla de cemento portland y agua.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 3
+    },
+    {
+     "doc": "12",
+     "pag": 15
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t1-1A-03",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "concepto",
+   "frente": "Componentes del concreto",
+   "reverso": "Cemento, agregado fino (arena), agregado grueso (piedra) y agua; pueden añadirse aditivos y fibras.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 3
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t1-1A-04",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "concepto",
+   "frente": "Definición de mortero según el ACI 116R",
+   "reverso": "Mezcla de pasta cementicia y agregado fino. En el concreto fresco, es el material que ocupa los intersticios entre las partículas de agregado grueso. En mampostería puede contener cemento de albañilería o cemento hidráulico y cal para lograr más plasticidad y trabajabilidad.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 4
+    },
+    {
+     "doc": "12",
+     "pag": 43
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t1-1A-05",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "concepto",
+   "frente": "Definición de pasta cementicia pura según el ACI 116R",
+   "reverso": "Mezcla plástica de cemento hidráulico y agua, tanto antes como después de su fraguado y endurecimiento.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 5
+    },
+    {
+     "doc": "12",
+     "pag": 13
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t1-1A-06",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "concepto",
+   "frente": "Diferencia entre pasta, mortero y concreto",
+   "reverso": "Pasta: cemento + agua.\nMortero: pasta + agregado fino.\nConcreto: pasta + agregado fino + agregado grueso.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 3
+    },
+    {
+     "doc": "03",
+     "pag": 4
+    },
+    {
+     "doc": "03",
+     "pag": 5
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t1-1A-07",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "concepto",
+   "frente": "Formas de producir concreto",
+   "reverso": "En planta (concreto premezclado, transportado en camión mezclador) o en sitio (por ejemplo, con batidora).",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 6
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t1-1A-08",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "norma",
+   "frente": "Normas ACI que menciona el curso",
+   "reverso": "ACI 211: práctica para seleccionar el proporcionamiento (diseño de mezcla) de concreto normal, pesado y masivo.\nACI 318: código de construcción para concreto estructural.\nACI 522: especificaciones para pavimentos de concreto permeable.\nACI 116R: terminología del cemento y el concreto.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 8
+    },
+    {
+     "doc": "12",
+     "pag": 1
+    }
+   ],
+   "origen": "teoria",
+   "verificar": "La lista de referencias de la presentación (03, pág. 9) le pone por error al ACI 116R-00 el título del ACI 211."
+  },
+  {
+   "id": "t1-1A-09",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "clasificacion",
+   "frente": "Clasificación de los materiales estructurales",
+   "reverso": "Se clasifican en metales, polímeros, cerámicos y compuestos.",
+   "fuente": [
+    {
+     "doc": "04",
+     "pag": 5
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t1-1A-10",
+   "tema": 1,
+   "subtema": "1A",
+   "tipo": "concepto",
+   "frente": "¿Por qué el concreto es un material compuesto?",
+   "reverso": "Porque combina un medio ligante (la pasta) con partículas de agregado embebidas en él.",
+   "fuente": [
+    {
+     "doc": "03",
+     "pag": 3
+    },
+    {
+     "doc": "12",
+     "pag": 15
+    }
+   ],
+   "origen": "teoria"
+  }
+ ]
+}

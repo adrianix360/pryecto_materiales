@@ -1,0 +1,21 @@
+# Material con derechos de autor y exámenes con nombres de estudiantes: nunca se sube
+fuentes/
+
+# Dependencias y salidas de pruebas
+node_modules/
+tests/capturas/
+
+# Python
+__pycache__/
+*.pyc
+
+# Archivos del sistema (Windows, macOS, Office, editores)
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+~$*
+*.tmp
+*.swp

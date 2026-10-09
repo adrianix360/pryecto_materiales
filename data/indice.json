@@ -1,0 +1,38 @@
+{
+ "version": 1,
+ "examen": "2026-10-17",
+ "temas": [
+  {
+   "tema": 1,
+   "titulo": "Introducción y definiciones básicas",
+   "tarjetas": "data/tarjetas/tema1.json",
+   "preguntas": "data/preguntas/tema1.json",
+   "subtemas": {
+    "1A": "Concreto, mortero, pasta y tipos de materiales"
+   }
+  },
+  {
+   "tema": 2,
+   "titulo": "Agua para concreto",
+   "tarjetas": "data/tarjetas/tema2.json",
+   "preguntas": "data/preguntas/tema2.json",
+   "subtemas": {
+    "2A": "Calidad del agua",
+    "2B": "Cantidad de agua y concreto fresco"
+   }
+  },
+  {
+   "tema": 3,
+   "titulo": "Agregados",
+   "tarjetas": "data/tarjetas/tema3.json",
+   "preguntas": "data/preguntas/tema3.json",
+   "subtemas": {
+    "3A": "Importancia, clasificación y características",
+    "3B": "Rocas y reactividad",
+    "3C": "Volúmenes, masas y humedad",
+    "3D": "Granulometría",
+    "3E": "Ensayos de laboratorio"
+   }
+  }
+ ]
+}

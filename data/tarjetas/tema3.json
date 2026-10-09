@@ -1,0 +1,3031 @@
+{
+ "tema": 3,
+ "titulo": "Agregados",
+ "tarjetas": [
+  {
+   "id": "t3-3A-01",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "concepto",
+   "frente": "¿Cuáles son los cuatro aspectos en los que los agregados son importantes para el concreto?",
+   "reverso": "Economía, resistencia, trabajabilidad y durabilidad.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 3
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-02",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "dato",
+   "frente": "¿Qué fracción del concreto ocupan los agregados?",
+   "reverso": "Entre 66 % y 78 % del volumen, y entre 70 % y 85 % de la masa.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 4
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-03",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "dato",
+   "frente": "Superficie por cubrir con pasta: ¿agregado grueso de 38 mm o arena de granulometría media?",
+   "reverso": "La arena: unos 388 m² por cada 100 kg, contra unos 14 m² por cada 100 kg en el grueso de 38 mm (1½\"). Por eso los finos piden más pasta.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 4
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-04",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "concepto",
+   "frente": "Características deseables de un agregado para concreto",
+   "reverso": "Resistente a la compresión y a la abrasión, durable, limpio, no reactivo, con buena forma, textura y graduación.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 10
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-05",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "clasificacion",
+   "frente": "Clasificación por su proceso de obtención",
+   "reverso": "Natural: de río, de tajo o de mar. Artificial: subproductos de procesos industriales, como la escoria de alto horno (subproducto del acero; sus componentes principales son sílice, alúmina y cal).",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 2
+    },
+    {
+     "doc": "14",
+     "pag": 8
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-06",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "clasificacion",
+   "frente": "Clasificación por peso unitario masivo seco (δb)",
+   "reverso": "Pesados: δb > 1900 kg/m³.\nNormales: 1120 < δb < 1900 kg/m³ (2,4 < GBS < 2,8).\nLivianos: δb < 1120 kg/m³.",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 9
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-07",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "dato",
+   "frente": "Agregados livianos: ejemplos y usos",
+   "reverso": "Perlita y vermiculita expandidas: concreto aislante (ASTM C332). Pómez y escoria: concreto de relleno y aislante. Arcilla o pizarra expandida, cenizas y escoria expandida: concreto estructural (ASTM C330).",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 11
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-08",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "dato",
+   "frente": "Agregados pesados: ejemplos y función",
+   "reverso": "Barita, magnetita, limonita, ilmenita, ferrofósforo y agregado de acero, entre otros. Se usan en concreto de blindaje contra la radiación (ASTM C637).",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 10
+    },
+    {
+     "doc": "X01",
+     "pag": 8,
+     "pregunta": "respuesta corta 10"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-09",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "clasificacion",
+   "frente": "Tamaños comerciales de piedra (Decreto 10854-MEIC)",
+   "reverso": "Tercera: 37,5 a 4,75 mm\nCuarta: 25,0 a 4,75 mm\nCuartilla: 19,0 a 4,75 mm\nQuinta: 12,7 a 4,75 mm\nQuintilla: 9,5 a 2,36 mm",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 13
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-10",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "clasificacion",
+   "frente": "Formas de partícula y límite de partículas planas y elongadas",
+   "reverso": "Redondeadas, subredondeadas, angulosas o cuboidales, y planas y elongadas. Plana: espesor/ancho < 0,5. Elongada: largo/ancho > 1,5. Máximo 15 % en masa de la muestra (ASTM D4791).",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 19
+    },
+    {
+     "doc": "14",
+     "pag": 14
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-11",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "concepto",
+   "frente": "Efectos de las partículas planas y elongadas",
+   "reverso": "En el concreto fresco: más pasta y más agua, mezclado, acabado y vibración más difíciles, más vacíos. En el endurecido: más permeabilidad, menos resistencia y menos durabilidad. En losas dificultan la salida del agua de sangrado.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 20
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-12",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "concepto",
+   "frente": "Forma y textura: ¿qué favorece la trabajabilidad y qué la resistencia?",
+   "reverso": "Trabajabilidad: partículas redondeadas y lisas (menos interacción y mejor lubricación de la pasta). Resistencia: partículas angulares, cúbicas y rugosas (más área de unión y mejor adherencia), aunque piden más pasta y agua.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 2,
+     "impresa": "2/4"
+    },
+    {
+     "doc": "24",
+     "pag": 3,
+     "impresa": "2/5"
+    },
+    {
+     "doc": "02",
+     "pag": 1,
+     "impresa": "113"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-13",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "concepto",
+   "frente": "Agregados limpios: efectos nocivos de la suciedad",
+   "reverso": "Interfiere con la hidratación del cemento (problemas de resistencia), retarda el fraguado y deteriora el concreto si hay partículas degradables.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 12
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-14",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "norma",
+   "frente": "Normas de abrasión que menciona el curso",
+   "reverso": "ASTM C131: abrasión del agregado grueso en la Máquina de Los Ángeles. ASTM C418: abrasión del concreto por chorro de arena. ASTM C994: abrasión de superficies de concreto o mortero por corte rotativo.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 11
+    },
+    {
+     "doc": "19",
+     "pag": 112
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3A-15",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "concepto",
+   "frente": "¿Influye la resistencia del agregado en un concreto convencional?",
+   "reverso": "Poco: la resistencia del agregado rara vez se ensaya y, en concreto convencional, influye menos que la resistencia de la pasta y la adherencia pasta-agregado. Se vuelve importante en concreto de alta resistencia.",
+   "fuente": [
+    {
+     "doc": "09",
+     "pag": 2,
+     "impresa": "118"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-01",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "clasificacion",
+   "frente": "Clasificación de las rocas por su origen",
+   "reverso": "Ígneas: enfriamiento de magma (basalto, granito). Sedimentarias: se forman en la superficie por meteorización, erosión y cementación (arenisca, caliza). Metamórficas: rocas sometidas a muy altas presiones y temperaturas que recristalizan (mármol).",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 9
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-02",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Textura de las rocas ígneas según la velocidad de enfriamiento",
+   "reverso": "Instantáneo: textura vítrea, sin minerales (obsidiana, pómez). Rápido: cristales pequeños que no se ven a simple vista (rocas extrusivas o volcánicas). Lento: cristales grandes visibles (rocas intrusivas).",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 21
+    },
+    {
+     "doc": "26",
+     "pag": 22
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-03",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Minerales félsicos y máficos",
+   "reverso": "Félsicos: claros y ricos en sílice (cuarzo, plagioclasa, ortosa, muscovita). Máficos: oscuros y ricos en magnesio y hierro (biotita, anfíbol, piroxeno, olivino).",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 20
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-04",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "dato",
+   "frente": "¿De qué rocas provienen los mejores agregados en Costa Rica?",
+   "reverso": "De rocas ígneas. Los agregados de río del país son, por lo general, de origen ígneo.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 11
+    },
+    {
+     "doc": "X06",
+     "pag": 4,
+     "pregunta": "Pregunta 12"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-05",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "El agregado ígneo ideal",
+   "reverso": "Proviene de una lava con escasa porosidad (lava densa o piroclástica bien soldada). Es sano (no meteorizado), inerte, con minerales de diverso tamaño fuertemente entrelazados, pocos minerales grandes y poco vidrio volcánico.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 50
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-06",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Rocas volcánicas antiguas (Formación Aguacate, unos 66 millones de años)",
+   "reverso": "Tienen amplia distribución, pero calidad variable: suelen estar alteradas (meteorización y alteración hidrotermal). Hay que vigilar los cloruros (corrosión del acero) y los sulfatos (expansión), y pueden tener sílice amorfa (posible reacción álcali-sílice).",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 28
+    },
+    {
+     "doc": "26",
+     "pag": 29
+    },
+    {
+     "doc": "26",
+     "pag": 30
+    },
+    {
+     "doc": "26",
+     "pag": 31
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-07",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Rocas volcánicas recientes (unos 1,6 millones de años)",
+   "reverso": "Son buenos agregados: sanas, duras y tenaces, casi siempre lavas andesíticas. Problemas posibles: textura vesicular, exceso de vidrio, textura seriada y lajamiento (textura fluidal), que producen partículas planas.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 36
+    },
+    {
+     "doc": "26",
+     "pag": 51
+    },
+    {
+     "doc": "26",
+     "pag": 52
+    },
+    {
+     "doc": "26",
+     "pag": 53
+    },
+    {
+     "doc": "26",
+     "pag": 54
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-08",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Rocas piroclásticas: poco soldadas frente a ignimbritas",
+   "reverso": "Las poco soldadas se enfrían rápido, tienen mucho vidrio y se meteorizan con facilidad. Las ignimbritas están muy soldadas y pueden servir para construcción. En general, las piroclásticas son porosas, gastan mucha pasta y dan malos valores de abrasión Los Ángeles.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 43
+    },
+    {
+     "doc": "26",
+     "pag": 45
+    },
+    {
+     "doc": "26",
+     "pag": 48
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-09",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Rocas sedimentarias: clásticas y químicas",
+   "reverso": "Clásticas: fragmentos cementados (arenisca, conglomerado); su resistencia depende del cemento que las une y son poco útiles como agregado. Químicas: por precipitación de químicos en el agua (caliza, sal, yeso).",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 59
+    },
+    {
+     "doc": "26",
+     "pag": 60
+    },
+    {
+     "doc": "26",
+     "pag": 62
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-10",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Calizas como agregado",
+   "reverso": "Son muy usadas, pero su resistencia varía según el grado de cristalización. Son fáciles de extraer (calcita, dureza 3). En mezclas asfálticas se pulen y no se deben usar en la superficie de ruedo.",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 63
+    },
+    {
+     "doc": "26",
+     "pag": 64
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-11",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Procesos de meteorización química en el trópico",
+   "reverso": "Hidrólisis (los feldespatos forman arcillas), oxidación (por ejemplo, del hierro), hidratación (el agua se combina con el mineral) y disolución (sal, yeso, calizas).",
+   "fuente": [
+    {
+     "doc": "26",
+     "pag": 34
+    },
+    {
+     "doc": "26",
+     "pag": 17
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-12",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Reactividad álcali-agregado: sus dos formas",
+   "reverso": "Reacción álcali-sílice (RAS) y reacción álcali-carbonato (RAC). La RAS preocupa más porque los agregados con sílice reactiva son más comunes.",
+   "fuente": [
+    {
+     "doc": "10",
+     "pag": 3,
+     "impresa": "121"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-13",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Reacción álcali-sílice (RAS)",
+   "reverso": "El hidróxido alcalino ataca los minerales silíceos y forma un gel que se expande al absorber agua. Las presiones internas desintegran la masa de concreto. Se manifiesta entre los 4 y 7 años y es más crítica con ciclos de humedecimiento y secado.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 16
+    },
+    {
+     "doc": "10",
+     "pag": 4,
+     "impresa": "122"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-14",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Las tres condiciones para que ocurra la reacción álcali-agregado",
+   "reverso": "1. Agregado reactivo.\n2. Exceso de álcalis (máximo 0,6 % en masa).\n3. Humedad.\nSi falta una, la reacción no ocurre.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 13
+    },
+    {
+     "doc": "10",
+     "pag": 4,
+     "impresa": "122"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-15",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "¿Qué son los álcalis del cemento?",
+   "reverso": "Los óxidos de sodio (Na₂O) y de potasio (K₂O).",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 15
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-16",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "norma",
+   "frente": "Ensayos de reacción álcali-sílice",
+   "reverso": "ASTM C227: barras de mortero; rechazo si la expansión supera 0,05 % a los 3 meses o 0,10 % a los 6 meses.\nASTM C1260: barras de mortero; rechazo si supera 0,10 % a los 14 días.\nASTM C289: reactividad potencial; mide la sílice disuelta en hidróxido de sodio.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 17
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-17",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "concepto",
+   "frente": "Reacción álcali-carbonato (RAC)",
+   "reverso": "Ocurre con rocas dolomíticas (la dolomita es carbonato de calcio y magnesio). El producto forma grietas en la pasta: el agregado ataca la pasta. Ensayo: ASTM C586, expansión de cilindros de roca en hidróxido de sodio durante 1 año.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 18
+    },
+    {
+     "doc": "10",
+     "pag": 5,
+     "impresa": "126"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-18",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "dato",
+   "frente": "Materiales perjudiciales: sustancia, efecto y norma (PCA, Tabla 5-7)",
+   "reverso": "Impurezas orgánicas: afectan el fraguado y el endurecimiento (ASTM C40).\nMaterial más fino que 75 µm: afecta la adherencia y aumenta la demanda de agua (ASTM C117).\nTerrones de arcilla y partículas desmenuzables: afectan la trabajabilidad y la durabilidad (ASTM C142).\nCarbón, lignito y material ligero: afectan la durabilidad y causan manchas (ASTM C123).",
+   "fuente": [
+    {
+     "doc": "10",
+     "pag": 2,
+     "impresa": "120"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3B-19",
+   "tema": 3,
+   "subtema": "3B",
+   "tipo": "dato",
+   "frente": "Sulfuros de hierro que vuelven reactivo un agregado",
+   "reverso": "Pirita, marcasita y pirrotita.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 14
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-01",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "clasificacion",
+   "frente": "Estados de humedad del agregado",
+   "reverso": "Seco al horno: w = 0.\nSeco al aire: w < D (absorción).\nSaturado superficie seca (SSS): w = D.\nCon agua libre: w > D.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 2
+    },
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-02",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "concepto",
+   "frente": "¿Por qué la condición SSS es la de referencia?",
+   "reverso": "Es la única condición en la que el agregado no absorbe ni cede agua a la mezcla.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    },
+    {
+     "doc": "02",
+     "pag": 3,
+     "impresa": "115"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-03",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "concepto",
+   "frente": "¿Qué pasa si el agregado está seco o con agua libre al hacer la mezcla?",
+   "reverso": "Seco (w < D): absorbe agua de la pasta, baja la relación a/c real y causa problemas de trabajabilidad. Con agua libre (w > D): aporta agua, sube la relación a/c y la fluidez. En ambos casos cambian la resistencia y la durabilidad.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-04",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "formula",
+   "frente": "Agua total del agregado",
+   "reverso": "W = WL + WD: agua libre más agua de absorción.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 2
+    },
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-05",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "concepto",
+   "frente": "Hinchamiento (abundamiento) de la arena",
+   "reverso": "Es el aumento del volumen masivo de la arena húmeda frente al que ocupaba seca. Lo causa el agua libre: la tensión superficial forma meniscos que separan las partículas. Al saturarse, el menisco se destruye y el volumen baja. Es exclusivo de la arena.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 4,
+     "impresa": "2/6"
+    },
+    {
+     "doc": "02",
+     "pag": 3,
+     "impresa": "115"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-06",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "dato",
+   "frente": "¿Qué arena se hincha más?",
+   "reverso": "La más fina. Según la curva del curso, la arena fina llega a cerca de 35 % y la gruesa a cerca de 15 %.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 3
+    },
+    {
+     "doc": "02",
+     "pag": 3,
+     "impresa": "115"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-07",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "formula",
+   "frente": "Fórmulas del hinchamiento",
+   "reverso": "H = ΔV / Vm\nV'm = Vm (1 + H)\n(V'm: volumen masivo hinchado)",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 10
+    },
+    {
+     "doc": "24",
+     "pag": 5,
+     "impresa": "2/7"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-08",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "concepto",
+   "frente": "Volumen sólido, volumen bruto y volumen masivo",
+   "reverso": "Vs: volumen del sólido (incluye los poros impermeables).\nVB = Vs + Vpp: el sólido más los poros permeables.\nVm: el volumen bruto más los vacíos entre partículas.\nV'm: el volumen masivo hinchado.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 4
+    },
+    {
+     "doc": "24",
+     "pag": 6,
+     "impresa": "2/8"
+    },
+    {
+     "doc": "24",
+     "pag": 10,
+     "impresa": "2/12"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-09",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "concepto",
+   "frente": "¿Dónde quedan los poros impermeables en los cálculos?",
+   "reverso": "Se consideran parte del volumen sólido, porque no intercambian humedad.",
+   "fuente": [
+    {
+     "doc": "24",
+     "pag": 6,
+     "impresa": "2/8"
+    },
+    {
+     "doc": "X06",
+     "pag": 4,
+     "pregunta": "Pregunta 11"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-10",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "formula",
+   "frente": "Densidad y gravedad específica aparente",
+   "reverso": "δs = Ps / Vs (solo la porción impermeable de las partículas)\nGs = δs / δw = Ps / (Vs·δw)",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 5
+    },
+    {
+     "doc": "19",
+     "pag": 63
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-11",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "formula",
+   "frente": "Densidad y gravedad específica bruta seca",
+   "reverso": "δBS = Ps / VB (masa seca al horno entre el volumen de las partículas, con poros permeables e impermeables y sin los vacíos entre partículas)\nGBS = δBS / δw = Ps / (VB·δw)",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 6
+    },
+    {
+     "doc": "19",
+     "pag": 64
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-12",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "formula",
+   "frente": "Densidad y gravedad específica saturada superficie seca",
+   "reverso": "δBSS = Psss / VB\nGBSS = δBSS / δw = Psss / (VB·δw)",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 7
+    },
+    {
+     "doc": "13",
+     "pag": 10
+    },
+    {
+     "doc": "19",
+     "pag": 65
+    }
+   ],
+   "origen": "teoria",
+   "verificar": "La diapositiva 13, pág. 7, escribe la fórmula como δs = Psss/VB, pero el texto de la misma diapositiva y el formulario usan δBSS."
+  },
+  {
+   "id": "t3-3C-13",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "formula",
+   "frente": "Absorción",
+   "reverso": "D = PWD / Ps × 100\n(PWD: peso del agua de absorción; Ps: peso seco)",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-14",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "formula",
+   "frente": "Relaciones entre gravedades específicas (formulario del curso)",
+   "reverso": "Gs = GBS / (1 − D·GBS)\nGBSS = GBS (1 + D)",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-15",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "concepto",
+   "frente": "Peso unitario (densidad masiva)",
+   "reverso": "Es la masa de una unidad de volumen de agregado, contando las partículas y los vacíos entre ellas: δb = Ps / Vm. Se determina suelto o varillado (ASTM C29). El varillado es más homogéneo porque la muestra se compacta.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 99
+    },
+    {
+     "doc": "24",
+     "pag": 11,
+     "impresa": "2/13"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-16",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "dato",
+   "frente": "Contenido usual de vacíos",
+   "reverso": "Agregado grueso: 30 % a 45 %. Agregado fino: 40 % a 50 %. Los vacíos aumentan con la angularidad y disminuyen con una mejor granulometría. Afectan la demanda de pasta.",
+   "fuente": [
+    {
+     "doc": "02",
+     "pag": 2,
+     "impresa": "114"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-17",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "formula",
+   "frente": "Porosidad, razón de vacíos y saturación",
+   "reverso": "n = Vv / Vm\ne = Vv / Vs\nn = e / (1 + e)\nS = Vw / Vv",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 10
+    },
+    {
+     "doc": "24",
+     "pag": 12,
+     "impresa": "2/14"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-18",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "formula",
+   "frente": "Volumen de concreto",
+   "reverso": "Vc = Vs cemento + VB arena + VB piedra + Vw diseño + Vaire\nLos agregados entran con su volumen bruto (con GBS) y el cemento con su volumen seco (sólido).",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 9
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-19",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "dato",
+   "frente": "Gravedad específica bruta seca de un agregado de peso normal",
+   "reverso": "Entre 2,4 y 2,8, según la presentación del profe y los exámenes del curso.",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 9
+    },
+    {
+     "doc": "X01",
+     "pag": 8,
+     "pregunta": "respuesta corta 9"
+    }
+   ],
+   "origen": "teoria",
+   "verificar": "Las fuentes no coinciden: el manual (19, pág. 63) dice 2,4–3,0, Navas (24, pág. 2/8) dice 2,5–2,8 y la PCA (pág. 114) dice 2,4–2,9."
+  },
+  {
+   "id": "t3-3C-20",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "concepto",
+   "frente": "¿Para qué se usa la gravedad específica del agregado?",
+   "reverso": "Para calcular el volumen que ocupa el agregado en el diseño de mezclas por volumen absoluto. Normalmente no se usa como medida de calidad.",
+   "fuente": [
+    {
+     "doc": "02",
+     "pag": 2,
+     "impresa": "114"
+    },
+    {
+     "doc": "19",
+     "pag": 63
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3C-21",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "dato",
+   "frente": "Volumen masivo de un saco de cemento de uso general",
+   "reverso": "Aproximadamente 0,035 m³. Ese es el volumen masivo, no el volumen efectivo (sólido).",
+   "fuente": [
+    {
+     "doc": "X01",
+     "pag": 6,
+     "pregunta": "F/V 12"
+    },
+    {
+     "doc": "X06",
+     "pag": 2,
+     "pregunta": "Pregunta 6"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-01",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "concepto",
+   "frente": "Granulometría (análisis granulométrico)",
+   "reverso": "Es la distribución porcentual en masa de los tamaños de partícula de un agregado. Se obtiene pasando una muestra seca por mallas en orden decreciente de abertura (ASTM C136).",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 47
+    },
+    {
+     "doc": "16",
+     "pag": 1,
+     "impresa": "2/17"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-02",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "concepto",
+   "frente": "¿Por qué importa la granulometría?",
+   "reverso": "Define cuánta pasta se necesita para lograr trabajabilidad, resistencia y durabilidad, y afecta la contracción. Un agregado bien graduado reduce los vacíos y, con eso, la pasta y el costo.",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 1,
+     "impresa": "2/17"
+    },
+    {
+     "doc": "11",
+     "pag": 2,
+     "impresa": "107"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-03",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "clasificacion",
+   "frente": "Tipos de curva granulométrica",
+   "reverso": "Bien gradada: curva suave y continua.\nUniforme: casi vertical (un solo tamaño).\nAbierta: parte central vertical con extremos extendidos.\nFraccionada o discontinua: con un tramo horizontal porque faltan tamaños.",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 2,
+     "impresa": "2/18"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-04",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "concepto",
+   "frente": "Agregado fino y agregado grueso",
+   "reverso": "Fino: pasa la malla No. 4 (4,75 mm) y queda retenido en la No. 200 (75 µm). Grueso: queda retenido en la malla No. 4.",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 2,
+     "impresa": "2/18"
+    },
+    {
+     "doc": "19",
+     "pag": 6
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-05",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "dato",
+   "frente": "Límites ASTM C33 para el agregado fino (% pasando)",
+   "reverso": "9,5 mm: 100\nNo. 4: 95–100\nNo. 8: 80–100\nNo. 16: 50–85\nNo. 30: 25–60\nNo. 50: 5–30\nNo. 100: 0–10\nAdemás: no más de 45 % retenido entre dos mallas consecutivas.",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 3,
+     "impresa": "2/19"
+    },
+    {
+     "doc": "11",
+     "pag": 3,
+     "impresa": "108"
+    },
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-06",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "concepto",
+   "frente": "Tamaño máximo y tamaño máximo nominal",
+   "reverso": "Tamaño máximo: la malla más pequeña por la que pasa el 100 % del material. Tamaño máximo nominal: el mayor tamaño de malla donde queda retenido material, respetando un retenido máximo permisible.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 9
+    },
+    {
+     "doc": "19",
+     "pag": 50
+    }
+   ],
+   "origen": "teoria",
+   "verificar": "Otras fuentes lo dicen distinto. Navas (16, pág. 2/21): la mayor abertura por la que pasa el 85–95 %. PCA (pág. 111): el menor tamiz por el que pasa la mayor parte, pudiendo retener del 5 al 15 %."
+  },
+  {
+   "id": "t3-3D-07",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "dato",
+   "frente": "Límites del tamaño máximo según el elemento",
+   "reverso": "No debe exceder un quinto de la dimensión menor del elemento, un tercio del espesor de la losa ni tres cuartos de la separación libre entre barras de refuerzo.",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 5,
+     "impresa": "2/21"
+    },
+    {
+     "doc": "11",
+     "pag": 7,
+     "impresa": "112"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-08",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "formula",
+   "frente": "Módulo de finura (MF)",
+   "reverso": "MF = Σ % retenidos acumulados en las mallas No. 4, 8, 16, 30, 50 y 100 / 100\nA mayor MF, más grueso el agregado.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 48
+    },
+    {
+     "doc": "19",
+     "pag": 55
+    },
+    {
+     "doc": "16",
+     "pag": 6,
+     "impresa": "2/22"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-09",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "dato",
+   "frente": "Rango aceptable del módulo de finura de la arena",
+   "reverso": "Mayor que 2,3 y menor que 3,1. Además, no debe variar más de 0,2 respecto del valor típico de la fuente.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 48
+    },
+    {
+     "doc": "16",
+     "pag": 6,
+     "impresa": "2/22"
+    },
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-10",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "clasificacion",
+   "frente": "Clasificación de la arena por módulo de finura",
+   "reverso": "< 2,0 muy fina · 2,0–2,3 fina · 2,3–2,6 medio fina · 2,6–2,9 media · 2,9–3,2 medio gruesa · 3,2–3,5 gruesa · > 3,5 muy gruesa",
+   "fuente": [
+    {
+     "doc": "22",
+     "pag": 1
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-11",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "concepto",
+   "frente": "Limitación del módulo de finura",
+   "reverso": "Granulometrías muy diferentes pueden dar el mismo MF, así que no sirve para comparar agregados distintos. Solo indica qué tan gruesa o fina es la arena, no su calidad.",
+   "fuente": [
+    {
+     "doc": "16",
+     "pag": 6,
+     "impresa": "2/22"
+    },
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
+    },
+    {
+     "doc": "X01",
+     "pag": 6,
+     "pregunta": "F/V 7"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-12",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "concepto",
+   "frente": "Si la curva no cumple la ASTM C33, ¿cómo se corrige?",
+   "reverso": "Por masa retenida, con un factor, con una fórmula matemática o combinando agregados.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 55
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3D-13",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "concepto",
+   "frente": "Granulometría discontinua",
+   "reverso": "Se omiten a propósito algunos tamaños de partícula. Se usa en concreto arquitectónico con agregado expuesto y también en concreto estructural normal.",
+   "fuente": [
+    {
+     "doc": "11",
+     "pag": 7,
+     "impresa": "112"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-01",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "proceso",
+   "frente": "ASTM D75 · Muestreo de agregados en campo: pasos",
+   "reverso": "1. Obtener una muestra representativa: el muestreo es tan importante como el ensayo; si la muestra no es representativa, los resultados no son confiables.\n2. Fuente de descarga continua: unidades elegidas al azar (ASTM D3665), al menos 3 porciones de toda la sección del flujo; nunca de la descarga inicial ni final.\n3. Banda transportadora: detenerla, insertar 2 plantillas, sacar todo el material entre ellas y recoger los finos con escobilla.\n4. Pila: evitar muestrear pilas y unidades de transporte; si es necesario, hacer un plan de muestreo. Con cargador: remezclar, dividir en 4 cuadrantes y no muestrear a menos de 0,3 m de los bordes. Sin maquinaria: tercios superior, medio e inferior, con tablilla. Arena: tubo muestreador, al menos 5 inserciones, a 1 m de altura como mínimo.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 6
+    },
+    {
+     "doc": "19",
+     "pag": 8
+    },
+    {
+     "doc": "19",
+     "pag": 9
+    },
+    {
+     "doc": "19",
+     "pag": 10
+    },
+    {
+     "doc": "19",
+     "pag": 11
+    },
+    {
+     "doc": "19",
+     "pag": 12
+    },
+    {
+     "doc": "19",
+     "pag": 14
+    },
+    {
+     "doc": "19",
+     "pag": 15
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/d75.jpg",
+    "alt": "Muestreo: cargador remezclando la pila, división del área en cuadrantes A-B-C-D, tablilla horizontal sobre el punto de muestreo y plantilla para bases.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 11
+     },
+     {
+      "doc": "19",
+      "pag": 12
+     },
+     {
+      "doc": "19",
+      "pag": 14
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-02",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "equipo",
+   "frente": "ASTM D75 · Muestreo de agregados en campo: equipo",
+   "reverso": "Balanza móvil (no requiere precisión), termómetro-higrómetro, pala, sacos, plantillas, brocha, tubo muestreador (unos 30 mm de diámetro, 2 m de largo y punta cortada a 45°) y tablones o tablilla.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 6
+    },
+    {
+     "doc": "19",
+     "pag": 8
+    },
+    {
+     "doc": "19",
+     "pag": 9
+    },
+    {
+     "doc": "19",
+     "pag": 10
+    },
+    {
+     "doc": "19",
+     "pag": 11
+    },
+    {
+     "doc": "19",
+     "pag": 12
+    },
+    {
+     "doc": "19",
+     "pag": 14
+    },
+    {
+     "doc": "19",
+     "pag": 15
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/d75.jpg",
+    "alt": "Muestreo: cargador remezclando la pila, división del área en cuadrantes A-B-C-D, tablilla horizontal sobre el punto de muestreo y plantilla para bases.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 11
+     },
+     {
+      "doc": "19",
+      "pag": 12
+     },
+     {
+      "doc": "19",
+      "pag": 14
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-03",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "parametros",
+   "frente": "ASTM D75 · Muestreo de agregados en campo: parámetros clave",
+   "reverso": "Masa mínima de muestra de campo según el tamaño máximo nominal: 37,5 mm → 75 kg; 25 mm → 50 kg; 19 mm → 25 kg; 12,7 mm → 15 kg; 9,5 mm → 10 kg; arena → 10 kg. Si es mezcla de grueso y fino, la del grueso más 10 kg.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 6
+    },
+    {
+     "doc": "19",
+     "pag": 8
+    },
+    {
+     "doc": "19",
+     "pag": 9
+    },
+    {
+     "doc": "19",
+     "pag": 10
+    },
+    {
+     "doc": "19",
+     "pag": 11
+    },
+    {
+     "doc": "19",
+     "pag": 12
+    },
+    {
+     "doc": "19",
+     "pag": 14
+    },
+    {
+     "doc": "19",
+     "pag": 15
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-04",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "criterio",
+   "frente": "ASTM D75 · Muestreo de agregados en campo: resultado y criterio",
+   "reverso": "La norma no da un resultado numérico: se reporta la información de la bitácora y la masa obtenida al gramo más cercano. Las muestras van en sacos identificados para evitar pérdidas y contaminación.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 6
+    },
+    {
+     "doc": "19",
+     "pag": 8
+    },
+    {
+     "doc": "19",
+     "pag": 9
+    },
+    {
+     "doc": "19",
+     "pag": 10
+    },
+    {
+     "doc": "19",
+     "pag": 11
+    },
+    {
+     "doc": "19",
+     "pag": 12
+    },
+    {
+     "doc": "19",
+     "pag": 14
+    },
+    {
+     "doc": "19",
+     "pag": 15
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-05",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "proceso",
+   "frente": "ASTM C702 · Reducción de muestras a tamaño de ensayo: pasos",
+   "reverso": "1. Revisar el tipo de agregado y su humedad para elegir el método.\n2. Método A, separador mecánico: distribuir la muestra en la tolva y vaciarla con flujo libre; quedarse con una mitad y repetir hasta llegar a la masa necesaria.\n3. Método B, cuarteo: en una superficie rígida y nivelada, mezclar al menos 3 veces, apilar en cono, aplanar hasta un diámetro de 4 a 8 veces el espesor, dividir en 4 y retirar 2 cuartos opuestos.\n4. Método C, apilamiento miniatura (solo arena húmeda): igual que el cono aplanado, pero se toman al menos 5 incrementos en lugares al azar.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 23
+    },
+    {
+     "doc": "19",
+     "pag": 24
+    },
+    {
+     "doc": "19",
+     "pag": 25
+    },
+    {
+     "doc": "19",
+     "pag": 27
+    },
+    {
+     "doc": "19",
+     "pag": 28
+    },
+    {
+     "doc": "19",
+     "pag": 29
+    },
+    {
+     "doc": "19",
+     "pag": 30
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c702.jpg",
+    "alt": "Reducción: separador mecánico de canales, y cuarteo (apilar en cono, dividir en cuartos y retirar dos cuartos opuestos).",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 25
+     },
+     {
+      "doc": "19",
+      "pag": 29
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-06",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "equipo",
+   "frente": "ASTM C702 · Reducción de muestras a tamaño de ensayo: equipo",
+   "reverso": "Separador mecánico con número par de canales (al menos 8 para grueso y 12 para fino; en arena seca, canales de 12,5 a 20 mm), pala o cucharón, brocha, balanza y termómetro.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 23
+    },
+    {
+     "doc": "19",
+     "pag": 24
+    },
+    {
+     "doc": "19",
+     "pag": 25
+    },
+    {
+     "doc": "19",
+     "pag": 27
+    },
+    {
+     "doc": "19",
+     "pag": 28
+    },
+    {
+     "doc": "19",
+     "pag": 29
+    },
+    {
+     "doc": "19",
+     "pag": 30
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c702.jpg",
+    "alt": "Reducción: separador mecánico de canales, y cuarteo (apilar en cono, dividir en cuartos y retirar dos cuartos opuestos).",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 25
+     },
+     {
+      "doc": "19",
+      "pag": 29
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-07",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "parametros",
+   "frente": "ASTM C702 · Reducción de muestras a tamaño de ensayo: parámetros clave",
+   "reverso": "Grueso o mezcla: método A (preferido) o B; el C no se permite. Arena más seca que SSS: método A. Arena con agua libre: método B o C. El ancho del canal debe ser al menos 50 % mayor que la partícula más grande.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 23
+    },
+    {
+     "doc": "19",
+     "pag": 24
+    },
+    {
+     "doc": "19",
+     "pag": 25
+    },
+    {
+     "doc": "19",
+     "pag": 27
+    },
+    {
+     "doc": "19",
+     "pag": 28
+    },
+    {
+     "doc": "19",
+     "pag": 29
+    },
+    {
+     "doc": "19",
+     "pag": 30
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-08",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "criterio",
+   "frente": "ASTM C702 · Reducción de muestras a tamaño de ensayo: resultado y criterio",
+   "reverso": "Se reporta la masa de cada reducción al gramo más cercano. Si una o dos partículas grandes pueden sesgar la interpretación, se ensaya la muestra completa.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 23
+    },
+    {
+     "doc": "19",
+     "pag": 24
+    },
+    {
+     "doc": "19",
+     "pag": 25
+    },
+    {
+     "doc": "19",
+     "pag": 27
+    },
+    {
+     "doc": "19",
+     "pag": 28
+    },
+    {
+     "doc": "19",
+     "pag": 29
+    },
+    {
+     "doc": "19",
+     "pag": 30
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-09",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "proceso",
+   "frente": "ASTM C117 · Material más fino que 75 µm (No. 200) por lavado: pasos",
+   "reverso": "1. Secar el espécimen a masa constante a 110 ± 5 °C y pesar.\n2. Cubrirlo con agua (procedimiento A) o con agua y agente humectante (B) y agitar para poner en suspensión los finos.\n3. Verter el agua de lavado sobre las mallas anidadas (la No. 16 arriba y la No. 200 abajo), evitando decantar partículas gruesas. Repetir hasta que el agua salga clara.\n4. Retornar a la muestra el material retenido en las mallas, secar a masa constante y pesar.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 36
+    },
+    {
+     "doc": "19",
+     "pag": 38
+    },
+    {
+     "doc": "19",
+     "pag": 39
+    },
+    {
+     "doc": "19",
+     "pag": 40
+    },
+    {
+     "doc": "19",
+     "pag": 41
+    },
+    {
+     "doc": "19",
+     "pag": 42
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c117.jpg",
+    "alt": "Lavado: cubrir con agua, agitar, verter el agua sobre las mallas anidadas y retornar el material retenido.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 40
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-10",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "equipo",
+   "frente": "ASTM C117 · Material más fino que 75 µm (No. 200) por lavado: equipo",
+   "reverso": "Balanza legible a 0,1 g, mallas No. 16 (1,18 mm) y No. 200 (0,075 mm), contenedor, horno de 110 ± 5 °C y agente humectante opcional.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 36
+    },
+    {
+     "doc": "19",
+     "pag": 38
+    },
+    {
+     "doc": "19",
+     "pag": 39
+    },
+    {
+     "doc": "19",
+     "pag": 40
+    },
+    {
+     "doc": "19",
+     "pag": 41
+    },
+    {
+     "doc": "19",
+     "pag": 42
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c117.jpg",
+    "alt": "Lavado: cubrir con agua, agitar, verter el agua sobre las mallas anidadas y retornar el material retenido.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 40
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-11",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "parametros",
+   "frente": "ASTM C117 · Material más fino que 75 µm (No. 200) por lavado: parámetros clave",
+   "reverso": "Se usa el procedimiento A salvo que la especificación pida otro. Masa mínima si la muestra es solo para la C117: 300 g para arena (4,75 mm o menos), 1000 g hasta 9,5 mm, 2500 g hasta 19 mm y 5000 g para 37,5 mm o más.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 36
+    },
+    {
+     "doc": "19",
+     "pag": 38
+    },
+    {
+     "doc": "19",
+     "pag": 39
+    },
+    {
+     "doc": "19",
+     "pag": 40
+    },
+    {
+     "doc": "19",
+     "pag": 41
+    },
+    {
+     "doc": "19",
+     "pag": 42
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-12",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "criterio",
+   "frente": "ASTM C117 · Material más fino que 75 µm (No. 200) por lavado: resultado y criterio",
+   "reverso": "L (%) = (Minicial − Mfinal) / Minicial × 100. Se reporta al 0,1 % si es menor que 10 %. Si se pierde material al decantar, el ensayo se desecha. Se hace antes de la granulometría (C136).",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 36
+    },
+    {
+     "doc": "19",
+     "pag": 38
+    },
+    {
+     "doc": "19",
+     "pag": 39
+    },
+    {
+     "doc": "19",
+     "pag": 40
+    },
+    {
+     "doc": "19",
+     "pag": 41
+    },
+    {
+     "doc": "19",
+     "pag": 42
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-13",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "proceso",
+   "frente": "ASTM C136 · Análisis granulométrico: pasos",
+   "reverso": "1. Si hace falta conocer los finos, hacer primero la C117; lavar, secar a 110 ± 5 °C y pesar.\n2. Anidar las mallas de mayor a menor abertura con tapa y charola, y colocar la muestra en la malla superior.\n3. Agitar a mano o con agitador mecánico, máximo 10 minutos (más tiempo degrada el material).\n4. Suficiencia de tamizado: unos 150 golpes por minuto, girando la malla 1/6 de vuelta cada 25 golpes, hasta que pase menos del 1 % de lo retenido. Pesar lo retenido en cada malla.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 47
+    },
+    {
+     "doc": "19",
+     "pag": 48
+    },
+    {
+     "doc": "19",
+     "pag": 49
+    },
+    {
+     "doc": "19",
+     "pag": 50
+    },
+    {
+     "doc": "19",
+     "pag": 51
+    },
+    {
+     "doc": "19",
+     "pag": 52
+    },
+    {
+     "doc": "19",
+     "pag": 53
+    },
+    {
+     "doc": "19",
+     "pag": 54
+    },
+    {
+     "doc": "19",
+     "pag": 55
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c136.jpg",
+    "alt": "Granulometría: juego de mallas, colocación de la muestra, agitador mecánico y suficiencia de tamizado manual.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 49
+     },
+     {
+      "doc": "19",
+      "pag": 51
+     },
+     {
+      "doc": "19",
+      "pag": 52
+     },
+     {
+      "doc": "19",
+      "pag": 53
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-14",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "equipo",
+   "frente": "ASTM C136 · Análisis granulométrico: equipo",
+   "reverso": "Mallas según ASTM E11, agitador mecánico, balanza (0,1 g para arena; 0,5 g para grueso), horno de 110 ± 5 °C, recipientes, brocha y cepillo de bronce.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 47
+    },
+    {
+     "doc": "19",
+     "pag": 48
+    },
+    {
+     "doc": "19",
+     "pag": 49
+    },
+    {
+     "doc": "19",
+     "pag": 50
+    },
+    {
+     "doc": "19",
+     "pag": 51
+    },
+    {
+     "doc": "19",
+     "pag": 52
+    },
+    {
+     "doc": "19",
+     "pag": 53
+    },
+    {
+     "doc": "19",
+     "pag": 54
+    },
+    {
+     "doc": "19",
+     "pag": 55
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c136.jpg",
+    "alt": "Granulometría: juego de mallas, colocación de la muestra, agitador mecánico y suficiencia de tamizado manual.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 49
+     },
+     {
+      "doc": "19",
+      "pag": 51
+     },
+     {
+      "doc": "19",
+      "pag": 52
+     },
+     {
+      "doc": "19",
+      "pag": 53
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-15",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "parametros",
+   "frente": "ASTM C136 · Análisis granulométrico: parámetros clave",
+   "reverso": "Masa mínima: arena 300 g; grueso según el tamaño máximo nominal (37,5 mm → 15 kg; 25 mm → 10 kg; 19 mm → 5 kg; 12,7 mm → 2 kg; 9,5 mm → 1 kg). Sobrecarga: en mallas menores que la No. 4, máximo 7 kg/m² (unos 200 g en malla de 203 mm).",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 47
+    },
+    {
+     "doc": "19",
+     "pag": 48
+    },
+    {
+     "doc": "19",
+     "pag": 49
+    },
+    {
+     "doc": "19",
+     "pag": 50
+    },
+    {
+     "doc": "19",
+     "pag": 51
+    },
+    {
+     "doc": "19",
+     "pag": 52
+    },
+    {
+     "doc": "19",
+     "pag": 53
+    },
+    {
+     "doc": "19",
+     "pag": 54
+    },
+    {
+     "doc": "19",
+     "pag": 55
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-16",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "criterio",
+   "frente": "ASTM C136 · Análisis granulométrico: resultado y criterio",
+   "reverso": "Si la masa total después de tamizar difiere en más de 0,3 % de la inicial, el resultado no sirve para aceptación. Se calculan el % retenido, el % retenido acumulado, el % pasando y el MF (al 0,01), y se grafica la curva contra los límites de la C33.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 47
+    },
+    {
+     "doc": "19",
+     "pag": 48
+    },
+    {
+     "doc": "19",
+     "pag": 49
+    },
+    {
+     "doc": "19",
+     "pag": 50
+    },
+    {
+     "doc": "19",
+     "pag": 51
+    },
+    {
+     "doc": "19",
+     "pag": 52
+    },
+    {
+     "doc": "19",
+     "pag": 53
+    },
+    {
+     "doc": "19",
+     "pag": 54
+    },
+    {
+     "doc": "19",
+     "pag": 55
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-17",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "proceso",
+   "frente": "ASTM C127 · Gravedad específica y absorción del agregado grueso: pasos",
+   "reverso": "1. Desechar lo que pasa la malla No. 4 y lavar; secar a 110 ± 5 °C.\n2. Sumergir en agua 24 ± 4 h.\n3. Pesar sumergido en la canasta (agua del tanque a 23 ± 2 °C, removiendo el aire atrapado).\n4. Secar la superficie con el paño hasta quitar el brillo (condición SSS) y pesar Msss. Luego secar al horno a masa constante y pesar Mseca.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "19",
+     "pag": 67
+    },
+    {
+     "doc": "19",
+     "pag": 68
+    },
+    {
+     "doc": "19",
+     "pag": 69
+    },
+    {
+     "doc": "19",
+     "pag": 70
+    },
+    {
+     "doc": "19",
+     "pag": 71
+    },
+    {
+     "doc": "19",
+     "pag": 72
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c127.jpg",
+    "alt": "Grueso: canasta de alambre, inmersión 24 h, secado superficial con paño (SSS) y pesaje sumergido en el tanque.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 68
+     },
+     {
+      "doc": "19",
+      "pag": 70
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-18",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "equipo",
+   "frente": "ASTM C127 · Gravedad específica y absorción del agregado grueso: equipo",
+   "reverso": "Canasta de alambre No. 6 (3,35 mm) de 4 a 7 L, balanza con sistema de suspensión, tanque de agua, malla No. 4, horno de 110 ± 5 °C, paño absorbente y termómetro.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "19",
+     "pag": 67
+    },
+    {
+     "doc": "19",
+     "pag": 68
+    },
+    {
+     "doc": "19",
+     "pag": 69
+    },
+    {
+     "doc": "19",
+     "pag": 70
+    },
+    {
+     "doc": "19",
+     "pag": 71
+    },
+    {
+     "doc": "19",
+     "pag": 72
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c127.jpg",
+    "alt": "Grueso: canasta de alambre, inmersión 24 h, secado superficial con paño (SSS) y pesaje sumergido en el tanque.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 68
+     },
+     {
+      "doc": "19",
+      "pag": 70
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-19",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "parametros",
+   "frente": "ASTM C127 · Gravedad específica y absorción del agregado grueso: parámetros clave",
+   "reverso": "Masa mínima según el tamaño máximo nominal: 37,5 mm → 5 kg; 25 mm → 4 kg; 19 mm → 3 kg; 12,7 mm o menos → 2 kg. No se recomienda para agregados livianos (δBS < 1120 kg/m³), porque sus poros no se llenan en 24 h.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "19",
+     "pag": 67
+    },
+    {
+     "doc": "19",
+     "pag": 68
+    },
+    {
+     "doc": "19",
+     "pag": 69
+    },
+    {
+     "doc": "19",
+     "pag": 70
+    },
+    {
+     "doc": "19",
+     "pag": 71
+    },
+    {
+     "doc": "19",
+     "pag": 72
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-20",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "criterio",
+   "frente": "ASTM C127 · Gravedad específica y absorción del agregado grueso: resultado y criterio",
+   "reverso": "GBS = Mseca / (Msss − Msum)\nGBSS = Msss / (Msss − Msum)\nGs = Mseca / (Mseca − Msum)\nD = (Msss − Mseca) / Mseca × 100\nSe reporta la gravedad específica al 0,01 y la absorción al 0,1 %.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "19",
+     "pag": 67
+    },
+    {
+     "doc": "19",
+     "pag": 68
+    },
+    {
+     "doc": "19",
+     "pag": 69
+    },
+    {
+     "doc": "19",
+     "pag": 70
+    },
+    {
+     "doc": "19",
+     "pag": 71
+    },
+    {
+     "doc": "19",
+     "pag": 72
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-21",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "proceso",
+   "frente": "ASTM C128 · Gravedad específica y absorción del agregado fino: pasos",
+   "reverso": "1. Usar el material que pasa la malla No. 4, secarlo y sumergirlo en agua 24 ± 4 h.\n2. Decantar y secar en bandeja con aire caliente, removiendo, hasta acercarse a la condición SSS.\n3. Prueba del cono: llenar el molde, apisonar con 25 caídas libres del mazo desde unos 5 mm y levantar el molde. Si hay un leve desplome, la arena está en SSS.\n4. Meter 500 ± 10 g de arena SSS en el picnómetro, llenar al 90 %, eliminar las burbujas (15 a 20 min), enrasar a 23 ± 2 °C y pesar. Luego secar la arena al horno y pesar Mseca.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 81
+    },
+    {
+     "doc": "19",
+     "pag": 82
+    },
+    {
+     "doc": "19",
+     "pag": 83
+    },
+    {
+     "doc": "19",
+     "pag": 84
+    },
+    {
+     "doc": "19",
+     "pag": 85
+    },
+    {
+     "doc": "19",
+     "pag": 86
+    },
+    {
+     "doc": "19",
+     "pag": 87
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c128.jpg",
+    "alt": "Fino: molde cónico y mazo, apisonado con 25 caídas, leve desplome del cono (SSS) y picnómetro.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 81
+     },
+     {
+      "doc": "19",
+      "pag": 84
+     },
+     {
+      "doc": "19",
+      "pag": 85
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-22",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "equipo",
+   "frente": "ASTM C128 · Gravedad específica y absorción del agregado fino: equipo",
+   "reverso": "Picnómetro (método gravimétrico), molde cónico (40 mm arriba, 90 mm abajo y 75 mm de alto) con mazo de 340 g, soplador de aire caliente, horno de 110 ± 5 °C, balanza de 0,1 g, agua destilada y termómetro.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 81
+    },
+    {
+     "doc": "19",
+     "pag": 82
+    },
+    {
+     "doc": "19",
+     "pag": 83
+    },
+    {
+     "doc": "19",
+     "pag": 84
+    },
+    {
+     "doc": "19",
+     "pag": 85
+    },
+    {
+     "doc": "19",
+     "pag": 86
+    },
+    {
+     "doc": "19",
+     "pag": 87
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c128.jpg",
+    "alt": "Fino: molde cónico y mazo, apisonado con 25 caídas, leve desplome del cono (SSS) y picnómetro.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 81
+     },
+     {
+      "doc": "19",
+      "pag": 84
+     },
+     {
+      "doc": "19",
+      "pag": 85
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-23",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "parametros",
+   "frente": "ASTM C128 · Gravedad específica y absorción del agregado fino: parámetros clave",
+   "reverso": "Si el cono no se desploma, todavía hay humedad libre; si se desmorona de golpe, la arena ya está más seca que SSS. Muestra de 4 kg reducida a 1 kg aproximadamente.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 81
+    },
+    {
+     "doc": "19",
+     "pag": 82
+    },
+    {
+     "doc": "19",
+     "pag": 83
+    },
+    {
+     "doc": "19",
+     "pag": 84
+    },
+    {
+     "doc": "19",
+     "pag": 85
+    },
+    {
+     "doc": "19",
+     "pag": 86
+    },
+    {
+     "doc": "19",
+     "pag": 87
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-24",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "criterio",
+   "frente": "ASTM C128 · Gravedad específica y absorción del agregado fino: resultado y criterio",
+   "reverso": "GBS = Mseca / (Mcal + Msss − Msum)\nD = (Msss − Mseca) / Mseca × 100\n(Mcal: picnómetro con agua hasta la marca; Msum: picnómetro con agua y muestra)",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 81
+    },
+    {
+     "doc": "19",
+     "pag": 82
+    },
+    {
+     "doc": "19",
+     "pag": 83
+    },
+    {
+     "doc": "19",
+     "pag": 84
+    },
+    {
+     "doc": "19",
+     "pag": 85
+    },
+    {
+     "doc": "19",
+     "pag": 86
+    },
+    {
+     "doc": "19",
+     "pag": 87
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-25",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "proceso",
+   "frente": "ASTM C40 · Impurezas orgánicas en el agregado fino: pasos",
+   "reverso": "1. Reducir la arena a unos 450 g.\n2. Llenar la botella hasta el nivel de 130 ml con arena.\n3. Añadir solución de hidróxido de sodio al 3 % hasta un volumen total de 200 ml.\n4. Tapar, agitar con vigor y dejar reposar 24 h; comparar el color del líquido con los vidrios de color estándar.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 92
+    },
+    {
+     "doc": "19",
+     "pag": 93
+    },
+    {
+     "doc": "19",
+     "pag": 94
+    },
+    {
+     "doc": "19",
+     "pag": 95
+    },
+    {
+     "doc": "19",
+     "pag": 98
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c40.jpg",
+    "alt": "Impurezas orgánicas: botella graduada, nivel de 130 ml de arena, vidrios de color estándar y comparación del color.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 93
+     },
+     {
+      "doc": "19",
+      "pag": 94
+     },
+     {
+      "doc": "19",
+      "pag": 95
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-26",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "equipo",
+   "frente": "ASTM C40 · Impurezas orgánicas en el agregado fino: equipo",
+   "reverso": "Botella de vidrio transparente graduada (240 a 470 ml), vidrio de color estándar con 5 colores (escala Gardner), solución de NaOH al 3 % y balanza.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 92
+    },
+    {
+     "doc": "19",
+     "pag": 93
+    },
+    {
+     "doc": "19",
+     "pag": 94
+    },
+    {
+     "doc": "19",
+     "pag": 95
+    },
+    {
+     "doc": "19",
+     "pag": 98
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c40.jpg",
+    "alt": "Impurezas orgánicas: botella graduada, nivel de 130 ml de arena, vidrios de color estándar y comparación del color.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 93
+     },
+     {
+      "doc": "19",
+      "pag": 94
+     },
+     {
+      "doc": "19",
+      "pag": 95
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-27",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "parametros",
+   "frente": "ASTM C40 · Impurezas orgánicas en el agregado fino: parámetros clave",
+   "reverso": "Solución: 3 partes en masa de NaOH en 97 partes de agua. Es una prueba cualitativa: no lleva cálculos ni precisión.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 92
+    },
+    {
+     "doc": "19",
+     "pag": 93
+    },
+    {
+     "doc": "19",
+     "pag": 94
+    },
+    {
+     "doc": "19",
+     "pag": 95
+    },
+    {
+     "doc": "19",
+     "pag": 98
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-28",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "criterio",
+   "frente": "ASTM C40 · Impurezas orgánicas en el agregado fino: resultado y criterio",
+   "reverso": "Si el líquido es más oscuro que el vidrio estándar No. 3 (Gardner No. 11), la arena posiblemente tiene impurezas orgánicas perjudiciales. Se recomienda entonces el ensayo de resistencia en mortero (ASTM C87) antes de aprobarla.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 92
+    },
+    {
+     "doc": "19",
+     "pag": 93
+    },
+    {
+     "doc": "19",
+     "pag": 94
+    },
+    {
+     "doc": "19",
+     "pag": 95
+    },
+    {
+     "doc": "19",
+     "pag": 98
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-29",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "proceso",
+   "frente": "ASTM C29 · Peso unitario (densidad masiva) y vacíos: pasos",
+   "reverso": "1. Secar la muestra a 110 ± 5 °C y mezclarla sin segregar.\n2. Suelto: llenar el molde con cucharón hasta desbordar, descargando a no más de 50 mm sobre el borde, enrasar y pesar.\n3. Varillado: llenar en 3 capas y dar 25 golpes de varilla por capa, sin tocar el fondo en la primera ni penetrar la capa anterior; enrasar y pesar.\n4. Hacer 3 determinaciones de cada procedimiento y promediar.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 99
+    },
+    {
+     "doc": "19",
+     "pag": 102
+    },
+    {
+     "doc": "19",
+     "pag": 103
+    },
+    {
+     "doc": "19",
+     "pag": 104
+    },
+    {
+     "doc": "19",
+     "pag": 105
+    },
+    {
+     "doc": "19",
+     "pag": 106
+    },
+    {
+     "doc": "19",
+     "pag": 107
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c29.jpg",
+    "alt": "Peso unitario: llenado suelto con cucharón, varillado por capas, enrasado y pesaje del molde.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 104
+     },
+     {
+      "doc": "19",
+      "pag": 105
+     },
+     {
+      "doc": "19",
+      "pag": 106
+     }
+    ]
+   },
+   "verificar": "El 'Resumen' de la sección del C29 en el manual (pág. 111) describe por error el ensayo de impurezas orgánicas (C40); no se usa."
+  },
+  {
+   "id": "t3-3E-30",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "equipo",
+   "frente": "ASTM C29 · Peso unitario (densidad masiva) y vacíos: equipo",
+   "reverso": "Varilla de acero de 16 mm de diámetro y unos 600 mm de largo, molde cilíndrico rígido de metal (altura entre 80 % y 150 % del diámetro), regla enrasadora, cucharón, malla No. 4, horno y balanza.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 99
+    },
+    {
+     "doc": "19",
+     "pag": 102
+    },
+    {
+     "doc": "19",
+     "pag": 103
+    },
+    {
+     "doc": "19",
+     "pag": 104
+    },
+    {
+     "doc": "19",
+     "pag": 105
+    },
+    {
+     "doc": "19",
+     "pag": 106
+    },
+    {
+     "doc": "19",
+     "pag": 107
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c29.jpg",
+    "alt": "Peso unitario: llenado suelto con cucharón, varillado por capas, enrasado y pesaje del molde.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 104
+     },
+     {
+      "doc": "19",
+      "pag": 105
+     },
+     {
+      "doc": "19",
+      "pag": 106
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-31",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "parametros",
+   "frente": "ASTM C29 · Peso unitario (densidad masiva) y vacíos: parámetros clave",
+   "reverso": "Para agregados de tamaño máximo nominal de hasta 37,5 mm. Masa de muestra entre 125 % y 200 % de la necesaria para llenar el molde. Masas al 0,05 kg.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 99
+    },
+    {
+     "doc": "19",
+     "pag": 102
+    },
+    {
+     "doc": "19",
+     "pag": 103
+    },
+    {
+     "doc": "19",
+     "pag": 104
+    },
+    {
+     "doc": "19",
+     "pag": 105
+    },
+    {
+     "doc": "19",
+     "pag": 106
+    },
+    {
+     "doc": "19",
+     "pag": 107
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-32",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "criterio",
+   "frente": "ASTM C29 · Peso unitario (densidad masiva) y vacíos: resultado y criterio",
+   "reverso": "δb = (Mmolde+muestra − Mmolde) / Vmolde\n% vacíos = (GBS·W − δb) / (GBS·W) × 100, con W = 997,5 kg/m³\nSe reporta δb al 10 kg/m³ y los vacíos al 1 %.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 99
+    },
+    {
+     "doc": "19",
+     "pag": 102
+    },
+    {
+     "doc": "19",
+     "pag": 103
+    },
+    {
+     "doc": "19",
+     "pag": 104
+    },
+    {
+     "doc": "19",
+     "pag": 105
+    },
+    {
+     "doc": "19",
+     "pag": 106
+    },
+    {
+     "doc": "19",
+     "pag": 107
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-33",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "proceso",
+   "frente": "ASTM C131 · Abrasión en la Máquina de Los Ángeles: pasos",
+   "reverso": "1. Lavar, secar a 110 ± 5 °C, separar por tamaños y recombinar según la graduación A, B, C o D (5000 g en total).\n2. Escoger la carga abrasiva (esferas de acero) según la graduación y pesar Minicial.\n3. Hacer girar la máquina a 30–33 rev/min durante 500 revoluciones.\n4. Tamizar en la malla No. 12, lavar lo retenido, secar a masa constante y pesar Mfinal.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 112
+    },
+    {
+     "doc": "19",
+     "pag": 113
+    },
+    {
+     "doc": "19",
+     "pag": 114
+    },
+    {
+     "doc": "19",
+     "pag": 115
+    },
+    {
+     "doc": "19",
+     "pag": 116
+    },
+    {
+     "doc": "19",
+     "pag": 117
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c131.jpg",
+    "alt": "Abrasión: Máquina de Los Ángeles, carga del agregado y de las esferas, y tamizado posterior.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 114
+     },
+     {
+      "doc": "19",
+      "pag": 116
+     }
+    ]
+   },
+   "verificar": "El manual llama a la malla No. 12 de 1,17 mm en la lista de equipo (pág. 113) y de 1,70 mm en el procedimiento (pág. 116)."
+  },
+  {
+   "id": "t3-3E-34",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "equipo",
+   "frente": "ASTM C131 · Abrasión en la Máquina de Los Ángeles: equipo",
+   "reverso": "Máquina de Los Ángeles (cilindro de acero de 711 mm de diámetro interno y 508 mm de largo, con repisa interna), esferas de acero de unos 46,8 mm (390 a 445 g), malla No. 12, horno y balanza.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 112
+    },
+    {
+     "doc": "19",
+     "pag": 113
+    },
+    {
+     "doc": "19",
+     "pag": 114
+    },
+    {
+     "doc": "19",
+     "pag": 115
+    },
+    {
+     "doc": "19",
+     "pag": 116
+    },
+    {
+     "doc": "19",
+     "pag": 117
+    }
+   ],
+   "origen": "teoria",
+   "figura": {
+    "src": "img/ensayos/c131.jpg",
+    "alt": "Abrasión: Máquina de Los Ángeles, carga del agregado y de las esferas, y tamizado posterior.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 114
+     },
+     {
+      "doc": "19",
+      "pag": 116
+     }
+    ]
+   }
+  },
+  {
+   "id": "t3-3E-35",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "parametros",
+   "frente": "ASTM C131 · Abrasión en la Máquina de Los Ángeles: parámetros clave",
+   "reverso": "Carga abrasiva: graduación A → 12 esferas; B → 11; C → 8; D → 6. Se aplica a agregado grueso menor que 37,5 mm. Mide la degradación por abrasión o desgaste, impacto y trituración.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 112
+    },
+    {
+     "doc": "19",
+     "pag": 113
+    },
+    {
+     "doc": "19",
+     "pag": 114
+    },
+    {
+     "doc": "19",
+     "pag": 115
+    },
+    {
+     "doc": "19",
+     "pag": 116
+    },
+    {
+     "doc": "19",
+     "pag": 117
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-36",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "criterio",
+   "frente": "ASTM C131 · Abrasión en la Máquina de Los Ángeles: resultado y criterio",
+   "reverso": "A (%) = (Minicial − Mfinal) / Minicial × 100, reportado al 1 %. Las especificaciones fijan una pérdida máxima. Ejemplo del manual: 21,6 % → se reporta 22 %.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 112
+    },
+    {
+     "doc": "19",
+     "pag": 113
+    },
+    {
+     "doc": "19",
+     "pag": 114
+    },
+    {
+     "doc": "19",
+     "pag": 115
+    },
+    {
+     "doc": "19",
+     "pag": 116
+    },
+    {
+     "doc": "19",
+     "pag": 117
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-37",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "concepto",
+   "frente": "¿Por qué se usa el método A (separador) para arena seca y el B o C para arena con agua libre?",
+   "reverso": "El separador necesita que el material fluya libre por los canales; si la arena tiene humedad libre, se pega. En el cuarteo o el apilamiento miniatura, la arena húmeda conserva la forma del cono. Si se quiere usar B o C con arena seca, primero se humedece.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 27
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-38",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "concepto",
+   "frente": "¿En qué se diferencia la densidad que da el C127/C128 de la que da el C29?",
+   "reverso": "El C127 y el C128 dan la densidad de las partículas, sin los vacíos entre ellas. El C29 da la densidad masiva, que sí incluye los vacíos entre partículas.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "19",
+     "pag": 80
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
+   "id": "t3-3E-39",
+   "tema": 3,
+   "subtema": "3E",
+   "tipo": "concepto",
+   "frente": "Humedad libre a partir del C566",
+   "reverso": "El ASTM C566 da el contenido total de humedad por secado. La humedad libre es esa humedad total menos la absorción.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    }
+   ],
+   "origen": "teoria"
+  }
+ ]
+}

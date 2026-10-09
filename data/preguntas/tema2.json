@@ -1,0 +1,2197 @@
+{
+ "tema": 2,
+ "titulo": "Agua para concreto",
+ "preguntas": [
+  {
+   "id": "p2-2A-x01",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Las sales de carbonato pueden acelerar o retardar el fraguado del concreto",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso. El carbonato de sodio puede causar fraguado RÁPIDO; los que pueden acelerar o retardar son los bicarbonatos.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    },
+    {
+     "doc": "05",
+     "pag": 3
+    }
+   ],
+   "examen": {
+    "doc": "08",
+    "pag": 1,
+    "pregunta": "1.1, caso 2",
+    "periodo": "I-2026"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Las sales de carbonato pueden causar fraguado rápido. Las de bicarbonato acelerar o retardar el fraguado"
+  },
+  {
+   "id": "p2-2A-x02",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Al tener agua dudosa para fabricar concreto se puede utilizar la norma ASTM C109. Debe cumplir al menos un 90% de la resistencia a la compresión con el agua patrón al ensayar a los 14 días.",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso por la edad: la comparación del 90 % se hace a los 7 días, no a los 14.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 9
+    },
+    {
+     "doc": "01",
+     "pag": 2,
+     "impresa": "96"
+    }
+   ],
+   "examen": {
+    "doc": "08",
+    "pag": 1,
+    "pregunta": "1.1, caso 4",
+    "periodo": "I-2026"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Se realiza la prueba a los 7 días"
+  },
+  {
+   "id": "p2-2A-x03",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique la principal consecuencia de un exceso de sulfatos en el agua de una mezcla de concreto",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Las diapositivas del curso dicen que los sulfatos pueden provocar reacciones expansivas, y la PCA habla de reacciones expansivas y ataque de sulfatos. Por decisión de Adrián (contradicción C3), se usa «expansiones».",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 3
+    },
+    {
+     "doc": "05",
+     "pag": 5
+    },
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    }
+   ],
+   "examen": {
+    "doc": "08",
+    "pag": 2,
+    "pregunta": "1.2, pregunta 1",
+    "periodo": "I-2026"
+   },
+   "respuesta_modelo": "Reacciones expansivas (expansiones) y eflorescencias",
+   "puntos_clave": [
+    "reacciones expansivas",
+    "eflorescencias"
+   ],
+   "verificar": "La clave del examen dice «Eflorescencias y contracciones»; las diapositivas dicen expansiones (contradicción C3)."
+  },
+  {
+   "id": "p2-2B-x01",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Explique la causa de la exudación del concreto",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Coincide con la definición de Navas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    }
+   ],
+   "examen": {
+    "doc": "08",
+    "pag": 2,
+    "pregunta": "1.2, pregunta 2",
+    "periodo": "I-2026"
+   },
+   "respuesta_modelo": "Las partículas sólidas de la mezcla (cemento y agregados) se asientan, no pueden retener el agua y esta sube a la superficie",
+   "puntos_clave": [
+    "las partículas sólidas se asientan",
+    "no retienen el agua",
+    "el agua sube a la superficie"
+   ]
+  },
+  {
+   "id": "p2-2B-x02",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Explique que es la contracción autógena del concreto",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Coincide con Navas: la clave es que el consumo de agua es INTERNO, por la hidratación.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "examen": {
+    "doc": "08",
+    "pag": 2,
+    "pregunta": "1.2, pregunta 3",
+    "periodo": "I-2026"
+   },
+   "respuesta_modelo": "Reducción de volumen causada por el consumo interno de agua en la hidratación del concreto",
+   "puntos_clave": [
+    "reducción de volumen",
+    "consumo interno de agua",
+    "hidratación del cemento"
+   ]
+  },
+  {
+   "id": "p2-2A-x04",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Que indica principalmente el término de dureza del agua",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "La dureza se caracteriza por el contenido de calcio y magnesio, expresado como CaCO₃.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 3
+    }
+   ],
+   "examen": {
+    "doc": "08",
+    "pag": 2,
+    "pregunta": "1.2, pregunta 4",
+    "periodo": "I-2026"
+   },
+   "respuesta_modelo": "Indica el contenido de calcio y magnesio",
+   "puntos_clave": [
+    "calcio",
+    "magnesio"
+   ]
+  },
+  {
+   "id": "p2-2A-x05",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál es el límite máximo de sulfatos como SO₄ en el agua de mezcla? (1 puntos)",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Correcta la B: 3 000 ppm. La A (600 ppm) es el límite de los álcalis, la C (5 000 ppm) el de los sólidos totales en la presentación y la D (10 000 ppm) el del sulfato de sodio en la tabla de tolerancias.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 8
+    },
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "examen": {
+    "doc": "X02",
+    "pag": 1,
+    "pregunta": "1, pregunta 1",
+    "periodo": "I-2025"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "600 ppm"
+    },
+    {
+     "id": "b",
+     "texto": "3 000 ppm"
+    },
+    {
+     "id": "c",
+     "texto": "5 000 ppm"
+    },
+    {
+     "id": "d",
+     "texto": "10 000 ppm"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2B-x03",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué efecto produce el sangrado excesivo? (1 puntos)",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Correcta la B: el flujo de agua no uniforme provoca cambios de volumen diferenciales y fisuras, y además crea una capa superficial débil. La A está al revés (disminuye la adherencia). La C y la D no son efectos del sangrado.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    }
+   ],
+   "examen": {
+    "doc": "X02",
+    "pag": 1,
+    "pregunta": "1, pregunta 2",
+    "periodo": "I-2025"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Aumento de adherencia"
+    },
+    {
+     "id": "b",
+     "texto": "Grietas en superficie"
+    },
+    {
+     "id": "c",
+     "texto": "Reducción de tensión"
+    },
+    {
+     "id": "d",
+     "texto": "Homogeneidad mejorada"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2B-x04",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué práctica reduce la contracción plástica según la presentación? (1 puntos)",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Correcta la B. La A empeora la contracción plástica, que aumenta con la a/c. Retardar el curado (D) también la empeora, porque el curado debe empezar rápido. La C no aparece como medida.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 3,
+     "impresa": "4/8"
+    }
+   ],
+   "examen": {
+    "doc": "X02",
+    "pag": 1,
+    "pregunta": "1, pregunta 3",
+    "periodo": "I-2025"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Aumentar la relación a/c"
+    },
+    {
+     "id": "b",
+     "texto": "Humedecer formaletas y agregados"
+    },
+    {
+     "id": "c",
+     "texto": "Usar aditivo homogenizante"
+    },
+    {
+     "id": "d",
+     "texto": "Retardar el curado"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2B-x05",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué medida reduce la exudación? (1 puntos)",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Correcta la B. Aumentar la a/c (A) la empeora. El agua destilada (C) y reducir el curado (D) no son medidas para la exudación.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "examen": {
+    "doc": "X02",
+    "pag": 1,
+    "pregunta": "1, pregunta 4",
+    "periodo": "I-2025"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Aumentar relación agua/cemento"
+    },
+    {
+     "id": "b",
+     "texto": "Usar cementos más finos"
+    },
+    {
+     "id": "c",
+     "texto": "Emplear agua destilada"
+    },
+    {
+     "id": "d",
+     "texto": "Reducir el curado"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2A-x06",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Si va a diseñar una planta de tratamiento para aguas residuales, debe revisar los límites permitidos de sales de Cloruro",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso según la clave: la sal que hay que revisar son los sulfatos.",
+   "fuente": [],
+   "examen": {
+    "doc": "X02",
+    "pag": 2,
+    "pregunta": "2, caso 2",
+    "periodo": "I-2025"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Sulfatos",
+   "verificar": "Las fuentes de teoría no tratan las plantas de tratamiento; la respuesta se apoya solo en la clave. La PCA (pág. 97) asocia los sulfatos con el ataque al concreto expuesto a suelos o aguas con sulfatos."
+  },
+  {
+   "id": "p2-2B-x06",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "verdadero_falso",
+   "enunciado": "El documento que permite obtener la tasa de evaporación es la ASTM C 305",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso: es el ACI 305 (Guía para concretar en clima caluroso). La ASTM C305 es la práctica de mezclado mecánico de pastas y morteros.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 8
+    }
+   ],
+   "examen": {
+    "doc": "X02",
+    "pag": 2,
+    "pregunta": "2, caso 3",
+    "periodo": "I-2025"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "ACI 305"
+  },
+  {
+   "id": "p2-2B-x07",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "¿Qué es la contracción autógena?",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Coincide con Navas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 1",
+    "periodo": "I-2025"
+   },
+   "respuesta_modelo": "Reducción de volumen de la mezcla de concreto por consumo interno de agua",
+   "puntos_clave": [
+    "reducción de volumen",
+    "consumo interno de agua"
+   ]
+  },
+  {
+   "id": "p2-2B-x08",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Defina el térmico de exudación en el concreto",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Coincide con Navas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    }
+   ],
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 3",
+    "periodo": "I-2025"
+   },
+   "respuesta_modelo": "Las partículas sólidas de la mezcla (cemento, agregados) se asientan y son incapaces de retener toda el agua",
+   "puntos_clave": [
+    "las partículas sólidas se asientan",
+    "no retienen el agua",
+    "el agua sube a la superficie"
+   ]
+  },
+  {
+   "id": "p2-2A-x07",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique el método estándar para analizar químicamente el agua",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "La ASTM C114 es el método de análisis químico que la presentación asocia a los cloruros y los sulfatos. La C1602 fija los requisitos, pero no define métodos analíticos.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 7
+    },
+    {
+     "doc": "05",
+     "pag": 8
+    }
+   ],
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 5",
+    "periodo": "I-2025"
+   },
+   "respuesta_modelo": "ASTM C114",
+   "puntos_clave": [
+    "ASTM C114"
+   ]
+  },
+  {
+   "id": "p2-2B-x09",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "¿Qué es la contracción plástica?",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Coincide con Navas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "examen": {
+    "doc": "X02",
+    "pag": 3,
+    "pregunta": "3, pregunta 10",
+    "periodo": "I-2025"
+   },
+   "respuesta_modelo": "Es el cambio de volumen que ocurre mientras el concreto está en estado plástico debido a perdida de agua por influencias externas.",
+   "puntos_clave": [
+    "cambio de volumen",
+    "estado plástico",
+    "pérdida de agua por influencias externas"
+   ]
+  },
+  {
+   "id": "p2-2A-x08",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Complete (sólo puede indicar una respuesta en cada cuadro, si indica más de una la respuesta es inválida): Sal contenida en el agua que puede provocar reacciones expansivas (Valor: 1 punto)",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "La clave acepta calcio, magnesio o sulfatos. Las sales de calcio y magnesio producen eflorescencias y expansiones, y los sulfatos reacciones expansivas.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 3
+    },
+    {
+     "doc": "05",
+     "pag": 5
+    }
+   ],
+   "examen": {
+    "doc": "X04",
+    "pag": 1,
+    "pregunta": "Parte 1a, cuadro de sales",
+    "periodo": "II-2022"
+   },
+   "respuesta_modelo": "Calcio, magnesio o sulfatos",
+   "puntos_clave": [
+    "Calcio, magnesio o sulfatos"
+   ]
+  },
+  {
+   "id": "p2-2A-x09",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Complete (sólo puede indicar una respuesta en cada cuadro, si indica más de una la respuesta es inválida): Sal contenida en el agua que puede acelerar o retardar el fraguado (Valor: 1 punto)",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Los bicarbonatos pueden acelerar o retardar el fraguado; el carbonato de sodio causa fraguado rápido.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 3
+    },
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    }
+   ],
+   "examen": {
+    "doc": "X04",
+    "pag": 1,
+    "pregunta": "Parte 1a, cuadro de sales",
+    "periodo": "II-2022"
+   },
+   "respuesta_modelo": "Bicarbonatos",
+   "puntos_clave": [
+    "Bicarbonatos"
+   ]
+  },
+  {
+   "id": "p2-2A-x10",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Complete (sólo puede indicar una respuesta en cada cuadro, si indica más de una la respuesta es inválida): Sal contenida en el agua que puede provocar corrosión (Valor: 1 punto)",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Los cloruros atacan la capa protectora del acero.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 3
+    },
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    }
+   ],
+   "examen": {
+    "doc": "X04",
+    "pag": 1,
+    "pregunta": "Parte 1a, cuadro de sales",
+    "periodo": "II-2022"
+   },
+   "respuesta_modelo": "Cloruros",
+   "puntos_clave": [
+    "Cloruros"
+   ]
+  },
+  {
+   "id": "p2-2B-x10",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Contracciones del concreto fresco. Uno de los tipos es: contracción plástica. Indique por qué se provoca y una forma de evitarla.",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "La clave del examen coincide con Navas: la contracción plástica se debe a la pérdida de agua por influencias externas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    },
+    {
+     "doc": "20",
+     "pag": 3,
+     "impresa": "4/8"
+    },
+    {
+     "doc": "06",
+     "pag": 8
+    }
+   ],
+   "examen": {
+    "doc": "X04",
+    "pag": 1,
+    "pregunta": "Parte 1a, cuadro de contracciones",
+    "periodo": "II-2022"
+   },
+   "respuesta_modelo": "Se provoca por la tasa de evaporación del agua de la superficie o por la pérdida de agua por factores externos (exudación, formaletas). Se evita controlando la temperatura y la humedad ambiental, controlando la temperatura del concreto o con vibración.",
+   "puntos_clave": [
+    "evaporación o pérdida de agua por factores externos",
+    "control de la temperatura y la humedad (curado y protección)"
+   ]
+  },
+  {
+   "id": "p2-2B-x11",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Contracciones del concreto fresco. Uno de los tipos es: contracción autógena. Indique por qué se provoca y una forma de evitarla.",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "La clave acepta «consumo interno de agua al hidratar» y, para evitarla, el curado o reducir la a/c. Navas indica que lo más importante es curar pronto y al menos 7 días.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "examen": {
+    "doc": "X04",
+    "pag": 1,
+    "pregunta": "Parte 1a, cuadro de contracciones",
+    "periodo": "II-2022"
+   },
+   "respuesta_modelo": "Se provoca por el consumo interno de agua al hidratarse el cemento (también se acepta: esfuerzos de tensión por restricciones). Se evita con curado (iniciarlo pronto y mantenerlo al menos 7 días), reduciendo la a/c o con vibración.",
+   "puntos_clave": [
+    "consumo interno de agua en la hidratación",
+    "curado temprano"
+   ]
+  },
+  {
+   "id": "p2-2B-x12",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "verdadero_falso",
+   "enunciado": "En poca cantidad, el sangrado puede ayudar a controlar las fisuras por contracción plástica",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Verdadero, lo dice Navas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    }
+   ],
+   "examen": {
+    "doc": "X04",
+    "pag": 2,
+    "pregunta": "Parte 1a, F/V 1",
+    "periodo": "II-2022"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p2-2B-x13",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Las superficies verticales como paredes y muros suelen ser los más propensos a sufrir contracción plástica",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso: las más propensas son las superficies horizontales (pavimentos y losas), por la rápida evaporación.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "examen": {
+    "doc": "X04",
+    "pag": 2,
+    "pregunta": "Parte 1a, F/V 2",
+    "periodo": "II-2022"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Las superficies horizontales, como pavimentos y losas suelen ser los más propensos a sufrir contracción plástica"
+  },
+  {
+   "id": "p2-2A-x11",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Si Usted en su proyecto no dispone de agua potable, puede usar agua del sitio en primera instancia, si previamente:",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Correcta la B: el agua dudosa se puede usar si se verifica que cumple los criterios (C1602 y los ensayos de resistencia y fraguado). La A y la D son tratamientos que no garantizan el cumplimiento, y la C no usa el agua del sitio.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 1,
+     "impresa": "95"
+    },
+    {
+     "doc": "05",
+     "pag": 9
+    }
+   ],
+   "examen": {
+    "doc": "X06",
+    "pag": 1,
+    "pregunta": "Pregunta 3",
+    "periodo": "I-2020"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Filtra el agua en depósitos arenosos"
+    },
+    {
+     "id": "b",
+     "texto": "Evalúa la calidad de agua y compara con los parámetros de aceptación de las normas"
+    },
+    {
+     "id": "c",
+     "texto": "Transporta el agua potable del lugar mas cercano"
+    },
+    {
+     "id": "d",
+     "texto": "Coloca cloro en el agua"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2B-x14",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Refierase a la relación agua / Cemento en el concreto y por qué su importancia",
+   "origen": "examen",
+   "clave": "documental",
+   "explicacion": "El comentario del profesor en la clave fue «Ley de Abrams, es por masa». La respuesta modelo se armó con las fuentes del curso.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 11
+    },
+    {
+     "doc": "06",
+     "pag": 10
+    },
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    },
+    {
+     "doc": "20",
+     "pag": 3,
+     "impresa": "4/8"
+    },
+    {
+     "doc": "X01",
+     "pag": 4,
+     "pregunta": "relacione a/c"
+    }
+   ],
+   "examen": {
+    "doc": "X06",
+    "pag": 2,
+    "pregunta": "Pregunta 4",
+    "periodo": "I-2020"
+   },
+   "respuesta_modelo": "Es la relación POR MASA entre el agua y el cemento. A mayor a/c, la mezcla es más fluida y trabajable, pero menos resistente (ley de Abrams), con más exudación y más contracción plástica. En el concreto convencional va de 0,40 a 0,80.",
+   "puntos_clave": [
+    "relación por masa",
+    "mayor a/c → menos resistencia (ley de Abrams)",
+    "mayor a/c → más trabajabilidad",
+    "rango usual de 0,40 a 0,80"
+   ],
+   "verificar": "La ley de Abrams solo aparece en el comentario de la clave; las fuentes de teoría no la explican."
+  },
+  {
+   "id": "p2-2B-x15",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Si se emplea, por ejemplo, un saco de cemento por batida, la relación agua cemento es el valor obtenido al dividir la cantidad de agua que se dosifica por saco de cemento entre la cantidad de cemento en masa",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso. La relación a/c usa el agua de DISEÑO; solo coincide con el agua dosificada si los agregados están en condición SSS.",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 9
+    }
+   ],
+   "examen": {
+    "doc": "X06",
+    "pag": 3,
+    "pregunta": "Pregunta 7",
+    "periodo": "I-2020"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Es el agua de diseño. Solo sería posible si los agregados están en condición SSS, porque Wdiseño=Wdosificación."
+  },
+  {
+   "id": "p2-2A-x12",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "El agua cumple tres funciones en el concreto hidráulico, a saber:",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Correcta la A según la clave. La B, la C y la E nombran solo una parte de la función química, y la D no aplica.",
+   "fuente": [],
+   "examen": {
+    "doc": "X07",
+    "pag": 1,
+    "pregunta": "captura 1, pregunta 2",
+    "periodo": "I-2020"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Creación de enlaces, proveer trabajabilidad a la mezcla y disponer de los espacios para los productos de las reacciones"
+    },
+    {
+     "id": "b",
+     "texto": "Suplir los enlaces químicos"
+    },
+    {
+     "id": "c",
+     "texto": "Junto con el cemento reacciona y crea los enlaces"
+    },
+    {
+     "id": "d",
+     "texto": "Ninguna de las anteriores"
+    },
+    {
+     "id": "e",
+     "texto": "Reaccionar con el cemento y los aditivos"
+    }
+   ],
+   "correcta": "a",
+   "verificar": "Las fuentes de teoría no enumeran las tres funciones del agua; la respuesta se apoya solo en la clave."
+  },
+  {
+   "id": "p2-2A-x13",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Evitar aguas acidas con un pH menor a:",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "La clave da 3.5. La PCA dice pH menor que 3,0, y la tabla del curso da un rango aceptable de 6,5 a 8,5.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 4,
+     "impresa": "98"
+    },
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 3,
+    "pregunta": "pregunta 4",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "9"
+    },
+    {
+     "id": "b",
+     "texto": "6"
+    },
+    {
+     "id": "c",
+     "texto": "3.5"
+    },
+    {
+     "id": "d",
+     "texto": "4.5"
+    }
+   ],
+   "correcta": "c",
+   "verificar": "Contradicción C15: el cuestionario dice 3,5, la PCA 3,0 y la tabla del curso 6,5–8,5."
+  },
+  {
+   "id": "p2-2A-x14",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "La sal que principalmente perjudica la corrosion del acero de refuerzo es:",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Correcta la B: los cloruros atacan la capa protectora del acero. Las sales de magnesio (A) causan eflorescencias y expansiones, y las de sodio y potasio (C, D) afectan el fraguado.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    },
+    {
+     "doc": "05",
+     "pag": 3
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 3,
+    "pregunta": "pregunta 5",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Sal de magnesio"
+    },
+    {
+     "id": "b",
+     "texto": "Sal de cloruro"
+    },
+    {
+     "id": "c",
+     "texto": "Sal de potasio"
+    },
+    {
+     "id": "d",
+     "texto": "Sal de sodio"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2A-x15",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Elija las opciones correctas\nEl exceso de impurezas en el agua de mezcla puede:",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Correctas la B, la C y la E: las impurezas afectan el fraguado, causan eflorescencias y corrosión. La A y la D son efectos contrarios a los reales.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 2,
+     "impresa": "96"
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 4,
+    "pregunta": "pregunta 1",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Aumentar la resistencia del concreto"
+    },
+    {
+     "id": "b",
+     "texto": "Disminuir o adelantar el tiempo de fraguado"
+    },
+    {
+     "id": "c",
+     "texto": "Causar eflorescencias"
+    },
+    {
+     "id": "d",
+     "texto": "Aumentar la durabilidad"
+    },
+    {
+     "id": "e",
+     "texto": "Puede causar corrosión en elementos reforzados"
+    }
+   ],
+   "correcta": [
+    "b",
+    "c",
+    "e"
+   ]
+  },
+  {
+   "id": "p2-2A-x16",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Responda verdadero o falso\nUna alta alcalinidad corresponde a un valor de pH de 9.5",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso según la clave: la alta alcalinidad del concreto corresponde a un pH superior a 12,5.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    },
+    {
+     "doc": "05",
+     "pag": 3
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 4,
+    "pregunta": "pregunta 2",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Superior a 12,5",
+   "verificar": "En la captura, el «9,5» del enunciado está tachado a mano y reemplazado por «mayor a 12,5»; se usa el enunciado original."
+  },
+  {
+   "id": "p2-2B-x16",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "La relación agua/cemento necesaria para hidratar las partículas de cemento es de\nSolo coloque los números separados por coma. Ejemplo: 0,99",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Respuesta de la clave del cuestionario.",
+   "fuente": [],
+   "examen": {
+    "doc": "X01",
+    "pag": 4,
+    "pregunta": "pregunta 3",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "0,22",
+   "puntos_clave": [
+    "0,22"
+   ],
+   "verificar": "El valor 0,22 no aparece en las fuentes de teoría; solo en esta clave."
+  },
+  {
+   "id": "p2-2B-x17",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Relacione los siguientes conceptos: (1) Rango aceptable de relación a/c para un concreto convencional con buena trabajabilidad; (2) Rango aceptable de relación a/c para un concreto convencional; (3) a/c. Opciones: 0,40 a 0,80 · 0,55 a 0,60 · Corresponde a una relación por masa",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Respuesta de la clave del cuestionario (pregunta de emparejamiento).",
+   "fuente": [],
+   "examen": {
+    "doc": "X01",
+    "pag": 4,
+    "pregunta": "pregunta 4",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "(1) 0,55 a 0,60; (2) 0,40 a 0,80; (3) corresponde a una relación por masa",
+   "puntos_clave": [
+    "buena trabajabilidad: 0,55 a 0,60",
+    "convencional: 0,40 a 0,80",
+    "relación por masa"
+   ],
+   "verificar": "Los rangos solo aparecen en esta clave."
+  },
+  {
+   "id": "p2-2B-x18",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Relaciones conceptos: (1) Aumento de a/c en la superficie; (2) Poca cantidad de exudación; (3) Debido a agua atrapada en el acero de refuerzo. Opciones: Causa superficie débil de fácil desgaste · Puede colaborar al control de grietas por contracción plástica · Disminución de la adherencia",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Coincide con los efectos del sangrado que describe Navas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 4,
+    "pregunta": "pregunta 5",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "(1) Causa superficie débil de fácil desgaste; (2) puede colaborar al control de grietas por contracción plástica; (3) disminución de la adherencia",
+   "puntos_clave": [
+    "a/c en la superficie → capa débil",
+    "poca exudación → ayuda con la contracción plástica",
+    "agua bajo el acero → menos adherencia"
+   ]
+  },
+  {
+   "id": "p2-2B-x19",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "El asentamiento de un concreto convencional se realiza por medio de la norma ASTM C ___ Indique el número. Ejemplo: 35",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "ASTM C143 (cono de asentamiento).",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 9
+    },
+    {
+     "doc": "06",
+     "pag": 10
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 5,
+    "pregunta": "pregunta 1",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "143",
+   "puntos_clave": [
+    "C143"
+   ]
+  },
+  {
+   "id": "p2-2B-x20",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "El asentamiento de un concreto autocompactante se realiza por medio de la norma ASTM C ___ Indique el número. Ejemplo: 35",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "ASTM C1611 (flujo de asentamiento del concreto autocompactante).",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 9
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 5,
+    "pregunta": "pregunta 2",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "1611",
+   "puntos_clave": [
+    "C1611"
+   ]
+  },
+  {
+   "id": "p2-2B-x21",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Considere las siguientes condiciones para una losa de pavimento.\nTemperatura del aire: 25°C\nHumedad relativa: 60%\nTemperatura del concreto: 32°C\nVelocidad del viento: 32km/hr\nSegún el ingeniero a cargo, no hay problemas de contracción plástica.\nIndique si es verdadero o falso",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso según la clave. Con el ábaco del ACI 305 se entra con la temperatura del aire y la humedad relativa, luego con la temperatura del concreto y después con la velocidad del viento; esas condiciones dan una tasa de evaporación alta, con riesgo de contracción plástica.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 8
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 5,
+    "pregunta": "pregunta 5",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "verificar": "La lectura exacta de la tasa de evaporación en el ábaco no está en la clave ni en las fuentes; se respeta el «Falso» de la clave.",
+   "figura": {
+    "src": "img/examenes/X01-p5-abaco.jpg",
+    "alt": "Ábaco de tasa de evaporación (ACI 305) incluido en la pregunta",
+    "fuente": [
+     {
+      "doc": "X01",
+      "pag": 5
+     }
+    ]
+   }
+  },
+  {
+   "id": "p2-2B-x22",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Las grietas por asentamiento plástico aparecen sobre las barras de acero de refuerzo y cerca de elementos que restringen el movimiento",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Verdadero: la restricción al asentamiento genera esfuerzos de tensión y fisuras.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 7
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 6",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "justificacion_oficial": "Porque imponen restricción a la contracción generando fisuras"
+  },
+  {
+   "id": "p2-2B-x23",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Si se emplea, por ejemplo, un saco de cemento por batida, la relación agua cemento es el valor obtenido al dividir la cantidad de agua que se dosifica por saco de cemento entre la cantidad de cemento en masa",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso: la a/c es con el agua de diseño (igual al agua dosificada solo si los agregados están en SSS).",
+   "fuente": [
+    {
+     "doc": "13",
+     "pag": 9
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 6,
+    "pregunta": "F/V 11",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Es el agua de diseño. Solo sería posible si los agregados están en condición SSS, porque Wdiseño=Wdosificación."
+  },
+  {
+   "id": "p2-2B-x24",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "verdadero_falso",
+   "enunciado": "El sangrado en forma excesiva disminuye la relación a/c de una mezcla de concreto en su superficie",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso: la AUMENTA en la superficie, y crea una capa débil y porosa.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 7,
+    "pregunta": "a, caso 3",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Aumento de la relación w/c en la superficie: se crea una capa débil, porosa, propensa al desgaste y de poca durabilidad en la superficie"
+  },
+  {
+   "id": "p2-2B-x25",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "verdadero_falso",
+   "enunciado": "La contracción autógena es reducción de volumen causada por el consumo externo de agua durante la hidratación del cemento",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso: el consumo de agua es INTERNO.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 7,
+    "pregunta": "a, caso 4",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "La contracción autógena es reducción de volumen causada por el consumo interno de agua durante la hidratación del cemento"
+  },
+  {
+   "id": "p2-2A-x17",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "El tipo de sal que provoca mayor dificultad para eflorescencias y expansiones del concreto es:",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Las sales de calcio y magnesio producen eflorescencias y expansiones; la clave da las de magnesio.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 5
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 7,
+    "pregunta": "b, pregunta 3",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "Sales de magnesio",
+   "puntos_clave": [
+    "magnesio"
+   ]
+  },
+  {
+   "id": "p2-2A-x18",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Usted duda del tipo de agua para un proyecto. Como consultor, cual norma de laboratorio recomienda para verificar tolerancias químicas del agua",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "La ASTM C1602 es la especificación del agua de mezcla y fija los límites químicos.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 7
+    },
+    {
+     "doc": "05",
+     "pag": 8
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 7,
+    "pregunta": "b, pregunta 4",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "ASTM C 1602",
+   "puntos_clave": [
+    "ASTM C1602"
+   ]
+  },
+  {
+   "id": "p2-2A-x19",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "verdadero_falso",
+   "enunciado": "El método estándar para analizar químicamente el agua corresponde con la norma ASTM C1602",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Falso: la C1602 establece requisitos químicos y físicos, pero no define métodos analíticos; el análisis químico se hace con la ASTM C114.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 8
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "F/V 3",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "Establece requisitos químicos y físicos, pero no define métodos analíticos (corrección a mano)"
+  },
+  {
+   "id": "p2-2B-x26",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "verdadero_falso",
+   "enunciado": "La norma que se utiliza para asentamiento de concreto autocompactante es la ASTM C1611",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Verdadero.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 9
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "F/V 5",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p2-2A-x20",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "El exceso de impurezas en el agua de mezcla no sólo puede afectar la resistencia del concreto, sino también puede causar eflorescencias, manchado, corrosión del refuerzo, instabilidad del volumen y reducción de la durabilidad. Indique otra consecuencia:",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "La PCA dice que las impurezas también afectan el tiempo de fraguado.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 2,
+     "impresa": "96"
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "respuesta corta 1",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "Retardamiento del fraguado (afecta el tiempo de fraguado)",
+   "puntos_clave": [
+    "tiempo de fraguado"
+   ]
+  },
+  {
+   "id": "p2-2B-x27",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Cuando las partículas sólidas de la mezcla (cemento, agregados) se asientan y son incapaces de retener toda el agua, se produce:",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Es la definición de exudación de Navas, de la clave de 2025 y de la de 2026.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "respuesta corta 3",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "Exudación (sangrado)",
+   "puntos_clave": [
+    "exudación o sangrado"
+   ],
+   "verificar": "La corrección en rojo de este examen escribe «compactación por asentamiento» (contradicción C17)."
+  },
+  {
+   "id": "p2-2B-x28",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Para reducirla lo más importante es iniciar el proceso de curado lo antes posible y mantenerlo al menos 7 días. La definición anterior se refiere al concepto de:",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "La corrección en rojo del examen dice «contracción plástica». Sin embargo, Navas escribe esa misma frase, palabra por palabra, sobre la contracción AUTÓGENA.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "respuesta corta 4",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "Contracción plástica (según la corrección del examen); en Navas la frase corresponde a la contracción autógena",
+   "puntos_clave": [
+    "contracción (plástica según la clave; autógena según Navas)"
+   ],
+   "verificar": "Contradicción nueva C18: la corrección dice contracción plástica y Navas (4/7) dice contracción autógena. Hay que consultarlo con el profe."
+  },
+  {
+   "id": "p2-2B-x29",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique el documento que permite obtener la tasa de evaporación",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "El ábaco de tasa de evaporación es del ACI 305.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 8
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "respuesta corta 5",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "ACI 305 R-99",
+   "puntos_clave": [
+    "ACI 305"
+   ]
+  },
+  {
+   "id": "p2-2B-x30",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Aumento de la relación a/c en la superficie, agrietamiento, disminución de adherencia y resistencia son consecuencias negativas del sangrado, otra es:",
+   "origen": "examen",
+   "clave": "oficial",
+   "explicacion": "Navas también menciona el aumento de la porosidad y la capa superficial débil.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 1,
+     "impresa": "4/6"
+    }
+   ],
+   "examen": {
+    "doc": "X01",
+    "pag": 8,
+    "pregunta": "respuesta corta 8",
+    "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
+   },
+   "respuesta_modelo": "Capa débil que reduce la resistencia al desgaste y la durabilidad (también: aumento de la porosidad)",
+   "puntos_clave": [
+    "capa superficial débil",
+    "menos resistencia al desgaste y menos durabilidad",
+    "más porosidad"
+   ]
+  },
+  {
+   "id": "p2-2A-t01",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según la tabla de tolerancias del curso, ¿cuál es la concentración máxima de cloruro (como Cl⁻) en el agua para concreto PREESFORZADO?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A: 500 ppm. La B (1000 ppm) es para concreto húmedo o con aluminio o metales galvanizados, la C es la del cloruro de sodio y la D la del cloruro de magnesio.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "500 ppm"
+    },
+    {
+     "id": "b",
+     "texto": "1000 ppm"
+    },
+    {
+     "id": "c",
+     "texto": "20 000 ppm"
+    },
+    {
+     "id": "d",
+     "texto": "40 000 ppm"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p2-2A-t02",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "El agua de mar (hasta 35 000 ppm de sales) puede usarse en:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C. En concreto reforzado o preesforzado (A, B) no se recomienda por la corrosión. La D es falsa porque el agua de mar puede agravar la reacción álcali-agregado.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 4,
+     "impresa": "98"
+    },
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Concreto reforzado"
+    },
+    {
+     "id": "b",
+     "texto": "Concreto preesforzado"
+    },
+    {
+     "id": "c",
+     "texto": "Concreto sin refuerzo"
+    },
+    {
+     "id": "d",
+     "texto": "Concreto con agregados potencialmente reactivos"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p2-2A-t03",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "En el ensayo de aceptación de un agua dudosa, ¿qué norma se usa para el tiempo de fraguado?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: ASTM C191 (desde 1:00 antes hasta 1:30 después del control). La A es la de resistencia de cubos, la C la de sólidos en el agua y la D la del análisis químico.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 9
+    },
+    {
+     "doc": "01",
+     "pag": 2,
+     "impresa": "96"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "ASTM C109"
+    },
+    {
+     "id": "b",
+     "texto": "ASTM C191"
+    },
+    {
+     "id": "c",
+     "texto": "ASTM C1603"
+    },
+    {
+     "id": "d",
+     "texto": "ASTM C114"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2A-t04",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál es el límite de álcalis en el agua de mezcla según la presentación (ASTM C1602)?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A: 600 ppm. La B es la de sulfatos, la C la de sólidos totales y la D la del cloruro de sodio en la tabla de tolerancias.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 8
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "600 ppm"
+    },
+    {
+     "id": "b",
+     "texto": "3 000 ppm"
+    },
+    {
+     "id": "c",
+     "texto": "5 000 ppm"
+    },
+    {
+     "id": "d",
+     "texto": "20 000 ppm"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p2-2A-t05",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según la tabla de tolerancias del curso, el contenido máximo de azúcar en el agua es:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: 500 ppm (coincide con la PCA). La A es la de yodato, fosfato y borato de sodio, la B la de los bicarbonatos de calcio y magnesio y la D la de los carbonatos de sodio y potasio.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    },
+    {
+     "doc": "01",
+     "pag": 5,
+     "impresa": "99"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "100 ppm"
+    },
+    {
+     "id": "b",
+     "texto": "400 ppm"
+    },
+    {
+     "id": "c",
+     "texto": "500 ppm"
+    },
+    {
+     "id": "d",
+     "texto": "1000 ppm"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p2-2B-t01",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿En qué tipo de elemento es más probable la contracción plástica?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: en las superficies horizontales el agua se evapora rápido. Las otras opciones son superficies verticales o protegidas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Muros"
+    },
+    {
+     "id": "b",
+     "texto": "Losas y pavimentos"
+    },
+    {
+     "id": "c",
+     "texto": "Columnas"
+    },
+    {
+     "id": "d",
+     "texto": "Pilotes"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2B-t02",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "seleccion_unica",
+   "enunciado": "La contracción autógena es significativa cuando:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la D: con a/c muy bajas (menores que 0,30). En concretos normales es muy pequeña. La A, la B y la C no son las condiciones que da la fuente.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Hay viento fuerte"
+    },
+    {
+     "id": "b",
+     "texto": "La temperatura del aire es alta"
+    },
+    {
+     "id": "c",
+     "texto": "Hay mucha exudación"
+    },
+    {
+     "id": "d",
+     "texto": "La relación a/c es muy baja (< 0,30)"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p2-2B-t03",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué datos se necesitan para leer el ábaco de tasa de evaporación del ACI 305?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A: el ábaco usa la temperatura del aire, la humedad relativa, la temperatura del concreto y la velocidad del viento.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 8
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Temperatura del aire, humedad relativa, temperatura del concreto y velocidad del viento"
+    },
+    {
+     "id": "b",
+     "texto": "Relación a/c, asentamiento y tipo de cemento"
+    },
+    {
+     "id": "c",
+     "texto": "Temperatura del concreto y espesor de la losa"
+    },
+    {
+     "id": "d",
+     "texto": "Humedad relativa y tiempo de curado"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p2-2B-t04",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué norma mide la exudación (sangrado) del concreto?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: la ASTM C232. La A es la de asentamiento, la B la de flujo del autocompactante y la D la de elaboración de especímenes.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 4
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "ASTM C143"
+    },
+    {
+     "id": "b",
+     "texto": "ASTM C1611"
+    },
+    {
+     "id": "c",
+     "texto": "ASTM C232"
+    },
+    {
+     "id": "d",
+     "texto": "ASTM C192"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p2-2B-t05",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál es la PRINCIPAL forma de disminuir la exudación?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B. La A la aumenta. La C y la D no son medidas que menciona la fuente.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Aumentar la relación a/c"
+    },
+    {
+     "id": "b",
+     "texto": "Reducir la relación a/c"
+    },
+    {
+     "id": "c",
+     "texto": "Vibrar más tiempo"
+    },
+    {
+     "id": "d",
+     "texto": "Usar agregado grueso de mayor tamaño"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2B-t06",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque las medidas que reducen la contracción plástica:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correctas la A, la B y la D. La C la empeora: la contracción plástica aumenta con el contenido de pasta y la a/c.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 3,
+     "impresa": "4/8"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Humedecer formaletas y agregados"
+    },
+    {
+     "id": "b",
+     "texto": "Iniciar el curado rápidamente"
+    },
+    {
+     "id": "c",
+     "texto": "Aumentar el contenido de pasta"
+    },
+    {
+     "id": "d",
+     "texto": "Usar cobertores para reducir la evaporación"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "d"
+   ]
+  },
+  {
+   "id": "p2-2A-t06",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Explique por qué preocupan los cloruros en el agua de mezcla.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Lo dicen la PCA y la diapositiva del curso.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    },
+    {
+     "doc": "05",
+     "pag": 3
+    }
+   ],
+   "respuesta_modelo": "Porque los iones cloruro atacan la capa de óxido que protege al acero, formada por la alta alcalinidad del concreto (pH mayor que 12,5), y producen corrosión del refuerzo. Por eso los límites son más estrictos en concreto preesforzado.",
+   "puntos_clave": [
+    "atacan la capa protectora del acero",
+    "pH > 12,5",
+    "corrosión del refuerzo",
+    "límite más estricto en preesforzado"
+   ]
+  },
+  {
+   "id": "p2-2B-t07",
+   "tema": 2,
+   "subtema": "2B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Diferencie la contracción plástica de la contracción autógena.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Se resume de Navas.",
+   "fuente": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "impresa": "4/7"
+    }
+   ],
+   "respuesta_modelo": "La plástica ocurre en estado plástico por pérdida de agua por influencias externas (evaporación, exudación, formaletas) y produce fisuras superficiales. La autógena se debe al consumo interno de agua por la hidratación del cemento y es significativa con a/c muy bajas.",
+   "puntos_clave": [
+    "plástica: pérdida de agua externa",
+    "autógena: consumo interno por hidratación",
+    "plástica: fisuras superficiales",
+    "autógena: importa con a/c bajas"
+   ]
+  },
+  {
+   "id": "p2-2A-t07",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "¿Qué requisitos debe cumplir un agua no potable para aceptarse en concreto?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Tabla de la ASTM C1602 en la presentación.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 9
+    },
+    {
+     "doc": "01",
+     "pag": 2,
+     "impresa": "96"
+    }
+   ],
+   "respuesta_modelo": "La resistencia de los cubos de mortero (C109) debe ser al menos el 90 % de la del control a los 7 días, y el tiempo de fraguado (C191) debe estar entre 1:00 h antes y 1:30 h después del control. El control se hace con agua potable o destilada.",
+   "puntos_clave": [
+    "≥ 90 % de resistencia a 7 días (C109)",
+    "fraguado de 1:00 antes a 1:30 después (C191)",
+    "control con agua potable o destilada"
+   ]
+  }
+ ]
+}
