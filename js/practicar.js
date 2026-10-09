@@ -208,6 +208,7 @@
   }
 
   function render(vista) {
+    UI.recordarPaneles(vista, s);
     var html = cabecera();
     if (s.modo === "tema" && !s.cola.length) {
       vista.innerHTML = html + '<p class="vacio">No hay preguntas con ese filtro.</p>';

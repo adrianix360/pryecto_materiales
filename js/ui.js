@@ -206,6 +206,15 @@
     });
   }
 
+  // Antes de redibujar: guarda en s si los paneles (meta y filtros) están abiertos.
+  // Se lee del DOM porque el evento «toggle» llega tarde si el cambio es inmediato.
+  function recordarPaneles(vista, s) {
+    var m = vista.querySelector("details.meta");
+    var f = vista.querySelector("details.filtros:not([data-panel])");
+    if (m) s.metaAbierta = m.open;
+    if (f) s.filtrosAbiertos = f.open;
+  }
+
   // Suma al día el tiempo desde «inicio» (ms), con tope de 3 min, y un ítem.
   function registrarTiempo(inicio) {
     var seg = Math.min(180, Math.max(0, (Date.now() - inicio) / 1000));
@@ -234,13 +243,6 @@
       "</div></section>";
   }
 
-  function proximamente(nombre, texto) {
-    return '<section class="pagina proximamente" aria-labelledby="h-prox">' +
-      '<p class="proximamente__icono" aria-hidden="true">🚧</p>' +
-      '<h2 id="h-prox">' + esc(nombre) + ": próximamente</h2>" +
-      "<p>" + esc(texto) + "</p></section>";
-  }
-
   window.UI = {
     esc: esc,
     fuentes: fuentes,
@@ -251,13 +253,13 @@
     filtros: filtros,
     conectarFiltros: conectarFiltros,
     cumpleFiltro: cumpleFiltro,
-    proximamente: proximamente,
     fechaLarga: fechaLarga,
     modo: modo,
     conectarModo: conectarModo,
     barraMeta: barraMeta,
     conectarMeta: conectarMeta,
     registrarTiempo: registrarTiempo,
+    recordarPaneles: recordarPaneles,
     resumenRepaso: resumenRepaso,
     correoReportes: CORREO_REPORTES
   };

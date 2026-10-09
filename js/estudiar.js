@@ -102,6 +102,7 @@
   }
 
   function render(vista) {
+    UI.recordarPaneles(vista, s);
     if (s.modo === "tema" && !s.cola.length) {
       vista.innerHTML = cabecera() + '<p class="vacio">No hay tarjetas con ese filtro.</p>';
       conectar(vista);
