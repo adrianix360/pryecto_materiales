@@ -305,6 +305,7 @@ Los archivos están en `fuentes/examenes/`. Vienen del PDF "Teoría examen" y de
 | X13 | `Pract 1-2022 B.pdf` | **El mismo examen que X12**, en blanco y negro | 10 | Escaneado. OCR: 66 %. |
 | X14 | `I Parcial. I-2009.pdf` | Examen resuelto por un estudiante, con calificación | 10 | Escaneado (I.R.I.S.). OCR: 62 %. El manuscrito se lee con esfuerzo. |
 | X15 | `I Parcial. II-2009.pdf` | Examen resuelto por un estudiante, con calificación | 7 | Escaneado. OCR: 56 %. |
+| X16 | `I Parcial I-2026 resuelto (escaneo).pdf` | **El mismo examen que 08** (I-2026), resuelto a mano por una estudiante y corregido en rojo. Llegó como escaneo de WhatsApp el 9/10/2026 y se renombró. | 5 | Imagen, sin capa de texto. Lo leí a ojo y es legible. |
 
 **OCR:** en todo lo escaneado, el OCR solo sirve como apoyo para buscar texto; **lo manuscrito no es confiable** (47–74 %). Los datos de esta sección los saqué leyendo las páginas a ojo.
 
@@ -330,8 +331,9 @@ Los archivos están en `fuentes/examenes/`. Vienen del PDF "Teoría examen" y de
 | X12 / X13 | 2018, II ciclo (sábado 13 de octubre de 2018); profesores Muñoz y Meseguer | I examen, parte de problemas | 1 problema con 3 incisos (25 + 25 + 20 %) | 70 % | 100 min | Sí ("Solución", grupo LCM) | No |
 | X14 | 2009, I ciclo (viernes 15 de mayo de 2009); profesora Muñoz | I examen: teoría (págs. 1–2) y práctica (martes 19 de mayo de 2009, págs. 3–10) | **Teoría 35 %:** 2 preguntas de desarrollo (volumen sólido y masivo del cemento, 5 + 5 %; elección de tamaño máximo y de a/c, 15 + 10 %).<br>**Práctica 65 %:** 1 problema | 35 % + 65 % | Teoría 30 min; práctica 90 min | **No**: es la respuesta de un estudiante con la corrección del profesor | Teoría sí, como pregunta abierta sin clave oficial |
 | X15 | 2009, II ciclo (viernes 9 de octubre de 2009); profesora Muñoz | I examen | 2 problemas (60 % y 20 %) y 1 pregunta de desarrollo de teoría (20 %: por qué importa el hinchamiento en economía, resistencia y trabajabilidad) | 100 % | 2 h | **No**: respuesta de un estudiante (calificada con 95) | Teoría sí, sin clave oficial |
+| X16 | 2026, I ciclo (sábado 23 de mayo de 2026), grupo 02 | I examen, teoría (págs. 1–3, 20 min) y práctica (págs. 4–5, 2 h) | **Teoría 25 %:** las mismas 15 preguntas que 08 (1.1 cinco F/V con justificación, 1.2 cinco de respuesta corta, 1.3 cinco fotos de normas). **Práctica:** factor k (10 %) y problema de las arenas D y Z (35 %) | 70 % | Teoría 20 min; práctica 2 h | **No**: es la respuesta de una estudiante con la corrección del profesor | **No se agrega nada**: las 15 de teoría ya están (de 08). Sirve para confirmar la clave. La práctica queda fuera (regla 5). |
 
-**Conteo aproximado de preguntas de teoría que entran en el alcance:** 08 (15), X02 (23), X01 (≈ 66), X04 (≈ 15), X06 (12), X07 (10), X14 (2 desarrollos) y X15 (1 desarrollo). En total son **unas 140**, con repeticiones entre años.
+**Conteo aproximado de preguntas de teoría que entran en el alcance:** 08 (15; X16 es una copia resuelta del mismo examen y no suma), X02 (23), X01 (≈ 66), X04 (≈ 15), X06 (12), X07 (10), X14 (2 desarrollos) y X15 (1 desarrollo). En total son **unas 140**, con repeticiones entre años.
 
 ### 7.3 Problemas encontrados en el banco
 
@@ -344,7 +346,7 @@ Los archivos están en `fuentes/examenes/`. Vienen del PDF "Teoría examen" y de
 
 **Pruebas resueltas por estudiantes**
 
-5. **X14, X15 y X01 (pág. 8) traen el nombre y la firma de estudiantes.** Están en `fuentes/` (que no se sube a git), pero **ningún nombre debe pasar a la herramienta**.
+5. **X14, X15, X16 y X01 (pág. 8) traen el nombre (y en X16 también el carné) de estudiantes.** Están en `fuentes/` (que no se sube a git), pero **ningún nombre debe pasar a la herramienta**.
 
 **Contradicciones dentro de los propios exámenes**
 
@@ -365,3 +367,11 @@ Los archivos están en `fuentes/examenes/`. Vienen del PDF "Teoría examen" y de
 15. **Puntaje de I-2025:** X03 dice "Problema (50 %)" y sus incisos suman 48 %; X02 dice que la práctica vale 60 %.
 16. **X07 (fuera del alcance):** dos capturas dicen "Su respuesta es correcta" aunque la respuesta marcada no coincide con la correcta (preguntas del C₃A y del cemento para vigas pretensadas).
 17. **X06, pregunta 2** (agregados livianos poco comunes en el país): la "respuesta apropiada" es "Verdadero", pero la redacción es confusa. VERIFICAR antes de usarla.
+
+**Copia resuelta del examen 08 (X16, agregada el 9 de octubre de 2026)**
+
+18. **X16 repite el examen 08**, así que no se agregó ninguna pregunta. Comparé las 15 de teoría con las del banco (p2-2A-x01 a x04, p2-2B-x01 y x02, p3-3B-x01, p3-3C-x01 a x03 y p3-3E-x01 a x05). Las correcciones en rojo coinciden con las claves del banco, con una excepción:
+    - **Sulfatos (1.2, pregunta 1):** la corrección escribe "Eflorescencias y contracciones". Confirma que la clave del profe dice "contracciones", contra "expansiones" de la diapositiva 05 (contradicción C3). Sigue VERIFICAR; conviene preguntarlo en clase.
+    - **1.1, caso 4 (agua dudosa):** la estudiante marcó F, pero su justificación ("la C109 no es la norma") se calificó mal. Respalda la clave del banco: el error del enunciado son los 14 días; deben ser 7.
+    - **1.3, fotos a, c y e:** se marcaron mal D75, "1602" y C136. Coincide con las claves del banco (C702, C136 y C128).
+    - **Notas del corrector:** al margen de la lista de normas escribió "C29, C33, C40" y al pie "C127, C128 →". Parecen apuntes de corrección y no cambian ninguna clave.
