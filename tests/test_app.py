@@ -813,6 +813,71 @@ def lista_de_items_a_verificar_con_el_profe(nav, url):
 
 
 @prueba
+def practicar_baraja_las_opciones_y_ajusta_las_letras(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/practicar")
+    por_tema(pag)
+    pag.select_option("#pra-tema", "1")
+    barajadas = 0
+    revisadas = 0
+    for _ in range(12):
+        p = pregunta_actual(pag)
+        if p["tipo"] != "seleccion_unica":
+            pag.get_by_role("button", name="Saltar").click()
+            continue
+        letras = pag.locator(".opcion__letra").all_inner_texts()
+        assert letras == list("ABCDE"[:len(letras)]), f"letras en orden: {letras}"
+        ids = [b.get_attribute("data-opcion") for b in pag.locator("[data-opcion]").all()]
+        assert sorted(ids) == sorted(o["id"] for o in p["opciones"])
+        if ids != sorted(ids):
+            barajadas += 1
+        letra_ok = "ABCDE"[ids.index(p["correcta"])]
+        incorrecta = next(i for i in ids if i != p["correcta"])
+        pag.locator(f'[data-opcion="{incorrecta}"]').click()
+        retro = pag.locator("#retro").inner_text()
+        assert f"La correcta es la {letra_ok}." in retro, (p["id"], letra_ok, retro[:120])
+        if p["explicacion"].startswith("Correcta la "):
+            assert f"Correcta la {letra_ok}" in retro, (p["id"], letra_ok, retro[:160])
+        revisadas += 1
+        pag.get_by_role("button", name="Siguiente →").click()
+    assert revisadas >= 5, revisadas
+    assert barajadas >= 2, f"solo {barajadas} de {revisadas} salieron barajadas"
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def simulacro_conserva_el_orden_de_opciones_al_recargar(nav, url):
+    ctx, pag, errores = abrir_simulacro(nav, url, reloj=RELOJ_0)
+    pag.get_by_role("button", name="Empezar simulacro").click()
+    e = examen_guardado(pag)
+    ordenes = []
+    for i in range(6):  # las 6 de selección única van primero
+        ordenes.append([b.get_attribute("data-opcion") for b in pag.locator("[data-opcion]").all()])
+        assert ordenes[-1] == e["orden"][e["ids"][i]]
+        pag.get_by_role("button", name="Siguiente →").click()
+    assert any(o != sorted(o) for o in ordenes), "alguna sale barajada"
+    pag.locator("details.mapa summary").click()
+    pag.locator('[data-ir="0"]').click()
+    pag.reload()
+    pag.wait_for_selector("body[data-listo='1']")
+    assert [b.get_attribute("data-opcion") for b in pag.locator("[data-opcion]").all()] == ordenes[0]
+    # la revisión usa las mismas letras
+    p = pregunta_actual(pag)
+    pag.locator(f'[data-opcion="{p["correcta"]}"]').click()
+    letra = "ABCDE"[ordenes[0].index(p["correcta"])]
+    pag.locator("details.mapa summary").click()
+    pag.locator("details.mapa").get_by_role("button", name="Terminar examen").click()
+    pag.get_by_role("button", name="Sí, terminar").click()
+    expect(pag.locator("#h-res")).to_be_visible()
+    primera = pag.locator("details.revision").first
+    primera.locator("summary").click()
+    texto = primera.inner_text()
+    assert f"Tu respuesta\n{letra}. " in texto.replace("\n\n", "\n"), texto[:300]
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
 def nueva_version_reemplaza_el_cache(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url, sw=True)
     pag.evaluate("navigator.serviceWorker.ready.then(() => true)")
