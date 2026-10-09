@@ -160,6 +160,25 @@ test("terminar antes de tiempo: tiempo usado real y fase siguiente", () => {
   assert.equal(e.fase, "examen", "terminar no modifica el estado original");
 });
 
+test("el orden de las opciones se sortea al empezar y queda guardado", () => {
+  const e = Examen.nuevo(PREGUNTAS, { duracion: 60, temas: [1, 2, 3] }, 0, 31);
+  const recargado = JSON.parse(JSON.stringify(e));
+  let distintos = 0;
+  for (const id of e.ids) {
+    const p = POR_ID[id];
+    const orden = Examen.ordenDe(recargado, p);
+    assert.deepEqual(orden, e.orden[id], "la recarga conserva el orden");
+    assert.deepEqual([...orden].sort(), p.opciones ? p.opciones.map((o) => o.id).sort() : []);
+    if (p.tipo === "verdadero_falso") assert.deepEqual(orden, ["a", "b"], "F/V queda fijo");
+    if (p.tipo === "seleccion_unica" && orden.join("") !== p.opciones.map((o) => o.id).join("")) distintos++;
+  }
+  assert.ok(distintos >= 5, "la selección única sí se baraja");
+  assert.deepEqual(Examen.nuevo(PREGUNTAS, { duracion: 60, temas: [1, 2, 3] }, 0, 31).orden, e.orden, "misma semilla, mismo orden");
+  const viejo = { ...e, orden: undefined };
+  const su = POR_ID[e.ids[0]];
+  assert.deepEqual(Examen.ordenDe(viejo, su), su.opciones.map((o) => o.id), "exámenes viejos: orden original");
+});
+
 test("resultado: nota sobre 100 y desglose por parte", () => {
   const e = Examen.nuevo(PREGUNTAS, { duracion: 25, temas: [1, 2, 3] }, 0, 21);
   for (const id of e.ids) {

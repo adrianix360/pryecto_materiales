@@ -11,6 +11,9 @@
 (function (root) {
   "use strict";
 
+  var Opciones = root && root.Opciones ? root.Opciones :
+    (typeof require !== "undefined" ? require("./opciones.js") : null);
+
   var ESTRUCTURA = {
     25: { seleccion_unica: 6, verdadero_falso: 5, respuesta_corta: 12 },
     40: { seleccion_unica: 10, verdadero_falso: 8, respuesta_corta: 18 },
@@ -160,8 +163,15 @@
   }
 
   // ---------- Estado y tiempo ----------
+  // El orden de las opciones se sortea al empezar y queda guardado en el examen,
+  // así una recarga muestra las mismas letras.
   function nuevo(preguntas, o, ahora, semilla) {
     var a = armar(preguntas, o, semilla);
+    var porId = {};
+    preguntas.forEach(function (p) { porId[p.id] = p; });
+    var rnd = azar((semilla ^ 0x5bd1e995) >>> 0);
+    var orden = {};
+    a.ids.forEach(function (id) { orden[id] = Opciones.ordenPara(porId[id], rnd); });
     return {
       v: 1,
       duracion: o.duracion,
@@ -177,8 +187,15 @@
       pos: 0,
       resp: {},
       auto: {},
+      orden: orden,
       enviados: false
     };
+  }
+
+  // Orden de opciones de una pregunta del examen (los exámenes viejos no lo traen).
+  function ordenDe(estado, p) {
+    return estado.orden && estado.orden[p.id] ? estado.orden[p.id] :
+      (p.opciones || []).map(function (x) { return x.id; });
   }
 
   function restante(estado, ahora) {
@@ -224,6 +241,7 @@
     puntaje: puntaje,
     resultado: resultado,
     nuevo: nuevo,
+    ordenDe: ordenDe,
     restante: restante,
     vencido: vencido,
     terminar: terminar,

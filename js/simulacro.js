@@ -36,10 +36,11 @@
     return p.tipo === "respuesta_corta" ? !!String(r.texto || "").trim() : !!r.op;
   }
 
-  function textoOpcion(p, op) {
+  // «C. texto», con la letra que se vio en el examen.
+  function textoOpcion(p, op, orden) {
     if (!op) return "Sin responder";
     for (var i = 0; i < p.opciones.length; i++) {
-      if (p.opciones[i].id === op) return op.toUpperCase() + ". " + p.opciones[i].texto;
+      if (p.opciones[i].id === op) return Opciones.letra(orden, op) + ". " + p.opciones[i].texto;
     }
     return op;
   }
@@ -187,13 +188,16 @@
       html += '<label class="bloque__titulo" for="resp-texto">Tu respuesta</label>' +
         '<textarea id="resp-texto" class="respuesta-texto" rows="4">' + UI.esc(r.texto || "") + "</textarea>";
     } else {
-      html += '<ul class="opciones" role="list">' + p.opciones.map(function (o) {
+      var orden = Examen.ordenDe(e, p);
+      html += '<ul class="opciones" role="list">' + orden.map(function (oid, i) {
+        var o = p.opciones.filter(function (x) { return x.id === oid; })[0];
+        var letra = Opciones.LETRAS[i];
         return '<li><button type="button" class="opcion" data-opcion="' + UI.esc(o.id) + '" aria-pressed="' + (r.op === o.id) + '">' +
-          '<span class="opcion__letra" aria-hidden="true">' + UI.esc(o.id.toUpperCase()) + "</span>" +
-          '<span class="opcion__texto"><span class="solo-lector">Opción ' + UI.esc(o.id.toUpperCase()) + ": </span>" +
+          '<span class="opcion__letra" aria-hidden="true">' + letra + "</span>" +
+          '<span class="opcion__texto"><span class="solo-lector">Opción ' + letra + ": </span>" +
           UI.esc(o.texto) + "</span></button></li>";
       }).join("") + "</ul>";
-      if (p.tipo === "verdadero_falso" && r.op && /^falso$/i.test(textoOpcion(p, r.op).slice(3))) {
+      if (p.tipo === "verdadero_falso" && r.op && /^falso$/i.test(textoOpcion(p, r.op, orden).slice(3))) {
         html += '<label class="bloque__titulo bloque" for="resp-justif">Justificá por qué es falso</label>' +
           '<textarea id="resp-justif" class="respuesta-texto" rows="3">' + UI.esc(r.justif || "") + "</textarea>";
       }
@@ -443,16 +447,18 @@
           '<div class="bloque"><p class="bloque__titulo">Respuesta modelo</p><p>' + UI.esc(p.respuesta_modelo) + "</p></div>" +
           puntosClaveHTML(p, it.id, a.marcados || [], false);
       } else {
-        html += '<div class="bloque"><p class="bloque__titulo">Tu respuesta</p><p>' + UI.esc(textoOpcion(p, resp.op)) + "</p></div>" +
-          '<div class="bloque"><p class="bloque__titulo">Respuesta correcta</p><p>' + UI.esc(textoOpcion(p, p.correcta)) + "</p></div>";
+        var ord = Examen.ordenDe(e, p);
+        html += '<div class="bloque"><p class="bloque__titulo">Tu respuesta</p><p>' + UI.esc(textoOpcion(p, resp.op, ord)) + "</p></div>" +
+          '<div class="bloque"><p class="bloque__titulo">Respuesta correcta</p><p>' + UI.esc(textoOpcion(p, p.correcta, ord)) + "</p></div>";
         if (p.tipo === "verdadero_falso" && !Examen.esVerdadero(p) && resp.justif) {
           html += '<div class="bloque"><p class="bloque__titulo">Tu justificación' +
             (typeof a.justifOk === "boolean" ? (a.justifOk ? " (correcta)" : " (incorrecta)") : "") + "</p><p>" + UI.esc(resp.justif) + "</p></div>";
         }
       }
-      if (p.explicacion) html += '<div class="bloque"><p class="bloque__titulo">Explicación</p><p>' + UI.esc(p.explicacion) + "</p></div>";
+      var letras = Opciones.mapa(Examen.ordenDe(e, p));
+      if (p.explicacion) html += '<div class="bloque"><p class="bloque__titulo">Explicación</p><p>' + UI.esc(Opciones.reletrar(p.explicacion, letras)) + "</p></div>";
       if (p.justificacion_oficial) html += '<div class="bloque"><p class="bloque__titulo">Justificación de la clave</p><p>' + UI.esc(p.justificacion_oficial) + "</p></div>";
-      html += UI.verificar(p.verificar) + UI.fuentes(p) + UI.reportar(it.id, "Simulacro") + "</div></details>";
+      html += UI.verificar(Opciones.reletrar(p.verificar, letras)) + UI.fuentes(p) + UI.reportar(it.id, "Simulacro") + "</div></details>";
     });
     html += "</section>" +
       '<div class="acciones"><button type="button" class="btn btn--primario" data-accion="nuevo">Nuevo simulacro</button></div>';
