@@ -108,9 +108,6 @@ def capturar(nav, url, esquema):
     pag.get_by_role("button", name="Ver respuesta").click()
     foto("practicar-corta-vista")
 
-    for ruta in ("buscar",):
-        pag.locator(f'.nav__item[data-ruta="{ruta}"]').click()
-        foto(ruta)
     pag.locator(".barra__acerca").click()
     expect(pag.locator("#titulo")).to_have_text("Acerca de")
     foto("acerca")
@@ -224,6 +221,37 @@ def capturar_progreso(nav, url, esquema):
     ctx.close()
 
 
+def capturar_buscar(nav, url, esquema):
+    ctx = contexto(nav, esquema)
+    pag = ctx.new_page()
+
+    def foto(nombre):
+        pag.wait_for_timeout(300)
+        pag.screenshot(path=os.path.join(SALIDA, f"{esquema}-b{nombre}.png"))
+
+    pag.goto(url + "#/buscar")
+    listo(pag)
+    foto("1-vacio")
+    pag.fill("#q", "exudacion")
+    pag.wait_for_timeout(300)
+    foto("2-resultados")
+    primera = pag.locator("details.resultado").nth(1)
+    primera.locator("summary").click()
+    primera.scroll_into_view_if_needed()
+    foto("3-resultado-abierto")
+    pag.locator('[data-pestana="glosario"]').click()
+    foto("4-glosario")
+    pag.locator('.letras__btn:text-is("P")').click()
+    foto("5-glosario-letra")
+    pag.locator('[data-pestana="figuras"]').click()
+    foto("6-figuras")
+    pag.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+    foto("7-figuras-examen")
+    pag.locator('[data-pestana="verificar"]').click()
+    foto("8-verificar")
+    ctx.close()
+
+
 def main():
     os.makedirs(SALIDA, exist_ok=True)
     for f in os.listdir(SALIDA):
@@ -236,6 +264,7 @@ def main():
             capturar(nav, url, esquema)
             capturar_simulacro(nav, url, esquema)
             capturar_progreso(nav, url, esquema)
+            capturar_buscar(nav, url, esquema)
         nav.close()
     srv.shutdown()
     print(f"{len(os.listdir(SALIDA))} capturas en {SALIDA}")

@@ -702,6 +702,117 @@ def exportar_borrar_e_importar_el_progreso(nav, url):
 
 
 @prueba
+def buscar_sin_tildes_con_resaltado_y_agrupado(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/buscar")
+    expect(pag.locator('[data-pestana="buscar"]')).to_have_attribute("aria-pressed", "true")
+    assert "al menos 2 letras" in pag.locator("#conteo").inner_text()
+    revisar_pantalla(pag, "buscar vacío")
+    pag.fill("#q", "HORMIGON")
+    expect(pag.locator("#conteo")).to_contain_text("resultado")
+    tarjeta = pag.locator('details.resultado[data-id="t1-1A-01"]')
+    expect(tarjeta).to_be_visible()
+    assert tarjeta.locator("mark").first.inner_text() == "hormigón", "resalta el texto original con tilde"
+    grupos = pag.locator(".grupo-res h3").all_inner_texts()
+    orden = [g.split(" (")[0] for g in grupos]
+    assert orden == [x for x in ["Glosario", "Tarjetas", "Preguntas"] if x in orden], orden
+    tarjeta.locator("summary").click()
+    expect(tarjeta.locator(".resultado__cuerpo")).to_contain_text("Respuesta")
+    expect(tarjeta.locator(".resultado__cuerpo")).to_contain_text("Fuente")
+    revisar_pantalla(pag, "buscar resultados")
+    # varias palabras: deben estar todas
+    pag.fill("#q", "exudacion astm")
+    expect(pag.locator("#conteo")).to_contain_text("resultado")
+    n = pag.locator("details.resultado").count()
+    pag.fill("#q", "exudacion")
+    expect(pag.locator("#conteo")).not_to_contain_text(f"{n} resultado")
+    pag.fill("#q", "zzzqqq")
+    expect(pag.locator("#conteo")).to_contain_text("No hay resultados para «zzzqqq»")
+    # abrir una pregunta en Practicar desde el resultado
+    pag.fill("#q", "mortero")
+    expect(pag.locator('details.resultado[data-id="p1-1A-t01"]')).to_be_visible()
+    pag.locator('details.resultado[data-id="p1-1A-t01"] summary').click()
+    expect(pag.locator('details.resultado[data-id="p1-1A-t01"]')).to_contain_text("✓ correcta")
+    pag.locator('details.resultado[data-id="p1-1A-t01"]').get_by_role("button", name="Abrir en Practicar").click()
+    expect(pag.locator("#titulo")).to_have_text("Practicar")
+    assert pag.locator(".pregunta").get_attribute("data-id") == "p1-1A-t01"
+    assert "De Buscar:" in pag.locator(".extra").inner_text()
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def glosario_alfabetico_con_definicion_y_fuente(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/buscar")
+    pag.locator('[data-pestana="glosario"]').click()
+    letras = pag.locator(".letras__btn").all_inner_texts()
+    assert letras[0] == "A" and "Á" not in letras, letras
+    assert pag.locator(".glosario__termino").count() == 60
+    terminos = pag.locator(".glosario dt").all_inner_texts()
+    nombres = [t.rsplit(" ", 1)[0] for t in terminos]
+    ordenado = pag.evaluate("(xs) => [...xs].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }))", nombres)
+    assert nombres == ordenado, "orden alfabético en español"
+    mortero = pag.locator('.glosario__termino[data-id="g-mortero"]').inner_text()
+    assert "pasta cementicia y agregado fino" in mortero and "Fuente" in mortero
+    pag.locator('.letras__btn:text-is("P")').click()
+    expect(pag.locator("#letra-P")).to_be_focused()
+    revisar_pantalla(pag, "glosario")
+    assert progreso(pag)["prefs"]["pestanaBuscar"] == "glosario", "recuerda la pestaña"
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def galeria_de_figuras_abre_los_items_que_las_usan(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/buscar")
+    pag.locator('[data-pestana="figuras"]').click()
+    figs = pag.locator(".figura-btn")
+    assert figs.count() == 15
+    for i in range(15):
+        img = figs.nth(i).locator("img")
+        assert img.get_attribute("alt"), f"figura {i} sin alt"
+        assert "Fuente:" in figs.nth(i).inner_text()
+    revisar_pantalla(pag, "figuras")
+    c117 = pag.locator('.figura-btn:has(img[src="img/ensayos/c117.jpg"])')
+    assert "ASTM C117" in c117.inner_text() and "Abre 2 tarjetas" in c117.inner_text()
+    c117.click()
+    expect(pag.locator("#titulo")).to_have_text("Estudiar")
+    expect(pag.locator(".contador")).to_have_text("Tarjeta 1 de 2")
+    assert "figura ASTM C117" in pag.locator(".extra").inner_text()
+    pag.locator(".tarjeta").click()
+    assert pag.locator(".figura img").get_attribute("src") == "img/ensayos/c117.jpg"
+    pag.locator('.nav__item[data-ruta="buscar"]').click()
+    abaco = pag.locator('.figura-btn:has(img[src="img/examenes/X01-p5-abaco.jpg"])')
+    assert "Abre 1 pregunta" in abaco.inner_text()
+    abaco.click()
+    expect(pag.locator("#titulo")).to_have_text("Practicar")
+    assert pag.locator(".pregunta .figura img").get_attribute("src") == "img/examenes/X01-p5-abaco.jpg"
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def lista_de_items_a_verificar_con_el_profe(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/buscar")
+    ctx.grant_permissions(["clipboard-read", "clipboard-write"])
+    pag.locator('[data-pestana="verificar"]').click()
+    assert "33 ítems marcados «⚠ Verificar»: 10 tarjetas y 23 preguntas" in pag.locator(".pestana").inner_text()
+    assert pag.locator(".verif-item").count() == 33
+    assert pag.locator(".verif-item .verificar").count() == 33
+    revisar_pantalla(pag, "verificar")
+    pag.get_by_role("button", name="Copiar lista para el profe").click()
+    expect(pag.locator("#copiado")).to_contain_text("Lista copiada (33 ítems)")
+    copiado = pag.evaluate("navigator.clipboard.readText()")
+    assert copiado.startswith("Consultas para el profe (IC-0604, I examen): 33 ítems"), copiado[:80]
+    assert copiado.count("Duda: ") == 33
+    pag.get_by_role("button", name="Practicar las 23 preguntas").click()
+    expect(pag.locator("#titulo")).to_have_text("Practicar")
+    expect(pag.locator(".contador")).to_have_text("Pregunta 1 de 23")
+    expect(pag.locator(".chip--verificar").first).to_be_visible()
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
 def nueva_version_reemplaza_el_cache(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url, sw=True)
     pag.evaluate("navigator.serviceWorker.ready.then(() => true)")
