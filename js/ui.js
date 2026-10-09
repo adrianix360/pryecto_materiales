@@ -117,10 +117,10 @@
   }
 
   // ---------- Repaso de hoy y meta diaria ----------
-  var SEG_POR_ITEM = 45; // equivalencia para la meta: 90 min ≈ 120 ítems
+  var SEG_POR_ITEM = 45; // equivalencia para la meta: 40 min ≈ 53 ítems
   var OPCIONES_META = {
-    minutos: [30, 45, 60, 75, 90, 120, 150, 180],
-    items: [40, 60, 80, 100, 120, 160, 200, 240]
+    minutos: [20, 30, 40, 45, 60, 75, 90, 120, 150, 180],
+    items: [27, 40, 53, 60, 80, 100, 120, 160, 200, 240]
   };
   var MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
     "septiembre", "octubre", "noviembre", "diciembre"];
@@ -181,7 +181,7 @@
         return '<option value="' + v + '"' + (v === m.valor ? " selected" : "") + ">" + v +
           (m.unidad === "minutos" ? " min" : " ítems") + "</option>";
       }).join("") + "</select></div>" +
-      '<p class="nota">Equivalencia: 90 min ≈ 120 ítems (unos ' + SEG_POR_ITEM + " s por ítem). " +
+      '<p class="nota">Equivalencia: 40 min ≈ 53 ítems (unos ' + SEG_POR_ITEM + " s por ítem). " +
       "El tiempo cuenta desde que aparece un ítem hasta que lo calificás, con un tope de 3 min por ítem.</p>" +
       "</div></details>";
   }

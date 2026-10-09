@@ -82,9 +82,10 @@ La fecha del examen (17 de octubre de 2026) se lee de `data/indice.json`.
 
 ## Meta diaria
 
-Arriba de Estudiar y Practicar hay un contador: «Hoy: 23 / 90 min · 31 ítems». Al tocarlo se cambia la meta.
+Arriba de Estudiar y Practicar hay un contador: «Hoy: 23 / 40 min · 31 ítems». Al tocarlo se cambia la meta.
 
-- Se puede medir en minutos (90 por defecto) o en ítems (120 ítems ≈ 90 min, a unos 45 s por ítem).
+- Se puede medir en minutos (40 por defecto) o en ítems (53 ítems ≈ 40 min, a unos 45 s por ítem).
+- Si el repaso del día trae más de lo que cabe en la meta, el orden prioriza lo fallado y lo vencido; lo que quede pasa al día siguiente.
 - El tiempo cuenta desde que aparece un ítem hasta que lo calificás, con un tope de 3 minutos por ítem para no contar ratos en que dejaste la app abierta.
 
 ## Estructura

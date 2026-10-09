@@ -313,7 +313,7 @@ def repaso_de_hoy_en_estudiar(nav, url):
     assert "Viernes 9 de octubre" in resumen and "faltan 8 días" in resumen, resumen
     assert "0 falladas" in resumen and "0 vencidas" in resumen and "30 nuevas" in resumen, resumen
     expect(pag.locator(".contador")).to_have_text("Tarjeta 1 de 30")
-    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 90 min · 0 ítems")
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 40 min · 0 ítems")
     revisar_pantalla(pag, "repaso estudiar")
     primera = pag.evaluate("document.querySelector('.tarjeta').getAttribute('aria-controls').replace('reverso-','')")
     pag.locator(".tarjeta").click()
@@ -321,7 +321,7 @@ def repaso_de_hoy_en_estudiar(nav, url):
     reg = progreso(pag)["tarjetas"][primera]
     assert reg["caja"] == 0 and reg["vence"] == FECHA and reg["visto"] == FECHA, reg
     assert "1 falladas" in pag.locator(".repaso").inner_text()
-    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 90 min · 1 ítem")
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 40 min · 1 ítem")
     assert progreso(pag)["diario"][FECHA]["items"] == 1
     # la fallada vuelve 4 lugares después
     for _ in range(4):
@@ -373,10 +373,10 @@ def repaso_respeta_fechas_simuladas_y_convierte_progreso_viejo(nav, url):
 @prueba
 def meta_diaria_configurable(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url + "#/practicar")
-    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 90 min · 0 ítems")
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 40 min · 0 ítems")
     pag.locator('details[data-panel="meta"] summary').click()
     pag.select_option("#meta-unidad", "items")
-    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 120 ítems · 0 min")
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 53 ítems · 0 min")
     pag.select_option("#meta-valor", "40")
     expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 40 ítems · 0 min")
     assert progreso(pag)["prefs"]["meta"] == {"unidad": "items", "valor": 40}

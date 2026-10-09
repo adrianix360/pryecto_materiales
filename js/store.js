@@ -15,7 +15,7 @@
   "use strict";
 
   var CLAVE = "pryecto_materiales:progreso:v1";
-  var META_DEFECTO = { unidad: "minutos", valor: 90 };
+  var META_DEFECTO = { unidad: "minutos", valor: 40 };
   var HISTORIAL_MAX = 10;
   var estado = { tarjetas: {}, preguntas: {}, diario: {}, prefs: {}, simulacro: null, historial: [] };
   var disponible = true;
