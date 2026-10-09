@@ -3,6 +3,7 @@
 
 Uso: python tests/capturas.py      (la carpeta tests/capturas/ no se sube a git)
 """
+import json
 import os
 import sys
 
@@ -12,6 +13,8 @@ from playwright.sync_api import expect, sync_playwright  # noqa: E402
 import servidor  # noqa: E402
 
 SALIDA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "capturas")
+FECHA = "2026-10-09"
+CLAVE = "pryecto_materiales:progreso:v1"
 BLOQUEAR_LS = "Object.defineProperty(window,'localStorage',{configurable:true,get(){throw new DOMException('x','SecurityError')}})"
 
 
@@ -29,9 +32,25 @@ def ir_a_pregunta(pag, condicion):
     raise RuntimeError("no se encontró la pregunta")
 
 
-def capturar(nav, url, esquema):
+def contexto(nav, esquema):
     ctx = nav.new_context(viewport={"width": 390, "height": 844}, color_scheme=esquema,
                           device_scale_factor=2, service_workers="block")
+    ctx.add_init_script(f"window.__fechaPrueba = {json.dumps(FECHA)};")
+    return ctx
+
+
+def todo_al_dia():
+    """Progreso con todas las tarjetas vistas y al día (para la pantalla final del repaso)."""
+    raiz = servidor.RAIZ
+    regs = {}
+    for n in (1, 2, 3):
+        for t in json.load(open(os.path.join(raiz, f"data/tarjetas/tema{n}.json"), encoding="utf-8"))["tarjetas"]:
+            regs[t["id"]] = {"r": "sabia", "n": 2, "t": 0, "caja": 2, "vence": "2026-10-11", "visto": "2026-10-08"}
+    return {"tarjetas": regs, "preguntas": {}, "diario": {FECHA: {"seg": 5520, "items": 131}}, "prefs": {}}
+
+
+def capturar(nav, url, esquema):
+    ctx = contexto(nav, esquema)
     pag = ctx.new_page()
     n = [0]
 
@@ -42,19 +61,31 @@ def capturar(nav, url, esquema):
 
     pag.goto(url + "#/estudiar")
     listo(pag)
-    foto("estudiar")
+    foto("estudiar-repaso")
     pag.locator(".tarjeta").click()
     foto("estudiar-volteada")
-    pag.locator(".filtros summary").click()
+    pag.get_by_role("button", name="No la sabía", exact=True).click()
+    for _ in range(2):
+        pag.locator(".tarjeta").click()
+        pag.get_by_role("button", name="La sabía", exact=True).click()
+    foto("estudiar-repaso-avance")
+    pag.locator('details[data-panel="meta"] summary').click()
+    foto("meta-diaria")
+    pag.locator('details[data-panel="meta"] summary').click()
+    pag.locator('[data-modo="tema"]').click()
+    pag.locator("details.filtros:not([data-panel]) summary").click()
     pag.select_option("#est-tema", "3")
     pag.select_option("#est-subtema", "3E")
-    foto("estudiar-filtros")
-    pag.locator(".filtros summary").click()
+    foto("estudiar-por-tema")
+    pag.locator("details.filtros:not([data-panel]) summary").click()
     pag.locator(".tarjeta").click()
     pag.locator(".figura").scroll_into_view_if_needed()
     foto("estudiar-figura")
 
     pag.locator('.nav__item[data-ruta="practicar"]').click()
+    expect(pag.locator(".pregunta")).to_be_visible()
+    foto("practicar-repaso")
+    pag.locator('[data-modo="tema"]').click()
     expect(pag.locator(".pregunta")).to_be_visible()
     ir_a_pregunta(pag, lambda t, i: t == "seleccion_unica")
     foto("practicar-unica")
@@ -85,8 +116,16 @@ def capturar(nav, url, esquema):
     foto("acerca")
     ctx.close()
 
-    ctx = nav.new_context(viewport={"width": 390, "height": 844}, color_scheme=esquema,
-                          device_scale_factor=2, service_workers="block")
+    ctx = contexto(nav, esquema)
+    ctx.add_init_script(
+        f"try {{ localStorage.setItem({json.dumps(CLAVE)}, {json.dumps(json.dumps(todo_al_dia()))}); }} catch (e) {{}}")
+    pag = ctx.new_page()
+    pag.goto(url + "#/estudiar")
+    listo(pag)
+    foto("estudiar-repaso-terminado")
+    ctx.close()
+
+    ctx = contexto(nav, esquema)
     ctx.add_init_script(BLOQUEAR_LS)
     pag = ctx.new_page()
     pag.goto(url + "#/estudiar")

@@ -27,6 +27,8 @@ BLOQUEAR_LS = """
 })();
 """
 
+FECHA = "2026-10-09"  # todas las pruebas corren con esta fecha simulada
+
 resultados = []
 
 
@@ -35,8 +37,15 @@ def prueba(fn):
     return fn
 
 
-def nueva_pagina(nav, url, bloquear=False, sw=False):
+def nueva_pagina(nav, url, bloquear=False, sw=False, fecha=FECHA, sembrar=None):
+    """Abre la app con la fecha simulada. sembrar: progreso guardado antes de cargar."""
     ctx = nav.new_context(viewport=VIEWPORT, service_workers="allow" if sw else "block")
+    ctx.add_init_script(f"window.__fechaPrueba = {json.dumps(fecha)};")
+    if sembrar is not None:
+        ctx.add_init_script(
+            "try { if (!sessionStorage.getItem('sembrado')) {"
+            f" localStorage.setItem({json.dumps(CLAVE)}, {json.dumps(json.dumps(sembrar))});"
+            " sessionStorage.setItem('sembrado', '1'); } } catch (e) {}")
     if bloquear:
         ctx.add_init_script(BLOQUEAR_LS)
     pag = ctx.new_page()
@@ -46,6 +55,13 @@ def nueva_pagina(nav, url, bloquear=False, sw=False):
     pag.goto(url)
     pag.wait_for_selector("body[data-listo='1']")
     return ctx, pag, errores
+
+
+def por_tema(pag):
+    """Pasa la sección actual al modo «Por tema» y abre los filtros."""
+    pag.locator('[data-modo="tema"]').click()
+    expect(pag.locator('[data-modo="tema"]')).to_have_attribute("aria-pressed", "true")
+    pag.locator("details.filtros:not([data-panel]) summary").click()
 
 
 def progreso(pag):
@@ -130,7 +146,7 @@ def voltea_y_califica_una_tarjeta(nav, url):
 @prueba
 def tarjeta_con_figura_y_verificar(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url + "#/estudiar")
-    pag.locator(".filtros summary").click()
+    por_tema(pag)
     pag.select_option("#est-tema", "3")
     pag.select_option("#est-subtema", "3E")
     pag.locator(".tarjeta").click()
@@ -176,6 +192,7 @@ def responder(pag, tipo):
 @prueba
 def responde_una_pregunta_de_cada_tipo(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url + "#/practicar")
+    por_tema(pag)
     pendientes = {"seleccion_unica", "seleccion_multiple", "verdadero_falso", "respuesta_corta"}
     respondidas = {}
     for _ in range(250):
@@ -214,7 +231,7 @@ def pregunta_de_examen_muestra_examen_justificacion_y_verificar(nav, url):
     objetivo = pag.evaluate("""Datos.preguntas.find(p => p.origen === 'examen' && p.justificacion_oficial
                                 && p.verificar && p.tipo === 'verdadero_falso')""")
     assert objetivo, "no hay pregunta F/V de examen con justificación y verificar"
-    pag.locator(".filtros summary").click()
+    por_tema(pag)
     pag.select_option("#pra-tema", str(objetivo["tema"]))
     pag.select_option("#pra-subtema", objetivo["subtema"])
     pag.select_option("#pra-origen", "examen")
@@ -273,6 +290,135 @@ def funciona_sin_conexion(nav, url):
         .filter(x => x.figura).map(x => x.figura.src))].map(s => fetch(s).then(r => r.ok)))""")
     assert figs and all(figs), "hay figuras que no quedaron en el caché"
     assert not [e for e in errores if "ERR_INTERNET_DISCONNECTED" not in e], errores
+    ctx.close()
+
+
+def tarjeta_vieja(r, dias_atras):
+    """Registro con el formato anterior (sin caja), de hace unos días a mediodía."""
+    return {"r": r, "n": 1, "t": pag_ms(FECHA, -dias_atras)}
+
+
+def pag_ms(dia, delta):
+    import datetime
+    d = datetime.datetime.strptime(dia, "%Y-%m-%d") + datetime.timedelta(days=delta, hours=12)
+    return int(d.timestamp() * 1000)
+
+
+@prueba
+def repaso_de_hoy_en_estudiar(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/estudiar")
+    expect(pag.locator('[data-modo="repaso"]')).to_have_attribute("aria-pressed", "true")
+    resumen = pag.locator(".repaso").inner_text()
+    assert "Viernes 9 de octubre" in resumen and "faltan 8 días" in resumen, resumen
+    assert "0 falladas" in resumen and "0 vencidas" in resumen and "30 nuevas" in resumen, resumen
+    expect(pag.locator(".contador")).to_have_text("Tarjeta 1 de 30")
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 90 min · 0 ítems")
+    revisar_pantalla(pag, "repaso estudiar")
+    primera = pag.evaluate("document.querySelector('.tarjeta').getAttribute('aria-controls').replace('reverso-','')")
+    pag.locator(".tarjeta").click()
+    pag.get_by_role("button", name="No la sabía", exact=True).click()
+    reg = progreso(pag)["tarjetas"][primera]
+    assert reg["caja"] == 0 and reg["vence"] == FECHA and reg["visto"] == FECHA, reg
+    assert "1 falladas" in pag.locator(".repaso").inner_text()
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 90 min · 1 ítem")
+    assert progreso(pag)["diario"][FECHA]["items"] == 1
+    # la fallada vuelve 4 lugares después
+    for _ in range(4):
+        pag.locator(".tarjeta").click()
+        pag.get_by_role("button", name="La sabía", exact=True).click()
+    assert pag.locator(".tarjeta").get_attribute("aria-controls") == "reverso-" + primera
+    pag.locator(".tarjeta").click()
+    pag.get_by_role("button", name="La sabía", exact=True).click()
+    reg = progreso(pag)["tarjetas"][primera]
+    assert reg["caja"] == 1 and reg["vence"] == "2026-10-10", reg
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def repaso_respeta_fechas_simuladas_y_convierte_progreso_viejo(nav, url):
+    idx = json.load(open(os.path.join(servidor.RAIZ, "data/tarjetas/tema1.json"), encoding="utf-8"))["tarjetas"]
+    a, b, c = idx[0]["id"], idx[1]["id"], idx[2]["id"]
+    sembrado = {
+        "tarjetas": {
+            a: tarjeta_vieja("no", 3),                    # formato viejo, fallada
+            b: {"r": "sabia", "n": 2, "t": pag_ms(FECHA, -5), "caja": 2,
+                "vence": "2026-10-10", "visto": "2026-10-04"},  # vence mañana
+            c: {"r": "sabia", "n": 1, "t": pag_ms(FECHA, -4), "caja": 1,
+                "vence": "2026-10-07", "visto": "2026-10-05"},  # vencida hace 2 días
+        },
+        "preguntas": {}, "prefs": {},
+    }
+    # 9/10: la fallada y la vencida salen primero; la de mañana no
+    ctx, pag, errores = nueva_pagina(nav, url + "#/estudiar", sembrar=sembrado)
+    assert "1 falladas" in pag.locator(".repaso").inner_text()
+    assert "1 vencidas" in pag.locator(".repaso").inner_text()
+    assert pag.locator(".tarjeta").get_attribute("aria-controls") == "reverso-" + a
+    guardado = progreso(pag)["tarjetas"][a]
+    assert guardado["caja"] == 0 and guardado["vence"] == "2026-10-06", f"no se convirtió: {guardado}"
+    pag.locator(".tarjeta").click()
+    pag.get_by_role("button", name="La sabía", exact=True).click()
+    assert pag.locator(".tarjeta").get_attribute("aria-controls") == "reverso-" + c
+    ctx.close()
+    # 10/10 (otro día simulado): la de mañana ya venció
+    ctx, pag, errores2 = nueva_pagina(nav, url + "#/estudiar", fecha="2026-10-10", sembrar=sembrado)
+    assert "Sábado 10 de octubre" in pag.locator(".repaso").inner_text()
+    assert pag.locator(".tarjeta").get_attribute("aria-controls") == "reverso-" + a, "la fallada sigue primero"
+    assert "2 vencidas" in pag.locator(".repaso").inner_text(), pag.locator(".repaso").inner_text()
+    assert not errores and not errores2, errores + errores2
+    ctx.close()
+
+
+@prueba
+def meta_diaria_configurable(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/practicar")
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 90 min · 0 ítems")
+    pag.locator('details[data-panel="meta"] summary').click()
+    pag.select_option("#meta-unidad", "items")
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 120 ítems · 0 min")
+    pag.select_option("#meta-valor", "40")
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 0 / 40 ítems · 0 min")
+    assert progreso(pag)["prefs"]["meta"] == {"unidad": "items", "valor": 40}
+    revisar_pantalla(pag, "meta abierta")
+    tipo = pag.locator(".pregunta").get_attribute("data-tipo")
+    responder(pag, tipo)
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 1 / 40 ítems · 0 min")
+    assert progreso(pag)["diario"][FECHA]["seg"] > 0
+    pag.locator('.nav__item[data-ruta="estudiar"]').click()
+    expect(pag.locator(".meta__texto")).to_have_text("Hoy: 1 / 40 ítems · 0 min")
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def repaso_de_practicar_reinserta_las_falladas_y_muestra_verificar(nav, url):
+    preguntas = []
+    for n in (1, 2, 3):
+        preguntas += json.load(open(os.path.join(servidor.RAIZ, f"data/preguntas/tema{n}.json"), encoding="utf-8"))["preguntas"]
+    verif = next(p for p in preguntas if p.get("verificar") and p["tipo"] == "verdadero_falso")
+    sembrado = {"tarjetas": {}, "preguntas": {verif["id"]: {
+        "r": "bien", "n": 3, "t": pag_ms(FECHA, -2), "caja": 2, "vence": "2026-10-08",
+        "visto": "2026-10-03", "bien": 3, "resp": "a"}}, "prefs": {}}
+    ctx, pag, errores = nueva_pagina(nav, url + "#/practicar", sembrar=sembrado)
+    resumen = pag.locator(".repaso").inner_text()
+    assert "1 vencidas" in resumen and "37 nuevas" in resumen, resumen
+    assert "con ⚠ Verificar" in resumen, resumen
+    assert pag.locator(".pregunta").get_attribute("data-id") == verif["id"], "la vencida va primero"
+    expect(pag.locator(".chip--verificar").first).to_be_visible()
+    incorrecta = next(o["id"] for o in verif["opciones"] if o["id"] != verif["correcta"])
+    pag.locator(f'[data-opcion="{incorrecta}"]').click()
+    assert "⚠ Verificar con el profe" in pag.locator("#retro").inner_text()
+    reg = progreso(pag)["preguntas"][verif["id"]]
+    assert reg["caja"] == 0 and reg["r"] == "mal" and reg["bien"] == 3, reg
+    assert "1 falladas" in pag.locator(".repaso").inner_text()
+    pag.get_by_role("button", name="Siguiente →").click()
+    for _ in range(4):
+        pag.get_by_role("button", name="Saltar").click()
+    assert pag.locator(".pregunta").get_attribute("data-id") == verif["id"], "la fallada vuelve 4 lugares después"
+    pag.locator(f'[data-opcion="{verif["correcta"]}"]').click()
+    reg = progreso(pag)["preguntas"][verif["id"]]
+    assert reg["caja"] == 1 and reg["vence"] == "2026-10-10", reg
+    assert not errores, errores
     ctx.close()
 
 
