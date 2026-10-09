@@ -59,9 +59,12 @@
       var res = SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.indice.examen);
       var conVerif = s.cola.slice(s.pos).filter(function (id) { return s.porId[id].verificar; });
       html += UI.resumenRepaso(res, new Set(conVerif).size, NOMBRES_RESUMEN);
-      if (s.extra) html += '<p class="extra">' + (s.extra === "nuevas" ? "Extra: preguntas nuevas" : "Extra: repaso adelantado") + "</p>";
     } else {
       html += UI.filtros("pra", s.f, true);
+    }
+    if (s.extra) {
+      html += '<p class="extra">' + UI.esc(s.extra === "nuevas" ? "Extra: preguntas nuevas" :
+        s.extra === "adelantar" ? "Extra: repaso adelantado" : s.extra) + "</p>";
     }
     return html;
   }
@@ -178,7 +181,12 @@
 
   function pantallaFin(vista) {
     var html = cabecera();
-    if (s.modo === "repaso") {
+    if (s.extra && s.extra !== "nuevas" && s.extra !== "adelantar") {
+      html += '<section class="tarjeta-info" aria-labelledby="h-fin"><h2 id="h-fin">Terminaste la lista</h2>' +
+        "<p>Pasaste por " + new Set(s.cola).size + " preguntas de «" + UI.esc(s.extra) + "».</p></section>" +
+        '<div class="acciones"><button type="button" class="btn btn--primario" data-accion="volver">Volver al ' +
+        (s.modo === "repaso" ? "repaso de hoy" : "modo por tema") + "</button></div>";
+    } else if (s.modo === "repaso") {
       var nuevas = SRS.masNuevos(Datos.preguntas, leer, MAS_NUEVAS, []);
       var adel = SRS.adelantar(Datos.preguntas, leer, SRS.hoy());
       var titulo = s.extra ? "Terminaste el extra" :
@@ -332,6 +340,9 @@
         } else if (acc === "otra") {
           armarCola();
           render(vista);
+        } else if (acc === "volver") {
+          armar();
+          render(vista);
         } else if (acc === "nuevas") {
           nuevaCola(SRS.masNuevos(Datos.preguntas, leer, MAS_NUEVAS, []), "nuevas");
           render(vista);
@@ -349,17 +360,31 @@
     });
   }
 
+  function asegurarIndice() {
+    if (!s.porId) {
+      s.porId = {};
+      Datos.preguntas.forEach(function (p) { s.porId[p.id] = p; });
+    }
+  }
+
   window.Practicar = {
     titulo: "Practicar",
+    // Abre una cola con estas preguntas (desde Buscar). etiqueta: texto que se muestra arriba.
+    abrirLista: function (ids, etiqueta) {
+      asegurarIndice();
+      if (!s.modo) {
+        s.modo = Store.pref("modoPracticar") === "tema" ? "tema" : "repaso";
+        s.f = filtroInicial();
+      }
+      nuevaCola(ids.filter(function (id) { return s.porId[id]; }), etiqueta);
+      s.rearmar = false;
+    },
     // El Simulacro mandó fallos al repaso: rearmar la cola la próxima vez que se muestre.
     recargar: function () { s.rearmar = true; },
     // Progreso abrió un subtema: volver a leer modo y filtros de las preferencias.
     reiniciar: function () { s.modo = null; },
     mostrar: function (vista) {
-      if (!s.porId) {
-        s.porId = {};
-        Datos.preguntas.forEach(function (p) { s.porId[p.id] = p; });
-      }
+      asegurarIndice();
       if (!s.modo) {
         s.modo = Store.pref("modoPracticar") === "tema" ? "tema" : "repaso";
         s.f = filtroInicial();

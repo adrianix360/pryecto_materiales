@@ -55,23 +55,33 @@
 
   function armar() { if (s.modo === "repaso") armarRepaso(); else armarTema(); }
 
+  function etiquetaExtra() {
+    return s.extra === "nuevas" ? "Extra: tarjetas nuevas" :
+      s.extra === "adelantar" ? "Extra: repaso adelantado" : s.extra;
+  }
+
   function cabecera() {
     var html = UI.barraMeta() + UI.modo("est", s.modo);
     if (s.modo === "repaso") {
       var res = SRS.colaRepaso(Datos.tarjetas, leer, SRS.hoy(), Datos.indice.examen);
       var conVerif = s.cola.slice(s.pos).filter(function (id) { return s.porId[id].verificar; });
       html += UI.resumenRepaso(res, new Set(conVerif).size, NOMBRES_RESUMEN);
-      if (s.extra) html += '<p class="extra">' + (s.extra === "nuevas" ? "Extra: tarjetas nuevas" : "Extra: repaso adelantado") + "</p>";
     } else {
       html += UI.filtros("est", s.f, false);
     }
+    if (s.extra) html += '<p class="extra">' + UI.esc(etiquetaExtra()) + "</p>";
     return html;
   }
 
   function pantallaFin(vista) {
     var html = cabecera();
     var botones = "";
-    if (s.modo === "repaso") {
+    if (s.extra && s.extra !== "nuevas" && s.extra !== "adelantar") {
+      html += '<section class="tarjeta-info" aria-labelledby="h-fin"><h2 id="h-fin">Terminaste la lista</h2>' +
+        "<p>Repasaste " + new Set(s.cola).size + " tarjetas de «" + UI.esc(s.extra) + "».</p></section>" +
+        '<div class="acciones"><button type="button" class="btn btn--primario" data-accion="volver">Volver al ' +
+        (s.modo === "repaso" ? "repaso de hoy" : "modo por tema") + "</button></div>";
+    } else if (s.modo === "repaso") {
       var nuevas = SRS.masNuevos(Datos.tarjetas, leer, MAS_NUEVAS, []);
       var adel = SRS.adelantar(Datos.tarjetas, leer, SRS.hoy());
       var titulo = s.extra ? "Terminaste el extra" :
@@ -200,10 +210,11 @@
         enfocar(vista);
       });
     });
-    vista.querySelectorAll('[data-accion="otra"], [data-accion="nuevas"], [data-accion="adelantar"]').forEach(function (b) {
+    vista.querySelectorAll('[data-accion="otra"], [data-accion="nuevas"], [data-accion="adelantar"], [data-accion="volver"]').forEach(function (b) {
       b.addEventListener("click", function () {
         var acc = b.getAttribute("data-accion");
         if (acc === "otra") armarTema();
+        else if (acc === "volver") armar();
         else if (acc === "nuevas") nuevaCola(SRS.masNuevos(Datos.tarjetas, leer, MAS_NUEVAS, []), "nuevas");
         else nuevaCola(SRS.adelantar(Datos.tarjetas, leer, SRS.hoy()), "adelantar");
         render(vista);
@@ -212,13 +223,26 @@
     });
   }
 
+  function asegurarIndice() {
+    if (!s.porId) {
+      s.porId = {};
+      Datos.tarjetas.forEach(function (t) { s.porId[t.id] = t; });
+    }
+  }
+
   window.Estudiar = {
     titulo: "Estudiar",
-    mostrar: function (vista) {
-      if (!s.porId) {
-        s.porId = {};
-        Datos.tarjetas.forEach(function (t) { s.porId[t.id] = t; });
+    // Abre una cola con estas tarjetas (desde Buscar). etiqueta: texto que se muestra arriba.
+    abrirLista: function (ids, etiqueta) {
+      asegurarIndice();
+      if (!s.modo) {
+        s.modo = Store.pref("modoEstudiar") === "tema" ? "tema" : "repaso";
+        s.f = filtroInicial();
       }
+      nuevaCola(ids.filter(function (id) { return s.porId[id]; }), etiqueta);
+    },
+    mostrar: function (vista) {
+      asegurarIndice();
       if (!s.modo) {
         s.modo = Store.pref("modoEstudiar") === "tema" ? "tema" : "repaso";
         s.f = filtroInicial();
