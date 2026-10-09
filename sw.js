@@ -12,6 +12,7 @@ var ESTATICOS = [
   "index.html",
   "css/app.css",
   "js/version.js",
+  "js/srs.js",
   "js/store.js",
   "js/datos.js",
   "js/ui.js",
