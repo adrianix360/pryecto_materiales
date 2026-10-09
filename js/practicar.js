@@ -1,5 +1,8 @@
 // Practicar: selección única, selección múltiple y F/V con retroalimentación inmediata;
-// respuesta corta con autocalificación. Orden: sin responder, luego mal, parcial y bien.
+// respuesta corta con autocalificación.
+// Modo «Repaso de hoy» (por defecto): cola de SRS.colaRepaso (falladas, vencidas y nuevas
+// del día). Modo «Por tema»: filtros; orden sin responder, luego mal, parcial y bien.
+// En la sesión, una pregunta respondida mal vuelve 4 lugares después.
 // Las opciones no se barajan: las explicaciones citan las letras («Correcta la B»).
 (function () {
   "use strict";
@@ -12,11 +15,16 @@
     respuesta_corta: "Respuesta corta"
   };
   var RESULTADO = { bien: "Bien", parcial: "Parcial", mal: "Mal" };
+  var REINSERTAR_MAL = 4;
+  var MAS_NUEVAS = 10;
+  var NOMBRES_RESUMEN = { fallados: "falladas", vencidos: "vencidas", nuevos: "nuevas" };
 
   var s = {
-    f: null, cola: [], pos: 0, porId: null, filtrosAbiertos: false,
-    marcadas: [], texto: "", fase: "pregunta", resultado: null
+    modo: null, f: null, cola: [], pos: 0, porId: null, filtrosAbiertos: false, metaAbierta: false,
+    marcadas: [], texto: "", fase: "pregunta", resultado: null, extra: null, dia: null, inicio: Date.now()
   };
+
+  function leer(id) { return Store.pregunta(id); }
 
   function filtroInicial() {
     var f = Store.pref("filtroPracticar") || {};
@@ -28,11 +36,39 @@
     s.texto = "";
     s.fase = "pregunta";
     s.resultado = null;
+    s.inicio = Date.now();
+  }
+
+  function nuevaCola(ids, extra) {
+    s.cola = ids;
+    s.pos = 0;
+    s.extra = extra || null;
+    s.dia = SRS.hoy();
+    reiniciarPregunta();
+  }
+
+  function armarRepaso() {
+    nuevaCola(SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.indice.examen).ids.slice());
+  }
+
+  function armar() { if (s.modo === "repaso") armarRepaso(); else armarCola(); }
+
+  function cabecera() {
+    var html = UI.barraMeta() + UI.modo("pra", s.modo);
+    if (s.modo === "repaso") {
+      var res = SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.indice.examen);
+      var conVerif = s.cola.slice(s.pos).filter(function (id) { return s.porId[id].verificar; });
+      html += UI.resumenRepaso(res, new Set(conVerif).size, NOMBRES_RESUMEN);
+      if (s.extra) html += '<p class="extra">' + (s.extra === "nuevas" ? "Extra: preguntas nuevas" : "Extra: repaso adelantado") + "</p>";
+    } else {
+      html += UI.filtros("pra", s.f, true);
+    }
+    return html;
   }
 
   function armarCola() {
     var lista = Datos.preguntas.filter(function (p) { return UI.cumpleFiltro(p, s.f); });
-    lista = lista.map(function (p, i) { return { p: p, i: i, r: Store.pregunta(p.id) }; });
+    lista = lista.map(function (p, i) { return { p: p, i: i, r: leer(p.id) }; });
     lista.sort(function (a, b) {
       var pa = a.r ? PRIORIDAD[a.r.r] || 3 : 0;
       var pb = b.r ? PRIORIDAD[b.r.r] || 3 : 0;
@@ -40,9 +76,7 @@
       if (a.r && b.r && a.r.t !== b.r.t) return a.r.t - b.r.t;
       return a.i - b.i;
     });
-    s.cola = lista.map(function (x) { return x.p.id; });
-    s.pos = 0;
-    reiniciarPregunta();
+    nuevaCola(lista.map(function (x) { return x.p.id; }));
   }
 
   function correctas(p) {
@@ -142,24 +176,40 @@
     return a + ">" + saltar + "</div>";
   }
 
+  function pantallaFin(vista) {
+    var html = cabecera();
+    if (s.modo === "repaso") {
+      var nuevas = SRS.masNuevos(Datos.preguntas, leer, MAS_NUEVAS, []);
+      var adel = SRS.adelantar(Datos.preguntas, leer, SRS.hoy());
+      var titulo = s.extra ? "Terminaste el extra" :
+        s.cola.length ? "Terminaste el repaso de hoy" : "No tenés preguntas pendientes hoy";
+      var botones = "";
+      html += '<section class="tarjeta-info" aria-labelledby="h-fin"><h2 id="h-fin">' + titulo + "</h2>" +
+        "<p>" + (s.cola.length ? "Pasaste por " + new Set(s.cola).size + " preguntas. " : "") +
+        "Lo que vence mañana aparecerá en el repaso de mañana.</p></section>";
+      if (nuevas.length) botones += '<button type="button" class="btn btn--primario" data-accion="nuevas">Seguir con ' + nuevas.length + " nuevas</button>";
+      if (adel.length) botones += '<button type="button" class="btn" data-accion="adelantar">Adelantar repaso (' + adel.length + ")</button>";
+      if (botones) html += '<div class="botones-fin">' + botones + "</div>";
+    } else {
+      html += '<section class="tarjeta-info" aria-labelledby="h-fin"><h2 id="h-fin">Ronda terminada</h2>' +
+        "<p>Pasaste por las " + new Set(s.cola).size + " preguntas de este filtro.</p></section>" +
+        '<div class="acciones"><button type="button" class="btn btn--primario" data-accion="otra">Empezar otra ronda</button></div>';
+    }
+    vista.innerHTML = html;
+    conectar(vista);
+  }
+
   function render(vista) {
-    var html = UI.filtros("pra", s.f, true);
-    if (!s.cola.length) {
+    var html = cabecera();
+    if (s.modo === "tema" && !s.cola.length) {
       vista.innerHTML = html + '<p class="vacio">No hay preguntas con ese filtro.</p>';
       conectar(vista);
       return;
     }
-    if (s.pos >= s.cola.length) {
-      vista.innerHTML = html +
-        '<section class="tarjeta-info" aria-labelledby="h-fin"><h2 id="h-fin">Ronda terminada</h2>' +
-        "<p>Pasaste por las " + s.cola.length + " preguntas de este filtro.</p></section>" +
-        '<div class="acciones"><button type="button" class="btn btn--primario" data-accion="otra">Empezar otra ronda</button></div>';
-      conectar(vista);
-      return;
-    }
+    if (s.pos >= s.cola.length) { pantallaFin(vista); return; }
 
     var p = s.porId[s.cola[s.pos]];
-    var prev = Store.pregunta(p.id);
+    var prev = leer(p.id);
     html += '<p class="contador">Pregunta ' + (s.pos + 1) + " de " + s.cola.length + "</p>";
     html += '<div class="chips">' +
       '<span class="chip">' + UI.esc(TIPOS[p.tipo]) + "</span>" +
@@ -167,7 +217,7 @@
         '<span class="chip chip--examen">' + UI.esc(Datos.etiquetaExamen(p.examen)) + "</span>" :
         '<span class="chip">Teoría</span>') +
       '<span class="chip">' + UI.esc(p.subtema) + "</span>" +
-      (prev ? '<span class="chip">Última vez: ' + UI.esc(RESULTADO[prev.r] || prev.r) + "</span>" : "") +
+      (prev ? '<span class="chip">Última vez: ' + UI.esc(RESULTADO[prev.r] || prev.r) + "</span>" : '<span class="chip">Nueva</span>') +
       (p.verificar ? '<span class="chip chip--verificar">⚠ Verificar</span>' : "") +
       "</div>";
 
@@ -195,18 +245,43 @@
   function cerrar(vista, p, resultado, resp) {
     s.resultado = resultado;
     s.fase = "respondida";
-    Store.responderPregunta(p.id, resultado, resp);
+    var prev = leer(p.id);
+    var reg = SRS.aplicar(prev, resultado, {
+      id: p.id, hoy: SRS.hoy(), examen: Datos.indice.examen, verificar: !!p.verificar, ahora: Date.now()
+    });
+    reg.bien = (prev && prev.bien || 0) + (resultado === "bien" ? 1 : 0);
+    reg.resp = resp;
+    Store.guardarPregunta(p.id, reg);
+    UI.registrarTiempo(s.inicio);
+    if (resultado === "mal") {
+      s.cola.splice(Math.min(s.pos + 1 + REINSERTAR_MAL, s.cola.length), 0, p.id);
+    }
     render(vista);
     var r = vista.querySelector("#retro");
     if (r) r.focus();
   }
 
   function conectar(vista) {
-    var det = vista.querySelector(".filtros");
-    if (det) {
-      det.open = s.filtrosAbiertos;
-      det.addEventListener("toggle", function () { s.filtrosAbiertos = det.open; });
-    }
+    vista.querySelectorAll("details.filtros, details.meta").forEach(function (det) {
+      var esMeta = det.getAttribute("data-panel") === "meta";
+      det.open = esMeta ? s.metaAbierta : s.filtrosAbiertos;
+      det.addEventListener("toggle", function () {
+        if (esMeta) s.metaAbierta = det.open; else s.filtrosAbiertos = det.open;
+      });
+    });
+    UI.conectarModo(vista, function (m) {
+      s.modo = m;
+      Store.pref("modoPracticar", m);
+      armar();
+      render(vista);
+      var b = vista.querySelector('[data-modo="' + m + '"]');
+      if (b) b.focus();
+    });
+    UI.conectarMeta(vista, function () {
+      render(vista);
+      var sel = vista.querySelector("[data-meta]");
+      if (sel) sel.focus();
+    });
     UI.conectarFiltros(vista, s.f, true, function (nuevo) {
       s.f = nuevo;
       Store.pref("filtroPracticar", nuevo);
@@ -257,6 +332,12 @@
         } else if (acc === "otra") {
           armarCola();
           render(vista);
+        } else if (acc === "nuevas") {
+          nuevaCola(SRS.masNuevos(Datos.preguntas, leer, MAS_NUEVAS, []), "nuevas");
+          render(vista);
+        } else if (acc === "adelantar") {
+          nuevaCola(SRS.adelantar(Datos.preguntas, leer, SRS.hoy()), "adelantar");
+          render(vista);
         }
       });
     });
@@ -275,7 +356,13 @@
         s.porId = {};
         Datos.preguntas.forEach(function (p) { s.porId[p.id] = p; });
       }
-      if (!s.f) { s.f = filtroInicial(); armarCola(); }
+      if (!s.modo) {
+        s.modo = Store.pref("modoPracticar") === "tema" ? "tema" : "repaso";
+        s.f = filtroInicial();
+        armar();
+      } else if (s.modo === "repaso" && !s.extra && s.dia !== SRS.hoy() && s.fase === "pregunta") {
+        armarRepaso(); // cambió el día con la app abierta
+      }
       render(vista);
     }
   };
