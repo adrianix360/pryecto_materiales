@@ -1,0 +1,17 @@
+{
+  "name": "Materiales IC-0604 · I examen",
+  "short_name": "Materiales",
+  "description": "Repaso de teoría para el I examen de IC-0604 Materiales de Construcción (UCR).",
+  "lang": "es-CR",
+  "start_url": "./#/estudiar",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f5f1",
+  "theme_color": "#0b57a4",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
