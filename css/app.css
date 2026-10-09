@@ -456,6 +456,59 @@ img { max-width: 100%; height: auto; }
 .proximamente { text-align: center; padding: 40px 8px; }
 .proximamente__icono { font-size: 2.4rem; }
 
+/* ---------- Meta diaria, modo y repaso ---------- */
+.meta {
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+}
+.meta > summary {
+  display: block;
+  min-height: 48px;
+  padding: 8px 12px 10px;
+  cursor: pointer;
+  list-style: none;
+}
+.meta > summary::-webkit-details-marker { display: none; }
+.meta__fila { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+.meta__texto { flex: 1; font-weight: 600; }
+.meta__cambiar { color: var(--primario); font-weight: 600; font-size: 0.95rem; }
+.meta[open] .meta__cambiar { visibility: hidden; }
+.meta__barra { display: block; height: 8px; border-radius: 999px; background: var(--superficie-2); overflow: hidden; }
+.meta__barra span { display: block; height: 100%; background: var(--primario); border-radius: 999px; }
+.meta--cumplida { border-color: var(--bien); background: var(--bien-fondo); }
+.meta--cumplida .meta__texto { color: var(--bien); }
+.meta--cumplida .meta__barra span { background: var(--bien); }
+
+.modo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 10px;
+  padding: 4px;
+  border-radius: 14px;
+  background: var(--superficie-2);
+}
+.modo__opcion {
+  min-height: 48px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--texto-suave);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.modo__opcion[aria-pressed="true"] { background: var(--superficie); color: var(--texto); box-shadow: var(--sombra); outline: 2px solid var(--primario); outline-offset: -2px; }
+
+.repaso { margin-bottom: 4px; }
+.repaso__fecha { margin: 0 0 6px; line-height: 1.35; }
+.chip--fallado { background: var(--mal-fondo); color: var(--mal); }
+.nota { margin: 0; font-size: 0.95rem; color: var(--texto-suave); }
+.extra { margin: 0 0 8px; font-weight: 600; color: var(--texto-suave); }
+.botones-fin { display: grid; gap: 10px; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
