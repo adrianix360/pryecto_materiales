@@ -353,6 +353,8 @@
     titulo: "Practicar",
     // El Simulacro mandó fallos al repaso: rearmar la cola la próxima vez que se muestre.
     recargar: function () { s.rearmar = true; },
+    // Progreso abrió un subtema: volver a leer modo y filtros de las preferencias.
+    reiniciar: function () { s.modo = null; },
     mostrar: function (vista) {
       if (!s.porId) {
         s.porId = {};
