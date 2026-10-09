@@ -108,7 +108,7 @@ def capturar(nav, url, esquema):
     pag.get_by_role("button", name="Ver respuesta").click()
     foto("practicar-corta-vista")
 
-    for ruta in ("progreso", "buscar"):
+    for ruta in ("buscar",):
         pag.locator(f'.nav__item[data-ruta="{ruta}"]').click()
         foto(ruta)
     pag.locator(".barra__acerca").click()
@@ -190,6 +190,40 @@ def capturar_simulacro(nav, url, esquema):
     ctx.close()
 
 
+def capturar_progreso(nav, url, esquema):
+    import test_app
+    ctx = contexto(nav, esquema)
+    ctx.add_init_script(
+        "try { if (!sessionStorage.getItem('sembrado')) {"
+        f" localStorage.setItem({json.dumps(CLAVE)}, {json.dumps(json.dumps(test_app.progreso_de_ejemplo()))});"
+        " sessionStorage.setItem('sembrado', '1'); } } catch (e) {}")
+    pag = ctx.new_page()
+
+    def foto(nombre):
+        pag.wait_for_timeout(300)
+        pag.screenshot(path=os.path.join(SALIDA, f"{esquema}-p{nombre}.png"))
+
+    pag.goto(url + "#/progreso")
+    listo(pag)
+    foto("1-resumen")
+    pag.evaluate("document.querySelector('#h-tiempo').scrollIntoView(); window.scrollBy(0, -70)")
+    foto("2-tiempo-y-dominio")
+    pag.locator('details.dominio[data-tema="2"] summary').click()
+    pag.locator('details.dominio[data-tema="2"]').scroll_into_view_if_needed()
+    foto("3-subtemas")
+    pag.evaluate("document.querySelector('#h-reforzar').scrollIntoView(); window.scrollBy(0, -70)")
+    foto("4-reforzar")
+    pag.locator("#archivo-progreso").set_input_files(files=[{"name": "p.json", "mimeType": "application/json",
+        "buffer": json.dumps({"app": "pryecto_materiales", "formato": 1, "exportado": "2026-10-08T20:00:00.000Z",
+                              "progreso": test_app.progreso_de_ejemplo()}).encode()}])
+    pag.locator(".confirmar").scroll_into_view_if_needed()
+    foto("5-importar")
+    pag.get_by_role("button", name="Cancelar").click()
+    pag.get_by_role("button", name="Borrar mi progreso").click()
+    foto("6-borrar")
+    ctx.close()
+
+
 def main():
     os.makedirs(SALIDA, exist_ok=True)
     for f in os.listdir(SALIDA):
@@ -201,6 +235,7 @@ def main():
         for esquema in ("light", "dark"):
             capturar(nav, url, esquema)
             capturar_simulacro(nav, url, esquema)
+            capturar_progreso(nav, url, esquema)
         nav.close()
     srv.shutdown()
     print(f"{len(os.listdir(SALIDA))} capturas en {SALIDA}")

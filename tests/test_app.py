@@ -92,6 +92,8 @@ def revisar_pantalla(pag, nombre):
       .map(e => [e.getBoundingClientRect().height, e.textContent.trim().slice(0, 25)])
       .filter(([h]) => h < 47.5)""")
     assert not bajos, f"{nombre}: controles de menos de 48 px: {bajos[:5]}"
+    alto_barra = pag.evaluate("document.querySelector('header.barra').getBoundingClientRect().height")
+    assert alto_barra < 70, f"{nombre}: el encabezado se deformó ({alto_barra}px)"
     pie = pag.locator("footer.pie")
     assert pie.inner_text().strip() == "Desarrollado por Adrián Castro Ramírez", f"{nombre}: pie distinto"
 
@@ -586,6 +588,116 @@ def simulacro_manda_los_fallos_a_repaso_de_hoy(nav, url):
     pag.get_by_role("button", name="Nuevo simulacro").click()
     assert "Tus últimos simulacros" in pag.locator("#vista").inner_text()
     assert not errores, errores
+    ctx.close()
+
+
+def progreso_de_ejemplo():
+    """Progreso sembrado: 3 días seguidos de estudio y algunos ítems calificados."""
+    def r(res, n, dias, **extra):
+        return {"r": res, "n": n, "t": pag_ms(FECHA, -dias), "caja": 1, "vence": "2026-10-10",
+                "visto": "2026-10-07", **extra}
+    return {
+        "tarjetas": {"t1-1A-01": r("sabia", 2, 1), "t1-1A-02": r("no", 1, 1), "t2-2A-01": r("dudosa", 1, 2)},
+        "preguntas": {"p1-1A-t01": r("bien", 2, 1, bien=2, resp="b"), "p2-2A-x01": r("mal", 3, 0, bien=1, resp="a")},
+        "diario": {"2026-10-07": {"seg": 1800, "items": 30}, "2026-10-08": {"seg": 2700, "items": 45},
+                   "2026-10-09": {"seg": 600, "items": 12}, "2026-10-05": {"seg": 300, "items": 4}},
+        "prefs": {"meta": {"unidad": "minutos", "valor": 40}},
+        "historial": [{"fecha": "2026-10-08", "duracion": 25, "temas": [1, 2, 3], "puntos": 28, "maximo": 40, "nota": 70, "usado": 1260000}],
+        "simulacro": None,
+    }
+
+
+@prueba
+def progreso_muestra_cuenta_regresiva_racha_tiempo_y_dominio(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/progreso", sembrar=progreso_de_ejemplo())
+    expect(pag.locator("#titulo")).to_have_text("Progreso")
+    assert pag.locator(".cuenta__num").inner_text() == "8"
+    assert "Sábado 17 de octubre, 8:00 a. m." in pag.locator(".cuenta").inner_text()
+    kpis = " ".join(pag.locator(".kpis").inner_text().split())
+    assert "3 días de racha incluye hoy" in kpis, kpis
+    assert "325 sin ver" in kpis, kpis  # 147 + 183 − 5 vistos
+    tiempo = pag.locator("#h-tiempo").locator("..").inner_text()
+    assert "Hoy: 10 / 40 min" in tiempo and "últimos 7 días: 90 min" in tiempo, tiempo
+    lista = pag.locator("#h-tiempo ~ ul.solo-lector").inner_text()
+    assert "viernes 9 de octubre: 10 min, 12 ítems" in lista, lista
+    assert pag.locator("svg.grafico rect").count() == 7
+    # 5 de 330 vistos; sabidos: t1-1A-01 y p1-1A-t01 → 1 %; aciertos 3 de 5 = 60 %
+    assert "General: 1 % dominado · 60 % de aciertos" in pag.locator(".dominio__global").inner_text()
+    t1 = pag.locator('details.dominio[data-tema="1"]')
+    t1.locator("summary").click()
+    sub = t1.locator('li[data-subtema="1A"]').inner_text()
+    assert "3 de 18 vistos" in sub and "100 % de aciertos" in sub, sub
+    reforzar = pag.locator(".reforzar").inner_text()
+    assert "2A" in reforzar and "1A" in reforzar, reforzar
+    revisar_pantalla(pag, "progreso")
+    pag.locator('[data-reforzar="2A"]').click()
+    expect(pag.locator("#titulo")).to_have_text("Practicar")
+    expect(pag.locator('[data-modo="tema"]')).to_have_attribute("aria-pressed", "true")
+    assert pag.locator(".filtros__resumen").last.inner_text().startswith("Tema 2 · 2A")
+    assert pag.locator(".pregunta").get_attribute("data-id").startswith("p2-2A-")
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def exportar_borrar_e_importar_el_progreso(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/progreso", sembrar=progreso_de_ejemplo())
+    with pag.expect_download() as info:
+        pag.get_by_role("button", name="Exportar progreso (.json)").click()
+    descarga = info.value
+    assert descarga.suggested_filename == f"progreso-materiales-{FECHA}.json"
+    import tempfile
+    ruta = os.path.join(tempfile.mkdtemp(), descarga.suggested_filename)
+    descarga.save_as(ruta)  # se copia: la descarga se borra al cerrar el contexto
+    archivo = json.loads(open(ruta, encoding="utf-8").read())
+    assert archivo["app"] == "pryecto_materiales" and archivo["formato"] == 1
+    assert set(archivo["progreso"]["tarjetas"]) == {"t1-1A-01", "t1-1A-02", "t2-2A-01"}
+    # borrar con confirmación
+    pag.get_by_role("button", name="Borrar mi progreso").click()
+    assert "No se puede deshacer" in pag.locator(".confirmar").inner_text()
+    pag.get_by_role("button", name="Cancelar").click()
+    assert progreso(pag)["tarjetas"], "cancelar no borra"
+    pag.get_by_role("button", name="Borrar mi progreso").click()
+    with pag.expect_navigation():
+        pag.get_by_role("button", name="Sí, borrar todo").click()
+    pag.wait_for_selector("body[data-listo='1']")
+    expect(pag.locator(".enviado")).to_have_text("✓ Se borró tu progreso.")
+    guardado = progreso(pag)
+    assert guardado["tarjetas"] == {} and guardado["preguntas"] == {} and guardado["diario"] == {} and guardado["historial"] == []
+    assert guardado["prefs"]["meta"] == {"unidad": "minutos", "valor": 40}, "los ajustes se conservan"
+    assert pag.locator(".kpi__valor").nth(1).inner_text() == "330"
+    # archivo inválido
+    pag.locator("#archivo-progreso").set_input_files(
+        files=[{"name": "otro.json", "mimeType": "application/json", "buffer": b'{"app": "otra"}'}])
+    expect(pag.locator(".error")).to_contain_text("no es un progreso de esta app")
+    pag.locator("#archivo-progreso").set_input_files(
+        files=[{"name": "roto.json", "mimeType": "application/json", "buffer": b"esto no es json"}])
+    expect(pag.locator(".error")).to_contain_text("no es un JSON de progreso")
+    # importar y combinar
+    pag.locator("#archivo-progreso").set_input_files(ruta)
+    resumen = pag.locator(".confirmar").inner_text()
+    assert "3 tarjetas, 2 preguntas, 4 días de estudio y 1 simulacro" in resumen, resumen
+    revisar_pantalla(pag, "progreso importar")
+    with pag.expect_navigation():
+        pag.get_by_role("button", name="Combinar (recomendado)").click()
+    pag.wait_for_selector("body[data-listo='1']")
+    expect(pag.locator(".enviado")).to_have_text("✓ Progreso combinado con el archivo.")
+    guardado = progreso(pag)
+    assert set(guardado["tarjetas"]) == {"t1-1A-01", "t1-1A-02", "t2-2A-01"}
+    assert guardado["diario"]["2026-10-08"]["items"] == 45 and len(guardado["historial"]) == 1
+    assert pag.locator(".kpi__valor").nth(2).inner_text() == "3", "vuelve la racha"
+    ctx.close()
+    # reemplazar en otro «teléfono» con otro progreso
+    otro = {"tarjetas": {"t3-3A-01": {"r": "sabia", "n": 1, "t": pag_ms(FECHA, 0), "caja": 2, "vence": "2026-10-11", "visto": FECHA}},
+            "preguntas": {}, "diario": {}, "prefs": {}, "historial": []}
+    ctx, pag, errores2 = nueva_pagina(nav, url + "#/progreso", sembrar=otro)
+    pag.locator("#archivo-progreso").set_input_files(ruta)
+    with pag.expect_navigation():
+        pag.get_by_role("button", name="Reemplazar").click()
+    pag.wait_for_selector("body[data-listo='1']")
+    guardado = progreso(pag)
+    assert "t3-3A-01" not in guardado["tarjetas"] and "t1-1A-01" in guardado["tarjetas"]
+    assert not errores and not errores2, errores + errores2
     ctx.close()
 
 
