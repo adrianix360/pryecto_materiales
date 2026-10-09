@@ -108,7 +108,7 @@ def capturar(nav, url, esquema):
     pag.get_by_role("button", name="Ver respuesta").click()
     foto("practicar-corta-vista")
 
-    for ruta in ("simulacro", "progreso", "buscar"):
+    for ruta in ("progreso", "buscar"):
         pag.locator(f'.nav__item[data-ruta="{ruta}"]').click()
         foto(ruta)
     pag.locator(".barra__acerca").click()
@@ -134,6 +134,62 @@ def capturar(nav, url, esquema):
     ctx.close()
 
 
+def capturar_simulacro(nav, url, esquema):
+    ctx = contexto(nav, esquema)
+    ctx.clock.install(time=1_791_640_800)
+    pag = ctx.new_page()
+
+    def foto(nombre):
+        pag.wait_for_timeout(300)
+        pag.screenshot(path=os.path.join(SALIDA, f"{esquema}-s{nombre}.png"))
+
+    def actual():
+        return pag.evaluate("""(() => { const id = document.querySelector('.pregunta').dataset.id;
+            return Datos.preguntas.find(p => p.id === id); })()""")
+
+    pag.goto(url + "#/simulacro")
+    listo(pag)
+    foto("1-configurar")
+    pag.get_by_role("button", name="Empezar simulacro").click()
+    foto("2-seleccion-unica")
+    vf_falso = None
+    for i in range(23):
+        p = actual()
+        if p["tipo"] == "respuesta_corta":
+            pag.fill("#resp-texto", "Se mide con el ensayo indicado por la norma.")
+        else:
+            op = p["correcta"] if i % 3 else p["opciones"][0]["id"]
+            pag.locator(f'[data-opcion="{op}"]').click()
+            if pag.locator("#resp-justif").count():
+                pag.fill("#resp-justif", "Es falso porque el valor correcto es otro.")
+                if vf_falso is None:
+                    vf_falso = i
+                    pag.clock.fast_forward(21 * 60 * 1000)
+                    foto("3-falso-con-justificacion")
+        if i < 22:
+            pag.get_by_role("button", name="Siguiente →").click()
+    pag.locator("details.mapa summary").click()
+    pag.locator("details.mapa").scroll_into_view_if_needed()
+    foto("4-mapa-de-preguntas")
+    pag.locator("details.mapa summary").click()
+    pag.locator(".acciones").get_by_role("button", name="Terminar").click()
+    foto("5-confirmar")
+    pag.get_by_role("button", name="Sí, terminar").click()
+    foto("6-autoevaluacion")
+    for b in pag.locator('[data-justif="si"]').all():
+        b.click()
+    for c in pag.locator("[data-punto]").all()[::2]:
+        c.check()
+    pag.locator("[data-punto]").first.scroll_into_view_if_needed()
+    foto("7-autoevaluacion-puntos")
+    pag.get_by_role("button", name="Ver resultado").click()
+    foto("8-resultado")
+    pag.locator("details.revision--mal summary").first.click()
+    pag.locator("details.revision--mal").first.scroll_into_view_if_needed()
+    foto("9-revision")
+    ctx.close()
+
+
 def main():
     os.makedirs(SALIDA, exist_ok=True)
     for f in os.listdir(SALIDA):
@@ -144,6 +200,7 @@ def main():
         nav = p.chromium.launch()
         for esquema in ("light", "dark"):
             capturar(nav, url, esquema)
+            capturar_simulacro(nav, url, esquema)
         nav.close()
     srv.shutdown()
     print(f"{len(os.listdir(SALIDA))} capturas en {SALIDA}")

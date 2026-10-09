@@ -7,6 +7,7 @@ Sale con código 1 si alguna prueba falla.
 """
 import json
 import os
+import re
 import sys
 import traceback
 
@@ -418,6 +419,172 @@ def repaso_de_practicar_reinserta_las_falladas_y_muestra_verificar(nav, url):
     pag.locator(f'[data-opcion="{verif["correcta"]}"]').click()
     reg = progreso(pag)["preguntas"][verif["id"]]
     assert reg["caja"] == 1 and reg["vence"] == "2026-10-10", reg
+    assert not errores, errores
+    ctx.close()
+
+
+def abrir_simulacro(nav, url, reloj=None, sembrar=None):
+    """Abre Simulacro. reloj: hora simulada (ms) para controlar el temporizador."""
+    ctx = nav.new_context(viewport=VIEWPORT, service_workers="block")
+    ctx.add_init_script(f"window.__fechaPrueba = {json.dumps(FECHA)};")
+    if sembrar is not None:
+        ctx.add_init_script(
+            "try { if (!sessionStorage.getItem('sembrado')) {"
+            f" localStorage.setItem({json.dumps(CLAVE)}, {json.dumps(json.dumps(sembrar))});"
+            " sessionStorage.setItem('sembrado', '1'); } } catch (e) {}")
+    if reloj is not None:
+        ctx.clock.install(time=reloj / 1000)
+    pag = ctx.new_page()
+    errores = []
+    pag.on("pageerror", lambda e: errores.append(str(e)))
+    pag.on("console", lambda m: errores.append(m.text) if m.type == "error" else None)
+    pag.goto(url + "#/simulacro")
+    pag.wait_for_selector("body[data-listo='1']")
+    return ctx, pag, errores
+
+
+def examen_guardado(pag):
+    return progreso(pag).get("simulacro")
+
+
+def pregunta_actual(pag):
+    return pag.evaluate("""(() => { const id = document.querySelector('.pregunta').dataset.id;
+        return Datos.preguntas.find(p => p.id === id); })()""")
+
+
+RELOJ_0 = 1_791_640_800_000  # hora fija para el temporizador
+
+
+@prueba
+def simulacro_completo_sin_retroalimentacion_hasta_terminar(nav, url):
+    ctx, pag, errores = abrir_simulacro(nav, url, reloj=RELOJ_0)
+    expect(pag.locator("#titulo")).to_have_text("Simulacro")
+    expect(pag.locator('[data-duracion="25"]')).to_have_attribute("aria-pressed", "true")
+    assert "Total: 40 puntos" in pag.locator("#vista").inner_text()
+    revisar_pantalla(pag, "simulacro configurar")
+    pag.get_by_role("button", name="Empezar simulacro").click()
+    expect(pag.locator("#reloj-tiempo")).to_have_text("25:00")
+    e = examen_guardado(pag)
+    assert len(e["ids"]) == 23 and e["fase"] == "examen"
+    revisar_pantalla(pag, "simulacro examen")
+    for i in range(23):
+        p = pregunta_actual(pag)
+        if p["tipo"] == "respuesta_corta":
+            pag.fill("#resp-texto", "Respuesta " + str(i))
+        else:
+            pag.locator(f'[data-opcion="{p["correcta"]}"]').click()
+            if p["tipo"] == "verdadero_falso" and pag.locator("#resp-justif").count():
+                pag.fill("#resp-justif", "Justificación " + str(i))
+        # sin retroalimentación durante el examen
+        assert pag.locator(".retro, .es-correcta, .es-incorrecta, .verificar").count() == 0
+        if i < 22:
+            pag.get_by_role("button", name="Siguiente →").click()
+    revisar_pantalla(pag, "simulacro última")
+    pag.clock.fast_forward(12 * 60 * 1000)
+    pag.locator(".acciones").get_by_role("button", name="Terminar").click()
+    assert "Respondiste todas" in pag.locator(".confirmar").inner_text()
+    pag.get_by_role("button", name="Sí, terminar").click()
+    expect(pag.locator("#h-auto")).to_have_text("Autoevaluación")
+    revisar_pantalla(pag, "simulacro autoevaluación")
+    for b in pag.locator('[data-justif="si"]').all():
+        b.click()
+    for c in pag.locator("[data-punto]").all():
+        c.check()
+    pag.get_by_role("button", name="Ver resultado").click()
+    texto = pag.locator("#vista").inner_text()
+    assert "100" in pag.locator(".nota-final__valor").inner_text(), texto[:300]
+    assert "40 de 40 puntos" in texto
+    # 12 min simulados + los segundos reales que tardó la prueba en contestar
+    assert re.search(r"Tiempo usado: 12:[0-5]\d de 25:00", texto), texto[:300]
+    assert pag.locator("details.revision").count() == 23
+    assert pag.locator('[data-accion="mandar"]').count() == 0, "sin fallos no se ofrece mandar al repaso"
+    pag.locator("details.revision").first.locator("summary").click()
+    assert "Fuente" in pag.locator("details.revision").first.inner_text()
+    revisar_pantalla(pag, "simulacro resultado")
+    hist = progreso(pag)["historial"]
+    assert hist[0]["nota"] == 100 and 12 * 60 * 1000 <= hist[0]["usado"] < 13 * 60 * 1000, hist
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def temporizador_sobrevive_a_la_recarga_y_cierra_solo(nav, url):
+    ctx, pag, errores = abrir_simulacro(nav, url, reloj=RELOJ_0)
+    pag.get_by_role("button", name="Empezar simulacro").click()
+    p = pregunta_actual(pag)
+    pag.locator("[data-opcion]").first.click()
+    pag.clock.fast_forward(10 * 60 * 1000)
+    expect(pag.locator("#reloj-tiempo")).to_have_text("15:00")
+    # recarga (o el teléfono cerró la pestaña): sigue el mismo examen y el mismo tiempo
+    pag.reload()
+    pag.wait_for_selector("body[data-listo='1']")
+    expect(pag.locator("#reloj-tiempo")).to_have_text("15:00")
+    assert pregunta_actual(pag)["id"] == p["id"]
+    expect(pag.locator("[data-opcion]").first).to_have_attribute("aria-pressed", "true")
+    # pantalla bloqueada 11 min: al volver se recalcula con la hora real
+    pag.clock.fast_forward(11 * 60 * 1000)
+    pag.evaluate("document.dispatchEvent(new Event('visibilitychange'))")
+    expect(pag.locator("#reloj-tiempo")).to_have_text("4:00")
+    expect(pag.locator("#reloj")).to_have_class("reloj reloj--poco")
+    pag.clock.fast_forward(4 * 60 * 1000 + 1000)
+    expect(pag.locator("#h-res, #h-auto")).to_be_visible()
+    e = examen_guardado(pag)
+    assert e["porTiempo"] is True and e["terminado"] - e["inicio"] == 25 * 60 * 1000, e
+    assert "se acabó el tiempo" in pag.locator("#vista").inner_text().lower()
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def examen_vencido_al_volver_se_cierra(nav, url):
+    preguntas = []
+    for n in (1, 2, 3):
+        preguntas += json.load(open(os.path.join(servidor.RAIZ, f"data/preguntas/tema{n}.json"), encoding="utf-8"))["preguntas"]
+    ids = [p["id"] for p in preguntas if p["tipo"] == "seleccion_unica"][:6]
+    vencido = {"tarjetas": {}, "preguntas": {}, "prefs": {}, "simulacro": {
+        "v": 1, "duracion": 25, "temas": [1, 2, 3], "semilla": 1, "ids": ids, "faltan": {},
+        "inicio": RELOJ_0 - 60 * 60 * 1000, "fin": RELOJ_0 - 35 * 60 * 1000, "terminado": None,
+        "porTiempo": False, "fase": "examen", "pos": 2, "resp": {ids[0]: {"op": "a"}}, "auto": {}, "enviados": False}}
+    ctx, pag, errores = abrir_simulacro(nav, url, reloj=RELOJ_0, sembrar=vencido)
+    expect(pag.locator("#h-res")).to_be_visible()
+    assert "se acabó el tiempo" in pag.locator(".nota-final").inner_text()
+    assert "25:00 de 25:00" in pag.locator(".nota-final").inner_text()
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def simulacro_manda_los_fallos_a_repaso_de_hoy(nav, url):
+    ctx, pag, errores = abrir_simulacro(nav, url, reloj=RELOJ_0)
+    pag.locator('[data-tema="1"]').uncheck()
+    pag.locator('[data-tema="2"]').uncheck()
+    assert "faltan" not in pag.locator(".tarjeta-info").first.inner_text()
+    pag.get_by_role("button", name="Empezar simulacro").click()
+    e = examen_guardado(pag)
+    assert e["temas"] == [3]
+    assert all(pag.evaluate(f"Datos.preguntas.find(p => p.id === {json.dumps(i)}).tema") == 3 for i in e["ids"])
+    # responde bien solo la primera y termina
+    p = pregunta_actual(pag)
+    pag.locator(f'[data-opcion="{p["correcta"]}"]').click()
+    pag.locator("details.mapa summary").click()
+    pag.locator("details.mapa").get_by_role("button", name="Terminar examen").click()
+    assert "Te quedan 22 sin responder" in pag.locator(".confirmar").inner_text()
+    pag.get_by_role("button", name="Sí, terminar").click()
+    expect(pag.locator("#h-res")).to_be_visible()
+    pag.get_by_role("button", name="Mandar 22 fallos a Repaso de hoy").click()
+    expect(pag.locator(".enviado")).to_contain_text("22 preguntas quedaron")
+    guardado = progreso(pag)["preguntas"]
+    fallos = [i for i in e["ids"] if i != p["id"]]
+    assert all(guardado[i]["caja"] == 0 and guardado[i]["vence"] == FECHA for i in fallos)
+    assert p["id"] not in guardado, "lo acertado no se toca"
+    pag.locator(".enviado a").click()
+    expect(pag.locator("#titulo")).to_have_text("Practicar")
+    assert "22 falladas" in pag.locator(".repaso").inner_text()
+    assert pag.locator(".pregunta").get_attribute("data-id") in fallos
+    # «Nuevo simulacro» vuelve a configurar y conserva el historial
+    pag.locator('.nav__item[data-ruta="simulacro"]').click()
+    pag.get_by_role("button", name="Nuevo simulacro").click()
+    assert "Tus últimos simulacros" in pag.locator("#vista").inner_text()
     assert not errores, errores
     ctx.close()
 
