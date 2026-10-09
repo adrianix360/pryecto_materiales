@@ -18,6 +18,8 @@ var ESTATICOS = [
   "js/ui.js",
   "js/estudiar.js",
   "js/practicar.js",
+  "js/examen.js",
+  "js/simulacro.js",
   "js/app.js",
   "manifest.webmanifest",
   "icons/icon-192.png",

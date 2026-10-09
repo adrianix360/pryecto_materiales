@@ -39,7 +39,7 @@
   var RUTAS = {
     estudiar: window.Estudiar,
     practicar: window.Practicar,
-    simulacro: Proximamente("Simulacro", "Un examen cronometrado con preguntas de todos los temas."),
+    simulacro: window.Simulacro,
     progreso: Proximamente("Progreso", "Tu avance por tema y subtema, y lo que conviene repasar."),
     buscar: Proximamente("Buscar", "Búsqueda en tarjetas, preguntas y glosario."),
     acerca: Acerca
