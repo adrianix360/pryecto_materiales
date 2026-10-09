@@ -102,6 +102,19 @@ test("calificaciones: sube, baja y falla", () => {
   assert.equal(SRS.aplicar(null, "mal", o).caja, 0);
 });
 
+test("en la recta final, lo dudoso vuelve al día siguiente", () => {
+  const id = ["a", "b", "c", "d", "e", "f"].find((x) => SRS.diaFinal(x, EXAMEN) < VISPERA);
+  const tope = SRS.diaFinal(id, EXAMEN);
+  const prev = { r: "sabia", n: 3, t: 1, caja: 3, vence: tope, visto: "2026-10-09" };
+  const dudosa = SRS.aplicar(prev, "dudosa", { id, hoy: tope, examen: EXAMEN, ahora: 2 });
+  assert.equal(dudosa.caja, 2);
+  assert.equal(dudosa.vence, SRS.sumar(tope, 1));
+  const sabia = SRS.aplicar(prev, "sabia", { id, hoy: tope, examen: EXAMEN, ahora: 2 });
+  assert.ok(sabia.vence > EXAMEN, "lo que sabía ya no vuelve antes del examen");
+  const enVispera = SRS.aplicar(prev, "dudosa", { id, hoy: VISPERA, examen: EXAMEN, ahora: 3 });
+  assert.equal(enVispera.vence, SRS.sumar(VISPERA, 2), "en la víspera ya no hay mañana antes del examen");
+});
+
 test("ítems con «verificar» no pasan de la caja 2", () => {
   let r = null;
   for (let i = 0; i < 6; i++) r = SRS.aplicar(r, "sabia", { hoy: "2026-10-01", examen: null, ahora: i, verificar: true });

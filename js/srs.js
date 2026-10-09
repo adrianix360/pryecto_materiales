@@ -13,7 +13,8 @@
 //   · mientras no llegue ese día, ningún intervalo lo salta: la fecha de repaso es como
 //     máximo su día de repaso final;
 //   · cuando ya se repasó en su día de repaso final o después, vuelve a los intervalos
-//     normales: solo sale otra vez antes del examen si se falla o queda dudoso.
+//     normales: solo sale otra vez antes del examen si se falla (hoy mismo) o queda
+//     dudoso (al día siguiente, si todavía no es la víspera).
 // Ítems con «verificar»: caja máxima 2, para que vuelvan cada 2 días o antes.
 // Nuevos por día: los que faltan por ver, repartidos entre los días que quedan antes de la
 // ventana de repaso final (así esos 3 días quedan para repasar). Si ya se está en la
@@ -103,7 +104,12 @@
     reg.n = (p ? p.n || 0 : 0) + 1;
     reg.t = o.ahora;
     reg.caja = caja;
-    reg.vence = sumar(o.hoy, intervalo(caja, o.hoy, o.examen, o.id));
+    var dias = intervalo(caja, o.hoy, o.examen, o.id);
+    var v = vispera(o.examen);
+    if (v && caja > 0 && !SUBE[resultado] && o.hoy < v && o.hoy >= diaFinal(o.id, o.examen)) {
+      dias = 1; // dudosa en la recta final: vuelve mañana
+    }
+    reg.vence = sumar(o.hoy, dias);
     reg.visto = p && p.visto ? p.visto : o.hoy;
     return reg;
   }
