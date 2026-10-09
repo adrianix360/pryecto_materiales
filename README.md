@@ -10,6 +10,12 @@ Herramienta de estudio para la teoría del I examen de **IC-0604 Materiales de C
 
 - **Estudiar:** tarjetas que se voltean al tocarlas y se califican (la sabía, dudosa, no la sabía).
 - **Practicar:** preguntas de selección única, selección múltiple, falso o verdadero y respuesta corta, con la explicación y la fuente de cada una.
+- **Opciones en orden aleatorio:** en selección única y múltiple, las opciones cambian de lugar cada vez que sale la pregunta, así que la respuesta no cae siempre en la misma letra.
+  - Las letras se siguen viendo A, B, C… en orden.
+  - Las explicaciones se ajustan para citar la letra que ves: si la correcta quedó en la C, dice «Correcta la C».
+  - Falso o verdadero queda fijo (Verdadero, Falso), y «Ninguna de las anteriores» no se mueve de su lugar.
+  - En el Simulacro, el orden se sortea al empezar y se mantiene si recargás.
+  - En Buscar, las opciones aparecen en el orden original.
 - Funciona sin conexión (PWA) y guarda el progreso en el navegador.
 - **Simulacro:** examen cronometrado con la estructura del I examen del curso.
 - **Progreso:** cuenta regresiva, lo pendiente, racha, tiempo por día, dominio por tema y subtema, y tus datos (exportar, importar y borrar).
@@ -128,6 +134,7 @@ Arriba de Estudiar y Practicar hay un contador: «Hoy: 23 / 40 min · 31 ítems�
 index.html            página única
 css/app.css           estilos (mobile first, modo oscuro automático)
 js/version.js         versión de la app y del caché (cambiar en cada publicación)
+js/opciones.js        orden aleatorio de opciones y ajuste de letras en las explicaciones
 js/srs.js             repetición espaciada (Leitner) y compresión antes del examen
 js/examen.js          simulacro: armar, deduplicar, puntuar y temporizador
 js/simulacro.js       pantallas del simulacro
@@ -157,12 +164,12 @@ Requiere Python 3 y Playwright (`pip install playwright` y `python -m playwright
 
 ```bash
 python tools/validar_json.py .
-node --test tests/srs.test.js tests/examen.test.js tests/progreso.test.js tests/buscar.test.js
+node --test tests/srs.test.js tests/examen.test.js tests/progreso.test.js tests/buscar.test.js tests/opciones.test.js
 python tests/test_app.py
 python tests/capturas.py
 ```
 
-`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) , `progreso.test.js` prueba el dominio, la racha y el exportar/importar, y `buscar.test.js` prueba la búsqueda, el resaltado, el glosario y los índices. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba`.
+`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) , `progreso.test.js` prueba el dominio, la racha y el exportar/importar, , `buscar.test.js` prueba la búsqueda, el resaltado, el glosario y los índices, y `opciones.test.js` prueba el orden aleatorio y el ajuste de letras con las 72 preguntas reales. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba`.
 
 `capturas.py` guarda capturas a 390×844 en modo claro y oscuro en `tests/capturas/` (esa carpeta no se sube).
 
