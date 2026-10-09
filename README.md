@@ -13,7 +13,7 @@ Herramienta de estudio para la teoría del I examen de **IC-0604 Materiales de C
 - Funciona sin conexión (PWA) y guarda el progreso en el navegador.
 - **Simulacro:** examen cronometrado con la estructura del I examen del curso.
 - **Progreso:** cuenta regresiva, lo pendiente, racha, tiempo por día, dominio por tema y subtema, y tus datos (exportar, importar y borrar).
-- Buscar: próximamente.
+- **Buscar:** búsqueda sin conexión, glosario alfabético, galería de figuras y lista de ítems «⚠ Verificar» para consultar con el profe.
 
 ## Repetición espaciada: cuándo vuelve a salir un ítem
 
@@ -98,6 +98,22 @@ La fecha del examen (17 de octubre de 2026) se lee de `data/indice.json`.
   - **Reemplazar:** borra lo de este teléfono y deja solo lo del archivo.
 - **Borrar mi progreso** pide confirmación y borra tarjetas, preguntas, tiempo, racha y simulacros. La meta y los filtros se conservan.
 
+## Buscar
+
+Tiene cuatro pestañas; la app recuerda la última que usaste.
+
+- **Buscar:**
+  - Busca en tarjetas (frente y reverso), preguntas (enunciado, opciones, respuesta modelo, puntos clave y explicación) y glosario.
+  - No distingue tildes ni mayúsculas: «hormigon» encuentra «hormigón».
+  - Con varias palabras, el ítem tiene que contenerlas todas. Busca desde 2 letras.
+  - Primero salen las coincidencias en el título. Los resultados se agrupan por tipo (glosario, tarjetas, preguntas) y por tema, y lo encontrado se resalta.
+  - Al tocar un resultado se despliega la respuesta con su fuente, y se puede abrir en Estudiar o en Practicar.
+- **Glosario:** los 60 términos en orden alfabético español («Á» va con la A), con un índice de letras, su definición, su subtema y su fuente.
+- **Figuras:** las 15 imágenes de `img/ensayos` e `img/examenes`, con su texto alternativo y su fuente. Al tocar una, se abren en Estudiar o en Practicar los ítems que la usan.
+- **Verificar:** los 33 ítems marcados «⚠ Verificar» (10 tarjetas y 23 preguntas), agrupados por tipo y tema, con la duda y la fuente.
+  - «Copiar lista para el profe» copia un texto listo para pegar en un correo o mensaje. Si el navegador no deja copiar, lo muestra para copiarlo a mano.
+  - También se pueden repasar esas tarjetas o practicar esas preguntas.
+
 ## Meta diaria
 
 Arriba de Estudiar y Practicar hay un contador: «Hoy: 23 / 40 min · 31 ítems». Al tocarlo se cambia la meta.
@@ -117,6 +133,8 @@ js/examen.js          simulacro: armar, deduplicar, puntuar y temporizador
 js/simulacro.js       pantallas del simulacro
 js/progreso.js        progreso: dominio, débiles, racha, tiempo y exportar/importar
 js/pantalla-progreso.js  pantalla de progreso
+js/buscar.js          búsqueda sin tildes, resaltado, glosario, figuras y verificar
+js/pantalla-buscar.js pantalla de búsqueda
 js/                   store, datos, ui, estudiar, practicar, app
 sw.js                 service worker (precarga para uso sin conexión)
 data/                 contenido en JSON (esquema en docs/ESQUEMA.md)
@@ -139,12 +157,12 @@ Requiere Python 3 y Playwright (`pip install playwright` y `python -m playwright
 
 ```bash
 python tools/validar_json.py .
-node --test tests/srs.test.js tests/examen.test.js tests/progreso.test.js
+node --test tests/srs.test.js tests/examen.test.js tests/progreso.test.js tests/buscar.test.js
 python tests/test_app.py
 python tests/capturas.py
 ```
 
-`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) y `progreso.test.js` prueba el dominio, la racha y el exportar/importar. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba`.
+`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) , `progreso.test.js` prueba el dominio, la racha y el exportar/importar, y `buscar.test.js` prueba la búsqueda, el resaltado, el glosario y los índices. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba`.
 
 `capturas.py` guarda capturas a 390×844 en modo claro y oscuro en `tests/capturas/` (esa carpeta no se sube).
 
