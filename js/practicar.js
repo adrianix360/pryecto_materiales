@@ -351,6 +351,8 @@
 
   window.Practicar = {
     titulo: "Practicar",
+    // El Simulacro mandó fallos al repaso: rearmar la cola la próxima vez que se muestre.
+    recargar: function () { s.rearmar = true; },
     mostrar: function (vista) {
       if (!s.porId) {
         s.porId = {};
@@ -360,9 +362,10 @@
         s.modo = Store.pref("modoPracticar") === "tema" ? "tema" : "repaso";
         s.f = filtroInicial();
         armar();
-      } else if (s.modo === "repaso" && !s.extra && s.dia !== SRS.hoy() && s.fase === "pregunta") {
-        armarRepaso(); // cambió el día con la app abierta
+      } else if (s.modo === "repaso" && !s.extra && (s.dia !== SRS.hoy() || s.rearmar) && s.fase === "pregunta") {
+        armarRepaso(); // cambió el día con la app abierta o llegaron fallos del simulacro
       }
+      s.rearmar = false;
       render(vista);
     }
   };
