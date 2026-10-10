@@ -795,18 +795,18 @@ def lista_de_items_a_verificar_con_el_profe(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url + "#/buscar")
     ctx.grant_permissions(["clipboard-read", "clipboard-write"])
     pag.locator('[data-pestana="verificar"]').click()
-    assert "33 ítems marcados «⚠ Verificar»: 10 tarjetas y 23 preguntas" in pag.locator(".pestana").inner_text()
-    assert pag.locator(".verif-item").count() == 33
-    assert pag.locator(".verif-item .verificar").count() == 33
+    assert "41 ítems marcados «⚠ Verificar»: 15 tarjetas y 26 preguntas" in pag.locator(".pestana").inner_text()
+    assert pag.locator(".verif-item").count() == 41
+    assert pag.locator(".verif-item .verificar").count() == 41
     revisar_pantalla(pag, "verificar")
     pag.get_by_role("button", name="Copiar lista para el profe").click()
-    expect(pag.locator("#copiado")).to_contain_text("Lista copiada (33 ítems)")
+    expect(pag.locator("#copiado")).to_contain_text("Lista copiada (41 ítems)")
     copiado = pag.evaluate("navigator.clipboard.readText()")
-    assert copiado.startswith("Consultas para el profe (IC-0604, I examen): 33 ítems"), copiado[:80]
-    assert copiado.count("Duda: ") == 33
-    pag.get_by_role("button", name="Practicar las 23 preguntas").click()
+    assert copiado.startswith("Consultas para el profe (IC-0604, I examen): 41 ítems"), copiado[:80]
+    assert copiado.count("Duda: ") == 41
+    pag.get_by_role("button", name="Practicar las 26 preguntas").click()
     expect(pag.locator("#titulo")).to_have_text("Practicar")
-    expect(pag.locator(".contador")).to_have_text("Pregunta 1 de 23")
+    expect(pag.locator(".contador")).to_have_text("Pregunta 1 de 26")
     expect(pag.locator(".chip--verificar").first).to_be_visible()
     assert not errores, errores
     ctx.close()
