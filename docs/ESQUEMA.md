@@ -4,7 +4,7 @@ Resumen del esquema **real** de los JSON, obtenido leyendo los archivos (9 de oc
 
 **Conteo actual:** 147 tarjetas, 183 preguntas, 60 términos de glosario y 28 fuentes. `tools/validar_json.py` da OK.
 
-> **Los JSON se generan.** `data/` sale de `tools/contenido/construir.py` (módulos `tema1.py`, `tema2.py`, `tarjetas3.py`, `preguntas3_*.py`, `glosario3.py` y `comun.py`). Si se edita un JSON a mano y luego se corre el generador, el cambio se pierde: el contenido se corrige en los módulos y se regenera.
+> **Los JSON se generan.** `data/` sale de `tools/contenido/construir.py` (módulos `tema1.py`, `tema2.py`, `tarjetas3.py`, `preguntas3_*.py`, `glosario3.py` y `comun.py`). Si se edita un JSON a mano y luego se corre el generador, el cambio se pierde: el contenido se corrige en los módulos y se regenera. Las correcciones de la auditoría técnica (9/10/2026) están en `tools/contenido/correcciones.json`: cada una cambia un campo de un ítem y guarda el texto anterior, la razón y la evidencia; `construir.py` las aplica al final y se detiene si el texto anterior ya no coincide.
 
 ## Archivos
 
@@ -87,7 +87,7 @@ Diccionario indexado por código. Hay 28: `01`–`06`, `08`–`16`, `19`, `20`, 
 | `reverso` | string | sí | Respuesta |
 | `fuente` | lista de referencias | sí | Al menos una |
 | `origen` | string | — | Hoy siempre `"teoria"` (el validador no lo revisa) |
-| `verificar` | string | no | Nota de contradicción o duda (10 tarjetas). Si existe, la app debe mostrar la marca VERIFICAR |
+| `verificar` | string | no | Nota de contradicción o duda (15 tarjetas). Si existe, la app debe mostrar la marca VERIFICAR |
 | `figura` | objeto | no | Ver **Figura** (18 tarjetas, todas del tema 3E) |
 
 ---
@@ -111,7 +111,7 @@ Diccionario indexado por código. Hay 28: `01`–`06`, `08`–`16`, `19`, `20`, 
 | `explicacion` | string | sí | Por qué es correcta la respuesta y por qué fallan las demás |
 | `fuente` | lista de referencias | sí en `teoria` | Respaldo documental. La traen 176 de 183; las 7 que no, son de examen con clave oficial |
 | `examen` | objeto | sí en `examen` | `{doc, pag, pregunta, periodo}`. `doc` y `pag` se validan como una referencia; `pregunta` es el número en el original (`"1.1, caso 2"`) y `periodo` el ciclo (`"I-2026"`, `"Sin fecha (cuestionario de Mediación Virtual)"`) |
-| `verificar` | string | no | Nota de contradicción o duda (23 preguntas) |
+| `verificar` | string | no | Nota de contradicción o duda (26 preguntas) |
 | `figura` | objeto | no | Ver **Figura** (6 preguntas: 5 del examen 08 y el ábaco de X01) |
 
 Combinaciones actuales de `origen` + `clave`: examen + oficial (123), teoría + documental (56), examen + documental (4).

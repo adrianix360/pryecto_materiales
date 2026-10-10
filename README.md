@@ -181,6 +181,10 @@ python tests/capturas.py
 
 Al abrir la app, el navegador detecta el `version.js` nuevo, descarga todo en un caché nuevo y muestra «Hay una versión nueva · Actualizar». Al tocar «Actualizar», se borra el caché viejo.
 
+## Auditoría del contenido
+
+El 9 de octubre de 2026 se auditaron todas las tarjetas, preguntas y términos contra las fuentes del curso. El informe está en [`docs/AUDITORIA-2026-10-09.md`](docs/AUDITORIA-2026-10-09.md). Las correcciones están en `tools/contenido/correcciones.json`, y cada una guarda el texto anterior, la razón y la evidencia.
+
 ## Privacidad
 
 La carpeta `fuentes/` (material con derechos de autor y exámenes con nombres de estudiantes) nunca se sube al repositorio. El sitio lleva `noindex, nofollow` para que los buscadores no lo indexen.
