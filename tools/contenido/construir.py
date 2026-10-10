@@ -18,6 +18,36 @@ SUBTEMAS = {"1A": "Concreto, mortero, pasta y tipos de materiales", "2A": "Calid
             "3D": "Granulometría", "3E": "Ensayos de laboratorio"}
 
 
+def aplicar_correcciones():
+    """Aplica tools/contenido/correcciones.py sobre los ítems ya armados (ver ese archivo)."""
+    from correcciones import CORRECCIONES
+    todos = {}
+    for lista in (tema1.T, tema1.P, tema1.G, tema2.T, tema2.P, tema2.G, tarjetas3.T,
+                  preguntas3_examen.P, preguntas3_teoria.P, glosario3.G):
+        for it in lista:
+            todos[it["id"]] = it
+    for c in CORRECCIONES:
+        it = todos.get(c["id"])
+        if it is None:
+            raise SystemExit(f"Corrección: no existe el ítem {c['id']}")
+        campo = c["campo"]
+        if campo.startswith("opciones."):
+            oid = campo.split(".", 1)[1]
+            dueno, clave = next(o for o in it["opciones"] if o["id"] == oid), "texto"
+        else:
+            dueno, clave = it, campo
+        if dueno.get(clave) != c["antes"]:
+            raise SystemExit(f"Corrección {c['id']}.{campo}: el texto actual no coincide con «antes»")
+        if c["despues"] is None:
+            dueno.pop(clave, None)
+        else:
+            dueno[clave] = c["despues"]
+    print(f"Correcciones de auditoría aplicadas: {len(CORRECCIONES)}")
+
+
+aplicar_correcciones()
+
+
 def dump(rel, obj):
     path = os.path.join(SITE, rel)
     os.makedirs(os.path.dirname(path), exist_ok=True)

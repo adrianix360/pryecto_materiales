@@ -402,7 +402,7 @@
     "periodo": "I-2025"
    },
    "clave": "oficial",
-   "explicacion": "Correcta la B. Según Navas, el aire siempre entra en la mezcla en cantidad aleatoria y aumenta con más agregado fino (sobre todo entre las mallas No. 30 y No. 50), con un tamaño máximo menor y con un mezclado más fuerte o más largo. La A está al revés: el vibrado prolongado reduce el aire. La C y la D no aparecen en las fuentes como causas.",
+   "explicacion": "Correcta la B. Según Navas, el aire siempre entra en la mezcla en cantidad aleatoria y aumenta con más agregado fino (sobre todo entre las mallas No. 30 y No. 50), con un tamaño máximo menor y con una acción mezcladora más fuerte y por más tiempo. La A está al revés: el vibrado de más de 3 minutos reduce el aire. La C no aparece en las fuentes como causa. La D es el distractor más engañoso: Navas habla de un mezclado más fuerte o más largo, no de mezcladoras «más eficientes», y la clave oficial marca solo la B.",
    "fuente": [
     {
      "doc": "20",
@@ -551,7 +551,7 @@
     "periodo": "I-2025"
    },
    "clave": "oficial",
-   "explicacion": "La clave da 40 %. El manual solo dice que las especificaciones fijan una pérdida máxima por abrasión.",
+   "explicacion": "La clave oficial da 40 %. Ese valor no aparece en las fuentes de teoría del curso: la PCA dice que las especificaciones normalmente establecen un límite máximo de pérdida de masa, y el manual, que los límites de especificación se asignan con extremo cuidado.",
    "fuente": [
     {
      "doc": "19",
@@ -816,7 +816,7 @@
     "periodo": "II-2022"
    },
    "clave": "oficial",
-   "explicacion": "Un agregado es pesado si su peso unitario masivo seco supera 1900 kg/m³.",
+   "explicacion": "Un agregado es pesado si su peso unitario masivo seco supera 1 900 kg/m³.",
    "fuente": [
     {
      "doc": "14",
@@ -825,7 +825,7 @@
    ],
    "respuesta_modelo": "Superior a 1900 kg/m3",
    "puntos_clave": [
-    "δb > 1900 kg/m³"
+    "δb > 1 900 kg/m³"
    ]
   },
   {
@@ -1215,7 +1215,7 @@
     "periodo": "I-2020"
    },
    "clave": "oficial",
-   "explicacion": "En Costa Rica los mejores agregados provienen de rocas ígneas.",
+   "explicacion": "En Costa Rica los mejores agregados provienen de rocas ígneas, y estas se extraen tanto de tajos como de ríos.",
    "fuente": [
     {
      "doc": "26",
@@ -1322,7 +1322,7 @@
     "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
    },
    "clave": "oficial",
-   "explicacion": "Verdadero. Un tamaño máximo nominal mayor necesita menos pasta (menos superficie que cubrir), lo que ahorra y reduce las contracciones. En una losa sin refuerzo no limita la separación de barras.",
+   "explicacion": "Verdadero. Un tamaño máximo nominal mayor necesita menos pasta (menos superficie que cubrir), lo que ahorra y reduce las contracciones. En una losa sin refuerzo no hay separación de barras que lo limite; el límite que queda es un tercio del espesor de la losa, así que 37,5 mm sirve en losas de unos 113 mm (3 × 37,5) o más.",
    "fuente": [
     {
      "doc": "11",
@@ -1361,7 +1361,7 @@
     "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
    },
    "clave": "oficial",
-   "explicacion": "Son correctas la caliza, el granito y la andesita (escrita «Andecita» en el original). Las lavas andesíticas recientes son la fuente típica del país y las calizas son muy usadas. La dolomita se asocia con la reacción álcali-carbonato y la pirita es un sulfuro de hierro que vuelve reactivo al agregado.",
+   "explicacion": "Son correctas la caliza, el granito y la andesita (escrita «Andecita» en el original). Las lavas andesíticas recientes son la fuente típica del país, las rocas intrusivas como el granito son muy resistentes y las calizas son muy usadas. La dolomita se asocia con la reacción álcali-carbonato y la pirita es un sulfuro de hierro que vuelve reactivo al agregado.",
    "fuente": [
     {
      "doc": "26",
@@ -1431,6 +1431,10 @@
     {
      "doc": "26",
      "pag": 9
+    },
+    {
+     "doc": "15",
+     "pag": 5
     }
    ],
    "opciones": [
@@ -1465,6 +1469,11 @@
    "clave": "oficial",
    "explicacion": "Falso. El limo y la arcilla forman una capa sobre las partículas que debilita la adherencia pasta-agregado y aumenta la demanda de agua.",
    "fuente": [
+    {
+     "doc": "10",
+     "pag": 1,
+     "impresa": "119"
+    },
     {
      "doc": "10",
      "pag": 2,
@@ -1977,7 +1986,7 @@
     "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
    },
    "clave": "oficial",
-   "explicacion": "Falso. Si los agregados traen agua libre, aportan parte del agua de diseño; por eso el agua que se dosifica es menor, no mayor.",
+   "explicacion": "Verdadero, según la corrección a mano del examen (V al margen). Si los agregados traen agua libre, aportan parte del agua de diseño; por eso el agua que se dosifica es menor que la de diseño, o sea, el agua de diseño es mayor que la de dosificación. Solo en condición SSS son iguales. La tabla impresa marca F, pero su propia justificación («es menor porque los agregados aportan el resto») respalda que la afirmación es verdadera.",
    "fuente": [
     {
      "doc": "24",
@@ -1995,8 +2004,9 @@
      "texto": "Falso"
     }
    ],
-   "correcta": "b",
-   "justificacion_oficial": "Es menor porque los agregados aportan el resto para llegar al agua de diseño"
+   "correcta": "a",
+   "justificacion_oficial": "Es menor porque los agregados aportan el resto para llegar al agua de diseño",
+   "verificar": "Clave dudosa: en la recopilación X01 (pág. 6) la equis impresa está en F, pero la corrección al margen marca V y la justificación impresa («es menor porque los agregados aportan el resto») hace verdadera la afirmación. Se adopta V; consultar con el profe."
   },
   {
    "id": "p3-3A-x11",
@@ -2012,7 +2022,7 @@
     "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
    },
    "clave": "oficial",
-   "explicacion": "Falso. La tenacidad se refiere al impacto; el desgaste es la abrasión.",
+   "explicacion": "Falso. Según la clave, la tenacidad mide qué tanto soporta el agregado las cargas de impacto; el desgaste es la abrasión. En la Máquina de Los Ángeles (ASTM C131) se miden juntas la abrasión o desgaste, el impacto y la trituración.",
    "fuente": [
     {
      "doc": "19",
@@ -2458,7 +2468,7 @@
    "respuesta_modelo": "Agregado reactivo, exceso de álcalis y humedad",
    "puntos_clave": [
     "agregado reactivo",
-    "exceso de álcalis (máx. 0,6 %)",
+    "exceso de álcalis (se supera el máximo de 0,6 %)",
     "humedad"
    ]
   },
@@ -2476,8 +2486,13 @@
     "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
    },
    "clave": "oficial",
-   "explicacion": "Falso. Los finos y las impurezas afectan el fraguado, la resistencia y la demanda de agua.",
+   "explicacion": "Falso. Los finos (sobre todo el limo y la arcilla) recubren las partículas, debilitan la adherencia pasta-agregado y aumentan la demanda de agua. La clave agrega que los finos y las impurezas orgánicas pueden retrasar el fraguado y reducir la resistencia.",
    "fuente": [
+    {
+     "doc": "10",
+     "pag": 1,
+     "impresa": "119"
+    },
     {
      "doc": "10",
      "pag": 2,
@@ -2550,7 +2565,7 @@
     "periodo": "Sin fecha (cuestionario de Mediación Virtual)"
    },
    "clave": "oficial",
-   "explicacion": "Falso: los livianos tienen δb < 1120 kg/m³; 1300 kg/m³ cae en el rango normal (1120 a 1900).",
+   "explicacion": "Falso: los livianos tienen δb < 1 120 kg/m³; 1 300 kg/m³ cae en el rango normal (1 120 a 1 900 kg/m³).",
    "fuente": [
     {
      "doc": "14",
@@ -2653,7 +2668,8 @@
    "respuesta_modelo": "2,8",
    "puntos_clave": [
     "2,8"
-   ]
+   ],
+   "verificar": "Las fuentes no coinciden en el límite superior: el manual (19, pág. 63) dice 3,0, Navas (24, pág. 2/8) dice 2,8 y la PCA (pág. 114) dice 2,9 (contradicción C19). Se usa 2,8, que es la respuesta de este examen y de la diapositiva 14, pág. 9."
   },
   {
    "id": "p3-3A-x16",
@@ -2774,7 +2790,7 @@
     "periodo": "I-2009"
    },
    "clave": "documental",
-   "explicacion": "No hay clave oficial; la respuesta se armó solo con las fuentes. A mayor tamaño máximo, menos superficie que cubrir, menos agua y menos cemento para una relación a/c dada. El tamaño máximo está limitado por la dimensión del elemento y por la separación del refuerzo. Una arena muy fina (MF 2,2, menor que 2,3) aporta trabajabilidad y permite más agregado grueso.",
+   "explicacion": "No hay clave oficial; la respuesta se armó solo con las fuentes. A mayor tamaño máximo, menos superficie que cubrir, menos agua y menos cemento para una relación a/c dada. El tamaño máximo está limitado por la dimensión del elemento y por la separación del refuerzo. Una arena con MF 2,2 es «fina» según la tabla del curso (2,0–2,3) y queda por debajo del rango aceptable de 2,3–3,1; al ser fina aporta trabajabilidad y permite aumentar el agregado grueso.",
    "fuente": [
     {
      "doc": "11",
@@ -2817,7 +2833,7 @@
    "enunciado": "Un agregado con peso unitario masivo seco de 2 240 kg/m³ se clasifica como:",
    "origen": "teoria",
    "clave": "documental",
-   "explicacion": "Correcta la C: supera los 1900 kg/m³. La A sería menor que 1120 kg/m³; la B estaría entre 1120 y 1900 kg/m³. La D no existe en la clasificación por peso unitario del curso.",
+   "explicacion": "Correcta la C: supera los 1 900 kg/m³. La A sería menor que 1 120 kg/m³; la B estaría entre 1 120 y 1 900 kg/m³. La D no existe en la clasificación por peso unitario del curso.",
    "fuente": [
     {
      "doc": "14",
@@ -3521,10 +3537,10 @@
    "tema": 3,
    "subtema": "3D",
    "tipo": "seleccion_unica",
-   "enunciado": "En una losa de 12 cm de espesor, sin otra restricción, el tamaño máximo del agregado no debería exceder:",
+   "enunciado": "En una losa de 12 cm de espesor, aplicando la regla propia de las losas y sin otra restricción, el tamaño máximo del agregado no debería exceder:",
    "origen": "teoria",
    "clave": "documental",
-   "explicacion": "Correcta la B: un tercio del espesor de la losa da 120/3 = 40 mm. La A sale de usar un quinto, que aplica a la dimensión menor de un elemento. La C sale de 3/4, que aplica a la separación del refuerzo. La D es el espesor completo.",
+   "explicacion": "Correcta la B: la regla propia de las losas es un tercio del espesor, 120/3 = 40 mm. La A sale de la regla general de un quinto de la dimensión menor del elemento. La C sale de 3/4, que aplica a la separación libre del refuerzo. La D es el espesor completo.",
    "fuente": [
     {
      "doc": "11",
@@ -3565,7 +3581,7 @@
    "enunciado": "Para reducir una muestra de AGREGADO GRUESO, ¿qué método NO está permitido por la ASTM C702?",
    "origen": "teoria",
    "clave": "documental",
-   "explicacion": "Correcta la C: el apilamiento miniatura solo se permite para arena húmeda. Para grueso se usa el separador mecánico (A, preferido) o el cuarteo (B). La D no es un método de la norma.",
+   "explicacion": "Correcta la C: el método C (apilamiento miniatura) no se permite para agregado grueso ni para mezclas de grueso y fino; solo se usa con arena que tiene humedad libre. Para grueso sí se permiten la A (separador mecánico, el preferido) y la B (cuarteo), por eso la D es falsa.",
    "fuente": [
     {
      "doc": "19",
@@ -3600,7 +3616,7 @@
    "enunciado": "En la ASTM C136, ¿cuándo NO deben usarse los resultados para aceptación?",
    "origen": "teoria",
    "clave": "documental",
-   "explicacion": "Correcta la A: si la masa total después de tamizar difiere en más de 0,3 % de la inicial. El 1 % (B) es el criterio de suficiencia de tamizado de cada malla. Los 10 minutos (C) son el tiempo máximo de agitación, y agitar más degrada el material, pero no es este criterio. La D es la reducción por cuarteo.",
+   "explicacion": "Correcta la A: si la masa total después de tamizar difiere en más de 0,3 % de la inicial, los resultados no se usan para aceptación. El 1 % (B) es el criterio de suficiencia de tamizado de cada malla: que pase menos del 1 % es lo esperado. Los 10 minutos (C) son el tiempo máximo de agitación; agitar más degrada el material, pero no es este criterio. La D tampoco: el cuarteo es un método válido de reducción de la ASTM C702.",
    "fuente": [
     {
      "doc": "19",
@@ -3723,7 +3739,7 @@
    "opciones": [
     {
      "id": "a",
-     "texto": "En 3 capas, con 25 golpes de varilla por capa, sin tocar fuerte el fondo en la primera"
+     "texto": "En 3 capas, con 25 golpes de varilla por capa, sin que la varilla toque el fondo en la primera"
     },
     {
      "id": "b",

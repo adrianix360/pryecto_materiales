@@ -49,6 +49,10 @@
     {
      "doc": "19",
      "pag": 6
+    },
+    {
+     "doc": "12",
+     "pag": 3
     }
    ]
   },
@@ -91,7 +95,7 @@
   {
    "id": "g-agregado-liviano",
    "termino": "Agregado liviano",
-   "definicion": "Agregado con peso unitario masivo seco menor que 1120 kg/m³, como la pómez, la escoria o las cenizas volcánicas.",
+   "definicion": "Agregado con peso unitario masivo seco menor que 1 120 kg/m³, como la pómez, la escoria o las cenizas volcánicas.",
    "tema": 3,
    "subtema": "3A",
    "fuente": [
@@ -108,7 +112,7 @@
   {
    "id": "g-agregado-pesado",
    "termino": "Agregado pesado",
-   "definicion": "Agregado con peso unitario masivo seco mayor que 1900 kg/m³, como la barita o la magnetita; se usa en concreto de blindaje contra la radiación.",
+   "definicion": "Agregado con peso unitario masivo seco mayor que 1 900 kg/m³, como la barita o la magnetita; se usa en concreto de blindaje contra la radiación.",
    "tema": 3,
    "subtema": "3A",
    "fuente": [
@@ -125,7 +129,7 @@
   {
    "id": "g-agua-de-mezcla",
    "termino": "Agua de mezcla",
-   "definicion": "Agua que se añade al cemento y los agregados para preparar el concreto; prácticamente cualquier agua potable sirve.",
+   "definicion": "Agua que se añade al cemento y los agregados para preparar el concreto; prácticamente cualquier agua natural potable y sin fuerte sabor u olor sirve.",
    "tema": 2,
    "subtema": "2A",
    "fuente": [
@@ -182,6 +186,14 @@
     {
      "doc": "06",
      "pag": 9
+    },
+    {
+     "doc": "06",
+     "pag": 10
+    },
+    {
+     "doc": "12",
+     "pag": 60
     }
    ]
   },
@@ -319,6 +331,10 @@
      "doc": "01",
      "pag": 2,
      "impresa": "96"
+    },
+    {
+     "doc": "12",
+     "pag": 25
     }
    ]
   },
@@ -474,13 +490,18 @@
   {
    "id": "g-modulo-de-finura-mf",
    "termino": "Módulo de finura (MF)",
-   "definicion": "Suma de los porcentajes retenidos acumulados en las mallas No. 4, 8, 16, 30, 50 y 100, dividida entre 100. Es un índice de finura: a mayor MF, más grueso.",
+   "definicion": "Índice de finura del agregado: suma de los porcentajes retenidos acumulados en la serie de mallas, dividida entre 100. Para el agregado fino, la serie es No. 4, 8, 16, 30, 50 y 100. A mayor MF, más grueso.",
    "tema": 3,
    "subtema": "3D",
    "fuente": [
     {
      "doc": "19",
      "pag": 48
+    },
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
     }
    ]
   },
@@ -595,7 +616,7 @@
   {
    "id": "g-porosidad-n",
    "termino": "Porosidad (n)",
-   "definicion": "Razón entre el volumen de vacíos y el volumen masivo: n = Vv/Vm.",
+   "definicion": "Razón entre el volumen de vacíos y el volumen masivo: n = Vv/Vm (× 100 %). En el diagrama del curso, Vv incluye los poros permeables y el espacio entre partículas (Vv = Vm − Vs).",
    "tema": 3,
    "subtema": "3C",
    "fuente": [
@@ -615,13 +636,18 @@
     {
      "doc": "25",
      "pag": 1
+    },
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
     }
    ]
   },
   {
    "id": "g-razon-de-vacios-e",
    "termino": "Razón de vacíos (e)",
-   "definicion": "Razón entre el volumen de vacíos y el volumen sólido: e = Vv/Vs.",
+   "definicion": "Razón entre el volumen de vacíos y el volumen sólido: e = Vv/Vs (× 100 %). Vv incluye los poros permeables y el espacio entre partículas, por eso Vm = Vs (1 + e).",
    "tema": 3,
    "subtema": "3C",
    "fuente": [
@@ -801,7 +827,7 @@
   {
    "id": "g-tasa-de-evaporacion",
    "termino": "Tasa de evaporación",
-   "definicion": "Cantidad de agua que se evapora de la superficie del concreto; se estima con el ábaco del ACI 305.",
+   "definicion": "Masa de agua que se evapora de la superficie del concreto por unidad de área y de tiempo (kg/m²/h); se estima con el ábaco del ACI 305.",
    "tema": 2,
    "subtema": "2B",
    "fuente": [
@@ -814,7 +840,7 @@
   {
    "id": "g-vacios",
    "termino": "Vacíos",
-   "definicion": "Espacio entre las partículas de una masa de agregado que no ocupa el material. Son de 30 % a 45 % en el grueso y de 40 % a 50 % en el fino.",
+   "definicion": "Espacio entre las partículas de una masa de agregado que no ocupa el material. Los poros dentro de las partículas no se cuentan (ASTM C29). Son de cerca del 30 % al 45 % en el grueso y del 40 % al 50 % en el fino. No confundir con el Vv del formulario, que sí incluye los poros permeables.",
    "tema": 3,
    "subtema": "3C",
    "fuente": [
@@ -839,6 +865,10 @@
     {
      "doc": "06",
      "pag": 5
+    },
+    {
+     "doc": "12",
+     "pag": 70
     }
    ]
   },

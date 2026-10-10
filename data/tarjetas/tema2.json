@@ -129,7 +129,7 @@
    "subtema": "2A",
    "tipo": "norma",
    "frente": "Normas ASTM sobre el agua de mezcla",
-   "reverso": "ASTM C1602: especificación del agua de mezcla para concreto (requisitos).\nASTM C1603: medición de sólidos en el agua.\nASTM C114: métodos de análisis químico (se usa para cloruros y sulfatos).",
+   "reverso": "ASTM C1602: especificación del agua de mezcla para concreto (requisitos).\nASTM C1603: medición de sólidos en el agua.\nASTM C114: métodos de análisis químico del cemento hidráulico; en la presentación es el método para cloruros y sulfatos del agua, y la clave del curso la da como el método para analizar químicamente el agua.",
    "fuente": [
     {
      "doc": "05",
@@ -156,7 +156,7 @@
     }
    ],
    "origen": "teoria",
-   "verificar": "La PCA (Tabla 4-4, pág. 96) da 50 000 ppm de sólidos totales; la presentación dice 5 000. Se usa el valor del profe."
+   "verificar": "La PCA (Tabla 4-4, pág. 96, límites para aguas de lavado según la ASTM C94) da 50 000 ppm de sólidos totales; la presentación dice 5 000. Se usa el valor del profe."
   },
   {
    "id": "t2-2A-10",
@@ -189,7 +189,7 @@
    "subtema": "2A",
    "tipo": "dato",
    "frente": "Tolerancias de impurezas: cloruros y sulfatos",
-   "reverso": "Cloruro de sodio: 20 000 ppm.\nCloruro como Cl⁻: 500 ppm en concreto preesforzado y 1000 ppm en concreto húmedo o con aluminio o metales galvanizados.\nSulfato de sodio: 10 000 ppm.\nSulfato como SO₄: 3 000 ppm.\nSulfato de magnesio: 25 000 ppm.",
+   "reverso": "Cloruro de sodio: 20 000 ppm.\nCloruro como Cl⁻: 500 ppm en concreto preesforzado y 1000 ppm en concreto húmedo o con aluminio o metales galvanizados.\nCloruro de calcio: 2 % del peso del cemento.\nSulfato de sodio: 10 000 ppm.\nSulfato como SO₄: 3 000 ppm.\nSulfato de magnesio: 25 000 ppm.",
    "fuente": [
     {
      "doc": "25",
@@ -227,7 +227,7 @@
     }
    ],
    "origen": "teoria",
-   "verificar": "La PCA da otros valores para algas (1000 ppm, pág. 100), habla de hidróxido de calcio en vez de potasio (pág. 99) y fija el aceite mineral en 2,5 % (pág. 100). Se usa la tabla del curso."
+   "verificar": "La PCA da otros valores para algas (1000 ppm, pág. 100), habla de hidróxido de calcio en vez de potasio (pág. 99) y dice que el aceite mineral por encima del 2,5 % del peso del cemento puede reducir la resistencia en más de 20 % (pág. 100). Se usa la tabla del curso."
   },
   {
    "id": "t2-2A-14",
@@ -437,7 +437,8 @@
      "impresa": "4/7"
     }
    ],
-   "origen": "teoria"
+   "origen": "teoria",
+   "verificar": "Contradicción C18: Navas (20, pág. 4/7) escribe «iniciar el curado lo antes posible y mantenerlo al menos 7 días» sobre la contracción autógena; la corrección en rojo del cuestionario (X01, pág. 8) asigna esa misma frase a la contracción plástica. Hay que consultarlo con el profe."
   },
   {
    "id": "t2-2B-08",

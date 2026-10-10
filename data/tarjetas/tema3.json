@@ -87,14 +87,15 @@
    "subtema": "3A",
    "tipo": "clasificacion",
    "frente": "Clasificación por peso unitario masivo seco (δb)",
-   "reverso": "Pesados: δb > 1900 kg/m³.\nNormales: 1120 < δb < 1900 kg/m³ (2,4 < GBS < 2,8).\nLivianos: δb < 1120 kg/m³.",
+   "reverso": "Pesados: δb > 1 900 kg/m³.\nNormales: 1 120 < δb < 1 900 kg/m³ (2,4 < GBS < 2,8).\nLivianos: δb < 1 120 kg/m³.",
    "fuente": [
     {
      "doc": "14",
      "pag": 9
     }
    ],
-   "origen": "teoria"
+   "origen": "teoria",
+   "verificar": "Límite entre normales y pesados: la diapositiva (14, pág. 9) dice 1 900 kg/m³ y el manual de laboratorio (19, pág. 63) dice 1 920 kg/m³; ambas son del profe. El rango 2,4–2,8 de la GBS es el adoptado en C19; el manual (19, pág. 63) da 2,4–3,0, Navas 2,5–2,8 y la PCA 2,4–2,9."
   },
   {
    "id": "t3-3A-07",
@@ -238,7 +239,8 @@
      "pag": 112
     }
    ],
-   "origen": "teoria"
+   "origen": "teoria",
+   "verificar": "La diapositiva (15, pág. 11) dice ASTM C994 para la abrasión de superficies de concreto o mortero por corte rotativo; ese método podría ser la ASTM C944 (dígitos invertidos). Ninguna fuente del curso dice C944: consultar con el profe."
   },
   {
    "id": "t3-3A-15",
@@ -373,7 +375,7 @@
    "subtema": "3B",
    "tipo": "concepto",
    "frente": "Rocas volcánicas recientes (unos 1,6 millones de años)",
-   "reverso": "Son buenos agregados: sanas, duras y tenaces, casi siempre lavas andesíticas. Problemas posibles: textura vesicular, exceso de vidrio, textura seriada y lajamiento (textura fluidal), que producen partículas planas.",
+   "reverso": "Son buenos agregados: sanas, duras y tenaces; en nuestro medio suelen ser lavas andesíticas (rocas intermedias). Problemas posibles: textura vesicular, exceso de vidrio, textura seriada y textura fluidal, que produce lajamiento (partículas planas y elongadas).",
    "fuente": [
     {
      "doc": "26",
@@ -524,7 +526,7 @@
    "subtema": "3B",
    "tipo": "concepto",
    "frente": "Las tres condiciones para que ocurra la reacción álcali-agregado",
-   "reverso": "1. Agregado reactivo.\n2. Exceso de álcalis (máximo 0,6 % en masa).\n3. Humedad.\nSi falta una, la reacción no ocurre.",
+   "reverso": "1. Agregado reactivo.\n2. Exceso de álcalis en el cemento (se supera el máximo de 0,6 % en masa).\n3. Humedad.\nSi falta una, la reacción no ocurre.",
    "fuente": [
     {
      "doc": "15",
@@ -566,7 +568,8 @@
      "pag": 17
     }
    ],
-   "origen": "teoria"
+   "origen": "teoria",
+   "verificar": "INCOMPLETO: faltan las págs. impresas 123–125 de la PCA, donde está la Tabla 5-9 con los ensayos de reactividad álcali-agregado. Los criterios se toman solo de la diapositiva 15, pág. 17."
   },
   {
    "id": "t3-3B-17",
@@ -574,7 +577,7 @@
    "subtema": "3B",
    "tipo": "concepto",
    "frente": "Reacción álcali-carbonato (RAC)",
-   "reverso": "Ocurre con rocas dolomíticas (la dolomita es carbonato de calcio y magnesio). El producto forma grietas en la pasta: el agregado ataca la pasta. Ensayo: ASTM C586, expansión de cilindros de roca en hidróxido de sodio durante 1 año.",
+   "reverso": "Ocurre con ciertas rocas dolomíticas (la dolomita es carbonato de calcio y magnesio). El producto forma grietas en la pasta: el agregado ataca la pasta. Ensayo: ASTM C586, expansión de cilindros de roca en hidróxido de sodio durante 1 año.",
    "fuente": [
     {
      "doc": "15",
@@ -594,7 +597,7 @@
    "subtema": "3B",
    "tipo": "dato",
    "frente": "Materiales perjudiciales: sustancia, efecto y norma (PCA, Tabla 5-7)",
-   "reverso": "Impurezas orgánicas: afectan el fraguado y el endurecimiento (ASTM C40).\nMaterial más fino que 75 µm: afecta la adherencia y aumenta la demanda de agua (ASTM C117).\nTerrones de arcilla y partículas desmenuzables: afectan la trabajabilidad y la durabilidad (ASTM C142).\nCarbón, lignito y material ligero: afectan la durabilidad y causan manchas (ASTM C123).",
+   "reverso": "Impurezas orgánicas: afectan el fraguado y el endurecimiento, y pueden causar deterioro (ASTM C40).\nMaterial más fino que 75 µm: afecta la adherencia y aumenta la demanda de agua (ASTM C117).\nTerrones de arcilla y partículas desmenuzables: afectan la trabajabilidad y la durabilidad, y pueden causar erupciones (ASTM C142).\nCarbón, lignito y material ligero: afectan la durabilidad y pueden causar manchas y erupciones (ASTM C123).",
    "fuente": [
     {
      "doc": "10",
@@ -889,7 +892,7 @@
    "subtema": "3C",
    "tipo": "formula",
    "frente": "Relaciones entre gravedades específicas (formulario del curso)",
-   "reverso": "Gs = GBS / (1 − D·GBS)\nGBSS = GBS (1 + D)",
+   "reverso": "Gs = GBS / (1 − D·GBS)  (ec. 5)\nGBSS = GBS (1 + D)  (ec. 6)\nEn estas dos ecuaciones, D va en forma decimal (2 % = 0,02), aunque la ec. 19 la da en %.",
    "fuente": [
     {
      "doc": "13",
@@ -940,7 +943,7 @@
    "subtema": "3C",
    "tipo": "formula",
    "frente": "Porosidad, razón de vacíos y saturación",
-   "reverso": "n = Vv / Vm\ne = Vv / Vs\nn = e / (1 + e)\nS = Vw / Vv",
+   "reverso": "n = Vv / Vm (× 100 %)\ne = Vv / Vs (× 100 %)\nn = e / (1 + e) (n y e como fracciones)\nS = Vw / Vv (× 100 %)\nVv (volumen de vacíos del diagrama) = poros permeables + agua libre + aire = Vm − Vs. No es solo el espacio entre partículas.",
    "fuente": [
     {
      "doc": "13",
@@ -996,7 +999,7 @@
    "subtema": "3C",
    "tipo": "concepto",
    "frente": "¿Para qué se usa la gravedad específica del agregado?",
-   "reverso": "Para calcular el volumen que ocupa el agregado en el diseño de mezclas por volumen absoluto. Normalmente no se usa como medida de calidad.",
+   "reverso": "Para calcular el volumen que ocupa el agregado en el diseño de mezclas por volumen absoluto. Según la PCA, normalmente no se usa como medida de calidad, aunque los agregados porosos suelen tener una gravedad específica baja. En el registro de control de calidad del curso, la GBS sí lleva una especificación (2,50 mínimo en el ejemplo).",
    "fuente": [
     {
      "doc": "02",
@@ -1022,11 +1025,6 @@
      "doc": "X01",
      "pag": 6,
      "pregunta": "F/V 12"
-    },
-    {
-     "doc": "X06",
-     "pag": 2,
-     "pregunta": "Pregunta 6"
     }
    ],
    "origen": "teoria"
@@ -1181,7 +1179,7 @@
    "subtema": "3D",
    "tipo": "formula",
    "frente": "Módulo de finura (MF)",
-   "reverso": "MF = Σ % retenidos acumulados en las mallas No. 4, 8, 16, 30, 50 y 100 / 100\nA mayor MF, más grueso el agregado.",
+   "reverso": "MF del agregado fino = Σ % retenidos acumulados en las mallas No. 4, 8, 16, 30, 50 y 100 / 100\nPara el agregado grueso, la serie de la PCA agrega 3/8\", 3/4\", 1½\", 3\" y 6\".\nA mayor MF, más grueso el agregado.",
    "fuente": [
     {
      "doc": "19",
@@ -1195,6 +1193,11 @@
      "doc": "16",
      "pag": 6,
      "impresa": "2/22"
+    },
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
     }
    ],
    "origen": "teoria"
@@ -1363,7 +1366,7 @@
    "subtema": "3E",
    "tipo": "equipo",
    "frente": "ASTM D75 · Muestreo de agregados en campo: equipo",
-   "reverso": "Balanza móvil (no requiere precisión), termómetro-higrómetro, pala, sacos, plantillas, brocha, tubo muestreador (unos 30 mm de diámetro, 2 m de largo y punta cortada a 45°) y tablones o tablilla.",
+   "reverso": "Balanza móvil (no requiere precisión), termómetro-higrómetro, pala, sacos, plantillas, brocha, tubo muestreador de aluminio o PVC (unos 30 mm de diámetro, al menos 2 m de largo y punta cortada a 45°) y tablones o tablilla.",
    "fuente": [
     {
      "doc": "19",
@@ -1784,7 +1787,7 @@
    "subtema": "3E",
    "tipo": "parametros",
    "frente": "ASTM C117 · Material más fino que 75 µm (No. 200) por lavado: parámetros clave",
-   "reverso": "Se usa el procedimiento A salvo que la especificación pida otro. Masa mínima si la muestra es solo para la C117: 300 g para arena (4,75 mm o menos), 1000 g hasta 9,5 mm, 2500 g hasta 19 mm y 5000 g para 37,5 mm o más.",
+   "reverso": "Se usa el procedimiento A salvo que la especificación pida otro. Masa mínima si la muestra es solo para la C117: 300 g para arena (4,75 mm o menos), 1 000 g hasta 9,5 mm, 2 500 g hasta 19 mm y 5 000 g para 37,5 mm o más.",
    "fuente": [
     {
      "doc": "19",
@@ -1819,7 +1822,7 @@
    "subtema": "3E",
    "tipo": "criterio",
    "frente": "ASTM C117 · Material más fino que 75 µm (No. 200) por lavado: resultado y criterio",
-   "reverso": "L (%) = (Minicial − Mfinal) / Minicial × 100. Se reporta al 0,1 % si es menor que 10 %. Si se pierde material al decantar, el ensayo se desecha. Se hace antes de la granulometría (C136).",
+   "reverso": "L (%) = (Minicial − Mfinal) / Minicial × 100. Se reporta al entero más cercano, salvo que sea menor que 10 %: entonces se reporta al 0,1 %. Si se pierde material al decantar, el ensayo se desecha. Se hace antes de la granulometría (C136).",
    "fuente": [
     {
      "doc": "19",
@@ -2131,7 +2134,8 @@
       "pag": 70
      }
     ]
-   }
+   },
+   "verificar": "El manual da dos órdenes distintos: el procedimiento (pág. 70) pesa primero sumergido y luego en condición SSS; el diagrama de proceso (pág. 74) y el resumen (pág. 75) determinan primero la masa SSS y luego la masa sumergida."
   },
   {
    "id": "t3-3E-18",
@@ -2192,7 +2196,7 @@
    "subtema": "3E",
    "tipo": "parametros",
    "frente": "ASTM C127 · Gravedad específica y absorción del agregado grueso: parámetros clave",
-   "reverso": "Masa mínima según el tamaño máximo nominal: 37,5 mm → 5 kg; 25 mm → 4 kg; 19 mm → 3 kg; 12,7 mm o menos → 2 kg. No se recomienda para agregados livianos (δBS < 1120 kg/m³), porque sus poros no se llenan en 24 h.",
+   "reverso": "Masa mínima según el tamaño máximo nominal: 37,5 mm → 5 kg; 25 mm → 4 kg; 19 mm → 3 kg; 12,7 mm o menos → 2 kg. No se recomienda para agregados livianos (densidad bruta menor que 1 120 kg/m³, como la piedra pómez o la escoria), porque sus poros no necesariamente se llenan de agua en 24 h de inmersión.",
    "fuente": [
     {
      "doc": "19",
@@ -2384,7 +2388,7 @@
    "subtema": "3E",
    "tipo": "parametros",
    "frente": "ASTM C128 · Gravedad específica y absorción del agregado fino: parámetros clave",
-   "reverso": "Si el cono no se desploma, todavía hay humedad libre; si se desmorona de golpe, la arena ya está más seca que SSS. Muestra de 4 kg reducida a 1 kg aproximadamente.",
+   "reverso": "Si el cono no se desploma, todavía hay humedad libre; si se desmorona de golpe, la arena ya está más seca que SSS. Muestra de al menos 4 kg, reducida (ASTM C702) a un espécimen de 1 kg aproximadamente.",
    "fuente": [
     {
      "doc": "19",
@@ -2423,7 +2427,7 @@
    "subtema": "3E",
    "tipo": "criterio",
    "frente": "ASTM C128 · Gravedad específica y absorción del agregado fino: resultado y criterio",
-   "reverso": "GBS = Mseca / (Mcal + Msss − Msum)\nD = (Msss − Mseca) / Mseca × 100\n(Mcal: picnómetro con agua hasta la marca; Msum: picnómetro con agua y muestra)",
+   "reverso": "GBS = Mseca / (Mcal + Msss − Msum)\nD = (Msss − Mseca) / Mseca × 100\n(Mcal: picnómetro con agua hasta la marca; Msum: picnómetro con agua y muestra)\nSe reporta la gravedad específica al 0,01 y la absorción al 0,1 %.",
    "fuente": [
     {
      "doc": "19",
@@ -2672,7 +2676,7 @@
      }
     ]
    },
-   "verificar": "El 'Resumen' de la sección del C29 en el manual (pág. 111) describe por error el ensayo de impurezas orgánicas (C40); no se usa."
+   "verificar": "El 'Resumen' de la sección del C29 en el manual (pág. 111) describe por error el ensayo de impurezas orgánicas (C40), y en la pág. 100 hay una oración copiada del C40 sobre «impurezas orgánicas»; ninguna de las dos se usa."
   },
   {
    "id": "t3-3E-30",
@@ -2815,7 +2819,7 @@
    "subtema": "3E",
    "tipo": "proceso",
    "frente": "ASTM C131 · Abrasión en la Máquina de Los Ángeles: pasos",
-   "reverso": "1. Lavar, secar a 110 ± 5 °C, separar por tamaños y recombinar según la graduación A, B, C o D (5000 g en total).\n2. Escoger la carga abrasiva (esferas de acero) según la graduación y pesar Minicial.\n3. Hacer girar la máquina a 30–33 rev/min durante 500 revoluciones.\n4. Tamizar en la malla No. 12, lavar lo retenido, secar a masa constante y pesar Mfinal.",
+   "reverso": "1. Lavar, secar a 110 ± 5 °C, separar por tamaños y recombinar según la graduación A, B, C o D (5 000 ± 10 g en total).\n2. Escoger la carga abrasiva (esferas de acero) según la graduación y pesar Minicial.\n3. Hacer girar la máquina a 30–33 rev/min durante 500 revoluciones.\n4. Tamizar en la malla No. 12, lavar lo retenido, secar a masa constante y pesar Mfinal.",
    "fuente": [
     {
      "doc": "19",
@@ -2984,11 +2988,19 @@
    "subtema": "3E",
    "tipo": "concepto",
    "frente": "¿Por qué se usa el método A (separador) para arena seca y el B o C para arena con agua libre?",
-   "reverso": "El separador necesita que el material fluya libre por los canales; si la arena tiene humedad libre, se pega. En el cuarteo o el apilamiento miniatura, la arena húmeda conserva la forma del cono. Si se quiere usar B o C con arena seca, primero se humedece.",
+   "reverso": "El separador mecánico necesita que la muestra fluya suave y libremente por los canales, sin restricción ni pérdida de material; por eso se usa con arena más seca que SSS. Si la arena tiene humedad libre, se reduce por cuarteo (B) o por apilamiento miniatura (C), o se seca al menos hasta SSS para usar el A. Si se quiere usar B o C con arena seca, primero se humedece.",
    "fuente": [
     {
      "doc": "19",
+     "pag": 25
+    },
+    {
+     "doc": "19",
      "pag": 27
+    },
+    {
+     "doc": "19",
+     "pag": 28
     }
    ],
    "origen": "teoria"
@@ -3023,6 +3035,14 @@
     {
      "doc": "19",
      "pag": 66
+    },
+    {
+     "doc": "19",
+     "pag": 80
+    },
+    {
+     "doc": "13",
+     "pag": 8
     }
    ],
    "origen": "teoria"

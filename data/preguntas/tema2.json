@@ -411,7 +411,7 @@
    "enunciado": "El documento que permite obtener la tasa de evaporación es la ASTM C 305",
    "origen": "examen",
    "clave": "oficial",
-   "explicacion": "Falso: es el ACI 305 (Guía para concretar en clima caluroso). La ASTM C305 es la práctica de mezclado mecánico de pastas y morteros.",
+   "explicacion": "Falso: el documento es el ACI 305 (Guía para concretar en clima caluroso), que trae el ábaco de la tasa de evaporación; no es una norma ASTM.",
    "fuente": [
     {
      "doc": "06",
@@ -609,9 +609,9 @@
     "pregunta": "Parte 1a, cuadro de sales",
     "periodo": "II-2022"
    },
-   "respuesta_modelo": "Bicarbonatos",
+   "respuesta_modelo": "Bicarbonatos (la clave también acepta «sodio»)",
    "puntos_clave": [
-    "Bicarbonatos"
+    "Bicarbonatos (o sodio, según la clave)"
    ]
   },
   {
@@ -676,7 +676,7 @@
     "pregunta": "Parte 1a, cuadro de contracciones",
     "periodo": "II-2022"
    },
-   "respuesta_modelo": "Se provoca por la tasa de evaporación del agua de la superficie o por la pérdida de agua por factores externos (exudación, formaletas). Se evita controlando la temperatura y la humedad ambiental, controlando la temperatura del concreto o con vibración.",
+   "respuesta_modelo": "Se provoca por la tasa de evaporación del agua de la superficie o por la pérdida de agua por factores externos (exudación, formaletas). Se evita controlando la temperatura y la humedad ambiental, controlando la temperatura del concreto, con vibración o reduciendo la a/c.",
    "puntos_clave": [
     "evaporación o pérdida de agua por factores externos",
     "control de la temperatura y la humedad (curado y protección)"
@@ -690,7 +690,7 @@
    "enunciado": "Contracciones del concreto fresco. Uno de los tipos es: contracción autógena. Indique por qué se provoca y una forma de evitarla.",
    "origen": "examen",
    "clave": "oficial",
-   "explicacion": "La clave acepta «consumo interno de agua al hidratar» y, para evitarla, el curado o reducir la a/c. Navas indica que lo más importante es curar pronto y al menos 7 días.",
+   "explicacion": "La clave acepta «consumo interno de agua al hidratar» o «esfuerzos de tensión por restricciones» como causa, y «vibración» o «curado» como forma de evitarla. «Reducir a/c» aparece en la clave como medida contra la contracción PLÁSTICA, no contra la autógena: según Navas, la autógena se vuelve significativa justamente con a/c muy bajas (menores que 0,30). Navas indica que lo más importante es curar pronto y al menos 7 días (ver contradicción C18).",
    "fuente": [
     {
      "doc": "20",
@@ -704,7 +704,7 @@
     "pregunta": "Parte 1a, cuadro de contracciones",
     "periodo": "II-2022"
    },
-   "respuesta_modelo": "Se provoca por el consumo interno de agua al hidratarse el cemento (también se acepta: esfuerzos de tensión por restricciones). Se evita con curado (iniciarlo pronto y mantenerlo al menos 7 días), reduciendo la a/c o con vibración.",
+   "respuesta_modelo": "Se provoca por el consumo interno de agua al hidratarse el cemento (la clave también acepta: esfuerzos de tensión por restricciones). Se evita con curado (según Navas, iniciarlo lo antes posible y mantenerlo al menos 7 días) o con vibración, que también acepta la clave.",
    "puntos_clave": [
     "consumo interno de agua en la hidratación",
     "curado temprano"
@@ -872,7 +872,7 @@
     "mayor a/c → más trabajabilidad",
     "rango usual de 0,40 a 0,80"
    ],
-   "verificar": "La ley de Abrams solo aparece en el comentario de la clave; las fuentes de teoría no la explican."
+   "verificar": "La ley de Abrams aparece en el comentario de la clave y está definida en el ACI 116R (12, pág. 36, en inglés): con materiales y condiciones dados, la relación agua/cemento determina la resistencia del concreto. Las presentaciones del curso no la desarrollan."
   },
   {
    "id": "p2-2B-x15",
@@ -957,7 +957,7 @@
    "enunciado": "Evitar aguas acidas con un pH menor a:",
    "origen": "examen",
    "clave": "oficial",
-   "explicacion": "La clave da 3.5. La PCA dice pH menor que 3,0, y la tabla del curso da un rango aceptable de 6,5 a 8,5.",
+   "explicacion": "La clave da 3,5. La PCA dice pH menor que 3,0, y la tabla del curso da un rango aceptable de 6,5 a 8,5.",
    "fuente": [
     {
      "doc": "01",
@@ -1469,7 +1469,8 @@
    "respuesta_modelo": "Sales de magnesio",
    "puntos_clave": [
     "magnesio"
-   ]
+   ],
+   "verificar": "La clave de este cuestionario (X01) da solo «sales de magnesio», pero la clave del examen II-2022 (X04) acepta calcio, magnesio y sulfatos para las reacciones expansivas, y ninguna fuente de teoría dice que el magnesio cause más eflorescencias y expansiones que el calcio."
   },
   {
    "id": "p2-2A-x18",

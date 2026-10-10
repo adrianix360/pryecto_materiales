@@ -1,0 +1,1664 @@
+{
+ "auditoria": "2026-10-09",
+ "descripcion": "Auditoría técnica de tarjetas, preguntas y glosario contra las fuentes del curso",
+ "correcciones": [
+  {
+   "id": "p2-2B-x11",
+   "campo": "respuesta_modelo",
+   "antes": "Se provoca por el consumo interno de agua al hidratarse el cemento (también se acepta: esfuerzos de tensión por restricciones). Se evita con curado (iniciarlo pronto y mantenerlo al menos 7 días), reduciendo la a/c o con vibración.",
+   "despues": "Se provoca por el consumo interno de agua al hidratarse el cemento (la clave también acepta: esfuerzos de tensión por restricciones). Se evita con curado (según Navas, iniciarlo lo antes posible y mantenerlo al menos 7 días) o con vibración, que también acepta la clave.",
+   "severidad": "alta",
+   "razon": "En la clave de X04, «Reducir a/c» está en la columna de la contracción PLÁSTICA; para la autógena solo aparecen «Vibración» y «Curado». Además, reducir la a/c no evita la contracción autógena: según Navas, se vuelve significativa justamente con a/c muy bajas.",
+   "evidencia": [
+    {
+     "doc": "X04",
+     "pag": 1,
+     "cita": "Esfuerzos de tensión por restricciones / Consumo interno de agua al hidratar | Vibración / Curado"
+    },
+    {
+     "doc": "20",
+     "pag": 2,
+     "cita": "en concretos con relaciones w/c muy bajas (menores a 0.30) puede ser significativa"
+    }
+   ]
+  },
+  {
+   "id": "p2-2B-x11",
+   "campo": "explicacion",
+   "antes": "La clave acepta «consumo interno de agua al hidratar» y, para evitarla, el curado o reducir la a/c. Navas indica que lo más importante es curar pronto y al menos 7 días.",
+   "despues": "La clave acepta «consumo interno de agua al hidratar» o «esfuerzos de tensión por restricciones» como causa, y «vibración» o «curado» como forma de evitarla. «Reducir a/c» aparece en la clave como medida contra la contracción PLÁSTICA, no contra la autógena: según Navas, la autógena se vuelve significativa justamente con a/c muy bajas (menores que 0,30). Navas indica que lo más importante es curar pronto y al menos 7 días (ver contradicción C18).",
+   "severidad": "alta",
+   "razon": "La explicación atribuye a la clave una respuesta («reducir la a/c») que la clave pone en la columna de la contracción plástica, y que contradice a Navas para la autógena.",
+   "evidencia": [
+    {
+     "doc": "X04",
+     "pag": 1,
+     "cita": "Control temperatura concreto / Vibración / Reducir a/c (columna de la contracción plástica)"
+    },
+    {
+     "doc": "20",
+     "pag": 2,
+     "cita": "Para reducirla lo más importante es iniciar el proceso de curado lo antes posible y mantenerlo al menos 7 días"
+    }
+   ]
+  },
+  {
+   "id": "t2-2B-07",
+   "campo": "verificar",
+   "antes": null,
+   "despues": "Contradicción C18: Navas (20, pág. 4/7) escribe «iniciar el curado lo antes posible y mantenerlo al menos 7 días» sobre la contracción autógena; la corrección en rojo del cuestionario (X01, pág. 8) asigna esa misma frase a la contracción plástica. Hay que consultarlo con el profe.",
+   "severidad": "media",
+   "razon": "ALCANCE §7 C18 manda marcar VERIFICAR y mostrar las dos atribuciones; la tarjeta afirma la de Navas sin la marca, a diferencia de p2-2B-x28.",
+   "evidencia": [
+    {
+     "doc": "20",
+     "pag": 2,
+     "cita": "Para reducirla lo más importante es iniciar el proceso de curado lo antes posible y mantenerlo al menos 7 días."
+    },
+    {
+     "doc": "X01",
+     "pag": 8,
+     "cita": "La definición anterior se refiere al concepto de: contracción plástica (corrección en rojo)"
+    }
+   ]
+  },
+  {
+   "id": "p2-2A-x09",
+   "campo": "respuesta_modelo",
+   "antes": "Bicarbonatos",
+   "despues": "Bicarbonatos (la clave también acepta «sodio»)",
+   "severidad": "media",
+   "razon": "La clave del examen marca dos respuestas válidas (bicarbonatos y sodio); la respuesta modelo y los puntos clave solo dan una, y el autocalificado rechazaría «sodio».",
+   "evidencia": [
+    {
+     "doc": "X04",
+     "pag": 1,
+     "cita": "Sal contenida en el agua que puede acelerar o retardar el fraguado: Bicarbonatos / Sodio"
+    },
+    {
+     "doc": "05",
+     "pag": 3,
+     "cita": "bicarbonatos pueden ser sodio NaHCO3 ... puede acelerar o retardar fraguado"
+    }
+   ]
+  },
+  {
+   "id": "p2-2A-x09",
+   "campo": "puntos_clave",
+   "antes": [
+    "Bicarbonatos"
+   ],
+   "despues": [
+    "Bicarbonatos (o sodio, según la clave)"
+   ],
+   "severidad": "media",
+   "razon": "Mismo motivo: la clave acepta también «sodio» (bicarbonato de sodio, NaHCO₃, en la diapositiva).",
+   "evidencia": [
+    {
+     "doc": "X04",
+     "pag": 1,
+     "cita": "Bicarbonatos / Sodio"
+    }
+   ]
+  },
+  {
+   "id": "p2-2B-x06",
+   "campo": "explicacion",
+   "antes": "Falso: es el ACI 305 (Guía para concretar en clima caluroso). La ASTM C305 es la práctica de mezclado mecánico de pastas y morteros.",
+   "despues": "Falso: el documento es el ACI 305 (Guía para concretar en clima caluroso), que trae el ábaco de la tasa de evaporación; no es una norma ASTM.",
+   "severidad": "media",
+   "razon": "El dato sobre el contenido de la ASTM C305 no aparece en ninguna fuente del curso (regla «nada inventado»); la explicación se sostiene sin él.",
+   "evidencia": [
+    {
+     "doc": "06",
+     "pag": 8,
+     "cita": "ACI PRC-305-20: Guide to Hot Weather Concreting"
+    },
+    {
+     "doc": "X02",
+     "pag": 2,
+     "cita": "El documento que permite obtener la tasa de evaporación es la ASTM C 305 ... ACI 305"
+    }
+   ]
+  },
+  {
+   "id": "t2-2A-11",
+   "campo": "reverso",
+   "antes": "Cloruro de sodio: 20 000 ppm.\nCloruro como Cl⁻: 500 ppm en concreto preesforzado y 1000 ppm en concreto húmedo o con aluminio o metales galvanizados.\nSulfato de sodio: 10 000 ppm.\nSulfato como SO₄: 3 000 ppm.\nSulfato de magnesio: 25 000 ppm.",
+   "despues": "Cloruro de sodio: 20 000 ppm.\nCloruro como Cl⁻: 500 ppm en concreto preesforzado y 1000 ppm en concreto húmedo o con aluminio o metales galvanizados.\nCloruro de calcio: 2 % del peso del cemento.\nSulfato de sodio: 10 000 ppm.\nSulfato como SO₄: 3 000 ppm.\nSulfato de magnesio: 25 000 ppm.",
+   "severidad": "media",
+   "razon": "ALCANCE 2.7 pide la tabla completa de tolerancias; la fila del cloruro de calcio (2 %) no aparece en ninguna tarjeta, pregunta ni glosario del proyecto. Encaja en la tarjeta de cloruros.",
+   "evidencia": [
+    {
+     "doc": "25",
+     "pag": 1,
+     "cita": "Cloruro de calcio (por peso (masa) de cemento de Hormigón) 2 %"
+    }
+   ]
+  },
+  {
+   "id": "t2-2A-08",
+   "campo": "reverso",
+   "antes": "ASTM C1602: especificación del agua de mezcla para concreto (requisitos).\nASTM C1603: medición de sólidos en el agua.\nASTM C114: métodos de análisis químico (se usa para cloruros y sulfatos).",
+   "despues": "ASTM C1602: especificación del agua de mezcla para concreto (requisitos).\nASTM C1603: medición de sólidos en el agua.\nASTM C114: métodos de análisis químico del cemento hidráulico; en la presentación es el método para cloruros y sulfatos del agua, y la clave del curso la da como el método para analizar químicamente el agua.",
+   "severidad": "baja",
+   "razon": "La diapositiva muestra el título real de la C114 (análisis químico del cemento hidráulico); la tarjeta lo omite y puede llevar a pensar que es una norma específica de agua.",
+   "evidencia": [
+    {
+     "doc": "05",
+     "pag": 7,
+     "cita": "C114-18 Standard Test Methods for Chemical Analysis of Hydraulic Cement"
+    },
+    {
+     "doc": "X02",
+     "pag": 3,
+     "cita": "Indique el método estándar para analizar químicamente el agua: ASTM C114"
+    }
+   ]
+  },
+  {
+   "id": "p2-2B-x10",
+   "campo": "respuesta_modelo",
+   "antes": "Se provoca por la tasa de evaporación del agua de la superficie o por la pérdida de agua por factores externos (exudación, formaletas). Se evita controlando la temperatura y la humedad ambiental, controlando la temperatura del concreto o con vibración.",
+   "despues": "Se provoca por la tasa de evaporación del agua de la superficie o por la pérdida de agua por factores externos (exudación, formaletas). Se evita controlando la temperatura y la humedad ambiental, controlando la temperatura del concreto, con vibración o reduciendo la a/c.",
+   "severidad": "baja",
+   "razon": "La clave acepta cuatro formas de evitarla y la respuesta modelo omite «reducir a/c», que además respalda Navas.",
+   "evidencia": [
+    {
+     "doc": "X04",
+     "pag": 1,
+     "cita": "Control temperatura y humedad ambiental / Control temperatura concreto / Vibración / Reducir a/c"
+    },
+    {
+     "doc": "20",
+     "pag": 3,
+     "cita": "la contracción plástica aumenta conforme aumenta el contenido de pasta, y la relación w/c"
+    }
+   ]
+  },
+  {
+   "id": "p2-2B-x14",
+   "campo": "verificar",
+   "antes": "La ley de Abrams solo aparece en el comentario de la clave; las fuentes de teoría no la explican.",
+   "despues": "La ley de Abrams aparece en el comentario de la clave y está definida en el ACI 116R (12, pág. 36, en inglés): con materiales y condiciones dados, la relación agua/cemento determina la resistencia del concreto. Las presentaciones del curso no la desarrollan.",
+   "severidad": "baja",
+   "razon": "La nota dice que ninguna fuente de teoría la explica, pero el ACI 116R (fuente 12) sí la define; conviene citarla como respaldo (y agregar 12, pág. 36, a fuente).",
+   "evidencia": [
+    {
+     "doc": "12",
+     "pag": 36,
+     "cita": "law, Abrams'—a rule stating that ... the ratio of the amount of water to the amount of the cement ... determines the strength"
+    }
+   ]
+  },
+  {
+   "id": "p2-2A-x17",
+   "campo": "verificar",
+   "antes": null,
+   "despues": "La clave de este cuestionario (X01) da solo «sales de magnesio», pero la clave del examen II-2022 (X04) acepta calcio, magnesio y sulfatos para las reacciones expansivas, y ninguna fuente de teoría dice que el magnesio cause más eflorescencias y expansiones que el calcio.",
+   "severidad": "baja",
+   "razon": "Ninguna fuente de teoría dice que el magnesio cause más eflorescencias y expansiones que el calcio: la diapositiva los pone al mismo nivel y la clave de X04 acepta ambos. La clave de X01 solo da magnesio; conviene marcar VERIFICAR.",
+   "evidencia": [
+    {
+     "doc": "05",
+     "pag": 5,
+     "cita": "Sales → Calcio / Magnesio + H2O → Eflorescencias / Expansiones"
+    },
+    {
+     "doc": "X04",
+     "pag": 1,
+     "cita": "reacciones expansivas: Calcio / Magnesio / Sulfatos"
+    }
+   ]
+  },
+  {
+   "id": "t2-2A-13",
+   "campo": "verificar",
+   "antes": "La PCA da otros valores para algas (1000 ppm, pág. 100), habla de hidróxido de calcio en vez de potasio (pág. 99) y fija el aceite mineral en 2,5 % (pág. 100). Se usa la tabla del curso.",
+   "despues": "La PCA da otros valores para algas (1000 ppm, pág. 100), habla de hidróxido de calcio en vez de potasio (pág. 99) y dice que el aceite mineral por encima del 2,5 % del peso del cemento puede reducir la resistencia en más de 20 % (pág. 100). Se usa la tabla del curso.",
+   "severidad": "baja",
+   "razon": "La PCA no «fija» un límite de 2,5 %: describe el efecto por encima de ese valor (así lo recoge C21).",
+   "evidencia": [
+    {
+     "doc": "01",
+     "pag": 6,
+     "cita": "el aceite mineral en concentraciones superiores al 2.5% en peso de cemento puede reducir la resistencia en más del 20%"
+    }
+   ]
+  },
+  {
+   "id": "t2-2A-09",
+   "campo": "verificar",
+   "antes": "La PCA (Tabla 4-4, pág. 96) da 50 000 ppm de sólidos totales; la presentación dice 5 000. Se usa el valor del profe.",
+   "despues": "La PCA (Tabla 4-4, pág. 96, límites para aguas de lavado según la ASTM C94) da 50 000 ppm de sólidos totales; la presentación dice 5 000. Se usa el valor del profe.",
+   "severidad": "baja",
+   "razon": "El 50 000 ppm de la PCA es para agua de lavado según la C94, no para la C1602; aclararlo ayuda a entender la diferencia de C1.",
+   "evidencia": [
+    {
+     "doc": "01",
+     "pag": 2,
+     "cita": "Tabla 4-4. Límites Químicos para Aguas de Lavado Usadas con Agua de Mezcla (ASTM C 94 o AASHTO M 157)"
+    }
+   ]
+  },
+  {
+   "id": "p2-2A-x13",
+   "campo": "explicacion",
+   "antes": "La clave da 3.5. La PCA dice pH menor que 3,0, y la tabla del curso da un rango aceptable de 6,5 a 8,5.",
+   "despues": "La clave da 3,5. La PCA dice pH menor que 3,0, y la tabla del curso da un rango aceptable de 6,5 a 8,5.",
+   "severidad": "baja",
+   "razon": "La explicación (texto propio, no del examen) debe usar coma decimal como el resto del sitio.",
+   "evidencia": [
+    {
+     "doc": "X01",
+     "pag": 3,
+     "cita": "La respuesta correcta es: 3.5"
+    }
+   ]
+  },
+  {
+   "id": "g-tasa-de-evaporacion",
+   "campo": "definicion",
+   "antes": "Cantidad de agua que se evapora de la superficie del concreto; se estima con el ábaco del ACI 305.",
+   "despues": "Masa de agua que se evapora de la superficie del concreto por unidad de área y de tiempo (kg/m²/h); se estima con el ábaco del ACI 305.",
+   "severidad": "baja",
+   "razon": "Es una tasa (por área y por hora), no una cantidad; el eje del ábaco de la diapositiva da las unidades.",
+   "evidencia": [
+    {
+     "doc": "06",
+     "pag": 8,
+     "cita": "Tasa de evaporación, kg (m²/hr)"
+    }
+   ]
+  },
+  {
+   "id": "g-agua-de-mezcla",
+   "campo": "definicion",
+   "antes": "Agua que se añade al cemento y los agregados para preparar el concreto; prácticamente cualquier agua potable sirve.",
+   "despues": "Agua que se añade al cemento y los agregados para preparar el concreto; prácticamente cualquier agua natural potable y sin fuerte sabor u olor sirve.",
+   "severidad": "baja",
+   "razon": "Omite la condición de la PCA (sin fuerte sabor u olor), que sí recoge la tarjeta t2-2A-01.",
+   "evidencia": [
+    {
+     "doc": "01",
+     "pag": 1,
+     "cita": "Prácticamente cualquier agua natural que sea potable y no presente fuerte sabor u olor"
+    }
+   ]
+  },
+  {
+   "id": "g-asentamiento",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "06",
+     "pag": 9
+    }
+   ],
+   "despues": [
+    {
+     "doc": "06",
+     "pag": 9
+    },
+    {
+     "doc": "06",
+     "pag": 10
+    },
+    {
+     "doc": "12",
+     "pag": 60
+    }
+   ],
+   "severidad": "baja",
+   "razon": "La diapositiva 06: 9 solo lista las normas; «medida de la consistencia» viene del ACI 116R, pág. 60.",
+   "evidencia": [
+    {
+     "doc": "12",
+     "pag": 60,
+     "cita": "slump—a measure of consistency of freshly mixed concrete"
+    }
+   ]
+  },
+  {
+   "id": "g-vibracion",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "06",
+     "pag": 5
+    }
+   ],
+   "despues": [
+    {
+     "doc": "06",
+     "pag": 5
+    },
+    {
+     "doc": "12",
+     "pag": 70
+    }
+   ],
+   "severidad": "baja",
+   "razon": "La diapositiva 06: 5 muestra los tipos, pero no dice que la vibración sirve para consolidar; eso está en el ACI 116R, pág. 70 (que también describe la externa «attached ... on the forms»).",
+   "evidencia": [
+    {
+     "doc": "12",
+     "pag": 70,
+     "cita": "vibration—energetic agitation of freshly mixed concrete ... to assist in consolidating the concrete"
+    }
+   ]
+  },
+  {
+   "id": "g-eflorescencia",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "05",
+     "pag": 5
+    },
+    {
+     "doc": "01",
+     "pag": 2,
+     "impresa": "96"
+    }
+   ],
+   "despues": [
+    {
+     "doc": "05",
+     "pag": 5
+    },
+    {
+     "doc": "01",
+     "pag": 2,
+     "impresa": "96"
+    },
+    {
+     "doc": "12",
+     "pag": 25
+    }
+   ],
+   "severidad": "baja",
+   "razon": "Ni 05: 5 ni la PCA definen eflorescencia como «depósito de sales en la superficie»; la definición está en el ACI 116R, pág. 25.",
+   "evidencia": [
+    {
+     "doc": "12",
+     "pag": 25,
+     "cita": "efflorescence—a deposit of salts, usually white, formed on a surface"
+    }
+   ]
+  },
+  {
+   "id": "g-ppm",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "despues": [
+    {
+     "doc": "25",
+     "pag": 1
+    },
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    }
+   ],
+   "severidad": "baja",
+   "razon": "La tabla 25 usa «ppm» sin explicarlo; la expansión «partes por millón» está en la PCA, pág. impresa 97.",
+   "evidencia": [
+    {
+     "doc": "01",
+     "pag": 3,
+     "cita": "menos de 2000 partes por millón (ppm) de sólidos disueltos"
+    }
+   ]
+  },
+  {
+   "id": "t3-3A-06",
+   "campo": "verificar",
+   "antes": null,
+   "despues": "Límite entre normales y pesados: la diapositiva (14, pág. 9) dice 1 900 kg/m³ y el manual de laboratorio (19, pág. 63) dice 1 920 kg/m³; ambas son del profe. El rango 2,4–2,8 de la GBS es el adoptado en C19; el manual (19, pág. 63) da 2,4–3,0, Navas 2,5–2,8 y la PCA 2,4–2,9.",
+   "severidad": "media",
+   "razon": "La C19 manda llevar VERIFICAR en el rango de GBS y la tarjeta no lo lleva. Además hay una contradicción nueva entre dos fuentes del profe (1 900 contra 1 920 kg/m³) que no está en ALCANCE §7; por la regla 0.3 se muestran las dos y se marca VERIFICAR. Afecta también a p3-3A-x04, p3-3A-x15, p3-3A-t01 y g-agregado-pesado (no cambia sus claves).",
+   "evidencia": [
+    {
+     "doc": "14",
+     "pag": 9,
+     "cita": "δb > 1 900 kg/m3 ... (1 120 < δb < 1 900) kg/m3 ... 2,4 < GBS < 2,8"
+    },
+    {
+     "doc": "19",
+     "pag": 63,
+     "cita": "gravedad específica bruta seca con valores en un rango de 2,4 a 3,0 y una densidad bruta seca entre 1120 kg/m3 y 1920 kg/m3"
+    }
+   ]
+  },
+  {
+   "id": "t3-3A-14",
+   "campo": "verificar",
+   "antes": null,
+   "despues": "La diapositiva (15, pág. 11) dice ASTM C994 para la abrasión de superficies de concreto o mortero por corte rotativo; ese método podría ser la ASTM C944 (dígitos invertidos). Ninguna fuente del curso dice C944: consultar con el profe.",
+   "severidad": "media",
+   "razon": "Por conocimiento general, el método de corte rotativo para superficies de concreto o mortero es la ASTM C944, no la C994; la diapositiva parece tener los dígitos invertidos. Ninguna fuente del curso dice C944, así que no se cambia: se marca VERIFICAR para consultar al profe. La misma cifra aparece en otra pregunta de data/preguntas/tema3.json (explicación de la pregunta de la C131 que menciona «la C418 o la C994»), fuera de este lote.",
+   "evidencia": [
+    {
+     "doc": "15",
+     "pag": 11,
+     "cita": "ASTM C994: Método de ensayo estándar para resistencia a la abrasión en superficies de concreto o mortero por el método de corte rotativo."
+    }
+   ]
+  },
+  {
+   "id": "t3-3B-16",
+   "campo": "verificar",
+   "antes": null,
+   "despues": "INCOMPLETO: faltan las págs. impresas 123–125 de la PCA, donde está la Tabla 5-9 con los ensayos de reactividad álcali-agregado. Los criterios se toman solo de la diapositiva 15, pág. 17.",
+   "severidad": "media",
+   "razon": "ALCANCE §0.4 y 3.14 piden marcar INCOMPLETO el tema de RAS (ensayos y control). Ningún ítem del lote (ni del proyecto) lleva esa marca; esta tarjeta de ensayos es la más afectada. Lo mismo podría anotarse en p3-3B-t06 y t3-3B-17.",
+   "evidencia": [
+    {
+     "doc": "10",
+     "pag": 4,
+     "cita": "La Tabla 5-9 describe dife-"
+    },
+    {
+     "doc": "15",
+     "pag": 17,
+     "cita": "ASTM C1260 Prueba barra mortero Determinar expansiones En 14 d > 0,10% Rechazo"
+    }
+   ]
+  },
+  {
+   "id": "t3-3B-14",
+   "campo": "reverso",
+   "antes": "1. Agregado reactivo.\n2. Exceso de álcalis (máximo 0,6 % en masa).\n3. Humedad.\nSi falta una, la reacción no ocurre.",
+   "despues": "1. Agregado reactivo.\n2. Exceso de álcalis en el cemento (se supera el máximo de 0,6 % en masa).\n3. Humedad.\nSi falta una, la reacción no ocurre.",
+   "severidad": "media",
+   "razon": "Tal como está, «exceso de álcalis (máximo 0,6 %)» puede leerse como que el exceso no pasa de 0,6 %. El 0,6 % es el máximo permitido; la condición de la reacción es superarlo.",
+   "evidencia": [
+    {
+     "doc": "15",
+     "pag": 13,
+     "cita": "Exceso álcalis (Max 0,6% en masa)"
+    },
+    {
+     "doc": "X06",
+     "pag": 3,
+     "cita": "se debe superar el máximo permitido de álcalis"
+    },
+    {
+     "doc": "10",
+     "pag": 5,
+     "cita": "El cemento con bajo contenido de álcalis ... inferior a 0.60% (óxido de sodio equivalente) se puede usar para controlar la RAS."
+    }
+   ]
+  },
+  {
+   "id": "p3-3B-x16",
+   "campo": "puntos_clave",
+   "antes": [
+    "agregado reactivo",
+    "exceso de álcalis (máx. 0,6 %)",
+    "humedad"
+   ],
+   "despues": [
+    "agregado reactivo",
+    "exceso de álcalis (se supera el máximo de 0,6 %)",
+    "humedad"
+   ],
+   "severidad": "baja",
+   "razon": "Misma ambigüedad que en t3-3B-14: el 0,6 % es el máximo permitido, y la condición es superarlo.",
+   "evidencia": [
+    {
+     "doc": "15",
+     "pag": 13,
+     "cita": "Exceso álcalis (Max 0,6% en masa)"
+    },
+    {
+     "doc": "X06",
+     "pag": 3,
+     "cita": "se debe superar el máximo permitido de álcalis"
+    }
+   ]
+  },
+  {
+   "id": "t3-3B-17",
+   "campo": "reverso",
+   "antes": "Ocurre con rocas dolomíticas (la dolomita es carbonato de calcio y magnesio). El producto forma grietas en la pasta: el agregado ataca la pasta. Ensayo: ASTM C586, expansión de cilindros de roca en hidróxido de sodio durante 1 año.",
+   "despues": "Ocurre con ciertas rocas dolomíticas (la dolomita es carbonato de calcio y magnesio). El producto forma grietas en la pasta: el agregado ataca la pasta. Ensayo: ASTM C586, expansión de cilindros de roca en hidróxido de sodio durante 1 año.",
+   "severidad": "baja",
+   "razon": "La PCA limita la RAC a ciertas rocas dolomíticas (de composición específica y poco común); escrito sin «ciertas», parece que toda roca dolomítica reacciona.",
+   "evidencia": [
+    {
+     "doc": "10",
+     "pag": 5,
+     "cita": "Las reacciones que se observan en ciertas rocas dolomíticas están asociadas con la reacción álcali-carbonato (RAC)."
+    }
+   ]
+  },
+  {
+   "id": "t3-3B-18",
+   "campo": "reverso",
+   "antes": "Impurezas orgánicas: afectan el fraguado y el endurecimiento (ASTM C40).\nMaterial más fino que 75 µm: afecta la adherencia y aumenta la demanda de agua (ASTM C117).\nTerrones de arcilla y partículas desmenuzables: afectan la trabajabilidad y la durabilidad (ASTM C142).\nCarbón, lignito y material ligero: afectan la durabilidad y causan manchas (ASTM C123).",
+   "despues": "Impurezas orgánicas: afectan el fraguado y el endurecimiento, y pueden causar deterioro (ASTM C40).\nMaterial más fino que 75 µm: afecta la adherencia y aumenta la demanda de agua (ASTM C117).\nTerrones de arcilla y partículas desmenuzables: afectan la trabajabilidad y la durabilidad, y pueden causar erupciones (ASTM C142).\nCarbón, lignito y material ligero: afectan la durabilidad y pueden causar manchas y erupciones (ASTM C123).",
+   "severidad": "baja",
+   "razon": "La tabla dice «puede causar» (no siempre) y además menciona erupciones y deterioro, que la tarjeta omite. La pregunta p3-3B-t05 usa «erupciones» en la opción correcta, así que conviene que la tarjeta lo traiga.",
+   "evidencia": [
+    {
+     "doc": "10",
+     "pag": 2,
+     "cita": "Carbón, lignito u otro material ligero Afecta la durabilidad, puede causar manchas y erupciones."
+    },
+    {
+     "doc": "10",
+     "pag": 2,
+     "cita": "Impurezas orgánicas Afecta el tiempo de fraguado y el endurecimiento, puede causar deterioro."
+    }
+   ]
+  },
+  {
+   "id": "t3-3B-07",
+   "campo": "reverso",
+   "antes": "Son buenos agregados: sanas, duras y tenaces, casi siempre lavas andesíticas. Problemas posibles: textura vesicular, exceso de vidrio, textura seriada y lajamiento (textura fluidal), que producen partículas planas.",
+   "despues": "Son buenos agregados: sanas, duras y tenaces; en nuestro medio suelen ser lavas andesíticas (rocas intermedias). Problemas posibles: textura vesicular, exceso de vidrio, textura seriada y textura fluidal, que produce lajamiento (partículas planas y elongadas).",
+   "severidad": "baja",
+   "razon": "«Casi siempre» exagera el «comúnmente» de la fuente. Además, la redacción actual sugiere que todos los problemas listados producen partículas planas, cuando solo la textura fluidal (lajamiento) lo hace.",
+   "evidencia": [
+    {
+     "doc": "26",
+     "pag": 54,
+     "cita": "Comúnmente en nuestro medio, se caracterizan por ser rocas intermedias (lavas andesíticas)."
+    },
+    {
+     "doc": "26",
+     "pag": 53,
+     "cita": "Las texturas fluidales de las rocas ígneas, tienden a provocar la fragmentación de la roca en lajas; partículas planares y elongadas"
+    }
+   ]
+  },
+  {
+   "id": "p3-3B-x10",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "10",
+     "pag": 2,
+     "impresa": "120"
+    }
+   ],
+   "despues": [
+    {
+     "doc": "10",
+     "pag": 1,
+     "impresa": "119"
+    },
+    {
+     "doc": "10",
+     "pag": 2,
+     "impresa": "120"
+    }
+   ],
+   "severidad": "media",
+   "razon": "La explicación (capa de limo y arcilla que debilita la adherencia y aumenta la demanda de agua) está en la pág. impresa 119 (PDF 1), que es la que cita la propia clave («Pag 119»). La pág. 120 solo tiene la Tabla 5-7.",
+   "evidencia": [
+    {
+     "doc": "10",
+     "pag": 1,
+     "cita": "especialmente el limo y la arcilla, pueden estar presentes como polvo suelto y pueden formar un revestimiento en las partículas"
+    }
+   ]
+  },
+  {
+   "id": "p3-3B-x17",
+   "campo": "explicacion",
+   "antes": "Falso. Los finos y las impurezas afectan el fraguado, la resistencia y la demanda de agua.",
+   "despues": "Falso. Los finos (sobre todo el limo y la arcilla) recubren las partículas, debilitan la adherencia pasta-agregado y aumentan la demanda de agua. La clave agrega que los finos y las impurezas orgánicas pueden retrasar el fraguado y reducir la resistencia.",
+   "severidad": "baja",
+   "razon": "La afirmación es sobre los finos de menos de 75 µm; la explicación mezcla sus efectos con los de las impurezas orgánicas sin decir cuál hace qué, y omite el efecto principal de los finos (adherencia).",
+   "evidencia": [
+    {
+     "doc": "10",
+     "pag": 1,
+     "cita": "pueden ser dañosos, pues debilitan la adherencia entre la pasta de cemento y el agregado"
+    },
+    {
+     "doc": "10",
+     "pag": 1,
+     "cita": "Las impurezas orgánicas pueden retrasar el fraguado y el endurecimiento del concreto, reducir el desarrollo de la resistencia"
+    }
+   ]
+  },
+  {
+   "id": "p3-3B-x17",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "10",
+     "pag": 2,
+     "impresa": "120"
+    }
+   ],
+   "despues": [
+    {
+     "doc": "10",
+     "pag": 1,
+     "impresa": "119"
+    },
+    {
+     "doc": "10",
+     "pag": 2,
+     "impresa": "120"
+    }
+   ],
+   "severidad": "baja",
+   "razon": "El texto de la clave (retraso del fraguado, menor resistencia) y el efecto de los finos están en la pág. impresa 119, no en la 120.",
+   "evidencia": [
+    {
+     "doc": "10",
+     "pag": 1,
+     "cita": "Las impurezas orgánicas pueden retrasar el fraguado y el endurecimiento del concreto, reducir el desarrollo de la resistencia"
+    }
+   ]
+  },
+  {
+   "id": "p3-3A-x11",
+   "campo": "explicacion",
+   "antes": "Falso. La tenacidad se refiere al impacto; el desgaste es la abrasión.",
+   "despues": "Falso. Según la clave, la tenacidad mide qué tanto soporta el agregado las cargas de impacto; el desgaste es la abrasión. En la Máquina de Los Ángeles (ASTM C131) se miden juntas la abrasión o desgaste, el impacto y la trituración.",
+   "severidad": "baja",
+   "razon": "La única fuente citada (19, pág. 112) no define la tenacidad; la definición solo está en la clave del examen. La explicación debe decir de dónde sale y usar el manual para lo que sí dice.",
+   "evidencia": [
+    {
+     "doc": "X01",
+     "pag": 6,
+     "cita": "Es una medida de qué tanto soporta cargas de impacto"
+    },
+    {
+     "doc": "19",
+     "pag": 112,
+     "cita": "resultado de una combinación de acciones incluyendo la abrasión o desgaste, impacto y trituración"
+    }
+   ]
+  },
+  {
+   "id": "p3-3B-x08",
+   "campo": "explicacion",
+   "antes": "Son correctas la caliza, el granito y la andesita (escrita «Andecita» en el original). Las lavas andesíticas recientes son la fuente típica del país y las calizas son muy usadas. La dolomita se asocia con la reacción álcali-carbonato y la pirita es un sulfuro de hierro que vuelve reactivo al agregado.",
+   "despues": "Son correctas la caliza, el granito y la andesita (escrita «Andecita» en el original). Las lavas andesíticas recientes son la fuente típica del país, las rocas intrusivas como el granito son muy resistentes y las calizas son muy usadas. La dolomita se asocia con la reacción álcali-carbonato y la pirita es un sulfuro de hierro que vuelve reactivo al agregado.",
+   "severidad": "baja",
+   "razon": "La explicación no justifica por qué el granito es correcto. Conviene agregar 26, págs. 56 y 58 a la fuente. Nota: la PCA (10, pág. 2, Tabla 5-8) lista las andesitas entre las sustancias potencialmente reactivas álcali-sílice; no cambia la clave, y la conferencia ya advierte del vidrio y la posible reacción álcali (26, pág. 54).",
+   "evidencia": [
+    {
+     "doc": "26",
+     "pag": 56,
+     "cita": "generando rocas ígneas con grandes cristales y de composición intermedia (granitos, dioritas)"
+    },
+    {
+     "doc": "26",
+     "pag": 58,
+     "cita": "Ventajas: -Muy resistentes, particularmente desde fuentes aluviales."
+    }
+   ]
+  },
+  {
+   "id": "p3-3B-x07",
+   "campo": "explicacion",
+   "antes": "En Costa Rica los mejores agregados provienen de rocas ígneas.",
+   "despues": "En Costa Rica los mejores agregados provienen de rocas ígneas, y estas se extraen tanto de tajos como de ríos.",
+   "severidad": "baja",
+   "razon": "La pregunta es sobre los agregados de río; la explicación actual no los menciona. La pág. 19 de la conferencia lo respalda y debería sumarse a la fuente.",
+   "evidencia": [
+    {
+     "doc": "26",
+     "pag": 19,
+     "cita": "En la manufactura de agregados para la construcción, destacan las rocas ígneas, extraídas desde tajos y en ríos (CDP)."
+    }
+   ]
+  },
+  {
+   "id": "p3-3B-x09",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "26",
+     "pag": 59
+    },
+    {
+     "doc": "26",
+     "pag": 9
+    }
+   ],
+   "despues": [
+    {
+     "doc": "26",
+     "pag": 59
+    },
+    {
+     "doc": "26",
+     "pag": 9
+    },
+    {
+     "doc": "15",
+     "pag": 5
+    }
+   ],
+   "severidad": "baja",
+   "razon": "La explicación dice que la C (mármol, cuarcita) son metamórficas; 26, pág. 9 solo nombra el mármol. La cuarcita como metamórfica está en 15, pág. 5.",
+   "evidencia": [
+    {
+     "doc": "15",
+     "pag": 5,
+     "cita": "Cuarcita (metamórfica)"
+    }
+   ]
+  },
+  {
+   "id": "g-agregado",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "19",
+     "pag": 6
+    }
+   ],
+   "despues": [
+    {
+     "doc": "19",
+     "pag": 6
+    },
+    {
+     "doc": "12",
+     "pag": 3
+    }
+   ],
+   "severidad": "baja",
+   "razon": "La parte «que se usa con un medio cementante para hacer concreto o mortero» no está en 19, pág. 6; viene del ACI 116R (12, págs. 2–3).",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 6,
+     "cita": "Según la ASTM C125 un agregado es un material granular, puede ser arena, grava o roca triturada."
+    },
+    {
+     "doc": "12",
+     "pag": 3,
+     "cita": "used with a hydraulic cementing medium to produce either concrete or mortar"
+    }
+   ]
+  },
+  {
+   "id": "t3-3A-06",
+   "campo": "reverso",
+   "antes": "Pesados: δb > 1900 kg/m³.\nNormales: 1120 < δb < 1900 kg/m³ (2,4 < GBS < 2,8).\nLivianos: δb < 1120 kg/m³.",
+   "despues": "Pesados: δb > 1 900 kg/m³.\nNormales: 1 120 < δb < 1 900 kg/m³ (2,4 < GBS < 2,8).\nLivianos: δb < 1 120 kg/m³.",
+   "severidad": "baja",
+   "razon": "Regla 7 (espacio de miles); la propia diapositiva escribe «1 900» y «1 120».",
+   "evidencia": [
+    {
+     "doc": "14",
+     "pag": 9,
+     "cita": "δb > 1 900 kg/m3 ... δ b < 1 120 kg/m3"
+    }
+   ]
+  },
+  {
+   "id": "p3-3A-x04",
+   "campo": "explicacion",
+   "antes": "Un agregado es pesado si su peso unitario masivo seco supera 1900 kg/m³.",
+   "despues": "Un agregado es pesado si su peso unitario masivo seco supera 1 900 kg/m³.",
+   "severidad": "baja",
+   "razon": "Regla 7 (espacio de miles). La respuesta_modelo es copia de la clave y no se toca.",
+   "evidencia": [
+    {
+     "doc": "14",
+     "pag": 9,
+     "cita": "δb > 1 900 kg/m3"
+    }
+   ]
+  },
+  {
+   "id": "p3-3A-x04",
+   "campo": "puntos_clave",
+   "antes": [
+    "δb > 1900 kg/m³"
+   ],
+   "despues": [
+    "δb > 1 900 kg/m³"
+   ],
+   "severidad": "baja",
+   "razon": "Regla 7 (espacio de miles).",
+   "evidencia": [
+    {
+     "doc": "14",
+     "pag": 9,
+     "cita": "δb > 1 900 kg/m3"
+    }
+   ]
+  },
+  {
+   "id": "p3-3A-x15",
+   "campo": "explicacion",
+   "antes": "Falso: los livianos tienen δb < 1120 kg/m³; 1300 kg/m³ cae en el rango normal (1120 a 1900).",
+   "despues": "Falso: los livianos tienen δb < 1 120 kg/m³; 1 300 kg/m³ cae en el rango normal (1 120 a 1 900 kg/m³).",
+   "severidad": "baja",
+   "razon": "Regla 7 (espacio de miles) y falta la unidad en el rango.",
+   "evidencia": [
+    {
+     "doc": "14",
+     "pag": 9,
+     "cita": "(1 120 < δb < 1 900) kg/m3"
+    }
+   ]
+  },
+  {
+   "id": "p3-3A-t01",
+   "campo": "explicacion",
+   "antes": "Correcta la C: supera los 1900 kg/m³. La A sería menor que 1120 kg/m³; la B estaría entre 1120 y 1900 kg/m³. La D no existe en la clasificación por peso unitario del curso.",
+   "despues": "Correcta la C: supera los 1 900 kg/m³. La A sería menor que 1 120 kg/m³; la B estaría entre 1 120 y 1 900 kg/m³. La D no existe en la clasificación por peso unitario del curso.",
+   "severidad": "baja",
+   "razon": "Regla 7: el enunciado de la misma pregunta escribe «2 240 kg/m³» con espacio y la explicación no.",
+   "evidencia": [
+    {
+     "doc": "14",
+     "pag": 9,
+     "cita": "δb > 1 900 kg/m3"
+    }
+   ]
+  },
+  {
+   "id": "g-agregado-liviano",
+   "campo": "definicion",
+   "antes": "Agregado con peso unitario masivo seco menor que 1120 kg/m³, como la pómez, la escoria o las cenizas volcánicas.",
+   "despues": "Agregado con peso unitario masivo seco menor que 1 120 kg/m³, como la pómez, la escoria o las cenizas volcánicas.",
+   "severidad": "baja",
+   "razon": "Regla 7 (espacio de miles).",
+   "evidencia": [
+    {
+     "doc": "14",
+     "pag": 9,
+     "cita": "δ b < 1 120 kg/m3"
+    }
+   ]
+  },
+  {
+   "id": "g-agregado-pesado",
+   "campo": "definicion",
+   "antes": "Agregado con peso unitario masivo seco mayor que 1900 kg/m³, como la barita o la magnetita; se usa en concreto de blindaje contra la radiación.",
+   "despues": "Agregado con peso unitario masivo seco mayor que 1 900 kg/m³, como la barita o la magnetita; se usa en concreto de blindaje contra la radiación.",
+   "severidad": "baja",
+   "razon": "Regla 7 (espacio de miles). Ver además la diferencia 1 900 / 1 920 kg/m³ anotada en t3-3A-06.",
+   "evidencia": [
+    {
+     "doc": "14",
+     "pag": 9,
+     "cita": "δb > 1 900 kg/m3"
+    }
+   ]
+  },
+  {
+   "id": "p3-3C-x17",
+   "campo": "explicacion",
+   "antes": "Falso. Si los agregados traen agua libre, aportan parte del agua de diseño; por eso el agua que se dosifica es menor, no mayor.",
+   "despues": "Verdadero, según la corrección a mano del examen (V al margen). Si los agregados traen agua libre, aportan parte del agua de diseño; por eso el agua que se dosifica es menor que la de diseño, o sea, el agua de diseño es mayor que la de dosificación. Solo en condición SSS son iguales. La tabla impresa marca F, pero su propia justificación («es menor porque los agregados aportan el resto») respalda que la afirmación es verdadera.",
+   "severidad": "alta",
+   "razon": "La explicación actual se contradice: dice que el agua dosificada es menor, que es lo mismo que decir que el agua de diseño es mayor, y eso vuelve verdadera la afirmación del enunciado. Este texto se aplica junto con el cambio de la clave a «a», una vez verificado. Si el profe mantiene F, igual hay que reescribir la explicación, porque la actual no justifica el Falso.",
+   "evidencia": [
+    {
+     "doc": "X01",
+     "pag": 6,
+     "cita": "Es menor porque los agregados aportan el resto para llegar al agua de diseño"
+    },
+    {
+     "doc": "X06",
+     "pag": 3,
+     "cita": "Solo sería posible si los agregados están en condición SSS, porque Wdiseño=Wdosificación."
+    }
+   ]
+  },
+  {
+   "id": "p3-3C-x17",
+   "campo": "verificar",
+   "antes": null,
+   "despues": "Clave dudosa: en la recopilación X01 (pág. 6) la equis impresa está en F, pero la corrección al margen marca V y la justificación impresa («es menor porque los agregados aportan el resto») hace verdadera la afirmación. Se adopta V; consultar con el profe.",
+   "severidad": "alta",
+   "razon": "Mientras se confirma la clave, el ítem debe llevar la marca VERIFICAR para que el estudiante no memorice una respuesta dudosa.",
+   "evidencia": [
+    {
+     "doc": "X01",
+     "pag": 6,
+     "cita": "Margen a mano: «V»; justificación impresa sin resaltar."
+    }
+   ]
+  },
+  {
+   "id": "t3-3C-17",
+   "campo": "reverso",
+   "antes": "n = Vv / Vm\ne = Vv / Vs\nn = e / (1 + e)\nS = Vw / Vv",
+   "despues": "n = Vv / Vm (× 100 %)\ne = Vv / Vs (× 100 %)\nn = e / (1 + e) (n y e como fracciones)\nS = Vw / Vv (× 100 %)\nVv (volumen de vacíos del diagrama) = poros permeables + agua libre + aire = Vm − Vs. No es solo el espacio entre partículas.",
+   "severidad": "media",
+   "razon": "En el formulario y en el diagrama del curso, Vv incluye los poros permeables además del espacio entre partículas (por eso Vm = Vs(1 + e)). Si no se aclara, el estudiante lo confunde con los «vacíos» de la ASTM C29, que excluyen los poros. Además, el formulario expresa n, e y S en porcentaje.",
+   "evidencia": [
+    {
+     "doc": "13",
+     "pag": 4,
+     "cita": "Diagrama: la cota VV abarca VAIRE, VWL y VPP; Vm abarca además VS."
+    },
+    {
+     "doc": "13",
+     "pag": 10,
+     "cita": "e = Vv/Vs (100%) (15); n = Vv/VM (100%) (16); VM = Vs(1 + e) (11)"
+    },
+    {
+     "doc": "24",
+     "pag": 12,
+     "cita": "Porosidad: n = Vv/Vm = (Vvi + Vpp)/Vm [2-19]"
+    }
+   ]
+  },
+  {
+   "id": "g-porosidad-n",
+   "campo": "definicion",
+   "antes": "Razón entre el volumen de vacíos y el volumen masivo: n = Vv/Vm.",
+   "despues": "Razón entre el volumen de vacíos y el volumen masivo: n = Vv/Vm (× 100 %). En el diagrama del curso, Vv incluye los poros permeables y el espacio entre partículas (Vv = Vm − Vs).",
+   "severidad": "media",
+   "razon": "El glosario define «Vacíos» solo como espacio entre partículas (sentido de la ASTM C29). Sin la aclaración, la porosidad queda mal calculada, porque el Vv del formulario también incluye los poros permeables.",
+   "evidencia": [
+    {
+     "doc": "24",
+     "pag": 12,
+     "cita": "Porosidad: n = Vv/Vm = (Vvi + Vpp)/Vm [2-19]"
+    },
+    {
+     "doc": "13",
+     "pag": 4,
+     "cita": "Diagrama: la cota VV abarca VAIRE, VWL y VPP."
+    }
+   ]
+  },
+  {
+   "id": "g-razon-de-vacios-e",
+   "campo": "definicion",
+   "antes": "Razón entre el volumen de vacíos y el volumen sólido: e = Vv/Vs.",
+   "despues": "Razón entre el volumen de vacíos y el volumen sólido: e = Vv/Vs (× 100 %). Vv incluye los poros permeables y el espacio entre partículas, por eso Vm = Vs (1 + e).",
+   "severidad": "media",
+   "razon": "Es la misma ambigüedad sobre Vv: con la definición de «Vacíos» del glosario, e daría un valor menor que el del formulario.",
+   "evidencia": [
+    {
+     "doc": "24",
+     "pag": 12,
+     "cita": "Razón de vacíos: e = Vv/Vs = (Vvi + Vpp)/Vs [2-21]"
+    },
+    {
+     "doc": "13",
+     "pag": 10,
+     "cita": "VM = Vs(1 + e) (11)"
+    }
+   ]
+  },
+  {
+   "id": "g-vacios",
+   "campo": "definicion",
+   "antes": "Espacio entre las partículas de una masa de agregado que no ocupa el material. Son de 30 % a 45 % en el grueso y de 40 % a 50 % en el fino.",
+   "despues": "Espacio entre las partículas de una masa de agregado que no ocupa el material. Los poros dentro de las partículas no se cuentan (ASTM C29). Son de cerca del 30 % al 45 % en el grueso y del 40 % al 50 % en el fino. No confundir con el Vv del formulario, que sí incluye los poros permeables.",
+   "severidad": "baja",
+   "razon": "Distingue los vacíos de la ASTM C29 del Vv de las fórmulas de porosidad y razón de vacíos. El «cerca de» sigue a la PCA.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 99,
+     "cita": "Los vacíos dentro de las partículas, ya sean permeables o impermeables, no están incluidos en los vacíos determinados por este método"
+    },
+    {
+     "doc": "02",
+     "pag": 2,
+     "cita": "La cantidad de vacíos varía de cerca del 30% a 45% para el agregado grueso y de cerca del 40% a 50%"
+    }
+   ]
+  },
+  {
+   "id": "t3-3C-20",
+   "campo": "reverso",
+   "antes": "Para calcular el volumen que ocupa el agregado en el diseño de mezclas por volumen absoluto. Normalmente no se usa como medida de calidad.",
+   "despues": "Para calcular el volumen que ocupa el agregado en el diseño de mezclas por volumen absoluto. Según la PCA, normalmente no se usa como medida de calidad, aunque los agregados porosos suelen tener una gravedad específica baja. En el registro de control de calidad del curso, la GBS sí lleva una especificación (2,50 mínimo en el ejemplo).",
+   "severidad": "media",
+   "razon": "La frase tajante choca con la diapositiva del profe (13, pág. 8), que pone a la GBS como criterio de aceptación, y con la clave de X01 (F/V 15). También omite el matiz de la propia PCA.",
+   "evidencia": [
+    {
+     "doc": "02",
+     "pag": 2,
+     "cita": "Normalmente no se la usa como una medida de la calidad del agregado, aunque algunos agregados porosos [...] presentan baja gravedad específica"
+    },
+    {
+     "doc": "13",
+     "pag": 8,
+     "cita": "Gbs | ASTM-C-127 | 2.50 mínimo"
+    },
+    {
+     "doc": "X01",
+     "pag": 6,
+     "cita": "A menor valor de densidad relativa bruta seca, más poroso es el agregado"
+    }
+   ]
+  },
+  {
+   "id": "p3-3D-x01",
+   "campo": "explicacion",
+   "antes": "Correcta la B. Según Navas, el aire siempre entra en la mezcla en cantidad aleatoria y aumenta con más agregado fino (sobre todo entre las mallas No. 30 y No. 50), con un tamaño máximo menor y con un mezclado más fuerte o más largo. La A está al revés: el vibrado prolongado reduce el aire. La C y la D no aparecen en las fuentes como causas.",
+   "despues": "Correcta la B. Según Navas, el aire siempre entra en la mezcla en cantidad aleatoria y aumenta con más agregado fino (sobre todo entre las mallas No. 30 y No. 50), con un tamaño máximo menor y con una acción mezcladora más fuerte y por más tiempo. La A está al revés: el vibrado de más de 3 minutos reduce el aire. La C no aparece en las fuentes como causa. La D es el distractor más engañoso: Navas habla de un mezclado más fuerte o más largo, no de mezcladoras «más eficientes», y la clave oficial marca solo la B.",
+   "severidad": "media",
+   "razon": "La explicación misma cita el «mezclado más fuerte o más largo» y luego dice que la D no aparece en las fuentes, lo que se contradice. Hay que explicar por qué la D no es la respuesta.",
+   "evidencia": [
+    {
+     "doc": "20",
+     "pag": 3,
+     "cita": "una acción mezcladora más fuerte y por más tiempo aumentan el contenido de aire de una mezcla"
+    },
+    {
+     "doc": "20",
+     "pag": 3,
+     "cita": "así como el vibrado por más de 3 minutos"
+    },
+    {
+     "doc": "X02",
+     "pag": 1,
+     "cita": "B) Mayor proporción de agregado fino (resaltada en amarillo)"
+    }
+   ]
+  },
+  {
+   "id": "p3-3D-t04",
+   "campo": "enunciado",
+   "antes": "En una losa de 12 cm de espesor, sin otra restricción, el tamaño máximo del agregado no debería exceder:",
+   "despues": "En una losa de 12 cm de espesor, aplicando la regla propia de las losas y sin otra restricción, el tamaño máximo del agregado no debería exceder:",
+   "severidad": "media",
+   "razon": "Las fuentes enuncian «un quinto de la dimensión más pequeña del miembro» sin excluir las losas. En una losa, la dimensión menor es el espesor, así que una lectura literal da 24 mm (la opción A) y también sería defendible. El enunciado debe pedir explícitamente la regla de las losas.",
+   "evidencia": [
+    {
+     "doc": "11",
+     "pag": 7,
+     "cita": "Un quinto de la dimensión más pequeña del miembro de concreto. [...] Un tercio de la profundidad de las losas."
+    },
+    {
+     "doc": "16",
+     "pag": 5,
+     "cita": "Tmáx ≤ 1/5 dimensión menor del elemento; Tmáx ≤ ⅓ espesor de losa"
+    }
+   ]
+  },
+  {
+   "id": "p3-3D-t04",
+   "campo": "explicacion",
+   "antes": "Correcta la B: un tercio del espesor de la losa da 120/3 = 40 mm. La A sale de usar un quinto, que aplica a la dimensión menor de un elemento. La C sale de 3/4, que aplica a la separación del refuerzo. La D es el espesor completo.",
+   "despues": "Correcta la B: la regla propia de las losas es un tercio del espesor, 120/3 = 40 mm. La A sale de la regla general de un quinto de la dimensión menor del elemento. La C sale de 3/4, que aplica a la separación libre del refuerzo. La D es el espesor completo.",
+   "severidad": "media",
+   "razon": "Hay que ajustar la explicación al enunciado corregido. La actual da a entender que la regla de un quinto no aplica a una losa, y las fuentes no lo dicen.",
+   "evidencia": [
+    {
+     "doc": "11",
+     "pag": 7,
+     "cita": "Un tercio de la profundidad de las losas."
+    }
+   ]
+  },
+  {
+   "id": "p3-3D-x11",
+   "campo": "explicacion",
+   "antes": "No hay clave oficial; la respuesta se armó solo con las fuentes. A mayor tamaño máximo, menos superficie que cubrir, menos agua y menos cemento para una relación a/c dada. El tamaño máximo está limitado por la dimensión del elemento y por la separación del refuerzo. Una arena muy fina (MF 2,2, menor que 2,3) aporta trabajabilidad y permite más agregado grueso.",
+   "despues": "No hay clave oficial; la respuesta se armó solo con las fuentes. A mayor tamaño máximo, menos superficie que cubrir, menos agua y menos cemento para una relación a/c dada. El tamaño máximo está limitado por la dimensión del elemento y por la separación del refuerzo. Una arena con MF 2,2 es «fina» según la tabla del curso (2,0–2,3) y queda por debajo del rango aceptable de 2,3–3,1; al ser fina aporta trabajabilidad y permite aumentar el agregado grueso.",
+   "severidad": "media",
+   "razon": "Según la tabla 22, un MF de 2,2 es arena «fina», no «muy fina» (< 2,0). Conviene además señalar que 2,2 queda fuera del rango aceptable de 2,3–3,1.",
+   "evidencia": [
+    {
+     "doc": "22",
+     "pag": 1,
+     "cita": "2,0-2,3 Fina; < 2,0 Muy fina"
+    },
+    {
+     "doc": "16",
+     "pag": 6,
+     "cita": "Entre más fina sea una arena, hay más cantidad de partículas disponibles para mejorar la trabajabilidad"
+    }
+   ]
+  },
+  {
+   "id": "p3-3D-x03",
+   "campo": "explicacion",
+   "antes": "Verdadero. Un tamaño máximo nominal mayor necesita menos pasta (menos superficie que cubrir), lo que ahorra y reduce las contracciones. En una losa sin refuerzo no limita la separación de barras.",
+   "despues": "Verdadero. Un tamaño máximo nominal mayor necesita menos pasta (menos superficie que cubrir), lo que ahorra y reduce las contracciones. En una losa sin refuerzo no hay separación de barras que lo limite; el límite que queda es un tercio del espesor de la losa, así que 37,5 mm sirve en losas de unos 113 mm (3 × 37,5) o más.",
+   "severidad": "baja",
+   "razon": "La explicación da a entender que en una losa sin refuerzo no hay límite. El criterio de un tercio del espesor sigue aplicando, y conviene recordarlo para no generalizar.",
+   "evidencia": [
+    {
+     "doc": "11",
+     "pag": 7,
+     "cita": "Un tercio de la profundidad de las losas."
+    },
+    {
+     "doc": "X01",
+     "pag": 1,
+     "cita": "Este tipo de tamaño máximo nominal brinda ahorro al requerir menos pasta y por lo tanto menores contracciones."
+    }
+   ]
+  },
+  {
+   "id": "t3-3C-14",
+   "campo": "reverso",
+   "antes": "Gs = GBS / (1 − D·GBS)\nGBSS = GBS (1 + D)",
+   "despues": "Gs = GBS / (1 − D·GBS)  (ec. 5)\nGBSS = GBS (1 + D)  (ec. 6)\nEn estas dos ecuaciones, D va en forma decimal (2 % = 0,02), aunque la ec. 19 la da en %.",
+   "severidad": "baja",
+   "razon": "El formulario define D en porcentaje (ec. 19). Si se sustituye «2» en lugar de «0,02», el resultado es absurdo, y la pregunta p3-3C-t04 usa justo ese distractor (4,60).",
+   "evidencia": [
+    {
+     "doc": "13",
+     "pag": 10,
+     "cita": "D = PWD/Ps (100%) (19); GBSS = GBS(1 + D) (6)"
+    }
+   ]
+  },
+  {
+   "id": "t3-3D-08",
+   "campo": "reverso",
+   "antes": "MF = Σ % retenidos acumulados en las mallas No. 4, 8, 16, 30, 50 y 100 / 100\nA mayor MF, más grueso el agregado.",
+   "despues": "MF del agregado fino = Σ % retenidos acumulados en las mallas No. 4, 8, 16, 30, 50 y 100 / 100\nPara el agregado grueso, la serie de la PCA agrega 3/8\", 3/4\", 1½\", 3\" y 6\".\nA mayor MF, más grueso el agregado.",
+   "severidad": "baja",
+   "razon": "El manual dice que el MF se puede calcular para el fino y para el grueso, pero que la lista de seis mallas es la del fino. Tal como está, la tarjeta presenta esa serie como general.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 48,
+     "cita": "Se calcula para el agregado fino sumando los porcentajes retenidos acumulados de los siguientes tamices"
+    },
+    {
+     "doc": "11",
+     "pag": 4,
+     "cita": "La serie especificada de tamices para la determinación del MF es: 150 µm (No. 100) [...] 9.5 mm (3⁄8 pulg.), 19.0 mm (3⁄4 pulg.)"
+    }
+   ]
+  },
+  {
+   "id": "g-modulo-de-finura-mf",
+   "campo": "definicion",
+   "antes": "Suma de los porcentajes retenidos acumulados en las mallas No. 4, 8, 16, 30, 50 y 100, dividida entre 100. Es un índice de finura: a mayor MF, más grueso.",
+   "despues": "Índice de finura del agregado: suma de los porcentajes retenidos acumulados en la serie de mallas, dividida entre 100. Para el agregado fino, la serie es No. 4, 8, 16, 30, 50 y 100. A mayor MF, más grueso.",
+   "severidad": "baja",
+   "razon": "Misma precisión que en la tarjeta t3-3D-08: la serie de seis mallas es la del agregado fino.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 48,
+     "cita": "Se puede determinar tanto para el agregado grueso como para el agregado fino"
+    }
+   ]
+  },
+  {
+   "id": "p3-3C-x23",
+   "campo": "verificar",
+   "antes": null,
+   "despues": "Las fuentes no coinciden en el límite superior: el manual (19, pág. 63) dice 3,0, Navas (24, pág. 2/8) dice 2,8 y la PCA (pág. 114) dice 2,9 (contradicción C19). Se usa 2,8, que es la respuesta de este examen y de la diapositiva 14, pág. 9.",
+   "severidad": "baja",
+   "razon": "ALCANCE C19 adopta 2,4–2,8 con VERIFICAR. La tarjeta t3-3C-19 y la pregunta p3-3C-x10 llevan la marca; esta pregunta, cuya respuesta es justamente el límite en disputa, no la lleva.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 63,
+     "cita": "gravedad específica bruta seca con valores en un rango de 2,4 a 3,0"
+    },
+    {
+     "doc": "14",
+     "pag": 9,
+     "cita": "2,4 < GBS < 2,8"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-02",
+   "campo": "reverso",
+   "antes": "Balanza móvil (no requiere precisión), termómetro-higrómetro, pala, sacos, plantillas, brocha, tubo muestreador (unos 30 mm de diámetro, 2 m de largo y punta cortada a 45°) y tablones o tablilla.",
+   "despues": "Balanza móvil (no requiere precisión), termómetro-higrómetro, pala, sacos, plantillas, brocha, tubo muestreador de aluminio o PVC (unos 30 mm de diámetro, al menos 2 m de largo y punta cortada a 45°) y tablones o tablilla.",
+   "severidad": "baja",
+   "razon": "El manual da 2 m como longitud mínima, no como longitud fija.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 8,
+     "cita": "TUBO DE ALUMINIO O PVC CON DIÁMETRO APROXIMADO 30mm Y UNA LONGITUD MÍNIMA DE 2m. LA PUNTA DEL TUBO CON CORTE DE 45°"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-11",
+   "campo": "reverso",
+   "antes": "Se usa el procedimiento A salvo que la especificación pida otro. Masa mínima si la muestra es solo para la C117: 300 g para arena (4,75 mm o menos), 1000 g hasta 9,5 mm, 2500 g hasta 19 mm y 5000 g para 37,5 mm o más.",
+   "despues": "Se usa el procedimiento A salvo que la especificación pida otro. Masa mínima si la muestra es solo para la C117: 300 g para arena (4,75 mm o menos), 1 000 g hasta 9,5 mm, 2 500 g hasta 19 mm y 5 000 g para 37,5 mm o más.",
+   "severidad": "baja",
+   "razon": "Los valores son correctos, pero la convención del proyecto pide espacio de miles («1 000 g»).",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 39,
+     "cita": "37,5mm o mayor 5000 Superior a 9,5mm hasta 19,0 mm 2500 Superior a 4,75mm hasta 9,50mm 1000 4,75mm o menor 300"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-12",
+   "campo": "reverso",
+   "antes": "L (%) = (Minicial − Mfinal) / Minicial × 100. Se reporta al 0,1 % si es menor que 10 %. Si se pierde material al decantar, el ensayo se desecha. Se hace antes de la granulometría (C136).",
+   "despues": "L (%) = (Minicial − Mfinal) / Minicial × 100. Se reporta al entero más cercano, salvo que sea menor que 10 %: entonces se reporta al 0,1 %. Si se pierde material al decantar, el ensayo se desecha. Se hace antes de la granulometría (C136).",
+   "severidad": "baja",
+   "razon": "La tarjeta omite la regla general (entero más cercano) y solo da la excepción, lo que puede llevar a reportar siempre al 0,1 %.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 42,
+     "cita": "Reportar los porcentajes al número entero más cercano, excepto si el porcentaje pasando la malla de 0,075 mm (No.200) es menor que 10 %"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-17",
+   "campo": "verificar",
+   "antes": null,
+   "despues": "El manual da dos órdenes distintos: el procedimiento (pág. 70) pesa primero sumergido y luego en condición SSS; el diagrama de proceso (pág. 74) y el resumen (pág. 75) determinan primero la masa SSS y luego la masa sumergida.",
+   "severidad": "media",
+   "razon": "La tarjeta sigue el orden de la pág. 70, pero el mismo manual (págs. 74 y 75) da el orden inverso, que además es el de la norma ASTM C127. Son dos indicaciones del profe que chocan: hay que marcarlo VERIFICAR (regla 3 de ALCANCE §0).",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 70,
+     "cita": "REMUEVA EL ESPÉCIMEN DE LA CANASTA Y COLÓQUELO SIN PERDER NINGUNA PARTÍCULA SOBRE LA TELA ABSORVENTE"
+    },
+    {
+     "doc": "19",
+     "pag": 74,
+     "cita": "Secar la muestra con un paño. Registrar Msss / Colocar la muestra en la canasta y sumergir en el tanque de agua. Registrar Msumergida"
+    },
+    {
+     "doc": "19",
+     "pag": 75,
+     "cita": "se seca el agua de la superficie de las partículas y se determina su masa. Subsecuentemente, se determina el volumen"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-19",
+   "campo": "reverso",
+   "antes": "Masa mínima según el tamaño máximo nominal: 37,5 mm → 5 kg; 25 mm → 4 kg; 19 mm → 3 kg; 12,7 mm o menos → 2 kg. No se recomienda para agregados livianos (δBS < 1120 kg/m³), porque sus poros no se llenan en 24 h.",
+   "despues": "Masa mínima según el tamaño máximo nominal: 37,5 mm → 5 kg; 25 mm → 4 kg; 19 mm → 3 kg; 12,7 mm o menos → 2 kg. No se recomienda para agregados livianos (densidad bruta menor que 1 120 kg/m³, como la piedra pómez o la escoria), porque sus poros no necesariamente se llenan de agua en 24 h de inmersión.",
+   "severidad": "media",
+   "razon": "En el curso, δBS es la densidad bruta seca de las partículas (Ps/VB, 19: 64); un δBS de 1 120 kg/m³ equivaldría a GBS ≈ 1,12. El umbral de los livianos se refiere a la densidad bruta o peso unitario masivo (14: 11), así que el símbolo induce a error. Además, el manual dice «no se llenan necesariamente», no «no se llenan».",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 67,
+     "cita": "agregados de peso liviano corresponde con aquel de densidad baja o densidad bruta menor que 1120 kg/m3 tales como piedra pómez, escoria"
+    },
+    {
+     "doc": "19",
+     "pag": 66,
+     "cita": "Los poros en agregados de peso liviano no se llenan necesariamente con agua luego de la inmersión por 24 horas"
+    },
+    {
+     "doc": "14",
+     "pag": 11,
+     "cita": "Peso Unitario Masivo Seco: Agregados livianos"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-23",
+   "campo": "reverso",
+   "antes": "Si el cono no se desploma, todavía hay humedad libre; si se desmorona de golpe, la arena ya está más seca que SSS. Muestra de 4 kg reducida a 1 kg aproximadamente.",
+   "despues": "Si el cono no se desploma, todavía hay humedad libre; si se desmorona de golpe, la arena ya está más seca que SSS. Muestra de al menos 4 kg, reducida (ASTM C702) a un espécimen de 1 kg aproximadamente.",
+   "severidad": "baja",
+   "razon": "Los 4 kg son una masa mínima, no un valor fijo.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 82,
+     "cita": "La muestra debe tener una masa mínima de 4 kg. Reducir hasta obtener un espécimen de ensayo de aproximadamente 1 kg"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-24",
+   "campo": "reverso",
+   "antes": "GBS = Mseca / (Mcal + Msss − Msum)\nD = (Msss − Mseca) / Mseca × 100\n(Mcal: picnómetro con agua hasta la marca; Msum: picnómetro con agua y muestra)",
+   "despues": "GBS = Mseca / (Mcal + Msss − Msum)\nD = (Msss − Mseca) / Mseca × 100\n(Mcal: picnómetro con agua hasta la marca; Msum: picnómetro con agua y muestra)\nSe reporta la gravedad específica al 0,01 y la absorción al 0,1 %.",
+   "severidad": "baja",
+   "razon": "La tarjeta de «resultado y criterio» del C128 no dice cómo se reporta, a diferencia de la del C127 (t3-3E-20); el manual da la misma precisión para ambos ensayos.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 87,
+     "cita": "Reporte los resultados de la gravedad específica (densidad relativa) lo más cercano a 0,01 … absorción lo más cercano al 0,1%"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-29",
+   "campo": "verificar",
+   "antes": "El 'Resumen' de la sección del C29 en el manual (pág. 111) describe por error el ensayo de impurezas orgánicas (C40); no se usa.",
+   "despues": "El 'Resumen' de la sección del C29 en el manual (pág. 111) describe por error el ensayo de impurezas orgánicas (C40), y en la pág. 100 hay una oración copiada del C40 sobre «impurezas orgánicas»; ninguna de las dos se usa.",
+   "severidad": "baja",
+   "razon": "La pág. 100, dentro del C29, también trae un texto que pertenece al C40; conviene anotarlo junto con el de la pág. 111.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 100,
+     "cita": "El objetivo principal de este procedimiento es el de brindar una advertencia de que pueden estar presentes cantidades perjudiciales de impurezas orgánicas."
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-33",
+   "campo": "reverso",
+   "antes": "1. Lavar, secar a 110 ± 5 °C, separar por tamaños y recombinar según la graduación A, B, C o D (5000 g en total).\n2. Escoger la carga abrasiva (esferas de acero) según la graduación y pesar Minicial.\n3. Hacer girar la máquina a 30–33 rev/min durante 500 revoluciones.\n4. Tamizar en la malla No. 12, lavar lo retenido, secar a masa constante y pesar Mfinal.",
+   "despues": "1. Lavar, secar a 110 ± 5 °C, separar por tamaños y recombinar según la graduación A, B, C o D (5 000 ± 10 g en total).\n2. Escoger la carga abrasiva (esferas de acero) según la graduación y pesar Minicial.\n3. Hacer girar la máquina a 30–33 rev/min durante 500 revoluciones.\n4. Tamizar en la malla No. 12, lavar lo retenido, secar a masa constante y pesar Mfinal.",
+   "severidad": "baja",
+   "razon": "Falta el espacio de miles y la tolerancia de la masa total que da el cuadro 1.9.1.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 115,
+     "cita": "Total 5 000 + 10 5 000 + 10 5 000 + 10 5 000 + 10"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-37",
+   "campo": "reverso",
+   "antes": "El separador necesita que el material fluya libre por los canales; si la arena tiene humedad libre, se pega. En el cuarteo o el apilamiento miniatura, la arena húmeda conserva la forma del cono. Si se quiere usar B o C con arena seca, primero se humedece.",
+   "despues": "El separador mecánico necesita que la muestra fluya suave y libremente por los canales, sin restricción ni pérdida de material; por eso se usa con arena más seca que SSS. Si la arena tiene humedad libre, se reduce por cuarteo (B) o por apilamiento miniatura (C), o se seca al menos hasta SSS para usar el A. Si se quiere usar B o C con arena seca, primero se humedece.",
+   "severidad": "media",
+   "razon": "Que la arena húmeda «conserva la forma del cono» en el cuarteo no aparece en ninguna fuente (regla «nada inventado»); el respaldo documental de la razón es el requisito de flujo libre del separador (págs. 25 y 28). Ver el hallazgo siguiente sobre el campo fuente.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 25,
+     "cita": "deberán estar hechos de manera tal que la muestra pueda fluir suavemente, sin restricción o pérdida de material"
+    },
+    {
+     "doc": "19",
+     "pag": 28,
+     "cita": "SE DEBE VACIAR A UNA VELOCIDAD QUE PERMITA FLUJO LIBRE A TRAVÉS DE LOS CANALES"
+    },
+    {
+     "doc": "19",
+     "pag": 27,
+     "cita": "secar la muestra hasta por lo menos la condición de saturada superficie seca … y después reducirla"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-37",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "19",
+     "pag": 27
+    }
+   ],
+   "despues": [
+    {
+     "doc": "19",
+     "pag": 25
+    },
+    {
+     "doc": "19",
+     "pag": 27
+    },
+    {
+     "doc": "19",
+     "pag": 28
+    }
+   ],
+   "severidad": "baja",
+   "razon": "La pág. 27 solo da la regla de elección del método; el fundamento del «por qué» (flujo libre por los canales) está en las págs. 25 y 28.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 28,
+     "cita": "SE DEBE VACIAR A UNA VELOCIDAD QUE PERMITA FLUJO LIBRE A TRAVÉS DE LOS CANALES"
+    }
+   ]
+  },
+  {
+   "id": "t3-3E-39",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "19",
+     "pag": 66
+    }
+   ],
+   "despues": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "19",
+     "pag": 80
+    },
+    {
+     "doc": "13",
+     "pag": 8
+    }
+   ],
+   "severidad": "baja",
+   "razon": "ALCANCE.md indica que el respaldo de la C566 está en 08 y 13: 8; la tarjeta solo cita 19: 66. Se agregan 13: 8 (registro con la C566, diapositiva del profe) y 19: 80 (el mismo texto en la sección del C128).",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 80,
+     "cita": "el porcentaje de humedad libre se determina por la deducción de la absorción del contenido total de humedad determinado por el procedimiento ASTM C566"
+    },
+    {
+     "doc": "13",
+     "pag": 8,
+     "cita": "humedad ASTM-C-566 max 14%"
+    }
+   ]
+  },
+  {
+   "id": "p3-3E-t01",
+   "campo": "explicacion",
+   "antes": "Correcta la C: el apilamiento miniatura solo se permite para arena húmeda. Para grueso se usa el separador mecánico (A, preferido) o el cuarteo (B). La D no es un método de la norma.",
+   "despues": "Correcta la C: el método C (apilamiento miniatura) no se permite para agregado grueso ni para mezclas de grueso y fino; solo se usa con arena que tiene humedad libre. Para grueso sí se permiten la A (separador mecánico, el preferido) y la B (cuarteo), por eso la D es falsa.",
+   "severidad": "baja",
+   "razon": "La opción D es «Ninguno: todos están permitidos», no un método; la explicación actual no dice por qué es falsa.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 27,
+     "cita": "El Método C de apilamiento miniatura no es permitido para agregados gruesos o mezclas de agregado fino y grueso."
+    }
+   ]
+  },
+  {
+   "id": "p3-3E-t02",
+   "campo": "explicacion",
+   "antes": "Correcta la A: si la masa total después de tamizar difiere en más de 0,3 % de la inicial. El 1 % (B) es el criterio de suficiencia de tamizado de cada malla. Los 10 minutos (C) son el tiempo máximo de agitación, y agitar más degrada el material, pero no es este criterio. La D es la reducción por cuarteo.",
+   "despues": "Correcta la A: si la masa total después de tamizar difiere en más de 0,3 % de la inicial, los resultados no se usan para aceptación. El 1 % (B) es el criterio de suficiencia de tamizado de cada malla: que pase menos del 1 % es lo esperado. Los 10 minutos (C) son el tiempo máximo de agitación; agitar más degrada el material, pero no es este criterio. La D tampoco: el cuarteo es un método válido de reducción de la ASTM C702.",
+   "severidad": "baja",
+   "razon": "La explicación de la D solo la nombra y no dice por qué no invalida el ensayo.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 53,
+     "cita": "SI LA CANTIDAD DIFIERE EN MÁS DE 0,3 % … LOS RESULTADOS NO DEBEN SER UTILIZADOS PARA PROPÓSITOS DE ACEPTACIÓN"
+    },
+    {
+     "doc": "19",
+     "pag": 27,
+     "cita": "Reducir la muestra utilizando un partidor mecánico de acuerdo con el Método A (método de preferencia) o por cuarteo de acuerdo con el Método B."
+    }
+   ]
+  },
+  {
+   "id": "p3-3E-t05",
+   "campo": "opciones.a",
+   "antes": "En 3 capas, con 25 golpes de varilla por capa, sin tocar fuerte el fondo en la primera",
+   "despues": "En 3 capas, con 25 golpes de varilla por capa, sin que la varilla toque el fondo en la primera",
+   "severidad": "baja",
+   "razon": "El manual dice que la varilla no debe tocar el fondo, sin el matiz «fuerte»; así queda igual que la tarjeta t3-3E-29 y que la pág. 110.",
+   "evidencia": [
+    {
+     "doc": "19",
+     "pag": 106,
+     "cita": "AL VARILLAR LA PRIMERA CAPA, NO PERMITA QUE LA VARILLA TOQUE EL FONDO DE LA MEDIDA"
+    }
+   ]
+  },
+  {
+   "id": "p3-3E-x06",
+   "campo": "explicacion",
+   "antes": "La clave da 40 %. El manual solo dice que las especificaciones fijan una pérdida máxima por abrasión.",
+   "despues": "La clave oficial da 40 %. Ese valor no aparece en las fuentes de teoría del curso: la PCA dice que las especificaciones normalmente establecen un límite máximo de pérdida de masa, y el manual, que los límites de especificación se asignan con extremo cuidado.",
+   "severidad": "baja",
+   "razon": "Quien dice expresamente que se fija un límite máximo de pérdida es la PCA (09, impresa 118), no el manual; la explicación atribuye la frase a la fuente equivocada.",
+   "evidencia": [
+    {
+     "doc": "09",
+     "pag": 2,
+     "cita": "Las especificaciones normalmente establecen un límite máximo de pérdida de masa."
+    },
+    {
+     "doc": "19",
+     "pag": 112,
+     "cita": "Los límites de especificación se asignan con extremo cuidado considerando los tipos de agregados disponibles"
+    }
+   ]
+  },
+  {
+   "id": "p3-3C-x17",
+   "campo": "correcta",
+   "antes": "b",
+   "despues": "a",
+   "severidad": "alta",
+   "razon": "La justificación impresa de la clave («es menor porque los agregados aportan el resto») y la corrección al margen («V») hacen verdadera la afirmación; la equis impresa en F la contradice. Se adopta V con VERIFICAR.",
+   "evidencia": [
+    {
+     "doc": "X01",
+     "pag": 6,
+     "cita": "Es menor porque los agregados aportan el resto para llegar al agua de diseño"
+    }
+   ]
+  },
+  {
+   "id": "t3-3C-21",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "X01",
+     "pag": 6,
+     "pregunta": "F/V 12"
+    },
+    {
+     "doc": "X06",
+     "pag": 2,
+     "pregunta": "Pregunta 6"
+    }
+   ],
+   "despues": [
+    {
+     "doc": "X01",
+     "pag": 6,
+     "pregunta": "F/V 12"
+    }
+   ],
+   "severidad": "media",
+   "razon": "La pregunta 6 de X06 trata de las partículas planas y alargadas; el 0,035 m³ está en X01, pág. 6 (F/V 12).",
+   "evidencia": [
+    {
+     "doc": "X01",
+     "pag": 6,
+     "cita": "Es el volumen masivo el que es aproximadamente 0,035 m³"
+    }
+   ]
+  },
+  {
+   "id": "t3-3D-08",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "19",
+     "pag": 48
+    },
+    {
+     "doc": "19",
+     "pag": 55
+    },
+    {
+     "doc": "16",
+     "pag": 6,
+     "impresa": "2/22"
+    }
+   ],
+   "despues": [
+    {
+     "doc": "19",
+     "pag": 48
+    },
+    {
+     "doc": "19",
+     "pag": 55
+    },
+    {
+     "doc": "16",
+     "pag": 6,
+     "impresa": "2/22"
+    },
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
+    }
+   ],
+   "severidad": "baja",
+   "razon": "La serie de mallas del MF para el agregado grueso viene de la PCA (Tabla y texto de la pág. impresa 109).",
+   "evidencia": [
+    {
+     "doc": "11",
+     "pag": 4,
+     "cita": "El módulo de finura (MF) tanto del agregado fino como del grueso se calcula"
+    }
+   ]
+  },
+  {
+   "id": "g-modulo-de-finura-mf",
+   "campo": "fuente",
+   "antes": [
+    {
+     "doc": "19",
+     "pag": 48
+    }
+   ],
+   "despues": [
+    {
+     "doc": "19",
+     "pag": 48
+    },
+    {
+     "doc": "11",
+     "pag": 4,
+     "impresa": "109"
+    }
+   ],
+   "severidad": "baja",
+   "razon": "La serie de mallas del MF para el agregado grueso viene de la PCA (Tabla y texto de la pág. impresa 109).",
+   "evidencia": [
+    {
+     "doc": "11",
+     "pag": 4,
+     "cita": "El módulo de finura (MF) tanto del agregado fino como del grueso se calcula"
+    }
+   ]
+  }
+ ]
+}
