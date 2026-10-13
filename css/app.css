@@ -401,6 +401,9 @@ a { color: var(--primario); text-underline-offset: 3px; }
 }
 
 .contador { margin: 2px 0 10px; font-size: 0.95rem; font-weight: 600; color: var(--texto-suave); font-variant-numeric: tabular-nums; }
+.contador-fila { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.contador-fila .contador { margin: 0; }
+.aviso-barajar { margin: 0 0 10px; font-size: 0.95rem; color: var(--texto-suave); }
 
 /* ---------- Chips y etiquetas ---------- */
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }

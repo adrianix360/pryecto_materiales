@@ -31,6 +31,7 @@ FUENTES = {
     "X14": {"archivo": "fuentes/examenes/I Parcial. I-2009.pdf", "titulo": "I examen parcial, I-2009 (teoría, respuesta de un estudiante sin clave)", "autor": "Curso IC-0604 (Ing. Flor Muñoz)", "del_profe": False},
     "X15": {"archivo": "fuentes/examenes/I Parcial. II-2009.pdf", "titulo": "I examen parcial, II-2009 (respuesta de un estudiante sin clave)", "autor": "Curso IC-0604 (Ing. Flor Muñoz)", "del_profe": False},
     "X07": {"archivo": "fuentes/examenes/Primer examen IC 2020 (capturas)/", "titulo": "I examen, I-2020 (capturas del cuestionario)", "autor": "Curso IC-0604", "del_profe": False},
+    "X17": {"archivo": "fuentes/examenes/TEORIA_14_OCT_2025_261012_210359.pdf", "titulo": "I examen, I-2019 (teoría, con clave)", "autor": "Curso IC-0604 (Ing. Flor Muñoz Umaña e Ing. Luis Carlos Meseguer Quesada)", "del_profe": False},
 }
 
 # Paginación de la PCA: página impresa -> (documento, página del PDF)

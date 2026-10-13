@@ -45,7 +45,7 @@ La fecha del examen (17 de octubre de 2026) se lee de `data/indice.json`.
 - **Después del repaso final** vuelven los intervalos normales. Antes del examen, el ítem solo sale otra vez si lo fallás (vuelve hoy mismo) o si queda dudoso (vuelve al día siguiente, si todavía no es la víspera).
 - **Nuevos por día.** Los ítems que nunca has visto se reparten entre los días que quedan **hasta el 13 de octubre**. Así los 3 días finales quedan solo para repasar. Si ya estás en esos días, se reparten hasta la víspera.
 
-**Orden del «Repaso de hoy»:** primero lo fallado, luego lo vencido (lo más atrasado primero) y al final los nuevos del día. Al terminar podés «Seguir con nuevas» o «Adelantar repaso».
+**Orden del «Repaso de hoy»:** primero lo fallado, luego lo vencido y al final los nuevos del día. Dentro de cada grupo el orden es **aleatorio**, y los nuevos del día se eligen al azar entre todos los que faltan (de cualquier tema), así que no se aprende «por orden». En «Por tema» también: primero lo que no has visto, luego lo que fallaste, lo dudoso y lo que sabías, cada nivel barajado. El botón **«Barajar»**, junto al contador, mezcla otra vez lo que falta de la cola sin cambiar la tarjeta o pregunta actual. Al terminar podés «Seguir con nuevas» (también al azar) o «Adelantar repaso».
 
 **Ejemplo:** una tarjeta cuyo día final es el 15 de octubre.
 
@@ -56,7 +56,7 @@ La fecha del examen (17 de octubre de 2026) se lee de `data/indice.json`.
 | jue 15 | Dudosa | 2 | vie 16 | en la recta final, lo dudoso vuelve mañana |
 | vie 16 | La sabía | 3 | mar 20 | ya tuvo su repaso final: intervalo normal |
 
-**Cuánto trabajo da.** Las pruebas simulan estudiar del 9 al 16 de octubre con los datos reales, acertando más o menos el 70 %. Con esa simulación salen entre 34 y 106 tarjetas y entre 44 y 135 preguntas por día; la carga sube en los últimos días. Todo se ve antes del 13 y todo se repasa al menos una vez entre el 14 y el 16.
+**Cuánto trabajo da.** Las pruebas simulan estudiar del 9 al 16 de octubre con los datos reales, acertando más o menos el 70 %. Con esa simulación salen entre 35 y 100 tarjetas y entre 47 y 136 preguntas por día; la carga sube en los últimos días. Todo se ve antes del 13 y todo se repasa al menos una vez entre el 14 y el 16.
 
 ## Normas ASTM de memoria
 
@@ -197,7 +197,7 @@ python tests/test_app.py
 python tests/capturas.py
 ```
 
-`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) , `progreso.test.js` prueba el dominio, la racha y el exportar/importar, , `buscar.test.js` prueba la búsqueda, el resaltado, el glosario y los índices, `opciones.test.js` prueba el orden aleatorio y el ajuste de letras con las 72 preguntas reales, y `normas.test.js` prueba la lectura de la respuesta, las opciones, las confusiones, el dominio y los datos de `data/normas.json`. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba`.
+`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) , `progreso.test.js` prueba el dominio, la racha y el exportar/importar, , `buscar.test.js` prueba la búsqueda, el resaltado, el glosario y los índices, `opciones.test.js` prueba el orden aleatorio y el ajuste de letras con las 73 preguntas reales, y `normas.test.js` prueba la lectura de la respuesta, las opciones, las confusiones, el dominio y los datos de `data/normas.json`. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba` y el orden de las colas con `window.__ordenFijo` (salvo la prueba del orden aleatorio).
 
 `capturas.py` guarda capturas a 390×844 en modo claro y oscuro en `tests/capturas/` (esa carpeta no se sube).
 

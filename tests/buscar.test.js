@@ -111,11 +111,11 @@ test("figuras: 15, con sus usos (9 de ensayos con 2 tarjetas, 6 de exámenes con
   assert.deepEqual(f.map((x) => x.src).sort(), enDisco.sort());
 });
 
-test("verificar: 41 ítems (15 tarjetas y 26 preguntas) y texto para el profe", () => {
+test("verificar: 44 ítems (16 tarjetas y 28 preguntas) y texto para el profe", () => {
   const v = Buscar.aVerificar(TARJETAS, PREGUNTAS, GLOSARIO);
-  assert.equal(v.length, 41);
-  assert.equal(v.filter((x) => x.tipo === "tarjeta").length, 15);
-  assert.equal(v.filter((x) => x.tipo === "pregunta").length, 26);
+  assert.equal(v.length, 44);
+  assert.equal(v.filter((x) => x.tipo === "tarjeta").length, 16);
+  assert.equal(v.filter((x) => x.tipo === "pregunta").length, 28);
   const txt = Buscar.textoParaProfe(v.slice(0, 2), (r) => `doc ${r.doc} pág. ${r.pag}`);
   assert.match(txt, /^Consultas para el profe \(IC-0604, I examen\): 2 ítems/);
   assert.match(txt, new RegExp(`1\\. \\[${v[0].id}\\]`));

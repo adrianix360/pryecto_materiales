@@ -19,6 +19,8 @@
 // Nuevos por día: los que faltan por ver, repartidos entre los días que quedan antes de la
 // ventana de repaso final (así esos 3 días quedan para repasar). Si ya se está en la
 // ventana, se reparten hasta la víspera. Todo se ve al menos una vez antes del examen.
+// Orden aleatorio: si las colas reciben «rnd» (una función que da [0, 1)), cada grupo sale
+// barajado y los nuevos del día se eligen al azar; sin «rnd», el orden es el de los datos.
 (function (root) {
   "use strict";
 
@@ -133,9 +135,31 @@
     return Math.max(0, Math.min(restantes, porDia - vistosHoy));
   }
 
+  // Copia barajada de la lista (Fisher–Yates). rnd: función que da [0, 1).
+  function barajar(lista, rnd) {
+    var a = lista.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(rnd() * (i + 1));
+      var x = a[i]; a[i] = a[j]; a[j] = x;
+    }
+    return a;
+  }
+
+  // «Barajar»: deja igual lo ya visto y el ítem actual (pos) y baraja lo que falta.
+  function barajarResto(cola, pos, rnd) {
+    return cola.slice(0, pos + 1).concat(barajar(cola.slice(pos + 1), rnd));
+  }
+
+  // Azar de las colas de la app. Las pruebas pueden fijar el orden con window.__ordenFijo = true.
+  function azar() {
+    return root && root.__ordenFijo ? null : Math.random;
+  }
+
   // items: [{id}] en el orden de los datos; leer(id) → registro guardado o null.
-  // Orden: fallados (los más viejos primero), vencidos (los más atrasados primero), nuevos.
-  function colaRepaso(items, leer, hoy, examen) {
+  // Orden: fallados, vencidos y nuevos, en ese orden de grupos. Sin rnd: fallados de los más
+  // viejos primero, vencidos de los más atrasados primero y nuevos en el orden de los datos.
+  // Con rnd: cada grupo barajado y los nuevos del día elegidos al azar.
+  function colaRepaso(items, leer, hoy, examen, rnd) {
     var fallados = [], vencidos = [], nuevos = [], vistosHoy = 0;
     items.forEach(function (it) {
       var r = normalizar(leer(it.id));
@@ -149,6 +173,11 @@
       return a.vence < b.vence ? -1 : a.vence > b.vence ? 1 : a.caja - b.caja;
     });
     var cuota = cuotaNuevos(nuevos.length, vistosHoy, hoy, examen);
+    if (rnd) {
+      fallados = barajar(fallados, rnd);
+      vencidos = barajar(vencidos, rnd);
+      nuevos = barajar(nuevos, rnd);
+    }
     var tomados = nuevos.slice(0, cuota);
     return {
       ids: fallados.map(function (x) { return x.id; })
@@ -161,22 +190,26 @@
   }
 
   // Ítems que todavía no vencen, empezando por los que vencen antes («Adelantar repaso»).
-  function adelantar(items, leer, hoy) {
+  // Con rnd, los que vencen el mismo día salen barajados.
+  function adelantar(items, leer, hoy, rnd) {
     var lista = [];
     items.forEach(function (it) {
       var r = normalizar(leer(it.id));
       if (r && r.caja > 0 && r.vence > hoy) lista.push({ id: it.id, vence: r.vence, caja: r.caja });
     });
+    if (rnd) lista = barajar(lista, rnd);
     lista.sort(function (a, b) {
-      return a.vence < b.vence ? -1 : a.vence > b.vence ? 1 : a.caja - b.caja;
+      return a.vence < b.vence ? -1 : a.vence > b.vence ? 1 : rnd ? 0 : a.caja - b.caja;
     });
     return lista.map(function (x) { return x.id; });
   }
 
   // Siguientes n ítems nunca vistos que no estén en «excluir» («Seguir con nuevas»).
-  function masNuevos(items, leer, n, excluir) {
+  // Con rnd, se eligen al azar entre todos los nunca vistos.
+  function masNuevos(items, leer, n, excluir, rnd) {
     var fuera = {};
     (excluir || []).forEach(function (id) { fuera[id] = true; });
+    if (rnd) items = barajar(items, rnd);
     var out = [];
     for (var i = 0; i < items.length && out.length < n; i++) {
       var id = items[i].id;
@@ -209,6 +242,9 @@
     colaRepaso: colaRepaso,
     adelantar: adelantar,
     masNuevos: masNuevos,
+    barajar: barajar,
+    barajarResto: barajarResto,
+    azar: azar,
     hoy: hoy
   };
 

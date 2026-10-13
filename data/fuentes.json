@@ -232,6 +232,14 @@
    "del_profe": false,
    "codigo": "X07",
    "paginas": 14
+  },
+  "X17": {
+   "archivo": "fuentes/examenes/TEORIA_14_OCT_2025_261012_210359.pdf",
+   "titulo": "I examen, I-2019 (teoría, con clave)",
+   "autor": "Curso IC-0604 (Ing. Flor Muñoz Umaña e Ing. Luis Carlos Meseguer Quesada)",
+   "del_profe": false,
+   "codigo": "X17",
+   "paginas": 3
   }
  }
 }

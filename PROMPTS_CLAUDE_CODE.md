@@ -4,7 +4,7 @@
 - Abrí una terminal **en la carpeta del proyecto** (`Documentos\Materiales de la construcción`) y corré `claude`. Claude Code lee `CLAUDE.md` solo.
 - Pegá **un prompt a la vez**, en orden. Cada uno pide un plan antes de programar: revisalo, respondé «OK» y esperá el reporte antes de pasar al siguiente.
 - Los reportes de errores llegan por correo a castroramirez702@gmail.com (ya está puesto en el prompt 1).
-- El contenido ya está hecho: `data/` (147 tarjetas, 183 preguntas y 60 términos de glosario), `img/`, `ALCANCE.md` e `INVENTARIO.md`. Los prompts **no deben modificar el contenido**, solo mostrarlo.
+- El contenido ya está hecho: `data/` (152 tarjetas, 190 preguntas y 60 términos de glosario), `img/`, `ALCANCE.md` e `INVENTARIO.md`. Los prompts **no deben modificar el contenido**, solo mostrarlo.
 
 ---
 

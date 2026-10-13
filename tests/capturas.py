@@ -36,6 +36,7 @@ def contexto(nav, esquema):
     ctx = nav.new_context(viewport={"width": 390, "height": 844}, color_scheme=esquema,
                           device_scale_factor=2, service_workers="block")
     ctx.add_init_script(f"window.__fechaPrueba = {json.dumps(FECHA)};")
+    ctx.add_init_script("window.__ordenFijo = true;")
     return ctx
 
 

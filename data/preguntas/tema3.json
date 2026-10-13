@@ -2826,6 +2826,270 @@
    "verificar": "Es una pregunta abierta: la elección final (13 o 19 mm) depende de la separación real del refuerzo, que el enunciado no da."
   },
   {
+   "id": "p3-3D-x12",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "respuesta_corta",
+   "enunciado": "Para la granulometría que se indica, si se corrige en la malla de 2,36 mm (N°8) para que pase el valor correspondiente al límite fino de la especificación, el porcentaje pasando después de la corrección es el que se indica como % pasando corregido. INDIQUE SI o NO y JUSTIFIQUE SU RESPUESTA (5 %)\nTamiz · % pasando antes de corrección · % pasando corregido · Especificaciones\n9,5 mm (3/8): 100 · 100 · 100\n4,75 mm (N°4): 90 · 100 · 95-100\n2,36 mm (N°8): 75 · 100 · 80-100\n1,18 mm (N°16): 45 · 45 · 50-85\n0,60 mm (N°30): 22 · 22 · 25-60\n0,30 mm (N°50): 9 · 9 · 10-30\n0,15 (N°100): 7 · 7 · 2-10\nCharola: 0 · 0 · -",
+   "origen": "examen",
+   "examen": {
+    "doc": "X17",
+    "pag": 1,
+    "pregunta": "1",
+    "periodo": "I-2019"
+   },
+   "clave": "oficial",
+   "explicacion": "No es correcto. Según la clave, cada vez que se hace una corrección granulométrica, sea que se elimine o se incorpore material, la masa seca total cambia; por lo tanto, todos los porcentajes pasando cambian, no solo el de la malla corregida. La clave calcula un factor = 100/80 = 1,25 y multiplica por él cada % pasando: N°16 → 56,25; N°30 → 27,5; N°50 → 11,25; N°100 → 8,75. El manual menciona la corrección «con un factor» entre las formas de corregir una curva que no cumple.",
+   "fuente": [
+    {
+     "doc": "X17",
+     "pag": 1
+    },
+    {
+     "doc": "19",
+     "pag": 55
+    }
+   ],
+   "respuesta_modelo": "No. Al corregir (eliminar o incorporar material) cambia la masa seca total, así que cambian todos los porcentajes pasando. Cada % pasando se multiplica por un factor (en la clave, 100/80 = 1,25).",
+   "puntos_clave": [
+    "No es correcto",
+    "al eliminar o incorporar material cambia la masa seca total",
+    "todos los porcentajes pasando cambian",
+    "cada % pasando se multiplica por un factor"
+   ],
+   "justificacion_oficial": "No es correcto. Cada vez que se hace una corrección granulométrica, sea que elimine o se incorpore material, la masa seca total cambia, por lo tanto, todos los porcentajes pasando cambian. Factor = 100/80 = 1.25. Cada uno de los porcentajes pasando se deben multiplicar por este factor.",
+   "verificar": "La clave no cuadra en sí misma: con el factor 1,25 la malla N°8 daría 75 × 1,25 = 93,75, pero su tabla corregida pone 100 (y 100/75 sería 1,33). Las mallas N°16 a N°100 sí siguen el factor 1,25. Lo seguro es el concepto: cambian todos los porcentajes pasando."
+  },
+  {
+   "id": "p3-3C-x26",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "¿Existe relación entre el peso unitario masivo seco de un agregado, la relación de vacíos y la granulometría del agregado (mismo agregado y sólo varía su granulometría)? Fundamente su respuesta de manera clara y precisa. (5 %)",
+   "origen": "examen",
+   "examen": {
+    "doc": "X17",
+    "pag": 1,
+    "pregunta": "2",
+    "periodo": "I-2019"
+   },
+   "clave": "oficial",
+   "explicacion": "Sí existe relación. La clave usa δb = Ps / [Vs (1 + e)]: a mayor relación de vacíos (e), menor es el peso unitario masivo seco. Si es el mismo agregado, con una granulometría muy cerrada y otra más abierta, el peso unitario masivo seco es mayor con la más cerrada, porque deja menos volumen de vacíos.",
+   "fuente": [
+    {
+     "doc": "X17",
+     "pag": 1
+    },
+    {
+     "doc": "13",
+     "pag": 10
+    }
+   ],
+   "respuesta_modelo": "Sí. δb = Ps / [Vs (1 + e)]: a mayor relación de vacíos, menor peso unitario masivo seco. Con el mismo agregado, la granulometría más cerrada deja menos vacíos y da un peso unitario masivo seco mayor que una más abierta.",
+   "puntos_clave": [
+    "Sí existe relación",
+    "δb = Ps / [Vs (1 + e)]",
+    "a mayor relación de vacíos, menor peso unitario masivo seco",
+    "granulometría más cerrada → menos vacíos → mayor peso unitario"
+   ],
+   "justificacion_oficial": "Entonces, SÍ existe relación. A mayor relación de vacíos (e), menor es el peso unitario masivo seco de un agregado. Por otro lado, si es el mismo agregado, pero en un caso con una granulometría muy cerrada y en otro caso con granulometría más abierta, el peso unitario masivo seco será mayor cuando la granulometría es más cerrada dado que habrá menos volumen de vacíos."
+  },
+  {
+   "id": "p3-3D-x13",
+   "tema": 3,
+   "subtema": "3D",
+   "tipo": "seleccion_unica",
+   "enunciado": "De acuerdo con las proporciones de dosificación dadas, seleccione aquella que le garantizará el menor costo del concreto. Todos los factores que intervienen en la fabricación del concreto son constantes excepto la proporción y el tamaño máximo nominal del agregado grueso. Justifique su elección, de manera clara y precisa. (5 %)",
+   "origen": "examen",
+   "examen": {
+    "doc": "X17",
+    "pag": 2,
+    "pregunta": "3",
+    "periodo": "I-2019"
+   },
+   "clave": "oficial",
+   "explicacion": "Correcta la opción 1 (1:2,5:3,5 con Tmáx = 19 mm). Según la clave, tiene menos agregado fino (arena), y un tamaño máximo nominal de 19 mm asegura una granulometría menos fina que uno más pequeño como el de 16 mm. A mayor tamaño de las partículas, menor es la superficie específica que hay que cubrir con pasta de cemento, y viceversa; menos pasta significa menos cemento y menor costo. La opción 2 tiene más arena y un Tmáx menor: más superficie que cubrir.",
+   "fuente": [
+    {
+     "doc": "X17",
+     "pag": 2
+    },
+    {
+     "doc": "15",
+     "pag": 4
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Opción 1: 1:2,5:3.5 con Tmáx. = 19 mm"
+    },
+    {
+     "id": "b",
+     "texto": "Opción 2: 1:3:3 con Tmáx. = 16 mm"
+    }
+   ],
+   "correcta": "a",
+   "justificacion_oficial": "En la opción 1 se tiene menos agregado fino (arena); por otro lado, un tamaño máximo nominal de 19 mm asegura una granulometría menos fina que si se utilizara uno más pequeño como el de 16 mm. A mayor tamaño de las partículas, menor es la superficie específica a cubrir con la pasta de cemento, y viceversa."
+  },
+  {
+   "id": "p3-3C-x27",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Dé tres razones por las cuales la densidad relativa bruta seca de un agregado es un parámetro importante a considerar en la producción de concreto hidráulico. Utilice el formato dado: «Es un parámetro importante porque» (2 % c/u) · «Explique» (2 % c/u).",
+   "origen": "examen",
+   "examen": {
+    "doc": "X17",
+    "pag": 2,
+    "pregunta": "4",
+    "periodo": "I-2019"
+   },
+   "clave": "oficial",
+   "explicacion": "La clave da cuatro razones (basta con tres): (1) da una idea cuantitativa de qué tan resistente puede ser un agregado: los más porosos tienen menor GBS y son menos resistentes; (2) se relaciona con el peso unitario del concreto, que sirve para calcular las cargas muertas: GBS entre 2,4 y 2,8 corresponden a pesos unitarios volumétricos de 1 120 a 1 900 kg/m³ y a concretos de 2 100 a 2 550 kg/m³ (agregados dentro de especificaciones granulométricas); (3) da una idea relativa de la adherencia con la pasta: a menor GBS, más poroso el agregado y mejor la adherencia; (4) se necesita para las proporciones de la mezcla y las cantidades por comprar: con la GBS se obtiene el volumen bruto, que entra en Vc = Vs + VBA + VBP + Vw + Vaire.",
+   "fuente": [
+    {
+     "doc": "X17",
+     "pag": 2
+    },
+    {
+     "doc": "14",
+     "pag": 9
+    },
+    {
+     "doc": "13",
+     "pag": 9
+    },
+    {
+     "doc": "02",
+     "pag": 2,
+     "impresa": "114"
+    }
+   ],
+   "respuesta_modelo": "(1) Indica qué tan resistente puede ser: más poroso → menor GBS → menos resistente. (2) Se relaciona con el peso unitario del concreto y las cargas muertas (GBS 2,4–2,8 → 1 120–1 900 kg/m³ → concreto de 2 100–2 550 kg/m³). (3) Indica la adherencia con la pasta: menor GBS → más poroso → mejor adherencia. (4) Sirve para las proporciones y las cantidades por comprar: da el volumen bruto que entra en Vc.",
+   "puntos_clave": [
+    "resistencia: más poroso → menor GBS → menos resistente",
+    "peso unitario del concreto y cargas muertas",
+    "adherencia: menor GBS → más poroso → mejor adherencia",
+    "proporciones: la GBS da el volumen bruto para Vc"
+   ],
+   "justificacion_oficial": "Da una idea cuantitativa de qué tan resistente puede ser un agregado (agregados más porosos tienen menor GBS y son menos resistentes). Se puede relacionar con el peso unitario del concreto hidráulico, que es de valor en el cálculo de las cargas muertas (GBS entre 2,4 y 2,8 ↔ pesos unitarios volumétricos entre 1120 y 1900 kg/m³ ↔ concretos entre 2100 y 2550 kg/m³). Da una idea relativa sobre la facilidad de adherencia con la pasta de cemento. Es de interés en el cálculo de las proporciones de la mezcla y de las cantidades de materiales a comprar (VC = VS + VBA + VBP + VW + VAIRE).",
+   "verificar": "La primera razón de la clave (la GBS da idea de la resistencia) choca con la PCA (pág. impresa 114): la gravedad específica «normalmente no se usa como medida de calidad», aunque los agregados porosos suelen tenerla baja. Ninguna de las dos es fuente del profe."
+  },
+  {
+   "id": "p3-3C-x28",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "verdadero_falso",
+   "enunciado": "Si el volumen de concreto hidráulico: Vc = Vscem. + VBA + VBP + Vw + Vaire\nY a los agregados les falta agua para llegar a la condición de absorción máxima, el volumen de agua en este caso corresponde a la suma del agua de diseño más el agua que requieren los agregados para alcanzar la condición saturada superficie seca. Responda FALSO o VERDADERO, y justifique su respuesta de manera clara y precisa. (5 %)",
+   "origen": "examen",
+   "examen": {
+    "doc": "X17",
+    "pag": 3,
+    "pregunta": "5, primera parte",
+    "periodo": "I-2019"
+   },
+   "clave": "oficial",
+   "explicacion": "Falso. En la ecuación, el volumen de agua siempre corresponde al agua de diseño. Aunque el volumen bruto es el volumen seco más el agua absorbida y a los agregados les falta agua para llegar a SSS, la corrección por humedad no se hace en el volumen de concreto, sino al determinar la cantidad de agua a dosificar.",
+   "fuente": [
+    {
+     "doc": "X17",
+     "pag": 3
+    },
+    {
+     "doc": "13",
+     "pag": 9
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "justificacion_oficial": "En la ecuación, el volumen de agua siempre corresponde al agua de diseño. Si bien el volumen bruto es el volumen seco más el volumen de agua absorbida, y en este caso les falta agua para alcanzar la condición saturada superficie seca (SSS), la corrección por humedad no se hace en la determinación del volumen de concreto (ecuación dada), sino al momento de determinar la cantidad de agua a dosificar."
+  },
+  {
+   "id": "p3-3C-x29",
+   "tema": 3,
+   "subtema": "3C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Si a la mezcla se incorpora un volumen masivo de cemento, un volumen masivo o masivo hinchado de arena y un volumen masivo de piedra, porqué en la determinación del volumen de concreto no se utilizan estos volúmenes sino los indicados en la fórmula indicada arriba (Vc = Vscem. + VBA + VBP + Vw + Vaire). (3 %)",
+   "origen": "examen",
+   "examen": {
+    "doc": "X17",
+    "pag": 3,
+    "pregunta": "5, segunda parte",
+    "periodo": "I-2019"
+   },
+   "clave": "oficial",
+   "explicacion": "Según la clave, los volúmenes masivos que se incorporan aseguran la masa efectiva necesaria para producir el volumen de concreto proyectado. En el volumen de concreto intervienen los volúmenes efectivos, que se obtienen con esas masas efectivas (por ejemplo, VB = Ps / (GBS·δw)). Al mezclar, las partículas más pequeñas ocupan los espacios que dejan las más grandes y todo se compacta, lo que reduce los vacíos; la vibración los reduce aún más.",
+   "fuente": [
+    {
+     "doc": "X17",
+     "pag": 3
+    },
+    {
+     "doc": "13",
+     "pag": 9
+    }
+   ],
+   "respuesta_modelo": "Los volúmenes masivos solo aseguran la masa efectiva necesaria; en Vc entran los volúmenes efectivos que salen de esas masas (VB = Ps/(GBS·δw)). Al mezclar, las partículas pequeñas llenan los espacios entre las grandes y se reducen los vacíos, más aún con la vibración.",
+   "puntos_clave": [
+    "los volúmenes masivos aseguran la masa efectiva",
+    "en Vc intervienen los volúmenes efectivos",
+    "VB = Ps/(GBS·δw)",
+    "las partículas pequeñas ocupan los espacios entre las grandes",
+    "la vibración reduce aún más los vacíos"
+   ],
+   "justificacion_oficial": "Los volúmenes masivos que se incorporan a la mezcla están asegurando una masa efectiva necesaria para producir un volumen de concreto proyectado, de ahí que en la determinación del volumen de concreto lo que intervienen son los volúmenes efectivos, los que se obtienen con base en esas masas efectivas: Vc = Vscem. + VBA + VBP + Vw + Vaire y VB = Ps/(GBS·δw). Cuando los materiales se mezclan, las partículas más pequeñas ocupan los espacios que dejan las más grandes y todo se compacta reduciendo la cantidad de vacíos, mismos que se reducen aún más por efecto de la vibración."
+  },
+  {
+   "id": "p3-3A-x17",
+   "tema": 3,
+   "subtema": "3A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Para asegurar la resistencia a compresión de un concreto proyectado a 28 MPa es necesario asegurar la buena calidad mecánica de: la pasta de cemento y del agregado grueso. ¿Ambas afirmaciones son correctas? Justifique su respuesta de manera clara y precisa. (5 %)",
+   "origen": "examen",
+   "examen": {
+    "doc": "X17",
+    "pag": 3,
+    "pregunta": "6",
+    "periodo": "I-2019"
+   },
+   "clave": "oficial",
+   "explicacion": "No ambas. Pasta de cemento: correcta; sin importar la resistencia proyectada, la pasta debe ser lo bastante resistente para soportar la resistencia especificada y permitir una buena adherencia pasta-agregado. Agregado grueso: incorrecta para 28 MPa; en concretos por debajo de 34 MPa lo más importante es la adherencia pasta-agregado, no la calidad mecánica del agregado.",
+   "fuente": [
+    {
+     "doc": "X17",
+     "pag": 3
+    },
+    {
+     "doc": "09",
+     "pag": 2,
+     "impresa": "118"
+    },
+    {
+     "doc": "X01",
+     "pag": 6,
+     "pregunta": "F/V 3"
+    }
+   ],
+   "respuesta_modelo": "Pasta: sí, debe resistir la resistencia especificada y dar buena adherencia pasta-agregado. Agregado grueso: no; por debajo de 34 MPa lo que importa es la adherencia pasta-agregado y no la calidad mecánica del agregado.",
+   "puntos_clave": [
+    "pasta de cemento: correcta",
+    "la pasta debe soportar la resistencia especificada y adherirse bien al agregado",
+    "agregado grueso: incorrecta",
+    "por debajo de 34 MPa importa la adherencia pasta-agregado, no la calidad mecánica del agregado"
+   ],
+   "justificacion_oficial": "Pasta de cemento: la afirmación es correcta. Independientemente de la resistencia proyectada, es necesario lograr una pasta lo suficientemente resistente para que soporte la resistencia especificada y permita una buena adherencia pasta-agregado. Agregado grueso: para concretos por debajo de los 34 MPa, lo más importante es la adherencia pasta-agregado, y no la calidad mecánica del agregado."
+  },
+  {
    "id": "p3-3A-t01",
    "tema": 3,
    "subtema": "3A",

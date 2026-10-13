@@ -3,6 +3,7 @@
 // Modo «Repaso de hoy» (por defecto): cola de SRS.colaRepaso (falladas, vencidas y nuevas
 // del día). Modo «Por tema»: filtros; orden sin responder, luego mal, parcial y bien.
 // En la sesión, una pregunta respondida mal vuelve 4 lugares después.
+// Las colas salen barajadas (SRS.azar) y el botón «Barajar» mezcla otra vez lo que falta.
 // Las opciones de selección se muestran en otro orden cada vez (js/opciones.js) y las
 // explicaciones se reletran para citar la letra que se ve.
 (function () {
@@ -22,7 +23,8 @@
 
   var s = {
     modo: null, f: null, cola: [], pos: 0, porId: null, filtrosAbiertos: false, metaAbierta: false,
-    marcadas: [], texto: "", fase: "pregunta", resultado: null, extra: null, dia: null, inicio: Date.now()
+    marcadas: [], texto: "", fase: "pregunta", resultado: null, extra: null, dia: null, inicio: Date.now(),
+    barajadas: 0
   };
 
   function leer(id) { return Store.pregunta(id); }
@@ -46,11 +48,12 @@
     s.pos = 0;
     s.extra = extra || null;
     s.dia = SRS.hoy();
+    s.barajadas = 0;
     reiniciarPregunta();
   }
 
   function armarRepaso() {
-    nuevaCola(SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.indice.examen).ids.slice());
+    nuevaCola(SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.indice.examen, SRS.azar()).ids.slice());
   }
 
   function armar() { if (s.modo === "repaso") armarRepaso(); else armarCola(); }
@@ -72,13 +75,16 @@
   }
 
   function armarCola() {
+    var rnd = SRS.azar();
     var lista = Datos.preguntas.filter(function (p) { return UI.cumpleFiltro(p, s.f); });
+    if (rnd) lista = SRS.barajar(lista, rnd);
     lista = lista.map(function (p, i) { return { p: p, i: i, r: leer(p.id) }; });
+    // Por nivel (sin responder, mal, parcial, bien); dentro de cada nivel, al azar (o por fecha si el orden es fijo).
     lista.sort(function (a, b) {
       var pa = a.r ? PRIORIDAD[a.r.r] || 3 : 0;
       var pb = b.r ? PRIORIDAD[b.r.r] || 3 : 0;
       if (pa !== pb) return pa - pb;
-      if (a.r && b.r && a.r.t !== b.r.t) return a.r.t - b.r.t;
+      if (!rnd && a.r && b.r && a.r.t !== b.r.t) return a.r.t - b.r.t;
       return a.i - b.i;
     });
     nuevaCola(lista.map(function (x) { return x.p.id; }));
@@ -229,7 +235,8 @@
     var p = s.porId[s.cola[s.pos]];
     if (!s.orden) s.orden = Opciones.ordenPara(p);
     var prev = leer(p.id);
-    html += '<p class="contador">Pregunta ' + (s.pos + 1) + " de " + s.cola.length + "</p>";
+    html += UI.contador("Pregunta " + (s.pos + 1) + " de " + s.cola.length, s.cola.length - s.pos - 1, s.barajadas);
+    s.barajadas = 0;
     html += '<div class="chips">' +
       '<span class="chip">' + UI.esc(TIPOS[p.tipo]) + "</span>" +
       (p.origen === "examen" ?
@@ -348,6 +355,12 @@
           var c = vista.querySelector("#enunciado");
           if (c) { c.setAttribute("tabindex", "-1"); c.focus(); }
           window.scrollTo(0, 0);
+        } else if (acc === "barajar") {
+          s.barajadas = s.cola.length - s.pos - 1;
+          s.cola = SRS.barajarResto(s.cola, s.pos, Math.random);
+          render(vista);
+          var bb = vista.querySelector('[data-accion="barajar"]');
+          if (bb) bb.focus();
         } else if (acc === "otra") {
           armarCola();
           render(vista);
@@ -355,10 +368,10 @@
           armar();
           render(vista);
         } else if (acc === "nuevas") {
-          nuevaCola(SRS.masNuevos(Datos.preguntas, leer, MAS_NUEVAS, []), "nuevas");
+          nuevaCola(SRS.masNuevos(Datos.preguntas, leer, MAS_NUEVAS, [], SRS.azar()), "nuevas");
           render(vista);
         } else if (acc === "adelantar") {
-          nuevaCola(SRS.adelantar(Datos.preguntas, leer, SRS.hoy()), "adelantar");
+          nuevaCola(SRS.adelantar(Datos.preguntas, leer, SRS.hoy(), SRS.azar()), "adelantar");
           render(vista);
         }
       });

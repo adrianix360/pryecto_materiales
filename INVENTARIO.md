@@ -306,6 +306,7 @@ Los archivos están en `fuentes/examenes/`. Vienen del PDF "Teoría examen" y de
 | X14 | `I Parcial. I-2009.pdf` | Examen resuelto por un estudiante, con calificación | 10 | Escaneado (I.R.I.S.). OCR: 62 %. El manuscrito se lee con esfuerzo. |
 | X15 | `I Parcial. II-2009.pdf` | Examen resuelto por un estudiante, con calificación | 7 | Escaneado. OCR: 56 %. |
 | X16 | `I Parcial I-2026 resuelto (escaneo).pdf` | **El mismo examen que 08** (I-2026), resuelto a mano por una estudiante y corregido en rojo. Llegó como escaneo de WhatsApp el 9/10/2026 y se renombró. | 5 | Imagen, sin capa de texto. Lo leí a ojo y es legible. |
+| X17 | `TEORIA_14_OCT_2025_261012_210359.pdf` | **La parte de teoría del mismo examen que X11** (I-2019), con la clave en negrita. El nombre del archivo dice 14 de octubre de 2025, pero el encabezado es del 17 de mayo de 2019. Llegó el 13/10/2026. | 3 | Imagen, sin capa de texto. Lo leí a ojo y es legible. |
 
 **OCR:** en todo lo escaneado, el OCR solo sirve como apoyo para buscar texto; **lo manuscrito no es confiable** (47–74 %). Los datos de esta sección los saqué leyendo las páginas a ojo.
 
@@ -332,8 +333,9 @@ Los archivos están en `fuentes/examenes/`. Vienen del PDF "Teoría examen" y de
 | X14 | 2009, I ciclo (viernes 15 de mayo de 2009); profesora Muñoz | I examen: teoría (págs. 1–2) y práctica (martes 19 de mayo de 2009, págs. 3–10) | **Teoría 35 %:** 2 preguntas de desarrollo (volumen sólido y masivo del cemento, 5 + 5 %; elección de tamaño máximo y de a/c, 15 + 10 %).<br>**Práctica 65 %:** 1 problema | 35 % + 65 % | Teoría 30 min; práctica 90 min | **No**: es la respuesta de un estudiante con la corrección del profesor | Teoría sí, como pregunta abierta sin clave oficial |
 | X15 | 2009, II ciclo (viernes 9 de octubre de 2009); profesora Muñoz | I examen | 2 problemas (60 % y 20 %) y 1 pregunta de desarrollo de teoría (20 %: por qué importa el hinchamiento en economía, resistencia y trabajabilidad) | 100 % | 2 h | **No**: respuesta de un estudiante (calificada con 95) | Teoría sí, sin clave oficial |
 | X16 | 2026, I ciclo (sábado 23 de mayo de 2026), grupo 02 | I examen, teoría (págs. 1–3, 20 min) y práctica (págs. 4–5, 2 h) | **Teoría 25 %:** las mismas 15 preguntas que 08 (1.1 cinco F/V con justificación, 1.2 cinco de respuesta corta, 1.3 cinco fotos de normas). **Práctica:** factor k (10 %) y problema de las arenas D y Z (35 %) | 70 % | Teoría 20 min; práctica 2 h | **No**: es la respuesta de una estudiante con la corrección del profesor | **No se agrega nada**: las 15 de teoría ya están (de 08). Sirve para confirmar la clave. La práctica queda fuera (regla 5). |
+| X17 | 2019, I ciclo (viernes 17 de mayo de 2019); profesores Muñoz y Meseguer | I examen, teoría | 6 preguntas de desarrollo corto: corrección granulométrica, peso unitario y vacíos, dosificación más barata, importancia de la GBS (tabla de 3 razones), volumen de concreto (F/V con justificación y una abierta) y calidad de pasta y agregado a 28 MPa | 40 % | 20 min | **Sí** (en negrita) | **Sí**: las 6 (7 ítems, porque la 5 tiene dos partes). Agregadas el 13/10/2026 con 5 tarjetas |
 
-**Conteo aproximado de preguntas de teoría que entran en el alcance:** 08 (15; X16 es una copia resuelta del mismo examen y no suma), X02 (23), X01 (≈ 66), X04 (≈ 15), X06 (12), X07 (10), X14 (2 desarrollos) y X15 (1 desarrollo). En total son **unas 140**, con repeticiones entre años.
+**Conteo aproximado de preguntas de teoría que entran en el alcance:** 08 (15; X16 es una copia resuelta del mismo examen y no suma), X02 (23), X01 (≈ 66), X04 (≈ 15), X06 (12), X07 (10), X14 (2 desarrollos), X15 (1 desarrollo) y X17 (7). En total son **unas 147**, con repeticiones entre años.
 
 ### 7.3 Problemas encontrados en el banco
 
@@ -375,3 +377,9 @@ Los archivos están en `fuentes/examenes/`. Vienen del PDF "Teoría examen" y de
     - **1.1, caso 4 (agua dudosa):** la estudiante marcó F, pero su justificación ("la C109 no es la norma") se calificó mal. Respalda la clave del banco: el error del enunciado son los 14 días; deben ser 7.
     - **1.3, fotos a, c y e:** se marcaron mal D75, "1602" y C136. Coincide con las claves del banco (C702, C136 y C128).
     - **Notas del corrector:** al margen de la lista de normas escribió "C29, C33, C40" y al pie "C127, C128 →". Parecen apuntes de corrección y no cambian ninguna clave.
+
+**Teoría del I examen 2019 (X17, agregada el 13 de octubre de 2026)**
+
+19. **X17 es la parte de teoría de X11.** Sus 6 preguntas entraron copiadas tal cual, con la clave en negrita como `justificacion_oficial`: p3-3D-x12 y x13, p3-3C-x26 a x29 y p3-3A-x17. También se agregaron 5 tarjetas (t3-3C-22 a 24 y t3-3D-14 y 15) para lo que el banco no tenía: que corregir una malla cambia todos los % pasando, la relación δb–e–granulometría, la superficie específica y el costo, las razones de la GBS y por qué en Vc entran los volúmenes efectivos.
+20. **La clave de la pregunta 1 no cuadra** (C25): usa un factor de 100/80 = 1,25, pero pone 100 en la malla N.° 8 (75 × 1,25 = 93,75). Se marcó VERIFICAR; lo seguro es el concepto.
+21. **La GBS como medida de resistencia** (C26): la clave de 2019 dice que da una idea cuantitativa de la resistencia; la PCA (114) dice que normalmente no se usa como medida de calidad. Se marcó VERIFICAR.

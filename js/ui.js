@@ -221,6 +221,19 @@
     Store.sumarDia(SRS.hoy(), seg, 1);
   }
 
+  // Contador de la cola con el botón «Barajar» (si quedan 2 o más después del actual).
+  // barajadas: cuántas se acaban de barajar (0 = no se muestra el aviso).
+  function contador(texto, quedan, barajadas) {
+    var html = '<div class="contador-fila"><p class="contador" aria-live="polite">' + esc(texto) + "</p>";
+    if (quedan > 1) {
+      html += '<button type="button" class="btn btn--chico" data-accion="barajar" aria-label="Barajar las ' +
+        quedan + ' que faltan">Barajar</button>';
+    }
+    html += "</div>";
+    if (barajadas) html += '<p class="aviso-barajar" role="status">Se barajaron las ' + barajadas + " que faltan.</p>";
+    return html;
+  }
+
   // res: resultado de SRS.colaRepaso; nombres: {fallados, vencidos, nuevos} en plural
   function resumenRepaso(res, conVerificar, nombres) {
     var hoy = SRS.hoy();
@@ -261,6 +274,7 @@
     registrarTiempo: registrarTiempo,
     recordarPaneles: recordarPaneles,
     resumenRepaso: resumenRepaso,
+    contador: contador,
     correoReportes: CORREO_REPORTES
   };
 })();
