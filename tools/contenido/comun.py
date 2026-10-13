@@ -18,6 +18,7 @@ FUENTES = {
     "14": {"archivo": "fuentes/Agregados clasificación.pdf", "titulo": "Agregados: Clasificación (presentación)", "autor": "Ing. Einer Rodríguez Rojas", "del_profe": True},
     "15": {"archivo": "fuentes/Agregados importancia.pdf", "titulo": "Agregados: Importancia (presentación)", "autor": "Ing. Einer Rodríguez Rojas", "del_profe": True},
     "16": {"archivo": "fuentes/AnÃ¡lisis granulomÃ©trico, Navas.pdf", "titulo": "Análisis granulométrico (apuntes, cap. 2)", "autor": "Ing. Alejandro Navas", "del_profe": False},
+    "17": {"archivo": "fuentes/Curso_ II - S - 2026 - RRF - Laboratorio Materiales Construcción - 051 052 053 054 055 056 _ Mediación Virtual 2.pdf", "titulo": "Manual de Laboratorio, módulo de cementos (solo las normas de mortero)", "autor": "Ing. Flor Muñoz Umaña e Ing. Einer Rodríguez Rojas", "del_profe": True},
     "19": {"archivo": "fuentes/Curso_ II - S - 2026 - RRF - Laboratorio Materiales Construcción - 051 052 053 054 055 056 _ Mediación Virtual.pdf", "titulo": "Manual de Laboratorio, módulo de agregados", "autor": "Ing. Flor Muñoz Umaña e Ing. Einer Rodríguez Rojas", "del_profe": True},
     "22": {"archivo": "fuentes/MÃ³dulo de finura.pdf", "titulo": "Tabla de clasificación por módulo de finura", "autor": "Material del curso", "del_profe": True},
     "24": {"archivo": "fuentes/Propiedadees de agregados, Navas.pdf", "titulo": "Propiedades de los agregados (apuntes, cap. 2)", "autor": "Ing. Alejandro Navas", "del_profe": False},

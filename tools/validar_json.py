@@ -148,7 +148,34 @@ for t in g["terminos"]:
     for r in t.get("fuente", []):
         ref_ok(i, r)
 
-print(f"Tarjetas: {n_t} · Preguntas: {n_p} · Glosario: {len(g['terminos'])}")
+# ---- Normas ASTM (entrenamiento «Normas») ----
+nd = cargar("data/normas.json") or {"familias": [], "normas": []}
+fam_ids = {f.get("id") for f in nd["familias"]}
+ids_norma = [n.get("id") for n in nd["normas"]]
+for n in nd["normas"]:
+    i = "norma " + str(n.get("id", "?"))
+    if ids_norma.count(n.get("id")) > 1:
+        err(i, "id repetido")
+    if n.get("designacion") != "ASTM " + str(n.get("id")):
+        err(i, "designacion debe ser «ASTM » + id")
+    if n.get("familia") not in fam_ids:
+        err(i, f"familia desconocida {n.get('familia')!r}")
+    for c in ("mide", "gancho", "fuente"):
+        if not n.get(c):
+            err(i, f"falta {c}")
+    if not n.get("confunde_con"):
+        err(i, "falta confunde_con (cada norma tiene al menos una pareja)")
+    for otra in n.get("confunde_con", []):
+        if otra not in ids_norma or otra == n.get("id"):
+            err(i, f"confunde_con apunta a una norma inexistente o a sí misma: {otra!r}")
+    for r in n.get("fuente", []):
+        ref_ok(i, r)
+    # El texto de la pregunta no puede regalar la respuesta: «mide» no menciona ninguna designación.
+    for otra in ids_norma:
+        if otra and otra in n.get("mide", "").replace("-", " ").split():
+            err(i, f"«mide» menciona la norma {otra}")
+
+print(f"Tarjetas: {n_t} · Preguntas: {n_p} · Glosario: {len(g['terminos'])} · Normas: {len(nd['normas'])}")
 for a in avisos:
     print("AVISO", a)
 for e in errores:

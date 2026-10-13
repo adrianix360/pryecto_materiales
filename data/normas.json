@@ -1,0 +1,596 @@
+{
+ "version": 1,
+ "familias": [
+  {
+   "id": "muestreo",
+   "titulo": "Muestreo y reducción"
+  },
+  {
+   "id": "granulometria",
+   "titulo": "Granulometría y finos"
+  },
+  {
+   "id": "densidad",
+   "titulo": "Densidad, vacíos y humedad"
+  },
+  {
+   "id": "calidad",
+   "titulo": "Calidad del agregado: impurezas y abrasión"
+  },
+  {
+   "id": "forma",
+   "titulo": "Forma de las partículas"
+  },
+  {
+   "id": "reactividad",
+   "titulo": "Reactividad álcali-agregado"
+  },
+  {
+   "id": "agua",
+   "titulo": "Agua para concreto"
+  },
+  {
+   "id": "mortero",
+   "titulo": "Mortero y cemento"
+  }
+ ],
+ "normas": [
+  {
+   "id": "D75",
+   "designacion": "ASTM D75",
+   "familia": "muestreo",
+   "mide": "Muestreo de agregados en campo",
+   "confunde_con": [
+    "C702"
+   ],
+   "gancho": "Primero se toma la muestra en campo (D75) y después se reduce al tamaño de ensayo (C702).",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 6
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C702",
+   "designacion": "ASTM C702",
+   "familia": "muestreo",
+   "mide": "Reducción de muestras de agregado",
+   "confunde_con": [
+    "D75"
+   ],
+   "gancho": "La C702 viene después de la D75: ya tenés la muestra y hay que reducirla.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 23
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C117",
+   "designacion": "ASTM C117",
+   "familia": "granulometria",
+   "mide": "Material más fino que 75 µm (malla No. 200) en el agregado, por lavado",
+   "confunde_con": [
+    "C136"
+   ],
+   "gancho": "Lavar: lo fino pasa la malla No. 200 con el agua (117 lava; 136 tamiza).",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 36
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C136",
+   "designacion": "ASTM C136",
+   "familia": "granulometria",
+   "mide": "Análisis granulométrico de agregados finos y gruesos",
+   "confunde_con": [
+    "C117",
+    "C33"
+   ],
+   "gancho": "La torre de mallas es la 136. Los límites de la curva son los de la C33.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 47
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C33",
+   "designacion": "ASTM C33",
+   "familia": "granulometria",
+   "mide": "Especificaciones estándar de agregados para concreto",
+   "detalle": "La PCA presenta con la C33 los límites granulométricos del fino y del grueso (11, págs. 3 a 5).",
+   "confunde_con": [
+    "C136"
+   ],
+   "gancho": "La C33 es la especificación (los límites); la C136 es el ensayo que da la curva.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 6
+    },
+    {
+     "doc": "11",
+     "pag": 3
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C127",
+   "designacion": "ASTM C127",
+   "familia": "densidad",
+   "mide": "Densidad relativa (gravedad específica) y absorción del agregado grueso",
+   "confunde_con": [
+    "C128"
+   ],
+   "gancho": "Los dos números van seguidos: el 127 es el grueso y el 128, el fino.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 62
+    },
+    {
+     "doc": "13",
+     "pag": 11
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C128",
+   "designacion": "ASTM C128",
+   "familia": "densidad",
+   "mide": "Densidad relativa (gravedad específica) y absorción del agregado fino",
+   "confunde_con": [
+    "C127"
+   ],
+   "gancho": "El 128 viene después del 127: primero el grueso, luego el fino.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 76
+    },
+    {
+     "doc": "13",
+     "pag": 11
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C29",
+   "designacion": "ASTM C29",
+   "familia": "densidad",
+   "mide": "Densidad masiva (peso unitario) y vacíos en agregados",
+   "confunde_con": [
+    "C566"
+   ],
+   "gancho": "29: el peso unitario, lo que pesa el recipiente lleno de agregado.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 99
+    },
+    {
+     "doc": "08",
+     "pag": 2
+    }
+   ]
+  },
+  {
+   "id": "C566",
+   "designacion": "ASTM C566",
+   "familia": "densidad",
+   "mide": "Contenido de humedad de una muestra de agregado, por secado",
+   "confunde_con": [
+    "C29"
+   ],
+   "gancho": "566: la humedad, se seca la muestra y se compara la masa.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 66
+    },
+    {
+     "doc": "08",
+     "pag": 1
+    }
+   ]
+  },
+  {
+   "id": "C40",
+   "designacion": "ASTM C40",
+   "familia": "calidad",
+   "mide": "Impurezas orgánicas en el agregado fino",
+   "confunde_con": [
+    "C131"
+   ],
+   "gancho": "40: la colorimetría del agregado fino (impurezas orgánicas).",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 92
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C131",
+   "designacion": "ASTM C131",
+   "familia": "calidad",
+   "mide": "Resistencia a la degradación del agregado grueso por abrasión e impacto, en la Máquina de Los Ángeles",
+   "confunde_con": [
+    "C418",
+    "C994"
+   ],
+   "gancho": "131: Los Ángeles, el tambor con bolas de acero.",
+   "fuente": [
+    {
+     "doc": "19",
+     "pag": 112
+    },
+    {
+     "doc": "15",
+     "pag": 11
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C418",
+   "designacion": "ASTM C418",
+   "familia": "calidad",
+   "mide": "Resistencia a la abrasión del hormigón mediante chorro de arena",
+   "confunde_con": [
+    "C131",
+    "C994"
+   ],
+   "gancho": "418: chorro de arena.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 11
+    }
+   ]
+  },
+  {
+   "id": "C994",
+   "designacion": "ASTM C994",
+   "familia": "calidad",
+   "mide": "Resistencia a la abrasión en superficies de concreto o mortero por el método de corte rotativo",
+   "confunde_con": [
+    "C131",
+    "C418"
+   ],
+   "gancho": "994: corte rotativo (la herramienta que gira sobre la superficie).",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 11
+    }
+   ],
+   "verificar": "La diapositiva (15, pág. 11) dice ASTM C994; ese método podría ser la ASTM C944 (dígitos invertidos). Ninguna fuente del curso dice C944: consultar con el profe."
+  },
+  {
+   "id": "D4791",
+   "designacion": "ASTM D4791",
+   "familia": "forma",
+   "mide": "Partículas planas, elongadas, o planas y elongadas, en agregado grueso",
+   "detalle": "Planas: espesor/ancho < 0,5. Elongadas: largo/ancho > 1,5. Máximo 15 % en masa de la muestra (15, pág. 19).",
+   "confunde_con": [
+    "D5821"
+   ],
+   "gancho": "D4791 = planas y elongadas (se mide la relación largo/ancho/espesor).",
+   "fuente": [
+    {
+     "doc": "14",
+     "pag": 14
+    },
+    {
+     "doc": "15",
+     "pag": 19
+    },
+    {
+     "doc": "15",
+     "pag": 20
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ],
+   "verificar": "La clave del examen de I-2025 dice D4790 y D5260; las diapositivas dicen D4791 (ALCANCE.md, C14)."
+  },
+  {
+   "id": "D5821",
+   "designacion": "ASTM D5821",
+   "familia": "forma",
+   "mide": "Porcentaje de partículas fracturadas en agregado grueso",
+   "detalle": "La diapositiva lo muestra con partículas angulosas o cuboidales (15, pág. 19).",
+   "confunde_con": [
+    "D4791"
+   ],
+   "gancho": "D5821 = fracturadas (caras partidas). No son las planas ni las elongadas: esas son D4791.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 19
+    }
+   ]
+  },
+  {
+   "id": "C227",
+   "designacion": "ASTM C227",
+   "familia": "reactividad",
+   "mide": "Prueba de barra de mortero: expansiones por reactividad álcali-sílice, a 3 y 6 meses",
+   "detalle": "Rechazo si la expansión es > 0,05 % en 3 meses o > 0,10 % en 6 meses (15, pág. 17).",
+   "confunde_con": [
+    "C1260",
+    "C289"
+   ],
+   "gancho": "C227 es la barra lenta (meses); C1260 es la barra rápida (14 días).",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 17
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C1260",
+   "designacion": "ASTM C1260",
+   "familia": "reactividad",
+   "mide": "Prueba de barra de mortero: expansiones a 14 días",
+   "detalle": "Rechazo si la expansión es > 0,10 % en 14 días (15, pág. 17).",
+   "confunde_con": [
+    "C227",
+    "C289"
+   ],
+   "gancho": "C1260 es la barra rápida: 14 días. La C227 tarda meses.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 17
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C289",
+   "designacion": "ASTM C289",
+   "familia": "reactividad",
+   "mide": "Reactividad potencial del agregado: sílice disuelto en solución de hidróxido de sodio",
+   "confunde_con": [
+    "C227",
+    "C1260"
+   ],
+   "gancho": "C289 es química: se mide sílice disuelto, no expansión de barras.",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 17
+    }
+   ]
+  },
+  {
+   "id": "C586",
+   "designacion": "ASTM C586",
+   "familia": "reactividad",
+   "mide": "Reactividad álcali-carbonato: expansiones de cilindros de roca en hidróxido de sodio, 1 año",
+   "detalle": "El producto de la reacción forma grietas en la pasta: el agregado ataca la pasta (15, pág. 18).",
+   "confunde_con": [
+    "C227",
+    "C1260",
+    "C289"
+   ],
+   "gancho": "C586: carbonatos, cilindros de roca, un año (dolomita).",
+   "fuente": [
+    {
+     "doc": "15",
+     "pag": 18
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C1602",
+   "designacion": "ASTM C1602",
+   "familia": "agua",
+   "mide": "Especificación del agua de mezcla para concreto de cemento hidráulico (límites químicos y requisitos de desempeño)",
+   "detalle": "La tabla de límites químicos (05, pág. 8) cita la C114 para cloruro y sulfato, y la C1603 para el total de sólidos.",
+   "confunde_con": [
+    "C1603",
+    "C114"
+   ],
+   "gancho": "C1602 es la especificación (los límites); C114 y C1603 son los métodos con que se miden.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 7
+    },
+    {
+     "doc": "05",
+     "pag": 8
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C1603",
+   "designacion": "ASTM C1603",
+   "familia": "agua",
+   "mide": "Medición de sólidos en agua (total de sólidos)",
+   "confunde_con": [
+    "C1602",
+    "C114"
+   ],
+   "gancho": "C1603 = sólidos en el agua.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 7
+    },
+    {
+     "doc": "05",
+     "pag": 8
+    }
+   ]
+  },
+  {
+   "id": "C114",
+   "designacion": "ASTM C114",
+   "familia": "agua",
+   "mide": "Análisis químico del cemento hidráulico (la tabla de límites del agua lo cita como método para cloruro y sulfato)",
+   "confunde_con": [
+    "C1602",
+    "C1603"
+   ],
+   "gancho": "C114 = análisis químico: cloruro y sulfato en la tabla.",
+   "fuente": [
+    {
+     "doc": "05",
+     "pag": 7
+    },
+    {
+     "doc": "05",
+     "pag": 8
+    },
+    {
+     "doc": "08",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "C109",
+   "designacion": "ASTM C109",
+   "familia": "mortero",
+   "mide": "Esfuerzo a compresión de cubos de mortero de 50 mm; con agua no potable debe dar al menos 90 % del control a 7 días",
+   "confunde_con": [
+    "C191",
+    "C305",
+    "C1437"
+   ],
+   "gancho": "C109 rompe los cubos (compresión); C191 mide el fraguado.",
+   "fuente": [
+    {
+     "doc": "17",
+     "pag": 12
+    },
+    {
+     "doc": "05",
+     "pag": 9
+    },
+    {
+     "doc": "08",
+     "pag": 1
+    }
+   ]
+  },
+  {
+   "id": "C191",
+   "designacion": "ASTM C191",
+   "familia": "mortero",
+   "mide": "Tiempo de fraguado del cemento hidráulico con la aguja de Vicat; con agua no potable, de 1:00 antes a 1:30 después del control",
+   "confunde_con": [
+    "C109"
+   ],
+   "gancho": "C191 = Vicat, la aguja que mide cuánto tarda en fraguar.",
+   "fuente": [
+    {
+     "doc": "17",
+     "pag": 11
+    },
+    {
+     "doc": "05",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "C305",
+   "designacion": "ASTM C305",
+   "familia": "mortero",
+   "mide": "Mezclado mecánico de pastas de cemento hidráulico y morteros de consistencia plástica",
+   "confunde_con": [
+    "C1437",
+    "C109"
+   ],
+   "gancho": "En el laboratorio el orden es C305 (mezclar), C1437 (flujo) y C109 (moldear y romper cubos).",
+   "fuente": [
+    {
+     "doc": "17",
+     "pag": 12
+    }
+   ]
+  },
+  {
+   "id": "C1437",
+   "designacion": "ASTM C1437",
+   "familia": "mortero",
+   "mide": "Flujo de mortero de cemento hidráulico",
+   "confunde_con": [
+    "C305",
+    "C109"
+   ],
+   "gancho": "C1437 viene justo después de mezclar: se mide el flujo del mortero.",
+   "fuente": [
+    {
+     "doc": "17",
+     "pag": 12
+    }
+   ]
+  }
+ ]
+}

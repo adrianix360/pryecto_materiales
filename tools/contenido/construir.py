@@ -2,11 +2,11 @@
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from comun import FUENTES
-import tarjetas3, preguntas3_examen, preguntas3_teoria, glosario3, tema2, tema1
+import tarjetas3, preguntas3_examen, preguntas3_teoria, glosario3, tema2, tema1, normas
 
 SITE = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 PAGINAS = {"01": 6, "02": 5, "03": 9, "04": 5, "05": 12, "06": 11, "08": 5, "09": 3, "10": 7, "11": 8, "12": 73, "13": 11,
-           "14": 16, "15": 23, "16": 6, "19": 120, "20": 3, "22": 1, "24": 12, "25": 2, "26": 87,
+           "14": 16, "15": 23, "16": 6, "17": 84, "19": 120, "20": 3, "22": 1, "24": 12, "25": 2, "26": 87,
            "X01": 8, "X02": 3, "X04": 8, "X06": 4, "X07": 14, "X14": 10, "X15": 7}
 TEMAS = {
     1: ("Introducción y definiciones básicas", tema1.T, tema1.P),
@@ -64,6 +64,8 @@ for n, (titulo, T, P) in TEMAS.items():
     indice.append({"tema": n, "titulo": titulo, "tarjetas": f"data/tarjetas/tema{n}.json", "preguntas": f"data/preguntas/tema{n}.json",
                    "subtemas": {k: v for k, v in SUBTEMAS.items() if k.startswith(str(n))}})
     print(f"Tema {n}: {len(T)} tarjetas, {len(P)} preguntas")
+dump("data/normas.json", {"version": 1, "familias": normas.FAMILIAS, "normas": normas.NORMAS})
+print(f"Normas: {len(normas.NORMAS)}")
 dump("data/indice.json", {"version": 1, "examen": "2026-10-17", "temas": indice})
 G = tema1.G + tema2.G + glosario3.G
 dump("data/glosario.json", {"terminos": sorted(G, key=lambda x: x["termino"].lower())})

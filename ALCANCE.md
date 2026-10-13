@@ -38,6 +38,7 @@ Los códigos son los del INVENTARIO.md; los archivos están en `fuentes/`.
 | 14 | Agregados: clasificación |
 | 15 | Agregados: importancia |
 | 16 | Navas, Análisis granulométrico |
+| 17 | Manual de laboratorio de cementos (**solo** C305, C1437, C109 y C191; ver §3F) |
 | 19 | Manual de laboratorio de agregados |
 | 20 | Navas, Exudación y contracción |
 | 21 | Programa del curso |
@@ -148,6 +149,30 @@ Para cada ensayo se estudia qué determina, para qué sirve, el equipo principal
 
 El examen 08 también pide la ASTM C566 (humedad); su respaldo está en 08 y 13: 8.
 
+### 3F. Normas ASTM de memoria (entrenamiento «Normas»)
+
+**Agregado el 12/10/2026 por pedido de Adrián.** El examen pide escribir de memoria el número de la norma (08, punto 1.3). Se entrena solo con estas 26 normas, cada una con lo que determina, con cuáles se confunde y su fuente (`data/normas.json`):
+
+| Familia | Normas | Fuentes |
+|---|---|---|
+| Muestreo y reducción | D75, C702 | 19: 6, 23; 08: 3 |
+| Granulometría y finos | C117, C136, C33 | 19: 6, 36, 47; 11: 3–5; 08: 3 |
+| Densidad, vacíos y humedad | C127, C128, C29, C566 | 19: 62, 76, 99, 66; 13: 11; 08: 1–3 |
+| Calidad del agregado | C40, C131, C418, C994 | 19: 92, 112; 15: 11 |
+| Forma | D4791, D5821 | 14: 14; 15: 19–20 |
+| Reactividad álcali-agregado | C227, C1260, C289, C586 | 15: 17–18; 08: 3 |
+| Agua para concreto | C1602, C1603, C114 | 05: 7–8; 08: 3 |
+| Mortero y cemento | C109, C191, C305, C1437 | 17: 11–12; 05: 9 |
+
+Decisiones del 12/10/2026:
+
+- **Manual de cementos (17):** se usa **solo** para las normas C305 y C1437 (y los títulos de C109 y C191). El resto del manual sigue fuera de alcance. Manual de concreto (18): sigue fuera.
+- **C386 → C586.** C386 no aparece en ninguna fuente; Adrián confirmó que su apunte es la reactividad álcali-carbonato (C586, 15: 18).
+- **D5821 = partículas fracturadas** (15: 19, «Percentage of Fractured Particles in Coarse Aggregate»). El apunte de Adrián decía «planas o elongadas», pero la diapositiva asigna eso a la **D4791** (14: 14; 15: 19–20). Manda la diapositiva (C24).
+- **C994** va con VERIFICAR (posible C944; ver C24) y **D4791** también (la clave de 2025 dice D4790 y D5260; ver C14).
+- **Quedan fuera por ahora:** C143, C1611, C192 y C232 (las diapositivas no dicen qué distingue a la C1611 de la C143) y las normas ACI. Pueden entrar después si Adrián lo pide.
+- Los **ganchos de memoria** son ayudas escritas para el estudio, no datos del curso; la app los rotula así.
+
 ---
 
 ## 4. Exámenes anteriores (banco de preguntas)
@@ -217,3 +242,4 @@ El examen 08 también pide la ASTM C566 (humedad); su respaldo está en 08 y 13:
 | C21 | Aceite mineral en el agua | Tabla 25: 2 % del peso del cemento; PCA 100: más de 2,5 % reduce la resistencia en más de 20 % | **2 %** (tabla del profe), con la nota de la PCA |
 | C22 | Límite entre agregados normales y pesados (peso unitario) | Diapositiva 14: 9 dice 1 900 kg/m³; manual 19: 63 dice 1 920 kg/m³ (las dos son del profe) | **VERIFICAR**: se muestra 1 900 y se anota el 1 920 (auditoría del 9/10/2026) |
 | C23 | Clave de X01 pág. 6, F/V 4 («el agua de diseño es mayor al agua de dosificación cuando los agregados se dosifican con agua libre») | La equis impresa está en F; la corrección al margen marca V y la justificación impresa («es menor porque los agregados aportan el resto») hace verdadera la afirmación | **V**, con VERIFICAR (auditoría del 9/10/2026) |
+| C24 | D5821 y D4791; norma de abrasión por corte rotativo | Apunte de Adrián: D5821 = partículas planas o elongadas. Diapositiva 15: 19: D4791 = planas y elongadas; D5821-13(2017) = porcentaje de partículas fracturadas. Diapositiva 15: 11 dice C994 para el corte rotativo (podría ser C944) | **D4791 = planas y elongadas; D5821 = fracturadas** (diapositiva, fuente del profe). **C994: VERIFICAR** (decisión del 12/10/2026) |
