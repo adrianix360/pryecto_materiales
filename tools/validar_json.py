@@ -170,6 +170,7 @@ for n in nd["normas"]:
             err(i, f"confunde_con apunta a una norma inexistente o a sí misma: {otra!r}")
     for r in n.get("fuente", []):
         ref_ok(i, r)
+    figura_ok(i, n.get("figura"))
     # El texto de la pregunta no puede regalar la respuesta: «mide» no menciona ninguna designación.
     for otra in ids_norma:
         if otra and otra in n.get("mide", "").replace("-", " ").split():

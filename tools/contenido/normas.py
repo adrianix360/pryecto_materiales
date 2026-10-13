@@ -117,6 +117,29 @@ _N = [
      [S("17", 12)], ""),
 ]
 
+# Foto de cada norma que tiene una (data/normas.json → figura). Las de C702, C117, C136, C127 y C128 son las
+# del I examen de I-2026 (punto 1.3); el resto sale de los manuales y las diapositivas. Sin foto distintiva
+# (no entran en «Foto del equipo»): C33, C566, C418, C227, C1260, C289, C586, C1602, C1603 y C114.
+# id: (archivo, descripción que se muestra después de responder, fuentes)
+FOTOS = {
+    "D75": ("d75", "Cargador frontal remezclando la pila de agregado antes de tomar la muestra.", [S("19", 11)]),
+    "C702": ("c702", "Separador mecánico de canales con sus bandejas (método A de reducción de muestras).", [S("08", 3), S("19", 25)]),
+    "C117": ("c117", "Se vierte el agua de lavado sobre las mallas anidadas (No. 16 sobre No. 200).", [S("08", 3), S("19", 40)]),
+    "C136": ("c136", "Se coloca la muestra en el juego de mallas apiladas.", [S("08", 3), S("19", 51)]),
+    "C127": ("c127", "Canasta de alambre suspendida en el tanque para pesar sumergido el agregado grueso.", [S("08", 3), S("19", 70)]),
+    "C128": ("c128", "Picnómetro con arena y termómetro para el agregado fino.", [S("08", 3), S("19", 85)]),
+    "C40": ("c40", "Botella con la arena y el disco de vidrios de color estándar para comparar el color.", [S("19", 95)]),
+    "C29": ("c29", "Varillado de una capa de agregado dentro del molde del peso unitario.", [S("19", 106)]),
+    "C131": ("c131", "Máquina de Los Ángeles (tambor cerrado, con la compuerta de carga).", [S("19", 114)]),
+    "D4791": ("d4791", "Partículas planas y elongadas de agregado grueso.", [S("15", 19)]),
+    "D5821": ("d5821", "Partículas angulosas o cuboidales (fracturadas) de agregado grueso.", [S("15", 19)]),
+    "C994": ("c994", "Herramienta de corte rotativo sobre una probeta de mortero o concreto.", [S("15", 11)]),
+    "C305": ("c305", "Mezcladora mecánica con la olla y la paleta, para pastas y morteros.", [S("17", 15)]),
+    "C1437": ("c1437", "Mesa de flujo con su motor y el molde cónico de mortero.", [S("17", 16)]),
+    "C109": ("c109", "Cubo de mortero de 50 mm bajo la prensa de compresión.", [S("17", 26)]),
+    "C191": ("c191", "Aparato de Vicat con su base y el molde.", [S("17", 38)]),
+}
+
 NORMAS = []
 for (i, fam, mide, detalle, confunde, gancho, fuente, verificar) in _N:
     n = {"id": i, "designacion": "ASTM " + i, "familia": fam, "mide": mide}
@@ -125,6 +148,9 @@ for (i, fam, mide, detalle, confunde, gancho, fuente, verificar) in _N:
     n["confunde_con"] = confunde
     n["gancho"] = gancho
     n["fuente"] = fuente
+    if i in FOTOS:
+        arch, alt, fu = FOTOS[i]
+        n["figura"] = {"src": f"img/normas/{arch}.jpg", "alt": alt, "fuente": fu}
     if verificar:
         n["verificar"] = verificar
     NORMAS.append(n)

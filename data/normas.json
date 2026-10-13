@@ -53,7 +53,17 @@
      "doc": "08",
      "pag": 3
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/d75.jpg",
+    "alt": "Cargador frontal remezclando la pila de agregado antes de tomar la muestra.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 11
+     }
+    ]
+   }
   },
   {
    "id": "C702",
@@ -73,7 +83,21 @@
      "doc": "08",
      "pag": 3
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c702.jpg",
+    "alt": "Separador mecánico de canales con sus bandejas (método A de reducción de muestras).",
+    "fuente": [
+     {
+      "doc": "08",
+      "pag": 3
+     },
+     {
+      "doc": "19",
+      "pag": 25
+     }
+    ]
+   }
   },
   {
    "id": "C117",
@@ -93,7 +117,21 @@
      "doc": "08",
      "pag": 3
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c117.jpg",
+    "alt": "Se vierte el agua de lavado sobre las mallas anidadas (No. 16 sobre No. 200).",
+    "fuente": [
+     {
+      "doc": "08",
+      "pag": 3
+     },
+     {
+      "doc": "19",
+      "pag": 40
+     }
+    ]
+   }
   },
   {
    "id": "C136",
@@ -114,7 +152,21 @@
      "doc": "08",
      "pag": 3
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c136.jpg",
+    "alt": "Se coloca la muestra en el juego de mallas apiladas.",
+    "fuente": [
+     {
+      "doc": "08",
+      "pag": 3
+     },
+     {
+      "doc": "19",
+      "pag": 51
+     }
+    ]
+   }
   },
   {
    "id": "C33",
@@ -163,7 +215,21 @@
      "doc": "08",
      "pag": 3
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c127.jpg",
+    "alt": "Canasta de alambre suspendida en el tanque para pesar sumergido el agregado grueso.",
+    "fuente": [
+     {
+      "doc": "08",
+      "pag": 3
+     },
+     {
+      "doc": "19",
+      "pag": 70
+     }
+    ]
+   }
   },
   {
    "id": "C128",
@@ -187,7 +253,21 @@
      "doc": "08",
      "pag": 3
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c128.jpg",
+    "alt": "Picnómetro con arena y termómetro para el agregado fino.",
+    "fuente": [
+     {
+      "doc": "08",
+      "pag": 3
+     },
+     {
+      "doc": "19",
+      "pag": 85
+     }
+    ]
+   }
   },
   {
    "id": "C29",
@@ -207,7 +287,17 @@
      "doc": "08",
      "pag": 2
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c29.jpg",
+    "alt": "Varillado de una capa de agregado dentro del molde del peso unitario.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 106
+     }
+    ]
+   }
   },
   {
    "id": "C566",
@@ -247,7 +337,17 @@
      "doc": "08",
      "pag": 3
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c40.jpg",
+    "alt": "Botella con la arena y el disco de vidrios de color estándar para comparar el color.",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 95
+     }
+    ]
+   }
   },
   {
    "id": "C131",
@@ -272,7 +372,17 @@
      "doc": "08",
      "pag": 3
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c131.jpg",
+    "alt": "Máquina de Los Ángeles (tambor cerrado, con la compuerta de carga).",
+    "fuente": [
+     {
+      "doc": "19",
+      "pag": 114
+     }
+    ]
+   }
   },
   {
    "id": "C418",
@@ -307,6 +417,16 @@
      "pag": 11
     }
    ],
+   "figura": {
+    "src": "img/normas/c994.jpg",
+    "alt": "Herramienta de corte rotativo sobre una probeta de mortero o concreto.",
+    "fuente": [
+     {
+      "doc": "15",
+      "pag": 11
+     }
+    ]
+   },
    "verificar": "La diapositiva (15, pág. 11) dice ASTM C994; ese método podría ser la ASTM C944 (dígitos invertidos). Ninguna fuente del curso dice C944: consultar con el profe."
   },
   {
@@ -337,6 +457,16 @@
      "pag": 3
     }
    ],
+   "figura": {
+    "src": "img/normas/d4791.jpg",
+    "alt": "Partículas planas y elongadas de agregado grueso.",
+    "fuente": [
+     {
+      "doc": "15",
+      "pag": 19
+     }
+    ]
+   },
    "verificar": "La clave del examen de I-2025 dice D4790 y D5260; las diapositivas dicen D4791 (ALCANCE.md, C14)."
   },
   {
@@ -354,7 +484,17 @@
      "doc": "15",
      "pag": 19
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/d5821.jpg",
+    "alt": "Partículas angulosas o cuboidales (fracturadas) de agregado grueso.",
+    "fuente": [
+     {
+      "doc": "15",
+      "pag": 19
+     }
+    ]
+   }
   },
   {
    "id": "C227",
@@ -536,7 +676,17 @@
      "doc": "08",
      "pag": 1
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c109.jpg",
+    "alt": "Cubo de mortero de 50 mm bajo la prensa de compresión.",
+    "fuente": [
+     {
+      "doc": "17",
+      "pag": 26
+     }
+    ]
+   }
   },
   {
    "id": "C191",
@@ -556,7 +706,17 @@
      "doc": "05",
      "pag": 9
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c191.jpg",
+    "alt": "Aparato de Vicat con su base y el molde.",
+    "fuente": [
+     {
+      "doc": "17",
+      "pag": 38
+     }
+    ]
+   }
   },
   {
    "id": "C305",
@@ -573,7 +733,17 @@
      "doc": "17",
      "pag": 12
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c305.jpg",
+    "alt": "Mezcladora mecánica con la olla y la paleta, para pastas y morteros.",
+    "fuente": [
+     {
+      "doc": "17",
+      "pag": 15
+     }
+    ]
+   }
   },
   {
    "id": "C1437",
@@ -590,7 +760,17 @@
      "doc": "17",
      "pag": 12
     }
-   ]
+   ],
+   "figura": {
+    "src": "img/normas/c1437.jpg",
+    "alt": "Mesa de flujo con su motor y el molde cónico de mortero.",
+    "fuente": [
+     {
+      "doc": "17",
+      "pag": 16
+     }
+    ]
+   }
   }
  ]
 }
