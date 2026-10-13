@@ -144,6 +144,50 @@
     });
   }
 
+  function claveParDe(a, b) { return [a, b].sort().join("|"); }
+
+  // Parejas del catálogo sin repetir, en el orden de estudio (familias y normas): [{a, b, clave}].
+  // La norma que se encuentra primero queda como «a» (a la izquierda en pantalla).
+  function paresCatalogo(normas, familias) {
+    var vistos = {}, out = [];
+    familias.forEach(function (f) {
+      normas.filter(function (n) { return n.familia === f.id; }).forEach(function (n) {
+        (n.confunde_con || []).forEach(function (otra) {
+          var k = claveParDe(n.id, otra);
+          if (vistos[k]) return;
+          vistos[k] = true;
+          out.push({ a: n.id, b: otra, clave: k });
+        });
+      });
+    });
+    return out;
+  }
+
+  var PALABRAS_VACIAS = ("de del la el los las y o en a por con un una al se que es para sin lo").split(" ");
+
+  function normalizar(palabra) { return palabra.toLowerCase().replace(/[^\p{L}\p{N}]/gu, ""); }
+
+  // Compara dos textos palabra por palabra. Devuelve {a, b}: listas de {t, d} donde d = true si la
+  // palabra (que no sea de relleno) no aparece en el otro texto. Los espacios van como palabras sin marca.
+  function diferencias(textoA, textoB) {
+    function partir(t) { return String(t).split(/(\s+)/).filter(function (x) { return x !== ""; }); }
+    function conjunto(partes) {
+      var c = {};
+      partes.forEach(function (p) { c[normalizar(p)] = true; });
+      return c;
+    }
+    var pa = partir(textoA), pb = partir(textoB);
+    var ca = conjunto(pa), cb = conjunto(pb);
+    function marcar(partes, otro) {
+      return partes.map(function (p) {
+        var n = normalizar(p);
+        var d = !!n && !/^\s+$/.test(p) && PALABRAS_VACIAS.indexOf(n) < 0 && !otro[n];
+        return { t: p, d: d };
+      });
+    }
+    return { a: marcar(pa, cb), b: marcar(pb, ca) };
+  }
+
   var NormasLogica = {
     LETRAS: LETRAS,
     DIAS_DOMINIO: DIAS_DOMINIO,
@@ -157,6 +201,9 @@
     dominada: dominada,
     estadoNorma: estadoNorma,
     parejas: parejas,
+    claveParDe: claveParDe,
+    paresCatalogo: paresCatalogo,
+    diferencias: diferencias,
     itemsDe: itemsDe
   };
 

@@ -190,6 +190,33 @@ test("repaso con SRS: todas las fichas se ven antes del examen", () => {
   assert.equal(vistas.size, todos.length, "faltaron fichas por ver");
 });
 
+test("paresCatalogo: sin repetir, recíprocas contadas una vez y en el orden de estudio", () => {
+  const p = NL.paresCatalogo(normas, familias);
+  assert.equal(new Set(p.map((x) => x.clave)).size, p.length);
+  assert.deepEqual(p[0], { a: "D75", b: "C702", clave: "C702|D75" });
+  const claves = p.map((x) => x.clave);
+  for (const k of ["C127|C128", "C117|C136", "C1437|C305", "C1260|C227", "C1602|C1603", "D4791|D5821"]) assert.ok(claves.includes(k), k);
+  // toda norma aparece en alguna pareja
+  for (const n of normas) assert.ok(p.some((x) => x.a === n.id || x.b === n.id), n.id);
+  assert.equal(NL.claveParDe("C128", "C127"), "C127|C128");
+});
+
+test("diferencias: marca lo que distingue a cada norma y no las palabras de relleno", () => {
+  const marcadas = (partes) => partes.filter((x) => x.d).map((x) => x.t);
+  let d = NL.diferencias(porId.C127.mide, porId.C128.mide);
+  assert.deepEqual(marcadas(d.a), ["grueso"]);
+  assert.deepEqual(marcadas(d.b), ["fino"]);
+  d = NL.diferencias(porId.C227.mide, porId.C1260.mide);
+  assert.ok(marcadas(d.b).includes("14") && marcadas(d.b).includes("días"));
+  assert.ok(marcadas(d.a).includes("meses"));
+  // reconstruir el texto original uniendo las partes
+  assert.equal(d.a.map((x) => x.t).join(""), porId.C227.mide);
+  assert.equal(d.b.map((x) => x.t).join(""), porId.C1260.mide);
+  // palabras de relleno nunca se marcan, aunque no estén en el otro texto
+  d = NL.diferencias("el perro de agua", "gato");
+  assert.deepEqual(marcadas(d.a), ["perro", "agua"]);
+});
+
 test("progreso: las normas se exportan, validan y combinan; un archivo viejo sin normas vale", () => {
   const regN = (t) => ({ r: "bien", n: 1, t, caja: 2, vence: "2026-10-14", visto: "2026-10-12" });
   const estado = { ...Progreso.vacio(), normas: { "n-C127-e": regN(1) } };
