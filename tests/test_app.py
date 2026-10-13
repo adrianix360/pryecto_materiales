@@ -292,6 +292,8 @@ def funciona_sin_conexion(nav, url):
     figs = pag.evaluate("""Promise.all([...new Set([...Datos.tarjetas, ...Datos.preguntas]
         .filter(x => x.figura).map(x => x.figura.src))].map(s => fetch(s).then(r => r.ok)))""")
     assert figs and all(figs), "hay figuras que no quedaron en el caché"
+    fotos = pag.evaluate("Promise.all(Datos.normas.filter(n => n.figura).map(n => fetch(n.figura.src).then(r => r.ok)))")
+    assert len(fotos) == 16 and all(fotos), "las fotos de Normas no quedaron en el caché"
     assert not [e for e in errores if "ERR_INTERNET_DISCONNECTED" not in e], errores
     ctx.close()
 
@@ -995,18 +997,18 @@ def normas_dominada_con_dos_dias_y_practica_por_familia(nav, url):
     escribir_norma(pag, "D", "75")  # segundo día distinto → dominada
     pag.get_by_role("button", name="← Salir").click()
     assert "1 de 26 normas dominadas" in pag.locator("#vista").inner_text()
-    # práctica por familia: las 2 normas de muestreo → 4 fichas, primero las «escribir»
+    # práctica por familia: las 2 normas de muestreo → 6 fichas (escribir, inversa y foto)
     pag.locator('[data-familia="muestreo"]').click()
-    assert "Ficha 1 de 4" in pag.locator(".contador").inner_text()
+    assert "Ficha 1 de 6" in pag.locator(".contador").inner_text()
     ids = []
-    for _ in range(4):
+    for _ in range(6):
         ids.append(pag.locator(".pregunta").get_attribute("data-id"))
         if ids[-1].endswith("-e"):
             pag.get_by_role("button", name="No sé").click()
         else:
             pag.locator("[data-opcion]").first.click()
         pag.get_by_role("button", name="Siguiente →").click()
-    assert ids[:4] == ["n-D75-e", "n-C702-e", "n-D75-i", "n-C702-i"], ids
+    assert ids[:5] == ["n-D75-e", "n-C702-e", "n-D75-i", "n-C702-i", "n-D75-f"], ids  # la 6.ª puede ser una «No sé» que volvió
     assert not errores, errores
     ctx.close()
 
@@ -1034,9 +1036,9 @@ def normas_parejas_lado_a_lado_con_diferencias_y_practica_de_la_pareja(nav, url)
     assert "Ayuda de memoria" in pag.locator(".par-col").nth(0).inner_text()
     # practicar la pareja: 4 fichas, primero las «escribir» y mezcladas entre las dos
     pag.get_by_role("button", name="Probarme con esta pareja").click()
-    assert "Ficha 1 de 4" in pag.locator(".contador").inner_text()
+    assert "Ficha 1 de 6" in pag.locator(".contador").inner_text()
     ids = []
-    for _ in range(4):  # todas bien: ninguna ficha vuelve a la cola
+    for _ in range(6):  # todas bien: ninguna ficha vuelve a la cola
         ids.append(pag.locator(".pregunta").get_attribute("data-id"))
         norma = ids[-1].split("-")[1]
         if ids[-1].endswith("-e"):
@@ -1044,7 +1046,7 @@ def normas_parejas_lado_a_lado_con_diferencias_y_practica_de_la_pareja(nav, url)
         else:
             pag.locator(f'[data-opcion="{norma}"]').click()
         pag.get_by_role("button", name="Siguiente →").click()
-    assert ids == ["n-C127-e", "n-C128-e", "n-C127-i", "n-C128-i"], ids
+    assert ids == ["n-C127-e", "n-C128-e", "n-C127-i", "n-C128-i", "n-C127-f", "n-C128-f"], ids
     assert "Volver a las parejas" in pag.locator("#vista").inner_text()
     pag.get_by_role("button", name="Volver a las parejas").click()
     assert "Parejas que se parecen" in pag.locator("#vista").inner_text()
@@ -1067,6 +1069,79 @@ def normas_parejas_confundidas_salen_primero_y_se_abren_desde_el_inicio(nav, url
     textos = pag.locator(".par-col").all_inner_texts()
     assert "ASTM C1602" in textos[0] and "ASTM C1603" in textos[1]
     revisar_pantalla(pag, "normas pareja confundida")
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def normas_foto_sin_pista_en_el_alt_y_confusion_al_elegir_mal(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/normas")
+    pag.locator('[data-familia="muestreo"]').click()
+    for _ in range(4):  # salta las 4 primeras (escribir e inversa)
+        if pag.locator('[data-accion="nose"]').count():
+            pag.get_by_role("button", name="No sé").click()
+        else:
+            pag.locator("[data-opcion]").first.click()
+        pag.get_by_role("button", name="Siguiente →").click()
+    assert pag.locator(".pregunta").get_attribute("data-id") == "n-D75-f"
+    img = pag.locator(".norma-foto img")
+    assert img.get_attribute("alt") == "Foto de un equipo de laboratorio", "el alt no debe dar la respuesta"
+    assert img.evaluate("i => i.complete && i.naturalWidth > 0"), "la foto no cargó"
+    assert pag.locator(".norma-foto figcaption").count() == 0
+    assert pag.locator(".chip-norma").count() == 26
+    letras = pag.locator(".chip-norma").all_inner_texts()
+    assert letras[:3] == ["C29", "C33", "C40"] and letras[-3:] == ["D75", "D4791", "D5821"], letras
+    revisar_pantalla(pag, "normas foto")
+    pag.locator('.chip-norma[data-opcion="C702"]').click()
+    retro = pag.locator("#retro").inner_text()
+    assert "Era ASTM D75" in retro and "Elegiste ASTM C702" in retro, retro
+    assert "Cargador frontal" in pag.locator(".norma-foto figcaption").inner_text()
+    assert pag.locator(".chip-norma.es-correcta").inner_text() == "D75"
+    assert pag.locator(".chip-norma.es-incorrecta").inner_text() == "C702"
+    g = guardado_normas(pag)["n-D75-f"]
+    assert g["r"] == "mal" and g["conf"] == {"C702": 1}
+    revisar_pantalla(pag, "normas foto respondida")
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def normas_simulacro_de_fotos_sin_retro_hasta_el_final_y_con_nota(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/normas")
+    pag.get_by_role("button", name=re.compile(r"Simulacro de fotos")).click()
+    assert "Foto 1 de 10" in pag.locator(".contador").inner_text()
+    assert pag.get_by_role("button", name="← Anterior").is_disabled()
+    revisar_pantalla(pag, "normas simulacro de fotos")
+    for k in range(10):
+        assert pag.locator("#retro").count() == 0, "no hay retroalimentación durante el simulacro"
+        assert pag.locator(".norma-foto img").get_attribute("alt") == "Foto de un equipo de laboratorio"
+        if k == 0:  # se puede cambiar la respuesta
+            pag.locator('.chip-norma[data-opcion="C33"]').click()
+            pag.locator('.chip-norma[data-opcion="C29"]').click()
+            assert pag.locator('.chip-norma[aria-pressed="true"]').count() == 1
+        elif k != 3:  # la foto 4 queda sin responder
+            pag.locator('.chip-norma[data-opcion="C29"]').click()
+        if k < 9:
+            pag.get_by_role("button", name="Siguiente →").click()
+    pag.get_by_role("button", name="← Anterior").click()
+    assert "Foto 9 de 10" in pag.locator(".contador").inner_text()
+    pag.get_by_role("button", name="Siguiente →").click()
+    pag.get_by_role("button", name="Terminar").click()
+    texto = pag.locator("#vista").inner_text()
+    assert "Resultado del simulacro de fotos" in texto
+    assert pag.locator(".sim-fila").count() == 10
+    bien = pag.locator(".sim-fila--bien").count()
+    assert bien in (0, 1), "solo la C29 puede salir bien, y solo si tocó"
+    assert f"{bien} de 10" in texto
+    assert pag.locator(".sim-fila img").first.evaluate("i => i.complete && i.naturalWidth > 0")
+    assert "No respondiste" in texto
+    revisar_pantalla(pag, "normas simulacro de fotos resultado")
+    g = guardado_normas(pag)
+    assert len([k for k in g if k.endswith("-f")]) == 10, "cada foto queda como ficha de repaso"
+    hist = progreso(pag)["prefs"]["simulacroNormas"]
+    assert hist[0]["total"] == 10 and hist[0]["puntos"] == bien and hist[0]["dia"] == FECHA
+    pag.get_by_role("button", name="Volver a Normas").click()
+    assert f"último: {bien} de 10" in pag.locator("#vista").inner_text()
     assert not errores, errores
     ctx.close()
 

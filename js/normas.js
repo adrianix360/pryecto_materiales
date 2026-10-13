@@ -3,6 +3,8 @@
 //   · Escribir: se lee qué determina y se escribe el número de la norma, como en el examen.
 //   · ¿Qué determina?: se ve la norma y se elige entre opciones de normas parecidas.
 // Inicio: repaso de hoy (SRS), parejas que se confunden, práctica por familia y lista de consulta.
+// Foto del equipo: se ve la foto y se elige la norma en la lista, como en el punto 1.3 del examen.
+// «Simulacro de fotos»: 10 fotos seguidas sin retroalimentación y nota al final.
 // Parejas: las normas que se parecen se ven lado a lado, con las palabras que las distinguen
 // resaltadas y la ayuda de memoria; de ahí se lanza una práctica mezclada de esa pareja.
 // Una ficha respondida mal vuelve 4 lugares después, igual que en Practicar.
@@ -15,9 +17,11 @@
   var NOMBRES_RESUMEN = { fallados: "fichas falladas", vencidos: "vencidas", nuevos: "nuevas" };
   var PAREJAS_A_PRACTICAR = 3;
   var PAREJAS_A_MOSTRAR = 5;
+  var FOTOS_SIMULACRO = 10;
+  var HISTORIAL_SIMULACRO = 5;
 
   var s = {
-    vista: "hub", origen: null, parIdx: 0, pares: [], cola: [], pos: 0, extra: null, fase: "pregunta", letra: "C", texto: "",
+    sim: null, vista: "hub", origen: null, parIdx: 0, pares: [], cola: [], pos: 0, extra: null, fase: "pregunta", letra: "C", texto: "",
     resultado: null, resp: null, opciones: null, inicio: Date.now(), metaAbierta: false
   };
 
@@ -79,6 +83,9 @@
     var vistas = parejasVistas();
     var nVistas = catalogo.filter(function (p) { return vistas[p.clave]; }).length;
     var botonPares = '<button type="button" class="btn" data-accion="ver-parejas">Aprender por parejas · ' + nVistas + " de " + catalogo.length + " vistas</button>";
+    var ultimoSim = (Store.pref("simulacroNormas") || [])[0];
+    botonPares += '<button type="button" class="btn" data-accion="sim-iniciar">Simulacro de fotos' +
+      (ultimoSim ? " · último: " + ultimoSim.puntos + " de " + ultimoSim.total : "") + "</button>";
     if (res.ids.length) {
       html += '<div class="botones-fin"><button type="button" class="btn btn--primario" data-accion="repaso">Entrenar hoy · ' +
         res.ids.length + (res.ids.length === 1 ? " ficha" : " fichas") + "</button>" + botonPares + "</div>";
@@ -178,6 +185,56 @@
       '<div class="botones-fin"><button type="button" class="btn btn--primario" data-accion="par-probar">Probarme con esta pareja</button></div></section>';
   }
 
+  // ---------- Simulacro de fotos ----------
+  function iniciarSim() {
+    s.sim = { ids: NL.elegirFotos(Datos.normas, FOTOS_SIMULACRO), pos: 0, resp: {}, fin: null, inicio: Date.now() };
+    s.vista = "sim";
+  }
+
+  function terminarSim() {
+    var m = s.sim;
+    var res = NL.puntuarFotos(m.ids, m.resp);
+    res.detalle.forEach(function (d) {
+      var clave = NL.claveF(d.id);
+      var n = Datos.normaPorId[d.id];
+      var reg = NL.registrar(leer(clave), "f", d.ok, {
+        id: clave, hoy: SRS.hoy(), examen: Datos.indice.examen, verificar: !!n.verificar, ahora: Date.now(),
+        conf: !d.ok && d.resp && Datos.normaPorId[d.resp] ? d.resp : null
+      });
+      Store.guardarNorma(clave, reg);
+    });
+    Store.sumarDia(SRS.hoy(), Math.min((Date.now() - m.inicio) / 1000, 180 * m.ids.length), m.ids.length);
+    var hist = [{ dia: SRS.hoy(), puntos: res.puntos, total: res.total }].concat(Store.pref("simulacroNormas") || []);
+    Store.pref("simulacroNormas", hist.slice(0, HISTORIAL_SIMULACRO));
+    m.fin = res;
+  }
+
+  function htmlSim() {
+    var m = s.sim;
+    if (m.fin) {
+      return '<section class="pagina" aria-labelledby="h-sim"><h2 id="h-sim">Resultado del simulacro de fotos</h2>' +
+        '<p class="norma-progreso"><strong>' + m.fin.puntos + " de " + m.fin.total + "</strong> fotos bien (1 punto cada una).</p>" +
+        '<ul class="fam-lista">' + m.fin.detalle.map(function (d) {
+          var n = Datos.normaPorId[d.id];
+          var elegida = d.resp && Datos.normaPorId[d.resp];
+          return '<li class="fam-item sim-fila sim-fila--' + (d.ok ? "bien" : "mal") + '"><img src="' + esc(n.figura.src) + '" alt="' + esc(n.figura.alt) + '" loading="lazy">' +
+            '<div><p class="fam-item__fila"><span>' + (d.ok ? "✓ " : "✗ ") + esc(n.designacion) + "</span></p>" +
+            (d.ok ? "" : "<p>" + (elegida ? "Elegiste " + esc(elegida.designacion) + "." : "No respondiste.") + "</p>") +
+            '<p class="norma-detalle">' + esc(n.figura.alt) + "</p></div></li>";
+        }).join("") + '</ul><div class="botones-fin"><button type="button" class="btn btn--primario" data-accion="sim-iniciar">Repetir con otras fotos</button>' +
+        '<button type="button" class="btn" data-accion="hub">Volver a Normas</button></div></section>';
+    }
+    var n = Datos.normaPorId[m.ids[m.pos]];
+    var ultima = m.pos === m.ids.length - 1;
+    return '<section class="pagina" aria-labelledby="enunciado">' +
+      '<p class="contador"><button type="button" class="btn btn--texto btn--chico" data-accion="hub">← Salir</button> Foto ' + (m.pos + 1) +
+      " de " + m.ids.length + " · sin respuestas hasta el final</p>" + htmlFoto(n, false) +
+      '<h2 class="pregunta__enunciado" id="enunciado">Indique la norma ASTM que corresponde</h2>' +
+      htmlListaNormas(m.resp[n.id], null, false) +
+      '<div class="acciones"><button type="button" class="btn" data-accion="sim-ant"' + (m.pos === 0 ? " disabled" : "") + ">← Anterior</button>" +
+      '<button type="button" class="btn btn--primario" data-accion="' + (ultima ? "sim-fin" : "sim-sig") + '">' + (ultima ? "Terminar" : "Siguiente →") + "</button></div></section>";
+  }
+
   // ---------- Lista de consulta ----------
   function htmlLista() {
     var html = '<section class="pagina" aria-labelledby="h-lista"><h2 id="h-lista">Lista de normas</h2>' +
@@ -200,7 +257,7 @@
   // ---------- Ficha ----------
   function chips(it, n, prev) {
     var fam = Datos.familias.filter(function (f) { return f.id === n.familia; })[0];
-    return '<div class="chips"><span class="chip">' + (it.tipo === "e" ? "Escribir la norma" : "¿Qué determina?") + "</span>" +
+    return '<div class="chips"><span class="chip">' + ({ e: "Escribir la norma", i: "¿Qué determina?", f: "Foto del equipo" }[it.tipo]) + "</span>" +
       '<span class="chip">' + esc(fam ? fam.titulo : n.familia) + "</span>" +
       '<span class="chip">' + (prev ? "Última vez: " + (prev.r === "bien" ? "Bien" : "Mal") : "Nueva") + "</span>" +
       (n.verificar ? '<span class="chip chip--verificar">⚠ Verificar</span>' : "") + "</div>";
@@ -211,10 +268,10 @@
     var titulo, extra = "";
     if (ok) {
       titulo = "✓ Correcto: " + n.designacion;
-    } else if (it.tipo === "e") {
+    } else if (it.tipo === "e" || it.tipo === "f") {
       titulo = "✗ Era " + n.designacion;
       if (s.resp && Datos.normaPorId[s.resp]) {
-        extra = "<p>Escribiste " + esc(designacion(s.resp)) + ": " + esc(Datos.normaPorId[s.resp].mide) + ".</p>";
+        extra = "<p>" + (it.tipo === "e" ? "Escribiste " : "Elegiste ") + esc(designacion(s.resp)) + ": " + esc(Datos.normaPorId[s.resp].mide) + ".</p>";
       } else if (s.resp) {
         extra = "<p>Escribiste «" + esc(s.resp) + "», que no está en la lista.</p>";
       } else {
@@ -246,6 +303,30 @@
       '<input id="numero" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="5" enterkeyhint="done" autocomplete="off" ' +
       'autocapitalize="off" spellcheck="false" aria-label="Número de la norma" placeholder="000" value="' + esc(s.texto) + '"' +
       (resuelta ? " readonly" : "") + "></div></form>";
+  }
+
+  // La foto no lleva descripción hasta que se responde: el texto alternativo daría la respuesta.
+  function htmlFoto(n, revelar) {
+    return '<figure class="figura norma-foto"><img src="' + esc(n.figura.src) + '" alt="' +
+      esc(revelar ? n.figura.alt : "Foto de un equipo de laboratorio") + '" decoding="async">' +
+      (revelar ? "<figcaption>" + esc(n.figura.alt) + "</figcaption>" : "") + "</figure>";
+  }
+
+  // Lista de todas las normas, como en el examen. elegida: id marcado; correcta: id que se revela (o null).
+  function htmlListaNormas(elegida, correcta, desactivar) {
+    return '<div class="lista-normas" role="group" aria-label="Normas ASTM">' + NL.listaOrdenada(Datos.normas).map(function (x) {
+      var clase = "chip-norma";
+      if (correcta && x.id === correcta) clase += " es-correcta";
+      else if (correcta && x.id === elegida) clase += " es-incorrecta";
+      return '<button type="button" class="' + clase + '" data-opcion="' + esc(x.id) + '" aria-pressed="' + (x.id === elegida) + '"' +
+        (desactivar ? " disabled" : "") + ">" + esc(x.id) + "</button>";
+    }).join("") + "</div>";
+  }
+
+  function htmlFichaFoto(n) {
+    var resuelta = s.fase === "respondida";
+    return htmlFoto(n, resuelta) + '<h2 class="pregunta__enunciado" id="enunciado">Indique la norma ASTM que corresponde</h2>' +
+      htmlListaNormas(s.resp, resuelta ? n.id : null, resuelta);
   }
 
   function htmlFichaInversa(n) {
@@ -300,6 +381,7 @@
     }
     if (s.vista === "lista") { vista.innerHTML = htmlLista(); return conectar(vista); }
     if (s.vista === "parejas") { vista.innerHTML = htmlParejas(); return conectar(vista); }
+    if (s.vista === "sim") { vista.innerHTML = htmlSim(); return conectar(vista); }
     if (s.pos >= s.cola.length) { vista.innerHTML = htmlFin(); return conectar(vista); }
 
     var it = todos().porId[s.cola[s.pos]];
@@ -310,7 +392,7 @@
       "Ficha " + Math.min(s.pos + 1, s.cola.length) + " de " + s.cola.length +
       (s.extra ? " · " + esc(s.extra) : "") + "</p>" + chips(it, n, prev) +
       '<section class="pregunta" data-id="' + esc(it.id) + '" aria-labelledby="enunciado">' +
-      (it.tipo === "e" ? htmlFichaEscribir(n) : htmlFichaInversa(n)) +
+      (it.tipo === "e" ? htmlFichaEscribir(n) : it.tipo === "f" ? htmlFichaFoto(n) : htmlFichaInversa(n)) +
       (s.fase === "respondida" ? htmlRetro(it, n) + UI.reportar(it.id, "Normas") : "") +
       "</section>" + htmlAcciones(it);
     vista.innerHTML = html;
@@ -405,6 +487,11 @@
 
     vista.querySelectorAll("[data-opcion]").forEach(function (b) {
       b.addEventListener("click", function () {
+        if (s.vista === "sim") { // simulacro de fotos: se marca y se puede cambiar hasta el final
+          s.sim.resp[s.sim.ids[s.sim.pos]] = b.getAttribute("data-opcion");
+          vista.querySelectorAll("[data-opcion]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+          return;
+        }
         if (s.fase !== "pregunta") return;
         var id = b.getAttribute("data-opcion");
         cerrar(vista, it, id === n.id, id, id === n.id ? null : id);
@@ -422,6 +509,13 @@
         } else if (acc === "hub") {
           s.vista = s.vista === "sesion" && s.origen === "parejas" ? "parejas" : "hub";
           render(vista); window.scrollTo(0, 0);
+        } else if (acc === "sim-iniciar") {
+          iniciarSim(); render(vista); window.scrollTo(0, 0);
+        } else if (acc === "sim-sig" || acc === "sim-ant") {
+          s.sim.pos += acc === "sim-sig" ? 1 : -1;
+          render(vista); window.scrollTo(0, 0);
+        } else if (acc === "sim-fin") {
+          terminarSim(); render(vista); window.scrollTo(0, 0);
         } else if (acc === "ver-parejas") {
           abrirPares(null); render(vista); window.scrollTo(0, 0);
         } else if (acc === "par-ant" || acc === "par-sig") {

@@ -173,12 +173,13 @@ No tiene `version` ni `titulo`.
 | `familia` | string | sí | Id de una familia |
 | `mide` | string | sí | Qué determina, con las palabras de la fuente. **No nombra ninguna norma**: es el enunciado de «Escribir» y la opción de «¿Qué determina?» |
 | `detalle` | string | no | Dato de apoyo con su página (límites, definiciones) |
+| `figura` | objeto (ver Figura) | no | Foto del equipo; la tienen 16 normas. Activa la ficha «foto» y el simulacro de fotos. `alt` describe la foto y **solo se muestra después de responder** |
 | `confunde_con` | lista de ids | sí | Parejas con las que se confunde (al menos una; deben existir) |
 | `gancho` | string | sí | Ayuda de memoria. **No es dato del curso**; la app lo rotula «Ayuda de memoria» |
 | `fuente` | lista de referencias | sí | Al menos una; `doc` `17` es el Manual de cementos (solo C305, C1437, C109 y C191) |
 | `verificar` | string | no | Duda o contradicción (C994, D4791). La app muestra la marca VERIFICAR |
 
-**Progreso** (`localStorage`, clave `normas`): `normas["n-C127-e"]` (escribir) y `normas["n-C127-i"]` (¿qué determina?). Cada registro es un registro de SRS más `bien`, `conf` (`{ "C128": 3 }`: veces que la confundió con esa norma; `"otra"` si escribió un número fuera de la lista) y, solo en `-e`, `dias` (días en que la escribió bien).
+**Progreso** (`localStorage`, clave `normas`): `normas["n-C127-e"]` (escribir) y `normas["n-C127-i"]` (¿qué determina?) y `normas["n-C127-f"]` (foto, solo las que tienen `figura`). Cada registro es un registro de SRS más `bien`, `conf` (`{ "C128": 3 }`: veces que la confundió con esa norma; `"otra"` si escribió un número fuera de la lista) y, solo en `-e`, `dias` (días en que la escribió bien).
 
 ---
 
@@ -187,7 +188,7 @@ No tiene `version` ni `titulo`.
 - JSON bien formado e ids únicos en tarjetas, preguntas y glosario.
 - Campos obligatorios y valores permitidos de `tipo`, `clave` y `origen`.
 - Cada referencia: `doc` existe en `fuentes.json` y `pag` está entre 1 y `paginas`.
-- Figuras: el archivo existe y tiene `alt` y `fuente`.
+- Figuras (también las de normas): el archivo existe y tiene `alt` y `fuente`.
 - Selección única y F/V: exactamente una `correcta` válida; selección múltiple: lista no vacía de ids válidos.
 - Respuesta corta: `respuesta_modelo` y de 1 a 5 `puntos_clave` (2 a 5 si es de teoría).
 - Las preguntas de examen traen `examen.pregunta` y `examen.periodo`.

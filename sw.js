@@ -52,6 +52,7 @@ function figuras(lista, destino) {
 }
 
 function precargar() {
+  var imgsNormas = {};
   return caches.open(CACHE).then(function (cache) {
     return cache.addAll(ESTATICOS.map(sinCacheHttp))
       .then(function () {
@@ -63,13 +64,14 @@ function precargar() {
         ]);
       })
       .then(function (r) {
+        figuras(r[3].normas, imgsNormas);
         var temas = r[0].temas;
         return Promise.all(temas.map(function (t) {
           return Promise.all([guardarJson(cache, t.tarjetas), guardarJson(cache, t.preguntas)]);
         }));
       })
       .then(function (porTema) {
-        var imgs = {};
+        var imgs = imgsNormas;
         porTema.forEach(function (par) { figuras(par[0].tarjetas, imgs); figuras(par[1].preguntas, imgs); });
         return cache.addAll(Object.keys(imgs).map(sinCacheHttp));
       });

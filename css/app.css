@@ -1060,6 +1060,25 @@ mark { background: var(--verificar-fondo); color: var(--texto); border-radius: 4
 }
 
 /* ---------- Normas (entrenamiento de memoria) ---------- */
+.norma-foto { margin: 0 0 12px; }
+.norma-foto img { display: block; width: 100%; max-height: 300px; object-fit: contain; border-radius: var(--radio); background: var(--superficie-2); }
+.lista-normas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.chip-norma {
+  min-width: 64px; min-height: 48px; padding: 0 12px;
+  border: 2px solid var(--borde); border-radius: 12px;
+  background: var(--fondo); color: var(--texto);
+  font: inherit; font-weight: 700; font-variant-numeric: tabular-nums; cursor: pointer;
+}
+.chip-norma[aria-pressed="true"] { border-color: var(--primario); background: var(--primario-suave); }
+.chip-norma.es-correcta { border-color: var(--bien); background: var(--bien-fondo); }
+.chip-norma.es-incorrecta { border-color: var(--mal); background: var(--mal-fondo); }
+.chip-norma:disabled { cursor: default; opacity: 1; }
+.sim-fila { display: flex; gap: 12px; align-items: flex-start; }
+.sim-fila img { flex: none; width: 88px; height: 88px; object-fit: cover; border-radius: 10px; }
+.sim-fila > div { min-width: 0; flex: 1; }
+.sim-fila p { margin: 0 0 4px; }
+.sim-fila--bien { border-left: 6px solid var(--bien); }
+.sim-fila--mal { border-left: 6px solid var(--mal); }
 .par-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 10px 0 4px; }
 .par-col { min-width: 0; padding: 12px; border: 1px solid var(--borde); border-radius: var(--radio); background: var(--superficie); }
 .par-col p { margin: 0 0 8px; }

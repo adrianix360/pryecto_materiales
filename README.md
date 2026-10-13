@@ -62,10 +62,12 @@ La fecha del examen (17 de octubre de 2026) se lee de `data/indice.json`.
 
 La sección **Normas** (tercer botón de la barra inferior; **Buscar** pasó a la lupa de la barra superior para que los textos de la barra sigan en 17 px) entrena el «cuál es cuál» de 26 normas, porque el examen pide **escribir el número** (I-2026, punto 1.3). El método sale de la práctica de recuperación, el repaso espaciado y el contraste entre parejas parecidas (C127/C128, C117/C136, C305/C1437…).
 
-- **Dos fichas por norma**, cada una con su propio repaso espaciado (el mismo Leitner de `js/srs.js`):
+- **Dos fichas por norma (tres si tiene foto)**, cada una con su propio repaso espaciado (el mismo Leitner de `js/srs.js`):
   - **Escribir:** se lee qué determina la norma y se escribe el número, con la letra C o D elegida aparte. «No sé» muestra la respuesta y la ficha vuelve más tarde.
   - **¿Qué determina?:** se ve la norma y se elige entre cuatro opciones, que son **sus parejas** y las de su familia, no normas al azar.
 - **Retroalimentación:** qué determina, la ayuda de memoria (rotulada como ayuda, no como dato del curso), con cuáles se confunde y la fuente. Si escribiste otra norma de la lista, dice cuál.
+- **Foto del equipo:** 16 normas tienen una foto del equipo o del ensayo (las de C702, C117, C136, C127 y C128 son las del I examen de I-2026, punto 1.3). Se ve la foto y se elige la norma en la lista completa de 26, como en el examen. La foto no lleva descripción (ni texto alternativo que dé la respuesta) hasta que respondés.
+- **Simulacro de fotos:** 10 fotos seguidas con la lista de normas, sin retroalimentación hasta el final; se puede volver atrás y cambiar la respuesta. Da la nota (1 punto por foto), muestra cada foto con su norma y manda las falladas al repaso. Se abre desde el inicio de Normas y guarda los últimos 5 resultados. Vive en Normas, no dentro de la pestaña Simulacro.
 - **Aprender por parejas:** 23 parejas de normas que se parecen se ven lado a lado, con las palabras que las distinguen resaltadas (se calculan comparando los textos de las fuentes) y la ayuda de memoria de cada una. «Probarme con esta pareja» lanza sus 4 fichas mezcladas. Las parejas que más confundís salen primero; el inicio cuenta cuántas ya viste.
 - **Confusiones:** la app guarda con cuál norma se confundió cada una; el inicio lista las parejas más falladas y permite practicarlas mezcladas.
 - **Orden de los nuevos:** por familia, y la ficha inversa de una familia llega un bloque después (E1, E2, I1, E3, I2…) para no preguntar al revés lo que se acaba de ver.
