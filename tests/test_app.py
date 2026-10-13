@@ -920,8 +920,8 @@ def escribir_norma(pag, letra, numero):
 def normas_escribir_confundir_no_se_e_inversa(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url + "#/normas")
     texto = pag.locator("#vista").inner_text()
-    assert "Normas ASTM de memoria" in texto and "0 de 26 normas dominadas" in texto, texto[:300]
-    assert pag.locator(".fam-item").count() == 8, "deben verse las 8 familias"
+    assert "Normas ASTM de memoria" in texto and "0 de 30 normas dominadas" in texto, texto[:300]
+    assert pag.locator(".fam-item").count() == 9, "deben verse las 9 familias"
     revisar_pantalla(pag, "normas inicio")
     pag.get_by_role("button", name=re.compile(r"Entrenar hoy")).click()
 
@@ -991,12 +991,12 @@ def normas_dominada_con_dos_dias_y_practica_por_familia(nav, url):
     reg = {"r": "bien", "n": 1, "t": 1, "caja": 2, "vence": "2026-10-08", "visto": "2026-10-07", "bien": 1, "dias": ["2026-10-07"]}
     sembrado = {"tarjetas": {}, "preguntas": {}, "normas": {"n-D75-e": reg}, "diario": {}, "prefs": {}, "simulacro": None, "historial": []}
     ctx, pag, errores = nueva_pagina(nav, url + "#/normas", sembrar=sembrado)
-    assert "0 de 26 normas dominadas" in pag.locator("#vista").inner_text()
+    assert "0 de 30 normas dominadas" in pag.locator("#vista").inner_text()
     pag.get_by_role("button", name=re.compile(r"Entrenar hoy")).click()
     assert pag.locator(".pregunta").get_attribute("data-id") == "n-D75-e", "la vencida sale primero"
     escribir_norma(pag, "D", "75")  # segundo día distinto → dominada
     pag.get_by_role("button", name="← Salir").click()
-    assert "1 de 26 normas dominadas" in pag.locator("#vista").inner_text()
+    assert "1 de 30 normas dominadas" in pag.locator("#vista").inner_text()
     # práctica por familia: las 2 normas de muestreo → 6 fichas (escribir, inversa y foto)
     pag.locator('[data-familia="muestreo"]').click()
     assert "Ficha 1 de 6" in pag.locator(".contador").inner_text()
@@ -1016,9 +1016,9 @@ def normas_dominada_con_dos_dias_y_practica_por_familia(nav, url):
 @prueba
 def normas_parejas_lado_a_lado_con_diferencias_y_practica_de_la_pareja(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url + "#/normas")
-    assert "Aprender por parejas · 0 de 23 vistas" in pag.locator("#vista").inner_text()
+    assert "Aprender por parejas · 0 de 26 vistas" in pag.locator("#vista").inner_text()
     pag.get_by_role("button", name=re.compile(r"Aprender por parejas")).click()
-    assert "Pareja 1 de 23" in pag.locator(".contador").inner_text()
+    assert "Pareja 1 de 26" in pag.locator(".contador").inner_text()
     assert pag.get_by_role("button", name="← Anterior").is_disabled()
     cols = pag.locator(".par-col")
     assert cols.count() == 2
@@ -1026,7 +1026,7 @@ def normas_parejas_lado_a_lado_con_diferencias_y_practica_de_la_pareja(nav, url)
     assert pag.locator("mark.difiere").count() >= 1
     revisar_pantalla(pag, "normas parejas")
     # avanza hasta C127 / C128: lo que las distingue es grueso / fino
-    for _ in range(23):
+    for _ in range(26):
         if "ASTM C127" in pag.locator(".par-col").nth(0).inner_text():
             break
         pag.get_by_role("button", name="Siguiente →").click()
@@ -1064,7 +1064,7 @@ def normas_parejas_confundidas_salen_primero_y_se_abren_desde_el_inicio(nav, url
     sembrado = {"tarjetas": {}, "preguntas": {}, "normas": {"n-C1602-e": reg}, "diario": {}, "prefs": {}, "simulacro": None, "historial": []}
     ctx, pag, errores = nueva_pagina(nav, url + "#/normas", sembrar=sembrado)
     pag.get_by_role("button", name="Ver la pareja").first.click()
-    assert "Pareja 1 de 23" in pag.locator(".contador").inner_text()
+    assert "Pareja 1 de 26" in pag.locator(".contador").inner_text()
     assert "La confundiste 2 veces" in pag.locator(".chips").inner_text()
     textos = pag.locator(".par-col").all_inner_texts()
     assert "ASTM C1602" in textos[0] and "ASTM C1603" in textos[1]
@@ -1088,7 +1088,7 @@ def normas_foto_sin_pista_en_el_alt_y_confusion_al_elegir_mal(nav, url):
     assert img.get_attribute("alt") == "Foto de un equipo de laboratorio", "el alt no debe dar la respuesta"
     assert img.evaluate("i => i.complete && i.naturalWidth > 0"), "la foto no cargó"
     assert pag.locator(".norma-foto figcaption").count() == 0
-    assert pag.locator(".chip-norma").count() == 26
+    assert pag.locator(".chip-norma").count() == 30
     letras = pag.locator(".chip-norma").all_inner_texts()
     assert letras[:3] == ["C29", "C33", "C40"] and letras[-3:] == ["D75", "D4791", "D5821"], letras
     revisar_pantalla(pag, "normas foto")
@@ -1150,7 +1150,7 @@ def normas_simulacro_de_fotos_sin_retro_hasta_el_final_y_con_nota(nav, url):
 def normas_lista_de_consulta_con_ganchos_fuentes_y_verificar(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url + "#/normas")
     pag.get_by_role("button", name="Ver la lista de normas").click()
-    assert pag.locator(".norma-ficha").count() == 26
+    assert pag.locator(".norma-ficha").count() == 30
     texto = pag.locator("#vista").inner_text()
     for esperado in ("ASTM D5821", "fracturadas", "ASTM D4791", "Ayuda de memoria", "Se confunde con", "Manual de Laboratorio"):
         assert esperado in texto, esperado

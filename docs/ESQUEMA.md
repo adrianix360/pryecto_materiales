@@ -2,7 +2,7 @@
 
 Resumen del esquema **real** de los JSON, obtenido leyendo los archivos (9 de octubre de 2026). Si un campo no aparece aquí, no existe en los datos.
 
-**Conteo actual:** 147 tarjetas, 183 preguntas, 60 términos de glosario, 26 normas y 29 fuentes. `tools/validar_json.py` da OK.
+**Conteo actual:** 148 tarjetas, 195 preguntas, 60 términos de glosario, 30 normas y 29 fuentes. `tools/validar_json.py` da OK.
 
 > **Los JSON se generan.** `data/` sale de `tools/contenido/construir.py` (módulos `tema1.py`, `tema2.py`, `tarjetas3.py`, `preguntas3_*.py`, `glosario3.py` y `comun.py`). Si se edita un JSON a mano y luego se corre el generador, el cambio se pierde: el contenido se corrige en los módulos y se regenera. Las correcciones de la auditoría técnica (9/10/2026) están en `tools/contenido/correcciones.json`: cada una cambia un campo de un ítem y guarda el texto anterior, la razón y la evidencia; `construir.py` las aplica al final y se detiene si el texto anterior ya no coincide.
 
@@ -15,7 +15,7 @@ Resumen del esquema **real** de los JSON, obtenido leyendo los archivos (9 de oc
 | `data/tarjetas/temaN.json` | Tarjetas de estudio del tema N (N = 1, 2, 3) |
 | `data/preguntas/temaN.json` | Preguntas de práctica del tema N |
 | `data/glosario.json` | Términos del glosario (los tres temas juntos) |
-| `data/normas.json` | Familias y normas ASTM del entrenamiento «Normas» (26 normas, 8 familias) |
+| `data/normas.json` | Familias y normas ASTM del entrenamiento «Normas» (30 normas, 9 familias) |
 
 Formato: UTF-8, sin escapar caracteres (`ensure_ascii=False`), sangría de 1 espacio.
 
@@ -110,21 +110,21 @@ Diccionario indexado por código. Hay 29: `01`–`06`, `08`–`17`, `19`, `20`, 
 | `origen` | string | sí | `examen` o `teoria` |
 | `clave` | string | sí | `oficial` (clave del examen), `documental` (armada con las fuentes) o `pendiente` (hoy ninguna) |
 | `explicacion` | string | sí | Por qué es correcta la respuesta y por qué fallan las demás |
-| `fuente` | lista de referencias | sí en `teoria` | Respaldo documental. La traen 176 de 183; las 7 que no, son de examen con clave oficial |
+| `fuente` | lista de referencias | sí en `teoria` | Respaldo documental. La traen 188 de 195; las 7 que no, son de examen con clave oficial |
 | `examen` | objeto | sí en `examen` | `{doc, pag, pregunta, periodo}`. `doc` y `pag` se validan como una referencia; `pregunta` es el número en el original (`"1.1, caso 2"`) y `periodo` el ciclo (`"I-2026"`, `"Sin fecha (cuestionario de Mediación Virtual)"`) |
 | `verificar` | string | no | Nota de contradicción o duda (26 preguntas) |
 | `figura` | objeto | no | Ver **Figura** (6 preguntas: 5 del examen 08 y el ábaco de X01) |
 
-Combinaciones actuales de `origen` + `clave`: examen + oficial (123), teoría + documental (56), examen + documental (4).
+Combinaciones actuales de `origen` + `clave`: examen + oficial (123), teoría + documental (68), examen + documental (4).
 
 ### Según el tipo
 
 | Tipo | Campos extra | Notas |
 |---|---|---|
-| `seleccion_unica` (66) | `opciones[]`, `correcta` (string) | 2 a 5 opciones (58 tienen 4) |
+| `seleccion_unica` (75) | `opciones[]`, `correcta` (string) | 2 a 5 opciones (67 tienen 4) |
 | `seleccion_multiple` (6) | `opciones[]`, `correcta` (lista de ids) | 4 o 5 opciones |
-| `verdadero_falso` (46) | `opciones[]`, `correcta` (string), `justificacion_oficial` (string, opcional) | Opciones siempre `a` = "Verdadero", `b` = "Falso". `justificacion_oficial` está en 42: es la justificación textual de la clave |
-| `respuesta_corta` (65) | `respuesta_modelo` (string), `puntos_clave` (lista de strings) | 1 a 5 puntos clave; las de teoría necesitan de 2 a 5 |
+| `verdadero_falso` (48) | `opciones[]`, `correcta` (string), `justificacion_oficial` (string, opcional) | Opciones siempre `a` = "Verdadero", `b` = "Falso". `justificacion_oficial` está en 42: es la justificación textual de la clave |
+| `respuesta_corta` (66) | `respuesta_modelo` (string), `puntos_clave` (lista de strings) | 1 a 5 puntos clave; las de teoría necesitan de 2 a 5 |
 
 `opciones[]` = `[{ "id": "a", "texto": "…" }, …]`. Ids en minúscula (`a`–`e`). Las preguntas de teoría no pueden usar "todas las anteriores".
 

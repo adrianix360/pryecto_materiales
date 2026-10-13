@@ -15,6 +15,7 @@ FAMILIAS = [
     {"id": "forma", "titulo": "Forma de las partículas"},
     {"id": "reactividad", "titulo": "Reactividad álcali-agregado"},
     {"id": "agua", "titulo": "Agua para concreto"},
+    {"id": "fresco", "titulo": "Concreto fresco: asentamiento, exudación y especímenes"},
     {"id": "mortero", "titulo": "Mortero y cemento"},
 ]
 
@@ -115,6 +116,22 @@ _N = [
     ("C1437", "mortero", "Flujo de mortero de cemento hidráulico",
      "", ["C305", "C109"], "C1437 viene justo después de mezclar: se mide el flujo del mortero.",
      [S("17", 12)], ""),
+
+    ("C143", "fresco", "Asentamiento del concreto de cemento hidráulico (concreto convencional, con el cono)",
+     "El cuestionario del curso (X01, pág. 5, pregunta 1) la asigna al asentamiento del concreto convencional.",
+     ["C1611", "C192"], "La 143 es el asentamiento de siempre, el del cono. Si el concreto es autocompactante, se usa el flujo (la 1611).",
+     [S("06", 9), S("06", 10), S("X01", 5)], ""),
+    ("C1611", "fresco", "Flujo de asentamiento del concreto autocompactante",
+     "El título dice «slump flow»: flujo de asentamiento, no el asentamiento del cono. El cuestionario del curso (X01, pág. 5, pregunta 2) la asigna al concreto autocompactante.",
+     ["C143"], "1611: el flujo del autocompactante. El nombre en inglés, «slump flow», ayuda a no confundirla con el cono.",
+     [S("06", 9), S("06", 10), S("X01", 5)], ""),
+    ("C232", "fresco", "Exudación (sangrado) del concreto: cantidad relativa de agua de mezcla que sale de una muestra de concreto recién mezclado",
+     "", ["C192"], "232: el sangrado, la que mide cuánta agua sube a la superficie.",
+     [S("06", 4)], ""),
+    ("C192", "fresco", "Elaboración y curado de especímenes de concreto en el laboratorio",
+     "Es una práctica para preparar los especímenes, no un ensayo que mida una propiedad del concreto fresco. La diapositiva 06 la pone junto a la del cono y la del flujo.",
+     ["C143", "C232"], "192: se hacen y se curan los especímenes en el laboratorio; no mide nada, solo los prepara.",
+     [S("06", 9)], ""),
 ]
 
 # Foto de cada norma que tiene una (data/normas.json → figura). Las de C702, C117, C136, C127 y C128 son las

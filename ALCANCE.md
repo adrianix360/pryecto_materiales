@@ -67,7 +67,7 @@ Las páginas son del PDF, salvo cuando dice "impresa".
 | Subtema | Qué se estudia | Fuentes |
 |---|---|---|
 | 2.1 Calidad: parámetros que deben cumplir límites | pH, aceites, sales, limos y materia orgánica | 05: 2 |
-| 2.2 Sales en el agua | Sulfatos, carbonatos, bicarbonatos y cloruros: qué son y qué efecto tienen; la dureza (calcio y magnesio) | 05: 3–5; 01: 97–98 (impresas) |
+| 2.2 Sales en el agua | Sulfatos, carbonatos, bicarbonatos y cloruros: qué son y qué efecto tienen; la dureza (calcio y magnesio); los límites de cloruros del concreto que el ACI 318 da en % del peso de cemento, tal como los cita la PCA (agregado el 13/10/2026) | 05: 3–5; 01: 97–98 (impresas) |
 | 2.3 Problemas asociados | Eflorescencias, expansiones, corrosión | 05: 4–6 |
 | 2.4 Normas | ASTM C1602 (agua de mezcla), C1603 (sólidos), C114 (análisis químico) | 05: 7 |
 | 2.5 Límites químicos ASTM C1602 | Cloruros, sulfatos, álcalis y sólidos totales | 05: 8 (ver contradicción C1) |
@@ -151,7 +151,7 @@ El examen 08 también pide la ASTM C566 (humedad); su respaldo está en 08 y 13:
 
 ### 3F. Normas ASTM de memoria (entrenamiento «Normas»)
 
-**Agregado el 12/10/2026 por pedido de Adrián.** El examen pide escribir de memoria el número de la norma (08, punto 1.3). Se entrena solo con estas 26 normas, cada una con lo que determina, con cuáles se confunde y su fuente (`data/normas.json`):
+**Agregado el 12/10/2026 por pedido de Adrián.** El examen pide escribir de memoria el número de la norma (08, punto 1.3). Se entrena solo con estas 30 normas, cada una con lo que determina, con cuáles se confunde y su fuente (`data/normas.json`):
 
 | Familia | Normas | Fuentes |
 |---|---|---|
@@ -163,6 +163,7 @@ El examen 08 también pide la ASTM C566 (humedad); su respaldo está en 08 y 13:
 | Reactividad álcali-agregado | C227, C1260, C289, C586 | 15: 17–18; 08: 3 |
 | Agua para concreto | C1602, C1603, C114 | 05: 7–8; 08: 3 |
 | Mortero y cemento | C109, C191, C305, C1437 | 17: 11–12; 05: 9 |
+| Concreto fresco (agregada el 13/10/2026) | C143, C1611, C232, C192 | 06: 4, 9–10; X01: 5 |
 
 Decisiones del 12/10/2026:
 
@@ -170,8 +171,9 @@ Decisiones del 12/10/2026:
 - **C386 → C586.** C386 no aparece en ninguna fuente; Adrián confirmó que su apunte es la reactividad álcali-carbonato (C586, 15: 18).
 - **D5821 = partículas fracturadas** (15: 19, «Percentage of Fractured Particles in Coarse Aggregate»). El apunte de Adrián decía «planas o elongadas», pero la diapositiva asigna eso a la **D4791** (14: 14; 15: 19–20). Manda la diapositiva (C24).
 - **C994** va con VERIFICAR (posible C944; ver C24) y **D4791** también (la clave de 2025 dice D4790 y D5260; ver C14).
-- **Quedan fuera por ahora:** C143, C1611, C192 y C232 (las diapositivas no dicen qué distingue a la C1611 de la C143) y las normas ACI. Pueden entrar después si Adrián lo pide.
-- **Fotos (Fase C):** 16 normas llevan foto (`img/normas/`): C702, C117, C136, C127 y C128 son las del examen 08 (pág. 3); D75, C40, C29 y C131 salen del manual de agregados (19: 11, 95, 106, 114); C305, C1437, C109 y C191, del manual de cementos (17: 15, 16, 26, 38); D4791, D5821 y C994, de las diapositivas 15 (págs. 19 y 11). Sin foto distintiva quedan C33, C566, C418, C227, C1260, C289, C586, C1602, C1603 y C114.
+- **Quedan fuera por ahora:** las normas ACI. Pueden entrar después si Adrián lo pide.
+- **Decisión del 13/10/2026 (pedido de Adrián):** entran C143, C1611, C232 y C192. Se distinguen así: C143, asentamiento del concreto convencional, y C1611, flujo de asentamiento del concreto autocompactante (06: 9–10 y X01: 5, preguntas 1 y 2); C232, exudación (06: 4); C192, práctica de elaboración y curado de especímenes en el laboratorio (06: 9). Ninguna lleva foto.
+- **Fotos (Fase C):** 16 normas llevan foto (`img/normas/`): C702, C117, C136, C127 y C128 son las del examen 08 (pág. 3); D75, C40, C29 y C131 salen del manual de agregados (19: 11, 95, 106, 114); C305, C1437, C109 y C191, del manual de cementos (17: 15, 16, 26, 38); D4791, D5821 y C994, de las diapositivas 15 (págs. 19 y 11). Sin foto distintiva quedan C33, C566, C418, C227, C1260, C289, C586, C1602, C1603, C114, C143, C1611, C232 y C192.
 - Los **ganchos de memoria** son ayudas escritas para el estudio, no datos del curso; la app los rotula así.
 
 ---

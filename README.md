@@ -56,11 +56,11 @@ La fecha del examen (17 de octubre de 2026) se lee de `data/indice.json`.
 | jue 15 | Dudosa | 2 | vie 16 | en la recta final, lo dudoso vuelve mañana |
 | vie 16 | La sabía | 3 | mar 20 | ya tuvo su repaso final: intervalo normal |
 
-**Cuánto trabajo da.** Las pruebas simulan estudiar del 9 al 16 de octubre con los datos reales, acertando más o menos el 70 %. Con esa simulación salen entre 34 y 98 tarjetas y entre 42 y 139 preguntas por día; la carga sube en los últimos días. Todo se ve antes del 13 y todo se repasa al menos una vez entre el 14 y el 16.
+**Cuánto trabajo da.** Las pruebas simulan estudiar del 9 al 16 de octubre con los datos reales, acertando más o menos el 70 %. Con esa simulación salen entre 34 y 106 tarjetas y entre 44 y 135 preguntas por día; la carga sube en los últimos días. Todo se ve antes del 13 y todo se repasa al menos una vez entre el 14 y el 16.
 
 ## Normas ASTM de memoria
 
-La sección **Normas** (tercer botón de la barra inferior; **Buscar** pasó a la lupa de la barra superior para que los textos de la barra sigan en 17 px) entrena el «cuál es cuál» de 26 normas, porque el examen pide **escribir el número** (I-2026, punto 1.3). El método sale de la práctica de recuperación, el repaso espaciado y el contraste entre parejas parecidas (C127/C128, C117/C136, C305/C1437…).
+La sección **Normas** (tercer botón de la barra inferior; **Buscar** pasó a la lupa de la barra superior para que los textos de la barra sigan en 17 px) entrena el «cuál es cuál» de 30 normas, porque el examen pide **escribir el número** (I-2026, punto 1.3). El método sale de la práctica de recuperación, el repaso espaciado y el contraste entre parejas parecidas (C127/C128, C117/C136, C305/C1437…).
 
 - **Dos fichas por norma (tres si tiene foto)**, cada una con su propio repaso espaciado (el mismo Leitner de `js/srs.js`):
   - **Escribir:** se lee qué determina la norma y se escribe el número, con la letra C o D elegida aparte. «No sé» muestra la respuesta y la ficha vuelve más tarde.

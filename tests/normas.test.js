@@ -17,7 +17,8 @@ const azar = (semilla) => { let s = semilla >>> 0; return () => ((s = (s * 16645
 
 test("datos: normas de la lista de Adrián, con las correcciones acordadas", () => {
   const esperadas = ["C1602", "C1603", "C114", "C109", "C305", "C1437", "C191", "C33", "C136", "C131", "C994", "C227",
-    "C1260", "C289", "C586", "D4791", "D5821", "C29", "C127", "C128", "C566", "D75", "C702", "C117", "C40", "C418"];
+    "C1260", "C289", "C586", "D4791", "D5821", "C29", "C127", "C128", "C566", "D75", "C702", "C117", "C40", "C418",
+    "C143", "C1611", "C232", "C192"];
   for (const id of esperadas) assert.ok(porId[id], "falta " + id);
   assert.equal(normas.length, esperadas.length);
   assert.equal(porId.C386, undefined, "C386 no existe en las fuentes: era C586");

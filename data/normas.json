@@ -30,6 +30,10 @@
    "titulo": "Agua para concreto"
   },
   {
+   "id": "fresco",
+   "titulo": "Concreto fresco: asentamiento, exudación y especímenes"
+  },
+  {
    "id": "mortero",
    "titulo": "Mortero y cemento"
   }
@@ -771,6 +775,91 @@
      }
     ]
    }
+  },
+  {
+   "id": "C143",
+   "designacion": "ASTM C143",
+   "familia": "fresco",
+   "mide": "Asentamiento del concreto de cemento hidráulico (concreto convencional, con el cono)",
+   "detalle": "El cuestionario del curso (X01, pág. 5, pregunta 1) la asigna al asentamiento del concreto convencional.",
+   "confunde_con": [
+    "C1611",
+    "C192"
+   ],
+   "gancho": "La 143 es el asentamiento de siempre, el del cono. Si el concreto es autocompactante, se usa el flujo (la 1611).",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 9
+    },
+    {
+     "doc": "06",
+     "pag": 10
+    },
+    {
+     "doc": "X01",
+     "pag": 5
+    }
+   ]
+  },
+  {
+   "id": "C1611",
+   "designacion": "ASTM C1611",
+   "familia": "fresco",
+   "mide": "Flujo de asentamiento del concreto autocompactante",
+   "detalle": "El título dice «slump flow»: flujo de asentamiento, no el asentamiento del cono. El cuestionario del curso (X01, pág. 5, pregunta 2) la asigna al concreto autocompactante.",
+   "confunde_con": [
+    "C143"
+   ],
+   "gancho": "1611: el flujo del autocompactante. El nombre en inglés, «slump flow», ayuda a no confundirla con el cono.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 9
+    },
+    {
+     "doc": "06",
+     "pag": 10
+    },
+    {
+     "doc": "X01",
+     "pag": 5
+    }
+   ]
+  },
+  {
+   "id": "C232",
+   "designacion": "ASTM C232",
+   "familia": "fresco",
+   "mide": "Exudación (sangrado) del concreto: cantidad relativa de agua de mezcla que sale de una muestra de concreto recién mezclado",
+   "confunde_con": [
+    "C192"
+   ],
+   "gancho": "232: el sangrado, la que mide cuánta agua sube a la superficie.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 4
+    }
+   ]
+  },
+  {
+   "id": "C192",
+   "designacion": "ASTM C192",
+   "familia": "fresco",
+   "mide": "Elaboración y curado de especímenes de concreto en el laboratorio",
+   "detalle": "Es una práctica para preparar los especímenes, no un ensayo que mida una propiedad del concreto fresco. La diapositiva 06 la pone junto a la del cono y la del flujo.",
+   "confunde_con": [
+    "C143",
+    "C232"
+   ],
+   "gancho": "192: se hacen y se curan los especímenes en el laboratorio; no mide nada, solo los prepara.",
+   "fuente": [
+    {
+     "doc": "06",
+     "pag": 9
+    }
+   ]
   }
  ]
 }
