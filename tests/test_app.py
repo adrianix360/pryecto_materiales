@@ -18,8 +18,8 @@ import servidor  # noqa: E402
 
 VIEWPORT = {"width": 390, "height": 844}
 CLAVE = "pryecto_materiales:progreso:v1"
-SECCIONES = [("estudiar", "Estudiar"), ("practicar", "Practicar"), ("simulacro", "Simulacro"),
-             ("progreso", "Progreso"), ("buscar", "Buscar")]
+SECCIONES = [("estudiar", "Estudiar"), ("practicar", "Practicar"), ("normas", "Normas"), ("simulacro", "Simulacro"),
+             ("progreso", "Progreso"), ("buscar", "Buscar")]  # Buscar está en la barra superior; el resto, abajo
 
 BLOQUEAR_LS = """
 (() => {
@@ -87,7 +87,7 @@ def revisar_pantalla(pag, nombre):
       return malos;
     }""")
     assert not chicos, f"{nombre}: texto menor a 17 px: {chicos[:5]}"
-    bajos = pag.evaluate("""() => [...document.querySelectorAll('button, a.btn, select, .nav__item, .barra__acerca, summary')]
+    bajos = pag.evaluate("""() => [...document.querySelectorAll('button, a.btn, select, .nav__item, .barra__acerca, .barra__buscar, summary')]
       .filter(e => e.getClientRects().length)
       .map(e => [e.getBoundingClientRect().height, e.textContent.trim().slice(0, 25)])
       .filter(([h]) => h < 47.5)""")
@@ -99,14 +99,14 @@ def revisar_pantalla(pag, nombre):
 
 
 @prueba
-def recorre_las_cinco_secciones_y_acerca(nav, url):
+def recorre_las_seis_secciones_y_acerca(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url)
     assert pag.locator('meta[name="robots"]').get_attribute("content") == "noindex, nofollow"
     assert pag.locator('meta[name="author"]').get_attribute("content") == "Adrián Castro Ramírez"
     for ruta, nombre in SECCIONES:
-        pag.locator(f'.nav__item[data-ruta="{ruta}"]').click()
+        pag.locator(f'[data-ruta="{ruta}"]').click()
         expect(pag.locator("#titulo")).to_have_text(nombre)
-        expect(pag.locator(f'.nav__item[data-ruta="{ruta}"]')).to_have_attribute("aria-current", "page")
+        expect(pag.locator(f'[data-ruta="{ruta}"]')).to_have_attribute("aria-current", "page")
         assert pag.locator("#vista").inner_text().strip(), f"{ruta} vacía"
         revisar_pantalla(pag, ruta)
     pag.locator(".barra__acerca").click()
@@ -780,7 +780,7 @@ def galeria_de_figuras_abre_los_items_que_las_usan(nav, url):
     assert "figura ASTM C117" in pag.locator(".extra").inner_text()
     pag.locator(".tarjeta").click()
     assert pag.locator(".figura img").get_attribute("src") == "img/ensayos/c117.jpg"
-    pag.locator('.nav__item[data-ruta="buscar"]').click()
+    pag.locator('.barra__buscar').click()
     abaco = pag.locator('.figura-btn:has(img[src="img/examenes/X01-p5-abaco.jpg"])')
     assert "Abre 1 pregunta" in abaco.inner_text()
     abaco.click()
@@ -899,6 +899,130 @@ def nueva_version_reemplaza_el_cache(nav, url):
         assert pag.evaluate("caches.keys()") == ["pryecto_materiales-" + nueva], "quedó un caché viejo"
     finally:
         servidor.SOBRESCRIBIR.clear()
+    assert not errores, errores
+    ctx.close()
+
+
+# ---------- Normas ----------
+def guardado_normas(pag):
+    return progreso(pag)["normas"]
+
+
+def escribir_norma(pag, letra, numero):
+    pag.locator(f'[data-letra="{letra}"]').click()
+    pag.fill("#numero", numero)
+    pag.get_by_role("button", name="Comprobar").click()
+
+
+@prueba
+def normas_escribir_confundir_no_se_e_inversa(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/normas")
+    texto = pag.locator("#vista").inner_text()
+    assert "Normas ASTM de memoria" in texto and "0 de 26 normas dominadas" in texto, texto[:300]
+    assert pag.locator(".fam-item").count() == 8, "deben verse las 8 familias"
+    revisar_pantalla(pag, "normas inicio")
+    pag.get_by_role("button", name=re.compile(r"Entrenar hoy")).click()
+
+    # 1.ª ficha: «escribir» de la primera norma de la primera familia (D75). Acierta con la letra D.
+    assert pag.locator(".pregunta").get_attribute("data-id") == "n-D75-e"
+    assert "Muestreo de agregados en campo" in pag.locator(".norma-mide").inner_text()
+    revisar_pantalla(pag, "normas escribir")
+    escribir_norma(pag, "D", "75")
+    assert "Correcto: ASTM D75" in pag.locator("#retro").inner_text()
+    assert "Ayuda de memoria" in pag.locator("#retro").inner_text()
+    assert pag.locator("#retro .fuentes").is_visible()
+    revisar_pantalla(pag, "normas retro")
+    pag.get_by_role("button", name="Siguiente →").click()
+
+    # 2.ª ficha (C702): la confunde con su pareja D75 → queda anotado y vuelve hoy
+    assert pag.locator(".pregunta").get_attribute("data-id") == "n-C702-e"
+    escribir_norma(pag, "D", "75")
+    retro = pag.locator("#retro").inner_text()
+    assert "Era ASTM C702" in retro and "Escribiste ASTM D75" in retro, retro
+    pag.get_by_role("button", name="Siguiente →").click()
+
+    # 3.ª ficha: «No sé» no pide número y la califica mal, sin pareja
+    assert pag.locator(".pregunta").get_attribute("data-id") == "n-C117-e"
+    pag.get_by_role("button", name="No sé").click()
+    assert "Respondiste «No sé»" in pag.locator("#retro").inner_text()
+    pag.get_by_role("button", name="Siguiente →").click()
+
+    g = guardado_normas(pag)
+    assert g["n-D75-e"]["r"] == "bien" and g["n-D75-e"]["dias"] == [FECHA] and "conf" not in g["n-D75-e"]
+    assert g["n-C702-e"]["r"] == "mal" and g["n-C702-e"]["conf"] == {"D75": 1} and g["n-C702-e"]["caja"] == 0
+    assert g["n-C117-e"]["r"] == "mal" and "conf" not in g["n-C117-e"]
+
+    # sin número no califica
+    pag.get_by_role("button", name="Comprobar").click()
+    assert pag.locator("#retro").count() == 0
+
+    # recorre hasta una ficha «inversa»: las opciones traen la pareja y la correcta se marca
+    for _ in range(40):
+        if pag.locator(".pregunta").get_attribute("data-id").endswith("-i"):
+            break
+        pag.get_by_role("button", name="No sé").click()
+        pag.get_by_role("button", name="Siguiente →").click()
+    id_i = pag.locator(".pregunta").get_attribute("data-id")
+    assert id_i.endswith("-i"), "no apareció ninguna ficha inversa"
+    norma = id_i.split("-")[1]
+    assert pag.locator("[data-opcion]").count() == 4
+    revisar_pantalla(pag, "normas inversa")
+    otra = pag.evaluate("(n) => Datos.normaPorId[n].confunde_con[0]", norma)
+    assert pag.locator(f'[data-opcion="{otra}"]').count() == 1, "la pareja debe estar entre las opciones"
+    pag.locator(f'[data-opcion="{otra}"]').click()
+    assert "Incorrecto" in pag.locator("#retro").inner_text()
+    assert pag.locator(".opcion.es-correcta").count() == 1 and pag.locator(".opcion.es-incorrecta").count() == 1
+    g = guardado_normas(pag)
+    assert g[id_i]["r"] == "mal" and g[id_i]["conf"] == {otra: 1}
+    revisar_pantalla(pag, "normas inversa respondida")
+
+    # la confusión aparece en el inicio como pareja
+    pag.get_by_role("button", name="← Salir").click()
+    assert "ASTM C702 ↔ ASTM D75" in pag.locator("#vista").inner_text()
+    assert pag.locator('[data-accion="parejas"]').is_visible()
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def normas_dominada_con_dos_dias_y_practica_por_familia(nav, url):
+    reg = {"r": "bien", "n": 1, "t": 1, "caja": 2, "vence": "2026-10-08", "visto": "2026-10-07", "bien": 1, "dias": ["2026-10-07"]}
+    sembrado = {"tarjetas": {}, "preguntas": {}, "normas": {"n-D75-e": reg}, "diario": {}, "prefs": {}, "simulacro": None, "historial": []}
+    ctx, pag, errores = nueva_pagina(nav, url + "#/normas", sembrar=sembrado)
+    assert "0 de 26 normas dominadas" in pag.locator("#vista").inner_text()
+    pag.get_by_role("button", name=re.compile(r"Entrenar hoy")).click()
+    assert pag.locator(".pregunta").get_attribute("data-id") == "n-D75-e", "la vencida sale primero"
+    escribir_norma(pag, "D", "75")  # segundo día distinto → dominada
+    pag.get_by_role("button", name="← Salir").click()
+    assert "1 de 26 normas dominadas" in pag.locator("#vista").inner_text()
+    # práctica por familia: las 2 normas de muestreo → 4 fichas, primero las «escribir»
+    pag.locator('[data-familia="muestreo"]').click()
+    assert "Ficha 1 de 4" in pag.locator(".contador").inner_text()
+    ids = []
+    for _ in range(4):
+        ids.append(pag.locator(".pregunta").get_attribute("data-id"))
+        if ids[-1].endswith("-e"):
+            pag.get_by_role("button", name="No sé").click()
+        else:
+            pag.locator("[data-opcion]").first.click()
+        pag.get_by_role("button", name="Siguiente →").click()
+    assert ids[:4] == ["n-D75-e", "n-C702-e", "n-D75-i", "n-C702-i"], ids
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def normas_lista_de_consulta_con_ganchos_fuentes_y_verificar(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/normas")
+    pag.get_by_role("button", name="Ver la lista de normas").click()
+    assert pag.locator(".norma-ficha").count() == 26
+    texto = pag.locator("#vista").inner_text()
+    for esperado in ("ASTM D5821", "fracturadas", "ASTM D4791", "Ayuda de memoria", "Se confunde con", "Manual de Laboratorio"):
+        assert esperado in texto, esperado
+    assert pag.locator(".norma-ficha .verificar").count() >= 2, "C994 y D4791 llevan VERIFICAR"
+    revisar_pantalla(pag, "normas lista")
+    pag.get_by_role("button", name="← Volver a Normas").click()
+    assert "Normas ASTM de memoria" in pag.locator("#vista").inner_text()
     assert not errores, errores
     ctx.close()
 

@@ -13,12 +13,14 @@ var ESTATICOS = [
   "css/app.css",
   "js/version.js",
   "js/srs.js",
+  "js/normas-logica.js",
   "js/store.js",
   "js/datos.js",
   "js/ui.js",
   "js/opciones.js",
   "js/estudiar.js",
   "js/practicar.js",
+  "js/normas.js",
   "js/examen.js",
   "js/simulacro.js",
   "js/progreso.js",
@@ -55,7 +57,8 @@ function precargar() {
         return Promise.all([
           guardarJson(cache, "data/indice.json"),
           guardarJson(cache, "data/fuentes.json"),
-          guardarJson(cache, "data/glosario.json")
+          guardarJson(cache, "data/glosario.json"),
+          guardarJson(cache, "data/normas.json")
         ]);
       })
       .then(function (r) {

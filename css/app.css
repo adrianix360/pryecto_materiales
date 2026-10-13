@@ -120,7 +120,7 @@ img { max-width: 100%; height: auto; }
   font-size: 1.2rem;
   line-height: 1.2;
 }
-.barra__acerca {
+.barra__acerca, .barra__buscar {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -129,11 +129,11 @@ img { max-width: 100%; height: auto; }
   color: var(--texto);
   border-radius: 50%;
 }
-.barra__acerca svg {
+.barra__acerca svg, .barra__buscar svg {
   width: 26px; height: 26px;
   fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round;
 }
-.barra__acerca[aria-current="page"] { color: var(--primario); }
+.barra__acerca[aria-current="page"], .barra__buscar[aria-current="page"] { color: var(--primario); }
 
 /* ---------- Avisos globales ---------- */
 .aviso-almacen, .aviso-version {
@@ -700,4 +700,40 @@ mark { background: var(--verificar-fondo); color: var(--texto); border-radius: 3
 
 @media (min-width: 720px) {
   .acciones { margin-inline: 0; border-radius: var(--radio) var(--radio) 0 0; }
+}
+
+/* ---------- Normas (entrenamiento de memoria) ---------- */
+.norma-progreso { margin: 8px 0 6px; }
+.norma-sub { margin: 22px 0 8px; font-size: 1.1rem; }
+.nbarra { display: block; height: 8px; border-radius: 999px; background: var(--superficie-2); overflow: hidden; margin: 6px 0 10px; }
+.nbarra > span { display: block; height: 100%; background: var(--bien); border-radius: 999px; }
+.fam-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.fam-item { padding: 12px 14px; border: 1px solid var(--borde); border-radius: var(--radio); background: var(--superficie); }
+.fam-item__fila { display: flex; justify-content: space-between; gap: 10px; font-weight: 700; }
+.fam-item .btn { width: 100%; margin-top: 4px; }
+.norma-codigo { font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; margin: 0 0 4px; }
+.norma-mide { margin: 0 0 14px; font-size: 1.1rem; }
+.norma-detalle { color: var(--texto-suave); font-size: 0.95rem; }
+.norma-gancho { background: var(--primario-suave); border-radius: 10px; padding: 8px 12px; }
+.norma-ficha p { margin: 0 0 8px; }
+.norma-letras { display: flex; gap: 8px; margin-bottom: 10px; }
+.norma-letra {
+  min-width: 64px; min-height: 52px; padding: 0 16px;
+  border: 2px solid var(--borde); border-radius: 12px;
+  background: var(--fondo); color: var(--texto);
+  font: inherit; font-weight: 800; font-size: 1.2rem; cursor: pointer;
+}
+.norma-letra[aria-pressed="true"] { border-color: var(--primario); background: var(--primario-suave); }
+.norma-letra:disabled { cursor: default; }
+.norma-entrada { display: flex; gap: 8px; align-items: stretch; }
+.norma-entrada .prefijo {
+  display: flex; align-items: center; padding: 0 14px;
+  border: 2px solid var(--borde); border-radius: 12px; background: var(--superficie-2);
+  font-weight: 800; white-space: nowrap;
+}
+.norma-entrada input {
+  flex: 1; min-width: 0; min-height: 56px; padding: 0 14px;
+  border: 2px solid var(--borde); border-radius: 12px;
+  background: var(--fondo); color: var(--texto);
+  font: inherit; font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums;
 }

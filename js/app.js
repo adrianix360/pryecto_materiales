@@ -35,6 +35,7 @@
   var RUTAS = {
     estudiar: window.Estudiar,
     practicar: window.Practicar,
+    normas: window.Normas,
     simulacro: window.Simulacro,
     progreso: window.PantallaProgreso,
     buscar: window.PantallaBuscar,
