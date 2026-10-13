@@ -11,6 +11,7 @@ var ESTATICOS = [
   "./",
   "index.html",
   "css/app.css",
+  "fonts/figtree-latin.woff2",
   "js/version.js",
   "js/srs.js",
   "js/normas-logica.js",

@@ -147,6 +147,7 @@ Arriba de Estudiar y Practicar hay un contador: «Hoy: 23 / 40 min · 31 ítems�
 ```
 index.html            página única
 css/app.css           estilos (mobile first, modo oscuro automático)
+fonts/                fuente Figtree (woff2, licencia SIL OFL 1.1 en fonts/OFL.txt)
 js/version.js         versión de la app y del caché (cambiar en cada publicación)
 js/opciones.js        orden aleatorio de opciones y ajuste de letras en las explicaciones
 js/srs.js             repetición espaciada (Leitner) y compresión antes del examen
@@ -165,6 +166,14 @@ img/                  figuras de ensayos y de exámenes
 tools/                validador de JSON, generador de contenido e íconos
 tests/                servidor local y pruebas con Playwright
 ```
+
+## Diseño
+
+- **Paleta:** neutros cálidos tipo arena/concreto y un solo color de acento verde azulado (`#0f6e66`; en modo oscuro `#5fd3c4`). Los tokens están al inicio de `css/app.css`; todos los pares de texto cumplen contraste WCAG AA (4,5:1) y los bordes de los controles 3:1.
+- **Tipografía:** Figtree, guardada en `fonts/` (sin CDN) y precargada por el service worker para que funcione sin señal.
+- **Celular:** barra de secciones abajo y botones de acción en la zona del pulgar.
+- **Computadora (≥ 1024 px):** las secciones pasan a una barra lateral izquierda y el contenido queda centrado con un ancho cómodo de lectura.
+- Modo oscuro automático según el sistema.
 
 ## Probar en la computadora
 

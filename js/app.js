@@ -19,7 +19,7 @@
         '<div class="verificar" role="note"><p class="verificar__titulo">Aviso</p>' +
         "<p>El contenido se basa en el material del curso IC-0604 Materiales de Construcción (UCR). " +
         "Los ítems marcados «⚠ Verificar» deben confirmarse con el profesor.</p></div>" +
-        '<div class="tarjeta-info" style="margin-top:14px">' +
+        '<div class="tarjeta-info tarjeta-info--separada">' +
         "<p>Prepara la teoría del I examen (sábado 17 de octubre de 2026): temas 1, 2 y 3.</p>" +
         "<p>Contenido: " + Datos.tarjetas.length + " tarjetas, " + Datos.preguntas.length + " preguntas y " +
         Datos.glosario.length + " términos de glosario.</p>" +
