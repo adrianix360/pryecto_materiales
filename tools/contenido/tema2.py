@@ -95,6 +95,9 @@ t("2A", "concepto", "Consecuencias del exceso de impurezas en el agua de mezcla"
 t("2A", "concepto", "Algas en el agua",
   "Las aguas con algas no son adecuadas: reducen mucho la resistencia, por su efecto en la hidratación o porque incluyen mucho aire, y en los agregados reducen la adherencia. La tabla del curso tolera 0.",
   [pca4(100), S("25", 1)])
+t("2A", "dato", "Límite de cloruros en el concreto según el ACI 318, citado por la PCA (% del peso de cemento)",
+  "El ACI 318 limita los iones cloruro solubles en agua del concreto armado, en porcentaje del peso de cemento:\nPreesforzado: 0,06 %.\nReforzado expuesto a cloruros durante su vida: 0,15 %.\nReforzado que se mantendrá seco y protegido de la humedad: 1,00 %.\nOtras construcciones de concreto reforzado: 0,30 %.\nEn concreto simple (sin acero) el ACI 318 no limita los cloruros.\nOjo: este límite es del concreto y se da en % del cemento. La tabla de tolerancias del agua da ppm. Son bases distintas y no se comparan directamente.",
+  [pca4(97)])
 
 # ======================== TARJETAS 2B · Cantidad y comportamiento en estado fresco ========================
 t("2B", "concepto", "Efecto de la relación a/c en la mezcla",
@@ -385,6 +388,47 @@ q("2A", RC, "¿Qué requisitos debe cumplir un agua no potable para aceptarse en
   "Tabla de la ASTM C1602 en la presentación.", [S("05", 9), pca4(96)],
   respuesta_modelo="La resistencia de los cubos de mortero (C109) debe ser al menos el 90 % de la del control a los 7 días, y el tiempo de fraguado (C191) debe estar entre 1:00 h antes y 1:30 h después del control. El control se hace con agua potable o destilada.",
   puntos_clave=["≥ 90 % de resistencia a 7 días (C109)", "fraguado de 1:00 antes a 1:30 después (C191)", "control con agua potable o destilada"])
+
+# --- Tabla de tolerancias (fuente 25): preguntas de práctica para memorizar sus valores ---
+q("2A", SU, "Según la tabla de tolerancias del curso, ¿qué intervalo de pH se acepta en el agua para concreto?",
+  "Correcta la A: de 6,5 a 8,5. Las otras opciones no son el intervalo de la tabla.",
+  [S("25", 1)], opciones=["6,5 a 8,5", "4,0 a 6,0", "7,0 a 9,0", "8,5 a 10,5"], correcta="a")
+q("2A", SU, "En la tabla de tolerancias del curso, ¿qué sustancia tiene un límite de 20 000 ppm?",
+  "Correcta la C: el cloruro de sodio. El cloruro de magnesio tolera 40 000 ppm (A), el sulfato de sodio 10 000 ppm (B) y el cloruro de calcio se da aparte: 2 % del peso del cemento (D).",
+  [S("25", 1)], opciones=["Cloruro de magnesio", "Sulfato de sodio", "Cloruro de sodio", "Cloruro de calcio"], correcta="c")
+q("2A", SU, "En la tabla de tolerancias del curso, ¿qué sustancia tiene un límite de 400 ppm?",
+  "Correcta la B: el carbonato de calcio y magnesio, medido como ion bicarbonato. El carbonato de sodio y potasio tolera 1000 ppm (A), el cloruro de magnesio 40 000 ppm (C) y el sulfato de magnesio 25 000 ppm (D).",
+  [S("25", 1)], opciones=["Carbonato de sodio y potasio", "Carbonato de calcio y magnesio, como ion bicarbonato", "Cloruro de magnesio", "Sulfato de magnesio"], correcta="b")
+q("2A", SU, "Según la tabla de tolerancias del curso, ¿cuánta materia orgánica se tolera en el agua?",
+  "Correcta la A: 20 ppm. La B es la tolerancia del yodato, fosfato y borato de sodio, la C la del carbonato de calcio y magnesio (como bicarbonato) y la D la de los sólidos en suspensión en agua natural.",
+  [S("25", 1)], opciones=["20 ppm", "100 ppm", "400 ppm", "2000 ppm"], correcta="a")
+q("2A", SU, "Según la tabla de tolerancias del curso, ¿cuánta agua con algas se tolera?",
+  "Correcta la A: nada (0). La PCA recomienda un máximo de 1000 ppm (C), pero para el curso manda la tabla del profe. La B es la tolerancia del azúcar y la D la de los sólidos en suspensión en agua natural.",
+  [S("25", 1), pca4(100)], opciones=["Nada (0)", "500 ppm", "1000 ppm", "2000 ppm"], correcta="a")
+q("2A", SU, "Según la tabla de tolerancias del curso, ¿qué hidróxido se tolera hasta 1,20 % del peso del cemento?",
+  "Correcta la D: el hidróxido de potasio (KOH). El de sodio tiene un límite menor: 0,50 % (A). La PCA habla del hidróxido de calcio con 1,2 % (B), pero para el curso manda la tabla del profe.",
+  [S("25", 1), pca4(99)], opciones=["Hidróxido de sodio", "Hidróxido de calcio", "Hidróxido de magnesio", "Hidróxido de potasio"], correcta="d")
+q("2A", SU, "En la tabla de tolerancias del curso, los límites del hidróxido de sodio (0,50 %), del hidróxido de potasio (1,20 %) y del aceite mineral (2 %) se dan:",
+  "Correcta la B: como porcentaje del peso (masa) del cemento, no en ppm del agua. Las otras opciones no son la base de la tabla.",
+  [S("25", 1)], opciones=["En ppm del agua de mezcla", "Como porcentaje del peso (masa) del cemento", "Como porcentaje de la masa de los agregados", "Como porcentaje del volumen del concreto"], correcta="b")
+q("2A", "verdadero_falso", "El límite de 20 000 ppm del cloruro de sodio es el mismo que el del cloruro como Cl⁻ (500 o 1000 ppm) en la tabla de tolerancias.",
+  "Falso. La tabla trae dos filas distintas: 20 000 ppm es para la sal completa (NaCl); 500 ppm (preesforzado) o 1000 ppm (concreto húmedo o con aluminio o metales galvanizados) es para el cloruro como Cl⁻. En el cloruro de sodio solo una parte de la masa es cloruro, por eso los valores no coinciden.",
+  [S("25", 1)], opciones=VF, correcta="b")
+
+# --- Límites de cloruros del ACI 318 citados por la PCA (porcentaje del peso de cemento) ---
+q("2A", SU, "Según el ACI 318 (citado por la PCA), ¿cuál es el límite de cloruros solubles en agua, en % del peso de cemento, para el concreto PREESFORZADO?",
+  "Correcta la A: 0,06 %. La B (0,15 %) es para el concreto reforzado expuesto a cloruros, la C (0,30 %) para otras construcciones de concreto reforzado y la D (1,00 %) para el reforzado que se mantendrá seco y protegido de la humedad.",
+  [pca4(97)], opciones=["0,06 %", "0,15 %", "0,30 %", "1,00 %"], correcta="a")
+q("2A", SU, "Según el ACI 318 (citado por la PCA), ¿en cuál de estos concretos se permite el MAYOR contenido de cloruros?",
+  "Correcta la C: el reforzado que se mantendrá seco y protegido de la humedad (1,00 %). El reforzado expuesto a cloruros durante su vida tiene 0,15 % (A), otras construcciones de concreto reforzado 0,30 % (B) y el preesforzado 0,06 % (D).",
+  [pca4(97)], opciones=["Reforzado expuesto a cloruros durante su vida", "Otras construcciones de concreto reforzado", "Reforzado que se mantendrá seco y protegido de la humedad", "Preesforzado"], correcta="c")
+q("2A", "verdadero_falso", "El ACI 318 limita el contenido de cloruros del concreto simple, el que no lleva acero.",
+  "Falso. La PCA aclara que el ACI 318 no limita los cloruros en el concreto simple. Los límites son para el concreto armado, porque los cloruros atacan el acero.",
+  [pca4(97), S("05", 3)], opciones=VF, correcta="b")
+q("2A", RC, "¿Por qué no se puede comparar directamente el 0,06 % de cloruro del ACI 318 con los 500 ppm de cloruro de la tabla de tolerancias?",
+  "Se resume de la PCA y de la tabla del curso.", [pca4(97), S("25", 1)],
+  respuesta_modelo="Porque tienen bases distintas: los 500 ppm son la concentración de cloruro en el agua de mezcla (tabla del curso), y el 0,06 % es el cloruro soluble en agua del concreto preesforzado, en porcentaje del peso de cemento (ACI 318).",
+  puntos_clave=["500 ppm: concentración en el agua", "0,06 %: cloruro del concreto respecto al cemento", "bases distintas"])
 
 # ======================== GLOSARIO ========================
 g("Agua de mezcla", "Agua que se añade al cemento y los agregados para preparar el concreto; prácticamente cualquier agua potable sirve.", [pca4(95)], "2A")

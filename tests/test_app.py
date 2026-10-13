@@ -406,7 +406,7 @@ def repaso_de_practicar_reinserta_las_falladas_y_muestra_verificar(nav, url):
         "visto": "2026-10-03", "bien": 3, "resp": "a"}}, "prefs": {}}
     ctx, pag, errores = nueva_pagina(nav, url + "#/practicar", sembrar=sembrado)
     resumen = pag.locator(".repaso").inner_text()
-    assert "1 vencidas" in resumen and "37 nuevas" in resumen, resumen
+    assert "1 vencidas" in resumen and "39 nuevas" in resumen, resumen
     assert "con ⚠ Verificar" in resumen, resumen
     assert pag.locator(".pregunta").get_attribute("data-id") == verif["id"], "la vencida va primero"
     expect(pag.locator(".chip--verificar").first).to_be_visible()
@@ -617,13 +617,13 @@ def progreso_muestra_cuenta_regresiva_racha_tiempo_y_dominio(nav, url):
     assert "Sábado 17 de octubre, 8:00 a. m." in pag.locator(".cuenta").inner_text()
     kpis = " ".join(pag.locator(".kpis").inner_text().split())
     assert "3 días de racha incluye hoy" in kpis, kpis
-    assert "325 sin ver" in kpis, kpis  # 147 + 183 − 5 vistos
+    assert "338 sin ver" in kpis, kpis  # 148 + 195 − 5 vistos
     tiempo = pag.locator("#h-tiempo").locator("..").inner_text()
     assert "Hoy: 10 / 40 min" in tiempo and "últimos 7 días: 90 min" in tiempo, tiempo
     lista = pag.locator("#h-tiempo ~ ul.solo-lector").inner_text()
     assert "viernes 9 de octubre: 10 min, 12 ítems" in lista, lista
     assert pag.locator("svg.grafico rect").count() == 7
-    # 5 de 330 vistos; sabidos: t1-1A-01 y p1-1A-t01 → 1 %; aciertos 3 de 5 = 60 %
+    # 5 de 343 vistos; sabidos: t1-1A-01 y p1-1A-t01 → 1 %; aciertos 3 de 5 = 60 %
     assert "General: 1 % dominado · 60 % de aciertos" in pag.locator(".dominio__global").inner_text()
     t1 = pag.locator('details.dominio[data-tema="1"]')
     t1.locator("summary").click()
@@ -667,7 +667,7 @@ def exportar_borrar_e_importar_el_progreso(nav, url):
     guardado = progreso(pag)
     assert guardado["tarjetas"] == {} and guardado["preguntas"] == {} and guardado["diario"] == {} and guardado["historial"] == []
     assert guardado["prefs"]["meta"] == {"unidad": "minutos", "valor": 40}, "los ajustes se conservan"
-    assert pag.locator(".kpi__valor").nth(1).inner_text() == "330"
+    assert pag.locator(".kpi__valor").nth(1).inner_text() == "343"
     # archivo inválido
     pag.locator("#archivo-progreso").set_input_files(
         files=[{"name": "otro.json", "mimeType": "application/json", "buffer": b'{"app": "otra"}'}])

@@ -2193,6 +2193,419 @@
     "fraguado de 1:00 antes a 1:30 después (C191)",
     "control con agua potable o destilada"
    ]
+  },
+  {
+   "id": "p2-2A-t08",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según la tabla de tolerancias del curso, ¿qué intervalo de pH se acepta en el agua para concreto?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A: de 6,5 a 8,5. Las otras opciones no son el intervalo de la tabla.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "6,5 a 8,5"
+    },
+    {
+     "id": "b",
+     "texto": "4,0 a 6,0"
+    },
+    {
+     "id": "c",
+     "texto": "7,0 a 9,0"
+    },
+    {
+     "id": "d",
+     "texto": "8,5 a 10,5"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p2-2A-t09",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la tabla de tolerancias del curso, ¿qué sustancia tiene un límite de 20 000 ppm?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: el cloruro de sodio. El cloruro de magnesio tolera 40 000 ppm (A), el sulfato de sodio 10 000 ppm (B) y el cloruro de calcio se da aparte: 2 % del peso del cemento (D).",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Cloruro de magnesio"
+    },
+    {
+     "id": "b",
+     "texto": "Sulfato de sodio"
+    },
+    {
+     "id": "c",
+     "texto": "Cloruro de sodio"
+    },
+    {
+     "id": "d",
+     "texto": "Cloruro de calcio"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p2-2A-t10",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la tabla de tolerancias del curso, ¿qué sustancia tiene un límite de 400 ppm?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: el carbonato de calcio y magnesio, medido como ion bicarbonato. El carbonato de sodio y potasio tolera 1000 ppm (A), el cloruro de magnesio 40 000 ppm (C) y el sulfato de magnesio 25 000 ppm (D).",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Carbonato de sodio y potasio"
+    },
+    {
+     "id": "b",
+     "texto": "Carbonato de calcio y magnesio, como ion bicarbonato"
+    },
+    {
+     "id": "c",
+     "texto": "Cloruro de magnesio"
+    },
+    {
+     "id": "d",
+     "texto": "Sulfato de magnesio"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2A-t11",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según la tabla de tolerancias del curso, ¿cuánta materia orgánica se tolera en el agua?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A: 20 ppm. La B es la tolerancia del yodato, fosfato y borato de sodio, la C la del carbonato de calcio y magnesio (como bicarbonato) y la D la de los sólidos en suspensión en agua natural.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "20 ppm"
+    },
+    {
+     "id": "b",
+     "texto": "100 ppm"
+    },
+    {
+     "id": "c",
+     "texto": "400 ppm"
+    },
+    {
+     "id": "d",
+     "texto": "2000 ppm"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p2-2A-t12",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según la tabla de tolerancias del curso, ¿cuánta agua con algas se tolera?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A: nada (0). La PCA recomienda un máximo de 1000 ppm (C), pero para el curso manda la tabla del profe. La B es la tolerancia del azúcar y la D la de los sólidos en suspensión en agua natural.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    },
+    {
+     "doc": "01",
+     "pag": 6,
+     "impresa": "100"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Nada (0)"
+    },
+    {
+     "id": "b",
+     "texto": "500 ppm"
+    },
+    {
+     "id": "c",
+     "texto": "1000 ppm"
+    },
+    {
+     "id": "d",
+     "texto": "2000 ppm"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p2-2A-t13",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según la tabla de tolerancias del curso, ¿qué hidróxido se tolera hasta 1,20 % del peso del cemento?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la D: el hidróxido de potasio (KOH). El de sodio tiene un límite menor: 0,50 % (A). La PCA habla del hidróxido de calcio con 1,2 % (B), pero para el curso manda la tabla del profe.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    },
+    {
+     "doc": "01",
+     "pag": 5,
+     "impresa": "99"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Hidróxido de sodio"
+    },
+    {
+     "id": "b",
+     "texto": "Hidróxido de calcio"
+    },
+    {
+     "id": "c",
+     "texto": "Hidróxido de magnesio"
+    },
+    {
+     "id": "d",
+     "texto": "Hidróxido de potasio"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p2-2A-t14",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la tabla de tolerancias del curso, los límites del hidróxido de sodio (0,50 %), del hidróxido de potasio (1,20 %) y del aceite mineral (2 %) se dan:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la B: como porcentaje del peso (masa) del cemento, no en ppm del agua. Las otras opciones no son la base de la tabla.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "En ppm del agua de mezcla"
+    },
+    {
+     "id": "b",
+     "texto": "Como porcentaje del peso (masa) del cemento"
+    },
+    {
+     "id": "c",
+     "texto": "Como porcentaje de la masa de los agregados"
+    },
+    {
+     "id": "d",
+     "texto": "Como porcentaje del volumen del concreto"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2A-t15",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "verdadero_falso",
+   "enunciado": "El límite de 20 000 ppm del cloruro de sodio es el mismo que el del cloruro como Cl⁻ (500 o 1000 ppm) en la tabla de tolerancias.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. La tabla trae dos filas distintas: 20 000 ppm es para la sal completa (NaCl); 500 ppm (preesforzado) o 1000 ppm (concreto húmedo o con aluminio o metales galvanizados) es para el cloruro como Cl⁻. En el cloruro de sodio solo una parte de la masa es cloruro, por eso los valores no coinciden.",
+   "fuente": [
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2A-t16",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según el ACI 318 (citado por la PCA), ¿cuál es el límite de cloruros solubles en agua, en % del peso de cemento, para el concreto PREESFORZADO?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la A: 0,06 %. La B (0,15 %) es para el concreto reforzado expuesto a cloruros, la C (0,30 %) para otras construcciones de concreto reforzado y la D (1,00 %) para el reforzado que se mantendrá seco y protegido de la humedad.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "0,06 %"
+    },
+    {
+     "id": "b",
+     "texto": "0,15 %"
+    },
+    {
+     "id": "c",
+     "texto": "0,30 %"
+    },
+    {
+     "id": "d",
+     "texto": "1,00 %"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p2-2A-t17",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según el ACI 318 (citado por la PCA), ¿en cuál de estos concretos se permite el MAYOR contenido de cloruros?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Correcta la C: el reforzado que se mantendrá seco y protegido de la humedad (1,00 %). El reforzado expuesto a cloruros durante su vida tiene 0,15 % (A), otras construcciones de concreto reforzado 0,30 % (B) y el preesforzado 0,06 % (D).",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Reforzado expuesto a cloruros durante su vida"
+    },
+    {
+     "id": "b",
+     "texto": "Otras construcciones de concreto reforzado"
+    },
+    {
+     "id": "c",
+     "texto": "Reforzado que se mantendrá seco y protegido de la humedad"
+    },
+    {
+     "id": "d",
+     "texto": "Preesforzado"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p2-2A-t18",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "verdadero_falso",
+   "enunciado": "El ACI 318 limita el contenido de cloruros del concreto simple, el que no lleva acero.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. La PCA aclara que el ACI 318 no limita los cloruros en el concreto simple. Los límites son para el concreto armado, porque los cloruros atacan el acero.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    },
+    {
+     "doc": "05",
+     "pag": 3
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p2-2A-t19",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "respuesta_corta",
+   "enunciado": "¿Por qué no se puede comparar directamente el 0,06 % de cloruro del ACI 318 con los 500 ppm de cloruro de la tabla de tolerancias?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Se resume de la PCA y de la tabla del curso.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    },
+    {
+     "doc": "25",
+     "pag": 1
+    }
+   ],
+   "respuesta_modelo": "Porque tienen bases distintas: los 500 ppm son la concentración de cloruro en el agua de mezcla (tabla del curso), y el 0,06 % es el cloruro soluble en agua del concreto preesforzado, en porcentaje del peso de cemento (ACI 318).",
+   "puntos_clave": [
+    "500 ppm: concentración en el agua",
+    "0,06 %: cloruro del concreto respecto al cemento",
+    "bases distintas"
+   ]
   }
  ]
 }

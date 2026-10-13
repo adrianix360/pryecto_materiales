@@ -307,6 +307,22 @@
    "origen": "teoria"
   },
   {
+   "id": "t2-2A-18",
+   "tema": 2,
+   "subtema": "2A",
+   "tipo": "dato",
+   "frente": "Límite de cloruros en el concreto según el ACI 318, citado por la PCA (% del peso de cemento)",
+   "reverso": "El ACI 318 limita los iones cloruro solubles en agua del concreto armado, en porcentaje del peso de cemento:\nPreesforzado: 0,06 %.\nReforzado expuesto a cloruros durante su vida: 0,15 %.\nReforzado que se mantendrá seco y protegido de la humedad: 1,00 %.\nOtras construcciones de concreto reforzado: 0,30 %.\nEn concreto simple (sin acero) el ACI 318 no limita los cloruros.\nOjo: este límite es del concreto y se da en % del cemento. La tabla de tolerancias del agua da ppm. Son bases distintas y no se comparan directamente.",
+   "fuente": [
+    {
+     "doc": "01",
+     "pag": 3,
+     "impresa": "97"
+    }
+   ],
+   "origen": "teoria"
+  },
+  {
    "id": "t2-2B-01",
    "tema": 2,
    "subtema": "2B",
