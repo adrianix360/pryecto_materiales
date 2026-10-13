@@ -2,7 +2,7 @@
 
 Resumen del esquema **real** de los JSON, obtenido leyendo los archivos (9 de octubre de 2026). Si un campo no aparece aquí, no existe en los datos.
 
-**Conteo actual:** 147 tarjetas, 183 preguntas, 60 términos de glosario y 28 fuentes. `tools/validar_json.py` da OK.
+**Conteo actual:** 147 tarjetas, 183 preguntas, 60 términos de glosario, 26 normas y 29 fuentes. `tools/validar_json.py` da OK.
 
 > **Los JSON se generan.** `data/` sale de `tools/contenido/construir.py` (módulos `tema1.py`, `tema2.py`, `tarjetas3.py`, `preguntas3_*.py`, `glosario3.py` y `comun.py`). Si se edita un JSON a mano y luego se corre el generador, el cambio se pierde: el contenido se corrige en los módulos y se regenera. Las correcciones de la auditoría técnica (9/10/2026) están en `tools/contenido/correcciones.json`: cada una cambia un campo de un ítem y guarda el texto anterior, la razón y la evidencia; `construir.py` las aplica al final y se detiene si el texto anterior ya no coincide.
 
@@ -15,6 +15,7 @@ Resumen del esquema **real** de los JSON, obtenido leyendo los archivos (9 de oc
 | `data/tarjetas/temaN.json` | Tarjetas de estudio del tema N (N = 1, 2, 3) |
 | `data/preguntas/temaN.json` | Preguntas de práctica del tema N |
 | `data/glosario.json` | Términos del glosario (los tres temas juntos) |
+| `data/normas.json` | Familias y normas ASTM del entrenamiento «Normas» (26 normas, 8 familias) |
 
 Formato: UTF-8, sin escapar caracteres (`ensure_ascii=False`), sangría de 1 espacio.
 
@@ -58,7 +59,7 @@ Se usa en `fuente[]` de tarjetas, preguntas y glosario, y en `figura.fuente[]`.
 { "version": 1, "fuentes": { "03": { … }, "X01": { … } } }
 ```
 
-Diccionario indexado por código. Hay 28: `01`–`06`, `08`–`16`, `19`, `20`, `22`, `24`–`26` y los exámenes `X01`, `X02`, `X04`, `X06`, `X07`, `X14`, `X15`.
+Diccionario indexado por código. Hay 29: `01`–`06`, `08`–`17`, `19`, `20`, `22`, `24`–`26` y los exámenes `X01`, `X02`, `X04`, `X06`, `X07`, `X14`, `X15`.
 
 | Campo | Tipo | Descripción |
 |---|---|---|
@@ -157,6 +158,30 @@ No tiene `version` ni `titulo`.
 
 ---
 
+## Normas (`data/normas.json`)
+
+```json
+{ "version": 1, "familias": [ … ], "normas": [ … ] }
+```
+
+`familias[]` = `{id, titulo}`, en el orden de estudio. Se generan desde `tools/contenido/normas.py`.
+
+| Campo de `normas[]` | Tipo | Oblig. | Descripción |
+|---|---|---|---|
+| `id` | string | sí | `C127`, `D75`… Único |
+| `designacion` | string | sí | `"ASTM " + id` |
+| `familia` | string | sí | Id de una familia |
+| `mide` | string | sí | Qué determina, con las palabras de la fuente. **No nombra ninguna norma**: es el enunciado de «Escribir» y la opción de «¿Qué determina?» |
+| `detalle` | string | no | Dato de apoyo con su página (límites, definiciones) |
+| `confunde_con` | lista de ids | sí | Parejas con las que se confunde (al menos una; deben existir) |
+| `gancho` | string | sí | Ayuda de memoria. **No es dato del curso**; la app lo rotula «Ayuda de memoria» |
+| `fuente` | lista de referencias | sí | Al menos una; `doc` `17` es el Manual de cementos (solo C305, C1437, C109 y C191) |
+| `verificar` | string | no | Duda o contradicción (C994, D4791). La app muestra la marca VERIFICAR |
+
+**Progreso** (`localStorage`, clave `normas`): `normas["n-C127-e"]` (escribir) y `normas["n-C127-i"]` (¿qué determina?). Cada registro es un registro de SRS más `bien`, `conf` (`{ "C128": 3 }`: veces que la confundió con esa norma; `"otra"` si escribió un número fuera de la lista) y, solo en `-e`, `dias` (días en que la escribió bien).
+
+---
+
 ## Qué revisa `tools/validar_json.py`
 
 - JSON bien formado e ids únicos en tarjetas, preguntas y glosario.
@@ -167,5 +192,6 @@ No tiene `version` ni `titulo`.
 - Respuesta corta: `respuesta_modelo` y de 1 a 5 `puntos_clave` (2 a 5 si es de teoría).
 - Las preguntas de examen traen `examen.pregunta` y `examen.periodo`.
 - Avisa (sin fallar) de las claves `pendiente`.
+- Normas: `designacion` = «ASTM » + `id`, familia existente, `mide`, `gancho` y `fuente` presentes, fuentes con página válida, `confunde_con` apunta a normas existentes y `mide` no nombra ninguna norma.
 
 No revisa: `origen` de tarjetas, `tema`/`subtema` del glosario, que `subtema` exista en `indice.json` ni el formato de los ids.

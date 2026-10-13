@@ -58,6 +58,20 @@ La fecha del examen (17 de octubre de 2026) se lee de `data/indice.json`.
 
 **Cuánto trabajo da.** Las pruebas simulan estudiar del 9 al 16 de octubre con los datos reales, acertando más o menos el 70 %. Con esa simulación salen entre 34 y 98 tarjetas y entre 42 y 139 preguntas por día; la carga sube en los últimos días. Todo se ve antes del 13 y todo se repasa al menos una vez entre el 14 y el 16.
 
+## Normas ASTM de memoria
+
+La sección **Normas** (tercer botón de la barra inferior; **Buscar** pasó a la lupa de la barra superior para que los textos de la barra sigan en 17 px) entrena el «cuál es cuál» de 26 normas, porque el examen pide **escribir el número** (I-2026, punto 1.3). El método sale de la práctica de recuperación, el repaso espaciado y el contraste entre parejas parecidas (C127/C128, C117/C136, C305/C1437…).
+
+- **Dos fichas por norma**, cada una con su propio repaso espaciado (el mismo Leitner de `js/srs.js`):
+  - **Escribir:** se lee qué determina la norma y se escribe el número, con la letra C o D elegida aparte. «No sé» muestra la respuesta y la ficha vuelve más tarde.
+  - **¿Qué determina?:** se ve la norma y se elige entre cuatro opciones, que son **sus parejas** y las de su familia, no normas al azar.
+- **Retroalimentación:** qué determina, la ayuda de memoria (rotulada como ayuda, no como dato del curso), con cuáles se confunde y la fuente. Si escribiste otra norma de la lista, dice cuál.
+- **Confusiones:** la app guarda con cuál norma se confundió cada una; el inicio lista las parejas más falladas y permite practicarlas mezcladas.
+- **Orden de los nuevos:** por familia, y la ficha inversa de una familia llega un bloque después (E1, E2, I1, E3, I2…) para no preguntar al revés lo que se acaba de ver.
+- **Dominada:** la última vez salió bien y se escribió bien en **2 días distintos**.
+- **Práctica por familia** y **lista de consulta** con todas las normas.
+- Los datos están en `data/normas.json` (esquema en `docs/ESQUEMA.md`); la lista y las decisiones, en `ALCANCE.md` §3F.
+
 ## Simulacro
 
 **Estructura.** Imita el I examen de I-2025 (25 min, 40 puntos), que es el modelo más completo del banco:
@@ -136,6 +150,8 @@ css/app.css           estilos (mobile first, modo oscuro automático)
 js/version.js         versión de la app y del caché (cambiar en cada publicación)
 js/opciones.js        orden aleatorio de opciones y ajuste de letras en las explicaciones
 js/srs.js             repetición espaciada (Leitner) y compresión antes del examen
+js/normas-logica.js   normas: fichas, lectura de la respuesta, opciones, confusiones y dominio
+js/normas.js          pantalla Normas
 js/examen.js          simulacro: armar, deduplicar, puntuar y temporizador
 js/simulacro.js       pantallas del simulacro
 js/progreso.js        progreso: dominio, débiles, racha, tiempo y exportar/importar
@@ -164,12 +180,12 @@ Requiere Python 3 y Playwright (`pip install playwright` y `python -m playwright
 
 ```bash
 python tools/validar_json.py .
-node --test tests/srs.test.js tests/examen.test.js tests/progreso.test.js tests/buscar.test.js tests/opciones.test.js
+node --test tests/srs.test.js tests/examen.test.js tests/progreso.test.js tests/buscar.test.js tests/opciones.test.js tests/normas.test.js
 python tests/test_app.py
 python tests/capturas.py
 ```
 
-`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) , `progreso.test.js` prueba el dominio, la racha y el exportar/importar, , `buscar.test.js` prueba la búsqueda, el resaltado, el glosario y los índices, y `opciones.test.js` prueba el orden aleatorio y el ajuste de letras con las 72 preguntas reales. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba`.
+`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) , `progreso.test.js` prueba el dominio, la racha y el exportar/importar, , `buscar.test.js` prueba la búsqueda, el resaltado, el glosario y los índices, `opciones.test.js` prueba el orden aleatorio y el ajuste de letras con las 72 preguntas reales, y `normas.test.js` prueba la lectura de la respuesta, las opciones, las confusiones, el dominio y los datos de `data/normas.json`. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba`.
 
 `capturas.py` guarda capturas a 390×844 en modo claro y oscuro en `tests/capturas/` (esa carpeta no se sube).
 
