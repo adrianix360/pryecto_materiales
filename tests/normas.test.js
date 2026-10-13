@@ -42,15 +42,24 @@ test("datos: la pareja es recíproca para las parejas clave", () => {
   }
 });
 
-test("items: dos por norma, agrupados por familia y con los «escribir» antes que las «inversa»", () => {
+test("items: dos por norma (tres si tiene foto), por familia y cada tipo atrasado un bloque", () => {
   const it = NL.items(normas, familias);
-  assert.equal(it.length, normas.length * 2);
+  const conFoto = normas.filter((n) => n.figura).length;
+  assert.equal(conFoto, 16);
+  assert.equal(it.length, normas.length * 2 + conFoto);
+  assert.equal(it.filter((x) => x.tipo === "f").length, conFoto);
+  assert.ok(it.every((x) => x.tipo !== "f" || porId[x.norma].figura));
   assert.equal(new Set(it.map((x) => x.id)).size, it.length);
   for (const f of familias) {
     const de = it.filter((x) => porId[x.norma].familia === f.id);
     const ultimaE = Math.max(...de.map((x, i) => (x.tipo === "e" ? i : -1)));
     const primeraI = de.findIndex((x) => x.tipo === "i");
     assert.ok(ultimaE < primeraI, f.id);
+  }
+  // la foto de una norma nunca va justo después de su ficha de escribir
+  const pos = (id) => it.findIndex((x) => x.id === id);
+  for (const n of normas.filter((x) => x.figura)) {
+    assert.ok(pos("n-" + n.id + "-e") < pos("n-" + n.id + "-i") && pos("n-" + n.id + "-i") < pos("n-" + n.id + "-f"), n.id);
   }
   assert.equal(it.find((x) => x.id === "n-C994-e").verificar, true);
 });
@@ -169,7 +178,7 @@ test("parejas: suma las confusiones de las dos fichas y de los dos sentidos; ign
 test("itemsDe: fichas de esas normas, «escribir» primero, en el orden pedido", () => {
   const todos = NL.items(normas, familias);
   const ids = NL.itemsDe(todos, ["C128", "C127"]).map((x) => x.id);
-  assert.deepEqual(ids, ["n-C128-e", "n-C127-e", "n-C128-i", "n-C127-i"]);
+  assert.deepEqual(ids, ["n-C128-e", "n-C127-e", "n-C128-i", "n-C127-i", "n-C128-f", "n-C127-f"]);
 });
 
 test("repaso con SRS: todas las fichas se ven antes del examen", () => {
@@ -215,6 +224,41 @@ test("diferencias: marca lo que distingue a cada norma y no las palabras de rell
   // palabras de relleno nunca se marcan, aunque no estén en el otro texto
   d = NL.diferencias("el perro de agua", "gato");
   assert.deepEqual(marcadas(d.a), ["perro", "agua"]);
+});
+
+test("datos: cada foto existe, tiene descripción y fuente; 16 normas con foto y sin spoiler en el nombre", () => {
+  for (const n of normas.filter((x) => x.figura)) {
+    assert.ok(fs.existsSync(path.join(RAIZ, n.figura.src)), n.id + ": falta " + n.figura.src);
+    assert.ok(n.figura.alt.length > 10 && n.figura.fuente.length >= 1, n.id);
+    assert.ok(!n.figura.src.includes(".."), n.id);
+  }
+  for (const id of ["C33", "C566", "C418", "C227", "C1260", "C289", "C586", "C1602", "C1603", "C114"]) assert.equal(porId[id].figura, undefined, id);
+});
+
+test("listaOrdenada: las C por número y luego las D", () => {
+  const l = NL.listaOrdenada(normas).map((n) => n.id);
+  assert.equal(l.length, normas.length);
+  assert.deepEqual(l.slice(0, 4), ["C29", "C33", "C40", "C109"]);
+  assert.deepEqual(l.slice(-3), ["D75", "D4791", "D5821"]);
+});
+
+test("simulacro de fotos: n normas con foto sin repetir; cada foto vale un punto", () => {
+  const ids = NL.elegirFotos(normas, 10, azar(3));
+  assert.equal(ids.length, 10);
+  assert.equal(new Set(ids).size, 10);
+  assert.ok(ids.every((id) => porId[id].figura));
+  assert.equal(NL.elegirFotos(normas, 99, azar(3)).length, 16);
+  const resp = { [ids[0]]: ids[0], [ids[1]]: "C29", [ids[2]]: ids[2] };
+  const r = NL.puntuarFotos(ids, resp);
+  assert.equal(r.puntos, 2 + (ids[1] === "C29" ? 1 : 0));
+  assert.equal(r.total, 10);
+  assert.equal(r.detalle[3].resp, null);
+  assert.equal(r.detalle[3].ok, false);
+});
+
+test("parejas: también cuentan las confusiones de las fichas de foto", () => {
+  const p = NL.parejas(normas, (k) => (k === "n-C131-f" ? { conf: { C418: 2 } } : null));
+  assert.deepEqual(p, [{ a: "C131", b: "C418", n: 2 }]);
 });
 
 test("progreso: las normas se exportan, validan y combinan; un archivo viejo sin normas vale", () => {

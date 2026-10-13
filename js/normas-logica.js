@@ -5,6 +5,7 @@
 // Cada norma da dos ítems de repaso (cada uno con su registro de repetición espaciada, SRS):
 //   «n-C127-e»  escribir: se lee qué determina y se escribe el número de la norma (como en el examen)
 //   «n-C127-i»  inversa:  se ve la norma y se elige qué determina entre opciones de normas parecidas
+//   «n-C127-f»  foto:     (solo normas con foto) se ve el equipo y se elige la norma en la lista, como en el examen
 // Registro = registro de SRS + {bien, conf, dias}:
 //   conf[otraId] = veces que se confundió con esa norma (otraId «otra» si escribió un número que no está)
 //   dias         = (solo en «e») días distintos en que la escribió bien; con 2 o más está «dominada»
@@ -17,23 +18,47 @@
 
   function claveE(id) { return "n-" + id + "-e"; }
   function claveI(id) { return "n-" + id + "-i"; }
+  function claveF(id) { return "n-" + id + "-f"; }
 
-  // Ítems en el orden de estudio. Cada familia es un bloque de «escribir» (E) y otro de «inversa» (I).
-  // Los nuevos del día salen agrupados por familia, y la «inversa» de una familia se atrasa un bloque:
-  // E1, E2, I1, E3, I2, … así nunca se pregunta al revés lo que se acaba de ver escribiendo.
+  // Ítems en el orden de estudio. Cada familia es un bloque de «escribir» (E), otro de «inversa» (I) y
+  // otro de «foto» (F, solo las normas con foto). Los nuevos del día salen agrupados por familia y cada
+  // tipo se atrasa un bloque más: E1, E2, I1, E3, I2, F1, E4, I3, F2, … así nunca se pregunta al revés
+  // ni con foto lo que se acaba de ver escribiendo.
   function items(normas, familias) {
+    var clave = { e: claveE, i: claveI, f: claveF };
     function bloque(f, tipo) {
-      return normas.filter(function (n) { return n.familia === f.id; }).map(function (n) {
-        return { id: tipo === "e" ? claveE(n.id) : claveI(n.id), norma: n.id, tipo: tipo, verificar: !!n.verificar };
+      return normas.filter(function (n) { return n.familia === f.id && (tipo !== "f" || n.figura); }).map(function (n) {
+        return { id: clave[tipo](n.id), norma: n.id, tipo: tipo, verificar: !!n.verificar };
       });
     }
-    var out = [];
-    familias.forEach(function (f, k) {
-      out = out.concat(bloque(f, "e"));
-      if (k > 0) out = out.concat(bloque(familias[k - 1], "i"));
-    });
-    if (familias.length) out = out.concat(bloque(familias[familias.length - 1], "i"));
+    var out = [], n = familias.length;
+    for (var k = 0; k < n + 2; k++) {
+      if (k < n) out = out.concat(bloque(familias[k], "e"));
+      if (k >= 1 && k - 1 < n) out = out.concat(bloque(familias[k - 1], "i"));
+      if (k >= 2) out = out.concat(bloque(familias[k - 2], "f"));
+    }
     return out;
+  }
+
+  // Lista de normas del examen, en orden: primero las C por número y luego las D.
+  function listaOrdenada(normas) {
+    function num(n) { return parseInt(n.id.slice(1), 10); }
+    return normas.slice().sort(function (a, b) {
+      if (a.id.charAt(0) !== b.id.charAt(0)) return a.id.charAt(0) < b.id.charAt(0) ? -1 : 1;
+      return num(a) - num(b);
+    });
+  }
+
+  // Simulacro de fotos: n normas con foto al azar, sin repetir.
+  function elegirFotos(normas, n, azar) {
+    var con = normas.filter(function (x) { return x.figura; });
+    return barajar(con, azar || Math.random).slice(0, n).map(function (x) { return x.id; });
+  }
+
+  // resp: {idNorma: idElegido}. Cada foto vale 1 punto.
+  function puntuarFotos(ids, resp) {
+    var detalle = ids.map(function (id) { return { id: id, resp: resp[id] || null, ok: resp[id] === id }; });
+    return { puntos: detalle.filter(function (d) { return d.ok; }).length, total: ids.length, detalle: detalle };
   }
 
   // «128», «c128», «ASTM C 128», «d-75» → «C128», «C128», «C128», «D75». letra: la elegida en pantalla.
@@ -118,7 +143,7 @@
   function parejas(normas, leer) {
     var mapa = {};
     normas.forEach(function (n) {
-      [claveE(n.id), claveI(n.id)].forEach(function (clave) {
+      [claveE(n.id), claveI(n.id), claveF(n.id)].forEach(function (clave) {
         var r = leer(clave);
         Object.keys(r && r.conf || {}).forEach(function (otra) {
           if (otra === "otra") return;
@@ -133,13 +158,13 @@
       .sort(function (x, y) { return y.n - x.n || (x.a + x.b < y.a + y.b ? -1 : 1); });
   }
 
-  // Ítems de estas normas: primero los «escribir» y luego los «inversa», en el orden dado.
+  // Ítems de estas normas: primero los «escribir», luego los «inversa» y al final los «foto», en el orden dado.
   function itemsDe(todos, ids) {
     var orden = {};
     ids.forEach(function (id, i) { orden[id] = i; });
     var sel = todos.filter(function (it) { return orden[it.norma] !== undefined; });
     return sel.sort(function (x, y) {
-      if (x.tipo !== y.tipo) return x.tipo === "e" ? -1 : 1;
+      if (x.tipo !== y.tipo) return "eif".indexOf(x.tipo) - "eif".indexOf(y.tipo);
       return orden[x.norma] - orden[y.norma];
     });
   }
@@ -193,6 +218,10 @@
     DIAS_DOMINIO: DIAS_DOMINIO,
     claveE: claveE,
     claveI: claveI,
+    claveF: claveF,
+    listaOrdenada: listaOrdenada,
+    elegirFotos: elegirFotos,
+    puntuarFotos: puntuarFotos,
     items: items,
     parsear: parsear,
     evaluarEscribir: evaluarEscribir,
