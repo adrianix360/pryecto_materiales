@@ -10,7 +10,10 @@
     temas: [],        // [{tema, titulo, subtemas: {codigo: titulo}}]
     subtemas: {},     // codigo -> titulo
     tarjetas: [],
-    preguntas: []
+    preguntas: [],
+    familias: [],     // familias de normas, en orden de estudio
+    normas: [],       // normas ASTM del entrenamiento «Normas»
+    normaPorId: {}
   };
 
   function json(ruta) {
@@ -21,11 +24,14 @@
   }
 
   D.cargar = function () {
-    return Promise.all([json("data/indice.json"), json("data/fuentes.json"), json("data/glosario.json")])
+    return Promise.all([json("data/indice.json"), json("data/fuentes.json"), json("data/glosario.json"), json("data/normas.json")])
       .then(function (r) {
         D.indice = r[0];
         D.fuentes = r[1].fuentes;
         D.glosario = r[2].terminos;
+        D.familias = r[3].familias;
+        D.normas = r[3].normas;
+        D.normas.forEach(function (n) { D.normaPorId[n.id] = n; });
         D.temas = D.indice.temas.map(function (t) {
           Object.keys(t.subtemas).forEach(function (c) { D.subtemas[c] = t.subtemas[c]; });
           return { tema: t.tema, titulo: t.titulo, subtemas: t.subtemas };

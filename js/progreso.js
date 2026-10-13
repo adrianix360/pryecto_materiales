@@ -109,7 +109,7 @@
 
   // ---------- Exportar / importar ----------
   function vacio() {
-    return { tarjetas: {}, preguntas: {}, diario: {}, prefs: {}, simulacro: null, historial: [] };
+    return { tarjetas: {}, preguntas: {}, normas: {}, diario: {}, prefs: {}, simulacro: null, historial: [] };
   }
 
   function exportar(estado, version, ahora) {
@@ -141,11 +141,13 @@
     if (!esMapaDeRegistros(p.tarjetas || {}) || !esMapaDeRegistros(p.preguntas || {})) {
       return mal("Los registros de tarjetas o preguntas están dañados.");
     }
+    if (!esMapaDeRegistros(p.normas || {})) return mal("Los registros de normas están dañados.");
     if (p.diario && (typeof p.diario !== "object" || Array.isArray(p.diario))) return mal("El registro diario está dañado.");
     if (p.historial && !Array.isArray(p.historial)) return mal("El historial de simulacros está dañado.");
     var limpio = vacio();
     limpio.tarjetas = p.tarjetas || {};
     limpio.preguntas = p.preguntas || {};
+    limpio.normas = p.normas || {};
     limpio.diario = p.diario || {};
     limpio.prefs = p.prefs && typeof p.prefs === "object" ? p.prefs : {};
     limpio.simulacro = p.simulacro || null;
@@ -156,6 +158,7 @@
       resumen: {
         tarjetas: Object.keys(limpio.tarjetas).length,
         preguntas: Object.keys(limpio.preguntas).length,
+        normas: Object.keys(limpio.normas).length,
         dias: Object.keys(limpio.diario).length,
         simulacros: limpio.historial.length,
         exportado: obj.exportado || null
@@ -179,6 +182,7 @@
     actual = actual || vacio();
     r.tarjetas = combinarRegistros(actual.tarjetas, nuevo.tarjetas);
     r.preguntas = combinarRegistros(actual.preguntas, nuevo.preguntas);
+    r.normas = combinarRegistros(actual.normas, nuevo.normas);
     [actual.diario || {}, nuevo.diario || {}].forEach(function (d) {
       Object.keys(d).forEach(function (dia) {
         var x = r.diario[dia] || { seg: 0, items: 0 };

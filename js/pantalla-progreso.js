@@ -140,6 +140,7 @@
       html += '<div class="verificar confirmar" role="alertdialog" aria-labelledby="h-imp" aria-describedby="p-imp">' +
         '<p class="verificar__titulo" id="h-imp">¿Cargar este progreso?</p>' +
         '<p id="p-imp">El archivo trae ' + plural(r.tarjetas, "tarjeta", "tarjetas") + ", " + plural(r.preguntas, "pregunta", "preguntas") + ", " +
+        (r.normas ? plural(r.normas, "norma", "normas") + ", " : "") +
         plural(r.dias, "día", "días") + " de estudio y " + plural(r.simulacros, "simulacro", "simulacros") +
         (r.exportado ? " (exportado el " + UI.esc(UI.fechaLarga(SRS.diaDe(new Date(r.exportado)))) + ")" : "") + ".</p>" +
         '<p class="nota"><strong>Combinar</strong> conserva lo de este teléfono y agrega lo del archivo (de cada ítem queda lo más reciente). ' +
@@ -153,7 +154,7 @@
     if (s.confirmarBorrar) {
       html += '<div class="verificar confirmar" role="alertdialog" aria-labelledby="h-borrar" aria-describedby="p-borrar">' +
         '<p class="verificar__titulo" id="h-borrar">¿Borrar todo tu progreso?</p>' +
-        '<p id="p-borrar">Se borran tarjetas, preguntas, tiempo de estudio, racha y simulacros de este navegador. No se puede deshacer. ' +
+        '<p id="p-borrar">Se borran tarjetas, preguntas, normas, tiempo de estudio, racha y simulacros de este navegador. No se puede deshacer. ' +
         "La meta y los filtros se conservan. Si querés guardarlo, exportalo antes.</p>" +
         '<div class="botones-fin">' +
         '<button type="button" class="btn btn--mal" data-accion="confirmar-borrar">Sí, borrar todo</button>' +

@@ -6,6 +6,7 @@
 // Estado guardado:
 //   tarjetas[id]  = {r, n, t, caja, vence, visto}            (r: sabia | dudosa | no)
 //   preguntas[id] = {r, n, t, caja, vence, visto, bien, resp} (r: bien | parcial | mal)
+//   normas[id]    = {r, n, t, caja, vence, visto, bien, conf, dias}   (id «n-C127-e» o «n-C127-i»; ver js/normas-logica.js)
 //   diario[AAAA-MM-DD] = {seg, items}   tiempo e ítems calificados ese día
 //   prefs = filtros, modo de cada sección, meta diaria y configuración del simulacro
 //   simulacro = examen en curso o último terminado (ver js/examen.js)
@@ -17,7 +18,7 @@
   var CLAVE = "pryecto_materiales:progreso:v1";
   var META_DEFECTO = { unidad: "minutos", valor: 40 };
   var HISTORIAL_MAX = 10;
-  var estado = { tarjetas: {}, preguntas: {}, diario: {}, prefs: {}, simulacro: null, historial: [] };
+  var estado = { tarjetas: {}, preguntas: {}, normas: {}, diario: {}, prefs: {}, simulacro: null, historial: [] };
   var disponible = true;
   var oyentes = [];
 
@@ -44,6 +45,7 @@
       if (leido && typeof leido === "object") {
         estado.tarjetas = convertir(leido.tarjetas);
         estado.preguntas = convertir(leido.preguntas);
+        estado.normas = convertir(leido.normas);
         estado.diario = leido.diario || {};
         estado.prefs = leido.prefs || {};
         estado.simulacro = leido.simulacro || null;
@@ -84,6 +86,8 @@
     pregunta: function (id) { return estado.preguntas[id] || null; },
     guardarTarjeta: function (id, reg) { estado.tarjetas[id] = reg; guardar(); },
     guardarPregunta: function (id, reg) { estado.preguntas[id] = reg; guardar(); },
+    norma: function (id) { return estado.normas[id] || null; },
+    guardarNorma: function (id, reg) { estado.normas[id] = reg; guardar(); },
     // Suma tiempo (segundos) e ítems calificados al día indicado.
     sumarDia: function (dia, seg, items) {
       var d = estado.diario[dia] || { seg: 0, items: 0 };
@@ -114,6 +118,7 @@
       estado = {
         tarjetas: convertir(nuevo.tarjetas),
         preguntas: convertir(nuevo.preguntas),
+        normas: convertir(nuevo.normas),
         diario: nuevo.diario || {},
         prefs: nuevo.prefs || {},
         simulacro: nuevo.simulacro || null,
@@ -123,7 +128,7 @@
     },
     // Borra el progreso y conserva los ajustes (meta, filtros, modos).
     borrarProgreso: function () {
-      estado = { tarjetas: {}, preguntas: {}, diario: {}, prefs: estado.prefs, simulacro: null, historial: [] };
+      estado = { tarjetas: {}, preguntas: {}, normas: {}, diario: {}, prefs: estado.prefs, simulacro: null, historial: [] };
       return guardar();
     },
     agregarHistorial: function (h) {

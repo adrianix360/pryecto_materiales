@@ -78,7 +78,7 @@ test("exportar y validar: ida y vuelta", () => {
   const v = Progreso.validar(archivo);
   assert.equal(v.ok, true);
   assert.deepEqual(v.progreso, estado);
-  assert.deepEqual(v.resumen, { tarjetas: 1, preguntas: 0, dias: 1, simulacros: 0, exportado: "2026-10-09T12:00:00.000Z" });
+  assert.deepEqual(v.resumen, { tarjetas: 1, preguntas: 0, normas: 0, dias: 1, simulacros: 0, exportado: "2026-10-09T12:00:00.000Z" });
 });
 
 test("validar rechaza archivos ajenos o dañados", () => {
