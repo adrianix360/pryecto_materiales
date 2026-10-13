@@ -7,7 +7,7 @@ import tarjetas3, preguntas3_examen, preguntas3_teoria, glosario3, tema2, tema1,
 SITE = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 PAGINAS = {"01": 6, "02": 5, "03": 9, "04": 5, "05": 12, "06": 11, "08": 5, "09": 3, "10": 7, "11": 8, "12": 73, "13": 11,
            "14": 16, "15": 23, "16": 6, "17": 84, "19": 120, "20": 3, "22": 1, "24": 12, "25": 2, "26": 87,
-           "X01": 8, "X02": 3, "X04": 8, "X06": 4, "X07": 14, "X14": 10, "X15": 7}
+           "X01": 8, "X02": 3, "X04": 8, "X06": 4, "X07": 14, "X14": 10, "X15": 7, "X17": 3}
 TEMAS = {
     1: ("Introducción y definiciones básicas", tema1.T, tema1.P),
     2: ("Agua para concreto", tema2.T, tema2.P),

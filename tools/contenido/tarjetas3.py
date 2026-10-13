@@ -334,3 +334,22 @@ t("3E", "concepto", "¿En qué se diferencia la densidad que da el C127/C128 de 
 t("3E", "concepto", "Humedad libre a partir del C566",
   "El ASTM C566 da el contenido total de humedad por secado. La humedad libre es esa humedad total menos la absorción.",
   [S("19", 66)])
+
+# ---------------- Teoría del I examen 2019 (X17) ----------------
+# Se agregan al final para no mover los ids de las tarjetas anteriores.
+t("3D", "concepto", "Si se corrige la granulometría en una malla, ¿qué pasa con los demás porcentajes pasando?",
+  "Cambian todos. Al eliminar o incorporar material, cambia la masa seca total, así que cambian todos los porcentajes pasando, no solo el de la malla corregida. Cada % pasando se multiplica por un mismo factor.",
+  [S("X17", 1), S("19", 55)])
+t("3C", "concepto", "Relación entre peso unitario masivo seco, relación de vacíos y granulometría",
+  "δb = Ps / [Vs (1 + e)]. A mayor relación de vacíos (e), menor peso unitario masivo seco. En un mismo agregado, una granulometría más cerrada deja menos vacíos y da un δb mayor que una más abierta.",
+  [S("X17", 1), S("13", 10)])
+t("3D", "concepto", "¿Por qué menos arena y un tamaño máximo nominal mayor abaratan el concreto?",
+  "Dan una granulometría menos fina. A mayor tamaño de las partículas, menor superficie específica que cubrir con pasta de cemento, y viceversa: menos pasta, menos cemento, menor costo. Ejemplo del examen de 2019: 1:2,5:3,5 con Tmáx 19 mm sale más barato que 1:3:3 con Tmáx 16 mm.",
+  [S("X17", 2), S("15", 4)])
+t("3C", "concepto", "¿Por qué importa la densidad relativa bruta seca (GBS) al producir concreto?",
+  "1. Resistencia: los agregados más porosos tienen menor GBS y son menos resistentes.\n2. Peso unitario del concreto y cargas muertas: GBS de 2,4 a 2,8 ↔ pesos unitarios de 1 120 a 1 900 kg/m³ ↔ concretos de 2 100 a 2 550 kg/m³.\n3. Adherencia: a menor GBS, más poroso el agregado y mejor la adherencia con la pasta.\n4. Dosificación y compra: con la GBS se obtiene el volumen bruto, VB = Ps / (GBS·δw), que entra en Vc.",
+  [S("X17", 2), S("14", 9), S("13", 9)],
+  verificar="La razón 1 sale de la clave de 2019; la PCA (pág. impresa 114) dice que la gravedad específica normalmente no se usa como medida de calidad. El rango de 2 100 a 2 550 kg/m³ del concreto solo aparece en esa clave.")
+t("3C", "concepto", "En Vc = Vs cem + VBA + VBP + Vw + Vaire, ¿qué agua es Vw y por qué no se usan los volúmenes masivos?",
+  "Vw es siempre el agua de diseño, aunque a los agregados les falte agua para llegar a SSS: la corrección por humedad se hace al calcular el agua a dosificar, no en Vc.\nLos volúmenes masivos solo aseguran la masa efectiva; en Vc entran los volúmenes efectivos de esas masas (VB = Ps / (GBS·δw)). Al mezclar, las partículas pequeñas llenan los espacios entre las grandes y la vibración reduce aún más los vacíos.",
+  [S("X17", 3), S("13", 9)])

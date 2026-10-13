@@ -95,7 +95,7 @@ test("reletrar no toca variables, graduaciones ni palabras", () => {
   assert.equal(Opciones.reletrar(null, m), null);
 });
 
-test("en las 72 preguntas reales, reletrar y deshacer devuelve el texto original", () => {
+test("en las 73 preguntas reales, reletrar y deshacer devuelve el texto original", () => {
   const rnd = azar(3);
   let cambiadas = 0;
   for (const p of SELECCION) {

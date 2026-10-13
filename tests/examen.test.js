@@ -61,8 +61,8 @@ test("respuesta corta: 2 × puntos clave cubiertos / total, redondeado a 0,5", (
 test("las preguntas reales F/V se reconocen como verdaderas o falsas", () => {
   const vfs = PREGUNTAS.filter((p) => p.tipo === "verdadero_falso");
   const falsas = vfs.filter((p) => !Examen.esVerdadero(p));
-  assert.equal(vfs.length, 46);
-  assert.equal(falsas.length, 35); // p3-3C-x17 pasó a Verdadero en la auditoría
+  assert.equal(vfs.length, 47);
+  assert.equal(falsas.length, 36); // p3-3C-x17 pasó a Verdadero en la auditoría
   assert.ok(falsas.every((p) => Examen.claveJustificacion(p)), "toda falsa tiene contra qué autoevaluar");
 });
 

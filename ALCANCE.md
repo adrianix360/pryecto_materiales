@@ -189,6 +189,7 @@ Decisiones del 12/10/2026:
 | X01 (cuestionario y claves) | Págs. 1–7, todas las preguntas, menos la de "tipo de arena", que no trae datos, y la del aditivo en el agua de diseño. **La pregunta de contracción plástica con el ábaco (pág. 5) entra con la imagen del ábaco recortada del examen.** Los cálculos de un paso, como el volumen efectivo del cemento de un saco (pág. 7), también entran. Pág. 8: solo las preguntas con corrección clara; la de exudación lleva VERIFICAR. |
 | X04 (II-2022, teoría) | Las preguntas de completar, de respuesta corta y de falso/verdadero, menos "ventajas de incluir aire" (aditivos). |
 | X06 y X07 (I-2020) | Las preguntas de agua, agregados, volúmenes y relación a/c. Quedan fuera las de cemento, puzolanas, aditivos, cilindros, temperatura de colocación y resistencia del concreto. |
+| X17 (I-2019, teoría) | Las 6 preguntas, con su clave en negrita (la 5 tiene dos partes, así que son 7 ítems). La pregunta 1 (corrección en la malla N.° 8) entra como concepto; su factor lleva VERIFICAR (C25). La razón «da idea de la resistencia» de la pregunta 4 lleva VERIFICAR (C26). Decisión de Adrián del 13/10/2026. |
 | X14 y X15 (2009) | Las preguntas de desarrollo de teoría, como preguntas abiertas **sin clave oficial**. La respuesta modelo se arma con las fuentes de teoría y la cita. |
 | X03, X05, X08–X13 | **No se usan**: son problemas de varios pasos (regla 5). |
 | Cálculos de un paso (regla 5) | Solo los que vienen con su respuesta en 08, X01, X02, X04, X06 o X07, por ejemplo la conclusión de un Gs de 2,3 (X02) o los 16,1 L de cemento por saco (X01: 7). |
@@ -201,7 +202,7 @@ Decisiones del 12/10/2026:
 - Los manuales de cementos (17) y de concreto (18).
 - De la conferencia (26): mercado de agregados, minería aluvial y recuperación ambiental (págs. 2–4 y 65–85).
 - La gira, la salud ocupacional y la dinámica de rocas: no hay material.
-- Los métodos para corregir graduaciones (factor k): no hay teoría en las fuentes, solo el ejercicio del examen.
+- Los métodos para corregir graduaciones (factor k): no hay teoría en las fuentes, solo el ejercicio del examen. **Excepción (13/10/2026):** sí entra el concepto de X17, pregunta 1: al corregir una malla cambia la masa seca total y cambian todos los % pasando.
 - Las filas sin valor de la tabla 25 y la lectura de valores del ábaco de ACI 305.
 
 ---
@@ -244,3 +245,5 @@ Decisiones del 12/10/2026:
 | C22 | Límite entre agregados normales y pesados (peso unitario) | Diapositiva 14: 9 dice 1 900 kg/m³; manual 19: 63 dice 1 920 kg/m³ (las dos son del profe) | **VERIFICAR**: se muestra 1 900 y se anota el 1 920 (auditoría del 9/10/2026) |
 | C23 | Clave de X01 pág. 6, F/V 4 («el agua de diseño es mayor al agua de dosificación cuando los agregados se dosifican con agua libre») | La equis impresa está en F; la corrección al margen marca V y la justificación impresa («es menor porque los agregados aportan el resto») hace verdadera la afirmación | **V**, con VERIFICAR (auditoría del 9/10/2026) |
 | C24 | D5821 y D4791; norma de abrasión por corte rotativo | Apunte de Adrián: D5821 = partículas planas o elongadas. Diapositiva 15: 19: D4791 = planas y elongadas; D5821-13(2017) = porcentaje de partículas fracturadas. Diapositiva 15: 11 dice C994 para el corte rotativo (podría ser C944) | **D4791 = planas y elongadas; D5821 = fracturadas** (diapositiva, fuente del profe). **C994: VERIFICAR** (decisión del 12/10/2026) |
+| C25 | Clave de X17, pregunta 1 (corrección en la malla N.° 8) | La clave usa factor = 100/80 = 1,25 y lo aplica bien en las mallas N.° 16 a N.° 100, pero pone 100 en la N.° 8 (75 × 1,25 = 93,75; 100/75 = 1,33) | **El concepto** (cambian todos los % pasando). El factor lleva **VERIFICAR** |
+| C26 | ¿La GBS indica la resistencia del agregado? | Clave de X17, pregunta 4: «da una idea cuantitativa de qué tan resistente puede ser»; PCA 114 (impresa): normalmente no se usa como medida de calidad, aunque los porosos suelen tenerla baja | **VERIFICAR** (ninguna es del profe; se muestran las dos) |
