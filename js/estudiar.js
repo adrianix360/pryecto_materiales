@@ -2,6 +2,7 @@
 // Modo «Repaso de hoy» (por defecto): cola de SRS.colaRepaso (falladas, vencidas y nuevas
 // del día). Modo «Por tema»: filtros por tema y subtema; también actualiza el repaso.
 // En la sesión, una tarjeta marcada «no» vuelve 4 lugares después; una «dudosa», 8 después.
+// Las colas salen barajadas (SRS.azar) y el botón «Barajar» mezcla otra vez lo que falta.
 (function () {
   "use strict";
 
@@ -17,7 +18,8 @@
 
   var s = {
     modo: null, f: null, cola: [], pos: 0, volteada: false, porId: null,
-    filtrosAbiertos: false, metaAbierta: false, extra: null, dia: null, inicio: Date.now()
+    filtrosAbiertos: false, metaAbierta: false, extra: null, dia: null, inicio: Date.now(),
+    barajadas: 0
   };
 
   function leer(id) { return Store.tarjeta(id); }
@@ -34,20 +36,24 @@
     s.extra = extra || null;
     s.dia = SRS.hoy();
     s.inicio = Date.now();
+    s.barajadas = 0;
   }
 
   function armarRepaso() {
-    nuevaCola(SRS.colaRepaso(Datos.tarjetas, leer, SRS.hoy(), Datos.indice.examen).ids.slice());
+    nuevaCola(SRS.colaRepaso(Datos.tarjetas, leer, SRS.hoy(), Datos.indice.examen, SRS.azar()).ids.slice());
   }
 
   function armarTema() {
+    var rnd = SRS.azar();
     var lista = Datos.tarjetas.filter(function (t) { return UI.cumpleFiltro(t, s.f); });
+    if (rnd) lista = SRS.barajar(lista, rnd);
     lista = lista.map(function (t, i) { return { t: t, i: i, p: leer(t.id) }; });
+    // Por nivel (sin ver, no, dudosa, sabía); dentro de cada nivel, al azar (o por fecha si el orden es fijo).
     lista.sort(function (a, b) {
       var pa = a.p ? PRIORIDAD[a.p.r] || 3 : 0;
       var pb = b.p ? PRIORIDAD[b.p.r] || 3 : 0;
       if (pa !== pb) return pa - pb;
-      if (a.p && b.p && a.p.t !== b.p.t) return a.p.t - b.p.t;
+      if (!rnd && a.p && b.p && a.p.t !== b.p.t) return a.p.t - b.p.t;
       return a.i - b.i;
     });
     nuevaCola(lista.map(function (x) { return x.t.id; }));
@@ -113,7 +119,8 @@
     var t = s.porId[s.cola[s.pos]];
     var prev = leer(t.id);
     var html = cabecera();
-    html += '<p class="contador" aria-live="polite">Tarjeta ' + (s.pos + 1) + " de " + s.cola.length + "</p>";
+    html += UI.contador("Tarjeta " + (s.pos + 1) + " de " + s.cola.length, s.cola.length - s.pos - 1, s.barajadas);
+    s.barajadas = 0;
     html += '<div class="chips">' +
       '<span class="chip">' + UI.esc(t.subtema + " · " + (Datos.subtemas[t.subtema] || "")) + "</span>" +
       '<span class="chip">' + UI.esc(TIPOS[t.tipo] || t.tipo) + "</span>" +
@@ -204,6 +211,14 @@
         if (c) c.focus();
       });
     });
+    var bar = vista.querySelector('[data-accion="barajar"]');
+    if (bar) bar.addEventListener("click", function () {
+      s.barajadas = s.cola.length - s.pos - 1;
+      s.cola = SRS.barajarResto(s.cola, s.pos, Math.random);
+      render(vista);
+      var b = vista.querySelector('[data-accion="barajar"]');
+      if (b) b.focus();
+    });
     vista.querySelectorAll("[data-calificar]").forEach(function (b) {
       b.addEventListener("click", function () {
         calificar(b.getAttribute("data-calificar"));
@@ -216,8 +231,8 @@
         var acc = b.getAttribute("data-accion");
         if (acc === "otra") armarTema();
         else if (acc === "volver") armar();
-        else if (acc === "nuevas") nuevaCola(SRS.masNuevos(Datos.tarjetas, leer, MAS_NUEVAS, []), "nuevas");
-        else nuevaCola(SRS.adelantar(Datos.tarjetas, leer, SRS.hoy()), "adelantar");
+        else if (acc === "nuevas") nuevaCola(SRS.masNuevos(Datos.tarjetas, leer, MAS_NUEVAS, [], SRS.azar()), "nuevas");
+        else nuevaCola(SRS.adelantar(Datos.tarjetas, leer, SRS.hoy(), SRS.azar()), "adelantar");
         render(vista);
         enfocar(vista);
       });

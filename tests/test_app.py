@@ -38,10 +38,13 @@ def prueba(fn):
     return fn
 
 
-def nueva_pagina(nav, url, bloquear=False, sw=False, fecha=FECHA, sembrar=None):
-    """Abre la app con la fecha simulada. sembrar: progreso guardado antes de cargar."""
+def nueva_pagina(nav, url, bloquear=False, sw=False, fecha=FECHA, sembrar=None, azar=False):
+    """Abre la app con la fecha simulada. sembrar: progreso guardado antes de cargar.
+    azar: si es False (lo normal en las pruebas), las colas salen en el orden de los datos."""
     ctx = nav.new_context(viewport=VIEWPORT, service_workers="allow" if sw else "block")
     ctx.add_init_script(f"window.__fechaPrueba = {json.dumps(fecha)};")
+    if not azar:
+        ctx.add_init_script("window.__ordenFijo = true;")
     if sembrar is not None:
         ctx.add_init_script(
             "try { if (!sessionStorage.getItem('sembrado')) {"
@@ -431,6 +434,7 @@ def abrir_simulacro(nav, url, reloj=None, sembrar=None):
     """Abre Simulacro. reloj: hora simulada (ms) para controlar el temporizador."""
     ctx = nav.new_context(viewport=VIEWPORT, service_workers="block")
     ctx.add_init_script(f"window.__fechaPrueba = {json.dumps(FECHA)};")
+    ctx.add_init_script("window.__ordenFijo = true;")
     if sembrar is not None:
         ctx.add_init_script(
             "try { if (!sessionStorage.getItem('sembrado')) {"
@@ -812,6 +816,40 @@ def lista_de_items_a_verificar_con_el_profe(nav, url):
     expect(pag.locator(".chip--verificar").first).to_be_visible()
     assert not errores, errores
     ctx.close()
+
+
+@prueba
+def estudiar_y_practicar_salen_barajados_y_se_pueden_barajar(nav, url):
+    # Dos sesiones nuevas de Estudiar dan un orden distinto de tarjetas nuevas
+    primeras = set()
+    for _ in range(4):
+        ctx, pag, errores = nueva_pagina(nav, url + "#/estudiar", azar=True)
+        expect(pag.locator(".contador")).to_have_text("Tarjeta 1 de 31")
+        primeras.add(pag.locator(".tarjeta").get_attribute("aria-controls"))
+        assert not errores, errores
+        ctx.close()
+    assert len(primeras) > 1, "las sesiones deberían empezar con tarjetas distintas"
+    # «Barajar» mezcla lo que falta y deja la actual
+    ctx, pag, errores = nueva_pagina(nav, url + "#/practicar", azar=True)
+    expect(pag.locator(".contador")).to_have_text("Pregunta 1 de 38")
+    actual = pag.locator(".pregunta").get_attribute("data-id")
+    boton = pag.locator('[data-accion="barajar"]')
+    expect(boton).to_have_attribute("aria-label", "Barajar las 37 que faltan")
+    assert boton.bounding_box()["height"] >= 48
+    boton.click()
+    expect(pag.locator(".aviso-barajar")).to_have_text("Se barajaron las 37 que faltan.")
+    assert pag.locator(".pregunta").get_attribute("data-id") == actual, "la pregunta actual no cambia"
+    expect(pag.locator(".contador")).to_have_text("Pregunta 1 de 38")
+    expect(pag.locator('[data-accion="barajar"]')).to_be_focused()
+    revisar_pantalla(pag, "practicar-barajar")
+    # En Estudiar también
+    ctx2, pag2, errores2 = nueva_pagina(nav, url + "#/estudiar", azar=True)
+    pag2.locator('[data-accion="barajar"]').click()
+    expect(pag2.locator(".aviso-barajar")).to_have_text("Se barajaron las 30 que faltan.")
+    expect(pag2.locator(".contador")).to_have_text("Tarjeta 1 de 31")
+    assert not errores and not errores2, errores + errores2
+    ctx.close()
+    ctx2.close()
 
 
 @prueba

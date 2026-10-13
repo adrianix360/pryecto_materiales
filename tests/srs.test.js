@@ -236,3 +236,67 @@ for (const tipo of ["tarjetas", "preguntas"]) {
     }
   });
 }
+
+// ---------- Orden aleatorio ----------
+test("barajar: misma lista, otro orden, sin tocar el original", () => {
+  const lista = Array.from({ length: 20 }, (_, i) => i);
+  const b = SRS.barajar(lista, azar(7));
+  assert.deepEqual([...b].sort((x, y) => x - y), lista);
+  assert.notDeepEqual(b, lista);
+  assert.deepEqual(lista, Array.from({ length: 20 }, (_, i) => i), "no muta la lista");
+  assert.deepEqual(SRS.barajar(lista, azar(7)), b, "la misma semilla da el mismo orden");
+});
+
+test("cola con azar: respeta fallados → vencidos → nuevos y elige los nuevos al azar", () => {
+  const items = Array.from({ length: 40 }, (_, i) => ({ id: "n" + i }));
+  const regs = {
+    n3: { r: "no", n: 1, t: 1, caja: 0, vence: "2026-10-08", visto: "2026-10-08" },
+    n7: { r: "no", n: 1, t: 2, caja: 0, vence: "2026-10-08", visto: "2026-10-08" },
+    n11: { r: "sabia", n: 1, t: 3, caja: 1, vence: "2026-10-07", visto: "2026-10-06" },
+    n20: { r: "sabia", n: 1, t: 4, caja: 2, vence: "2026-10-09", visto: "2026-10-05" },
+  };
+  const leer = (id) => regs[id] || null;
+  const fija = SRS.colaRepaso(items, leer, "2026-10-09", EXAMEN);
+  const primeras = new Set();
+  const nuevosVistos = new Set();
+  for (let sem = 1; sem <= 30; sem++) {
+    const c = SRS.colaRepaso(items, leer, "2026-10-09", EXAMEN, azar(sem));
+    assert.equal(c.ids.length, fija.ids.length, "la misma cantidad que sin azar");
+    assert.deepEqual([c.fallados, c.vencidos, c.nuevos], [fija.fallados, fija.vencidos, fija.nuevos]);
+    assert.deepEqual(new Set(c.ids.slice(0, 2)), new Set(["n3", "n7"]), "los fallados van primero");
+    assert.deepEqual(new Set(c.ids.slice(2, 4)), new Set(["n11", "n20"]), "luego los vencidos");
+    const nuevos = c.ids.slice(4);
+    assert.ok(nuevos.every((id) => !regs[id]), "al final, solo nuevos");
+    primeras.add(nuevos[0]);
+    nuevos.forEach((id) => nuevosVistos.add(id));
+  }
+  assert.ok(primeras.size > 5, "el primer nuevo cambia de una sesión a otra");
+  assert.ok(nuevosVistos.size > fija.nuevos, "los nuevos del día no son siempre los mismos");
+});
+
+test("masNuevos y adelantar con azar", () => {
+  const items = Array.from({ length: 30 }, (_, i) => ({ id: "m" + i }));
+  const regs = { m0: { r: "sabia", n: 1, t: 1, caja: 2, vence: "2026-10-12", visto: "2026-10-08" },
+    m1: { r: "sabia", n: 1, t: 1, caja: 2, vence: "2026-10-11", visto: "2026-10-08" },
+    m2: { r: "sabia", n: 1, t: 1, caja: 3, vence: "2026-10-11", visto: "2026-10-08" } };
+  const leer = (id) => regs[id] || null;
+  const vistos = new Set();
+  for (let sem = 1; sem <= 10; sem++) {
+    const n = SRS.masNuevos(items, leer, 5, ["m5"], azar(sem));
+    assert.equal(n.length, 5);
+    assert.ok(n.every((id) => !regs[id] && id !== "m5"));
+    n.forEach((id) => vistos.add(id));
+    const a = SRS.adelantar(items, leer, "2026-10-09", azar(sem));
+    assert.equal(a[2], "m0", "lo que vence antes va primero");
+    assert.deepEqual(new Set(a.slice(0, 2)), new Set(["m1", "m2"]));
+  }
+  assert.ok(vistos.size > 5, "no salen siempre los mismos nuevos");
+});
+
+test("barajarResto deja lo visto y el actual, y baraja lo que falta", () => {
+  const cola = Array.from({ length: 12 }, (_, i) => "q" + i);
+  const b = SRS.barajarResto(cola, 3, azar(5));
+  assert.deepEqual(b.slice(0, 4), cola.slice(0, 4));
+  assert.deepEqual([...b.slice(4)].sort(), [...cola.slice(4)].sort());
+  assert.notDeepEqual(b.slice(4), cola.slice(4));
+});
