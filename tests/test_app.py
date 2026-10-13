@@ -1012,6 +1012,66 @@ def normas_dominada_con_dos_dias_y_practica_por_familia(nav, url):
 
 
 @prueba
+def normas_parejas_lado_a_lado_con_diferencias_y_practica_de_la_pareja(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url + "#/normas")
+    assert "Aprender por parejas · 0 de 23 vistas" in pag.locator("#vista").inner_text()
+    pag.get_by_role("button", name=re.compile(r"Aprender por parejas")).click()
+    assert "Pareja 1 de 23" in pag.locator(".contador").inner_text()
+    assert pag.get_by_role("button", name="← Anterior").is_disabled()
+    cols = pag.locator(".par-col")
+    assert cols.count() == 2
+    assert "ASTM D75" in cols.nth(0).inner_text() and "ASTM C702" in cols.nth(1).inner_text()
+    assert pag.locator("mark.difiere").count() >= 1
+    revisar_pantalla(pag, "normas parejas")
+    # avanza hasta C127 / C128: lo que las distingue es grueso / fino
+    for _ in range(23):
+        if "ASTM C127" in pag.locator(".par-col").nth(0).inner_text():
+            break
+        pag.get_by_role("button", name="Siguiente →").click()
+    assert pag.locator(".par-col").nth(1).locator("p.norma-codigo").inner_text() == "ASTM C128"
+    assert pag.locator(".par-col").nth(0).locator("mark.difiere").all_inner_texts() == ["grueso"]
+    assert pag.locator(".par-col").nth(1).locator("mark.difiere").all_inner_texts() == ["fino"]
+    assert "Ayuda de memoria" in pag.locator(".par-col").nth(0).inner_text()
+    # practicar la pareja: 4 fichas, primero las «escribir» y mezcladas entre las dos
+    pag.get_by_role("button", name="Probarme con esta pareja").click()
+    assert "Ficha 1 de 4" in pag.locator(".contador").inner_text()
+    ids = []
+    for _ in range(4):  # todas bien: ninguna ficha vuelve a la cola
+        ids.append(pag.locator(".pregunta").get_attribute("data-id"))
+        norma = ids[-1].split("-")[1]
+        if ids[-1].endswith("-e"):
+            escribir_norma(pag, "C", norma[1:])
+        else:
+            pag.locator(f'[data-opcion="{norma}"]').click()
+        pag.get_by_role("button", name="Siguiente →").click()
+    assert ids == ["n-C127-e", "n-C128-e", "n-C127-i", "n-C128-i"], ids
+    assert "Volver a las parejas" in pag.locator("#vista").inner_text()
+    pag.get_by_role("button", name="Volver a las parejas").click()
+    assert "Parejas que se parecen" in pag.locator("#vista").inner_text()
+    vistas = progreso(pag)["prefs"]["parejasVistas"]
+    assert "C127|C128" in vistas and "C702|D75" in vistas, vistas
+    pag.get_by_role("button", name="← Volver a Normas").click()
+    assert "vistas" in pag.locator('[data-accion="ver-parejas"]').inner_text()
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def normas_parejas_confundidas_salen_primero_y_se_abren_desde_el_inicio(nav, url):
+    reg = {"r": "mal", "n": 1, "t": 1, "caja": 0, "vence": "2026-10-09", "visto": "2026-10-09", "bien": 0, "conf": {"C1603": 2}}
+    sembrado = {"tarjetas": {}, "preguntas": {}, "normas": {"n-C1602-e": reg}, "diario": {}, "prefs": {}, "simulacro": None, "historial": []}
+    ctx, pag, errores = nueva_pagina(nav, url + "#/normas", sembrar=sembrado)
+    pag.get_by_role("button", name="Ver la pareja").first.click()
+    assert "Pareja 1 de 23" in pag.locator(".contador").inner_text()
+    assert "La confundiste 2 veces" in pag.locator(".chips").inner_text()
+    textos = pag.locator(".par-col").all_inner_texts()
+    assert "ASTM C1602" in textos[0] and "ASTM C1603" in textos[1]
+    revisar_pantalla(pag, "normas pareja confundida")
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
 def normas_lista_de_consulta_con_ganchos_fuentes_y_verificar(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url + "#/normas")
     pag.get_by_role("button", name="Ver la lista de normas").click()

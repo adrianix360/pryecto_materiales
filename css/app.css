@@ -1060,6 +1060,11 @@ mark { background: var(--verificar-fondo); color: var(--texto); border-radius: 4
 }
 
 /* ---------- Normas (entrenamiento de memoria) ---------- */
+.par-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 10px 0 4px; }
+.par-col { min-width: 0; padding: 12px; border: 1px solid var(--borde); border-radius: var(--radio); background: var(--superficie); }
+.par-col p { margin: 0 0 8px; }
+.par-col .norma-codigo { font-size: 1.2rem; white-space: nowrap; }
+mark.difiere { background: var(--primario-suave); color: inherit; font-weight: 700; border-radius: 4px; padding: 0 2px; }
 .norma-progreso { margin: 8px 0 6px; }
 .norma-sub { margin: 22px 0 8px; font-size: 1.1rem; }
 .nbarra { display: block; height: 8px; border-radius: 999px; background: var(--superficie-2); overflow: hidden; margin: 6px 0 10px; }

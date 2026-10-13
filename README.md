@@ -66,6 +66,7 @@ La sección **Normas** (tercer botón de la barra inferior; **Buscar** pasó a l
   - **Escribir:** se lee qué determina la norma y se escribe el número, con la letra C o D elegida aparte. «No sé» muestra la respuesta y la ficha vuelve más tarde.
   - **¿Qué determina?:** se ve la norma y se elige entre cuatro opciones, que son **sus parejas** y las de su familia, no normas al azar.
 - **Retroalimentación:** qué determina, la ayuda de memoria (rotulada como ayuda, no como dato del curso), con cuáles se confunde y la fuente. Si escribiste otra norma de la lista, dice cuál.
+- **Aprender por parejas:** 23 parejas de normas que se parecen se ven lado a lado, con las palabras que las distinguen resaltadas (se calculan comparando los textos de las fuentes) y la ayuda de memoria de cada una. «Probarme con esta pareja» lanza sus 4 fichas mezcladas. Las parejas que más confundís salen primero; el inicio cuenta cuántas ya viste.
 - **Confusiones:** la app guarda con cuál norma se confundió cada una; el inicio lista las parejas más falladas y permite practicarlas mezcladas.
 - **Orden de los nuevos:** por familia, y la ficha inversa de una familia llega un bloque después (E1, E2, I1, E3, I2…) para no preguntar al revés lo que se acaba de ver.
 - **Dominada:** la última vez salió bien y se escribió bien en **2 días distintos**.

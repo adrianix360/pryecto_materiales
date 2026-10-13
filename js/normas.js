@@ -3,6 +3,8 @@
 //   · Escribir: se lee qué determina y se escribe el número de la norma, como en el examen.
 //   · ¿Qué determina?: se ve la norma y se elige entre opciones de normas parecidas.
 // Inicio: repaso de hoy (SRS), parejas que se confunden, práctica por familia y lista de consulta.
+// Parejas: las normas que se parecen se ven lado a lado, con las palabras que las distinguen
+// resaltadas y la ayuda de memoria; de ahí se lanza una práctica mezclada de esa pareja.
 // Una ficha respondida mal vuelve 4 lugares después, igual que en Practicar.
 (function () {
   "use strict";
@@ -15,7 +17,7 @@
   var PAREJAS_A_MOSTRAR = 5;
 
   var s = {
-    vista: "hub", cola: [], pos: 0, extra: null, fase: "pregunta", letra: "C", texto: "",
+    vista: "hub", origen: null, parIdx: 0, pares: [], cola: [], pos: 0, extra: null, fase: "pregunta", letra: "C", texto: "",
     resultado: null, resp: null, opciones: null, inicio: Date.now(), metaAbierta: false
   };
 
@@ -34,8 +36,9 @@
 
   function designacion(id) { return Datos.normaPorId[id] ? Datos.normaPorId[id].designacion : "ASTM " + id; }
 
-  function nuevaCola(ids, extra) {
+  function nuevaCola(ids, extra, origen) {
     s.vista = "sesion";
+    s.origen = origen || null;
     s.cola = ids;
     s.pos = 0;
     s.extra = extra || null;
@@ -72,16 +75,20 @@
       '<p class="norma-progreso"><strong>' + dom + " de " + total + "</strong> normas dominadas</p>" +
       '<span class="nbarra" aria-hidden="true"><span style="width:' + Math.round(dom / total * 100) + '%"></span></span>' +
       UI.resumenRepaso(res, 0, NOMBRES_RESUMEN);
+    var catalogo = NL.paresCatalogo(Datos.normas, Datos.familias);
+    var vistas = parejasVistas();
+    var nVistas = catalogo.filter(function (p) { return vistas[p.clave]; }).length;
+    var botonPares = '<button type="button" class="btn" data-accion="ver-parejas">Aprender por parejas · ' + nVistas + " de " + catalogo.length + " vistas</button>";
     if (res.ids.length) {
       html += '<div class="botones-fin"><button type="button" class="btn btn--primario" data-accion="repaso">Entrenar hoy · ' +
-        res.ids.length + (res.ids.length === 1 ? " ficha" : " fichas") + "</button></div>";
+        res.ids.length + (res.ids.length === 1 ? " ficha" : " fichas") + "</button>" + botonPares + "</div>";
     } else {
       var nuevas = SRS.masNuevos(todos(), leer, MAS_NUEVAS, []);
       var adel = SRS.adelantar(todos(), leer, hoy);
       html += '<p class="nota">No tenés fichas pendientes hoy. Lo que vence mañana sale en el repaso de mañana.</p><div class="botones-fin">';
       if (nuevas.length) html += '<button type="button" class="btn btn--primario" data-accion="nuevas">Seguir con ' + nuevas.length + " nuevas</button>";
       if (adel.length) html += '<button type="button" class="btn" data-accion="adelantar">Adelantar repaso (' + adel.length + ")</button>";
-      html += "</div>";
+      html += botonPares + "</div>";
     }
 
     var pares = NL.parejas(Datos.normas, leer);
@@ -89,7 +96,8 @@
       html += '<h3 class="norma-sub">Parejas que confundís</h3><ul class="fam-lista">' +
         pares.slice(0, PAREJAS_A_MOSTRAR).map(function (p) {
           return '<li class="fam-item"><div class="fam-item__fila"><span>' + esc(designacion(p.a)) + " ↔ " + esc(designacion(p.b)) +
-            "</span><span>" + p.n + (p.n === 1 ? " fallo" : " fallos") + "</span></div></li>";
+            "</span><span>" + p.n + (p.n === 1 ? " fallo" : " fallos") + "</span></div>" +
+            '<button type="button" class="btn btn--chico" data-par="' + esc(NL.claveParDe(p.a, p.b)) + '">Ver la pareja</button></li>';
         }).join("") + '</ul><div class="botones-fin"><button type="button" class="btn" data-accion="parejas">Practicar estas parejas</button></div>';
     }
 
@@ -102,6 +110,72 @@
     }).join("") + "</ul>" +
       '<div class="botones-fin"><button type="button" class="btn" data-accion="lista">Ver la lista de normas</button></div></section>';
     return html;
+  }
+
+  // ---------- Parejas ----------
+  function parejasVistas() { return Store.pref("parejasVistas") || {}; }
+
+  function marcarVista(clave) {
+    var v = parejasVistas();
+    if (v[clave]) return;
+    var copia = {};
+    Object.keys(v).forEach(function (k) { copia[k] = v[k]; });
+    copia[clave] = 1;
+    Store.pref("parejasVistas", copia);
+  }
+
+  // Las confundidas primero (de la más a la menos fallada); el resto, en el orden de estudio.
+  function armarPares() {
+    var catalogo = NL.paresCatalogo(Datos.normas, Datos.familias);
+    var peso = {};
+    NL.parejas(Datos.normas, leer).forEach(function (p) { peso[NL.claveParDe(p.a, p.b)] = p.n; });
+    return catalogo.map(function (p, i) { return { p: p, i: i }; }).sort(function (x, y) {
+      return (peso[y.p.clave] || 0) - (peso[x.p.clave] || 0) || x.i - y.i;
+    }).map(function (x) { return x.p; });
+  }
+
+  // clave: abre esa pareja; sin clave, la primera que todavía no se vio.
+  function abrirPares(clave) {
+    s.pares = armarPares();
+    var vistas = parejasVistas();
+    var i = clave ? s.pares.map(function (p) { return p.clave; }).indexOf(clave) : -1;
+    if (i < 0) {
+      i = s.pares.findIndex(function (p) { return !vistas[p.clave]; });
+      if (i < 0) i = 0;
+    }
+    s.parIdx = i;
+    s.vista = "parejas";
+  }
+
+  function conMarcas(partes) {
+    return partes.map(function (x) { return x.d ? '<mark class="difiere">' + esc(x.t) + "</mark>" : esc(x.t); }).join("");
+  }
+
+  function htmlColumnaPar(n, partes) {
+    return '<div class="par-col"><p class="norma-codigo">' + esc(n.designacion) + "</p><p>" + conMarcas(partes) + "</p>" +
+      (n.detalle ? '<p class="norma-detalle">' + esc(n.detalle) + "</p>" : "") +
+      '<p class="norma-gancho"><strong>Ayuda de memoria:</strong> ' + esc(n.gancho) + "</p>" +
+      (n.verificar ? '<p><span class="chip chip--verificar">⚠ Verificar</span></p>' : "") + "</div>";
+  }
+
+  function htmlParejas() {
+    var par = s.pares[s.parIdx];
+    var a = Datos.normaPorId[par.a], b = Datos.normaPorId[par.b];
+    var d = NL.diferencias(a.mide, b.mide);
+    var fam = Datos.familias.filter(function (f) { return f.id === a.familia; })[0];
+    var veces = 0;
+    NL.parejas(Datos.normas, leer).forEach(function (p) { if (NL.claveParDe(p.a, p.b) === par.clave) veces = p.n; });
+    return '<section class="pagina" aria-labelledby="h-par"><h2 id="h-par">Parejas que se parecen</h2>' +
+      '<p class="contador"><button type="button" class="btn btn--texto btn--chico" data-accion="hub">← Volver a Normas</button> ' +
+      "Pareja " + (s.parIdx + 1) + " de " + s.pares.length + "</p>" +
+      '<div class="chips"><span class="chip">' + esc(fam ? fam.titulo : a.familia) + "</span>" +
+      (veces ? '<span class="chip chip--verificar">La confundiste ' + veces + (veces === 1 ? " vez" : " veces") + "</span>" : "") + "</div>" +
+      '<p class="norma-detalle">Lo resaltado es lo que las distingue.</p>' +
+      '<div class="par-grid">' + htmlColumnaPar(a, d.a) + htmlColumnaPar(b, d.b) + "</div>" +
+      '<div class="acciones">' +
+      '<button type="button" class="btn" data-accion="par-ant"' + (s.parIdx === 0 ? " disabled" : "") + ">← Anterior</button>" +
+      '<button type="button" class="btn" data-accion="par-sig"' + (s.parIdx >= s.pares.length - 1 ? " disabled" : "") + ">Siguiente →</button></div>" +
+      '<div class="botones-fin"><button type="button" class="btn btn--primario" data-accion="par-probar">Probarme con esta pareja</button></div></section>';
   }
 
   // ---------- Lista de consulta ----------
@@ -212,6 +286,7 @@
       '<div class="botones-fin">';
     if (nuevas.length) html += '<button type="button" class="btn btn--primario" data-accion="nuevas">Seguir con ' + nuevas.length + " nuevas</button>";
     if (adel.length) html += '<button type="button" class="btn" data-accion="adelantar">Adelantar repaso (' + adel.length + ")</button>";
+    if (s.origen === "parejas") html += '<button type="button" class="btn" data-accion="ver-parejas">Volver a las parejas</button>';
     html += '<button type="button" class="btn" data-accion="hub">Volver a Normas</button></div>';
     return html;
   }
@@ -224,6 +299,7 @@
       return conectar(vista);
     }
     if (s.vista === "lista") { vista.innerHTML = htmlLista(); return conectar(vista); }
+    if (s.vista === "parejas") { vista.innerHTML = htmlParejas(); return conectar(vista); }
     if (s.pos >= s.cola.length) { vista.innerHTML = htmlFin(); return conectar(vista); }
 
     var it = todos().porId[s.cola[s.pos]];
@@ -276,6 +352,13 @@
       render(vista);
       var sel = vista.querySelector("[data-meta]");
       if (sel) sel.focus();
+    });
+
+    vista.querySelectorAll("[data-par]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        abrirPares(b.getAttribute("data-par"));
+        render(vista); window.scrollTo(0, 0);
+      });
     });
 
     vista.querySelectorAll("[data-familia]").forEach(function (b) {
@@ -337,7 +420,19 @@
         } else if (acc === "siguiente") {
           siguiente(vista);
         } else if (acc === "hub") {
-          s.vista = "hub"; render(vista); window.scrollTo(0, 0);
+          s.vista = s.vista === "sesion" && s.origen === "parejas" ? "parejas" : "hub";
+          render(vista); window.scrollTo(0, 0);
+        } else if (acc === "ver-parejas") {
+          abrirPares(null); render(vista); window.scrollTo(0, 0);
+        } else if (acc === "par-ant" || acc === "par-sig") {
+          marcarVista(s.pares[s.parIdx].clave);
+          s.parIdx += acc === "par-sig" ? 1 : -1;
+          render(vista); window.scrollTo(0, 0);
+        } else if (acc === "par-probar") {
+          var par = s.pares[s.parIdx];
+          marcarVista(par.clave);
+          nuevaCola(NL.itemsDe(todos(), [par.a, par.b]).map(function (x) { return x.id; }), "pareja", "parejas");
+          render(vista); window.scrollTo(0, 0);
         } else if (acc === "lista") {
           s.vista = "lista"; render(vista); window.scrollTo(0, 0);
         } else if (acc === "repaso") {

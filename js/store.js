@@ -8,7 +8,7 @@
 //   preguntas[id] = {r, n, t, caja, vence, visto, bien, resp} (r: bien | parcial | mal)
 //   normas[id]    = {r, n, t, caja, vence, visto, bien, conf, dias}   (id «n-C127-e» o «n-C127-i»; ver js/normas-logica.js)
 //   diario[AAAA-MM-DD] = {seg, items}   tiempo e ítems calificados ese día
-//   prefs = filtros, modo de cada sección, meta diaria y configuración del simulacro
+//   prefs = filtros, modo de cada sección, meta diaria, configuración del simulacro y parejasVistas (Normas: {"C127|C128": 1})
 //   simulacro = examen en curso o último terminado (ver js/examen.js)
 //   historial = últimos 10 simulacros terminados {fecha, duracion, temas, puntos, maximo, nota, usado}
 // Los registros viejos (sin caja) se convierten al cargar con SRS.normalizar.
