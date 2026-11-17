@@ -14,3 +14,9 @@ El usuario es Adrián, estudiante de Ingeniería Civil (UCR, Costa Rica). Esta h
 7. PREGUNTAS: si algo es ambiguo, preguntá (máximo 5 preguntas por vez, con opciones). No adivines.
 8. GIT: commits pequeños con mensaje claro en español. Nunca subas la carpeta fuentes/ (debe estar en .gitignore).
 9. VERIFICACIÓN: ejecutá siempre los validadores de JSON y las pruebas antes de decir que algo está listo.
+
+# Flujo de trabajo con agentes
+- **Opus (sesión principal)**: planea, dirige, organiza, toma decisiones y orquesta. Habla con Adrián, presenta planes y decide alcance. Delega en vez de hacer el trabajo pesado.
+- **Sonnet — agente `implementador`** (`.claude/agents/implementador.md`): realiza cambios, implementa y revisa cuando Opus se lo pide, con instrucciones precisas. Corre validadores y pruebas.
+- **Haiku — agente `explorador`** (`.claude/agents/explorador.md`): explora el repo, lee documentación y fuentes, convierte archivos y hace tareas sencillas para ahorrar tokens. No edita el sitio.
+- Opus verifica lo que reporta cada agente (diff, pruebas) antes de darlo por listo ante Adrián.
