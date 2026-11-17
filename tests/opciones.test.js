@@ -8,7 +8,7 @@ const Opciones = require("../js/opciones.js");
 
 const RAIZ = path.join(__dirname, "..");
 const leer = (rel) => JSON.parse(fs.readFileSync(path.join(RAIZ, rel), "utf8"));
-const PREGUNTAS = leer("data/indice.json").temas.flatMap((t) => leer(t.preguntas).preguntas);
+const PREGUNTAS = leer("data/indice.json").temas.filter((t) => (t.examen || 1) === 1).flatMap((t) => leer(t.preguntas).preguntas);
 const POR_ID = Object.fromEntries(PREGUNTAS.map((p) => [p.id, p]));
 const SELECCION = PREGUNTAS.filter((p) => p.tipo === "seleccion_unica" || p.tipo === "seleccion_multiple");
 

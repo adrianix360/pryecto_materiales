@@ -21,12 +21,16 @@
   function num(n) { return String(n).replace(".", ","); }
   function pts(n) { return num(n) + (n === 1 ? " punto" : " puntos"); }
 
+  // La configuración del I examen conserva su clave de siempre; la de otro examen lleva su número.
+  function claveConfig() { return Datos.examenId === 1 ? "simulacroConfig" : "simulacroConfig" + Datos.examenId; }
+
   function config() {
-    var c = Store.pref("simulacroConfig") || {};
-    var temas = (c.temas || []).filter(function (t) { return [1, 2, 3].indexOf(t) >= 0; });
+    var c = Store.pref(claveConfig()) || {};
+    var todos = Datos.temasSimulacro().map(function (t) { return t.tema; });
+    var temas = (c.temas || []).filter(function (t) { return todos.indexOf(t) >= 0; });
     return {
       duracion: DURACIONES.indexOf(c.duracion) >= 0 ? c.duracion : 25,
-      temas: c.temas ? temas : [1, 2, 3]
+      temas: c.temas ? temas : todos
     };
   }
 
@@ -88,7 +92,7 @@
   // ---------- Configurar ----------
   function renderConfig() {
     var c = config();
-    var armado = c.temas.length ? Examen.armar(Datos.preguntas, c, 1) : { ids: [], faltan: {} };
+    var armado = c.temas.length ? Examen.armar(Datos.preguntasSimulacro(), c, 1) : { ids: [], faltan: {} };
     var est_ = Examen.ESTRUCTURA[c.duracion];
     var total = 0;
     var filas = Examen.SECCIONES.map(function (t) {
@@ -100,14 +104,14 @@
     var hist = Store.historial().slice(0, 5);
     var html = '<section class="pagina" aria-labelledby="h-sim">' +
       '<h2 id="h-sim">Simulacro de examen</h2>' +
-      '<p class="nota">Como el I examen: selección única, falso o verdadero con justificación de los falsos ' +
+      '<p class="nota">' + (Datos.examenId === 1 ? "Como el I examen" : "Con la estructura del I examen, sobre " + (Datos.examen().simulacro.length > Datos.examen().temas.length ? "todos los temas hasta ahora (acumulativo)" : "estos temas")) + ': selección única, falso o verdadero con justificación de los falsos ' +
       "y respuesta corta. No vas a saber si acertaste hasta terminar.</p>" +
       '<fieldset class="grupo"><legend>Duración</legend><div class="modo modo--3">' +
       DURACIONES.map(function (d) {
         return '<button type="button" class="modo__opcion" data-duracion="' + d + '" aria-pressed="' + (d === c.duracion) + '">' + d + " min</button>";
       }).join("") + "</div></fieldset>" +
       '<fieldset class="grupo"><legend>Temas</legend>' +
-      Datos.temas.map(function (t) {
+      Datos.temasSimulacro().map(function (t) {
         return '<label class="casilla"><input type="checkbox" data-tema="' + t.tema + '"' +
           (c.temas.indexOf(t.tema) >= 0 ? " checked" : "") + "> " + UI.esc(t.tema + ". " + t.titulo) + "</label>";
       }).join("") + "</fieldset>" +
@@ -132,7 +136,7 @@
       b.addEventListener("click", function () {
         var c2 = config();
         c2.duracion = +b.getAttribute("data-duracion");
-        Store.pref("simulacroConfig", c2);
+        Store.pref(claveConfig(), c2);
         render();
         s.vista.querySelector('[data-duracion="' + c2.duracion + '"]').focus();
       });
@@ -144,7 +148,7 @@
         c2.temas = c2.temas.filter(function (x) { return x !== t; });
         if (chk.checked) c2.temas.push(t);
         c2.temas.sort();
-        Store.pref("simulacroConfig", c2);
+        Store.pref(claveConfig(), c2);
         render();
         s.vista.querySelector('[data-tema="' + t + '"]').focus();
       });
@@ -153,7 +157,7 @@
     emp.addEventListener("click", function () {
       var c2 = config();
       var semilla = (ahora() ^ Math.floor(Math.random() * 1e9)) >>> 0;
-      guardar(Examen.nuevo(Datos.preguntas, c2, ahora(), semilla));
+      guardar(Examen.nuevo(Datos.preguntasSimulacro(), c2, ahora(), semilla));
       s.avisos = {};
       s.confirmar = false;
       s.tiempoAcabado = false;
@@ -392,7 +396,7 @@
       var p = s.porId[it.id];
       var prev = Store.pregunta(it.id);
       var reg = SRS.aplicar(prev, "mal", {
-        id: it.id, hoy: hoy, examen: Datos.indice.examen, verificar: !!p.verificar, ahora: ahora()
+        id: it.id, hoy: hoy, examen: Datos.fechaExamen(), verificar: !!p.verificar, ahora: ahora()
       });
       reg.bien = prev && prev.bien || 0;
       var resp = e.resp[it.id] || {};
@@ -501,7 +505,7 @@
     mostrar: function (vista) {
       if (!s.porId) {
         s.porId = {};
-        Datos.preguntas.forEach(function (p) { s.porId[p.id] = p; });
+        Datos.todasPreguntas.forEach(function (p) { s.porId[p.id] = p; });
       }
       var e = est();
       if (e && e.ids && e.ids.some(function (id) { return !s.porId[id]; })) {

@@ -8,6 +8,7 @@ y que las preguntas nuevas no usen "todas las anteriores". Sale con código 1 si
 import glob
 import json
 import os
+import re
 import sys
 
 RAIZ = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), "..")
@@ -34,6 +35,34 @@ fu = cargar("data/fuentes.json") or {"fuentes": {}}
 FUENTES = fu["fuentes"]
 ids = {}
 
+# Índice: temas, subtemas permitidos y exámenes (II examen: temas 4 y 8, figuras en img/examen2/).
+indice = cargar("data/indice.json") or {"temas": [], "examenes": []}
+SUBTEMAS = {t["tema"]: set(t.get("subtemas", {})) for t in indice["temas"]}
+EXAMEN_DE_TEMA = {t["tema"]: t.get("examen", 1) for t in indice["temas"]}
+for t in indice["temas"]:
+    if t.get("examen", 1) not in (1, 2):
+        err("indice", f"tema {t['tema']}: examen inválido {t.get('examen')!r}")
+    for c in t.get("subtemas", {}):
+        if not c.startswith(str(t["tema"])):
+            err("indice", f"subtema {c} no pertenece al tema {t['tema']}")
+for ex in indice.get("examenes", []):
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(ex.get("fecha", ""))):
+        err("indice", f"examen {ex.get('id')}: fecha inválida {ex.get('fecha')!r}")
+    for n in ex.get("temas", []) + ex.get("simulacro", []):
+        if n not in SUBTEMAS:
+            err("indice", f"examen {ex.get('id')}: tema {n} no está en temas[]")
+for k, v in FUENTES.items():
+    if k.startswith("E") and not v.get("archivo", "").startswith("examen2/pdf/"):
+        err("fuentes " + k, "el archivo de las fuentes E.. debe empezar con examen2/pdf/")
+
+
+def tema_ok(i, x):
+    t = x.get("tema")
+    if t not in SUBTEMAS:
+        err(i, f"tema {t!r} no está en indice.json")
+    elif x.get("subtema") not in SUBTEMAS[t]:
+        err(i, f"subtema {x.get('subtema')!r} no existe en el tema {t}")
+
 
 def ref_ok(i, r, campo="fuente"):
     if r.get("doc") not in FUENTES:
@@ -50,9 +79,11 @@ def unico(i):
     ids[i] = True
 
 
-def figura_ok(i, fig):
+def figura_ok(i, fig, tema=None):
     if not fig:
         return
+    if EXAMEN_DE_TEMA.get(tema) == 2 and not fig.get("src", "").startswith("img/examen2/"):
+        err(i, "las figuras del II examen van en img/examen2/")
     if not os.path.exists(os.path.join(RAIZ, fig["src"])):
         err(i, f"figura inexistente {fig['src']}")
     if not fig.get("alt"):
@@ -77,7 +108,8 @@ for ruta in sorted(glob.glob(os.path.join(RAIZ, "data/tarjetas/*.json"))):
             err(i, f"tipo de tarjeta inválido {t.get('tipo')!r}")
         for r in t.get("fuente", []):
             ref_ok(i, r)
-        figura_ok(i, t.get("figura"))
+        tema_ok(i, t)
+        figura_ok(i, t.get("figura"), t.get("tema"))
 
 for ruta in sorted(glob.glob(os.path.join(RAIZ, "data/preguntas/*.json"))):
     d = cargar(os.path.relpath(ruta, RAIZ))
@@ -131,7 +163,8 @@ for ruta in sorted(glob.glob(os.path.join(RAIZ, "data/preguntas/*.json"))):
                 err(i, "puntos_clave debe tener de 1 a 5 elementos")
             if p.get("origen") == "teoria" and not (2 <= len(pk) <= 5):
                 err(i, "pregunta de teoría: puntos_clave debe tener de 2 a 5")
-        figura_ok(i, p.get("figura"))
+        tema_ok(i, p)
+        figura_ok(i, p.get("figura"), p.get("tema"))
         if p.get("clave") == "pendiente":
             avisos.append(f"{i}: clave pendiente")
 
@@ -143,6 +176,7 @@ for t in g["terminos"]:
     if t["termino"].lower() in vistos:
         err(i, "término repetido")
     vistos.add(t["termino"].lower())
+    tema_ok(i, t)
     if not t.get("definicion") or not t.get("fuente"):
         err(i, "término sin definición o sin fuente")
     for r in t.get("fuente", []):

@@ -249,3 +249,15 @@ Decisiones del 12/10/2026:
 | C24 | D5821 y D4791; norma de abrasión por corte rotativo | Apunte de Adrián: D5821 = partículas planas o elongadas. Diapositiva 15: 19: D4791 = planas y elongadas; D5821-13(2017) = porcentaje de partículas fracturadas. Diapositiva 15: 11 dice C994 para el corte rotativo (podría ser C944) | **D4791 = planas y elongadas; D5821 = fracturadas** (diapositiva, fuente del profe). **C994: VERIFICAR** (decisión del 12/10/2026) |
 | C25 | Clave de X17, pregunta 1 (corrección en la malla N.° 8) | La clave usa factor = 100/80 = 1,25 y lo aplica bien en las mallas N.° 16 a N.° 100, pero pone 100 en la N.° 8 (75 × 1,25 = 93,75; 100/75 = 1,33) | **El concepto** (cambian todos los % pasando). El factor lleva **VERIFICAR** |
 | C26 | ¿La GBS indica la resistencia del agregado? | Clave de X17, pregunta 4: «da una idea cuantitativa de qué tan resistente puede ser»; PCA 114 (impresa): normalmente no se usa como medida de calidad, aunque los porosos suelen tenerla baja | **VERIFICAR** (ninguna es del profe; se muestran las dos) |
+
+---
+
+# ALCANCE — II examen (miércoles 2 de diciembre de 2026)
+
+**Aprobado por Adrián:** 17 de noviembre de 2026. El II examen es acumulativo (programa, fuente 21): el simulacro del examen 2 mezcla los temas 1, 2, 3, 4 y 8.
+
+- **Contenido nuevo:** solo lo que traen los 19 PDFs de `fuentes/examen2/pdf/` (códigos E01–E19, ver `fuentes/examen2/codigos.json`).
+- **Tema 4, Cemento hidráulico:** 4A Historia y definición · 4B Producción del cemento y del clínker · 4C Compuestos químicos, hidratación y sulfato de calcio · 4D Tipos y clasificación · 4E Propiedades físicas y mecánicas y sus ensayos · 4F Puzolanas y adiciones minerales.
+- **Tema 8, Concreto hidráulico:** 8A Concreto fresco · 8B Diseño de mezclas (solo pasos, criterios y tablas; sin resolver problemas) · 8C Concreto endurecido y factores de la resistencia · 8D Durabilidad · 8E Ensayos de laboratorio del concreto · 8F Aditivos (tema 7 del programa; solo lo que trae la Tarea 17, E19).
+- **Fuentes "del profe" (mandan):** E01–E09 (manuales de laboratorio de cementos y de concreto, presentaciones del Ing. Rodríguez y diseño de mezclas). Respaldo: E10 (INTE 06-11-15:2005), E11–E17 (lecturas de grupos, PCA y Navas) y E18–E19 (tareas). Las contradicciones se resuelven con las reglas de §0.
+- **Tareas 16 y 17:** solo lo teórico. Las afirmaciones de la Tarea 16 que contradicen otras fuentes no se usan.

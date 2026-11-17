@@ -1,0 +1,3261 @@
+{
+ "tema": 4,
+ "titulo": "Cemento hidráulico",
+ "preguntas": [
+  {
+   "id": "p4-4A-t01",
+   "tema": 4,
+   "subtema": "4A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Quién patentó en 1824 el material que llamó «cemento Portland»?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Aspdin patentó el producto el 15 de diciembre de 1824 y lo llamó «cemento Portland» por su parecido con la caliza de la isla de Portland. Smeaton (1758) y Vicat (1817) fueron anteriores y no patentaron ese cemento; Johnson (1845) lo llevó a escala industrial.",
+   "fuente": [
+    {
+     "doc": "E06",
+     "pag": 8
+    },
+    {
+     "doc": "E06",
+     "pag": 9
+    },
+    {
+     "doc": "E11",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Louis Vicat, ingeniero francés"
+    },
+    {
+     "id": "b",
+     "texto": "John Smeaton, ingeniero inglés"
+    },
+    {
+     "id": "c",
+     "texto": "Joseph Aspdin, albañil inglés (patente No. 5022)"
+    },
+    {
+     "id": "d",
+     "texto": "Isaac Charles Johnson, que lo produjo a escala industrial"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4A-t02",
+   "tema": 4,
+   "subtema": "4A",
+   "tipo": "seleccion_unica",
+   "enunciado": "En 1758, John Smeaton (faro de Eddystone) descubrió que:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Smeaton notó que las arcillas con caliza daban más resistencia y fue el primero en conocer las propiedades químicas de la cal hidráulica. La proporción 1:3 es de Vicat (1817) y la importancia de la temperatura de cocción es de Johnson (1845).",
+   "fuente": [
+    {
+     "doc": "E06",
+     "pag": 6
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "la temperatura de cocción de las materias primas era determinante"
+    },
+    {
+     "id": "b",
+     "texto": "la cal viva mezclada con ceniza de carbón fraguaba bajo el agua"
+    },
+    {
+     "id": "c",
+     "texto": "las arcillas combinadas con caliza daban mayor resistencia que la caliza sola"
+    },
+    {
+     "id": "d",
+     "texto": "una parte de arcilla por tres de cal daba el mejor cemento"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4A-t03",
+   "tema": 4,
+   "subtema": "4A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Vicat propuso en 1817 moler juntas calizas y arcillas en la proporción de:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La combinación precursora del cemento de Vicat fue una parte de arcilla por tres de cal, molidas conjuntamente. Las otras proporciones no aparecen en la fuente y el yeso se agrega al clínker mucho después, en la molienda final.",
+   "fuente": [
+    {
+     "doc": "E06",
+     "pag": 7
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "una parte de arcilla por una de cal"
+    },
+    {
+     "id": "b",
+     "texto": "una parte de arcilla por tres partes de cal"
+    },
+    {
+     "id": "c",
+     "texto": "una parte de yeso por tres de clínker"
+    },
+    {
+     "id": "d",
+     "texto": "tres partes de arcilla por una de cal"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4A-t04",
+   "tema": 4,
+   "subtema": "4A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué descubrió Isaac Charles Johnson en 1845 que lo llevó a producir a escala industrial el prototipo del cemento moderno?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Johnson quemó el crudo a una temperatura tan alta que la masa casi se vitrificó, lo que dio el cemento Portland como se conoce. Las cenizas volcánicas son de los romanos y la proporción 1:3 es de Vicat.",
+   "fuente": [
+    {
+     "doc": "E06",
+     "pag": 10
+    },
+    {
+     "doc": "E11",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "La proporción de una parte de arcilla por tres de cal"
+    },
+    {
+     "id": "b",
+     "texto": "La importancia de la temperatura en la cocción de las materias primas"
+    },
+    {
+     "id": "c",
+     "texto": "Que el yeso regula el fraguado"
+    },
+    {
+     "id": "d",
+     "texto": "Que las cenizas volcánicas reaccionan con la cal"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4A-t05",
+   "tema": 4,
+   "subtema": "4A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Un cemento hidráulico solo endurece si se deja secar al aire; bajo el agua pierde su resistencia.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. Cemento hidráulico es el que fragua y endurece por reacción química con agua, y una vez endurecido conserva su resistencia y estabilidad incluso bajo el agua.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 2
+    },
+    {
+     "doc": "E10",
+     "pag": 6
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4A-t06",
+   "tema": 4,
+   "subtema": "4A",
+   "tipo": "verdadero_falso",
+   "enunciado": "La cal viva se obtiene calcinando CaCO3 entre 700 °C y 1200 °C: CaCO3 + calor → CaO + CO2.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. Después, la cal apagada o hidratada se obtiene al añadir agua: CaO + H2O → Ca(OH)2 + calor.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 6
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4A-t07",
+   "tema": 4,
+   "subtema": "4A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Defina cemento hidráulico.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La definición ASTM C125 de E03 se complementa con la de la norma INTE (E10): el endurecido mantiene resistencia y estabilidad aun bajo el agua.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 2
+    },
+    {
+     "doc": "E10",
+     "pag": 6
+    }
+   ],
+   "respuesta_modelo": "Cemento que fragua y endurece por reacción química con agua (ASTM C125); una vez endurecido conserva su resistencia y estabilidad incluso bajo el agua.",
+   "puntos_clave": [
+    "fragua y endurece",
+    "por reacción química con agua",
+    "conserva resistencia y estabilidad bajo el agua"
+   ]
+  },
+  {
+   "id": "p4-4A-t08",
+   "tema": 4,
+   "subtema": "4A",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los hitos de normalización del cemento Portland que son correctos.\nPuede marcar varias alternativas",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Las tres primeras fechas son de la presentación de historia. 1845 es el año en que Johnson produjo a escala industrial el prototipo del cemento moderno, no el de la ASTM.",
+   "fuente": [
+    {
+     "doc": "E06",
+     "pag": 10
+    },
+    {
+     "doc": "E06",
+     "pag": 12
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "1930: aparecen los cinco tipos de cemento Portland"
+    },
+    {
+     "id": "b",
+     "texto": "1904: la ASTM publica por primera vez sus estándares de calidad"
+    },
+    {
+     "id": "c",
+     "texto": "1917: el US Bureau of Standards y la ASTM establecen una fórmula normalizada"
+    },
+    {
+     "id": "d",
+     "texto": "1845: la ASTM establece los cinco tipos de cemento Portland"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "id": "p4-4B-t01",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál es el orden correcto de las etapas de producción del cemento Portland?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La roca se tritura (125 mm y luego 20 mm), las materias primas se muelen y mezclan, se calcinan en el horno para obtener el clínker y por último el clínker se muele con yeso. Las otras opciones invierten etapas que no pueden ocurrir antes (no se puede moler clínker que aún no existe).",
+   "fuente": [
+    {
+     "doc": "E07",
+     "pag": 1
+    },
+    {
+     "doc": "E07",
+     "pag": 2
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Molienda del clínker con yeso, trituración, calcinación, mezcla de materias primas"
+    },
+    {
+     "id": "b",
+     "texto": "Calcinación, trituración, molienda del clínker con yeso, mezcla de materias primas"
+    },
+    {
+     "id": "c",
+     "texto": "Trituración, molienda y mezcla de materias primas, calcinación en el horno, molienda del clínker con yeso"
+    },
+    {
+     "id": "d",
+     "texto": "Mezcla de materias primas, molienda del clínker con yeso, trituración, calcinación"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4B-t02",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Para qué se muele el clínker junto con yeso en la etapa final?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El yeso se agrega en la molienda final para controlar el fraguado. La fase líquida, la alita y la temperatura de clinkerización pertenecen al horno, que es una etapa anterior.",
+   "fuente": [
+    {
+     "doc": "E11",
+     "pag": 2
+    },
+    {
+     "doc": "E11",
+     "pag": 3
+    },
+    {
+     "doc": "E07",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Para formar la fase líquida del clínker"
+    },
+    {
+     "id": "b",
+     "texto": "Para bajar la temperatura de clinkerización"
+    },
+    {
+     "id": "c",
+     "texto": "Para producir alita a partir de la belita"
+    },
+    {
+     "id": "d",
+     "texto": "Para obtener el cemento y controlar el tiempo de fraguado"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4B-t03",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la producción moderna por vía seca, ¿qué porcentaje de la calcinación suministra el precalentador antes de que el material entre al horno?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El precalentador aporta cerca del 40 %. El horno instantáneo, presente en algunas fábricas, aporta entre 85 % y 95 %.",
+   "fuente": [
+    {
+     "doc": "E07",
+     "pag": 2
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Entre 85 % y 95 %"
+    },
+    {
+     "id": "b",
+     "texto": "Cerca del 5 %"
+    },
+    {
+     "id": "c",
+     "texto": "Cerca del 100 %"
+    },
+    {
+     "id": "d",
+     "texto": "Cerca del 40 %"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4B-t04",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿A partir de qué temperatura se forma la fase líquida en el horno de clínker?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La fase líquida aparece cuando la temperatura excede 1250 °C. A 700 °C el material aún es un polvo de flujo libre y 1550 °C es el techo del rango en que el crudo se convierte en clínker.",
+   "fuente": [
+    {
+     "doc": "E08",
+     "pag": 1
+    },
+    {
+     "doc": "E03",
+     "pag": 8
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Más de 700 °C"
+    },
+    {
+     "id": "b",
+     "texto": "Más de 1250 °C"
+    },
+    {
+     "id": "c",
+     "texto": "Más de 900 °C"
+    },
+    {
+     "id": "d",
+     "texto": "Más de 1550 °C"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4B-t05",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cómo se forma la alita en el horno?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El líquido permite que la belita reaccione con el CaO libre y forme alita (rango de 1200 a 1350 °C en adelante). La arcilla se deshidrata a 700 °C y el C3A y el C4AF cristalizan al enfriar; no forman alita.",
+   "fuente": [
+    {
+     "doc": "E08",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Por cristalización del C3A durante el enfriamiento"
+    },
+    {
+     "id": "b",
+     "texto": "Por deshidratación de la arcilla a 700 °C"
+    },
+    {
+     "id": "c",
+     "texto": "Por reacción de la belita con el CaO libre, gracias a la fase líquida"
+    },
+    {
+     "id": "d",
+     "texto": "Por hidratación de la belita al salir del horno"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4B-t06",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué ocurre en el horno a 700 °C?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "A 700 °C no hay reacción entre las partículas. Los nódulos y la alita aparecen a temperaturas mucho mayores, y la cristalización del C3A y el C4AF ocurre en el enfriamiento.",
+   "fuente": [
+    {
+     "doc": "E08",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Aumenta la cantidad y el tamaño de la alita"
+    },
+    {
+     "id": "b",
+     "texto": "El C3A y el C4AF cristalizan en la fase líquida"
+    },
+    {
+     "id": "c",
+     "texto": "Las materias primas siguen siendo un polvo de flujo libre; hay pérdida de agua y la arcilla deshidratada se recristaliza"
+    },
+    {
+     "id": "d",
+     "texto": "Se forma la fase líquida y empiezan a formarse nódulos"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4B-t07",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Si en el horno no hay suficiente líquido, se produce un clínker polvoriento.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. Con líquido suficiente se forman nódulos; la insuficiencia de líquido da un clínker polvoriento.",
+   "fuente": [
+    {
+     "doc": "E08",
+     "pag": 1
+    },
+    {
+     "doc": "E11",
+     "pag": 4
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4B-t08",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "verdadero_falso",
+   "enunciado": "En la vía húmeda, las materias primas se muelen en seco y se alimentan al horno como polvo.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. Eso es la vía seca. En la vía húmeda las materias primas se mezclan con agua y forman una lechada (pasta) que se almacena y se bombea.",
+   "fuente": [
+    {
+     "doc": "E07",
+     "pag": 1
+    },
+    {
+     "doc": "E11",
+     "pag": 2
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4B-t09",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Durante el enfriamiento, el C3A y el C4AF cristalizan en la fase líquida y aparece una estructura laminar en los cristales de belita.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. Los nódulos de clínker no cambian en el enfriamiento, pero el C3A y el C4AF cristalizan en la fase líquida.",
+   "fuente": [
+    {
+     "doc": "E08",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4B-t10",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Enumere las cuatro etapas de producción del cemento Portland.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Son las etapas 1 a 4 de la lectura de producción de EB201 (E07).",
+   "fuente": [
+    {
+     "doc": "E07",
+     "pag": 1
+    },
+    {
+     "doc": "E07",
+     "pag": 2
+    }
+   ],
+   "respuesta_modelo": "1) Trituración de la roca y almacenamiento; 2) molienda y mezcla de las materias primas (vía seca o húmeda); 3) calcinación en el horno para obtener el clínker; 4) molienda del clínker con yeso y despacho.",
+   "puntos_clave": [
+    "trituración",
+    "molienda y mezcla de materias primas",
+    "calcinación en el horno (clínker)",
+    "molienda del clínker con yeso"
+   ]
+  },
+  {
+   "id": "p4-4B-t11",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Describa qué ocurre en el horno a 1350-1450 °C y durante el enfriamiento.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Resumen de la Fig. 2-10 (E08).",
+   "fuente": [
+    {
+     "doc": "E08",
+     "pag": 1
+    }
+   ],
+   "respuesta_modelo": "A 1350-1450 °C la aglomeración continúa y, con líquido suficiente, se forman nódulos; la belita disminuye en cantidad (y crece) y aumentan la cantidad y el tamaño de la alita. En el enfriamiento los nódulos no cambian, pero el C3A y el C4AF cristalizan en la fase líquida.",
+   "puntos_clave": [
+    "continúa la aglomeración y se forman nódulos",
+    "disminuye la belita y aumenta la alita",
+    "en el enfriamiento cristalizan el C3A y el C4AF"
+   ]
+  },
+  {
+   "id": "p4-4B-t12",
+   "tema": 4,
+   "subtema": "4B",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque las afirmaciones correctas sobre la molienda final del cemento.\nPuede marcar varias alternativas",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El yeso se muele con el clínker (etapa 4); el separador devuelve el rechazo al molino y casi todo pasa el tamiz de 45 µm. El yeso no se agrega en la planta de concreto.",
+   "fuente": [
+    {
+     "doc": "E11",
+     "pag": 3
+    },
+    {
+     "doc": "E03",
+     "pag": 14
+    },
+    {
+     "doc": "E07",
+     "pag": 2
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "El rechazo del separador regresa al molino"
+    },
+    {
+     "id": "b",
+     "texto": "Casi todo el cemento debe pasar el tamiz de 45 µm (N.º 325)"
+    },
+    {
+     "id": "c",
+     "texto": "El clínker y el yeso se muelen juntos"
+    },
+    {
+     "id": "d",
+     "texto": "El yeso se agrega después, en la planta de concreto"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "id": "p4-4C-t01",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál es la fórmula del aluminato tricálcico (C3A)?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "C3A = 3CaO·Al2O3. 3CaO·SiO2 es el C3S (alita), 2CaO·SiO2 es el C2S (belita) y 4CaO·Al2O3·Fe2O3 es el C4AF.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 9
+    },
+    {
+     "doc": "E15",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "3CaO·Al2O3"
+    },
+    {
+     "id": "b",
+     "texto": "4CaO·Al2O3·Fe2O3"
+    },
+    {
+     "id": "c",
+     "texto": "3CaO·SiO2"
+    },
+    {
+     "id": "d",
+     "texto": "2CaO·SiO2"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4C-t02",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué compuesto del clínker contribuye mucho al aumento de resistencia después de una semana?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El C2S se hidrata lento y aporta resistencia después de la primera semana. El C3S da resistencia temprana, el C3A solo un poco y el C4AF muy poco.",
+   "fuente": [
+    {
+     "doc": "E15",
+     "pag": 4
+    },
+    {
+     "doc": "E15",
+     "pag": 5
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "C3S (alita)"
+    },
+    {
+     "id": "b",
+     "texto": "C2S (belita)"
+    },
+    {
+     "id": "c",
+     "texto": "C4AF (felita)"
+    },
+    {
+     "id": "d",
+     "texto": "C3A (celita)"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4C-t03",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál compuesto libera más calor al reaccionar entre los cuatro principales del clínker?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El C3A libera 207 cal/g, seguido del C3S (120), el C4AF (100) y el C2S (62).",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 10
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "C3S, con 120 cal/g"
+    },
+    {
+     "id": "b",
+     "texto": "C3A, con 207 cal/g"
+    },
+    {
+     "id": "c",
+     "texto": "C4AF, con 100 cal/g"
+    },
+    {
+     "id": "d",
+     "texto": "C2S, con 62 cal/g"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4C-t04",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué compuesto del clínker debe estar en bajo porcentaje para que el cemento resista mejor los suelos y aguas con sulfatos?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Los sulfatos reaccionan con el aluminato (C3A) y forman etringita expansiva; por eso los cementos con poco C3A resisten mejor (el tipo V no pasa de 5 % de C3A).",
+   "fuente": [
+    {
+     "doc": "E15",
+     "pag": 5
+    },
+    {
+     "doc": "E03",
+     "pag": 25
+    },
+    {
+     "doc": "E11",
+     "pag": 7
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "C2S"
+    },
+    {
+     "id": "b",
+     "texto": "Ninguno: la resistencia a sulfatos no depende de la composición"
+    },
+    {
+     "id": "c",
+     "texto": "C3A"
+    },
+    {
+     "id": "d",
+     "texto": "C3S"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4C-t05",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué compuesto produce la hidratación del C3A en presencia de yeso?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "C3A + yeso + agua forma etringita (trisulfoaluminato de calcio hidratado), lo que controla la hidratación del C3A. La portlandita y el C-S-H salen de los silicatos y la brucita es Mg(OH)2.",
+   "fuente": [
+    {
+     "doc": "E15",
+     "pag": 3
+    },
+    {
+     "doc": "E03",
+     "pag": 12
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Etringita"
+    },
+    {
+     "id": "b",
+     "texto": "Silicato de calcio hidratado (C-S-H)"
+    },
+    {
+     "id": "c",
+     "texto": "Portlandita"
+    },
+    {
+     "id": "d",
+     "texto": "Brucita"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4C-t06",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué productos forma la hidratación del C3S?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El C3S y el C2S forman C-S-H e hidróxido de calcio. La etringita y el monosulfoaluminato vienen del C3A, el ferroaluminato del C4AF.",
+   "fuente": [
+    {
+     "doc": "E15",
+     "pag": 3
+    },
+    {
+     "doc": "E03",
+     "pag": 12
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Etringita y monosulfoaluminato"
+    },
+    {
+     "id": "b",
+     "texto": "Silicato de calcio hidratado (C-S-H) e hidróxido de calcio"
+    },
+    {
+     "id": "c",
+     "texto": "Ferroaluminato de calcio hidratado"
+    },
+    {
+     "id": "d",
+     "texto": "Yeso y brucita"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4C-t07",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según el índice de hidraulicidad de Vicat, los cementos Portland tienen valores de:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "iv = (SiO2 + Al2O3 + Fe2O3)/(CaO + MgO); los Portland están entre 0,50 y 0,64. Cal aérea: 0 a 0,1; medianamente hidráulica: 0,16 a 0,31; hidráulica normal: 0,31 a 0,42.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 5
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "0,31 a 0,42"
+    },
+    {
+     "id": "b",
+     "texto": "0 a 0,1"
+    },
+    {
+     "id": "c",
+     "texto": "0,16 a 0,31"
+    },
+    {
+     "id": "d",
+     "texto": "0,50 a 0,64"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4C-t08",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "verdadero_falso",
+   "enunciado": "La alita es el nombre común del silicato bicálcico (C2S).",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. La alita es el C3S (silicato tricálcico); el C2S es la belita. La celita es el C3A y la felita es el C4AF.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 8
+    },
+    {
+     "doc": "E15",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4C-t09",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "verdadero_falso",
+   "enunciado": "La portlandita ayuda a proteger las armaduras de la corrosión porque mantiene un pH básico de aproximadamente 13.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. Es el hidróxido de calcio, Ca(OH)2, formado por la hidratación del C3S y el C2S.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 13
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4C-t10",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "verdadero_falso",
+   "enunciado": "Un módulo hidráulico mayor que 2,3 produce resistencias mecánicas débiles.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. MH debe estar entre 1,7 y 2,3: MH < 1,7 da resistencias débiles y MH > 2,3 da inestabilidad de volumen.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 5
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4C-t11",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "verdadero_falso",
+   "enunciado": "Los álcalis del cemento aceleran el fraguado y aumentan la contracción por secado.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. Además, con agregados reactivos y humedad producen reacciones álcali-agregado.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 7
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4C-t12",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Explique la función del sulfato de calcio (yeso) en el cemento.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "E15 y E10 coinciden: el sulfato regula el fraguado del cemento.",
+   "fuente": [
+    {
+     "doc": "E15",
+     "pag": 5
+    },
+    {
+     "doc": "E10",
+     "pag": 8
+    }
+   ],
+   "respuesta_modelo": "Reacciona con el C3A y forma etringita, con lo que controla la hidratación del aluminato y regula el tiempo de fraguado; sin sulfato el fraguado sería rápido. También ayuda a controlar la contracción por secado.",
+   "puntos_clave": [
+    "reacciona con el C3A y forma etringita",
+    "regula el tiempo de fraguado",
+    "sin sulfato el fraguado sería rápido"
+   ]
+  },
+  {
+   "id": "p4-4C-t13",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique las reacciones de los sulfatos de calcio, de sodio y de magnesio con el concreto endurecido y sus productos.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Resumen de la diapositiva de ataque por sulfatos de E03.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 25
+    }
+   ],
+   "respuesta_modelo": "Sulfato de calcio: ataca el aluminato de calcio hidratado y forma etringita. Sulfato de sodio: reacciona con el Ca(OH)2 y el aluminato hidratado y forma etringita y yeso. Sulfato de magnesio: forma etringita, yeso y brucita.",
+   "puntos_clave": [
+    "sulfato de calcio: etringita",
+    "sulfato de sodio: etringita y yeso",
+    "sulfato de magnesio: etringita, yeso y brucita"
+   ]
+  },
+  {
+   "id": "p4-4C-t14",
+   "tema": 4,
+   "subtema": "4C",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque las formas de sulfato de calcio que se usan en el cemento.\nPuede marcar varias alternativas",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El sulfato de calcio puede ser yeso, hemihidrato o anhidrita. La portlandita es hidróxido de calcio, un producto de hidratación del C3S y el C2S.",
+   "fuente": [
+    {
+     "doc": "E15",
+     "pag": 1
+    },
+    {
+     "doc": "E10",
+     "pag": 8
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Yeso, CaSO4·2H2O"
+    },
+    {
+     "id": "b",
+     "texto": "Anhidrita, CaSO4"
+    },
+    {
+     "id": "c",
+     "texto": "Portlandita, Ca(OH)2"
+    },
+    {
+     "id": "d",
+     "texto": "Hemihidrato, CaSO4·½H2O"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "d"
+   ]
+  },
+  {
+   "id": "p4-4D-t01",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué tipo de cemento ASTM C150 se usa cuando se necesita alta resistencia inicial?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El tipo III da alta resistencia temprana (partículas más finas, alto calor de hidratación). El IV es de bajo calor y el V de alta resistencia a sulfatos.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 16
+    },
+    {
+     "doc": "E11",
+     "pag": 7
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Tipo IV"
+    },
+    {
+     "id": "b",
+     "texto": "Tipo V"
+    },
+    {
+     "id": "c",
+     "texto": "Tipo III"
+    },
+    {
+     "id": "d",
+     "texto": "Tipo I"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4D-t02",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué tipo de cemento ASTM C150 se recomienda para concreto masivo, como presas, donde hay que minimizar el calor de hidratación?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El tipo IV es de bajo calor de hidratación y desarrolla la resistencia más lentamente. El III tiene alto calor y el IA es de uso general con aire incluido.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 16
+    },
+    {
+     "doc": "E11",
+     "pag": 7
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Tipo II"
+    },
+    {
+     "id": "b",
+     "texto": "Tipo IA"
+    },
+    {
+     "id": "c",
+     "texto": "Tipo III"
+    },
+    {
+     "id": "d",
+     "texto": "Tipo IV"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4D-t03",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué contenido máximo de C3A tiene el cemento tipo V (alta resistencia a sulfatos)?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La alta resistencia a sulfatos del tipo V se atribuye a su bajo C3A, que no excede 5 %. El 8 % es el máximo del tipo II.",
+   "fuente": [
+    {
+     "doc": "E11",
+     "pag": 5
+    },
+    {
+     "doc": "E11",
+     "pag": 7
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "No se limita"
+    },
+    {
+     "id": "b",
+     "texto": "5 %"
+    },
+    {
+     "id": "c",
+     "texto": "8 %"
+    },
+    {
+     "id": "d",
+     "texto": "13 %"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4D-t04",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la ASTM C595, el cemento tipo IP es:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "IP es Portland puzolánico de uso general. S es cemento de escoria, I(SM) es modificado con escoria y P es el puzolánico de alta resistencia inicial.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 18
+    },
+    {
+     "doc": "E11",
+     "pag": 8
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Cemento Portland de alta resistencia inicial"
+    },
+    {
+     "id": "b",
+     "texto": "Cemento de escoria o siderúrgico"
+    },
+    {
+     "id": "c",
+     "texto": "Cemento Portland puzolánico de uso general"
+    },
+    {
+     "id": "d",
+     "texto": "Cemento Portland modificado con escoria"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4D-t05",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la ASTM C1157, el tipo HE corresponde a un cemento de:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "HE = alta resistencia inicial. HS es alta resistencia a sulfatos, LH bajo calor y GU uso general.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 19
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Bajo calor de hidratación"
+    },
+    {
+     "id": "b",
+     "texto": "Alta resistencia a sulfatos"
+    },
+    {
+     "id": "c",
+     "texto": "Alta resistencia inicial"
+    },
+    {
+     "id": "d",
+     "texto": "Uso general"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4D-t06",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la clasificación INTE, el tipo MC es el cemento hidráulico modificado con:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "ME es escoria, MF humo de sílice, MP puzolana, ceniza volante o esquisto, y MC caliza. MM es el mixto.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 22
+    },
+    {
+     "doc": "E10",
+     "pag": 9
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Puzolana, ceniza volante o esquisto"
+    },
+    {
+     "id": "b",
+     "texto": "Caliza"
+    },
+    {
+     "id": "c",
+     "texto": "Humo de sílice"
+    },
+    {
+     "id": "d",
+     "texto": "Escoria de alto horno"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4D-t07",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "La designación INTE «MM/B (P-C)-28» indica un cemento:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El formato es tipo/grado de sustitución (adiciones) – clase de resistencia. MM es mixto, B es 21-35 % de adiciones (P = puzolana, C = caliza) y 28 es la resistencia mínima a 28 días.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 23
+    },
+    {
+     "doc": "E10",
+     "pag": 11
+    }
+   ],
+   "verificar": "E03 p.23 usa MM/B (P-C)-28 y E03 p.27 usa MM/C (P-C)-28; se toma la designación de p.23 y la Tabla 3 de E10.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Modificado con humo de sílice, clase B, de 28 días de curado y 35 MPa"
+    },
+    {
+     "id": "b",
+     "texto": "Modificado mixto, clase B, con puzolana y caliza entre 21 % y 35 %, de 28 MPa a 28 días"
+    },
+    {
+     "id": "c",
+     "texto": "Portland ordinario de clase 28 con puzolana opcional"
+    },
+    {
+     "id": "d",
+     "texto": "Modificado con escoria entre 65 % y 79 % y 28 MPa a 7 días"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4D-t08",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según INTE, ¿qué porcentaje de clínker tiene un cemento de la clase B (para los tipos que la incluyen)?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Clase A: 80-94; clase B: 65-79; clase C: 45-64. El 95 a 100 % es el tipo I (CPO).",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 10
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "95 % a 100 %"
+    },
+    {
+     "id": "b",
+     "texto": "45 % a 64 %"
+    },
+    {
+     "id": "c",
+     "texto": "80 % a 94 %"
+    },
+    {
+     "id": "d",
+     "texto": "65 % a 79 %"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4D-t09",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según INTE, el sufijo «BRa» indica un cemento con:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "BRa = baja reactividad a álcalis (máx. 0,02 % a 14 días y 0,06 % a 56 días, ASTM C227). BH es bajo calor, AS alta resistencia a sulfatos y BL blanco.",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 14
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Blancura mínima de 80 %"
+    },
+    {
+     "id": "b",
+     "texto": "Bajo calor de hidratación"
+    },
+    {
+     "id": "c",
+     "texto": "Baja reactividad a los álcalis"
+    },
+    {
+     "id": "d",
+     "texto": "Resistencia alta a los sulfatos"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4D-t10",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según INTE, el sufijo «MH» (calor moderado de hidratación) exige como máximo:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "MH: máx. 290 kJ/kg a 7 días (ASTM C186). BH es 250 a 7 días y 290 a 28 días; el 0,1 % a 180 días es de MS; el 6 % de aire es de A1.",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 14
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "6 % de aire incluido"
+    },
+    {
+     "id": "b",
+     "texto": "290 kJ/kg a 7 días"
+    },
+    {
+     "id": "c",
+     "texto": "250 kJ/kg a 7 días"
+    },
+    {
+     "id": "d",
+     "texto": "0,1 % a 180 días"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4D-t11",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según la equivalencia de E10, el cemento ASTM C150 tipo III corresponde en INTE a:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Tipo III → I-AR (alta resistencia inicial). I y II → I-28, IV → I-17-BH y V → I-21-AS.",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 19
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "I-28"
+    },
+    {
+     "id": "b",
+     "texto": "I-AR"
+    },
+    {
+     "id": "c",
+     "texto": "I-17-BH"
+    },
+    {
+     "id": "d",
+     "texto": "I-21-AS"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4D-t12",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_unica",
+   "enunciado": "Para una exposición muy severa a sulfatos (suelo con más de 2,00 % de sulfato soluble), se recomienda:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Muy severa: V o HS, 0,40 y 35 MPa. La exposición moderada usa tipo II (0,50) y la insignificante no necesita tipo especial.",
+   "fuente": [
+    {
+     "doc": "E11",
+     "pag": 5
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Tipo III, con a/cm máximo de 0,45"
+    },
+    {
+     "id": "b",
+     "texto": "Tipo I, sin requisitos especiales"
+    },
+    {
+     "id": "c",
+     "texto": "Tipo II, con a/cm máximo de 0,50"
+    },
+    {
+     "id": "d",
+     "texto": "Tipo V o HS, con a/cm máximo de 0,40 y resistencia mínima de 35 MPa"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4D-t13",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "verdadero_falso",
+   "enunciado": "Los tipos IA, IIA y IIIA de la ASTM C150 son cementos con inclusor de aire.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. Tienen la composición de los tipos I, II y III con un pequeño material incorporador de aire molido con el clínker.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 15
+    },
+    {
+     "doc": "E11",
+     "pag": 7
+    },
+    {
+     "doc": "E11",
+     "pag": 8
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4D-t14",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "verdadero_falso",
+   "enunciado": "El cemento tipo V es resistente a ácidos y a sustancias altamente corrosivas.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. Es resistente a los sulfatos, pero no a ácidos ni a sustancias corrosivas; además necesita baja relación a/cm y baja permeabilidad.",
+   "fuente": [
+    {
+     "doc": "E11",
+     "pag": 7
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4D-t15",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "verdadero_falso",
+   "enunciado": "En la clase AR de INTE, la resistencia mínima a 28 días puede acordarse entre proveedor y comprador.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. La AR tiene 12 MPa a 1 día y 24 MPa a 3 días; a 28 días se acuerda (nota A de la Tabla 4).",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 12
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4D-t16",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "verdadero_falso",
+   "enunciado": "El límite de MgO de 6,0 % de INTE aplica a todos los tipos, incluido el ME.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. Aplica a todos los tipos excepto el ME. El límite de sulfatos (4,0 %) sí aplica a todos.",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 13
+    },
+    {
+     "doc": "E03",
+     "pag": 33
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4D-t17",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "respuesta_corta",
+   "enunciado": "Cite los tipos de cemento de la ASTM C150 y para qué se usa cada uno.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Resumen de las definiciones de E03 p.16.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 16
+    }
+   ],
+   "respuesta_modelo": "I: uso general; II: resistencia moderada a sulfatos o calor algo menor; III: alta resistencia inicial; IV: bajo calor de hidratación; V: alta resistencia a sulfatos. IA, IIA y IIIA llevan inclusor de aire.",
+   "puntos_clave": [
+    "I uso general",
+    "II moderada resistencia a sulfatos",
+    "III alta resistencia inicial",
+    "IV bajo calor",
+    "V alta resistencia a sulfatos"
+   ]
+  },
+  {
+   "id": "p4-4D-t18",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "respuesta_corta",
+   "enunciado": "Enumere los tipos de cemento hidráulico de la clasificación INTE y el material de cada uno.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Tabla 2 de E10, igual a la diapositiva 22 de E03.",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 9
+    },
+    {
+     "doc": "E03",
+     "pag": 22
+    }
+   ],
+   "respuesta_modelo": "I: Portland ordinario (CPO); ME: escoria de alto horno; MF: humo de sílice; MP: puzolana, ceniza volante o esquisto; MC: caliza; MM: mixto.",
+   "puntos_clave": [
+    "I CPO",
+    "ME escoria",
+    "MF humo de sílice",
+    "MP puzolana",
+    "MC caliza y MM mixto"
+   ]
+  },
+  {
+   "id": "p4-4D-t19",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "respuesta_corta",
+   "enunciado": "Interprete la designación «Tipo MP/B – 25 – BRa».",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El formato es tipo/grado de sustitución – clase de resistencia – característica especial; el ejemplo está en E10 p.11.",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 11
+    },
+    {
+     "doc": "E10",
+     "pag": 10
+    },
+    {
+     "doc": "E10",
+     "pag": 14
+    }
+   ],
+   "respuesta_modelo": "Cemento modificado con puzolana, clase B (21 % a 35 % de puzolana), clase de resistencia 25 y baja reactividad a los álcalis.",
+   "puntos_clave": [
+    "modificado con puzolana (MP)",
+    "clase B: 21 % a 35 % de adición",
+    "clase de resistencia 25",
+    "BRa: baja reactividad a álcalis"
+   ]
+  },
+  {
+   "id": "p4-4D-t20",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los requisitos químicos de INTE que son correctos.\nPuede marcar varias alternativas",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La pérdida por ignición máxima es 5,0 % para I y ME, no 10 %. Los otros tres requisitos son los de la Tabla 6.",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 13
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Residuo insoluble: máximo 5,0 % en los tipos I y ME"
+    },
+    {
+     "id": "b",
+     "texto": "Pérdida por ignición: máximo 10 % en los tipos I y ME"
+    },
+    {
+     "id": "c",
+     "texto": "Sulfatos (SO3): máximo 4,0 % en todos los tipos"
+    },
+    {
+     "id": "d",
+     "texto": "MgO: máximo 6,0 % en todos los tipos excepto ME"
+    }
+   ],
+   "correcta": [
+    "a",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "id": "p4-4D-t21",
+   "tema": 4,
+   "subtema": "4D",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los tipos de la ASTM C150 que llevan inclusor de aire.\nPuede marcar varias alternativas",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "IA, IIA y IIIA son las versiones con inclusor de aire de los tipos I, II y III. El tipo IV es de bajo calor de hidratación.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 15
+    },
+    {
+     "doc": "E11",
+     "pag": 7
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "IA"
+    },
+    {
+     "id": "b",
+     "texto": "IIA"
+    },
+    {
+     "id": "c",
+     "texto": "IIIA"
+    },
+    {
+     "id": "d",
+     "texto": "IV"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "id": "p4-4E-t01",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál es la cantidad mínima de muestra de cemento según el manual (ASTM C183)?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La muestra individual o compuesta debe ser de al menos 5000 g (5 kg).",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 8
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "500 g"
+    },
+    {
+     "id": "b",
+     "texto": "1000 g"
+    },
+    {
+     "id": "c",
+     "texto": "5000 g"
+    },
+    {
+     "id": "d",
+     "texto": "50 kg"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4E-t02",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué proporción en masa tiene el mortero de ensayo de la ASTM C109?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La mezcla es 1 : 2,75 (cemento : arena estándar de sílice, ASTM C778), con a/c de 0,485 para cemento Portland.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 19
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "2,75 partes de cemento por 1 de arena"
+    },
+    {
+     "id": "b",
+     "texto": "1 parte de cemento por 3 de arena de río"
+    },
+    {
+     "id": "c",
+     "texto": "1 parte de cemento por 2,75 de arena estándar"
+    },
+    {
+     "id": "d",
+     "texto": "1 parte de cemento por 2 de arena estándar"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4E-t03",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "En cementos modificados, ¿qué flujo debe lograrse con el agua de mezcla del mortero?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Se añade agua suficiente para un flujo de 110 % ± 5 %; si no se cumple, se desecha la muestra y se reinicia con otra relación a/c. 0,485 es la a/c del cemento Portland.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 19
+    },
+    {
+     "doc": "E01",
+     "pag": 23
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "110 % ± 5 %"
+    },
+    {
+     "id": "b",
+     "texto": "0,485 ± 0,05"
+    },
+    {
+     "id": "c",
+     "texto": "50 % ± 5 %"
+    },
+    {
+     "id": "d",
+     "texto": "100 % ± 10 %"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4E-t04",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué velocidad de carga se aplica a los cubos de mortero de 50 mm?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La velocidad es de 900 a 1800 N/s, mantenida en la primera mitad de la carga máxima y sin ajustarla en la segunda mitad.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 26
+    },
+    {
+     "doc": "E01",
+     "pag": 27
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "0,25 MPa/s"
+    },
+    {
+     "id": "b",
+     "texto": "9000 N/s a 18 000 N/s"
+    },
+    {
+     "id": "c",
+     "texto": "90 N/s a 180 N/s"
+    },
+    {
+     "id": "d",
+     "texto": "900 N/s a 1800 N/s"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4E-t05",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Con qué penetración de la aguja del aparato de Vicat se define el tiempo de fragua inicial?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El tiempo de fragua inicial es el de penetración de 25 mm. 10 ± 1 mm es la consistencia normal (C187); el final es cuando la aguja ya no deja marca.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 42
+    },
+    {
+     "doc": "E01",
+     "pag": 48
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "10 mm"
+    },
+    {
+     "id": "b",
+     "texto": "25 mm"
+    },
+    {
+     "id": "c",
+     "texto": "1 mm"
+    },
+    {
+     "id": "d",
+     "texto": "50 mm"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4E-t06",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según INTE, el tiempo de fragua del cemento hidráulico debe ser:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La Tabla 5 de E10 y la diapositiva 24 de E03 dan 45 min y 420 min. El 120 min de la diapositiva 28 es un error de la presentación.",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 12
+    },
+    {
+     "doc": "E03",
+     "pag": 24
+    }
+   ],
+   "verificar": "E03 p.28 dice 120 min para el final; E03 p.24 y E10 p.12 dicen 420 min. Se usa 420.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Inicial mínimo 120 min y final máximo 45 min"
+    },
+    {
+     "id": "b",
+     "texto": "Inicial máximo 45 min y final mínimo 420 min"
+    },
+    {
+     "id": "c",
+     "texto": "Inicial mínimo 45 min y final máximo 120 min"
+    },
+    {
+     "id": "d",
+     "texto": "Inicial mínimo 45 min y final máximo 420 min"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4E-t07",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuántos gramos de cemento se usan en el ensayo de densidad con el matraz Le Chatelier (ASTM C188)?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Se usan 64 g. 650 g es la pasta de consistencia y fragua, 1,000 g es la muestra de finura y 500 g es el cemento para 6 cubos de mortero.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 67
+    },
+    {
+     "doc": "E01",
+     "pag": 39
+    },
+    {
+     "doc": "E01",
+     "pag": 77
+    },
+    {
+     "doc": "E01",
+     "pag": 19
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "650 g"
+    },
+    {
+     "id": "b",
+     "texto": "64 g"
+    },
+    {
+     "id": "c",
+     "texto": "1,000 g"
+    },
+    {
+     "id": "d",
+     "texto": "500 g"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4E-t08",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué masa específica relativa se supone para el cemento Portland en el diseño de mezclas?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Para el diseño de mezclas se supone 3,15 (el cemento Portland está entre 3,10 y 3,25 Mg/m³). 1,00 es la del agua.",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 11
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "2,05"
+    },
+    {
+     "id": "b",
+     "texto": "3,75"
+    },
+    {
+     "id": "c",
+     "texto": "1,00"
+    },
+    {
+     "id": "d",
+     "texto": "3,15"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4E-t09",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "En el ensayo de finura por tamiz de 45 µm (ASTM C430), ¿a qué presión se ajusta la boquilla?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La presión de la boquilla es de 69 kPa ± 4 kPa; el lavado dura 1 min con movimientos circulares.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 78
+    },
+    {
+     "doc": "E01",
+     "pag": 79
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "900 kPa"
+    },
+    {
+     "id": "b",
+     "texto": "7 kPa ± 2 kPa"
+    },
+    {
+     "id": "c",
+     "texto": "207 kPa"
+    },
+    {
+     "id": "d",
+     "texto": "69 kPa ± 4 kPa"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4E-t10",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué efecto tiene una mayor finura del cemento?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Partículas más pequeñas aumentan la velocidad de hidratación, el calor liberado y el desarrollo temprano de resistencia.",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 2
+    },
+    {
+     "doc": "E01",
+     "pag": 74
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Mayor velocidad de hidratación, más calor y resistencia más rápida, sobre todo en los primeros 7 días"
+    },
+    {
+     "id": "b",
+     "texto": "Menor demanda de agua y fraguado final más tardío"
+    },
+    {
+     "id": "c",
+     "texto": "Mayor resistencia únicamente a 28 días"
+    },
+    {
+     "id": "d",
+     "texto": "Hidratación más lenta y menor calor"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4E-t11",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál es el límite de expansión en el ensayo de autoclave (cambio de longitud) según INTE?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Autoclave: máx. 0,8 %. El 0,02 % es la expansión en barras de mortero a 14 días, el 12 % es el aire del mortero y el 50 % es el mínimo del falso fraguado.",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 12
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "50 % como mínimo"
+    },
+    {
+     "id": "b",
+     "texto": "0,8 % como máximo"
+    },
+    {
+     "id": "c",
+     "texto": "12 % como máximo"
+    },
+    {
+     "id": "d",
+     "texto": "0,02 % como máximo"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4E-t12",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "En el ensayo de la fotografía, la pasta de cemento se coloca en un cono y se mide la penetración de una aguja. ¿Qué equipo es?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El aparato de Vicat se usa para la consistencia normal (ASTM C187) y el tiempo de fragua (ASTM C191). La mesa de flujo mide el flujo del mortero y el matraz mide la densidad.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 38
+    }
+   ],
+   "figura": {
+    "src": "img/examen2/e01-vicat.jpg",
+    "alt": "Aparato con barra vertical con indicador sobre escala graduada y un molde cónico sobre plato de vidrio.",
+    "fuente": [
+     {
+      "doc": "E01",
+      "pag": 38
+     }
+    ]
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Mesa de flujo"
+    },
+    {
+     "id": "b",
+     "texto": "Permeámetro de Blaine"
+    },
+    {
+     "id": "c",
+     "texto": "Aparato de Vicat"
+    },
+    {
+     "id": "d",
+     "texto": "Matraz Le Chatelier"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4E-t13",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "El instrumento de vidrio del dibujo, con cuello graduado y un bulbo inferior, se usa para:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El matraz Le Chatelier mide el volumen desplazado por 64 g de cemento en queroseno; con eso se calcula la densidad.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 66
+    }
+   ],
+   "figura": {
+    "src": "img/examen2/e01-matraz-le-chatelier.jpg",
+    "alt": "Dibujo acotado de un matraz de vidrio con tapón, cuello graduado y bulbo inferior.",
+    "fuente": [
+     {
+      "doc": "E01",
+      "pag": 66
+     }
+    ]
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Determinar la finura por tamizado"
+    },
+    {
+     "id": "b",
+     "texto": "Medir el flujo del mortero"
+    },
+    {
+     "id": "c",
+     "texto": "Medir la densidad del cemento con queroseno (ASTM C188)"
+    },
+    {
+     "id": "d",
+     "texto": "Medir el tiempo de fragua"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4E-t14",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_unica",
+   "enunciado": "El equipo de la foto, con un plato circular y un molde cónico de latón, mide:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La mesa de flujo se usa con el molde cónico; el flujo es la suma del diámetro del mortero en cuatro líneas. Se usa para ajustar el agua en cementos modificados.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 16
+    },
+    {
+     "doc": "E01",
+     "pag": 23
+    }
+   ],
+   "figura": {
+    "src": "img/examen2/e01-mesa-flujo.jpg",
+    "alt": "Mesa con plato circular, molde cónico de latón sobre el plato y mecanismo de leva con caja de control.",
+    "fuente": [
+     {
+      "doc": "E01",
+      "pag": 16
+     }
+    ]
+   },
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "La resistencia a compresión de los cubos"
+    },
+    {
+     "id": "b",
+     "texto": "La densidad del cemento"
+    },
+    {
+     "id": "c",
+     "texto": "La consistencia normal de la pasta"
+    },
+    {
+     "id": "d",
+     "texto": "El flujo del mortero (ASTM C1437 y C230)"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4E-t15",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "verdadero_falso",
+   "enunciado": "La práctica ASTM C183 de muestreo se usa para el control de calidad del proceso de producción del cemento.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. Se usa para obtener muestras de cemento ya producido y listo para la venta, para aceptar o rechazar un lote frente a las especificaciones; no controla el proceso.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 4
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4E-t16",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "verdadero_falso",
+   "enunciado": "El cubo de mortero se ensaya apoyándolo en la cara expuesta (la cara superior del molde).",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. Las caras de apoyo son las que estuvieron en contacto con el molde, nunca la cara expuesta.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 26
+    },
+    {
+     "doc": "E01",
+     "pag": 27
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4E-t17",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "verdadero_falso",
+   "enunciado": "En el ensayo de densidad, la temperatura del baño puede variar como máximo 0,2 °C entre la lectura inicial y la final.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. Además, el baño debe estar en 23 °C ± 2 °C.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 68
+    },
+    {
+     "doc": "E01",
+     "pag": 69
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4E-t18",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "verdadero_falso",
+   "enunciado": "En el falso fraguado hay una evolución considerable de calor.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. El falso fraguado es una pérdida de plasticidad sin evolución de calor y se corrige remezclando. El fraguado rápido sí libera calor por la reacción de los aluminatos.",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 6
+    },
+    {
+     "doc": "E12",
+     "pag": 7
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4E-t19",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "verdadero_falso",
+   "enunciado": "El método de Blaine determina la finura por permeabilidad al aire y se expresa en m²/kg.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. ASTM C204; mide indirectamente el área superficial por unidad de masa.",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 2
+    },
+    {
+     "doc": "E03",
+     "pag": 24
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4E-t20",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "verdadero_falso",
+   "enunciado": "Un cemento con mayor contenido de C3A y C3S libera más calor de hidratación.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. El calor depende sobre todo de la composición y el C3A y el C3S son los compuestos más importantes para la evolución del calor.",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 9
+    },
+    {
+     "doc": "E03",
+     "pag": 10
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4E-t21",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Explique cómo se determina el tiempo de fragua inicial y final con el aparato de Vicat (ASTM C191).",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Procedimiento de E01 p.42 y resumen de p.48.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 42
+    },
+    {
+     "doc": "E01",
+     "pag": 48
+    }
+   ],
+   "respuesta_modelo": "Se mide con la aguja de 1 mm: primera lectura 30 min después de colocar la pasta en el cuarto húmedo y luego cada 15 min. El tiempo inicial es el de penetración de 25 mm; el final, cuando la aguja ya no deja marca visible en la pasta.",
+   "puntos_clave": [
+    "aguja de 1 mm del aparato de Vicat",
+    "mediciones cada 15 min desde los 30 min",
+    "inicial: penetración de 25 mm",
+    "final: la aguja ya no deja marca"
+   ]
+  },
+  {
+   "id": "p4-4E-t22",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Diferencie el falso fraguado del fraguado rápido (relámpago).",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "E03 p.32 da las causas y E12 pp.6-7 describe el comportamiento.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 32
+    },
+    {
+     "doc": "E12",
+     "pag": 6
+    },
+    {
+     "doc": "E12",
+     "pag": 7
+    }
+   ],
+   "respuesta_modelo": "Falso fraguado: pérdida de plasticidad sin evolución de calor, por deshidratación del yeso; se corrige remezclando. Fraguado rápido: pérdida rápida de trabajabilidad con mucho calor por reacción de los aluminatos y poco yeso; no se recupera remezclando sin agua.",
+   "puntos_clave": [
+    "falso: sin calor, se corrige remezclando",
+    "rápido: con calor considerable",
+    "rápido: yeso insuficiente y reacción de aluminatos"
+   ]
+  },
+  {
+   "id": "p4-4E-t23",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "respuesta_corta",
+   "enunciado": "¿Para qué sirve la densidad del cemento y cómo se calcula con el matraz Le Chatelier?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "E01 pp.65-70 explica el propósito y el cálculo.",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 65
+    },
+    {
+     "doc": "E01",
+     "pag": 70
+    }
+   ],
+   "respuesta_modelo": "Se usa para el diseño y control de mezclas de concreto. Densidad aparente = masa de cemento (64 g) / volumen desplazado de queroseno (lectura final menos inicial). La densidad relativa Gs es esa cifra dividida entre la densidad del agua.",
+   "puntos_clave": [
+    "se usa en el diseño de mezclas",
+    "masa de cemento entre volumen desplazado",
+    "lectura final menos inicial"
+   ]
+  },
+  {
+   "id": "p4-4E-t24",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los métodos de finura que cita la fuente.\nPuede marcar varias alternativas",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El autoclave mide la sanidad (constancia de volumen), no la finura.",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 2
+    },
+    {
+     "doc": "E12",
+     "pag": 3
+    },
+    {
+     "doc": "E12",
+     "pag": 4
+    },
+    {
+     "doc": "E01",
+     "pag": 74
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Turbidímetro de Wagner (ASTM C115)"
+    },
+    {
+     "id": "b",
+     "texto": "Permeabilidad al aire (Blaine, ASTM C204)"
+    },
+    {
+     "id": "c",
+     "texto": "Ensayo en autoclave (ASTM C151)"
+    },
+    {
+     "id": "d",
+     "texto": "Tamiz de 45 µm N.º 325 (ASTM C430)"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "d"
+   ]
+  },
+  {
+   "id": "p4-4E-t25",
+   "tema": 4,
+   "subtema": "4E",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los requisitos físicos de INTE que son correctos.\nPuede marcar varias alternativas",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El falso fraguado se exige como valor mínimo (50 %), no máximo.",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 12
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Autoclave: cambio de longitud máximo 0,8 %"
+    },
+    {
+     "id": "b",
+     "texto": "Falso fraguado: máximo 50 %"
+    },
+    {
+     "id": "c",
+     "texto": "Expansión en barras de mortero a 14 días: máximo 0,02 %"
+    },
+    {
+     "id": "d",
+     "texto": "Contenido de aire del mortero: máximo 12 %"
+    }
+   ],
+   "correcta": [
+    "a",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "id": "p4-4F-t01",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué contenido de CaO tiene la ceniza volante Clase F?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La Clase F es de bajo contenido de calcio (< 10 % CaO); la Clase C tiene entre 10 % y 30 %.",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 3
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Entre 10 % y 30 %"
+    },
+    {
+     "id": "b",
+     "texto": "Más de 40 %"
+    },
+    {
+     "id": "c",
+     "texto": "Menos de 10 %"
+    },
+    {
+     "id": "d",
+     "texto": "Cerca de 90 %"
+    }
+   ],
+   "correcta": "c"
+  },
+  {
+   "id": "p4-4F-t02",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál es la dosis típica de humo de sílice, en porcentaje de la masa del material cementante?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Humo de sílice: 5 % a 10 %. 15-25 % es la ceniza Clase F y 30-45 % es la escoria en concreto de uso general.",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 3
+    },
+    {
+     "doc": "E13",
+     "pag": 4
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "5 % a 10 %"
+    },
+    {
+     "id": "b",
+     "texto": "50 % a 70 %"
+    },
+    {
+     "id": "c",
+     "texto": "15 % a 25 %"
+    },
+    {
+     "id": "d",
+     "texto": "30 % a 45 %"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4F-t03",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué norma ASTM cubre la ceniza volante y la puzolana natural (Clases N, F y C)?",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "C618: ceniza volante y puzolana natural. C989 es la escoria y C1240 el humo de sílice. C150 es el cemento Portland.",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "ASTM C150"
+    },
+    {
+     "id": "b",
+     "texto": "ASTM C989"
+    },
+    {
+     "id": "c",
+     "texto": "ASTM C1240"
+    },
+    {
+     "id": "d",
+     "texto": "ASTM C618"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4F-t04",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "seleccion_unica",
+   "enunciado": "La escoria de alto horno para producir escoria granulada se encuentra fundida a cerca de:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Se enfría rápidamente con agua y se muele (< 45 µm). Los 2000 °C son los del vapor de humo de sílice que sale del horno eléctrico.",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 3
+    },
+    {
+     "doc": "E13",
+     "pag": 4
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "700 °C"
+    },
+    {
+     "id": "b",
+     "texto": "100 °C"
+    },
+    {
+     "id": "c",
+     "texto": "2000 °C"
+    },
+    {
+     "id": "d",
+     "texto": "1500 °C"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4F-t05",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "seleccion_unica",
+   "enunciado": "El diámetro promedio de las partículas de humo de sílice es de cerca de:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Son partículas esféricas de 0,1 µm de diámetro promedio, con unos 20 000 m²/kg de área superficial.",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 4
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "45 µm"
+    },
+    {
+     "id": "b",
+     "texto": "10 µm"
+    },
+    {
+     "id": "c",
+     "texto": "1 mm"
+    },
+    {
+     "id": "d",
+     "texto": "0,1 µm (unas cien veces menores que el cemento)"
+    }
+   ],
+   "correcta": "d"
+  },
+  {
+   "id": "p4-4F-t06",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "seleccion_unica",
+   "enunciado": "Una puzolana es un material que reacciona con:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Una puzolana (silícica o silícico aluminosa, en polvo fino) forma silicato de calcio hidratado al reaccionar con el hidróxido de calcio y la humedad.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 4
+    },
+    {
+     "doc": "E13",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "El C3A para formar alita"
+    },
+    {
+     "id": "b",
+     "texto": "El hidróxido de calcio liberado por la hidratación del cemento, en presencia de humedad"
+    },
+    {
+     "id": "c",
+     "texto": "El CO2 del aire para formar cal viva"
+    },
+    {
+     "id": "d",
+     "texto": "El sulfato de calcio del yeso para formar clínker"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4F-t07",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según ACI 318, para exposición a descongelantes el contenido máximo de humo de sílice es:",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "ACI 318: ceniza volante 25 %, escoria 50 % y humo de sílice 10 %.",
+   "fuente": [
+    {
+     "doc": "E14",
+     "pag": 4
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "10 % de la masa del material cementante"
+    },
+    {
+     "id": "b",
+     "texto": "50 %"
+    },
+    {
+     "id": "c",
+     "texto": "70 %"
+    },
+    {
+     "id": "d",
+     "texto": "25 %"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4F-t08",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "verdadero_falso",
+   "enunciado": "Muchas cenizas volantes Clase C se hidratan y endurecen en menos de 45 minutos al exponerse al agua.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. Por eso la ceniza Clase C y el esquisto calcinado deben mantenerse secos.",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 3
+    },
+    {
+     "doc": "E14",
+     "pag": 7
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4F-t09",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "verdadero_falso",
+   "enunciado": "Los materiales cementantes suplementarios que reducen la reacción álcali-sílice también reducen la reacción álcali-carbonato.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Falso. Reducen la reacción álcali-sílice, pero no la álcali-carbonato, que involucra los álcalis del cemento y ciertos calcáreos dolomíticos.",
+   "fuente": [
+    {
+     "doc": "E14",
+     "pag": 5
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b"
+  },
+  {
+   "id": "p4-4F-t10",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "verdadero_falso",
+   "enunciado": "La ceniza volante y la escoria molida normalmente retardan el fraguado del concreto.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Verdadero. El retardo puede ser una ventaja en clima caluroso, pero en clima frío puede retrasar el acabado.",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 9
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a"
+  },
+  {
+   "id": "p4-4F-t11",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "respuesta_corta",
+   "enunciado": "Defina puzolana y cite tres materiales cementantes suplementarios.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "La definición viene de E03 p.4 y E13 p.1.",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 4
+    },
+    {
+     "doc": "E13",
+     "pag": 1
+    }
+   ],
+   "respuesta_modelo": "Material silícico o silícico aluminoso que, finamente dividido y en presencia de humedad, reacciona con el hidróxido de calcio liberado por el cemento y forma silicato de calcio hidratado. Ejemplos: ceniza volante, escoria granulada de alto horno, humo de sílice (también arcilla calcinada o esquisto calcinado).",
+   "puntos_clave": [
+    "silícico o silícico aluminoso",
+    "reacciona con el hidróxido de calcio y humedad",
+    "ejemplos: ceniza volante, escoria, humo de sílice"
+   ]
+  },
+  {
+   "id": "p4-4F-t12",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "respuesta_corta",
+   "enunciado": "Mencione cuatro efectos de los materiales cementantes suplementarios en el concreto endurecido.",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "Resumen de E13 p.8 y E14 pp.5-6.",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 8
+    },
+    {
+     "doc": "E14",
+     "pag": 5
+    },
+    {
+     "doc": "E14",
+     "pag": 6
+    }
+   ],
+   "respuesta_modelo": "Menor calor de hidratación, reducción de la reacción álcali-sílice, mejor resistencia a sulfatos, menor permeabilidad y menor entrada de cloruros (humo de sílice y metacaolinita).",
+   "puntos_clave": [
+    "menor calor de hidratación",
+    "reducen la reacción álcali-sílice",
+    "mejoran la resistencia a sulfatos",
+    "menor permeabilidad"
+   ]
+  },
+  {
+   "id": "p4-4F-t13",
+   "tema": 4,
+   "subtema": "4F",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los materiales que se consideran materiales cementantes suplementarios.\nPuede marcar varias alternativas",
+   "origen": "teoria",
+   "clave": "documental",
+   "explicacion": "El yeso es la fuente de sulfato que se muele con el clínker para regular el fraguado, no un material cementante suplementario.",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 1
+    },
+    {
+     "doc": "E15",
+     "pag": 1
+    }
+   ],
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Humo de sílice"
+    },
+    {
+     "id": "b",
+     "texto": "Arcilla calcinada"
+    },
+    {
+     "id": "c",
+     "texto": "Ceniza volante"
+    },
+    {
+     "id": "d",
+     "texto": "Escoria granulada de alto horno"
+    },
+    {
+     "id": "e",
+     "texto": "Yeso (CaSO4·2H2O)"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  }
+ ]
+}

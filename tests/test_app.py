@@ -38,11 +38,13 @@ def prueba(fn):
     return fn
 
 
-def nueva_pagina(nav, url, bloquear=False, sw=False, fecha=FECHA, sembrar=None, azar=False):
+def nueva_pagina(nav, url, bloquear=False, sw=False, fecha=FECHA, sembrar=None, azar=False, examen=1):
     """Abre la app con la fecha simulada. sembrar: progreso guardado antes de cargar.
     azar: si es False (lo normal en las pruebas), las colas salen en el orden de los datos."""
     ctx = nav.new_context(viewport=VIEWPORT, service_workers="allow" if sw else "block")
     ctx.add_init_script(f"window.__fechaPrueba = {json.dumps(fecha)};")
+    if examen is not None:  # las pruebas del I examen lo fijan; None = usar el selector y localStorage reales
+        ctx.add_init_script(f"window.__examenPrueba = {examen};")
     if not azar:
         ctx.add_init_script("window.__ordenFijo = true;")
     if sembrar is not None:
@@ -434,6 +436,7 @@ def abrir_simulacro(nav, url, reloj=None, sembrar=None):
     """Abre Simulacro. reloj: hora simulada (ms) para controlar el temporizador."""
     ctx = nav.new_context(viewport=VIEWPORT, service_workers="block")
     ctx.add_init_script(f"window.__fechaPrueba = {json.dumps(FECHA)};")
+    ctx.add_init_script("window.__examenPrueba = 1;")
     ctx.add_init_script("window.__ordenFijo = true;")
     if sembrar is not None:
         ctx.add_init_script(
@@ -718,7 +721,7 @@ def buscar_sin_tildes_con_resaltado_y_agrupado(nav, url):
     tarjeta = pag.locator('details.resultado[data-id="t1-1A-01"]')
     expect(tarjeta).to_be_visible()
     assert tarjeta.locator("mark").first.inner_text() == "hormigón", "resalta el texto original con tilde"
-    grupos = pag.locator(".grupo-res h3").all_inner_texts()
+    grupos = pag.locator(".grupo-res h3").all_text_contents()
     orden = [g.split(" (")[0] for g in grupos]
     assert orden == [x for x in ["Glosario", "Tarjetas", "Preguntas"] if x in orden], orden
     tarjeta.locator("summary").click()
@@ -750,10 +753,10 @@ def buscar_sin_tildes_con_resaltado_y_agrupado(nav, url):
 def glosario_alfabetico_con_definicion_y_fuente(nav, url):
     ctx, pag, errores = nueva_pagina(nav, url + "#/buscar")
     pag.locator('[data-pestana="glosario"]').click()
-    letras = pag.locator(".letras__btn").all_inner_texts()
+    letras = pag.locator(".letras__btn").all_text_contents()
     assert letras[0] == "A" and "Á" not in letras, letras
     assert pag.locator(".glosario__termino").count() == 60
-    terminos = pag.locator(".glosario dt").all_inner_texts()
+    terminos = pag.locator(".glosario dt").all_text_contents()
     nombres = [t.rsplit(" ", 1)[0] for t in terminos]
     ordenado = pag.evaluate("(xs) => [...xs].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }))", nombres)
     assert nombres == ordenado, "orden alfabético en español"
@@ -864,7 +867,7 @@ def practicar_baraja_las_opciones_y_ajusta_las_letras(nav, url):
         if p["tipo"] != "seleccion_unica":
             pag.get_by_role("button", name="Saltar").click()
             continue
-        letras = pag.locator(".opcion__letra").all_inner_texts()
+        letras = pag.locator(".opcion__letra").all_text_contents()
         assert letras == list("ABCDE"[:len(letras)]), f"letras en orden: {letras}"
         ids = [b.get_attribute("data-opcion") for b in pag.locator("[data-opcion]").all()]
         assert sorted(ids) == sorted(o["id"] for o in p["opciones"])
@@ -939,6 +942,41 @@ def nueva_version_reemplaza_el_cache(nav, url):
         assert pag.evaluate("caches.keys()") == ["pryecto_materiales-" + nueva], "quedó un caché viejo"
     finally:
         servidor.SOBRESCRIBIR.clear()
+    assert not errores, errores
+    ctx.close()
+
+
+@prueba
+def selector_de_examen_filtra_estudiar_y_se_recuerda(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url, examen=None)
+    botones = pag.locator("#grupo-examen [data-examen]")
+    assert botones.count() == 2
+    # Por defecto: Examen 2 (temas 4 y 8).
+    expect(pag.locator('[data-examen="2"]')).to_have_attribute("aria-pressed", "true")
+    for b in range(2):
+        alto = botones.nth(b).bounding_box()["height"]
+        assert alto >= 47.5, f"botón del selector de {alto}px"
+    por_tema(pag)
+    pag.locator("#est-tema").click()
+    temas = pag.locator("#est-tema option").all_text_contents()
+    assert any(t.startswith("4.") for t in temas) and any(t.startswith("8.") for t in temas), temas
+    assert not any(t.startswith(("1.", "2.", "3.")) for t in temas), temas
+    revisar_pantalla(pag, "estudiar examen 2")
+    # Examen 1: temas 1, 2 y 3.
+    pag.locator('[data-examen="1"]').click()
+    expect(pag.locator('[data-examen="1"]')).to_have_attribute("aria-pressed", "true")
+    por_tema(pag)
+    temas = pag.locator("#est-tema option").all_text_contents()
+    assert any(t.startswith("3.") for t in temas) and not any(t.startswith(("4.", "8.")) for t in temas), temas
+    # Se recuerda al recargar.
+    pag.reload()
+    pag.wait_for_selector("body[data-listo='1']")
+    expect(pag.locator('[data-examen="1"]')).to_have_attribute("aria-pressed", "true")
+    # El Simulacro del examen 2 es acumulativo: ofrece los temas 1, 2, 3, 4 y 8.
+    pag.locator('[data-examen="2"]').click()
+    pag.locator('[data-ruta="simulacro"]').click()
+    expect(pag.locator("#titulo")).to_have_text("Simulacro")
+    assert pag.locator("[data-tema]").count() == 5
     assert not errores, errores
     ctx.close()
 
@@ -1069,8 +1107,8 @@ def normas_parejas_lado_a_lado_con_diferencias_y_practica_de_la_pareja(nav, url)
             break
         pag.get_by_role("button", name="Siguiente →").click()
     assert pag.locator(".par-col").nth(1).locator("p.norma-codigo").inner_text() == "ASTM C128"
-    assert pag.locator(".par-col").nth(0).locator("mark.difiere").all_inner_texts() == ["grueso"]
-    assert pag.locator(".par-col").nth(1).locator("mark.difiere").all_inner_texts() == ["fino"]
+    assert pag.locator(".par-col").nth(0).locator("mark.difiere").all_text_contents() == ["grueso"]
+    assert pag.locator(".par-col").nth(1).locator("mark.difiere").all_text_contents() == ["fino"]
     assert "Ayuda de memoria" in pag.locator(".par-col").nth(0).inner_text()
     # practicar la pareja: 4 fichas, primero las «escribir» y mezcladas entre las dos
     pag.get_by_role("button", name="Probarme con esta pareja").click()
@@ -1104,7 +1142,7 @@ def normas_parejas_confundidas_salen_primero_y_se_abren_desde_el_inicio(nav, url
     pag.get_by_role("button", name="Ver la pareja").first.click()
     assert "Pareja 1 de 26" in pag.locator(".contador").inner_text()
     assert "La confundiste 2 veces" in pag.locator(".chips").inner_text()
-    textos = pag.locator(".par-col").all_inner_texts()
+    textos = pag.locator(".par-col").all_text_contents()
     assert "ASTM C1602" in textos[0] and "ASTM C1603" in textos[1]
     revisar_pantalla(pag, "normas pareja confundida")
     assert not errores, errores
@@ -1127,7 +1165,7 @@ def normas_foto_sin_pista_en_el_alt_y_confusion_al_elegir_mal(nav, url):
     assert img.evaluate("i => i.complete && i.naturalWidth > 0"), "la foto no cargó"
     assert pag.locator(".norma-foto figcaption").count() == 0
     assert pag.locator(".chip-norma").count() == 30
-    letras = pag.locator(".chip-norma").all_inner_texts()
+    letras = pag.locator(".chip-norma").all_text_contents()
     assert letras[:3] == ["C29", "C33", "C40"] and letras[-3:] == ["D75", "D4791", "D5821"], letras
     revisar_pantalla(pag, "normas foto")
     pag.locator('.chip-norma[data-opcion="C702"]').click()

@@ -30,8 +30,9 @@
   function leer(id) { return Store.pregunta(id); }
 
   function filtroInicial() {
-    var f = Store.pref("filtroPracticar") || {};
-    return { tema: f.tema || "", subtema: f.subtema || "", origen: f.origen || "" };
+    var f = UI.filtroValido(Store.pref("filtroPracticar") || {});
+    f.origen = (Store.pref("filtroPracticar") || {}).origen || "";
+    return f;
   }
 
   function reiniciarPregunta() {
@@ -53,7 +54,7 @@
   }
 
   function armarRepaso() {
-    nuevaCola(SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.indice.examen, SRS.azar()).ids.slice());
+    nuevaCola(SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.fechaExamen(), SRS.azar()).ids.slice());
   }
 
   function armar() { if (s.modo === "repaso") armarRepaso(); else armarCola(); }
@@ -61,7 +62,7 @@
   function cabecera() {
     var html = UI.barraMeta() + UI.modo("pra", s.modo);
     if (s.modo === "repaso") {
-      var res = SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.indice.examen);
+      var res = SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.fechaExamen());
       var conVerif = s.cola.slice(s.pos).filter(function (id) { return s.porId[id].verificar; });
       html += UI.resumenRepaso(res, new Set(conVerif).size, NOMBRES_RESUMEN);
     } else {
@@ -273,7 +274,7 @@
     s.fase = "respondida";
     var prev = leer(p.id);
     var reg = SRS.aplicar(prev, resultado, {
-      id: p.id, hoy: SRS.hoy(), examen: Datos.indice.examen, verificar: !!p.verificar, ahora: Date.now()
+      id: p.id, hoy: SRS.hoy(), examen: Datos.fechaExamen(), verificar: !!p.verificar, ahora: Date.now()
     });
     reg.bien = (prev && prev.bien || 0) + (resultado === "bien" ? 1 : 0);
     reg.resp = resp;
@@ -391,6 +392,9 @@
     }
   }
 
+  // Al cambiar de examen se vuelve a armar todo con las preguntas del examen elegido.
+  Datos.alCambiarExamen(function () { s.modo = null; s.porId = null; s.extra = null; reiniciarPregunta(); });
+
   window.Practicar = {
     titulo: "Practicar",
     // Abre una cola con estas preguntas (desde Buscar). etiqueta: texto que se muestra arriba.
@@ -408,6 +412,10 @@
     // Progreso abrió un subtema: volver a leer modo y filtros de las preferencias.
     reiniciar: function () { s.modo = null; },
     mostrar: function (vista) {
+      if (!Datos.preguntas.length) {
+        vista.innerHTML = '<p class="vacio">Todavía no hay contenido de este examen. Probá con el otro examen mientras tanto.</p>';
+        return;
+      }
       asegurarIndice();
       if (!s.modo) {
         s.modo = Store.pref("modoPracticar") === "tema" ? "tema" : "repaso";

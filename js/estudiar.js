@@ -25,8 +25,7 @@
   function leer(id) { return Store.tarjeta(id); }
 
   function filtroInicial() {
-    var f = Store.pref("filtroEstudiar") || {};
-    return { tema: f.tema || "", subtema: f.subtema || "" };
+    return UI.filtroValido(Store.pref("filtroEstudiar") || {});
   }
 
   function nuevaCola(ids, extra) {
@@ -40,7 +39,7 @@
   }
 
   function armarRepaso() {
-    nuevaCola(SRS.colaRepaso(Datos.tarjetas, leer, SRS.hoy(), Datos.indice.examen, SRS.azar()).ids.slice());
+    nuevaCola(SRS.colaRepaso(Datos.tarjetas, leer, SRS.hoy(), Datos.fechaExamen(), SRS.azar()).ids.slice());
   }
 
   function armarTema() {
@@ -69,7 +68,7 @@
   function cabecera() {
     var html = UI.barraMeta() + UI.modo("est", s.modo);
     if (s.modo === "repaso") {
-      var res = SRS.colaRepaso(Datos.tarjetas, leer, SRS.hoy(), Datos.indice.examen);
+      var res = SRS.colaRepaso(Datos.tarjetas, leer, SRS.hoy(), Datos.fechaExamen());
       var conVerif = s.cola.slice(s.pos).filter(function (id) { return s.porId[id].verificar; });
       html += UI.resumenRepaso(res, new Set(conVerif).size, NOMBRES_RESUMEN);
     } else {
@@ -157,7 +156,7 @@
     var id = s.cola[s.pos];
     var t = s.porId[id];
     Store.guardarTarjeta(id, SRS.aplicar(leer(id), r, {
-      id: id, hoy: SRS.hoy(), examen: Datos.indice.examen, verificar: !!t.verificar, ahora: Date.now()
+      id: id, hoy: SRS.hoy(), examen: Datos.fechaExamen(), verificar: !!t.verificar, ahora: Date.now()
     }));
     UI.registrarTiempo(s.inicio);
     if (REINSERTAR[r]) {
@@ -246,6 +245,9 @@
     }
   }
 
+  // Al cambiar de examen se vuelve a armar todo con las tarjetas del examen elegido.
+  Datos.alCambiarExamen(function () { s.modo = null; s.porId = null; s.extra = null; });
+
   window.Estudiar = {
     titulo: "Estudiar",
     // Abre una cola con estas tarjetas (desde Buscar). etiqueta: texto que se muestra arriba.
@@ -258,6 +260,10 @@
       nuevaCola(ids.filter(function (id) { return s.porId[id]; }), etiqueta);
     },
     mostrar: function (vista) {
+      if (!Datos.tarjetas.length) {
+        vista.innerHTML = '<p class="vacio">Todavía no hay contenido de este examen. Probá con el otro examen mientras tanto.</p>';
+        return;
+      }
       asegurarIndice();
       if (!s.modo) {
         s.modo = Store.pref("modoEstudiar") === "tema" ? "tema" : "repaso";

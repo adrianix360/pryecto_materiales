@@ -47,6 +47,8 @@ function guardarJson(cache, url) {
   });
 }
 
+// Las imágenes (img/examen2/… incluidas) se precargan solas: salen del campo figura.src de
+// cada tarjeta y pregunta de los JSON de data/. No hay que registrar nada aquí.
 function figuras(lista, destino) {
   (lista || []).forEach(function (x) { if (x.figura && x.figura.src) destino[x.figura.src] = true; });
 }

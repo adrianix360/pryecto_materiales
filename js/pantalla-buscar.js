@@ -11,6 +11,8 @@
   };
   var s = { vista: null, pestana: null, q: "", todos: {}, indice: null, figuras: null, verif: null, espera: null };
 
+  Datos.alCambiarExamen(function () { s.indice = null; s.figuras = null; s.verif = null; s.todos = {}; });
+
   function asegurar() {
     if (s.indice) return;
     s.indice = Buscar.indexar(Datos.tarjetas, Datos.preguntas, Datos.glosario);

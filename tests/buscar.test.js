@@ -9,9 +9,11 @@ const Buscar = require("../js/buscar.js");
 const RAIZ = path.join(__dirname, "..");
 const leer = (rel) => JSON.parse(fs.readFileSync(path.join(RAIZ, rel), "utf8"));
 const IDX = leer("data/indice.json");
-const TARJETAS = IDX.temas.flatMap((t) => leer(t.tarjetas).tarjetas);
-const PREGUNTAS = IDX.temas.flatMap((t) => leer(t.preguntas).preguntas);
-const GLOSARIO = leer("data/glosario.json").terminos;
+// Estas pruebas conocen el contenido del I examen (temas 1, 2 y 3). El II examen se prueba aparte.
+const TEMAS1 = IDX.temas.filter((t) => (t.examen || 1) === 1);
+const TARJETAS = TEMAS1.flatMap((t) => leer(t.tarjetas).tarjetas);
+const PREGUNTAS = TEMAS1.flatMap((t) => leer(t.preguntas).preguntas);
+const GLOSARIO = leer("data/glosario.json").terminos.filter((g) => g.tema <= 3);
 const INDICE = Buscar.indexar(TARJETAS, PREGUNTAS, GLOSARIO);
 const marcado = (segs) => segs.map((s) => (s.m ? `[${s.t}]` : s.t)).join("");
 

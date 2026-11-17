@@ -240,6 +240,158 @@
    "del_profe": false,
    "codigo": "X17",
    "paginas": 3
+  },
+  "E01": {
+   "archivo": "examen2/pdf/210616 Manual Cementos (1).pdf",
+   "titulo": "Manual de Laboratorio: cementos",
+   "autor": "Ing. Einer Rodríguez",
+   "del_profe": true,
+   "codigo": "E01",
+   "paginas": 84
+  },
+  "E02": {
+   "archivo": "examen2/pdf/210627 Manual Concreto.pdf",
+   "titulo": "Manual de Laboratorio: concreto",
+   "autor": "Ing. Einer Rodríguez",
+   "del_profe": true,
+   "codigo": "E02",
+   "paginas": 50
+  },
+  "E03": {
+   "archivo": "examen2/pdf/231024 Clases cemento.pdf",
+   "titulo": "Clases de cemento (presentación)",
+   "autor": "Ing. Einer Rodríguez",
+   "del_profe": true,
+   "codigo": "E03",
+   "paginas": 35
+  },
+  "E04": {
+   "archivo": "examen2/pdf/240611 Factores afectan la resistencia.pdf",
+   "titulo": "Factores que afectan la resistencia del concreto (presentación)",
+   "autor": "Ing. Einer Rodríguez",
+   "del_profe": true,
+   "codigo": "E04",
+   "paginas": 20
+  },
+  "E05": {
+   "archivo": "examen2/pdf/211108  Carbonatacion.pdf",
+   "titulo": "Carbonatación (presentación)",
+   "autor": "Ing. Einer Rodríguez",
+   "del_profe": true,
+   "codigo": "E05",
+   "paginas": 5
+  },
+  "E06": {
+   "archivo": "examen2/pdf/Historia Cemento.pdf",
+   "titulo": "Historia del cemento",
+   "autor": "Ing. Einer Rodríguez",
+   "del_profe": true,
+   "codigo": "E06",
+   "paginas": 12
+  },
+  "E07": {
+   "archivo": "examen2/pdf/Producción cemento.pdf",
+   "titulo": "Producción del cemento",
+   "autor": "Ing. Einer Rodríguez",
+   "del_profe": true,
+   "codigo": "E07",
+   "paginas": 2
+  },
+  "E08": {
+   "archivo": "examen2/pdf/Producción Clinker.pdf",
+   "titulo": "Producción del clínker",
+   "autor": "Ing. Einer Rodríguez",
+   "del_profe": true,
+   "codigo": "E08",
+   "paginas": 1
+  },
+  "E09": {
+   "archivo": "examen2/pdf/210625 DISEÑO DE MEZCLAS PASOS DETALLADO.1.pdf",
+   "titulo": "Diseño de mezclas: pasos detallados",
+   "autor": "Ing. Einer Rodríguez",
+   "del_profe": true,
+   "codigo": "E09",
+   "paginas": 5
+  },
+  "E10": {
+   "archivo": "examen2/pdf/INTE 06-11-15-2005.pdf",
+   "titulo": "INTE 06-11-15:2005 (norma INTECO)",
+   "autor": "INTECO",
+   "del_profe": false,
+   "codigo": "E10",
+   "paginas": 22
+  },
+  "E11": {
+   "archivo": "examen2/pdf/1. Produccion del cemento. Tipos cemento Portland (finaliza cemento Blanco Inclusive) (Grupo H).pdf",
+   "titulo": "Producción del cemento y tipos de cemento Portland (lectura del grupo H)",
+   "autor": "Lectura de grupo (PCA)",
+   "del_profe": false,
+   "codigo": "E11",
+   "paginas": 8
+  },
+  "E12": {
+   "archivo": "examen2/pdf/2. Propiedades físicas del cemento (Grupo I).pdf",
+   "titulo": "Propiedades físicas del cemento (lectura del grupo I)",
+   "autor": "Lectura de grupo (PCA)",
+   "del_profe": false,
+   "codigo": "E12",
+   "paginas": 11
+  },
+  "E13": {
+   "archivo": "examen2/pdf/3. Puzolanas hasta efectos en concreto endurecido (Grupo J).pdf",
+   "titulo": "Puzolanas y efectos en el concreto endurecido (lectura del grupo J)",
+   "autor": "Lectura de grupo (PCA)",
+   "del_profe": false,
+   "codigo": "E13",
+   "paginas": 10
+  },
+  "E14": {
+   "archivo": "examen2/pdf/4. Lectura grupo 9. Puzolana concreto endurecido (Grupo K).pdf",
+   "titulo": "Puzolana y concreto endurecido (lectura del grupo K)",
+   "autor": "Lectura de grupo (PCA)",
+   "del_profe": false,
+   "codigo": "E14",
+   "paginas": 7
+  },
+  "E15": {
+   "archivo": "examen2/pdf/5. Lectura grupo 10. Compuestos químicos del cemento hasta agua (Grupo L).pdf",
+   "titulo": "Compuestos químicos del cemento (lectura del grupo L)",
+   "autor": "Lectura de grupo (PCA)",
+   "del_profe": false,
+   "codigo": "E15",
+   "paginas": 5
+  },
+  "E16": {
+   "archivo": "examen2/pdf/1.Concreto Endurecido Navas-119-126 (Grupo M).pdf",
+   "titulo": "Concreto endurecido, Navas págs. 119–126 (lectura del grupo M)",
+   "autor": "Navas (lectura de grupo)",
+   "del_profe": false,
+   "codigo": "E16",
+   "paginas": 8
+  },
+  "E17": {
+   "archivo": "examen2/pdf/2.Concreto fresco Navas-97-107 (Grupo N).pdf",
+   "titulo": "Concreto fresco, Navas págs. 97–107 (lectura del grupo N)",
+   "autor": "Navas (lectura de grupo)",
+   "del_profe": false,
+   "codigo": "E17",
+   "paginas": 11
+  },
+  "E18": {
+   "archivo": "examen2/pdf/Tarea 16_261030_114649.pdf",
+   "titulo": "Tarea 16",
+   "autor": "Tarea del curso",
+   "del_profe": false,
+   "codigo": "E18",
+   "paginas": 2
+  },
+  "E19": {
+   "archivo": "examen2/pdf/Tarea 17_261111_172642.pdf",
+   "titulo": "Tarea 17",
+   "autor": "Tarea del curso",
+   "del_profe": false,
+   "codigo": "E19",
+   "paginas": 2
   }
  }
 }

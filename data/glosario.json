@@ -40,6 +40,19 @@
    ]
   },
   {
+   "id": "g-aditivo",
+   "termino": "Aditivo",
+   "definicion": "Material distinto de los componentes comunes del concreto que permite lograr algún cambio en su comportamiento (ASTM C494).",
+   "tema": 8,
+   "subtema": "8F",
+   "fuente": [
+    {
+     "doc": "E19",
+     "pag": 1
+    }
+   ]
+  },
+  {
    "id": "g-agregado",
    "termino": "Agregado",
    "definicion": "Material granular, como arena, grava o roca triturada, que se usa con un medio cementante para hacer concreto o mortero.",
@@ -177,6 +190,76 @@
    ]
   },
   {
+   "id": "g-aire-incluido",
+   "termino": "Aire incluido",
+   "definicion": "Burbujas de 0,025 a 0,0025 cm, incorporadas con aditivos, que lubrican la mezcla y mejoran la trabajabilidad y la durabilidad, pero reducen la resistencia si no se baja la a/c.",
+   "tema": 8,
+   "subtema": "8A",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 3,
+     "impresa": "4/3"
+    },
+    {
+     "doc": "E17",
+     "pag": 8,
+     "impresa": "4/8"
+    },
+    {
+     "doc": "E17",
+     "pag": 9,
+     "impresa": "4/9"
+    }
+   ]
+  },
+  {
+   "id": "g-alita-c3s",
+   "termino": "Alita (C3S)",
+   "definicion": "Silicato tricálcico, 3CaO·SiO2. Se hidrata rápido y es responsable del inicio del fraguado y de la resistencia temprana.",
+   "tema": 4,
+   "subtema": "4C",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 8
+    },
+    {
+     "doc": "E03",
+     "pag": 9
+    },
+    {
+     "doc": "E15",
+     "pag": 1
+    },
+    {
+     "doc": "E15",
+     "pag": 4
+    }
+   ]
+  },
+  {
+   "id": "g-almohadilla-de-neopreno",
+   "termino": "Almohadilla de neopreno",
+   "definicion": "Disco de polímero del cloropreno, dentro de un anillo metálico, que se usa en lugar del capeo en el ensayo de compresión (ASTM C1231).",
+   "tema": 8,
+   "subtema": "8C",
+   "fuente": [
+    {
+     "doc": "E04",
+     "pag": 13
+    },
+    {
+     "doc": "E04",
+     "pag": 14
+    },
+    {
+     "doc": "E02",
+     "pag": 41
+    }
+   ]
+  },
+  {
    "id": "g-asentamiento",
    "termino": "Asentamiento",
    "definicion": "Medida de la consistencia del concreto fresco con el cono (ASTM C143); en autocompactante se mide el flujo (ASTM C1611).",
@@ -198,6 +281,253 @@
    ]
   },
   {
+   "id": "g-belita-c2s",
+   "termino": "Belita (C2S)",
+   "definicion": "Silicato bicálcico, 2CaO·SiO2. Se hidrata lento y aporta resistencia después de la primera semana.",
+   "tema": 4,
+   "subtema": "4C",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 8
+    },
+    {
+     "doc": "E03",
+     "pag": 9
+    },
+    {
+     "doc": "E15",
+     "pag": 1
+    },
+    {
+     "doc": "E15",
+     "pag": 5
+    }
+   ]
+  },
+  {
+   "id": "g-bola-de-kelly",
+   "termino": "Bola de Kelly",
+   "definicion": "Ensayo de consistencia (ASTM C360): se mide la profundidad a la que se hunde, por su peso, una bola metálica de 152 mm y 13,6 kg.",
+   "tema": 8,
+   "subtema": "8E",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 2,
+     "impresa": "4/2"
+    }
+   ]
+  },
+  {
+   "id": "g-c-s-h",
+   "termino": "C-S-H",
+   "definicion": "Silicato de calcio hidratado, producto principal de la hidratación del C3S y el C2S; da la resistencia del cemento hidratado (cerca de 50 % de su masa). No es estequiométrico.",
+   "tema": 4,
+   "subtema": "4C",
+   "fuente": [
+    {
+     "doc": "E15",
+     "pag": 2
+    },
+    {
+     "doc": "E15",
+     "pag": 3
+    },
+    {
+     "doc": "E03",
+     "pag": 12
+    }
+   ]
+  },
+  {
+   "id": "g-cal-hidraulica",
+   "termino": "Cal hidráulica",
+   "definicion": "Cal que endurece con agua; la cal puede ser hidráulica o no hidráulica. Smeaton (1758) fue el primero en conocer sus propiedades químicas.",
+   "tema": 4,
+   "subtema": "4A",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 6
+    },
+    {
+     "doc": "E06",
+     "pag": 6
+    }
+   ]
+  },
+  {
+   "id": "g-calor-de-hidratacion",
+   "termino": "Calor de hidratación",
+   "definicion": "Calor generado por la reacción entre el cemento y el agua (ASTM C186); depende sobre todo del C3A y el C3S.",
+   "tema": 4,
+   "subtema": "4E",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-caracteristica-especial-inte",
+   "termino": "Característica especial (INTE)",
+   "definicion": "Sufijo de la designación INTE que indica una propiedad adicional: A1 y A2 (aire), MS y AS (sulfatos), MH y BH (calor), BL (blanco) y BRa (baja reactividad a álcalis).",
+   "tema": 4,
+   "subtema": "4D",
+   "fuente": [
+    {
+     "doc": "E10",
+     "pag": 14
+    }
+   ]
+  },
+  {
+   "id": "g-carbonatacion",
+   "termino": "Carbonatación",
+   "definicion": "Pérdida de pH del concreto por reacción del CO₂ con la humedad de los poros y con los hidróxidos, que forma carbonatos y baja la alcalinidad que protege la armadura.",
+   "tema": 8,
+   "subtema": "8D",
+   "fuente": [
+    {
+     "doc": "E05",
+     "pag": 2
+    },
+    {
+     "doc": "E14",
+     "pag": 6
+    }
+   ]
+  },
+  {
+   "id": "g-celita-c3a",
+   "termino": "Celita (C3A)",
+   "definicion": "Aluminato tricálcico, 3CaO·Al2O3. Libera mucho calor en los primeros días; su bajo contenido mejora la resistencia a sulfatos.",
+   "tema": 4,
+   "subtema": "4C",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 8
+    },
+    {
+     "doc": "E03",
+     "pag": 9
+    },
+    {
+     "doc": "E15",
+     "pag": 5
+    }
+   ]
+  },
+  {
+   "id": "g-cemento-hidraulico",
+   "termino": "Cemento hidráulico",
+   "definicion": "Cemento que fragua y endurece por reacción química con agua (ASTM C125) y que, una vez endurecido, conserva su resistencia y estabilidad incluso bajo el agua.",
+   "tema": 4,
+   "subtema": "4A",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 2
+    },
+    {
+     "doc": "E10",
+     "pag": 6
+    }
+   ]
+  },
+  {
+   "id": "g-cemento-modificado-inte",
+   "termino": "Cemento modificado (INTE)",
+   "definicion": "Cemento hidráulico con clínker y componentes minerales (escoria, humo de sílice, puzolana, caliza o mezcla). Tipos INTE: ME, MF, MP, MC y MM; el tipo I es el Portland ordinario (CPO).",
+   "tema": 4,
+   "subtema": "4D",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 22
+    },
+    {
+     "doc": "E10",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-cemento-portland",
+   "termino": "Cemento Portland",
+   "definicion": "Cemento hidráulico producido pulverizando clínker, formado sobre todo por silicatos de calcio hidráulicos, con una o más formas de sulfato de calcio. El nombre viene de la patente de Aspdin (1824) por su parecido con la caliza de la isla de Portland.",
+   "tema": 4,
+   "subtema": "4A",
+   "fuente": [
+    {
+     "doc": "E11",
+     "pag": 1
+    },
+    {
+     "doc": "E06",
+     "pag": 8
+    },
+    {
+     "doc": "E06",
+     "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-ceniza-volante",
+   "termino": "Ceniza volante",
+   "definicion": "Subproducto de la combustión del carbón pulverizado en plantas eléctricas; vidrio de silicato en partículas mayormente esféricas. Clase F (< 10 % CaO) y Clase C (10 % a 30 % CaO), ASTM C618.",
+   "tema": 4,
+   "subtema": "4F",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 4
+    },
+    {
+     "doc": "E13",
+     "pag": 2
+    },
+    {
+     "doc": "E13",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "g-clinker",
+   "termino": "Clínker",
+   "definicion": "Producto del horno rotatorio, en nódulos, formado principalmente por silicatos de calcio hidráulicos (al menos 2/3 de su masa), aluminatos y ferroaluminatos de calcio. Molido con yeso da el cemento.",
+   "tema": 4,
+   "subtema": "4B",
+   "fuente": [
+    {
+     "doc": "E11",
+     "pag": 1
+    },
+    {
+     "doc": "E10",
+     "pag": 7
+    }
+   ]
+  },
+  {
+   "id": "g-cohesividad",
+   "termino": "Cohesividad",
+   "definicion": "Capacidad del concreto fresco de mantenerse como una masa.",
+   "tema": 8,
+   "subtema": "8A",
+   "fuente": [
+    {
+     "doc": "E19",
+     "pag": 1
+    }
+   ]
+  },
+  {
    "id": "g-concreto",
    "termino": "Concreto (hormigón)",
    "definicion": "Material compuesto de un medio ligante con partículas de agregado embebidas; en el concreto de cemento portland, el ligante es cemento y agua.",
@@ -211,6 +541,23 @@
     {
      "doc": "12",
      "pag": 15
+    }
+   ]
+  },
+  {
+   "id": "g-consistencia-normal",
+   "termino": "Consistencia normal",
+   "definicion": "Cantidad de agua con la que la aguja o émbolo del aparato de Vicat penetra 10 mm ± 1 mm en la pasta (ASTM C187).",
+   "tema": 4,
+   "subtema": "4E",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 33
+    },
+    {
+     "doc": "E12",
+     "pag": 5
     }
    ]
   },
@@ -243,6 +590,23 @@
    ]
   },
   {
+   "id": "g-coronamiento-capeo",
+   "termino": "Coronamiento (capeo)",
+   "definicion": "Procedimiento para dar superficies planas a los extremos de los cilindros cuando no cumplen planicidad y perpendicularidad (ASTM C617).",
+   "tema": 8,
+   "subtema": "8C",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 40
+    },
+    {
+     "doc": "E04",
+     "pag": 8
+    }
+   ]
+  },
+  {
    "id": "g-cuarteo",
    "termino": "Cuarteo",
    "definicion": "Método B de la ASTM C702: se apila en cono, se aplana, se divide en cuatro y se retiran dos cuartos opuestos.",
@@ -252,6 +616,32 @@
     {
      "doc": "19",
      "pag": 29
+    }
+   ]
+  },
+  {
+   "id": "g-cuarto-humedo",
+   "termino": "Cuarto húmedo",
+   "definicion": "Recinto de curado con 23,0 °C ± 2,0 °C y humedad relativa superior al 95 % (ASTM C511).",
+   "tema": 8,
+   "subtema": "8E",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 22
+    }
+   ]
+  },
+  {
+   "id": "g-curado-humedo",
+   "termino": "Curado húmedo",
+   "definicion": "Curado en el que los especímenes mantienen agua libre en toda su superficie, en tanques de agua o en un cuarto húmedo.",
+   "tema": 8,
+   "subtema": "8E",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 22
     }
    ]
   },
@@ -339,6 +729,25 @@
    ]
   },
   {
+   "id": "g-ensayo-de-vebe",
+   "termino": "Ensayo de Vebe",
+   "definicion": "Ensayo de consistencia para mezclas muy secas: se vibra la muestra y se mide el tiempo que tarda un disco transparente en quedar lleno de concreto.",
+   "tema": 8,
+   "subtema": "8E",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 2,
+     "impresa": "4/2"
+    },
+    {
+     "doc": "E17",
+     "pag": 3,
+     "impresa": "4/3"
+    }
+   ]
+  },
+  {
    "id": "g-escoria-de-alto-horno",
    "termino": "Escoria de alto horno",
    "definicion": "Agregado artificial, subproducto de la producción de acero; sus componentes principales son sílice, alúmina y cal.",
@@ -348,6 +757,23 @@
     {
      "doc": "14",
      "pag": 8
+    }
+   ]
+  },
+  {
+   "id": "g-etringita",
+   "termino": "Etringita",
+   "definicion": "Trisulfoaluminato de calcio hidratado, producto de la reacción del C3A con yeso y agua; controla la hidratación del C3A.",
+   "tema": 4,
+   "subtema": "4C",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 12
+    },
+    {
+     "doc": "E15",
+     "pag": 3
     }
    ]
   },
@@ -362,6 +788,131 @@
      "doc": "20",
      "pag": 1,
      "impresa": "4/6"
+    }
+   ]
+  },
+  {
+   "id": "g-falso-fraguado",
+   "termino": "Falso fraguado",
+   "definicion": "Pérdida de plasticidad poco después del mezclado, sin evolución de calor; se corrige remezclando. Ensayo ASTM C451.",
+   "tema": 4,
+   "subtema": "4E",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 6
+    },
+    {
+     "doc": "E03",
+     "pag": 32
+    }
+   ]
+  },
+  {
+   "id": "g-felita-c4af",
+   "termino": "Felita (C4AF)",
+   "definicion": "Aluminoferrita tetracálcica, 4CaO·Al2O3·Fe2O3. Aporta muy poca resistencia y la mayor parte del color gris del cemento.",
+   "tema": 4,
+   "subtema": "4C",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 8
+    },
+    {
+     "doc": "E03",
+     "pag": 9
+    },
+    {
+     "doc": "E15",
+     "pag": 5
+    }
+   ]
+  },
+  {
+   "id": "g-finura-del-cemento",
+   "termino": "Finura del cemento",
+   "definicion": "Distribución total del tamaño de las partículas del cemento. Se mide por permeabilidad al aire (Blaine) o por el tamiz de 45 µm (N.º 325).",
+   "tema": 4,
+   "subtema": "4E",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 2
+    },
+    {
+     "doc": "E01",
+     "pag": 74
+    }
+   ]
+  },
+  {
+   "id": "g-fragua",
+   "termino": "Fragua",
+   "definicion": "Aparición de rigidez en el concreto fresco; periodo de transición entre fluidez y rigidez. La inicial se da a 3,5 MPa de resistencia a la penetración y la final a 27,6 MPa.",
+   "tema": 8,
+   "subtema": "8A",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 9,
+     "impresa": "4/9"
+    },
+    {
+     "doc": "E17",
+     "pag": 10,
+     "impresa": "4/10"
+    }
+   ]
+  },
+  {
+   "id": "g-fragua-final",
+   "termino": "Fragua final",
+   "definicion": "Tiempo en el que la aguja de Vicat ya no deja marca visible en la pasta. INTE exige un máximo de 420 min.",
+   "tema": 4,
+   "subtema": "4E",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 42
+    },
+    {
+     "doc": "E10",
+     "pag": 12
+    }
+   ]
+  },
+  {
+   "id": "g-fragua-inicial",
+   "termino": "Fragua inicial",
+   "definicion": "Tiempo en el que la aguja de Vicat penetra 25 mm en la pasta (ASTM C191). INTE exige un mínimo de 45 min.",
+   "tema": 4,
+   "subtema": "4E",
+   "fuente": [
+    {
+     "doc": "E01",
+     "pag": 42
+    },
+    {
+     "doc": "E10",
+     "pag": 12
+    }
+   ]
+  },
+  {
+   "id": "g-fraguado-rapido",
+   "termino": "Fraguado rápido",
+   "definicion": "Pérdida rápida de trabajabilidad con evolución considerable de calor por la reacción de los aluminatos; causado por yeso insuficiente.",
+   "tema": 4,
+   "subtema": "4E",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 7
+    },
+    {
+     "doc": "E03",
+     "pag": 32
     }
    ]
   },
@@ -415,6 +966,23 @@
    ]
   },
   {
+   "id": "g-humo-de-silice",
+   "termino": "Humo de sílice",
+   "definicion": "Subproducto de la reducción de cuarzo de alta pureza con carbón en hornos eléctricos; más de 85 % de SiO2 amorfo, partículas de unos 0,1 µm. Dosis típica de 5 % a 10 %; ASTM C1240.",
+   "tema": 4,
+   "subtema": "4F",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 4
+    },
+    {
+     "doc": "E13",
+     "pag": 4
+    }
+   ]
+  },
+  {
    "id": "g-ignimbrita",
    "termino": "Ignimbrita",
    "definicion": "Roca piroclástica muy soldada, depositada a muy alta temperatura; por su soldamiento puede servir para construcción.",
@@ -424,6 +992,20 @@
     {
      "doc": "26",
      "pag": 45
+    }
+   ]
+  },
+  {
+   "id": "g-longitud-de-desarrollo",
+   "termino": "Longitud de desarrollo",
+   "definicion": "Longitud necesaria para que una varilla desarrolle su resistencia de diseño y no se deslice en el concreto.",
+   "tema": 8,
+   "subtema": "8C",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 8,
+     "impresa": "6/8"
     }
    ]
   },
@@ -441,6 +1023,19 @@
    ]
   },
   {
+   "id": "g-material-cementante-suplementario",
+   "termino": "Material cementante suplementario",
+   "definicion": "Ceniza volante, escoria, arcilla calcinada, esquisto calcinado o humo de sílice, usados como adición o sustitución parcial del cemento.",
+   "tema": 4,
+   "subtema": "4F",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 1
+    }
+   ]
+  },
+  {
    "id": "g-meteorizacion",
    "termino": "Meteorización",
    "definicion": "Debilitamiento de los minerales por la humedad, los cambios de temperatura y los agentes químicos (hidrólisis, oxidación, hidratación y disolución).",
@@ -454,6 +1049,32 @@
     {
      "doc": "26",
      "pag": 34
+    }
+   ]
+  },
+  {
+   "id": "g-mezcla-ternaria",
+   "termino": "Mezcla ternaria",
+   "definicion": "Concreto con más de un material cementante suplementario (por ejemplo, cemento portland, ceniza volante y humo de sílice).",
+   "tema": 8,
+   "subtema": "8B",
+   "fuente": [
+    {
+     "doc": "E14",
+     "pag": 7
+    }
+   ]
+  },
+  {
+   "id": "g-moldeabilidad",
+   "termino": "Moldeabilidad",
+   "definicion": "Capacidad del concreto fresco de adaptar las formas deseadas.",
+   "tema": 8,
+   "subtema": "8A",
+   "fuente": [
+    {
+     "doc": "E19",
+     "pag": 1
     }
    ]
   },
@@ -488,6 +1109,25 @@
    ]
   },
   {
+   "id": "g-modulo-de-elasticidad",
+   "termino": "Módulo de elasticidad",
+   "definicion": "Razón entre el esfuerzo normal y la deformación unitaria en el rango elástico; aumenta con la resistencia (140 000 a 420 000 kg/cm² en concretos de densidad normal).",
+   "tema": 8,
+   "subtema": "8C",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 7,
+     "impresa": "6/7"
+    },
+    {
+     "doc": "E16",
+     "pag": 8,
+     "impresa": "6/8"
+    }
+   ]
+  },
+  {
    "id": "g-modulo-de-finura-mf",
    "termino": "Módulo de finura (MF)",
    "definicion": "Índice de finura del agregado: suma de los porcentajes retenidos acumulados en la serie de mallas, dividida entre 100. Para el agregado fino, la serie es No. 4, 8, 16, 30, 50 y 100. A mayor MF, más grueso.",
@@ -502,6 +1142,33 @@
      "doc": "11",
      "pag": 4,
      "impresa": "109"
+    }
+   ]
+  },
+  {
+   "id": "g-modulo-de-ruptura",
+   "termino": "Módulo de ruptura",
+   "definicion": "Resistencia a flexión del concreto; se aproxima como 15 % de f'c y se usa en pavimentos y losas sobre el suelo.",
+   "tema": 8,
+   "subtema": "8C",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 6,
+     "impresa": "6/6"
+    }
+   ]
+  },
+  {
+   "id": "g-modulo-hidraulico",
+   "termino": "Módulo hidráulico",
+   "definicion": "MH = CaO / (SiO2 + Al2O3 + Fe2O3); debe estar entre 1,7 y 2,3. Menor que 1,7 da resistencias débiles; mayor que 2,3 da inestabilidad de volumen.",
+   "tema": 4,
+   "subtema": "4C",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 5
     }
    ]
   },
@@ -588,6 +1255,19 @@
    ]
   },
   {
+   "id": "g-plasticidad",
+   "termino": "Plasticidad",
+   "definicion": "Capacidad del concreto fresco de deformarse.",
+   "tema": 8,
+   "subtema": "8A",
+   "fuente": [
+    {
+     "doc": "E19",
+     "pag": 1
+    }
+   ]
+  },
+  {
    "id": "g-porcentaje-pasando",
    "termino": "Porcentaje pasando",
    "definicion": "100 % menos el porcentaje retenido acumulado en esa malla.",
@@ -627,6 +1307,19 @@
    ]
   },
   {
+   "id": "g-portlandita",
+   "termino": "Portlandita",
+   "definicion": "Hidróxido de calcio, Ca(OH)2, producto de la hidratación del C3S y el C2S. Mantiene un pH cercano a 13 y protege las armaduras de la corrosión.",
+   "tema": 4,
+   "subtema": "4C",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 13
+    }
+   ]
+  },
+  {
    "id": "g-ppm",
    "termino": "ppm",
    "definicion": "Partes por millón: unidad de concentración de impurezas en el agua.",
@@ -641,6 +1334,37 @@
      "doc": "01",
      "pag": 3,
      "impresa": "97"
+    }
+   ]
+  },
+  {
+   "id": "g-prueba-brasilena",
+   "termino": "Prueba brasileña",
+   "definicion": "Ensayo de tracción indirecta (ASTM C496): se carga un cilindro diametralmente y se calcula el esfuerzo de tracción.",
+   "tema": 8,
+   "subtema": "8E",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 4,
+     "impresa": "6/4"
+    }
+   ]
+  },
+  {
+   "id": "g-puzolana",
+   "termino": "Puzolana",
+   "definicion": "Material silícico o silícico aluminoso que, en polvo fino y con humedad, reacciona con el hidróxido de calcio del cemento y forma silicato de calcio hidratado.",
+   "tema": 4,
+   "subtema": "4F",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 4
+    },
+    {
+     "doc": "E13",
+     "pag": 1
     }
    ]
   },
@@ -694,6 +1418,19 @@
    ]
   },
   {
+   "id": "g-redosificacion",
+   "termino": "Redosificación",
+   "definicion": "Agregar más aditivo a un concreto ya dosificado; solo es posible antes de que comience el fraguado.",
+   "tema": 8,
+   "subtema": "8F",
+   "fuente": [
+    {
+     "doc": "E19",
+     "pag": 2
+    }
+   ]
+  },
+  {
    "id": "g-relacion-agua-cemento--a-c",
    "termino": "Relación agua/cemento (a/c)",
    "definicion": "Relación por masa entre el agua de diseño y el cemento.",
@@ -708,6 +1445,20 @@
     {
      "doc": "13",
      "pag": 9
+    }
+   ]
+  },
+  {
+   "id": "g-resistencia-a-compresion-f-c",
+   "termino": "Resistencia a compresión (f'c)",
+   "definicion": "Esfuerzo a compresión medido en cilindros de 15×30 cm (o 10×20 cm) curados en cámara húmeda por 28 días; es índice de calidad del concreto.",
+   "tema": 8,
+   "subtema": "8C",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 1,
+     "impresa": "6/1"
     }
    ]
   },
@@ -755,6 +1506,19 @@
    ]
   },
   {
+   "id": "g-sanidad",
+   "termino": "Sanidad",
+   "definicion": "Capacidad de la pasta de cemento de mantener su volumen; su falta se debe a exceso de cal libre o magnesia supercalcinada. Se evalúa con el ensayo de autoclave (ASTM C151).",
+   "tema": 4,
+   "subtema": "4E",
+   "fuente": [
+    {
+     "doc": "E12",
+     "pag": 4
+    }
+   ]
+  },
+  {
    "id": "g-saturado-superficie-seca-sss",
    "termino": "Saturado superficie seca (SSS)",
    "definicion": "Condición en la que los poros permeables están llenos de agua pero no hay agua libre en la superficie (w = D). El agregado no absorbe ni cede agua.",
@@ -769,6 +1533,20 @@
      "doc": "24",
      "pag": 4,
      "impresa": "2/6"
+    }
+   ]
+  },
+  {
+   "id": "g-segregacion",
+   "termino": "Segregación",
+   "definicion": "Separación de los componentes del concreto, con mezcla poco uniforme; generalmente el agregado grueso se separa del mortero.",
+   "tema": 8,
+   "subtema": "8A",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 5,
+     "impresa": "4/5"
     }
    ]
   },
@@ -834,6 +1612,20 @@
     {
      "doc": "06",
      "pag": 8
+    }
+   ]
+  },
+  {
+   "id": "g-trabajabilidad",
+   "termino": "Trabajabilidad",
+   "definicion": "Propiedad del concreto fresco que determina la facilidad con que puede mezclarse, colocarse, consolidarse y acabarse para lograr una condición homogénea (ACI 116-00).",
+   "tema": 8,
+   "subtema": "8A",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 1,
+     "impresa": "4/1"
     }
    ]
   },
@@ -905,6 +1697,57 @@
    ]
   },
   {
+   "id": "g-via-humeda",
+   "termino": "Vía húmeda",
+   "definicion": "Proceso de producción en el que las materias primas se muelen y se mezclan con agua para formar una lechada (pasta) que se bombea al horno.",
+   "tema": 4,
+   "subtema": "4B",
+   "fuente": [
+    {
+     "doc": "E07",
+     "pag": 1
+    },
+    {
+     "doc": "E11",
+     "pag": 2
+    }
+   ]
+  },
+  {
+   "id": "g-via-seca",
+   "termino": "Vía seca",
+   "definicion": "Proceso de producción en el que las materias primas se dosifican, se muelen hasta polvo y se mezclan en seco antes de entrar al horno.",
+   "tema": 4,
+   "subtema": "4B",
+   "fuente": [
+    {
+     "doc": "E07",
+     "pag": 1
+    },
+    {
+     "doc": "E11",
+     "pag": 2
+    }
+   ]
+  },
+  {
+   "id": "g-yeso",
+   "termino": "Yeso",
+   "definicion": "Sulfato de calcio dihidratado, CaSO4·2H2O. Se muele con el clínker para regular el fraguado del cemento.",
+   "tema": 4,
+   "subtema": "4C",
+   "fuente": [
+    {
+     "doc": "E15",
+     "pag": 1
+    },
+    {
+     "doc": "E10",
+     "pag": 8
+    }
+   ]
+  },
+  {
    "id": "g-alcalis-del-cemento",
    "termino": "Álcalis del cemento",
    "definicion": "Óxidos de sodio (Na₂O) y de potasio (K₂O) del cemento.",
@@ -914,6 +1757,19 @@
     {
      "doc": "15",
      "pag": 15
+    }
+   ]
+  },
+  {
+   "id": "g-indice-de-vicat",
+   "termino": "Índice de Vicat",
+   "definicion": "Índice de hidraulicidad: (SiO2 + Al2O3 + Fe2O3) / (CaO + MgO). Para cementos Portland está entre 0,50 y 0,64.",
+   "tema": 4,
+   "subtema": "4C",
+   "fuente": [
+    {
+     "doc": "E03",
+     "pag": 5
     }
    ]
   }

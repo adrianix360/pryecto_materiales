@@ -1,10 +1,44 @@
 {
  "version": 1,
  "examen": "2026-10-17",
+ "examenes": [
+  {
+   "id": 1,
+   "titulo": "I examen",
+   "fecha": "2026-10-17",
+   "temas": [
+    1,
+    2,
+    3
+   ],
+   "simulacro": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "id": 2,
+   "titulo": "II examen",
+   "fecha": "2026-12-02",
+   "temas": [
+    4,
+    8
+   ],
+   "simulacro": [
+    1,
+    2,
+    3,
+    4,
+    8
+   ]
+  }
+ ],
  "temas": [
   {
    "tema": 1,
    "titulo": "Introducción y definiciones básicas",
+   "examen": 1,
    "tarjetas": "data/tarjetas/tema1.json",
    "preguntas": "data/preguntas/tema1.json",
    "subtemas": {
@@ -14,6 +48,7 @@
   {
    "tema": 2,
    "titulo": "Agua para concreto",
+   "examen": 1,
    "tarjetas": "data/tarjetas/tema2.json",
    "preguntas": "data/preguntas/tema2.json",
    "subtemas": {
@@ -24,6 +59,7 @@
   {
    "tema": 3,
    "titulo": "Agregados",
+   "examen": 1,
    "tarjetas": "data/tarjetas/tema3.json",
    "preguntas": "data/preguntas/tema3.json",
    "subtemas": {
@@ -32,6 +68,36 @@
     "3C": "Volúmenes, masas y humedad",
     "3D": "Granulometría",
     "3E": "Ensayos de laboratorio"
+   }
+  },
+  {
+   "tema": 4,
+   "titulo": "Cemento hidráulico",
+   "examen": 2,
+   "tarjetas": "data/tarjetas/tema4.json",
+   "preguntas": "data/preguntas/tema4.json",
+   "subtemas": {
+    "4A": "Historia y definición del cemento",
+    "4B": "Producción del cemento y del clínker",
+    "4C": "Compuestos químicos, hidratación y sulfato de calcio",
+    "4D": "Tipos y clasificación de cementos",
+    "4E": "Propiedades físicas y mecánicas del cemento y sus ensayos",
+    "4F": "Puzolanas y adiciones minerales"
+   }
+  },
+  {
+   "tema": 8,
+   "titulo": "Concreto hidráulico",
+   "examen": 2,
+   "tarjetas": "data/tarjetas/tema8.json",
+   "preguntas": "data/preguntas/tema8.json",
+   "subtemas": {
+    "8A": "Concreto fresco",
+    "8B": "Diseño de mezclas",
+    "8C": "Concreto endurecido y factores que afectan la resistencia",
+    "8D": "Durabilidad",
+    "8E": "Ensayos de laboratorio del concreto",
+    "8F": "Aditivos"
    }
   }
  ]

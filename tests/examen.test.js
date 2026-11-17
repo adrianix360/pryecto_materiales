@@ -9,7 +9,7 @@ const Examen = require("../js/examen.js");
 
 const RAIZ = path.join(__dirname, "..");
 const leer = (rel) => JSON.parse(fs.readFileSync(path.join(RAIZ, rel), "utf8"));
-const PREGUNTAS = leer("data/indice.json").temas.flatMap((t) => leer(t.preguntas).preguntas);
+const PREGUNTAS = leer("data/indice.json").temas.filter((t) => (t.examen || 1) === 1).flatMap((t) => leer(t.preguntas).preguntas);
 const POR_ID = Object.fromEntries(PREGUNTAS.map((p) => [p.id, p]));
 const MIN = 60000;
 
@@ -193,4 +193,18 @@ test("resultado: nota sobre 100 y desglose por parte", () => {
   assert.equal(r.puntos, 16);
   assert.equal(r.nota, 40);
   assert.equal(r.items.filter((x) => !x.completo).length, 12);
+});
+
+test("indice.json declara los dos exámenes y sus temas (II examen acumulativo)", () => {
+  const idx = leer("data/indice.json");
+  const ex = Object.fromEntries(idx.examenes.map((e) => [e.id, e]));
+  assert.equal(ex[1].fecha, "2026-10-17");
+  assert.deepEqual(ex[1].temas, [1, 2, 3]);
+  assert.equal(ex[2].fecha, "2026-12-02");
+  assert.deepEqual(ex[2].temas, [4, 8]);
+  assert.deepEqual(ex[2].simulacro, [1, 2, 3, 4, 8]);
+  assert.equal(idx.examen, ex[1].fecha, "se conserva «examen» en la raíz por compatibilidad");
+  idx.temas.forEach((t) => {
+    assert.equal(t.examen, ex[1].temas.includes(t.tema) ? 1 : 2, `tema ${t.tema}`);
+  });
 });

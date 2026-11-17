@@ -20,7 +20,9 @@
         "<p>El contenido se basa en el material del curso IC-0604 Materiales de Construcción (UCR). " +
         "Los ítems marcados «⚠ Verificar» deben confirmarse con el profesor.</p></div>" +
         '<div class="tarjeta-info tarjeta-info--separada">' +
-        "<p>Prepara la teoría del I examen (sábado 17 de octubre de 2026): temas 1, 2 y 3.</p>" +
+        "<p>Prepara la teoría de los exámenes parciales: I examen (sábado 17 de octubre de 2026, temas 1, 2 y 3) y " +
+        "II examen (miércoles 2 de diciembre de 2026, temas 4 y 8 más lo anterior).</p>" +
+        "<p>Examen seleccionado: " + UI.esc(Datos.examen().titulo) + ".</p>" +
         "<p>Contenido: " + Datos.tarjetas.length + " tarjetas, " + Datos.preguntas.length + " preguntas y " +
         Datos.glosario.length + " términos de glosario.</p>" +
         "<p>Progreso: " + (Store.disponible() ?
@@ -59,6 +61,9 @@
     var acerca = document.querySelector(".barra__acerca");
     if (r === "acerca") acerca.setAttribute("aria-current", "page"); else acerca.removeAttribute("aria-current");
     document.body.setAttribute("data-pantalla", r);
+    // Normas no depende del examen: ahí el selector no se muestra.
+    var sel = document.getElementById("selector-examen");
+    if (sel && Datos.examenes.length > 1) sel.hidden = (r === "normas");
     try {
       pantalla.mostrar(vista);
     } catch (e) {
@@ -66,6 +71,32 @@
       if (window.console) console.error(e);
     }
     if (enfocar) { window.scrollTo(0, 0); vista.focus({ preventScroll: true }); }
+  }
+
+  // Selector «Examen 1 / Examen 2»: filtra Estudiar, Practicar, Simulacro y Buscar.
+  function dibujarSelector() {
+    var caja = document.getElementById("selector-examen");
+    var grupo = document.getElementById("grupo-examen");
+    if (Datos.examenes.length < 2) { caja.hidden = true; return; }
+    caja.hidden = false;
+    grupo.style.gridTemplateColumns = "repeat(" + Datos.examenes.length + ", 1fr)";
+    grupo.innerHTML = Datos.examenes.map(function (x) {
+      return '<button type="button" class="modo__opcion" data-examen="' + x.id + '" aria-pressed="' +
+        (x.id === Datos.examenId) + '">Examen ' + x.id + "</button>";
+    }).join("");
+    grupo.querySelectorAll("[data-examen]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var id = +b.getAttribute("data-examen");
+        if (id === Datos.examenId) return;
+        Datos.seleccionar(id);
+        dibujarSelector();
+        mostrar(false);
+        var nuevo = grupo.querySelector('[data-examen="' + id + '"]');
+        if (nuevo) nuevo.focus();
+      });
+    });
+    var curso = document.querySelector(".nav__marca-curso");
+    if (curso) curso.textContent = "IC-0604 · " + Datos.examen().titulo;
   }
 
   function avisoAlmacen(ok) {
@@ -108,6 +139,7 @@
   Store.alCambiarDisponibilidad(avisoAlmacen);
 
   Datos.cargar().then(function () {
+    dibujarSelector();
     window.addEventListener("hashchange", function () { mostrar(true); });
     mostrar(false);
     document.body.setAttribute("data-listo", "1");

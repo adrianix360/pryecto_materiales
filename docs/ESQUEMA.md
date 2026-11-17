@@ -4,6 +4,8 @@ Resumen del esquema **real** de los JSON, obtenido leyendo los archivos (9 de oc
 
 **Conteo actual:** 153 tarjetas, 202 preguntas, 60 términos de glosario, 30 normas y 30 fuentes. `tools/validar_json.py` da OK.
 
+> **Contenido del II examen:** los temas 4 y 8 y su glosario se escriben en `tools/contenido/examen2/*.json` (ver README) y el generador los vuelca a `data/`; las figuras van en `img/examen2/`.
+>
 > **Los JSON se generan.** `data/` sale de `tools/contenido/construir.py` (módulos `tema1.py`, `tema2.py`, `tarjetas3.py`, `preguntas3_*.py`, `glosario3.py` y `comun.py`). Si se edita un JSON a mano y luego se corre el generador, el cambio se pierde: el contenido se corrige en los módulos y se regenera. Las correcciones de la auditoría técnica (9/10/2026) están en `tools/contenido/correcciones.json`: cada una cambia un campo de un ítem y guarda el texto anterior, la razón y la evidencia; `construir.py` las aplica al final y se detiene si el texto anterior ya no coincide.
 
 ## Archivos
@@ -12,7 +14,7 @@ Resumen del esquema **real** de los JSON, obtenido leyendo los archivos (9 de oc
 |---|---|
 | `data/indice.json` | Lista de temas, rutas a sus JSON y nombres de subtemas |
 | `data/fuentes.json` | Catálogo de fuentes citables (código → archivo, autor, páginas) |
-| `data/tarjetas/temaN.json` | Tarjetas de estudio del tema N (N = 1, 2, 3) |
+| `data/tarjetas/temaN.json` | Tarjetas de estudio del tema N (N = 1, 2, 3, 4, 8) |
 | `data/preguntas/temaN.json` | Preguntas de práctica del tema N |
 | `data/glosario.json` | Términos del glosario (los tres temas juntos) |
 | `data/normas.json` | Familias y normas ASTM del entrenamiento «Normas» (30 normas, 9 familias) |
@@ -37,19 +39,23 @@ Se usa en `fuente[]` de tarjetas, preguntas y glosario, y en `figura.fuente[]`.
 ## `indice.json`
 
 ```json
-{ "version": 1, "examen": "2026-10-17", "temas": [ … ] }
+{ "version": 1, "examen": "2026-10-17", "examenes": [ … ], "temas": [ … ] }
 ```
 
 | Campo | Tipo | Descripción |
 |---|---|---|
 | `version` | entero | Versión del índice (hoy 1) |
-| `examen` | string (AAAA-MM-DD) | Fecha del I examen |
+| `examen` | string (AAAA-MM-DD) | Fecha del I examen (se conserva en la raíz por compatibilidad; Normas la sigue usando) |
+| `examenes[]` | lista | Un objeto por examen: `{id, titulo, fecha, temas, simulacro}`. Hoy: `{"id":1,"titulo":"I examen","fecha":"2026-10-17","temas":[1,2,3],"simulacro":[1,2,3]}` y `{"id":2,"titulo":"II examen","fecha":"2026-12-02","temas":[4,8],"simulacro":[1,2,3,4,8]}` |
+| `examenes[].temas` | lista de enteros | Temas que muestran Estudiar, Practicar, Progreso y Buscar al elegir ese examen |
+| `examenes[].simulacro` | lista de enteros | Temas que mezcla el Simulacro (el II examen es acumulativo) |
+| `temas[].examen` | entero | 1 o 2: examen al que pertenece el tema |
 | `temas[]` | lista | Un objeto por tema |
-| `temas[].tema` | entero | 1, 2 o 3 |
+| `temas[].tema` | entero | 1, 2, 3, 4 u 8 (numerados como en el programa del curso) |
 | `temas[].titulo` | string | Nombre del tema |
 | `temas[].tarjetas` | string | Ruta relativa: `data/tarjetas/temaN.json` |
 | `temas[].preguntas` | string | Ruta relativa: `data/preguntas/temaN.json` |
-| `temas[].subtemas` | objeto | Código → título. Códigos actuales: `1A`, `2A`, `2B`, `3A`, `3B`, `3C`, `3D`, `3E` |
+| `temas[].subtemas` | objeto | Código → título. Códigos actuales: `1A`, `2A`, `2B`, `3A`–`3E`, `4A`–`4F`, `8A`–`8F` |
 
 ---
 
@@ -59,7 +65,7 @@ Se usa en `fuente[]` de tarjetas, preguntas y glosario, y en `figura.fuente[]`.
 { "version": 1, "fuentes": { "03": { … }, "X01": { … } } }
 ```
 
-Diccionario indexado por código. Hay 30: `01`–`06`, `08`–`17`, `19`, `20`, `22`, `24`–`26` y los exámenes `X01`, `X02`, `X04`, `X06`, `X07`, `X14`, `X15`, `X17`.
+Diccionario indexado por código. Hay 49: `01`–`06`, `08`–`17`, `19`, `20`, `22`, `24`–`26`, los exámenes `X01`, `X02`, `X04`, `X06`, `X07`, `X14`, `X15`, `X17` y las 19 del II examen `E01`–`E19` (su `archivo` empieza con `examen2/pdf/`).
 
 | Campo | Tipo | Descripción |
 |---|---|---|

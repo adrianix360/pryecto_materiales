@@ -66,6 +66,15 @@
     return html;
   }
 
+  // Descarta un tema o subtema guardado que no pertenece al examen seleccionado.
+  function filtroValido(f) {
+    var tema = String(f.tema || ""), subtema = f.subtema || "";
+    var t = Datos.temas.filter(function (x) { return String(x.tema) === tema; })[0];
+    if (tema && !t) { tema = ""; subtema = ""; }
+    if (subtema && !Datos.temas.some(function (x) { return x.subtemas[subtema]; })) subtema = "";
+    return { tema: tema, subtema: subtema };
+  }
+
   function resumenFiltros(f, conOrigen) {
     var partes = [];
     partes.push(f.tema ? "Tema " + f.tema : "Todos los temas");
@@ -237,7 +246,7 @@
   // res: resultado de SRS.colaRepaso; nombres: {fallados, vencidos, nuevos} en plural
   function resumenRepaso(res, conVerificar, nombres) {
     var hoy = SRS.hoy();
-    var examen = Datos.indice.examen;
+    var examen = Datos.fechaExamen();
     var faltan = SRS.diferencia(hoy, examen);
     var cuando = faltan > 1 ? "faltan " + faltan + " días para el examen" :
       faltan === 1 ? "mañana es el examen" : faltan === 0 ? "hoy es el examen" : "el examen ya pasó";
@@ -264,6 +273,7 @@
     reportar: reportar,
     enlaceReporte: enlaceReporte,
     filtros: filtros,
+    filtroValido: filtroValido,
     conectarFiltros: conectarFiltros,
     cumpleFiltro: cumpleFiltro,
     fechaLarga: fechaLarga,

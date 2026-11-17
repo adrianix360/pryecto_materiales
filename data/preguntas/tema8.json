@@ -1,0 +1,2630 @@
+{
+ "tema": 8,
+ "titulo": "Concreto hidráulico",
+ "preguntas": [
+  {
+   "id": "p8-8A-t01",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué determina el ensayo de asentamiento (ASTM C143)?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "La consistencia de la mezcla de concreto hidráulico"
+    },
+    {
+     "id": "b",
+     "texto": "La resistencia a compresión a los 28 días"
+    },
+    {
+     "id": "c",
+     "texto": "El contenido de aire por el método de presión"
+    },
+    {
+     "id": "d",
+     "texto": "La temperatura del concreto fresco"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "El asentamiento mide la consistencia y, de forma indirecta, indica si el diseño cumple con su cantidad de agua y con la a/c. La resistencia es del ensayo C39, el aire del C231 y la temperatura del C1064.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 28
+    },
+    {
+     "doc": "E02",
+     "pag": 11
+    }
+   ]
+  },
+  {
+   "id": "p8-8A-t02",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué ensayo ASTM determina el contenido de aire del concreto fresco por el método de presión?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "ASTM C143"
+    },
+    {
+     "id": "b",
+     "texto": "ASTM C231"
+    },
+    {
+     "id": "c",
+     "texto": "ASTM C1064"
+    },
+    {
+     "id": "d",
+     "texto": "ASTM C39"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "C231 es el método de presión para el aire. C143 es el asentamiento, C1064 la temperatura y C39 la resistencia a compresión de cilindros. (C138 también da el aire, pero por el método gravimétrico.)",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 11
+    },
+    {
+     "doc": "E02",
+     "pag": 26
+    }
+   ]
+  },
+  {
+   "id": "p8-8A-t03",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Si el asentamiento es menor que 15 mm, ¿qué advierte el manual del laboratorio?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Que el concreto puede no tener la cohesión adecuada"
+    },
+    {
+     "id": "b",
+     "texto": "Que el ensayo debe hacerse con otro cono de mayor tamaño"
+    },
+    {
+     "id": "c",
+     "texto": "Que el concreto puede no tener la plasticidad adecuada"
+    },
+    {
+     "id": "d",
+     "texto": "Que la mezcla ya inició la fragua final"
+    }
+   ],
+   "correcta": "c",
+   "explicacion": "Menos de 15 mm: puede faltar plasticidad. La falta de cohesión (y un resultado poco significativo) se advierte con asentamientos mayores que 230 mm.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 28
+    }
+   ]
+  },
+  {
+   "id": "p8-8A-t04",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según Navas, un revenimiento de 3 cm a 5 cm corresponde a:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Un concreto de revenimiento normal"
+    },
+    {
+     "id": "b",
+     "texto": "Un concreto con aditivos para aumentar la fluidez"
+    },
+    {
+     "id": "c",
+     "texto": "Un concreto con exceso de agua"
+    },
+    {
+     "id": "d",
+     "texto": "Una mezcla seca"
+    }
+   ],
+   "correcta": "d",
+   "explicacion": "Mezclas secas: 3 a 5 cm. Normal: 8 a 10 cm. Con aditivos de fluidez: 15 a 20 cm.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 2,
+     "impresa": "4/2"
+    }
+   ]
+  },
+  {
+   "id": "p8-8A-t05",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál de estas es una causa de segregación citada por Navas?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Dejar caer el concreto desde alturas considerables"
+    },
+    {
+     "id": "b",
+     "texto": "Usar un agregado con graduación continua"
+    },
+    {
+     "id": "c",
+     "texto": "Tener un tamaño máximo menor de 25 mm"
+    },
+    {
+     "id": "d",
+     "texto": "Tener un exceso de finos en la mezcla"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "La mala colocación (caída desde gran altura) segrega. Las causas son Tmáx > 25 mm y pocos finos, no un exceso de finos; la graduación continua mejora la trabajabilidad.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 5,
+     "impresa": "4/5"
+    },
+    {
+     "doc": "E17",
+     "pag": 3,
+     "impresa": "4/3"
+    }
+   ]
+  },
+  {
+   "id": "p8-8A-t06",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "seleccion_unica",
+   "enunciado": "La fragua inicial del concreto se alcanza cuando la resistencia a la penetración llega a:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "0,7 MPa"
+    },
+    {
+     "id": "b",
+     "texto": "3,5 MPa"
+    },
+    {
+     "id": "c",
+     "texto": "27,6 MPa"
+    },
+    {
+     "id": "d",
+     "texto": "35 MPa"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "Inicial: 3,5 MPa (500 psi). La final es de 27,6 MPa (4000 psi), aproximadamente el inicio del endurecimiento (la resistencia a compresión es de unos 0,7 MPa).",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 9,
+     "impresa": "4/9"
+    },
+    {
+     "doc": "E17",
+     "pag": 10,
+     "impresa": "4/10"
+    }
+   ]
+  },
+  {
+   "id": "p8-8A-t07",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué origina la contracción autógena?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "La pérdida de agua por evaporación en la superficie"
+    },
+    {
+     "id": "b",
+     "texto": "La carbonatación de la pasta"
+    },
+    {
+     "id": "c",
+     "texto": "El consumo interno de agua durante la hidratación del cemento"
+    },
+    {
+     "id": "d",
+     "texto": "La reacción entre álcalis y agregados"
+    }
+   ],
+   "correcta": "c",
+   "explicacion": "La autógena viene del consumo interno de agua en la hidratación. La pérdida de agua por evaporación o exudación origina la contracción plástica.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 7,
+     "impresa": "4/7"
+    }
+   ]
+  },
+  {
+   "id": "p8-8A-t08",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Con la misma relación a/c, por cada 1 % de aire incluido la resistencia a compresión se reduce entre 2 % y 6 %.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Verdadero: es la desventaja del aire incluido citada por Navas (PCA, 2004).",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 9,
+     "impresa": "4/9"
+    }
+   ]
+  },
+  {
+   "id": "p8-8A-t09",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "verdadero_falso",
+   "enunciado": "Según Navas, la exudación (sangrado) solo ocurre en concretos mal diseñados.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "Falso: la exudación siempre ocurre, aunque a veces es imperceptible. Se reduce con menor a/c, cementos más finos y buena graduación.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 7,
+     "impresa": "4/7"
+    }
+   ]
+  },
+  {
+   "id": "p8-8A-t10",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "respuesta_corta",
+   "enunciado": "Diferencie la contracción plástica de la contracción autógena.",
+   "respuesta_modelo": "La plástica es el cambio de volumen del concreto aún plástico por pérdida de agua (exudación, formaletas, evaporación) y se ve como fisuras superficiales antes o durante el acabado. La autógena es la reducción de volumen por el consumo interno de agua en la hidratación; es significativa solo con a/c menores de 0,30 y se reduce con curado temprano de al menos 7 días.",
+   "puntos_clave": [
+    "Plástica: pérdida de agua en estado plástico (exudación, evaporación)",
+    "Plástica: fisuras superficiales antes o durante el acabado",
+    "Autógena: consumo interno de agua por hidratación",
+    "Autógena: relevante con a/c menor de 0,30; curado temprano"
+   ],
+   "explicacion": "Se evalúa que se asocie cada contracción con su causa (pérdida externa de agua frente a consumo interno) y su manifestación.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 7,
+     "impresa": "4/7"
+    },
+    {
+     "doc": "E17",
+     "pag": 8,
+     "impresa": "4/8"
+    }
+   ]
+  },
+  {
+   "id": "p8-8A-t11",
+   "tema": 8,
+   "subtema": "8A",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los efectos de una exudación excesiva (Navas):",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Sube la a/c en la superficie y se forma una capa débil y porosa"
+    },
+    {
+     "id": "b",
+     "texto": "Aumenta la porosidad por canales que no se rellenan"
+    },
+    {
+     "id": "c",
+     "texto": "Mejora la adherencia bajo las varillas"
+    },
+    {
+     "id": "d",
+     "texto": "Agrietamiento por cambios de volumen diferenciales"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "d"
+   ],
+   "explicacion": "Correctas: capa superficial débil, mayor porosidad y agrietamiento. Falla la tercera: bajo agregados y varillas se forman bolsas de agua que disminuyen la adherencia.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 6,
+     "impresa": "4/6"
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t01",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "seleccion_unica",
+   "enunciado": "En el diseño de mezclas, el Paso 1 (asentamiento) se decide según:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "La resistencia promedio requerida f'cr"
+    },
+    {
+     "id": "b",
+     "texto": "El tamaño máximo nominal del agregado"
+    },
+    {
+     "id": "c",
+     "texto": "La exposición a sulfatos"
+    },
+    {
+     "id": "d",
+     "texto": "El tipo de construcción (Cuadro 1.1)"
+    }
+   ],
+   "correcta": "d",
+   "explicacion": "El Cuadro 1.1 da el asentamiento máximo y mínimo por tipo de construcción. Las otras variables se definen en los pasos 2 y 4.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E09",
+     "pag": 1
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t02",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "seleccion_unica",
+   "enunciado": "El tamaño máximo nominal del agregado no debe superar, respecto del peralte de la losa:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "1/3 del espesor de la losa"
+    },
+    {
+     "id": "b",
+     "texto": "1/5 del espesor de la losa"
+    },
+    {
+     "id": "c",
+     "texto": "3/4 del espesor de la losa"
+    },
+    {
+     "id": "d",
+     "texto": "1/2 del espesor de la losa"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Para losas: Ømáx ≤ 1/3 del peralte. El 1/5 se aplica a la menor separación entre lados del encofrado y el 3/4 a la separación del refuerzo y al recubrimiento.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E09",
+     "pag": 1
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t03",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "seleccion_unica",
+   "enunciado": "Sin registros históricos y con f'c entre 20 y 35 MPa, la resistencia promedio requerida (ACI 318) es:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "f'c + 7,0 MPa"
+    },
+    {
+     "id": "b",
+     "texto": "f'c + 8,5 MPa"
+    },
+    {
+     "id": "c",
+     "texto": "1,10 f'c + 5,0 MPa"
+    },
+    {
+     "id": "d",
+     "texto": "f'c + 3,5 MPa"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "ACI 318: f'c < 20: +7,0; de 20 a 35: +8,5; mayor de 35: 1,10 f'c + 5,0.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E09",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t04",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "seleccion_unica",
+   "enunciado": "En exposición severa a agua de mar o sulfatos, para secciones delgadas o con menos de 5 cm de recubrimiento, la a/mc máxima es:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "0,45"
+    },
+    {
+     "id": "b",
+     "texto": "0,50"
+    },
+    {
+     "id": "c",
+     "texto": "0,40"
+    },
+    {
+     "id": "d",
+     "texto": "0,55"
+    }
+   ],
+   "correcta": "c",
+   "explicacion": "El Cuadro 4.3 da 0,40 para secciones delgadas o con menos de 5 cm de recubrimiento y 0,45 para las demás estructuras.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E09",
+     "pag": 4
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t05",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué es ACI 211.1-91?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Un método de prueba para el contenido de humedad del agregado"
+    },
+    {
+     "id": "b",
+     "texto": "Un código de construcción de concreto estructural"
+    },
+    {
+     "id": "c",
+     "texto": "Una especificación para moldes de cilindros"
+    },
+    {
+     "id": "d",
+     "texto": "Una práctica estándar para seleccionar proporciones de concreto normal, de alta densidad y masivo"
+    }
+   ],
+   "correcta": "d",
+   "explicacion": "ACI 211.1-91 es la práctica de dosificación que usa el laboratorio. El contenido de humedad es de ASTM C566 y los moldes de ASTM C470.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 4
+    },
+    {
+     "doc": "E02",
+     "pag": 26
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t06",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "seleccion_unica",
+   "enunciado": "El Cuadro 3.1 del método (agua de mezcla y aire) se consulta con:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "El asentamiento y el tamaño máximo del agregado"
+    },
+    {
+     "id": "b",
+     "texto": "La a/c y la resistencia f'cr"
+    },
+    {
+     "id": "c",
+     "texto": "El módulo de finura y la masa unitaria"
+    },
+    {
+     "id": "d",
+     "texto": "La exposición y el recubrimiento"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Paso 3: con asentamiento y tamaño máximo se lee el agua (kg/m³) y el aire. La a/c y f'cr se usan en el paso 4, y el módulo de finura en el paso 5.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E09",
+     "pag": 2
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t07",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "verdadero_falso",
+   "enunciado": "En el Cuadro 3.1, un concreto con aire incluido necesita más agua de mezcla que uno sin aire incluido para el mismo asentamiento y tamaño máximo.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "Falso: el concreto con aire incluido necesita menos agua (por ejemplo, 180 vs. 205 kg/m³ para 25 a 50 mm y 9,5 mm).",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E09",
+     "pag": 2
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t08",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "verdadero_falso",
+   "enunciado": "Si se usa cemento resistente a sulfatos (Tipo II o V), la relación agua/cemento permisible puede aumentarse en 0,05.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Verdadero: es la nota del Cuadro 4.3 (ASTM C150).",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E09",
+     "pag": 4
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t09",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "verdadero_falso",
+   "enunciado": "En concretos más manejables, por ejemplo los colocados con bomba, el volumen de agregado grueso del Cuadro 4 se reduce en 10 %.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Verdadero. En concretos menos manejables (pavimentos) el valor puede incrementarse 10 %.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E09",
+     "pag": 5
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t10",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "respuesta_corta",
+   "enunciado": "Enumere los cinco pasos del diseño de mezclas (ACI 211 y ACI 318) y qué se decide en cada uno.",
+   "respuesta_modelo": "1) Asentamiento según el tipo de construcción. 2) Tamaño máximo nominal del agregado, según las recomendaciones ACI. 3) Agua de diseño y porcentaje de aire con el asentamiento y el tamaño máximo (Cuadro 3.1). 4) Relación agua/cemento, a partir de f'cr y la exposición (Cuadros 4.1 a 4.3). 5) Cantidades: volumen de agregado grueso seco compactado (Cuadro 4).",
+   "puntos_clave": [
+    "Asentamiento por tipo de construcción",
+    "Tamaño máximo nominal del agregado",
+    "Agua de diseño y aire (Cuadro 3.1)",
+    "Relación a/c (f'cr, resistencia y durabilidad)",
+    "Cantidades: volumen de agregado grueso"
+   ],
+   "explicacion": "La respuesta sigue el orden de la fuente: cada paso con la variable que fija y la tabla que se consulta.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E09",
+     "pag": 1
+    },
+    {
+     "doc": "E09",
+     "pag": 2
+    },
+    {
+     "doc": "E09",
+     "pag": 3
+    },
+    {
+     "doc": "E09",
+     "pag": 4
+    },
+    {
+     "doc": "E09",
+     "pag": 5
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t11",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "respuesta_corta",
+   "enunciado": "¿Por qué se determina la humedad del agregado con ASTM C566 al aplicar ACI 211.1 en el laboratorio?",
+   "respuesta_modelo": "Porque ACI 211.1 supone agregados en condición saturada superficie seca (SSS), que es difícil de cumplir en laboratorio. Con C566 (humedad total evaporable) se determina el agua que los agregados aportan o requieren y se corrige la dosificación.",
+   "puntos_clave": [
+    "ACI 211.1 supone agregados SSS",
+    "La condición SSS es difícil de lograr en laboratorio",
+    "C566 da la humedad total evaporable",
+    "Se corrige el agua aportada o requerida"
+   ],
+   "explicacion": "Se evalúa que se relacione la suposición SSS de ACI 211.1 con la corrección por humedad.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 5
+    },
+    {
+     "doc": "E02",
+     "pag": 11
+    }
+   ]
+  },
+  {
+   "id": "p8-8B-t12",
+   "tema": 8,
+   "subtema": "8B",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los parámetros que ACI 211.1-91 pide considerar en un diseño de densidad normal:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Relación máxima agua-cemento"
+    },
+    {
+     "id": "b",
+     "texto": "Tamaño máximo nominal del agregado"
+    },
+    {
+     "id": "c",
+     "texto": "Asentamiento"
+    },
+    {
+     "id": "d",
+     "texto": "Resistencia a tracción a los 7 días"
+    },
+    {
+     "id": "e",
+     "texto": "Color del cemento"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explicacion": "La lista incluye a/c máxima, cemento mínimo, aire, asentamiento, tamaño máximo nominal, resistencia a compresión a 28 días y otros requisitos. La resistencia a tracción a los 7 días y el color del cemento no están en la lista.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 5
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t01",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cómo se define f'c?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Resistencia a tracción medida a los 7 días"
+    },
+    {
+     "id": "b",
+     "texto": "Resistencia a compresión medida en cilindros de 15×30 cm (o 10×20 cm) curados en cámara húmeda por 28 días"
+    },
+    {
+     "id": "c",
+     "texto": "Resistencia promedio requerida para el diseño (f'cr)"
+    },
+    {
+     "id": "d",
+     "texto": "Resistencia medida en cubos a los 90 días"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "f'c es la resistencia a compresión a 28 días en cilindros curados en cámara húmeda. La f'cr es la resistencia promedio requerida, mayor que f'c.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 1,
+     "impresa": "6/1"
+    },
+    {
+     "doc": "E09",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t02",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según el Cuadro 6.1, ¿qué porcentaje de la resistencia de 28 días se alcanza a los 7 días?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "15 % a 20 %"
+    },
+    {
+     "id": "b",
+     "texto": "40 % a 45 %"
+    },
+    {
+     "id": "c",
+     "texto": "65 % a 75 %"
+    },
+    {
+     "id": "d",
+     "texto": "75 % a 90 %"
+    }
+   ],
+   "correcta": "c",
+   "explicacion": "1 día: 15-20 %; 3 días: 40-45 %; 7 días: 65-75 %; 14 días: 75-90 %.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 3,
+     "impresa": "6/3"
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t03",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Para un cilindro con L/D = 1,50, el factor de corrección de la resistencia es:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "0,98"
+    },
+    {
+     "id": "b",
+     "texto": "0,93"
+    },
+    {
+     "id": "c",
+     "texto": "0,87"
+    },
+    {
+     "id": "d",
+     "texto": "0,96"
+    }
+   ],
+   "correcta": "d",
+   "explicacion": "L/D 1,75 → 0,98; 1,50 → 0,96; 1,25 → 0,93; 1,00 → 0,87.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 45
+    },
+    {
+     "doc": "E04",
+     "pag": 4
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t04",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Si el material de coronamiento tiene una resistencia menor que la del concreto, ¿qué ocurre?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Falla el material de capeo y se concentran esfuerzos"
+    },
+    {
+     "id": "b",
+     "texto": "Absorbe carga y no la transmite toda al cilindro"
+    },
+    {
+     "id": "c",
+     "texto": "El cilindro resiste más de lo real"
+    },
+    {
+     "id": "d",
+     "texto": "No tiene efecto sobre el resultado"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Un capeo más débil falla y concentra esfuerzos. Absorber carga sin transmitirla es el efecto de un capeo de resistencia mayor que la del concreto.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E04",
+     "pag": 8
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t05",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "seleccion_unica",
+   "enunciado": "Para cilindros con resistencia mayor que 50 MPa, el espesor promedio máximo de la capa de coronamiento (ASTM C617) es:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "6 mm"
+    },
+    {
+     "id": "b",
+     "texto": "3 mm"
+    },
+    {
+     "id": "c",
+     "texto": "8 mm"
+    },
+    {
+     "id": "d",
+     "texto": "10 mm"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "Mayor que 50 MPa: promedio 3 mm (máximo 5 mm en cualquier sector). De 3,5 a 50 MPa: promedio 6 mm (máximo 8 mm).",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E04",
+     "pag": 7
+    },
+    {
+     "doc": "E02",
+     "pag": 40
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t06",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "seleccion_unica",
+   "enunciado": "La resistencia a tracción del concreto se aproxima como:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "15 % de f'c"
+    },
+    {
+     "id": "b",
+     "texto": "25 % de f'c"
+    },
+    {
+     "id": "c",
+     "texto": "10 % de f'c"
+    },
+    {
+     "id": "d",
+     "texto": "50 % de f'c"
+    }
+   ],
+   "correcta": "c",
+   "explicacion": "Tracción ≈ 10 % de f'c; el módulo de ruptura ≈ 15 % de f'c y el cortante entre 8 % y 14 %.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 4,
+     "impresa": "6/4"
+    },
+    {
+     "doc": "E16",
+     "pag": 6,
+     "impresa": "6/6"
+    },
+    {
+     "doc": "E16",
+     "pag": 7,
+     "impresa": "6/7"
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t07",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "seleccion_unica",
+   "enunciado": "El módulo de ruptura (resistencia a flexión) se aproxima como:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "5 % de f'c"
+    },
+    {
+     "id": "b",
+     "texto": "10 % de f'c"
+    },
+    {
+     "id": "c",
+     "texto": "40 % de f'c"
+    },
+    {
+     "id": "d",
+     "texto": "15 % de f'c"
+    }
+   ],
+   "correcta": "d",
+   "explicacion": "Módulo de ruptura ≈ 15 % de f'c; la tracción es ≈ 10 % de f'c.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 6,
+     "impresa": "6/6"
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t08",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "seleccion_unica",
+   "enunciado": "A medida que aumenta el tamaño del cilindro, la resistencia relativa a compresión:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Disminuye; el cilindro de 150×300 mm es la referencia (100 %)"
+    },
+    {
+     "id": "b",
+     "texto": "Aumenta; el de 600×1200 mm es la referencia"
+    },
+    {
+     "id": "c",
+     "texto": "Se mantiene igual para cualquier tamaño"
+    },
+    {
+     "id": "d",
+     "texto": "Aumenta hasta 300×600 mm y luego baja"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "El de 50×100 mm da 109 % y el de 600×1200 mm da 84 %; el de 150×300 mm (6×12 pulg) es la referencia con factor 1.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E04",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t09",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "verdadero_falso",
+   "enunciado": "En un material frágil como el concreto, el factor que más influye en la resistencia es la porosidad.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Verdadero: los defectos (microfisuras, poros) se cierran con la compresión y se acentúan con la tracción.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 1,
+     "impresa": "6/1"
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t10",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "verdadero_falso",
+   "enunciado": "Un cilindro que se falla seco, porque perdió humedad, da una resistencia menor que uno saturado.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "Falso: al perder humedad la muestra se densifica y los datos son muy variables. La condición crítica es la saturada; no fallarla saturada puede dar un registro hasta 40 % en exceso.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E04",
+     "pag": 6
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t11",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "verdadero_falso",
+   "enunciado": "La velocidad de aplicación de la carga en el ensayo de compresión es de 0,25 MPa/s ± 0,05 MPa/s.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Verdadero: así lo indica la presentación del profesor (ASTM C39).",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E04",
+     "pag": 20
+    },
+    {
+     "doc": "E02",
+     "pag": 43
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t12",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "verdadero_falso",
+   "enunciado": "El pulido es un método de coronamiento que usa pasta de yeso y cemento.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "Falso: el pulido no es en realidad un método de coronamiento; es una forma de garantizar planicidad y perpendicularidad (disco de pulido y tenazas).",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E04",
+     "pag": 17
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t13",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Mencione los factores que afectan la resistencia a compresión medida en cilindros.",
+   "respuesta_modelo": "Tamaño y forma de la muestra, temperatura, contenido de humedad, acabado de la superficie, curado de los especímenes y velocidad de aplicación de la carga.",
+   "puntos_clave": [
+    "Tamaño y forma de la muestra",
+    "Temperatura",
+    "Contenido de humedad",
+    "Acabado de la superficie",
+    "Curado y velocidad de aplicación de la carga"
+   ],
+   "explicacion": "Son los siete factores del mapa conceptual de la presentación del profesor.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E04",
+     "pag": 2
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t14",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "respuesta_corta",
+   "enunciado": "Explique por qué la resistencia a compresión del concreto es mayor que la de tracción.",
+   "respuesta_modelo": "El concreto es un material frágil y su resistencia depende sobre todo de la porosidad (defectos, microfisuras y poros). Con compresión esos defectos se cierran; con tracción se acentúan, por eso resiste mucho menos a tracción.",
+   "puntos_clave": [
+    "Material frágil; influye sobre todo la porosidad",
+    "Defectos y microfisuras",
+    "Se cierran con compresión",
+    "Se acentúan con tracción"
+   ],
+   "explicacion": "Se evalúa que se vincule la porosidad con el comportamiento de los defectos en cada tipo de carga.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 1,
+     "impresa": "6/1"
+    }
+   ]
+  },
+  {
+   "id": "p8-8C-t15",
+   "tema": 8,
+   "subtema": "8C",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque las afirmaciones correctas sobre los materiales cementantes suplementarios y la resistencia:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "La ceniza Clase C desarrolla más resistencia temprana que la Clase F"
+    },
+    {
+     "id": "b",
+     "texto": "El humo de sílice normalmente iguala o supera la resistencia a 1 día del concreto control"
+    },
+    {
+     "id": "c",
+     "texto": "Algunas cenizas y puzolanas naturales requieren de 28 a 90 días para superar el control a 28 días"
+    },
+    {
+     "id": "d",
+     "texto": "El humo de sílice no aporta resistencia entre los 3 y los 28 días"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explicacion": "La cuarta es falsa: el mayor aporte del humo de sílice ocurre justo entre 3 y 28 días.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E13",
+     "pag": 10
+    }
+   ]
+  },
+  {
+   "id": "p8-8D-t01",
+   "tema": 8,
+   "subtema": "8D",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué es la carbonatación del concreto?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Un ataque expansivo producido por sulfatos"
+    },
+    {
+     "id": "b",
+     "texto": "Una pérdida de pH por reacción del CO₂ con la humedad y los hidróxidos de los poros"
+    },
+    {
+     "id": "c",
+     "texto": "Una reacción entre álcalis y agregados reactivos"
+    },
+    {
+     "id": "d",
+     "texto": "El congelamiento del agua en los poros"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "El CO₂ reacciona con la humedad de los poros y con Ca(OH)₂ y NaOH para formar carbonatos y bajar el pH. Las otras opciones son otros mecanismos de deterioro.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E05",
+     "pag": 2
+    }
+   ]
+  },
+  {
+   "id": "p8-8D-t02",
+   "tema": 8,
+   "subtema": "8D",
+   "tipo": "seleccion_unica",
+   "enunciado": "La fenolftaleína, como indicador de carbonatación, vira entre pH 8,2 y 9,8 de incoloro a:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Azul"
+    },
+    {
+     "id": "b",
+     "texto": "Amarillo"
+    },
+    {
+     "id": "c",
+     "texto": "Violeta rojizo"
+    },
+    {
+     "id": "d",
+     "texto": "Verde"
+    }
+   ],
+   "correcta": "c",
+   "explicacion": "Fenolftaleína: incoloro a violeta rojizo. La timolftaleína (viraje en pH 9,3 a 10,5) pasa de incoloro a azul.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E05",
+     "pag": 3
+    }
+   ]
+  },
+  {
+   "id": "p8-8D-t03",
+   "tema": 8,
+   "subtema": "8D",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuál es la condición de humedad favorable para la carbonatación, según la presentación?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Humedad menor de 20 %"
+    },
+    {
+     "id": "b",
+     "texto": "Humedad entre 80 % y 100 %"
+    },
+    {
+     "id": "c",
+     "texto": "Concreto totalmente saturado de agua"
+    },
+    {
+     "id": "d",
+     "texto": "Humedad entre 40 % y 60 %"
+    }
+   ],
+   "correcta": "d",
+   "explicacion": "La condición favorable es 40 % < humedad < 60 %.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E05",
+     "pag": 2
+    }
+   ]
+  },
+  {
+   "id": "p8-8D-t04",
+   "tema": 8,
+   "subtema": "8D",
+   "tipo": "seleccion_unica",
+   "enunciado": "Según ACI 318, para exposición a descongelantes el contenido máximo de escoria es de:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "50 % de la masa del material cementante"
+    },
+    {
+     "id": "b",
+     "texto": "25 % de la masa del material cementante"
+    },
+    {
+     "id": "c",
+     "texto": "10 % de la masa del material cementante"
+    },
+    {
+     "id": "d",
+     "texto": "35 % de la masa del material cementante"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Ceniza volante 25 %, escoria 50 % y humo de sílice 10 %.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E14",
+     "pag": 4
+    }
+   ]
+  },
+  {
+   "id": "p8-8D-t05",
+   "tema": 8,
+   "subtema": "8D",
+   "tipo": "verdadero_falso",
+   "enunciado": "Los materiales cementantes suplementarios que reducen la reacción álcali-sílice también reducen la reacción álcali-carbonato.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "Falso: no reducen la álcali-carbonato, que involucra los álcalis del cemento y ciertos calcáreos dolomíticos.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E14",
+     "pag": 5
+    }
+   ]
+  },
+  {
+   "id": "p8-8D-t06",
+   "tema": 8,
+   "subtema": "8D",
+   "tipo": "verdadero_falso",
+   "enunciado": "La carbonatación reduce la alcalinidad del concreto, que es la que protege la armadura de la corrosión.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Verdadero: por eso se exige que el concreto sea resistente a la carbonatación.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E14",
+     "pag": 6
+    }
+   ]
+  },
+  {
+   "id": "p8-8D-t07",
+   "tema": 8,
+   "subtema": "8D",
+   "tipo": "respuesta_corta",
+   "enunciado": "¿Qué condiciones debe cumplir un concreto con materiales cementantes suplementarios para resistir la congelación-deshielo igual que uno solo con cemento portland?",
+   "respuesta_modelo": "Misma resistencia a compresión, cantidad adecuada de aire incluido con características apropiadas de vacíos, curado adecuado y secado al aire durante un mes antes de la exposición a la congelación.",
+   "puntos_clave": [
+    "Misma resistencia a compresión",
+    "Aire incluido adecuado con vacíos apropiados",
+    "Curado adecuado",
+    "Secado al aire durante un mes antes de la exposición"
+   ],
+   "explicacion": "Son las cuatro condiciones que da Kosmatka (PCA) en la lectura.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E14",
+     "pag": 2
+    }
+   ]
+  },
+  {
+   "id": "p8-8D-t08",
+   "tema": 8,
+   "subtema": "8D",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los factores que aumentan mucho la carbonatación:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Relación agua/material cementante alta"
+    },
+    {
+     "id": "b",
+     "texto": "Bajo contenido de cemento"
+    },
+    {
+     "id": "c",
+     "texto": "Periodo de curado corto"
+    },
+    {
+     "id": "d",
+     "texto": "Baja relación agua/cemento"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explicacion": "Una a/c baja produce una pasta menos permeable y reduce la carbonatación.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E14",
+     "pag": 6
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t01",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "ASTM C192 es la práctica para:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Elaborar y curar cilindros en campo"
+    },
+    {
+     "id": "b",
+     "texto": "Elaborar y curar especímenes de concreto en laboratorio"
+    },
+    {
+     "id": "c",
+     "texto": "Determinar el asentamiento del concreto"
+    },
+    {
+     "id": "d",
+     "texto": "Determinar la resistencia a compresión de cilindros"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "C192 es de laboratorio; C31 es el de campo; C143 es el asentamiento y C39 la compresión.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 4
+    },
+    {
+     "doc": "E04",
+     "pag": 19
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t02",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Cuáles son las edades usuales de ensayo a compresión de los cilindros en el laboratorio?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "14 y 28 días"
+    },
+    {
+     "id": "b",
+     "texto": "1, 5 y 10 días"
+    },
+    {
+     "id": "c",
+     "texto": "3, 7 y 28 días"
+    },
+    {
+     "id": "d",
+     "texto": "7, 28 y 90 días"
+    }
+   ],
+   "correcta": "c",
+   "explicacion": "Compresión: 3, 7 y 28 días. Flexión: 14 y 28 días.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 12
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t03",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "La altura interior nominal de un molde cilíndrico es:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Igual al diámetro interior"
+    },
+    {
+     "id": "b",
+     "texto": "1,5 veces el diámetro interior"
+    },
+    {
+     "id": "c",
+     "texto": "Tres veces el diámetro interior"
+    },
+    {
+     "id": "d",
+     "texto": "El doble del diámetro interior nominal"
+    }
+   ],
+   "correcta": "d",
+   "explicacion": "Los moldes cilíndricos tienen altura = 2 × diámetro (L/D = 2).",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 8
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t04",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "Un cilindro de 150 mm se moldea por varillado con:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "3 capas y 25 golpes por capa con varilla de 16 ± 2 mm"
+    },
+    {
+     "id": "b",
+     "texto": "2 capas y 25 golpes por capa con varilla de 10 ± 2 mm"
+    },
+    {
+     "id": "c",
+     "texto": "3 capas y 10 golpes por capa con varilla de 16 ± 2 mm"
+    },
+    {
+     "id": "d",
+     "texto": "2 capas y 25 golpes por capa con varilla de 16 ± 2 mm"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "150 mm: 3 capas, varilla de 16 ± 2 mm, 25 golpes. El de 100 mm usa 2 capas y varilla de 10 ± 2 mm.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 18
+    },
+    {
+     "doc": "E02",
+     "pag": 19
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t05",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "Los especímenes se remueven de los moldes:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "A las 12 h exactas"
+    },
+    {
+     "id": "b",
+     "texto": "A las 24 h ± 8 h después del moldeo"
+    },
+    {
+     "id": "c",
+     "texto": "A las 48 h ± 8 h"
+    },
+    {
+     "id": "d",
+     "texto": "Inmediatamente después del enrasado"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "ASTM C192: desmoldar a las 24 h ± 8 h; luego al cuarto húmedo.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 22
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t06",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "Las condiciones del cuarto húmedo (ASTM C511) son:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "20 °C ± 5 °C y humedad relativa de 60 %"
+    },
+    {
+     "id": "b",
+     "texto": "30 °C ± 2 °C y humedad relativa de 90 %"
+    },
+    {
+     "id": "c",
+     "texto": "23,0 °C ± 2,0 °C y humedad relativa superior al 95 %"
+    },
+    {
+     "id": "d",
+     "texto": "23 °C ± 2 °C y humedad relativa de 50 %"
+    }
+   ],
+   "correcta": "c",
+   "explicacion": "Cuarto húmedo: 23,0 ± 2,0 °C y HR > 95 %.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 22
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t07",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "El tiempo máximo entre el final del mezclado y el levantamiento del cono en el ensayo de asentamiento es de:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "1 min"
+    },
+    {
+     "id": "b",
+     "texto": "5 min"
+    },
+    {
+     "id": "c",
+     "texto": "10 min"
+    },
+    {
+     "id": "d",
+     "texto": "2 min 30 s"
+    }
+   ],
+   "correcta": "d",
+   "explicacion": "ASTM C143 exige completar el ensayo con un máximo de 2 min 30 s entre fin del mezclado y levantar el cono.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 29
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t08",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "El asentamiento se reporta:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "En milímetros, al 5 mm más cercano"
+    },
+    {
+     "id": "b",
+     "texto": "En centímetros, al 0,1 cm más cercano"
+    },
+    {
+     "id": "c",
+     "texto": "En milímetros, al 1 mm más cercano"
+    },
+    {
+     "id": "d",
+     "texto": "En pulgadas, al 1/8 más cercano"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "El valor se anota en mm al 5 mm más cercano, en la bitácora de C192.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 34
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t09",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "La tolerancia de tiempo para fallar un cilindro de 7 días es de:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "± 0,5 h"
+    },
+    {
+     "id": "b",
+     "texto": "± 6 h"
+    },
+    {
+     "id": "c",
+     "texto": "± 2 h"
+    },
+    {
+     "id": "d",
+     "texto": "± 20 h"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "24 h ± 0,5 h; 3 días ± 2 h; 7 días ± 6 h; 28 días ± 20 h; 90 días ± 2 días.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 43
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t10",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "Un patrón de falla con fracturas laterales en la parte superior o inferior del cilindro (sin extremo puntiagudo), común con almohadillas de neopreno, es del:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Tipo 1"
+    },
+    {
+     "id": "b",
+     "texto": "Tipo 3"
+    },
+    {
+     "id": "c",
+     "texto": "Tipo 5"
+    },
+    {
+     "id": "d",
+     "texto": "Tipo 4"
+    }
+   ],
+   "correcta": "c",
+   "explicacion": "Tipo 5: fracturas laterales arriba o abajo. El tipo 6 es similar pero con el extremo puntiagudo; el 1 son conos bien formados, el 3 agrietamiento columnar y el 4 fractura diagonal.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 44
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t11",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Qué equipo se ve en la fotografía?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Molde cilíndrico para especímenes (ASTM C470)"
+    },
+    {
+     "id": "b",
+     "texto": "Mezcladora de tambor giratorio"
+    },
+    {
+     "id": "c",
+     "texto": "Molde prismático para vigas de flexión"
+    },
+    {
+     "id": "d",
+     "texto": "Molde (cono) de asentamiento con varilla, cinta métrica y placa metálica (ASTM C143)"
+    }
+   ],
+   "correcta": "d",
+   "explicacion": "Es el equipo del ensayo de asentamiento: molde cónico con asas, varilla de apisonamiento, cinta métrica y placa de apoyo.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 30
+    }
+   ],
+   "figura": {
+    "src": "img/examen2/e02-cono-asentamiento.jpg",
+    "alt": "Molde cónico metálico de asentamiento con asas, varilla de apisonamiento, cinta métrica y placa metálica sobre base oscura.",
+    "fuente": [
+     {
+      "doc": "E02",
+      "pag": 30
+     }
+    ]
+   }
+  },
+  {
+   "id": "p8-8E-t12",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿Para qué ensayo se usa el equipo de la fotografía?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Resistencia a compresión de cilindros (ASTM C39)"
+    },
+    {
+     "id": "b",
+     "texto": "Asentamiento del concreto (ASTM C143)"
+    },
+    {
+     "id": "c",
+     "texto": "Contenido de aire por presión (ASTM C231)"
+    },
+    {
+     "id": "d",
+     "texto": "Tiempo de fragua (ASTM C403)"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Es una máquina de compresión con un cilindro en la cámara de carga; se usa en C39.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 37
+    },
+    {
+     "doc": "E02",
+     "pag": 43
+    }
+   ],
+   "figura": {
+    "src": "img/examen2/e02-maquina-compresion.jpg",
+    "alt": "Máquina de compresión de cilindros con marco metálico, panel digital de control y un espécimen colocado en la cámara.",
+    "fuente": [
+     {
+      "doc": "E02",
+      "pag": 43
+     }
+    ]
+   }
+  },
+  {
+   "id": "p8-8E-t13",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "El ensayo de tiempo de fragua (ASTM C403) se hace en:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Concreto fresco, con el cono de Abrams"
+    },
+    {
+     "id": "b",
+     "texto": "Mortero tamizado por la malla N.º 4, con penetrómetro de aguja"
+    },
+    {
+     "id": "c",
+     "texto": "Cilindros de 15×30 cm en la máquina universal"
+    },
+    {
+     "id": "d",
+     "texto": "Una muestra sobre una mesa vibratoria con un disco"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "C403 usa mortero tamizado por la malla N.º 4 y mide la resistencia a la penetración. El cono es del asentamiento y el disco con vibración es del ensayo Vebe.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 9,
+     "impresa": "4/9"
+    },
+    {
+     "doc": "E17",
+     "pag": 2,
+     "impresa": "4/2"
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t14",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_unica",
+   "enunciado": "El ensayo de la bola de Kelly (ASTM C360) consiste en medir:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "El tiempo que tarda un disco en quedar lleno de concreto bajo vibración"
+    },
+    {
+     "id": "b",
+     "texto": "El asentamiento de un cono de 30 cm"
+    },
+    {
+     "id": "c",
+     "texto": "La profundidad a la que se hunde, por su propio peso, una bola metálica de 152 mm y 13,6 kg"
+    },
+    {
+     "id": "d",
+     "texto": "La resistencia a la penetración en mortero"
+    }
+   ],
+   "correcta": "c",
+   "explicacion": "El tiempo con disco es el ensayo Vebe; el cono es el de Abrams; la penetración en mortero es el ensayo de fragua.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E17",
+     "pag": 2,
+     "impresa": "4/2"
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t15",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "verdadero_falso",
+   "enunciado": "El mezclado manual está limitado a volúmenes de hasta 0,007 m³.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Verdadero; además no aplica a concreto con aire incluido ni a concretos con asentamiento no medible.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 13
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t16",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "verdadero_falso",
+   "enunciado": "Si en el ensayo de asentamiento hay desplome o desprendimiento, se desecha el ensayo y se repite con otra porción de la muestra.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Verdadero. Si ocurre en dos ensayos consecutivos, el concreto probablemente carece de plasticidad y cohesión para el ensayo.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 34
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t17",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "verdadero_falso",
+   "enunciado": "Durante el moldeo, la varilla puede apoyarse sobre cualquier superficie limpia entre golpes.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "Falso: nunca debe apoyarse en otra superficie; debe estar húmeda, igual que el cucharón y todo lo que toque el concreto.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 19
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t18",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "verdadero_falso",
+   "enunciado": "La prueba brasileña (ASTM C496) determina la resistencia a tracción de forma indirecta.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Verdadero: se aplica la carga diametralmente al cilindro y sus resultados son 5 % a 12 % mayores que los de tracción directa.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E16",
+     "pag": 4,
+     "impresa": "6/4"
+    },
+    {
+     "doc": "E16",
+     "pag": 5,
+     "impresa": "6/5"
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t19",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "verdadero_falso",
+   "enunciado": "ASTM C39 está limitado a concretos con densidad mayor que 800 kg/m³.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Verdadero: es un límite de alcance de la norma.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 36
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t20",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Describa los pasos del ensayo de asentamiento (ASTM C143).",
+   "respuesta_modelo": "Sobre superficie rígida, plana y nivelada, con el cono húmedo, se llena en 3 capas de igual volumen, con 25 golpes de varilla por capa (penetrando unos 25 mm en la capa anterior). Se enrasa, se levanta el molde en 5 ± 2 s (máximo 2 min 30 s tras el mezclado) y se mide la diferencia vertical entre el borde del molde y el centro desplazado; se reporta al 5 mm más cercano.",
+   "puntos_clave": [
+    "3 capas de igual volumen, 25 golpes cada una",
+    "La varilla penetra unos 25 mm en la capa anterior",
+    "Enrasar y levantar el molde en 5 ± 2 s",
+    "Máximo 2 min 30 s entre el fin del mezclado y el levantamiento",
+    "Medir la diferencia vertical y reportar al 5 mm más cercano"
+   ],
+   "explicacion": "Se evalúan las capas y golpes, el tiempo de levantamiento y cómo se mide y reporta.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 29
+    },
+    {
+     "doc": "E02",
+     "pag": 32
+    },
+    {
+     "doc": "E02",
+     "pag": 33
+    },
+    {
+     "doc": "E02",
+     "pag": 34
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t21",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "respuesta_corta",
+   "enunciado": "¿Qué se verifica en el espécimen antes del ensayo de compresión?",
+   "respuesta_modelo": "Se miden al menos dos diámetros en ángulo recto (aprox. 0,25 mm) y al menos tres longitudes (aprox. 1 mm). Se revisa la planicidad con regla y galga de 0,050 mm y la perpendicularidad con escuadra y galga de 1,00 mm (tolerancia 0,5°). No se ensaya si un diámetro difiere de otro en más de 2 %, y los extremos no planos se cortan, pulen o coronan.",
+   "puntos_clave": [
+    "Dos diámetros y tres longitudes",
+    "Planicidad con galga de 0,050 mm",
+    "Perpendicularidad dentro de 0,5°",
+    "No ensayar si los diámetros difieren más de 2 %"
+   ],
+   "explicacion": "Se evalúan mediciones, planicidad, perpendicularidad y el criterio de rechazo.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 42
+    },
+    {
+     "doc": "E02",
+     "pag": 43
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t22",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Indique las condiciones del curado de los cilindros en laboratorio.",
+   "respuesta_modelo": "Se cubren con plástico para evitar evaporación y se desmoldan a las 24 h ± 8 h. Se almacenan en cuarto húmedo (ASTM C511) a 23,0 °C ± 2,0 °C y HR superior al 95 %, con agua libre en toda la superficie (curado húmedo), y se evitan vibraciones en las primeras 48 h.",
+   "puntos_clave": [
+    "Cubrir con plástico para evitar evaporación",
+    "Desmoldar a las 24 h ± 8 h",
+    "Cuarto húmedo 23 ± 2 °C y HR > 95 %",
+    "Agua libre en toda la superficie; sin vibraciones 48 h"
+   ],
+   "explicacion": "Se evalúa el desmolde, las condiciones del cuarto húmedo y el significado de curado húmedo.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 22
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t23",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "respuesta_corta",
+   "enunciado": "Explique cómo se obtiene la resistencia a compresión en ASTM C39 y cómo se aplica la carga.",
+   "respuesta_modelo": "Es la carga máxima alcanzada dividida entre el área promedio de la sección transversal (fm = P/A, en MPa). La carga se aplica de forma continua y sin choque, a 0,25 MPa/s ± 0,05 MPa/s, y se registra la carga máxima y el tipo de fractura.",
+   "puntos_clave": [
+    "Carga máxima entre el área promedio de la sección",
+    "fm = P/A en MPa",
+    "Carga continua, sin choque",
+    "0,25 ± 0,05 MPa/s",
+    "Registrar carga máxima y tipo de fractura"
+   ],
+   "explicacion": "Se evalúa la definición de resistencia, la fórmula y las condiciones de carga.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 43
+    },
+    {
+     "doc": "E02",
+     "pag": 45
+    },
+    {
+     "doc": "E04",
+     "pag": 20
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t24",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque las condiciones que se deben cumplir al manipular el concreto fresco durante el moldeo:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Remezclarlo antes de usarlo"
+    },
+    {
+     "id": "b",
+     "texto": "Usar una superficie plana, firme y nivelada"
+    },
+    {
+     "id": "c",
+     "texto": "Humedecer todo lo que toque el concreto (cucharón y varilla)"
+    },
+    {
+     "id": "d",
+     "texto": "Dejar la varilla seca para no agregar agua"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explicacion": "La varilla y el cucharón deben estar húmedos; no se deja seca.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 19
+    }
+   ]
+  },
+  {
+   "id": "p8-8E-t25",
+   "tema": 8,
+   "subtema": "8E",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los requisitos de la varilla de apisonamiento del ensayo de asentamiento (ASTM C143):",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "De acero, recta y redonda"
+    },
+    {
+     "id": "b",
+     "texto": "De 16 mm ± 2 mm de diámetro"
+    },
+    {
+     "id": "c",
+     "texto": "De 400 a 600 mm de largo"
+    },
+    {
+     "id": "d",
+     "texto": "Con los extremos planos"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explicacion": "Uno o ambos extremos deben ser redondeados en forma hemisférica, no planos.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 30
+    }
+   ]
+  },
+  {
+   "id": "p8-8F-t01",
+   "tema": 8,
+   "subtema": "8F",
+   "tipo": "seleccion_unica",
+   "enunciado": "En la clasificación de ASTM C494, un aditivo retardante es de tipo:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Tipo A"
+    },
+    {
+     "id": "b",
+     "texto": "Tipo C"
+    },
+    {
+     "id": "c",
+     "texto": "Tipo F"
+    },
+    {
+     "id": "d",
+     "texto": "Tipo B"
+    }
+   ],
+   "correcta": "d",
+   "explicacion": "A: reductores de agua; B: retardantes; C: acelerantes; F: superplastificante de alto rango.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E19",
+     "pag": 1
+    }
+   ],
+   "verificar": "Se basa en un apunte manuscrito; confirmar la lista de tipos en la norma."
+  },
+  {
+   "id": "p8-8F-t02",
+   "tema": 8,
+   "subtema": "8F",
+   "tipo": "seleccion_unica",
+   "enunciado": "Un aditivo Tipo F es un:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Superplastificante de alto rango"
+    },
+    {
+     "id": "b",
+     "texto": "Reductor de agua"
+    },
+    {
+     "id": "c",
+     "texto": "Acelerante"
+    },
+    {
+     "id": "d",
+     "texto": "Retardante"
+    }
+   ],
+   "correcta": "a",
+   "explicacion": "Tipo F: superplastificante de alto rango. Reductor de agua es el tipo A, acelerante el C y retardante el B.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E19",
+     "pag": 1
+    }
+   ],
+   "verificar": "Se basa en un apunte manuscrito; confirmar la lista de tipos en la norma."
+  },
+  {
+   "id": "p8-8F-t03",
+   "tema": 8,
+   "subtema": "8F",
+   "tipo": "seleccion_unica",
+   "enunciado": "¿En qué unidades se dosifican generalmente los aditivos, según la conferencia?",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "En kg por m³ de agua"
+    },
+    {
+     "id": "b",
+     "texto": "En cc por kg de cemento"
+    },
+    {
+     "id": "c",
+     "texto": "Como porcentaje de la masa del agregado"
+    },
+    {
+     "id": "d",
+     "texto": "En litros por m³ de agregado"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "Se dosifican generalmente en cc por kg de cemento.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E19",
+     "pag": 2
+    }
+   ],
+   "verificar": "Apunte manuscrito de la p.2 que no se cotejó con la imagen."
+  },
+  {
+   "id": "p8-8F-t04",
+   "tema": 8,
+   "subtema": "8F",
+   "tipo": "verdadero_falso",
+   "enunciado": "Un concreto puede redosificarse con aditivo aun cuando ya comenzó el fraguado.",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Verdadero"
+    },
+    {
+     "id": "b",
+     "texto": "Falso"
+    }
+   ],
+   "correcta": "b",
+   "explicacion": "Falso: no se puede redosificar un concreto cuando ya comenzó el fraguado.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E19",
+     "pag": 2
+    }
+   ],
+   "verificar": "Apunte manuscrito de la p.2 que no se cotejó con la imagen."
+  },
+  {
+   "id": "p8-8F-t05",
+   "tema": 8,
+   "subtema": "8F",
+   "tipo": "respuesta_corta",
+   "enunciado": "Mencione las reglas para agregar aditivos al concreto en el laboratorio (ASTM C192).",
+   "respuesta_modelo": "Los aditivos en polvo insolubles se mezclan con una porción de cemento; los líquidos o solubles se agregan en solución con el agua de mezclado y esa cantidad entra en el cálculo del agua; las soluciones concentradas incompatibles (cloruro de calcio, ciertos inclusores de aire y retardantes) no se mezclan entre sí antes de añadirse; y el método debe ser el mismo de mezcla a mezcla.",
+   "puntos_clave": [
+    "Polvo insoluble: mezclar con una porción de cemento",
+    "Líquidos o solubles: en solución con el agua y contados en ella",
+    "No mezclar entre sí soluciones concentradas incompatibles",
+    "Mantener el mismo método en todas las mezclas"
+   ],
+   "explicacion": "Se evalúa el manejo según la forma del aditivo, las incompatibilidades y la constancia del método.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E02",
+     "pag": 12
+    }
+   ]
+  },
+  {
+   "id": "p8-8F-t06",
+   "tema": 8,
+   "subtema": "8F",
+   "tipo": "seleccion_multiple",
+   "enunciado": "Marque los aditivos de especialidad (Tipo S) que menciona la conferencia:",
+   "opciones": [
+    {
+     "id": "a",
+     "texto": "Impermeabilizantes integrales"
+    },
+    {
+     "id": "b",
+     "texto": "Modificadores de viscosidad"
+    },
+    {
+     "id": "c",
+     "texto": "Estabilizadores de hidratación"
+    },
+    {
+     "id": "d",
+     "texto": "Reductores de agua"
+    }
+   ],
+   "correcta": [
+    "a",
+    "b",
+    "c"
+   ],
+   "explicacion": "Los reductores de agua son el Tipo A, no de especialidad.",
+   "origen": "teoria",
+   "clave": "documental",
+   "fuente": [
+    {
+     "doc": "E19",
+     "pag": 2
+    }
+   ],
+   "verificar": "Apunte manuscrito de la p.2 que no se cotejó con la imagen."
+  }
+ ]
+}

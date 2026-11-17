@@ -23,19 +23,20 @@
 
   // ---------- Bloques ----------
   function cuentaRegresiva(hoy) {
-    var examen = Datos.indice.examen;
+    var examen = Datos.fechaExamen();
     var faltan = SRS.diferencia(hoy, examen);
-    var titulo = faltan > 1 ? '<p class="cuenta__num">' + faltan + '</p><p class="cuenta__texto">días para el I examen</p>' :
-      faltan === 1 ? '<p class="cuenta__num">1</p><p class="cuenta__texto">día: mañana es el I examen</p>' :
-      faltan === 0 ? '<p class="cuenta__texto cuenta__texto--grande">Hoy es el I examen</p>' :
-      '<p class="cuenta__texto cuenta__texto--grande">El I examen ya pasó</p>';
+    var nombre = UI.esc(Datos.examen().titulo);
+    var titulo = faltan > 1 ? '<p class="cuenta__num">' + faltan + '</p><p class="cuenta__texto">días para el ' + nombre + "</p>" :
+      faltan === 1 ? '<p class="cuenta__num">1</p><p class="cuenta__texto">día: mañana es el ' + nombre + "</p>" :
+      faltan === 0 ? '<p class="cuenta__texto cuenta__texto--grande">Hoy es el ' + nombre + "</p>" :
+      '<p class="cuenta__texto cuenta__texto--grande">El ' + nombre + " ya pasó</p>";
     return '<section class="cuenta" aria-label="Cuenta regresiva">' + titulo +
       '<p class="nota">' + UI.esc(UI.fechaLarga(examen).replace(/^./, function (c) { return c.toUpperCase(); })) +
       ", 8:00 a. m.</p></section>";
   }
 
   function resumen(hoy) {
-    var examen = Datos.indice.examen;
+    var examen = Datos.fechaExamen();
     var colaT = SRS.colaRepaso(Datos.tarjetas, Store.tarjeta, hoy, examen);
     var colaP = SRS.colaRepaso(Datos.preguntas, Store.pregunta, hoy, examen);
     var sinVer = Datos.tarjetas.filter(function (t) { return !Store.tarjeta(t.id); }).length +

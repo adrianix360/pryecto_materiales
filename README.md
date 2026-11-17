@@ -2,6 +2,8 @@
 
 Herramienta de estudio para la teoría del I examen de **IC-0604 Materiales de Construcción** (UCR, II ciclo 2026, sábado 17 de octubre de 2026). Cubre los temas 1, 2 y 3: introducción, agua para concreto y agregados.
 
+También prepara el **II examen** (miércoles 2 de diciembre de 2026, acumulativo): temas 4 (cemento hidráulico) y 8 (concreto hidráulico). Un selector **Examen 1 / Examen 2** al inicio de la página filtra Estudiar, Practicar, Simulacro y Buscar. Por defecto abre el Examen 2 y recuerda la elección. El Examen 1 muestra los temas 1, 2 y 3; el Examen 2 estudia y practica los temas 4 y 8, y su Simulacro mezcla los temas 1, 2, 3, 4 y 8. La fecha del examen elegido manda en la cuenta regresiva y en la compresión del repaso espaciado. Normas no depende del examen.
+
 **Desarrollado por Adrián Castro Ramírez**, estudiante de Ingeniería Civil de la UCR.
 
 > El contenido se basa en el material del curso IC-0604. Los ítems marcados «⚠ Verificar» deben confirmarse con el profesor. Para reportar un error, usá el botón «Reportar un error» de cada tarjeta o pregunta.
@@ -165,10 +167,29 @@ js/pantalla-buscar.js pantalla de búsqueda
 js/                   store, datos, ui, estudiar, practicar, app
 sw.js                 service worker (precarga para uso sin conexión)
 data/                 contenido en JSON (esquema en docs/ESQUEMA.md)
-img/                  figuras de ensayos y de exámenes
+img/                  figuras de ensayos y de exámenes (img/examen2/ para el II examen)
 tools/                validador de JSON, generador de contenido e íconos
+tools/contenido/examen2/  contenido del II examen (tema4.json, tema8.json, glosario.json)
 tests/                servidor local y pruebas con Playwright
 ```
+
+## Agregar contenido del II examen
+
+El contenido de los temas 4 y 8 vive en `tools/contenido/examen2/` y el generador lo convierte en `data/`:
+
+- `tema4.json` y `tema8.json`: `{"tema": 4, "titulo": "Cemento hidráulico", "subtemas": {…}, "tarjetas": […], "preguntas": […]}`. Tarjetas y preguntas siguen el esquema de `docs/ESQUEMA.md` (ids `t4-4A-01`, `p4-4A-t01`; `origen` `"teoria"`, `clave` `"documental"`). `subtemas` puede ir vacío: el generador trae los nombres de 4A–4F y 8A–8E.
+- `glosario.json`: `{"terminos": […]}`, mismo esquema que el glosario actual.
+- Las fuentes E01–E19 salen de `fuentes/examen2/codigos.json` (las registra el generador; se citan con `{"doc": "E03", "pag": 1}`).
+- **Figuras:** el archivo va en `img/examen2/` y se cita con `"figura": {"src": "img/examen2/nombre.png", …}`. No hay que registrarla en ningún otro lado: el service worker la precarga a partir del campo `figura.src` de los JSON y el validador comprueba que exista.
+
+Después:
+
+```bash
+python tools/contenido/construir.py
+python tools/validar_json.py .
+```
+
+El generador no toca los temas 1 a 3. Si un tema no tiene archivo o está vacío, la app muestra «Todavía no hay contenido» sin romperse.
 
 ## Diseño
 
@@ -197,13 +218,13 @@ python tests/test_app.py
 python tests/capturas.py
 ```
 
-`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) , `progreso.test.js` prueba el dominio, la racha y el exportar/importar, , `buscar.test.js` prueba la búsqueda, el resaltado, el glosario y los índices, `opciones.test.js` prueba el orden aleatorio y el ajuste de letras con las 73 preguntas reales, y `normas.test.js` prueba la lectura de la respuesta, las opciones, las confusiones, el dominio y los datos de `data/normas.json`. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba` y el orden de las colas con `window.__ordenFijo` (salvo la prueba del orden aleatorio).
+`srs.test.js` prueba el repaso con fechas simuladas, `examen.test.js` prueba el simulacro (puntaje, deduplicación y temporizador con reloj simulado) , `progreso.test.js` prueba el dominio, la racha y el exportar/importar, , `buscar.test.js` prueba la búsqueda, el resaltado, el glosario y los índices, `opciones.test.js` prueba el orden aleatorio y el ajuste de letras con las 73 preguntas reales, y `normas.test.js` prueba la lectura de la respuesta, las opciones, las confusiones, el dominio y los datos de `data/normas.json`. Ninguno necesita dependencias, solo Node. Las pruebas de la app fijan el examen en el I con `window.__examenPrueba = 1` (una prueba usa el selector real) y la fecha en el 9 de octubre de 2026 con `window.__fechaPrueba` y el orden de las colas con `window.__ordenFijo` (salvo la prueba del orden aleatorio).
 
 `capturas.py` guarda capturas a 390×844 en modo claro y oscuro en `tests/capturas/` (esa carpeta no se sube).
 
 ## Publicar una versión nueva
 
-1. Cambiá `APP_VERSION` (y `APP_FECHA`) en `js/version.js`, por ejemplo `"2026-10-10.1"`.
+1. Cambiá `APP_VERSION` (y `APP_FECHA`) en `js/version.js`, por ejemplo `"2026-11-17.1"`.
 2. Corré el validador y las pruebas.
 3. Hacé commit y push a `main`. GitHub Pages publica la carpeta raíz.
 

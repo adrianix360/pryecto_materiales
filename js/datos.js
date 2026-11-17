@@ -9,12 +9,26 @@
     glosario: [],
     temas: [],        // [{tema, titulo, subtemas: {codigo: titulo}}]
     subtemas: {},     // codigo -> titulo
-    tarjetas: [],
+    tarjetas: [],     // solo las del examen seleccionado (ver D.seleccionar)
     preguntas: [],
+    todasTarjetas: [],  // las de todos los temas
+    todasPreguntas: [],
+    todoGlosario: [],
+    todosTemas: [],
+    examenes: [],     // [{id, titulo, fecha, temas, simulacro}]
+    examenId: 1,
     familias: [],     // familias de normas, en orden de estudio
     normas: [],       // normas ASTM del entrenamiento «Normas»
     normaPorId: {}
   };
+
+  var CLAVE_EXAMEN = "pryecto_materiales:examen:v1"; // aparte del progreso: no cambia el formato guardado
+  var oyentes = [];
+
+  // Un tema sin archivo (todavía no escrito) cuenta como vacío: la app no se rompe.
+  function jsonOpcional(ruta, vacio) {
+    return json(ruta).catch(function () { return vacio; });
+  }
 
   function json(ruta) {
     return fetch(ruta).then(function (r) {
@@ -28,25 +42,74 @@
       .then(function (r) {
         D.indice = r[0];
         D.fuentes = r[1].fuentes;
-        D.glosario = r[2].terminos;
+        D.todoGlosario = r[2].terminos;
         D.familias = r[3].familias;
         D.normas = r[3].normas;
         D.normas.forEach(function (n) { D.normaPorId[n.id] = n; });
-        D.temas = D.indice.temas.map(function (t) {
+        D.todosTemas = D.indice.temas.map(function (t) {
           Object.keys(t.subtemas).forEach(function (c) { D.subtemas[c] = t.subtemas[c]; });
           return { tema: t.tema, titulo: t.titulo, subtemas: t.subtemas };
         });
+        // Índice viejo (sin «examenes»): un solo examen con todos los temas.
+        var todos = D.todosTemas.map(function (t) { return t.tema; });
+        D.examenes = (D.indice.examenes && D.indice.examenes.length) ? D.indice.examenes :
+          [{ id: 1, titulo: "I examen", fecha: D.indice.examen, temas: todos, simulacro: todos }];
         return Promise.all(D.indice.temas.map(function (t) {
-          return Promise.all([json(t.tarjetas), json(t.preguntas)]);
+          return Promise.all([jsonOpcional(t.tarjetas, { tarjetas: [] }), jsonOpcional(t.preguntas, { preguntas: [] })]);
         }));
       })
       .then(function (porTema) {
         porTema.forEach(function (par) {
-          D.tarjetas = D.tarjetas.concat(par[0].tarjetas);
-          D.preguntas = D.preguntas.concat(par[1].preguntas);
+          D.todasTarjetas = D.todasTarjetas.concat(par[0].tarjetas || []);
+          D.todasPreguntas = D.todasPreguntas.concat(par[1].preguntas || []);
         });
+        D.seleccionar(leerExamen(), true);
         return D;
       });
+  };
+
+  // ---------- Examen seleccionado (I o II) ----------
+  function leerExamen() {
+    var id = 0;
+    if (typeof window.__examenPrueba === "number") id = window.__examenPrueba;
+    else {
+      try { id = +window.localStorage.getItem(CLAVE_EXAMEN); } catch (e) { id = 0; }
+    }
+    if (D.examenes.some(function (x) { return x.id === id; })) return id;
+    // Por defecto, el examen más próximo en el calendario: el último de la lista (el II).
+    return D.examenes[D.examenes.length - 1].id;
+  }
+
+  function enExamen(lista, temas) {
+    return lista.filter(function (x) { return temas.indexOf(x.tema) >= 0; });
+  }
+
+  // Cambia el examen y recalcula lo que ven Estudiar, Practicar, Progreso y Buscar.
+  // silencioso: no avisa a los oyentes (carga inicial).
+  D.seleccionar = function (id, silencioso) {
+    var ex = D.examenes.filter(function (x) { return x.id === id; })[0] || D.examenes[0];
+    D.examenId = ex.id;
+    D.tarjetas = enExamen(D.todasTarjetas, ex.temas);
+    D.preguntas = enExamen(D.todasPreguntas, ex.temas);
+    D.glosario = enExamen(D.todoGlosario, ex.temas);
+    D.temas = D.todosTemas.filter(function (t) { return ex.temas.indexOf(t.tema) >= 0; });
+    if (silencioso) return;
+    if (typeof window.__examenPrueba !== "number") {
+      try { window.localStorage.setItem(CLAVE_EXAMEN, String(ex.id)); } catch (e) { /* sin almacenamiento */ }
+    } else window.__examenPrueba = ex.id;
+    oyentes.forEach(function (f) { try { f(ex); } catch (e) { if (window.console) console.error(e); } });
+  };
+
+  D.alCambiarExamen = function (f) { oyentes.push(f); };
+  D.examen = function () {
+    return D.examenes.filter(function (x) { return x.id === D.examenId; })[0] || D.examenes[0];
+  };
+  D.fechaExamen = function () { return D.examen().fecha; };
+  // Preguntas y temas del Simulacro: el II examen es acumulativo (incluye los temas del I).
+  D.preguntasSimulacro = function () { return enExamen(D.todasPreguntas, D.examen().simulacro); };
+  D.temasSimulacro = function () {
+    var sim = D.examen().simulacro;
+    return D.todosTemas.filter(function (t) { return sim.indexOf(t.tema) >= 0; });
   };
 
   // «Título, pág. 8 (impresa 97), F/V 6»
@@ -88,7 +151,7 @@
   };
 
   D.tituloTema = function (n) {
-    for (var i = 0; i < D.temas.length; i++) if (D.temas[i].tema === n) return D.temas[i].titulo;
+    for (var i = 0; i < D.todosTemas.length; i++) if (D.todosTemas[i].tema === n) return D.todosTemas[i].titulo;
     return "Tema " + n;
   };
 
