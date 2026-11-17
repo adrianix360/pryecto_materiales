@@ -119,7 +119,10 @@ Diccionario indexado por código. Hay 49: `01`–`06`, `08`–`17`, `19`, `20`, 
 | `fuente` | lista de referencias | sí en `teoria` | Respaldo documental. La traen 195 de 202; las 7 que no, son de examen con clave oficial |
 | `examen` | objeto | sí en `examen` | `{doc, pag, pregunta, periodo}`. `doc` y `pag` se validan como una referencia; `pregunta` es el número en el original (`"1.1, caso 2"`) y `periodo` el ciclo (`"I-2026"`, `"Sin fecha (cuestionario de Mediación Virtual)"`) |
 | `verificar` | string | no | Nota de contradicción o duda (28 preguntas) |
+| `nivel` | string | no | Solo II examen: `"facil"` o `"einer"`. Sin el campo equivale a `"einer"`. Las fáciles llevan id `p{tema}-{sub}-f{NN}` (`p4-4A-f01`) y no pueden tener `verificar`. Ver **Modos de Practicar** |
 | `figura` | objeto | no | Ver **Figura** (6 preguntas: 5 del examen 08 y el ábaco de X01) |
+
+**Modos de Practicar (solo II examen).** `nivel: "facil"` marca las preguntas del «Modo fácil»; las demás (sin `nivel` o `"einer"`) son del «Modo Einer». Practicar filtra por el modo elegido (conteos, repaso y «por tema» incluidos); el Simulacro, Buscar y Progreso ven todas. El progreso y el repaso espaciado siguen por id de pregunta. En el I examen no hay modos.
 
 Combinaciones actuales de `origen` + `clave`: examen + oficial (130), teoría + documental (68), examen + documental (4).
 
@@ -198,6 +201,7 @@ No tiene `version` ni `titulo`.
 - Selección única y F/V: exactamente una `correcta` válida; selección múltiple: lista no vacía de ids válidos.
 - Respuesta corta: `respuesta_modelo` y de 1 a 5 `puntos_clave` (2 a 5 si es de teoría).
 - Las preguntas de examen traen `examen.pregunta` y `examen.periodo`.
+- `nivel` opcional: solo `facil` o `einer`; las `facil` con id `p{tema}-{subtema}-f{NN}` y sin `verificar`; un id con sufijo `-fNN` exige `nivel: "facil"`.
 - Avisa (sin fallar) de las claves `pendiente`.
 - Normas: `designacion` = «ASTM » + `id`, familia existente, `mide`, `gancho` y `fuente` presentes, fuentes con página válida, `confunde_con` apunta a normas existentes y `mide` no nombra ninguna norma.
 

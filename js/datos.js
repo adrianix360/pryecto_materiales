@@ -23,6 +23,7 @@
   };
 
   var CLAVE_EXAMEN = "pryecto_materiales:examen:v1"; // aparte del progreso: no cambia el formato guardado
+  var CLAVE_DIFICULTAD = "pryecto_materiales:dificultad:v1"; // «facil» o «einer» (solo II examen)
   var oyentes = [];
 
   // Un tema sin archivo (todavía no escrito) cuenta como vacío: la app no se rompe.
@@ -98,6 +99,33 @@
       try { window.localStorage.setItem(CLAVE_EXAMEN, String(ex.id)); } catch (e) { /* sin almacenamiento */ }
     } else window.__examenPrueba = ex.id;
     oyentes.forEach(function (f) { try { f(ex); } catch (e) { if (window.console) console.error(e); } });
+  };
+
+  // ---------- Dificultad de Practicar (solo II examen): «facil» o «einer» ----------
+  // Fácil = preguntas con nivel «facil». Einer = las demás (sin nivel o nivel «einer»).
+  // El Simulacro y Buscar ven todas; esto solo filtra Practicar.
+  D.tieneDificultad = function () { return D.examenId === 2; };
+  D.dificultad = function () {
+    var v = "";
+    if (typeof window.__dificultadPrueba === "string") v = window.__dificultadPrueba;
+    else {
+      try { v = window.localStorage.getItem(CLAVE_DIFICULTAD) || ""; } catch (e) { v = ""; }
+    }
+    return v === "facil" ? "facil" : "einer";
+  };
+  D.fijarDificultad = function (v) {
+    v = v === "facil" ? "facil" : "einer";
+    if (typeof window.__dificultadPrueba === "string") window.__dificultadPrueba = v;
+    else {
+      try { window.localStorage.setItem(CLAVE_DIFICULTAD, v); } catch (e) { /* sin almacenamiento */ }
+    }
+  };
+  D.esFacil = function (p) { return p.nivel === "facil"; };
+  // Preguntas que ve Practicar: en el I examen, todas; en el II, las del modo elegido.
+  D.preguntasPractica = function () {
+    if (!D.tieneDificultad()) return D.preguntas;
+    var facil = D.dificultad() === "facil";
+    return D.preguntas.filter(function (p) { return D.esFacil(p) === facil; });
   };
 
   D.alCambiarExamen = function (f) { oyentes.push(f); };

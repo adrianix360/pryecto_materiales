@@ -3,6 +3,7 @@
 
 Revisa: JSON bien formado, ids únicos, campos obligatorios, una sola respuesta correcta
 en selección única y falso/verdadero, fuentes existentes con página válida, figuras existentes
+el campo opcional nivel (facil/einer; las fáciles: id p{tema}-{sub}-fNN y sin verificar)
 y que las preguntas nuevas no usen "todas las anteriores". Sale con código 1 si hay errores.
 """
 import glob
@@ -15,6 +16,7 @@ RAIZ = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file
 TIPOS_P = {"seleccion_unica", "seleccion_multiple", "verdadero_falso", "respuesta_corta"}
 TIPOS_T = {"concepto", "dato", "clasificacion", "formula", "norma", "proceso", "equipo", "parametros", "criterio"}
 CLAVES = {"oficial", "documental", "pendiente"}
+NIVELES = {"facil", "einer"}
 errores, avisos = [], []
 
 
@@ -123,6 +125,16 @@ for ruta in sorted(glob.glob(os.path.join(RAIZ, "data/preguntas/*.json"))):
         for c in ("enunciado", "explicacion", "origen", "clave"):
             if not p.get(c):
                 err(i, f"falta {c}")
+        nivel = p.get("nivel")
+        if nivel is not None and nivel not in NIVELES:
+            err(i, f"nivel inválido {nivel!r} (solo 'facil' o 'einer')")
+        if nivel == "facil":
+            if not re.fullmatch(rf"p{p.get('tema')}-{p.get('subtema')}-f\d{{2,}}", str(i)):
+                err(i, "id de pregunta fácil debe ser p{tema}-{subtema}-f{NN}")
+            if p.get("verificar"):
+                err(i, "una pregunta fácil no puede tener verificar")
+        elif re.search(r"-f\d+$", str(i)):
+            err(i, "id con sufijo -fNN pero sin nivel: \"facil\"")
         if p.get("clave") not in CLAVES:
             err(i, f"clave inválida {p.get('clave')!r}")
         if p.get("origen") == "examen":

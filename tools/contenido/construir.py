@@ -126,7 +126,11 @@ for n, (titulo, T, P) in TEMAS.items():
 G_EX2 = []
 for n, titulo in TEMAS_EX2.items():
     d = leer_ex2(f"tema{n}.json") or {}
-    T, P = d.get("tarjetas", []), d.get("preguntas", [])
+    T, P = d.get("tarjetas", []), list(d.get("preguntas", []))
+    # Preguntas del «Modo fácil» (campo nivel: "facil"): faciles4.json / faciles8.json, {"tema": N, "preguntas": [...]}
+    fac = leer_ex2(f"faciles{n}.json") or {}
+    n_fac = len(fac.get("preguntas", []))
+    P += fac.get("preguntas", [])
     subs = dict(SUBTEMAS_EX2)
     subs.update(d.get("subtemas", {}))
     titulo = d.get("titulo", titulo)
@@ -134,7 +138,7 @@ for n, titulo in TEMAS_EX2.items():
     dump(f"data/preguntas/tema{n}.json", {"tema": n, "titulo": titulo, "preguntas": P})
     indice.append({"tema": n, "titulo": titulo, "examen": 2, "tarjetas": f"data/tarjetas/tema{n}.json",
                    "preguntas": f"data/preguntas/tema{n}.json", "subtemas": {k: v for k, v in subs.items() if k.startswith(str(n))}})
-    print(f"Tema {n} (II examen): {len(T)} tarjetas, {len(P)} preguntas" + ("" if d else "  [sin archivo en examen2/]"))
+    print(f"Tema {n} (II examen): {len(T)} tarjetas, {len(P)} preguntas ({n_fac} fáciles)" + ("" if d else "  [sin archivo en examen2/]"))
 G_EX2 = (leer_ex2("glosario.json") or {}).get("terminos", [])
 dump("data/normas.json", {"version": 1, "familias": normas.FAMILIAS, "normas": normas.NORMAS})
 print(f"Normas: {len(normas.NORMAS)}")

@@ -716,6 +716,7 @@ a { color: var(--primario); text-underline-offset: 3px; }
 /* ---------- Simulacro ---------- */
 .grupo { margin: 0 0 16px; padding: 0; border: 0; }
 .grupo legend { margin-bottom: 8px; padding: 0; font-weight: 700; }
+.modo--dificultad { margin-bottom: 12px; }
 .modo--3 { grid-template-columns: repeat(3, 1fr); margin-bottom: 0; }
 .casilla {
   display: flex;

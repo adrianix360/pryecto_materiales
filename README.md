@@ -169,7 +169,7 @@ sw.js                 service worker (precarga para uso sin conexión)
 data/                 contenido en JSON (esquema en docs/ESQUEMA.md)
 img/                  figuras de ensayos y de exámenes (img/examen2/ para el II examen)
 tools/                validador de JSON, generador de contenido e íconos
-tools/contenido/examen2/  contenido del II examen (tema4.json, tema8.json, glosario.json)
+tools/contenido/examen2/  contenido del II examen (tema4.json, tema8.json, faciles4.json, faciles8.json, glosario.json)
 tests/                servidor local y pruebas con Playwright
 ```
 
@@ -179,6 +179,8 @@ El contenido de los temas 4 y 8 vive en `tools/contenido/examen2/` y el generado
 
 - `tema4.json` y `tema8.json`: `{"tema": 4, "titulo": "Cemento hidráulico", "subtemas": {…}, "tarjetas": […], "preguntas": […]}`. Tarjetas y preguntas siguen el esquema de `docs/ESQUEMA.md` (ids `t4-4A-01`, `p4-4A-t01`; `origen` `"teoria"`, `clave` `"documental"`). `subtemas` puede ir vacío: el generador trae los nombres de 4A–4F y 8A–8E.
 - `glosario.json`: `{"terminos": […]}`, mismo esquema que el glosario actual.
+- `faciles4.json` y `faciles8.json` (opcionales): `{"tema": 4, "preguntas": […]}` con las preguntas del **Modo fácil**. Mismo esquema, más `"nivel": "facil"` e ids `p4-4A-f01`, `p8-8C-f12` (`f` = fácil, correlativo por subtema). El generador las agrega a `data/preguntas/tema4.json` / `tema8.json` después de las de `tema4.json`. No pueden llevar `verificar`.
+- **Modos de Practicar (solo Examen 2):** un interruptor «Modo fácil / Modo Einer» arriba de Practicar. Modo fácil = solo preguntas con `nivel: "facil"`; Modo Einer (por defecto) = las que no tienen `nivel` (o `"einer"`). Se recuerda en `localStorage` (clave `pryecto_materiales:dificultad:v1`). El Simulacro mezcla todas sin importar el modo; Estudiar no cambia; el progreso sigue por id. En el Examen 1 no aparece el interruptor. Si un modo no tiene preguntas en el tema, Practicar lo avisa.
 - Las fuentes E01–E19 salen de `fuentes/examen2/codigos.json` (las registra el generador; se citan con `{"doc": "E03", "pag": 1}`).
 - **Figuras:** el archivo va en `img/examen2/` y se cita con `"figura": {"src": "img/examen2/nombre.png", …}`. No hay que registrarla en ningún otro lado: el service worker la precarga a partir del campo `figura.src` de los JSON y el validador comprueba que exista.
 

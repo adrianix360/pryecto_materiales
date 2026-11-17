@@ -54,15 +54,27 @@
   }
 
   function armarRepaso() {
-    nuevaCola(SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.fechaExamen(), SRS.azar()).ids.slice());
+    nuevaCola(SRS.colaRepaso(Datos.preguntasPractica(), leer, SRS.hoy(), Datos.fechaExamen(), SRS.azar()).ids.slice());
   }
 
   function armar() { if (s.modo === "repaso") armarRepaso(); else armarCola(); }
 
+  // Interruptor «Modo fácil / Modo Einer»: solo en el II examen.
+  function htmlDificultad() {
+    if (!Datos.tieneDificultad()) return "";
+    var d = Datos.dificultad();
+    function b(valor, texto) {
+      return '<button type="button" class="modo__opcion" data-dificultad="' + valor + '" aria-pressed="' +
+        (d === valor) + '">' + texto + "</button>";
+    }
+    return '<div class="modo modo--dificultad" role="group" aria-label="Dificultad de las preguntas" id="pra-dificultad">' +
+      b("facil", "Modo fácil") + b("einer", "Modo Einer") + "</div>";
+  }
+
   function cabecera() {
-    var html = UI.barraMeta() + UI.modo("pra", s.modo);
+    var html = UI.barraMeta() + htmlDificultad() + UI.modo("pra", s.modo);
     if (s.modo === "repaso") {
-      var res = SRS.colaRepaso(Datos.preguntas, leer, SRS.hoy(), Datos.fechaExamen());
+      var res = SRS.colaRepaso(Datos.preguntasPractica(), leer, SRS.hoy(), Datos.fechaExamen());
       var conVerif = s.cola.slice(s.pos).filter(function (id) { return s.porId[id].verificar; });
       html += UI.resumenRepaso(res, new Set(conVerif).size, NOMBRES_RESUMEN);
     } else {
@@ -77,7 +89,7 @@
 
   function armarCola() {
     var rnd = SRS.azar();
-    var lista = Datos.preguntas.filter(function (p) { return UI.cumpleFiltro(p, s.f); });
+    var lista = Datos.preguntasPractica().filter(function (p) { return UI.cumpleFiltro(p, s.f); });
     if (rnd) lista = SRS.barajar(lista, rnd);
     lista = lista.map(function (p, i) { return { p: p, i: i, r: leer(p.id) }; });
     // Por nivel (sin responder, mal, parcial, bien); dentro de cada nivel, al azar (o por fecha si el orden es fijo).
@@ -203,8 +215,8 @@
         '<div class="acciones"><button type="button" class="btn btn--primario" data-accion="volver">Volver al ' +
         (s.modo === "repaso" ? "repaso de hoy" : "modo por tema") + "</button></div>";
     } else if (s.modo === "repaso") {
-      var nuevas = SRS.masNuevos(Datos.preguntas, leer, MAS_NUEVAS, []);
-      var adel = SRS.adelantar(Datos.preguntas, leer, SRS.hoy());
+      var nuevas = SRS.masNuevos(Datos.preguntasPractica(), leer, MAS_NUEVAS, []);
+      var adel = SRS.adelantar(Datos.preguntasPractica(), leer, SRS.hoy());
       var titulo = s.extra ? "Terminaste el extra" :
         s.cola.length ? "Terminaste el repaso de hoy" : "No tenés preguntas pendientes hoy";
       var botones = "";
@@ -226,6 +238,12 @@
   function render(vista) {
     UI.recordarPaneles(vista, s);
     var html = cabecera();
+    if (Datos.tieneDificultad() && !Datos.preguntasPractica().length) {
+      vista.innerHTML = html + '<p class="vacio" id="sin-modo">Todavía no hay preguntas de «' +
+        (Datos.dificultad() === "facil" ? "Modo fácil" : "Modo Einer") + '» en este examen. Probá con el otro modo.</p>';
+      conectar(vista);
+      return;
+    }
     if (s.modo === "tema" && !s.cola.length) {
       vista.innerHTML = html + '<p class="vacio">No hay preguntas con ese filtro.</p>';
       conectar(vista);
@@ -294,6 +312,18 @@
       det.open = esMeta ? s.metaAbierta : s.filtrosAbiertos;
       det.addEventListener("toggle", function () {
         if (esMeta) s.metaAbierta = det.open; else s.filtrosAbiertos = det.open;
+      });
+    });
+    vista.querySelectorAll("[data-dificultad]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var v = btn.getAttribute("data-dificultad");
+        if (btn.getAttribute("aria-pressed") === "true") return;
+        Datos.fijarDificultad(v);
+        s.extra = null;
+        armar();
+        render(vista);
+        var nb = vista.querySelector('[data-dificultad="' + v + '"]');
+        if (nb) nb.focus();
       });
     });
     UI.conectarModo(vista, function (m) {
@@ -369,10 +399,10 @@
           armar();
           render(vista);
         } else if (acc === "nuevas") {
-          nuevaCola(SRS.masNuevos(Datos.preguntas, leer, MAS_NUEVAS, [], SRS.azar()), "nuevas");
+          nuevaCola(SRS.masNuevos(Datos.preguntasPractica(), leer, MAS_NUEVAS, [], SRS.azar()), "nuevas");
           render(vista);
         } else if (acc === "adelantar") {
-          nuevaCola(SRS.adelantar(Datos.preguntas, leer, SRS.hoy(), SRS.azar()), "adelantar");
+          nuevaCola(SRS.adelantar(Datos.preguntasPractica(), leer, SRS.hoy(), SRS.azar()), "adelantar");
           render(vista);
         }
       });

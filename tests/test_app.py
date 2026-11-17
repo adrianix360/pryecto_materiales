@@ -981,6 +981,65 @@ def selector_de_examen_filtra_estudiar_y_se_recuerda(nav, url):
     ctx.close()
 
 
+@prueba
+def practicar_examen2_tiene_modo_facil_y_modo_einer(nav, url):
+    ctx, pag, errores = nueva_pagina(nav, url, examen=None)
+    # Si todavía no hay preguntas fáciles reales, se agrega una de ejemplo solo en memoria.
+    pag.evaluate("""() => {
+      if (!Datos.todasPreguntas.some(p => p.nivel === 'facil')) {
+        const base = Datos.todasPreguntas.find(p => p.tema === 4 && p.tipo === 'seleccion_unica');
+        Datos.todasPreguntas.push(Object.assign({}, base, { id: 'p4-4A-f99', nivel: 'facil' }));
+      }
+      Datos.seleccionar(2);
+    }""")
+    pag.locator('[data-ruta="practicar"]').click()
+    botones = pag.locator("#pra-dificultad [data-dificultad]")
+    assert botones.count() == 2
+    for b in range(2):
+        assert botones.nth(b).bounding_box()["height"] >= 47.5
+    # Por defecto: Modo Einer.
+    expect(pag.locator('[data-dificultad="einer"]')).to_have_attribute("aria-pressed", "true")
+    revisar_pantalla(pag, "practicar modo einer")
+
+    def niveles(modo, cuantas=4):
+        pag.locator(f'[data-dificultad="{modo}"]').click()
+        expect(pag.locator(f'[data-dificultad="{modo}"]')).to_have_attribute("aria-pressed", "true")
+        pag.locator('[data-modo="tema"]').click()
+        expect(pag.locator('[data-modo="tema"]')).to_have_attribute("aria-pressed", "true")
+        vistos = []
+        for _ in range(cuantas):
+            if pag.locator(".pregunta").count() == 0:
+                break
+            vistos.append(pag.evaluate("(id) => Datos.todasPreguntas.find(p => p.id === id).nivel || 'einer'",
+                                       pag.locator(".pregunta").get_attribute("data-id")))
+            saltar = pag.locator('[data-accion="saltar"]')
+            if saltar.count() == 0:
+                break
+            antes = pag.locator(".contador").first.inner_text()
+            saltar.click()
+            expect(pag.locator(".contador").first).not_to_have_text(antes)
+        return vistos
+
+    vistos = niveles("facil")
+    assert vistos and set(vistos) == {"facil"}, vistos
+    revisar_pantalla(pag, "practicar modo facil")
+    # El modo se recuerda al recargar.
+    pag.reload()
+    pag.wait_for_selector("body[data-listo='1']")
+    pag.locator('[data-ruta="practicar"]').click()
+    expect(pag.locator('[data-dificultad="facil"]')).to_have_attribute("aria-pressed", "true")
+    vistos = niveles("einer")
+    assert vistos and "facil" not in vistos, vistos
+    # El Simulacro mezcla todas: no filtra por nivel.
+    assert pag.evaluate("() => Datos.preguntasSimulacro().some(p => p.nivel === 'facil')")
+    # Examen 1: no aparece el interruptor.
+    pag.locator('[data-examen="1"]').click()
+    expect(pag.locator('[data-ruta="practicar"]')).to_be_visible()
+    assert pag.locator("#pra-dificultad").count() == 0
+    assert not errores, errores
+    ctx.close()
+
+
 # ---------- Normas ----------
 def guardado_normas(pag):
     return progreso(pag)["normas"]
